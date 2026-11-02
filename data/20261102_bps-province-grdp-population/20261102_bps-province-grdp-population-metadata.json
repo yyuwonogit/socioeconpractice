@@ -1,0 +1,147 @@
+{
+ "title": "BPS provincial GRDP (current prices) and population, Indonesia",
+ "file": "20261102_bps-province-grdp-population.csv",
+ "format": "CSV, UTF-8, comma-separated, one value per row; a missing row means BPS has no value",
+ "columns": {
+  "province_code": "BPS two-digit province code; 00 = Indonesia. Names in 'provinces'.",
+  "indicator": "Indicator code; definitions in 'indicators'.",
+  "sector": "GRDP sector code (KBLI letter groups) or TOTAL; empty for population indicators.",
+  "period": "YYYY = annual, YYYYQn = quarter n.",
+  "value": "Number in the indicator's unit, as published by BPS (not rounded or rescaled)."
+ },
+ "provinces": {
+  "11": "Aceh",
+  "12": "Sumatera Utara",
+  "13": "Sumatera Barat",
+  "14": "Riau",
+  "15": "Jambi",
+  "16": "Sumatera Selatan",
+  "17": "Bengkulu",
+  "18": "Lampung",
+  "19": "Kepulauan Bangka Belitung",
+  "21": "Kepulauan Riau",
+  "31": "DKI Jakarta",
+  "32": "Jawa Barat",
+  "33": "Jawa Tengah",
+  "34": "DI Yogyakarta",
+  "35": "Jawa Timur",
+  "36": "Banten",
+  "51": "Bali",
+  "52": "Nusa Tenggara Barat",
+  "53": "Nusa Tenggara Timur",
+  "61": "Kalimantan Barat",
+  "62": "Kalimantan Tengah",
+  "63": "Kalimantan Selatan",
+  "64": "Kalimantan Timur",
+  "65": "Kalimantan Utara",
+  "71": "Sulawesi Utara",
+  "72": "Sulawesi Tengah",
+  "73": "Sulawesi Selatan",
+  "74": "Sulawesi Tenggara",
+  "75": "Gorontalo",
+  "76": "Sulawesi Barat",
+  "81": "Maluku",
+  "82": "Maluku Utara",
+  "91": "Papua Barat",
+  "92": "Papua Tengah",
+  "93": "Papua Selatan",
+  "94": "Papua",
+  "95": "Papua Pegunungan",
+  "96": "Papua Barat Daya",
+  "00": "Indonesia"
+ },
+ "sectors": {
+  "A": "Pertanian, Kehutanan dan Perikanan",
+  "B": "Pertambangan dan Penggalian",
+  "C": "Industri Pengolahan",
+  "D": "Pengadaan Listrik dan Gas",
+  "E": "Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang",
+  "F": "Konstruksi",
+  "G": "Perdagangan Besar dan Eceran, Reparasi Mobil dan Sepeda Motor",
+  "H": "Transportasi dan Pergudangan",
+  "I": "Penyediaan Akomodasi dan Makan Minum",
+  "J": "Informasi dan Komunikasi",
+  "K": "Jasa Keuangan dan Asuransi",
+  "L": "Real Estate",
+  "MN": "Jasa Perusahaan",
+  "O": "Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
+  "P": "Jasa Pendidikan",
+  "Q": "Jasa Kesehatan dan Kegiatan Sosial",
+  "RSTU": "Jasa Lainnya",
+  "TOTAL": "Produk Domestik Regional Bruto"
+ },
+ "indicators": {
+  "grdp_current": {
+   "name": "PDRB atas dasar harga berlaku (GRDP at current prices), Seri 2010",
+   "unit": "Rp billion (Milyar Rupiah)",
+   "periods": "2025Q1-2025Q4 and 2025 by sector; 2020-2024 annual TOTAL only",
+   "source": "https://www.bps.go.id/id/statistics-table/2/MjI2OCMy/-seri-2010--pdrb-triwulanan-atas-dasar-harga-berlaku-menurut-lapangan-usaha-di-provinsi-seluruh-indonesia--milyar-rupiah-.html",
+   "notes": [
+    "2025 values come from the BPS table '[Seri 2010] PDRB Triwulanan Atas Dasar Harga Berlaku Menurut Lapangan Usaha di Provinsi Seluruh Indonesia', last updated 5 Aug 2026.",
+    "2020-2024 annual totals come from the same BPS table for earlier years, compiled in raw/grdp-population/20261102_bps-province-grdp-population-2020-2025.xlsx.",
+    "Recent years (2024-2025 in particular) are likely preliminary and subject to revision.",
+    "BPS publishes no Indonesia row in this table; the sum of provincial GRDP is not national GDP, which BPS does not reconcile with it.",
+    "Sectors may differ from TOTAL, and quarters from the year, by up to 0.04 because of rounding in the BPS table."
+   ]
+  },
+  "population": {
+   "name": "Jumlah penduduk (population)",
+   "unit": "thousand people",
+   "periods": "2020-2025 annual",
+   "source": "https://www.bps.go.id/id/statistics-table/3/V1ZSbFRUY3lTbFpEYTNsVWNGcDZjek53YkhsNFFUMDkjMyMwMDAw/jumlah-penduduk--laju-pertumbuhan-penduduk--distribusi-persentase-penduduk--kepadatan-penduduk--rasio-jenis-kelamin-penduduk-menurut-provinsi.html?year=YYYY",
+   "notes": [
+    "2020 = Sensus Penduduk 2020 (September 2020).",
+    "2021-2025 = Proyeksi Penduduk Indonesia 2020-2050 hasil SP2020, mid-year (June).",
+    "The 2025 table was last updated 2 May 2025."
+   ]
+  },
+  "population_growth": {
+   "name": "Laju pertumbuhan penduduk per tahun (annual population growth rate)",
+   "unit": "percent per year",
+   "periods": "2025",
+   "source": "https://www.bps.go.id/id/statistics-table/3/V1ZSbFRUY3lTbFpEYTNsVWNGcDZjek53YkhsNFFUMDkjMyMwMDAw/jumlah-penduduk--laju-pertumbuhan-penduduk--distribusi-persentase-penduduk--kepadatan-penduduk--rasio-jenis-kelamin-penduduk-menurut-provinsi.html?year=2025",
+   "notes": [
+    "Growth from the September 2020 census to the June 2025 projection; 2020 base population is the sum of the forming regencies and municipalities."
+   ]
+  },
+  "population_share": {
+   "name": "Distribusi persentase penduduk (share of national population)",
+   "unit": "percent",
+   "periods": "2025",
+   "source": "https://www.bps.go.id/id/statistics-table/3/V1ZSbFRUY3lTbFpEYTNsVWNGcDZjek53YkhsNFFUMDkjMyMwMDAw/jumlah-penduduk--laju-pertumbuhan-penduduk--distribusi-persentase-penduduk--kepadatan-penduduk--rasio-jenis-kelamin-penduduk-menurut-provinsi.html?year=2025"
+  },
+  "population_density": {
+   "name": "Kepadatan penduduk (population density)",
+   "unit": "people per km2",
+   "periods": "2025",
+   "source": "https://www.bps.go.id/id/statistics-table/3/V1ZSbFRUY3lTbFpEYTNsVWNGcDZjek53YkhsNFFUMDkjMyMwMDAw/jumlah-penduduk--laju-pertumbuhan-penduduk--distribusi-persentase-penduduk--kepadatan-penduduk--rasio-jenis-kelamin-penduduk-menurut-provinsi.html?year=2025",
+   "notes": [
+    "Province area per Kepmendagri Nomor 100.1.1-6117 Tahun 2022 (9 November 2022)."
+   ]
+  },
+  "sex_ratio": {
+   "name": "Rasio jenis kelamin penduduk (sex ratio)",
+   "unit": "males per 100 females",
+   "periods": "2025",
+   "source": "https://www.bps.go.id/id/statistics-table/3/V1ZSbFRUY3lTbFpEYTNsVWNGcDZjek53YkhsNFFUMDkjMyMwMDAw/jumlah-penduduk--laju-pertumbuhan-penduduk--distribusi-persentase-penduduk--kepadatan-penduduk--rasio-jenis-kelamin-penduduk-menurut-provinsi.html?year=2025"
+  }
+ },
+ "notes": [
+  "Papua split: Papua Barat Daya (96), Papua Selatan (93), Papua Tengah (92) and Papua Pegunungan (95) have values from 2024. For 2020-2023, Papua (94) and Papua Barat (91) are the pre-split provinces and are not comparable with 2024-2025.",
+  "For a consistent series: Papua (old) = 94 + 93 + 92 + 95; Papua Barat (old) = 91 + 96.",
+  "GRDP per capita (Rp million per person) = grdp_current (Rp billion) / population (thousand); it is not stored because it is derived, and it may differ slightly from BPS's own PDRB per kapita."
+ ],
+ "bps_population_footnotes": [
+  "1Hasil Proyeksi Penduduk Indonesia 2020-2050 Hasil Sensus Penduduk 2020 (Pertengahan tahun/Juni)/ Indonesia Population Projection 2020-2050 Result of Population Census 2020 (mid year/June)",
+  "2Laju pertumbuhan penduduk dihitung berdasarkan penduduk tahun 2020 (September) dibandingkan dengan penduduk tahun 2025(Juni)/ The growth rate refers to the change of the population in 2020 (September) to the population in 2025 (June)",
+  "3Luas provinsi berdasarkan Keputusan Menteri Dalam Negeri Nomor 100.1.1-6117 Tahun 2022 tanggal 9 November 2022/ Province area Based on Ministerial Decree of Home Affairs Number 100.1.1-6117,9 November 2022",
+  "4 Laju pertumbuhan penduduk dihitung dengan menggunakan data dasar jumlah penduduk tahun 2020 yang merupakan penjumlahan dari kabupaten/kota pembentuk/ The Growth Rate calculated refers to total population 2020 is the sum of the forming regency/municipality"
+ ],
+ "raw_files": [
+  "raw/grdp/20261102_grdp-quarterly-current-prices-by-industry-by-province-2025.csv",
+  "raw/grdp/20261102_bps-grdp-current-prices-by-province-2025-total.csv",
+  "raw/population/20261102_population-growth-share-density-sex-ratio-by-province-2025.csv",
+  "raw/grdp-population/20261102_bps-province-grdp-population-2020-2025.xlsx",
+  "raw/grdp-population/20261102_bps-province-grdp-population-2025.xlsx"
+ ]
+}
