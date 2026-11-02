@@ -35,7 +35,9 @@ When the user asks for a delivery, create `.outbox/YYYYMMDD_<name>/` with today'
 - Put each `.py` file in the folder of the data it writes, and start the file from the header in README.md.
 - Never edit files in `raw/`.
 - Scripts in `analysis/` read from `data/` only.
-- Every build script in `data/` follows Cleaning and checking in README.md: open each raw file before declaring its `READ_CONTEXT`, and write the CSV and metadata JSON only after all checks pass.
-- After changing a build script or a raw file it reads, rerun every build script in `data/`, review `git diff data/`, and tell the user about any new entry in a metadata `checks.flags`.
+- Every build script in `data/` follows Cleaning and checking in README.md: it imports `tools/cleaning.py`, declares a `READ_CONTEXT` for each raw file after opening that file, and writes only through `cleaning.write_dataset`.
+- Put any cleaning or checking logic that a second dataset could use into `tools/cleaning.py`, not into a build script.
+- Ask the user before downloading anything from outside the repository, and say what will be fetched, from where, and where it will be saved.
+- After changing `tools/cleaning.py`, a build script or a raw file it reads, rerun every build script in `data/`, review `git diff data/`, and tell the user about any new entry in a metadata `checks.flags`.
 - Run scripts with the `.venv` Python, and build `.venv` from `requirements.txt` when `.venv` is missing.
 - Install a new package into `.venv`, and add the package to `requirements.txt` with its version pinned.

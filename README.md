@@ -11,6 +11,8 @@ socioeconpractice/
 ├── requirements.txt             pinned packages for .venv
 ├── .gitignore                   excludes .venv, caches and Office lock files
 ├── .venv/                       built on each machine, never committed
+├── tools/
+│   └── cleaning.py              shared cleaning and checks, imported by every build script
 ├── .inbox/                      drop folder, emptied by Claude
 ├── .outbox/
 │   └── YYYYMMDD_<delivery>/     one folder per delivery
@@ -33,6 +35,7 @@ socioeconpractice/
 
 | Folder | Holds | Scripts |
 |---|---|---|
+| `tools/` | Shared modules, without date prefixes | `cleaning.py` holds the cleaning and checking that every build script uses |
 | `reference/` | Papers, reports and method notes | None |
 | `raw/<topic>/` | Source files as received, never edited | A download script sits beside the files it fetched |
 | `data/YYYYMMDD_<dataset>/` | Cleaned datasets and their metadata | The build script sits beside its output, reads `raw/` or other `data/` folders, and follows Cleaning and checking |
@@ -43,12 +46,14 @@ socioeconpractice/
 - Every work file and work folder starts with `YYYYMMDD` and an underscore, then lowercase words joined by hyphens, as in `20261102_gdp-per-capita.csv`.
 - The date is the Jakarta date (UTC+7) on which the item was created or filed.
 - The date in a name stays fixed after later edits, and git records those edits.
-- Sorting folders like `raw/<topic>/` and control files like `README.md` have no date prefix, and topic folder names use lowercase words joined by hyphens.
+- Sorting folders like `raw/<topic>/`, control files like `README.md` and shared modules in `tools/` have no date prefix, and topic folder names use lowercase words joined by hyphens.
 
 ## Scripts
 
 - Every `.py` file sits in the folder of the data it writes, and every script finds other files by paths relative to its own location.
-- An `import` statement cannot load a `.py` file whose name starts with a digit, so each script defines its own parameters and functions at the top.
+- An `import` statement cannot load a `.py` file whose name starts with a digit, so each script defines its own parameters and functions at the top, and code shared between scripts lives in `tools/`.
+- Every build script in `data/` imports `tools/cleaning.py` and writes its output through `cleaning.write_dataset`, which checks the data and writes nothing if a check fails.
+- A cleaning function that a second dataset needs moves into `tools/cleaning.py`, and every build script in `data/` is rerun after `tools/cleaning.py` changes.
 - Files in `raw/` are never edited, and a cleaned version of a raw file goes to a new folder in `data/`.
 - Every script starts from the header below, and every step in a script carries a comment that states its purpose.
 
@@ -66,9 +71,27 @@ ROOT = HERE.parents[1]
 # Steps
 ```
 
+A build script in `data/` adds the shared module right after that header.
+
+```python
+# Load the shared cleaning module from tools/
+import sys
+sys.path.insert(0, str(ROOT / "tools"))
+import cleaning
+```
+
 ## Cleaning and checking
 
-Every build script in `data/` turns raw files into one long CSV and one metadata JSON, and it writes neither file unless every check passes. `data/20261102_bps-province-grdp-population/` is the worked example.
+Every build script in `data/` turns raw files into one long CSV and one metadata JSON, and it writes neither file unless every check passes. `tools/cleaning.py` implements the rules below, so a build script only declares how its raw files are written and parses them; `data/20261102_bps-province-grdp-population/` is the worked example.
+
+| Step | `tools/cleaning.py` provides |
+|---|---|
+| Read numbers | `parse_number` (declared decimal mark, thousands separator and decimals), `parse_cell`, `read_csv_rows`, `require_text` |
+| Read BPS website pages | `bps_flight_text`, `bps_find_object`, `bps_resolve`, `html_to_text` |
+| Match regions | `load_bps_provinces`, `province_code`, `normalise_name` |
+| Combine sources | `merge_sources` (priority order, repeated values must match exactly) |
+| Check | `check_sum`, `flag_outside`, and inside `write_dataset`: structure and completeness |
+| Write | `write_dataset` (CSV in the shared format, metadata with format, status codes and raw file hashes) |
 
 ### Reading the source
 
@@ -81,7 +104,9 @@ Every build script in `data/` turns raw files into one long CSV and one metadata
 ### Writing the dataset
 
 - The CSV is UTF-8 without a byte-order mark, comma-separated, with `.` as the decimal mark and no thousands separator.
-- The CSV has one value per row, with key columns first and a single `value` column last, as in `province_code, indicator, sector, period, value`.
+- The CSV has one value per row, with key columns first, then `status`, then a single `value` column last, as in `province_code, indicator, sector, period, status, value`.
+- `status` carries the source's revision marker, such as BPS `*` (preliminary), `**` and `***`, and is empty for final values; the metadata gives each marker's meaning.
+- When several raw files hold the same value, the build reads them in a stated priority order (BPS pages and downloads before compiled workbooks), and the lower-priority copies serve as checks.
 - Values keep the precision and unit BPS published; the metadata gives each indicator's unit, its multiplier to base units and its source.
 - A value BPS does not publish has no row, and markers such as `-`, `...` and `NA` are never written as 0.
 - Derived values such as per-capita figures and growth rates belong in `analysis/`, and the metadata gives the formula.
@@ -116,7 +141,8 @@ Every build script in `data/` turns raw files into one long CSV and one metadata
 |---|---|---|
 | Province codes and names, BPS and Kemendagri | BPS region bridging service, `https://sig.bps.go.id/rest-bridging/getwilayah?level=provinsi&periode_merge=2025_1.2025`, where the default period without `periode_merge` returns the old 34 provinces | `raw/province-codes/` |
 | Province area and official names | Keputusan Menteri Dalam Negeri on Kode dan Data Wilayah Administrasi Pemerintahan (BPS cites Nomor 100.1.1-6117 Tahun 2022) | Not yet filed |
-| BPS tables by script instead of manual download | BPS WebAPI, `https://webapi.bps.go.id`, with a free key registered at that site | Not yet used |
+| BPS tables, one year per page | bps.go.id statistics-table pages saved as received; population pages take `?year=YYYY`, while GRDP pages serve only the latest year | `raw/population/`, `raw/grdp/` |
+| BPS tables for any year by script | BPS WebAPI, `https://webapi.bps.go.id`, with a free key registered at that site; needed for quarterly and sector GRDP before 2025 | Not yet used |
 
 ## .inbox and .outbox
 
