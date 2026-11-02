@@ -1,0 +1,2 @@
+# Keep every file in raw/ byte for byte as received: git never converts its line endings
+raw/** -text

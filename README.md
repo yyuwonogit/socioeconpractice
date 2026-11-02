@@ -9,7 +9,9 @@ socioeconpractice/
 ├── README.md                    layout and rules
 ├── CLAUDE.md                    tells every Claude session to follow README.md
 ├── requirements.txt             pinned packages for .venv
-├── .gitignore                   excludes .venv, caches and Office lock files
+├── .gitignore                   excludes .venv, .env, caches and Office lock files
+├── .gitattributes               keeps every file in raw/ byte for byte as received
+├── .env                         local keys such as BPS_API_KEY, never committed
 ├── .venv/                       built on each machine, never committed
 ├── tools/
 │   └── cleaning.py              shared cleaning and checks, imported by every build script
@@ -55,6 +57,8 @@ socioeconpractice/
 - Every build script in `data/` imports `tools/cleaning.py` and writes its output through `cleaning.write_dataset`, which checks the data and writes nothing if a check fails.
 - A cleaning function that a second dataset needs moves into `tools/cleaning.py`, and every build script in `data/` is rerun after `tools/cleaning.py` changes.
 - Files in `raw/` are never edited, and a cleaned version of a raw file goes to a new folder in `data/`.
+- A download script never overwrites a saved file, and a revised release is fetched by a copy of the script under a new date.
+- A script that calls the BPS WebAPI reads `BPS_API_KEY` from `.env` at run time, and never prints the key or writes it to a file.
 - Every script starts from the header below, and every step in a script carries a comment that states its purpose.
 
 ```python
@@ -118,7 +122,8 @@ Every build script in `data/` turns raw files into one long CSV and one metadata
 - Province names map to BPS province codes (`kode_bps`) through the BPS list in `raw/province-codes/`, never through a list typed by hand.
 - Names are normalised before matching (upper case, `KEP.` spelled out as `KEPULAUAN`, single spaces), and a name with no match stops the build.
 - BPS and Kemendagri codes differ for the six Papua provinces, so the metadata keeps both and a join with another dataset uses the code system that dataset uses.
-- Papua Barat Daya, Papua Selatan, Papua Tengah and Papua Pegunungan exist from 2024 in BPS tables, and earlier Papua and Papua Barat values cover the pre-split areas.
+- Papua Barat Daya, Papua Selatan, Papua Tengah and Papua Pegunungan have values from 2023 in the annual GRDP tables (WebAPI vars 286, 288, 291 and 296) and from 2024 in the sector GRDP tables (vars 2267 and 2268), the population tables and the social tables. Before those years, Papua and Papua Barat values cover the pre-split areas.
+- Kalimantan Utara has its own values from 2010 in the sector GRDP tables, from 2013 in the annual GRDP tables and from 2015 or 2016 in the population and social tables; before that, Kalimantan Timur includes it.
 
 ### Checks
 
@@ -142,7 +147,7 @@ Every build script in `data/` turns raw files into one long CSV and one metadata
 | Province codes and names, BPS and Kemendagri | BPS region bridging service, `https://sig.bps.go.id/rest-bridging/getwilayah?level=provinsi&periode_merge=2025_1.2025`, where the default period without `periode_merge` returns the old 34 provinces | `raw/province-codes/` |
 | Province area and official names | Keputusan Menteri Dalam Negeri on Kode dan Data Wilayah Administrasi Pemerintahan (BPS cites Nomor 100.1.1-6117 Tahun 2022) | Not yet filed |
 | BPS tables, one year per page | bps.go.id statistics-table pages saved as received; population pages take `?year=YYYY`, while GRDP pages serve only the latest year | `raw/population/`, `raw/grdp/` |
-| BPS tables for any year by script | BPS WebAPI, `https://webapi.bps.go.id`, with a free key registered at that site; needed for quarterly and sector GRDP before 2025 | Not yet used |
+| BPS tables for any year by script | BPS WebAPI, `https://webapi.bps.go.id`, with a free key registered at that site and kept in `.env` as `BPS_API_KEY`; one request covers at most 3 years, and provincial yearbook tables such as GRDP by detailed industry come through its SIMDASI service | `raw/grdp/`, `raw/grdp-detailed-industry/`, `raw/population/`, `raw/inequality/`, `raw/poverty/`, `raw/household-spending/`, `raw/labour/` |
 
 ## .inbox and .outbox
 

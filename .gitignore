@@ -1,6 +1,9 @@
 # Python virtual environment, built on each machine from requirements.txt
 .venv/
 
+# Local settings and keys, such as the BPS WebAPI key
+.env
+
 # Python caches
 __pycache__/
 *.py[cod]
