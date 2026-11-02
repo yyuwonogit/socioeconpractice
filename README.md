@@ -22,7 +22,8 @@ socioeconpractice/
 ├── data/
 │   └── YYYYMMDD_<dataset>/
 │       ├── YYYYMMDD_<build>.py
-│       └── YYYYMMDD_<dataset>.csv
+│       ├── YYYYMMDD_<dataset>.csv
+│       └── YYYYMMDD_<dataset>-metadata.json
 └── analysis/
     └── YYYYMMDD_<analysis>/
         ├── YYYYMMDD_<analysis>.py
@@ -34,7 +35,7 @@ socioeconpractice/
 |---|---|---|
 | `reference/` | Papers, reports and method notes | None |
 | `raw/<topic>/` | Source files as received, never edited | A download script sits beside the files it fetched |
-| `data/YYYYMMDD_<dataset>/` | Cleaned or derived datasets | The build script sits beside its output and reads `raw/` or other `data/` folders |
+| `data/YYYYMMDD_<dataset>/` | Cleaned datasets and their metadata | The build script sits beside its output, reads `raw/` or other `data/` folders, and follows Cleaning and checking |
 | `analysis/YYYYMMDD_<analysis>/` | Figures and tables | The script sits beside its outputs and reads `data/` only |
 
 ## Naming
@@ -64,6 +65,58 @@ ROOT = HERE.parents[1]
 
 # Steps
 ```
+
+## Cleaning and checking
+
+Every build script in `data/` turns raw files into one long CSV and one metadata JSON, and it writes neither file unless every check passes. `data/20261102_bps-province-grdp-population/` is the worked example.
+
+### Reading the source
+
+- Each build script declares, for every raw file, its encoding, field separator, decimal mark, thousands separator, missing-value markers and unit text, in a `READ_CONTEXT` parameter.
+- The declarations come from opening the raw file, because BPS files mix conventions: some CSVs start with a byte-order mark, Indonesian-format files write `1.234,5` for 1234.5, and units sit in headers as words such as Ribu (thousand), Juta (million) and Milyar (billion).
+- The script parses every number as text against the declared format and stops on any value that does not match, so a thousands separator never becomes a decimal point.
+- The script checks that each header still carries its declared unit text, so a source that changes units stops the build.
+- Header rows, footnotes and notes rows are read on purpose: footnotes go to the metadata, and data rows are matched by name, never by line number alone.
+
+### Writing the dataset
+
+- The CSV is UTF-8 without a byte-order mark, comma-separated, with `.` as the decimal mark and no thousands separator.
+- The CSV has one value per row, with key columns first and a single `value` column last, as in `province_code, indicator, sector, period, value`.
+- Values keep the precision and unit BPS published; the metadata gives each indicator's unit, its multiplier to base units and its source.
+- A value BPS does not publish has no row, and markers such as `-`, `...` and `NA` are never written as 0.
+- Derived values such as per-capita figures and growth rates belong in `analysis/`, and the metadata gives the formula.
+- Codes, not names, identify regions, sectors and indicators, and the metadata maps every code to its name.
+- Periods are written `YYYY` for years and `YYYYQn` for quarters.
+
+### Regions
+
+- Province names map to BPS province codes (`kode_bps`) through the BPS list in `raw/province-codes/`, never through a list typed by hand.
+- Names are normalised before matching (upper case, `KEP.` spelled out as `KEPULAUAN`, single spaces), and a name with no match stops the build.
+- BPS and Kemendagri codes differ for the six Papua provinces, so the metadata keeps both and a join with another dataset uses the code system that dataset uses.
+- Papua Barat Daya, Papua Selatan, Papua Tengah and Papua Pegunungan exist from 2024 in BPS tables, and earlier Papua and Papua Barat values cover the pre-split areas.
+
+### Checks
+
+| Layer | Check | On failure |
+|---|---|---|
+| 1. Structure | Exact columns, numeric values, unique keys, every code in the metadata lookups | Stop |
+| 2. Completeness | Every expected region, indicator, sector and period is present, and the only gaps are those the metadata explains | Stop |
+| 3. Identities | Parts sum to totals (sectors to TOTAL, quarters to year, shares to 100, provinces to Indonesia) within a stated rounding tolerance | Stop |
+| 4. Cross-source | Values that appear in more than one raw file match exactly | Stop |
+| 5. Plausibility | Values and year-on-year changes stay inside stated ranges | List in the metadata `checks.flags` |
+| 6. Provenance | The SHA-256 hash of every raw file read is recorded in the metadata | Recorded |
+
+- A flag is reviewed by a person and stays in the metadata whether it reflects a real event or a source error.
+- Rebuilding a dataset from unchanged raw files produces byte-identical output, so `git diff --exit-code data/` after a rebuild shows whether anything changed.
+- A revised BPS release is filed as a new dated raw file beside the old one, and the build script is pointed at it, so the git diff of the CSV shows each revised value.
+
+### Reference sources
+
+| Need | Source | In this repository |
+|---|---|---|
+| Province codes and names, BPS and Kemendagri | BPS region bridging service, `https://sig.bps.go.id/rest-bridging/getwilayah?level=provinsi&periode_merge=2025_1.2025`, where the default period without `periode_merge` returns the old 34 provinces | `raw/province-codes/` |
+| Province area and official names | Keputusan Menteri Dalam Negeri on Kode dan Data Wilayah Administrasi Pemerintahan (BPS cites Nomor 100.1.1-6117 Tahun 2022) | Not yet filed |
+| BPS tables by script instead of manual download | BPS WebAPI, `https://webapi.bps.go.id`, with a free key registered at that site | Not yet used |
 
 ## .inbox and .outbox
 
