@@ -1,0 +1,17 @@
+# Python virtual environment, built on each machine from requirements.txt
+.venv/
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Office lock files that exist while a document is open
+~$*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
