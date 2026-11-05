@@ -1,0 +1,2051 @@
+{
+ "title": "BPS average net monthly wage of employees by province, Indonesia, Sakernas August, 2016-2025",
+ "columns": {
+  "province_code": "BPS province code (kode_bps); 00 = Indonesia (the tables' 'Rata-rata' row). Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definition in 'indicators'.",
+  "period": "YYYYS2 = the Agustus (August) round of Sakernas in year YYYY (see 'periods').",
+  "status": "Revision marker; no source gives one, so every row is empty (final).",
+  "value": "Rupiah per employee per month at current prices, whole rupiah as BPS publishes it; all main occupations and industries together (the tables' Jumlah column)."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  },
+  "00": {
+   "name": "INDONESIA",
+   "kode_dagri": null
+  }
+ },
+ "province_source": {
+  "url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=provinsi&periode_merge=2025_1.2025",
+  "file": "raw/province-codes/20261102_bps-province-codes-2025-s1.json",
+  "aliases": {
+   "RATA-RATA": {
+    "code": "00",
+    "reason": "the national average row: 'Rata-rata' in the static tables, 'RATA-RATA' under vervar 9999 in var 583 ('Provinsi dg Rata2')"
+   }
+  },
+  "note": "BPS and Kemendagri codes differ for the six Papua provinces; join other datasets on the code system they use."
+ },
+ "indicators": {
+  "employee_net_wage_month": {
+   "name": "Rata-rata upah/gaji bersih sebulan buruh/karyawan/pegawai (average net monthly wage or salary of employees), urban and rural areas, men and women together, all main occupations and industries",
+   "definition": "From the var 583 note: upah/gaji bersih is what an employee received in the past month from the main job, basic wage or salary and allowances, in cash or in kind, paid by the firm, office or employer. Buruh/karyawan/pegawai are people who work for another person or an institution with a fixed employer for a wage or salary; casual workers (pekerja bebas) are not included.",
+   "unit": "rupiah per employee per month, current prices",
+   "multiplier": 1,
+   "base_unit": "Rp per month",
+   "decimals": 0,
+   "periods": "2016S2-2025S2, one value per year (the Agustus round)",
+   "source": "BPS Sakernas (Survei Angkatan Kerja Nasional), as the var 583 note names it; BPS static tables by province and main occupation for 2016-2024 and WebAPI var 583 for 2025 (see source_priority)",
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "notes": [
+    "The value is each table's Jumlah (total) column: every main occupation and industry together. No single occupation's or industry's value is written; the parts are read only for the checks.",
+    "The var 583 note says some figures have a relative standard error (RSE) of 25-50%, and that an empty cell has an RSE of 50% or more and is not shown; no total is empty in any source.",
+    "Averages do not add across provinces; 00 is BPS's national figure from the same survey round."
+   ]
+  }
+ },
+ "periods": {
+  "held": [
+   "2016S2",
+   "2017S2",
+   "2018S2",
+   "2019S2",
+   "2020S2",
+   "2021S2",
+   "2022S2",
+   "2023S2",
+   "2024S2",
+   "2025S2"
+  ],
+  "round": "Agustus (August), written S2, in every year",
+  "rounds_in_the_raw_files": {
+   "1948": "2016S1, 2016S2",
+   "1988": "2017S1, 2017S2",
+   "2048": "2018S1, 2018S2",
+   "2070": "2019S1, 2019S2",
+   "2096": "2020S1, 2020S2",
+   "2131": "2021S1, 2021S2",
+   "2190": "2022S1, 2022S2, 2023S1",
+   "2233": "2023S1, 2023S2",
+   "2255": "2024S1, 2024S2",
+   "1987": "2017S1, 2017S2",
+   "2049": "2018S1, 2018S2",
+   "2071": "2019S1, 2019S2",
+   "2097": "2020S1, 2020S2",
+   "2130": "2021S1, 2021S2",
+   "2189": "2022S1, 2022S2",
+   "2231": "2023S1, 2023S2",
+   "2253": "2024S1, 2024S2"
+  },
+  "var_583_rounds": "Februari and Agustus of 2016, 2024 and 2025 (turtahun 189 and 190); its sub-period Tahunan (191) holds no value",
+  "how_the_round_is_known": "No static table has a source line or a note naming the round: each column block is headed 'Februari YYYY' or 'Agustus YYYY', and var 583 labels its sub-periods the same way. The survey is named only in the var 583 note (Sakernas).",
+  "choice": "Every table holds both rounds of its year, and table 2190 adds Februari 2023, so either round runs through 2016-2025. This build keeps Agustus in every year, one round per year as the dataset asks, so that every year compares the same point in the year; Agustus is the round BPS uses for its annual labour-force figures (this build's reason; no raw file names a preferred round). The Februari values are read and cross-checked but not written; WRITTEN_ROUND = 'S1' writes them instead."
+ },
+ "coverage": {
+  "first_period": {
+   "92": {
+    "period": "2024S2",
+    "reason": "PAPUA BARAT DAYA became a province in 2022; tables 2253 and 2255 give it its own row from 2024 and var 583 its own values from 2024 (its 2016 file lists it without values), and 91 covers it before"
+   },
+   "95": {
+    "period": "2024S2",
+    "reason": "PAPUA SELATAN became a province in 2022; tables 2253 and 2255 give it its own row from 2024 and var 583 its own values from 2024 (its 2016 file lists it without values), and 94 covers it before"
+   },
+   "96": {
+    "period": "2024S2",
+    "reason": "PAPUA TENGAH became a province in 2022; tables 2253 and 2255 give it its own row from 2024 and var 583 its own values from 2024 (its 2016 file lists it without values), and 94 covers it before"
+   },
+   "97": {
+    "period": "2024S2",
+    "reason": "PAPUA PEGUNUNGAN became a province in 2022; tables 2253 and 2255 give it its own row from 2024 and var 583 its own values from 2024 (its 2016 file lists it without values), and 94 covers it before"
+   }
+  },
+  "gaps": "none: every other province and Indonesia has a value in every period; no total is 'NA' or '-' in any source.",
+  "kalimantan_utara": "65 (Kalimantan Utara) has its own row in every table from 2016, so 64 (Kalimantan Timur) excludes it in every period."
+ },
+ "borders": [
+  "91 (Papua Barat) and 94 (Papua) in 2016-2023 cover the pre-split provinces: the tables of those years have 34 provinces, with Papua Barat Daya inside 91 and Papua Selatan, Papua Tengah and Papua Pegunungan inside 94. From 2024, 91 and 94 cover the post-split areas, and 92, 95, 96 and 97 start.",
+  "An average of a pre-split area cannot be rebuilt from the post-split provinces without their numbers of employees, and a change from the year before across a border change compares different areas: 91 and 94 in 2024 (checks.change_not_compared)."
+ ],
+ "workers_covered": {
+  "finding": "Every table covers employees (buruh/karyawan/pegawai), including 2016.",
+  "evidence": "The page title of static table 1948 (2016) reads 'Pekerja Formal' (formal workers), but its catalogue title reads 'Buruh/Karyawan/Pegawai', as do all other tables and var 583. Var 583, defined in its note for employees, repeats every cell of table 1948: 624 values equal and its 6 'NA' cells are the keys var 583 leaves out (checks.cross_source). No raw file defines 'Pekerja Formal' or gives a different 2016 figure, so the build treats 2016 as covering the same employees as the other years."
+ },
+ "part_markers": {
+  "markers": {
+   "NA": "data tidak dapat ditampilkan (cannot be shown)",
+   "-": "Tidak ada atau nol (none or zero)"
+  },
+  "note": "Markers appear only in the part (occupation or industry) cells, which are read for the checks and never written; no total carries one."
+ },
+ "source_priority": [
+  {
+   "source": "static tables by province and main occupation",
+   "periods": "2016S2-2024S2",
+   "use": "every value of its year, from the table whose title names that year (2190 for 2022, titled 2022-2023)",
+   "by_period": {
+    "2016S2": "static table 1948",
+    "2017S2": "static table 1988",
+    "2018S2": "static table 2048",
+    "2019S2": "static table 2070",
+    "2020S2": "static table 2096",
+    "2021S2": "static table 2131",
+    "2022S2": "static table 2190",
+    "2023S2": "static table 2233",
+    "2024S2": "static table 2255"
+   }
+  },
+  {
+   "source": "WebAPI var 583",
+   "periods": "2025S2",
+   "use": "the 2025 values, which no static table holds; its 2016 and 2024 values are lower-priority copies, compared in checks.cross_source"
+  },
+  {
+   "source": "static tables by province and main industry",
+   "periods": "2017-2024",
+   "use": "lower-priority copies of each total, compared in checks.cross_source and never written"
+  }
+ ],
+ "source_tables": {
+  "static_table_1948": {
+   "file": "raw/labour/20261104_bps-static-table-1948-monthly-wage-by-province-and-occupation-2016.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/1948/key/<key>/",
+   "kind": "occupation",
+   "title": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama (Rupiah), 2016",
+   "page_title": "Rata-rata Upah/Gaji Bersih Sebulan Pekerja Formal Menurut Provinsi dan Jenis Pekerjaan Utama (Rupiah), 2016",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2016-12-02 00:00:00",
+   "updated": "2017-12-21 00:00:00",
+   "rounds": [
+    "2016S1",
+    "2016S2"
+   ],
+   "regions": 35,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1)0/1. Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2. Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3. Tenaga Tata Usaha dan yang Sejenis",
+    "4. Tenaga Usaha Penjualan",
+    "5. Tenaga Usaha Jasa",
+    "6. Tenaga Usaha Pertanian, Kehutanan, Perburuan dan Perikanan",
+    "7/8/9. Tenaga Produksi, Operator Alat-alat Angkutan dan Pekerja Kasar",
+    "X/00. Lainnya"
+   ],
+   "footnote_1": {
+    "0/1": "Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2": "Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3": "Tenaga Tata Usaha dan yang Sejenis",
+    "4": "Tenaga Usaha Penjualan",
+    "5": "Tenaga Usaha Jasa",
+    "6": "Tenaga Usaha Pertanian, Kehutanan, Perburuan dan Perikanan",
+    "7/8/9": "Tenaga Produksi, Operator Alat-alat Angkutan dan Pekerja Kasar",
+    "X/00": "Lainnya"
+   },
+   "legend": {},
+   "stray_texts": [],
+   "markers_in_part_cells": {
+    "NA": 6
+   },
+   "hidden_overflow_cells": 0,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "gives the values of its year",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2016S1": " ",
+     "2016S2": " "
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_1988": {
+   "file": "raw/labour/20261104_bps-static-table-1988-monthly-wage-by-province-and-occupation-2017.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/1988/key/<key>/",
+   "kind": "occupation",
+   "title": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama (Rupiah), 2017",
+   "page_title": "Rata-rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama, 2017",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2018-03-13 00:00:00",
+   "updated": "2018-03-13 00:00:00",
+   "rounds": [
+    "2017S1",
+    "2017S2"
+   ],
+   "regions": 35,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1)0/1. Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2. Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3. Tenaga Tata Usaha dan yang Sejenis",
+    "4. Tenaga Usaha Penjualan",
+    "5. Tenaga Usaha Jasa",
+    "6. Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9. Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00. Lainnya"
+   ],
+   "footnote_1": {
+    "0/1": "Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2": "Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3": "Tenaga Tata Usaha dan yang Sejenis",
+    "4": "Tenaga Usaha Penjualan",
+    "5": "Tenaga Usaha Jasa",
+    "6": "Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9": "Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00": "Lainnya"
+   },
+   "legend": {},
+   "stray_texts": [],
+   "markers_in_part_cells": {},
+   "hidden_overflow_cells": 0,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "gives the values of its year",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2017S1": " ",
+     "2017S2": " "
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_2048": {
+   "file": "raw/labour/20261104_bps-static-table-2048-monthly-wage-by-province-and-occupation-2018.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/2048/key/<key>/",
+   "kind": "occupation",
+   "title": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama (Rupiah), 2018",
+   "page_title": "Rata-rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama, 2018",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2019-03-06 10:27:23.147514",
+   "updated": "2019-03-06 10:27:23.147514",
+   "rounds": [
+    "2018S1",
+    "2018S2"
+   ],
+   "regions": 35,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1)0/1. Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2. Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3. Tenaga Tata Usaha dan yang Sejenis",
+    "4. Tenaga Usaha Penjualan",
+    "5. Tenaga Usaha Jasa",
+    "6. Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9. Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00. Lainnya"
+   ],
+   "footnote_1": {
+    "0/1": "Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2": "Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3": "Tenaga Tata Usaha dan yang Sejenis",
+    "4": "Tenaga Usaha Penjualan",
+    "5": "Tenaga Usaha Jasa",
+    "6": "Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9": "Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00": "Lainnya"
+   },
+   "legend": {},
+   "stray_texts": [],
+   "markers_in_part_cells": {},
+   "hidden_overflow_cells": 0,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "gives the values of its year",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2018S1": " ",
+     "2018S2": " "
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_2070": {
+   "file": "raw/labour/20261104_bps-static-table-2070-monthly-wage-by-province-and-occupation-2019.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/2070/key/<key>/",
+   "kind": "occupation",
+   "title": "Rata-rata UpahGaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama, 2019",
+   "page_title": "Rata-rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama, 2019",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2019-08-02 15:57:46.022519",
+   "updated": "2020-01-09 10:00:55.428688",
+   "rounds": [
+    "2019S1",
+    "2019S2"
+   ],
+   "regions": 35,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1)0/1. Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2. Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3. Tenaga Tata Usaha dan yang Sejenis",
+    "4. Tenaga Usaha Penjualan",
+    "5. Tenaga Usaha Jasa",
+    "6. Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9. Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00. Lainnya"
+   ],
+   "footnote_1": {
+    "0/1": "Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2": "Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3": "Tenaga Tata Usaha dan yang Sejenis",
+    "4": "Tenaga Usaha Penjualan",
+    "5": "Tenaga Usaha Jasa",
+    "6": "Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9": "Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00": "Lainnya"
+   },
+   "legend": {},
+   "stray_texts": [],
+   "markers_in_part_cells": {},
+   "hidden_overflow_cells": 0,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "gives the values of its year",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2019S1": " ",
+     "2019S2": " "
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_2096": {
+   "file": "raw/labour/20261104_bps-static-table-2096-monthly-wage-by-province-and-occupation-2020.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/2096/key/<key>/",
+   "kind": "occupation",
+   "title": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama, 2020",
+   "page_title": "Rata-rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama, 2020",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2020-07-07 22:12:09.228547",
+   "updated": "2020-11-30 10:34:50.424167",
+   "rounds": [
+    "2020S1",
+    "2020S2"
+   ],
+   "regions": 35,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1)0/1. Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2. Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3. Tenaga Tata Usaha dan yang Sejenis",
+    "4. Tenaga Usaha Penjualan",
+    "5. Tenaga Usaha Jasa",
+    "6. Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9. Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00. Lainnya"
+   ],
+   "footnote_1": {
+    "0/1": "Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2": "Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3": "Tenaga Tata Usaha dan yang Sejenis",
+    "4": "Tenaga Usaha Penjualan",
+    "5": "Tenaga Usaha Jasa",
+    "6": "Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9": "Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00": "Lainnya"
+   },
+   "legend": {},
+   "stray_texts": [],
+   "markers_in_part_cells": {},
+   "hidden_overflow_cells": 0,
+   "empty_columns_between_rounds": [
+    11
+   ],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "gives the values of its year",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2020S1": " ",
+     "2020S2": " "
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_2131": {
+   "file": "raw/labour/20261104_bps-static-table-2131-monthly-wage-by-province-and-occupation-2021.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/2131/key/<key>/",
+   "kind": "occupation",
+   "title": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama, 2021",
+   "page_title": "Rata-Rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama, 2021",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2021-07-15 15:52:54.141516",
+   "updated": "2021-12-30 13:31:11.161828",
+   "rounds": [
+    "2021S1",
+    "2021S2"
+   ],
+   "regions": 35,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1)0/1. Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2. Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3. Tenaga Tata Usaha dan yang Sejenis",
+    "4. Tenaga Usaha Penjualan",
+    "5. Tenaga Usaha Jasa",
+    "6. Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9. Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00. Lainnya",
+    "NA Not applicable"
+   ],
+   "footnote_1": {
+    "0/1": "Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2": "Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3": "Tenaga Tata Usaha dan yang Sejenis",
+    "4": "Tenaga Usaha Penjualan",
+    "5": "Tenaga Usaha Jasa",
+    "6": "Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9": "Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00": "Lainnya"
+   },
+   "legend": {
+    "NA": "Not applicable"
+   },
+   "stray_texts": [],
+   "markers_in_part_cells": {
+    "NA": 1
+   },
+   "hidden_overflow_cells": 0,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "gives the values of its year",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2021S1": " ",
+     "2021S2": " "
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_2190": {
+   "file": "raw/labour/20261104_bps-static-table-2190-monthly-wage-by-province-and-occupation-2022-2023.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/2190/key/<key>/",
+   "kind": "occupation",
+   "title": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama, 2022-2023",
+   "page_title": "Rata-Rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama, 2022 - 2023",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2022-06-29 10:16:55.284928",
+   "updated": "2023-06-27 13:54:04.388299",
+   "rounds": [
+    "2022S1",
+    "2022S2",
+    "2023S1"
+   ],
+   "regions": 35,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1)0/1. Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2. Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3. Tenaga Tata Usaha dan yang Sejenis",
+    "4. Tenaga Usaha Penjualan",
+    "5. Tenaga Usaha Jasa",
+    "6. Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9. Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00. Lainnya"
+   ],
+   "footnote_1": {
+    "0/1": "Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2": "Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3": "Tenaga Tata Usaha dan yang Sejenis",
+    "4": "Tenaga Usaha Penjualan",
+    "5": "Tenaga Usaha Jasa",
+    "6": "Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9": "Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00": "Lainnya"
+   },
+   "legend": {},
+   "stray_texts": [],
+   "markers_in_part_cells": {},
+   "hidden_overflow_cells": 0,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "gives the values of its year",
+   "read_as": {
+    "decimal_displayed": ".",
+    "thousands_displayed": " ",
+    "thousands_written": {
+     "2022S1": " ",
+     "2022S2": " ",
+     "2023S1": " "
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_2233": {
+   "file": "raw/labour/20261104_bps-static-table-2233-monthly-wage-by-province-and-occupation-2023.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/2233/key/<key>/",
+   "kind": "occupation",
+   "title": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama, 2023",
+   "page_title": "Rata-Rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai menurut Provinsi dan Jenis Pekerjaan Utama, 2023",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2023-12-28 11:26:51.708649",
+   "updated": "2023-12-28 11:49:31.753278",
+   "rounds": [
+    "2023S1",
+    "2023S2"
+   ],
+   "regions": 35,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1) 0/1. Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2. Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3. Tenaga Tata Usaha dan yang Sejenis",
+    "4. Tenaga Usaha Penjualan",
+    "5. Tenaga Usaha Jasa",
+    "6. Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9. Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00. Lainnya"
+   ],
+   "footnote_1": {
+    "0/1": "Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2": "Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3": "Tenaga Tata Usaha dan yang Sejenis",
+    "4": "Tenaga Usaha Penjualan",
+    "5": "Tenaga Usaha Jasa",
+    "6": "Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9": "Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00": "Lainnya"
+   },
+   "legend": {},
+   "stray_texts": [],
+   "markers_in_part_cells": {},
+   "hidden_overflow_cells": 0,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "gives the values of its year",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2023S1": " ",
+     "2023S2": "."
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_2255": {
+   "file": "raw/labour/20261104_bps-static-table-2255-monthly-wage-by-province-and-occupation-2024.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/2255/key/<key>/",
+   "kind": "occupation",
+   "title": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama, 2024",
+   "page_title": "Rata-Rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai menurut Provinsi dan Jenis Pekerjaan Utama, 2024",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2024-07-01 19:50:23.835417",
+   "updated": "2024-12-23 16:00:05",
+   "rounds": [
+    "2024S1",
+    "2024S2"
+   ],
+   "regions": 39,
+   "copies_of_the_page": 2,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1)0/1. Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2. Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3. Tenaga Tata Usaha dan yang Sejenis",
+    "4. Tenaga Usaha Penjualan",
+    "5. Tenaga Usaha Jasa",
+    "6. Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9. Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00. Lainnya",
+    "NA Data tidak dapat ditampilkan"
+   ],
+   "footnote_1": {
+    "0/1": "Tenaga Profesional, Teknisi dan yang Sejenis",
+    "2": "Tenaga Kepemimpinan dan Ketatalaksanaan",
+    "3": "Tenaga Tata Usaha dan yang Sejenis",
+    "4": "Tenaga Usaha Penjualan",
+    "5": "Tenaga Usaha Jasa",
+    "6": "Tenaga Usaha Pertanian, Kehutanan, Perburuan, dan Perikanan",
+    "7/8/9": "Tenaga Produksi, Operator Alat-alat Angkutan, dan Pekerja Kasar",
+    "X/00": "Lainnya"
+   },
+   "legend": {
+    "NA": "Data tidak dapat ditampilkan"
+   },
+   "stray_texts": [
+    "hb"
+   ],
+   "markers_in_part_cells": {
+    "NA": 4
+   },
+   "hidden_overflow_cells": 0,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "gives the values of its year",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2024S1": ".",
+     "2024S2": "."
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_1987": {
+   "file": "raw/labour/20261104_bps-static-table-1987-monthly-wage-by-province-and-industry-2017.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/1987/key/<key>/",
+   "kind": "industry",
+   "title": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Lapangan Pekerjaan Utama di 9 Sektor (rupiah), 2017",
+   "page_title": "Rata-rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai Menurut Provinsi dan Lapangan Pekerjaan Utama di 9 Sektor, 2017",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2018-03-13 00:00:00",
+   "updated": "2019-03-06 09:59:06.092189",
+   "rounds": [
+    "2017S1",
+    "2017S2"
+   ],
+   "regions": 35,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1)1. Pertanian, Kehutanan, Perburuan dan Perikanan",
+    "2. Pertambangan dan Penggalian",
+    "3. Industri Pengolahan",
+    "4. Listrik, Gas, dan Air",
+    "5. Bangunan",
+    "6. Perdagangan Besar, Eceran, Rumah Makan, dan Hotel",
+    "7. Transportasi, Pergudangan dan Komunikasi",
+    "8. Keuangan, Asuransi, Usaha Persewaan Bangunan atau Tanah, dan Jasa Perusahaan",
+    "9. Jasa Kemasyarakatan, Sosial dan Perorangan",
+    "- Tidak ada atau nol"
+   ],
+   "footnote_1": {
+    "1": "Pertanian, Kehutanan, Perburuan dan Perikanan",
+    "2": "Pertambangan dan Penggalian",
+    "3": "Industri Pengolahan",
+    "4": "Listrik, Gas, dan Air",
+    "5": "Bangunan",
+    "6": "Perdagangan Besar, Eceran, Rumah Makan, dan Hotel",
+    "7": "Transportasi, Pergudangan dan Komunikasi",
+    "8": "Keuangan, Asuransi, Usaha Persewaan Bangunan atau Tanah, dan Jasa Perusahaan",
+    "9": "Jasa Kemasyarakatan, Sosial dan Perorangan"
+   },
+   "legend": {
+    "-": "Tidak ada atau nol"
+   },
+   "stray_texts": [],
+   "markers_in_part_cells": {
+    "-": 2
+   },
+   "hidden_overflow_cells": 0,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "lower-priority copy of each total, read as a check",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2017S1": " ",
+     "2017S2": " "
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_2049": {
+   "file": "raw/labour/20261104_bps-static-table-2049-monthly-wage-by-province-and-industry-2018.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/2049/key/<key>/",
+   "kind": "industry",
+   "title": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Lapangan Pekerjaan Utama di 17 Sektor (rupiah), 2018",
+   "page_title": "Rata-rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai Menurut Provinsi dan Lapangan Pekerjaan Utama di 17 Sektor, 2018",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2019-03-06 10:28:45.817404",
+   "updated": "2019-03-06 10:28:45.817404",
+   "rounds": [
+    "2018S1",
+    "2018S2"
+   ],
+   "regions": 35,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1)1. Pertanian, Kehutanan, dan Perikanan/Agriculture, Forestry, and Fishing",
+    "2. Pertambangan dan Penggalian/Mining and Quarrying",
+    "3. Industri Pengolahan/Manufacturing",
+    "4. Pengadaan Listrik dan Gas/Electricity and Gas Supply",
+    "5. Pengadaan Air, Pengelolaan Sampah, Limbah, dan Daur Ulang/Water Supply, Sewerage, Waste Management, and Remediation Activities",
+    "6. Konstruksi/Construction",
+    "7. Perdagangan Besar dan Eceran; Reparasi, Perawatan Mobil dan Motor/Wholesale Trade and Retail Trade; Repair of Motor Vehicles and Motorcyle",
+    "8. Transportasi dan Pergudangan/Transportation and Storage",
+    "9. Penyediaan Akomodasi dan Makan Minum/Accomodation and Food Service Activities",
+    "10 Informasi dan Komunikasi/Information and Communication",
+    "11 Jasa Keuangan dan Asuransi/Financial and Insurance Activities",
+    "12 Real Estat/Real Estate Activities",
+    "13 Jasa Perusahaan /Business Services",
+    "14 Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib/Public Administration and Defence; Compulsory Social Security",
+    "15 Jasa Pendidikan/Education",
+    "16 Jasa Kesehatan dan Kegiatan Sosial/Human Health and Social Work Activities",
+    "17 Jasa Lainnya/Other Service Activities",
+    "- Tidak ada atau nol",
+    "NA data tidak dapat ditampilkan"
+   ],
+   "footnote_1": {
+    "1": "Pertanian, Kehutanan, dan Perikanan/Agriculture, Forestry, and Fishing",
+    "2": "Pertambangan dan Penggalian/Mining and Quarrying",
+    "3": "Industri Pengolahan/Manufacturing",
+    "4": "Pengadaan Listrik dan Gas/Electricity and Gas Supply",
+    "5": "Pengadaan Air, Pengelolaan Sampah, Limbah, dan Daur Ulang/Water Supply, Sewerage, Waste Management, and Remediation Activities",
+    "6": "Konstruksi/Construction",
+    "7": "Perdagangan Besar dan Eceran; Reparasi, Perawatan Mobil dan Motor/Wholesale Trade and Retail Trade; Repair of Motor Vehicles and Motorcyle",
+    "8": "Transportasi dan Pergudangan/Transportation and Storage",
+    "9": "Penyediaan Akomodasi dan Makan Minum/Accomodation and Food Service Activities",
+    "10": "Informasi dan Komunikasi/Information and Communication",
+    "11": "Jasa Keuangan dan Asuransi/Financial and Insurance Activities",
+    "12": "Real Estat/Real Estate Activities",
+    "13": "Jasa Perusahaan /Business Services",
+    "14": "Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib/Public Administration and Defence; Compulsory Social Security",
+    "15": "Jasa Pendidikan/Education",
+    "16": "Jasa Kesehatan dan Kegiatan Sosial/Human Health and Social Work Activities",
+    "17": "Jasa Lainnya/Other Service Activities"
+   },
+   "legend": {
+    "-": "Tidak ada atau nol",
+    "NA": "data tidak dapat ditampilkan"
+   },
+   "stray_texts": [],
+   "markers_in_part_cells": {
+    "-": 28,
+    "NA": 22
+   },
+   "hidden_overflow_cells": 0,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "lower-priority copy of each total, read as a check",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2018S1": " ",
+     "2018S2": " "
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_2071": {
+   "file": "raw/labour/20261104_bps-static-table-2071-monthly-wage-by-province-and-industry-2019.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/2071/key/<key>/",
+   "kind": "industry",
+   "title": "Rata-rata UpahGaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Lapangan Pekerjaan Utama, 2019",
+   "page_title": "Rata-rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai Menurut Provinsi dan Lapangan Pekerjaan Utama di 17 Sektor, 2019",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2019-08-02 16:00:04.605696",
+   "updated": "2020-01-09 15:20:50",
+   "rounds": [
+    "2019S1",
+    "2019S2"
+   ],
+   "regions": 35,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1)1. Pertanian, Kehutanan, dan Perikanan/Agriculture, Forestry, and Fishing",
+    "2. Pertambangan dan Penggalian/Mining and Quarrying",
+    "3. Industri Pengolahan/Manufacturing",
+    "4. Pengadaan Listrik dan Gas/Electricity and Gas Supply",
+    "5. Pengadaan Air, Pengelolaan Sampah, Limbah, dan Daur Ulang/Water Supply, Sewerage, Waste Management, and Remediation Activities",
+    "6. Konstruksi/Construction",
+    "7. Perdagangan Besar dan Eceran; Reparasi, Perawatan Mobil dan Motor/Wholesale Trade and Retail Trade; Repair of Motor Vehicles and Motorcyle",
+    "8. Transportasi dan Pergudangan/Transportation and Storage",
+    "9. Penyediaan Akomodasi dan Makan Minum/Accomodation and Food Service Activities",
+    "10 Informasi dan Komunikasi/Information and Communication",
+    "11 K. Jasa Keuangan dan Asuransi/Financial and Insurance Activities",
+    "12 Real Estat/Real Estate Activities",
+    "13 Jasa Perusahaan /Business Services",
+    "14 Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib/Public Administration and Defence; Compulsory Social Security",
+    "15 Jasa Pendidikan/Education",
+    "16 Jasa Kesehatan dan Kegiatan Sosial/Human Health and Social Work Activities",
+    "17 Jasa Lainnya/Other Service Activities",
+    "- Tidak ada atau nol",
+    "NA data tidak dapat ditampilkan"
+   ],
+   "footnote_1": {
+    "1": "Pertanian, Kehutanan, dan Perikanan/Agriculture, Forestry, and Fishing",
+    "2": "Pertambangan dan Penggalian/Mining and Quarrying",
+    "3": "Industri Pengolahan/Manufacturing",
+    "4": "Pengadaan Listrik dan Gas/Electricity and Gas Supply",
+    "5": "Pengadaan Air, Pengelolaan Sampah, Limbah, dan Daur Ulang/Water Supply, Sewerage, Waste Management, and Remediation Activities",
+    "6": "Konstruksi/Construction",
+    "7": "Perdagangan Besar dan Eceran; Reparasi, Perawatan Mobil dan Motor/Wholesale Trade and Retail Trade; Repair of Motor Vehicles and Motorcyle",
+    "8": "Transportasi dan Pergudangan/Transportation and Storage",
+    "9": "Penyediaan Akomodasi dan Makan Minum/Accomodation and Food Service Activities",
+    "10": "Informasi dan Komunikasi/Information and Communication",
+    "11": "K. Jasa Keuangan dan Asuransi/Financial and Insurance Activities",
+    "12": "Real Estat/Real Estate Activities",
+    "13": "Jasa Perusahaan /Business Services",
+    "14": "Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib/Public Administration and Defence; Compulsory Social Security",
+    "15": "Jasa Pendidikan/Education",
+    "16": "Jasa Kesehatan dan Kegiatan Sosial/Human Health and Social Work Activities",
+    "17": "Jasa Lainnya/Other Service Activities"
+   },
+   "legend": {
+    "-": "Tidak ada atau nol",
+    "NA": "data tidak dapat ditampilkan"
+   },
+   "stray_texts": [],
+   "markers_in_part_cells": {
+    "NA": 26
+   },
+   "hidden_overflow_cells": 9,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "lower-priority copy of each total, read as a check",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2019S1": " ",
+     "2019S2": " "
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_2097": {
+   "file": "raw/labour/20261104_bps-static-table-2097-monthly-wage-by-province-and-industry-2020.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/2097/key/<key>/",
+   "kind": "industry",
+   "title": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Lapangan Pekerjaan Utama, 2020",
+   "page_title": "Rata-rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai Menurut Provinsi dan Lapangan Pekerjaan Utama di 17 Sektor, 2020",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2020-07-07 22:19:22.462631",
+   "updated": "2020-11-30 10:28:18.109416",
+   "rounds": [
+    "2020S1",
+    "2020S2"
+   ],
+   "regions": 35,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1)A. Pertanian, Kehutanan, dan Perikanan/Agriculture, Forestry, and Fishing",
+    "B. Pertambangan dan Penggalian/Mining and Quarrying",
+    "C. Industri Pengolahan/Manufacturing",
+    "D. Pengadaan Listrik dan Gas/Electricity and Gas Supply",
+    "E. Pengadaan Air, Pengelolaan Sampah, Limbah, dan Daur Ulang/Water Supply, Sewerage, Waste Management, and Remediation Activities",
+    "F. Konstruksi/Construction",
+    "G. Perdagangan Besar dan Eceran; Reparasi, Perawatan Mobil dan Motor/Wholesale Trade and Retail Trade; Repair of Motor Vehicles and Motorcyle",
+    "H. Transportasi dan Pergudangan/Transportation and Storage",
+    "I. Penyediaan Akomodasi dan Makan Minum/Accomodation and Food Service Activities",
+    "J. Informasi dan Komunikasi/Information and Communication",
+    "K. K. Jasa Keuangan dan Asuransi/Financial and Insurance Activities",
+    "L. Real Estat/Real Estate Activities",
+    "M,N. Jasa Perusahaan /Business Services",
+    "O. Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib/Public Administration and Defence; Compulsory Social Security",
+    "P. Jasa Pendidikan/Education",
+    "Q. Jasa Kesehatan dan Kegiatan Sosial/Human Health and Social Work Activities",
+    "R,S,T,U. Jasa Lainnya/Other Service Activities",
+    "NA: data tidak dapat ditampilkan"
+   ],
+   "footnote_1": {
+    "A": "Pertanian, Kehutanan, dan Perikanan/Agriculture, Forestry, and Fishing",
+    "B": "Pertambangan dan Penggalian/Mining and Quarrying",
+    "C": "Industri Pengolahan/Manufacturing",
+    "D": "Pengadaan Listrik dan Gas/Electricity and Gas Supply",
+    "E": "Pengadaan Air, Pengelolaan Sampah, Limbah, dan Daur Ulang/Water Supply, Sewerage, Waste Management, and Remediation Activities",
+    "F": "Konstruksi/Construction",
+    "G": "Perdagangan Besar dan Eceran; Reparasi, Perawatan Mobil dan Motor/Wholesale Trade and Retail Trade; Repair of Motor Vehicles and Motorcyle",
+    "H": "Transportasi dan Pergudangan/Transportation and Storage",
+    "I": "Penyediaan Akomodasi dan Makan Minum/Accomodation and Food Service Activities",
+    "J": "Informasi dan Komunikasi/Information and Communication",
+    "K": "K. Jasa Keuangan dan Asuransi/Financial and Insurance Activities",
+    "L": "Real Estat/Real Estate Activities",
+    "M,N": "Jasa Perusahaan /Business Services",
+    "O": "Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib/Public Administration and Defence; Compulsory Social Security",
+    "P": "Jasa Pendidikan/Education",
+    "Q": "Jasa Kesehatan dan Kegiatan Sosial/Human Health and Social Work Activities",
+    "R,S,T,U": "Jasa Lainnya/Other Service Activities"
+   },
+   "legend": {
+    "NA": "data tidak dapat ditampilkan"
+   },
+   "stray_texts": [],
+   "markers_in_part_cells": {
+    "NA": 34
+   },
+   "hidden_overflow_cells": 9,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "lower-priority copy of each total, read as a check",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2020S1": " ",
+     "2020S2": " "
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_2130": {
+   "file": "raw/labour/20261104_bps-static-table-2130-monthly-wage-by-province-and-industry-2021.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/2130/key/<key>/",
+   "kind": "industry",
+   "title": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Lapangan Pekerjaan Utama, 2021",
+   "page_title": "Rata-rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai Menurut Provinsi dan Lapangan Pekerjaan Utama di 17 Sektor, 2021",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2021-07-15 15:49:07.672218",
+   "updated": "2021-12-30 13:47:38.302637",
+   "rounds": [
+    "2021S1",
+    "2021S2"
+   ],
+   "regions": 35,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1)A. Pertanian, Kehutanan, dan Perikanan/Agriculture, Forestry, and Fishing",
+    "B. Pertambangan dan Penggalian/Mining and Quarrying",
+    "C. Industri Pengolahan/Manufacturing",
+    "D. Pengadaan Listrik dan Gas/Electricity and Gas Supply",
+    "E. Pengadaan Air, Pengelolaan Sampah, Limbah, dan Daur Ulang/Water Supply, Sewerage, Waste Management, and Remediation Activities",
+    "F. Konstruksi/Construction",
+    "G. Perdagangan Besar dan Eceran; Reparasi, Perawatan Mobil dan Motor/Wholesale Trade and Retail Trade; Repair of Motor Vehicles and Motorcyle",
+    "H. Transportasi dan Pergudangan/Transportation and Storage",
+    "I. Penyediaan Akomodasi dan Makan Minum/Accomodation and Food Service Activities",
+    "J. Informasi dan Komunikasi/Information and Communication",
+    "K. K. Jasa Keuangan dan Asuransi/Financial and Insurance Activities",
+    "L. Real Estat/Real Estate Activities",
+    "M,N. Jasa Perusahaan /Business Services",
+    "O. Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib/Public Administration and Defence; Compulsory Social Security",
+    "P. Jasa Pendidikan/Education",
+    "Q. Jasa Kesehatan dan Kegiatan Sosial/Human Health and Social Work Activities",
+    "R,S,T,U. Jasa Lainnya/Other Service Activities",
+    "NA: data tidak dapat ditampilkan"
+   ],
+   "footnote_1": {
+    "A": "Pertanian, Kehutanan, dan Perikanan/Agriculture, Forestry, and Fishing",
+    "B": "Pertambangan dan Penggalian/Mining and Quarrying",
+    "C": "Industri Pengolahan/Manufacturing",
+    "D": "Pengadaan Listrik dan Gas/Electricity and Gas Supply",
+    "E": "Pengadaan Air, Pengelolaan Sampah, Limbah, dan Daur Ulang/Water Supply, Sewerage, Waste Management, and Remediation Activities",
+    "F": "Konstruksi/Construction",
+    "G": "Perdagangan Besar dan Eceran; Reparasi, Perawatan Mobil dan Motor/Wholesale Trade and Retail Trade; Repair of Motor Vehicles and Motorcyle",
+    "H": "Transportasi dan Pergudangan/Transportation and Storage",
+    "I": "Penyediaan Akomodasi dan Makan Minum/Accomodation and Food Service Activities",
+    "J": "Informasi dan Komunikasi/Information and Communication",
+    "K": "K. Jasa Keuangan dan Asuransi/Financial and Insurance Activities",
+    "L": "Real Estat/Real Estate Activities",
+    "M,N": "Jasa Perusahaan /Business Services",
+    "O": "Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib/Public Administration and Defence; Compulsory Social Security",
+    "P": "Jasa Pendidikan/Education",
+    "Q": "Jasa Kesehatan dan Kegiatan Sosial/Human Health and Social Work Activities",
+    "R,S,T,U": "Jasa Lainnya/Other Service Activities"
+   },
+   "legend": {
+    "NA": "data tidak dapat ditampilkan"
+   },
+   "stray_texts": [
+    " nbsp;"
+   ],
+   "markers_in_part_cells": {
+    "NA": 38
+   },
+   "hidden_overflow_cells": 9,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "lower-priority copy of each total, read as a check",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2021S1": " ",
+     "2021S2": " "
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_2189": {
+   "file": "raw/labour/20261104_bps-static-table-2189-monthly-wage-by-province-and-industry-2022.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/2189/key/<key>/",
+   "kind": "industry",
+   "title": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Lapangan Pekerjaan Utama, 2022",
+   "page_title": "Rata-rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai Menurut Provinsi dan Lapangan Pekerjaan Utama di 17 Sektor, 2022",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2022-06-29 10:05:09.491927",
+   "updated": "2022-12-30 08:59:27.897272",
+   "rounds": [
+    "2022S1",
+    "2022S2"
+   ],
+   "regions": 35,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1)A. Pertanian, Kehutanan, dan Perikanan/Agriculture, Forestry, and Fishing",
+    "B. Pertambangan dan Penggalian/Mining and Quarrying",
+    "C. Industri Pengolahan/Manufacturing",
+    "D. Pengadaan Listrik dan Gas/Electricity and Gas Supply",
+    "E. Pengadaan Air, Pengelolaan Sampah, Limbah, dan Daur Ulang/Water Supply, Sewerage, Waste Management, and Remediation Activities",
+    "F. Konstruksi/Construction",
+    "G. Perdagangan Besar dan Eceran; Reparasi, Perawatan Mobil dan Motor/Wholesale Trade and Retail Trade; Repair of Motor Vehicles and Motorcyle",
+    "H. Transportasi dan Pergudangan/Transportation and Storage",
+    "I. Penyediaan Akomodasi dan Makan Minum/Accomodation and Food Service Activities",
+    "J. Informasi dan Komunikasi/Information and Communication",
+    "K. K. Jasa Keuangan dan Asuransi/Financial and Insurance Activities",
+    "L. Real Estat/Real Estate Activities",
+    "M,N. Jasa Perusahaan /Business Services",
+    "O. Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib/Public Administration and Defence; Compulsory Social Security",
+    "P. Jasa Pendidikan/Education",
+    "Q. Jasa Kesehatan dan Kegiatan Sosial/Human Health and Social Work Activities",
+    "R,S,T,U. Jasa Lainnya/Other Service Activities",
+    "NA: data tidak dapat ditampilkan"
+   ],
+   "footnote_1": {
+    "A": "Pertanian, Kehutanan, dan Perikanan/Agriculture, Forestry, and Fishing",
+    "B": "Pertambangan dan Penggalian/Mining and Quarrying",
+    "C": "Industri Pengolahan/Manufacturing",
+    "D": "Pengadaan Listrik dan Gas/Electricity and Gas Supply",
+    "E": "Pengadaan Air, Pengelolaan Sampah, Limbah, dan Daur Ulang/Water Supply, Sewerage, Waste Management, and Remediation Activities",
+    "F": "Konstruksi/Construction",
+    "G": "Perdagangan Besar dan Eceran; Reparasi, Perawatan Mobil dan Motor/Wholesale Trade and Retail Trade; Repair of Motor Vehicles and Motorcyle",
+    "H": "Transportasi dan Pergudangan/Transportation and Storage",
+    "I": "Penyediaan Akomodasi dan Makan Minum/Accomodation and Food Service Activities",
+    "J": "Informasi dan Komunikasi/Information and Communication",
+    "K": "K. Jasa Keuangan dan Asuransi/Financial and Insurance Activities",
+    "L": "Real Estat/Real Estate Activities",
+    "M,N": "Jasa Perusahaan /Business Services",
+    "O": "Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib/Public Administration and Defence; Compulsory Social Security",
+    "P": "Jasa Pendidikan/Education",
+    "Q": "Jasa Kesehatan dan Kegiatan Sosial/Human Health and Social Work Activities",
+    "R,S,T,U": "Jasa Lainnya/Other Service Activities"
+   },
+   "legend": {
+    "NA": "data tidak dapat ditampilkan"
+   },
+   "stray_texts": [],
+   "markers_in_part_cells": {
+    "NA": 30
+   },
+   "hidden_overflow_cells": 9,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "lower-priority copy of each total, read as a check",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2022S1": " ",
+     "2022S2": " "
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_2231": {
+   "file": "raw/labour/20261104_bps-static-table-2231-monthly-wage-by-province-and-industry-2023.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/2231/key/<key>/",
+   "kind": "industry",
+   "title": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Lapangan Pekerjaan Utama, 2023",
+   "page_title": "Rata-Rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai menurut Provinsi dan Lapangan Pekerjaan Utama di 17 Sektor, 2023",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2023-12-28 10:02:57.660178",
+   "updated": "2023-12-28 10:02:57.660178",
+   "rounds": [
+    "2023S1",
+    "2023S2"
+   ],
+   "regions": 35,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1)A. Pertanian, Kehutanan, dan Perikanan",
+    "B. Pertambangan dan Penggalian",
+    "C. Industri Pengolahan",
+    "D. Pengadaan Listrik dan Gas",
+    "E. Pengadaan Air, Pengelolaan Sampah, Limbah, dan Daur Ulang",
+    "F. Konstruksi",
+    "G. Perdagangan Besar dan Eceran; Reparasi, Perawatan Mobil dan Motor",
+    "H. Transportasi dan Pergudangan",
+    "I. Penyediaan Akomodasi dan Makan Minum",
+    "J. Informasi dan Komunikasi",
+    "K. Jasa Keuangan dan Asuransi",
+    "L. Real Estat",
+    "M,N. Jasa Perusahaan",
+    "O. Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib",
+    "P. Jasa Pendidikan",
+    "Q. Jasa Kesehatan dan Kegiatan Sosial",
+    "R,S,T,U. Jasa Lainnya",
+    "NA: data tidak dapat ditampilkan"
+   ],
+   "footnote_1": {
+    "A": "Pertanian, Kehutanan, dan Perikanan",
+    "B": "Pertambangan dan Penggalian",
+    "C": "Industri Pengolahan",
+    "D": "Pengadaan Listrik dan Gas",
+    "E": "Pengadaan Air, Pengelolaan Sampah, Limbah, dan Daur Ulang",
+    "F": "Konstruksi",
+    "G": "Perdagangan Besar dan Eceran; Reparasi, Perawatan Mobil dan Motor",
+    "H": "Transportasi dan Pergudangan",
+    "I": "Penyediaan Akomodasi dan Makan Minum",
+    "J": "Informasi dan Komunikasi",
+    "K": "Jasa Keuangan dan Asuransi",
+    "L": "Real Estat",
+    "M,N": "Jasa Perusahaan",
+    "O": "Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib",
+    "P": "Jasa Pendidikan",
+    "Q": "Jasa Kesehatan dan Kegiatan Sosial",
+    "R,S,T,U": "Jasa Lainnya"
+   },
+   "legend": {
+    "NA": "data tidak dapat ditampilkan"
+   },
+   "stray_texts": [],
+   "markers_in_part_cells": {
+    "NA": 51
+   },
+   "hidden_overflow_cells": 1,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "lower-priority copy of each total, read as a check",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2023S1": " ",
+     "2023S2": "."
+    },
+    "decimals": 0
+   }
+  },
+  "static_table_2253": {
+   "file": "raw/labour/20261104_bps-static-table-2253-monthly-wage-by-province-and-industry-2024.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/2253/key/<key>/",
+   "kind": "industry",
+   "title": "Rata-Rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai menurut Provinsi dan Lapangan Pekerjaan Utama di 17 Sektor, 2024",
+   "page_title": "Rata-Rata Upah/Gaji Bersih Sebulan (rupiah) Buruh/Karyawan/Pegawai menurut Provinsi dan Lapangan Pekerjaan Utama di 17 Sektor, 2024",
+   "subject": "Biaya Tenaga Kerja",
+   "created": "2024-07-01 19:17:40.046696",
+   "updated": "2024-12-23 14:46:13",
+   "rounds": [
+    "2024S1",
+    "2024S2"
+   ],
+   "regions": 39,
+   "copies_of_the_page": 1,
+   "area_and_sex": [
+    "Perkotaan+Perdesaan",
+    "Laki-laki+Perempuan"
+   ],
+   "notes_as_published": [
+    "Catatan:",
+    "1) A. Pertanian, Kehutanan, dan Perikanan",
+    "B. Pertambangan dan Penggalian",
+    "C. Industri Pengolahan",
+    "D. Pengadaan Listrik, Gas, Uap/Air Panas dan Udara Dingin",
+    "E. Treatment Air, Treatment Air Limbah, Treatment dan Pemulihan Material Sampah, dan Aktivitas Remediasi",
+    "F. Konstruksi",
+    "G. Perdagangan Besar dan Eceran, Reparasi dan Perawatan Mobil dan Sepeda Motor",
+    "H. Transportasi dan Pergudangan",
+    "I. Penyediaan Akomodasi dan Penyediaan Makan Minum",
+    "J. Informasi dan Komunikasi",
+    "K. Aktivitas Keuangan dan Asuransi",
+    "L. Real Estat",
+    "M,N. Jasa Profesional dan Perusahaan",
+    "O. Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib",
+    "P. Pendidikan",
+    "Q. Aktivitas Kesehatan dan Kegiatan Sosial",
+    "R,S,T,U. Jasa Lainnya",
+    "NA Data tidak dapat ditampilkan"
+   ],
+   "footnote_1": {
+    "A": "Pertanian, Kehutanan, dan Perikanan",
+    "B": "Pertambangan dan Penggalian",
+    "C": "Industri Pengolahan",
+    "D": "Pengadaan Listrik, Gas, Uap/Air Panas dan Udara Dingin",
+    "E": "Treatment Air, Treatment Air Limbah, Treatment dan Pemulihan Material Sampah, dan Aktivitas Remediasi",
+    "F": "Konstruksi",
+    "G": "Perdagangan Besar dan Eceran, Reparasi dan Perawatan Mobil dan Sepeda Motor",
+    "H": "Transportasi dan Pergudangan",
+    "I": "Penyediaan Akomodasi dan Penyediaan Makan Minum",
+    "J": "Informasi dan Komunikasi",
+    "K": "Aktivitas Keuangan dan Asuransi",
+    "L": "Real Estat",
+    "M,N": "Jasa Profesional dan Perusahaan",
+    "O": "Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib",
+    "P": "Pendidikan",
+    "Q": "Aktivitas Kesehatan dan Kegiatan Sosial",
+    "R,S,T,U": "Jasa Lainnya"
+   },
+   "legend": {
+    "NA": "Data tidak dapat ditampilkan"
+   },
+   "stray_texts": [],
+   "markers_in_part_cells": {
+    "NA": 74
+   },
+   "hidden_overflow_cells": 0,
+   "empty_columns_between_rounds": [],
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "role": "lower-priority copy of each total, read as a check",
+   "read_as": {
+    "decimal_displayed": ",",
+    "thousands_displayed": ".",
+    "thousands_written": {
+     "2024S1": ".",
+     "2024S2": "."
+    },
+    "decimals": 0
+   }
+  },
+  "var_583": {
+   "files": {
+    "2016-2016": {
+     "file": "raw/labour/20261104_bps-api-var583-monthly-wage-by-province-and-occupation-2016-2016.json",
+     "years": [
+      2016
+     ],
+     "label": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama",
+     "subject": "Upah Buruh",
+     "unit": "Rupiah",
+     "decimal": null,
+     "regions": "Provinsi dg Rata2",
+     "turvar": {
+      "744": "Tenaga Profesional, Teknisi dan yang Sejenis",
+      "745": "Tenaga Kepemimpinan dan Ketatalaksanaan",
+      "746": "Tenaga Tata Usaha dan yang Sejenis",
+      "747": "Tenaga Usaha Penjualan",
+      "748": "Tenaga Usaha Jasa",
+      "749": "Tenaga Usaha Pertanian, Kehutanan, Perburuan dan Perikanan",
+      "750": "Tenaga Produksi, Operator Alat-alat Angkutan dan Pekerja Kasar",
+      "751": "Lainnya",
+      "752": "Jumlah"
+     },
+     "turtahun": {
+      "189": "Februari",
+      "190": "Agustus",
+      "191": "Tahunan"
+     },
+     "last_update": "2026-07-15 10:59:10"
+    },
+    "2024-2025": {
+     "file": "raw/labour/20261104_bps-api-var583-monthly-wage-by-province-and-occupation-2024-2025.json",
+     "years": [
+      2024,
+      2025
+     ],
+     "label": "Rata-rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai Menurut Provinsi dan Jenis Pekerjaan Utama",
+     "subject": "Upah Buruh",
+     "unit": "Rupiah",
+     "decimal": null,
+     "regions": "Provinsi dg Rata2",
+     "turvar": {
+      "744": "Tenaga Profesional, Teknisi dan yang Sejenis",
+      "745": "Tenaga Kepemimpinan dan Ketatalaksanaan",
+      "746": "Tenaga Tata Usaha dan yang Sejenis",
+      "747": "Tenaga Usaha Penjualan",
+      "748": "Tenaga Usaha Jasa",
+      "749": "Tenaga Usaha Pertanian, Kehutanan, Perburuan dan Perikanan",
+      "750": "Tenaga Produksi, Operator Alat-alat Angkutan dan Pekerja Kasar",
+      "751": "Lainnya",
+      "752": "Jumlah"
+     },
+     "turtahun": {
+      "189": "Februari",
+      "190": "Agustus",
+      "191": "Tahunan"
+     },
+     "last_update": "2026-07-15 10:59:10"
+    }
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/domain/0000/var/583/th/{th}/key/<key> (th = years minus 1900, separated by ';')",
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "note_as_published": "Sumber: Survei Angkatan Kerja Nasional (Sakernas) Catatan: 1. Beberapa angka memiliki nilai Kesalahan Baku Relatif (Relative Standard Error/RSE) dalam rentang 25%≤ RSE ≤ 50%. Informasi lebih lanjut dapat dilihat pada publikasi Keadaan Angkatan Kerja di Indonesia Februari dan Agustus 2026. 2. Data yang kosong menandakan bahwa nilai RSE ≥ 50%, sehingga data tidak ditampilkan Upah/Gaji Bersih adalah imbalan/balas jasa yang diterima oleh buruh/karyawan/pegawai selama sebulan yang lalu dari pekerjaan utama, yang terdiri dari komponen upah/gaji pokok dan tunjangan, baik berupa uang maupun barang yang dibayarkan oleh perusahaan/kantor/majikan. Pekerja terdiri atas buruh/karyawan/pegawai, pekerja bebas di pertanian, dan pekerja bebas di nonpertanian. Buruh/Karyawan/Pegawai adalah seseorang yang bekerja pada orang lain atau instansi/kantor/perusahaan secara tetap dengan menerima upah/gaji baik berupa uang maupun barang. Buruh yang tidak mempunyai majikan tetap, tidak digolongkan sebagai buruh/karyawan/pegawai, tetapi sebagai pekerja bebas. Seseorang dianggap memiliki majikan tetap jika memiliki 1 (satu) majikan yang sama dalam sebulan terakhir. • Jenis Pekerjaan/Jabatan adalah macam pekerjaan yang dilakukan oleh seseorang atau ditugaskan kepada seseorang yang sedang bekerja atau yang sementara tidak bekerja"
+  }
+ },
+ "table_2190": "Static table 2190 is titled 2022-2023 and holds Februari 2022, Agustus 2022 and Februari 2023 (created 2022-06-29, updated 2023-06-27). Its 2022 totals equal industry table 2189 in both rounds, and its Februari 2023 totals equal table 2233 (2023, both rounds); it gives the 2022 value, and its Februari 2023 is a check.",
+ "notes": [
+  "Each value is the Agustus Jumlah of its year's occupation table (2016-2024) or of var 583 (2025). All 751 comparisons of a total that two sources share agree exactly, in both rounds, and so do all 1322 cells var 583 shares with tables 1948 and 2255 (checks.cross_source).",
+  "National average (00), rupiah per month: 2016S2 2,552,962, 2017S2 2,742,621, 2018S2 2,829,130, 2019S2 2,913,897, 2020S2 2,756,345, 2021S2 2,736,463, 2022S2 3,070,756, 2023S2 3,178,227, 2024S2 3,267,618, 2025S2 3,331,012.",
+  "31 (DKI JAKARTA) 2025 in var 583: the Februari and Agustus totals are both 4,878,943 rupiah while 8 of its 8 parts differ between the rounds, which points to a cell copied from one round to the other. The CSV holds it as 2025S2; it is kept as published and flagged (checks.flags).",
+  "Derived values are not stored: the change from the year before (%) = value in year t / value in year t-1 x 100 - 100, the same round in both years; it is computed here only for the plausibility flags. A real wage needs a price index, and a ratio to the minimum wage needs that dataset, both in analysis/.",
+  "checks.flags lists, for a person to review, every value and change outside its range in checks.plausible_ranges, every total outside its published parts' range where a part is not shown, and every total that one source repeats in both rounds of a year (checks.repeat_check); a change flag gives the two values it compares under rupiah. A flag stays whether it reflects a real event or a source error."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "identities",
+   "cross-source"
+  ],
+  "identities": [
+   {
+    "check": "static table 1948: Jumlah lies within its parts' range, every region and round",
+    "compared": 70,
+    "exact_bound": 64,
+    "some_parts_not_shown": 6,
+    "flagged": 0
+   },
+   {
+    "check": "static table 1988: Jumlah lies within its parts' range, every region and round",
+    "compared": 70,
+    "exact_bound": 70,
+    "some_parts_not_shown": 0,
+    "flagged": 0
+   },
+   {
+    "check": "static table 2048: Jumlah lies within its parts' range, every region and round",
+    "compared": 70,
+    "exact_bound": 70,
+    "some_parts_not_shown": 0,
+    "flagged": 0
+   },
+   {
+    "check": "static table 2070: Jumlah lies within its parts' range, every region and round",
+    "compared": 70,
+    "exact_bound": 70,
+    "some_parts_not_shown": 0,
+    "flagged": 0
+   },
+   {
+    "check": "static table 2096: Jumlah lies within its parts' range, every region and round",
+    "compared": 70,
+    "exact_bound": 70,
+    "some_parts_not_shown": 0,
+    "flagged": 0
+   },
+   {
+    "check": "static table 2131: Jumlah lies within its parts' range, every region and round",
+    "compared": 70,
+    "exact_bound": 69,
+    "some_parts_not_shown": 1,
+    "flagged": 0
+   },
+   {
+    "check": "static table 2190: Jumlah lies within its parts' range, every region and round",
+    "compared": 105,
+    "exact_bound": 105,
+    "some_parts_not_shown": 0,
+    "flagged": 0
+   },
+   {
+    "check": "static table 2233: Jumlah lies within its parts' range, every region and round",
+    "compared": 70,
+    "exact_bound": 70,
+    "some_parts_not_shown": 0,
+    "flagged": 0
+   },
+   {
+    "check": "static table 2255: Jumlah lies within its parts' range, every region and round",
+    "compared": 78,
+    "exact_bound": 74,
+    "some_parts_not_shown": 4,
+    "flagged": 0
+   },
+   {
+    "check": "static table 1987: Jumlah lies within its parts' range, every region and round",
+    "compared": 70,
+    "exact_bound": 70,
+    "some_parts_not_shown": 0,
+    "flagged": 0
+   },
+   {
+    "check": "static table 2049: Jumlah lies within its parts' range, every region and round",
+    "compared": 70,
+    "exact_bound": 54,
+    "some_parts_not_shown": 16,
+    "flagged": 0
+   },
+   {
+    "check": "static table 2071: Jumlah lies within its parts' range, every region and round",
+    "compared": 70,
+    "exact_bound": 49,
+    "some_parts_not_shown": 21,
+    "flagged": 0
+   },
+   {
+    "check": "static table 2097: Jumlah lies within its parts' range, every region and round",
+    "compared": 70,
+    "exact_bound": 44,
+    "some_parts_not_shown": 26,
+    "flagged": 0
+   },
+   {
+    "check": "static table 2130: Jumlah lies within its parts' range, every region and round",
+    "compared": 70,
+    "exact_bound": 37,
+    "some_parts_not_shown": 33,
+    "flagged": 0
+   },
+   {
+    "check": "static table 2189: Jumlah lies within its parts' range, every region and round",
+    "compared": 70,
+    "exact_bound": 45,
+    "some_parts_not_shown": 25,
+    "flagged": 0
+   },
+   {
+    "check": "static table 2231: Jumlah lies within its parts' range, every region and round",
+    "compared": 70,
+    "exact_bound": 33,
+    "some_parts_not_shown": 37,
+    "flagged": 0
+   },
+   {
+    "check": "static table 2253: Jumlah lies within its parts' range, every region and round",
+    "compared": 78,
+    "exact_bound": 38,
+    "some_parts_not_shown": 40,
+    "flagged": 0
+   },
+   {
+    "check": "var 583 2016-2016: Jumlah (turvar 752) lies within its parts' range, every region and round",
+    "compared": 70,
+    "exact_bound": 64,
+    "some_parts_not_shown": 6,
+    "flagged": 0
+   },
+   {
+    "check": "var 583 2024-2025: Jumlah (turvar 752) lies within its parts' range, every region and round",
+    "compared": 156,
+    "exact_bound": 148,
+    "some_parts_not_shown": 8,
+    "flagged": 0
+   }
+  ],
+  "identity_reason": "A total (Jumlah) is the average over every employee of the province and round, so it lies between the lowest and highest average of its parts (occupations or industries): exactly where every part is published or '-', and only as a flag where a part is not shown.",
+  "cross_source": [
+   {
+    "check": "occupation table 1988 = industry table 1987, Jumlah, 2017S1 and 2017S2, rupiah",
+    "compared": 70,
+    "tolerance": 0,
+    "relative": false,
+    "largest_gap": 0.0,
+    "differences": [],
+    "first": "static table 1988",
+    "second": "static table 1987",
+    "keys": "[province_code, period]"
+   },
+   {
+    "check": "occupation table 2048 = industry table 2049, Jumlah, 2018S1 and 2018S2, rupiah",
+    "compared": 70,
+    "tolerance": 0,
+    "relative": false,
+    "largest_gap": 0.0,
+    "differences": [],
+    "first": "static table 2048",
+    "second": "static table 2049",
+    "keys": "[province_code, period]"
+   },
+   {
+    "check": "occupation table 2070 = industry table 2071, Jumlah, 2019S1 and 2019S2, rupiah",
+    "compared": 70,
+    "tolerance": 0,
+    "relative": false,
+    "largest_gap": 0.0,
+    "differences": [],
+    "first": "static table 2070",
+    "second": "static table 2071",
+    "keys": "[province_code, period]"
+   },
+   {
+    "check": "occupation table 2096 = industry table 2097, Jumlah, 2020S1 and 2020S2, rupiah",
+    "compared": 70,
+    "tolerance": 0,
+    "relative": false,
+    "largest_gap": 0.0,
+    "differences": [],
+    "first": "static table 2096",
+    "second": "static table 2097",
+    "keys": "[province_code, period]"
+   },
+   {
+    "check": "occupation table 2131 = industry table 2130, Jumlah, 2021S1 and 2021S2, rupiah",
+    "compared": 70,
+    "tolerance": 0,
+    "relative": false,
+    "largest_gap": 0.0,
+    "differences": [],
+    "first": "static table 2131",
+    "second": "static table 2130",
+    "keys": "[province_code, period]"
+   },
+   {
+    "check": "occupation table 2190 = industry table 2189, Jumlah, 2022S1 and 2022S2, rupiah",
+    "compared": 70,
+    "tolerance": 0,
+    "relative": false,
+    "largest_gap": 0.0,
+    "differences": [],
+    "first": "static table 2190",
+    "second": "static table 2189",
+    "keys": "[province_code, period]"
+   },
+   {
+    "check": "occupation table 2233 = industry table 2231, Jumlah, 2023S1 and 2023S2, rupiah",
+    "compared": 70,
+    "tolerance": 0,
+    "relative": false,
+    "largest_gap": 0.0,
+    "differences": [],
+    "first": "static table 2233",
+    "second": "static table 2231",
+    "keys": "[province_code, period]"
+   },
+   {
+    "check": "occupation table 2255 = industry table 2253, Jumlah, 2024S1 and 2024S2, rupiah",
+    "compared": 78,
+    "tolerance": 0,
+    "relative": false,
+    "largest_gap": 0.0,
+    "differences": [],
+    "first": "static table 2255",
+    "second": "static table 2253",
+    "keys": "[province_code, period]"
+   },
+   {
+    "check": "occupation table 2233 = occupation table 2190, Jumlah, 2023S1, rupiah",
+    "compared": 35,
+    "tolerance": 0,
+    "relative": false,
+    "largest_gap": 0.0,
+    "differences": [],
+    "first": "static table 2233",
+    "second": "static table 2190",
+    "keys": "[province_code, period]"
+   },
+   {
+    "check": "occupation table 1948 = var 583, Jumlah, 2016S1 and 2016S2, rupiah",
+    "compared": 70,
+    "tolerance": 0,
+    "relative": false,
+    "largest_gap": 0.0,
+    "differences": [],
+    "first": "static table 1948",
+    "second": "var 583",
+    "keys": "[province_code, period]"
+   },
+   {
+    "check": "occupation table 2255 = var 583, Jumlah, 2024S1 and 2024S2, rupiah",
+    "compared": 78,
+    "tolerance": 0,
+    "relative": false,
+    "largest_gap": 0.0,
+    "differences": [],
+    "first": "static table 2255",
+    "second": "var 583",
+    "keys": "[province_code, period]"
+   },
+   {
+    "check": "every cell of static table 1948 (eight occupations and Jumlah, both rounds) equals var 583",
+    "cells": 630,
+    "equal": 624,
+    "na_cells_absent_from_var_583": 6,
+    "differences": [],
+    "part_turvars": {
+     "0/1": 744,
+     "2": 745,
+     "3": 746,
+     "4": 747,
+     "5": 748,
+     "6": 749,
+     "7/8/9": 750,
+     "X/00": 751
+    }
+   },
+   {
+    "check": "every cell of static table 2255 (eight occupations and Jumlah, both rounds) equals var 583",
+    "cells": 702,
+    "equal": 698,
+    "na_cells_absent_from_var_583": 4,
+    "differences": [],
+    "part_turvars": {
+     "0/1": 744,
+     "2": 745,
+     "3": 746,
+     "4": 747,
+     "5": 748,
+     "6": 749,
+     "7/8/9": 750,
+     "X/00": 751
+    }
+   }
+  ],
+  "cross_source_tolerance": "0 rupiah: every copy is the same published whole-rupiah figure",
+  "plausible_ranges": {
+   "wage_rupiah": {
+    "range": [
+     1000000,
+     8000000
+    ],
+    "measure": "every value in the CSV, rupiah per month"
+   },
+   "wage_change_pct": {
+    "range": [
+     -10,
+     20
+    ],
+    "measure": "each value against the same round of the year before, (value t / value t-1 - 1) x 100, apart from the changes across a border change (checks.change_not_compared)"
+   }
+  },
+  "repeat_check": {
+   "check": "total_same_in_both_rounds",
+   "measure": "in each source, every region and year with both rounds: the Februari and Agustus totals (Jumlah) are equal to the rupiah; each flag counts the parts whose values differ between the two rounds"
+  },
+  "plausibility_compared": {
+   "wage_rupiah": 358,
+   "wage_change_pct": 317,
+   "total_same_in_both_rounds": 716
+  },
+  "change_not_compared": [
+   {
+    "province_code": "91",
+    "period": "2024S2",
+    "reason": "Papua Barat: 2023 includes Papua Barat Daya, 2024 does not"
+   },
+   {
+    "province_code": "94",
+    "period": "2024S2",
+    "reason": "Papua: 2023 includes Papua Selatan, Papua Tengah and Papua Pegunungan, 2024 does not"
+   }
+  ],
+  "flags": [
+   {
+    "check": "wage_change_pct",
+    "province_code": "19",
+    "period": "2020S2",
+    "from_period": "2019S2",
+    "rupiah": {
+     "2019S2": 2937123.0,
+     "2020S2": 2436156.0
+    },
+    "value": -17.0564,
+    "range": [
+     -10,
+     20
+    ]
+   },
+   {
+    "check": "wage_change_pct",
+    "province_code": "21",
+    "period": "2018S2",
+    "from_period": "2017S2",
+    "rupiah": {
+     "2017S2": 3477269.0,
+     "2018S2": 4254308.0
+    },
+    "value": 22.3462,
+    "range": [
+     -10,
+     20
+    ]
+   },
+   {
+    "check": "wage_change_pct",
+    "province_code": "31",
+    "period": "2022S2",
+    "from_period": "2021S2",
+    "rupiah": {
+     "2021S2": 4028744.0,
+     "2022S2": 5255824.0
+    },
+    "value": 30.4581,
+    "range": [
+     -10,
+     20
+    ]
+   },
+   {
+    "check": "wage_change_pct",
+    "province_code": "31",
+    "period": "2025S2",
+    "from_period": "2024S2",
+    "rupiah": {
+     "2024S2": 5806940.0,
+     "2025S2": 4878943.0
+    },
+    "value": -15.9808,
+    "range": [
+     -10,
+     20
+    ]
+   },
+   {
+    "check": "wage_change_pct",
+    "province_code": "51",
+    "period": "2020S2",
+    "from_period": "2019S2",
+    "rupiah": {
+     "2019S2": 2988555.0,
+     "2020S2": 2446534.0
+    },
+    "value": -18.1366,
+    "range": [
+     -10,
+     20
+    ]
+   },
+   {
+    "check": "wage_change_pct",
+    "province_code": "51",
+    "period": "2022S2",
+    "from_period": "2021S2",
+    "rupiah": {
+     "2021S2": 2388382.0,
+     "2022S2": 3002534.0
+    },
+    "value": 25.7141,
+    "range": [
+     -10,
+     20
+    ]
+   },
+   {
+    "check": "total_same_in_both_rounds",
+    "source": "var 583",
+    "province_code": "31",
+    "period": "2025S2",
+    "other_period": "2025S1",
+    "value": 4878943.0,
+    "parts": 8,
+    "parts_differing": 8
+   }
+  ]
+ },
+ "file": "20261104_bps-province-monthly-wage.csv",
+ "rows": 358,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/labour/20261104_bps-static-table-1948-monthly-wage-by-province-and-occupation-2016.json": {
+   "sha256": "f41b06fee9e18548cfb0382d10b1935465fce6f30ce0a4011189ba124872a860"
+  },
+  "raw/labour/20261104_bps-static-table-1988-monthly-wage-by-province-and-occupation-2017.json": {
+   "sha256": "2785cfb287d6e0f5ebea046de28bdaf9d2d576c5b8c327dea752c3da3d685476"
+  },
+  "raw/labour/20261104_bps-static-table-2048-monthly-wage-by-province-and-occupation-2018.json": {
+   "sha256": "faa13bb30e6a73b2618aaa6ad126569c62f0c1a5c34b58abb72f205b17f916e4"
+  },
+  "raw/labour/20261104_bps-static-table-2070-monthly-wage-by-province-and-occupation-2019.json": {
+   "sha256": "f8b0fd25e8365c96404f04ed0b15e1a635862c53568ebfc18bbe00258083da15"
+  },
+  "raw/labour/20261104_bps-static-table-2096-monthly-wage-by-province-and-occupation-2020.json": {
+   "sha256": "f2c7c4c931cd8f6ded831debe350fc993e175bff92dc6690da3e16f93d694669"
+  },
+  "raw/labour/20261104_bps-static-table-2131-monthly-wage-by-province-and-occupation-2021.json": {
+   "sha256": "bfe584793a91958279ece4ad2900e1a02f248ddc318d1eb422eeba291aa2ef15"
+  },
+  "raw/labour/20261104_bps-static-table-2190-monthly-wage-by-province-and-occupation-2022-2023.json": {
+   "sha256": "ae8044ea0248fa1d37cdbfbaa9c4195094bfb045982617718ffbc5ffeea625f7"
+  },
+  "raw/labour/20261104_bps-static-table-2233-monthly-wage-by-province-and-occupation-2023.json": {
+   "sha256": "c1ae5645bb381df71687fb030d57693d3aed5afe6f8c4c8b35517f110860cbaa"
+  },
+  "raw/labour/20261104_bps-static-table-2255-monthly-wage-by-province-and-occupation-2024.json": {
+   "sha256": "a06c0092a23d82c40b5ea864aaf702309b4afcb858031429987c03e3d35bd440"
+  },
+  "raw/labour/20261104_bps-static-table-1987-monthly-wage-by-province-and-industry-2017.json": {
+   "sha256": "bebc8e0e1fcd87cf48286c1fe3328b32324bb33414c941146ca7285bf907e31d"
+  },
+  "raw/labour/20261104_bps-static-table-2049-monthly-wage-by-province-and-industry-2018.json": {
+   "sha256": "02d6d43b0cb0c7fc20388c95e1fc5eaad1d024eabc8974bf71c12fcef4406c3a"
+  },
+  "raw/labour/20261104_bps-static-table-2071-monthly-wage-by-province-and-industry-2019.json": {
+   "sha256": "6fa378ede4fd0ea1715e9f56dc2f4ae293345cff640b384c96cd47b5b0e4b309"
+  },
+  "raw/labour/20261104_bps-static-table-2097-monthly-wage-by-province-and-industry-2020.json": {
+   "sha256": "346c031a791cc3072fc388935686132586c8025c1291f80e6076657b2fa9d49b"
+  },
+  "raw/labour/20261104_bps-static-table-2130-monthly-wage-by-province-and-industry-2021.json": {
+   "sha256": "25338d93c318add4f4d81471e68e6cdcde0463eb3b6ff6563d531d0451995073"
+  },
+  "raw/labour/20261104_bps-static-table-2189-monthly-wage-by-province-and-industry-2022.json": {
+   "sha256": "1a42e508b6b6517d36a8cd5f5df460b877f5e4b4a570454fa38e9193cccb08d9"
+  },
+  "raw/labour/20261104_bps-static-table-2231-monthly-wage-by-province-and-industry-2023.json": {
+   "sha256": "ab6a76211b0d83f196ee3375e23a7bcfe9dc2dd0ffad6cff6a616ca753d0f8fe"
+  },
+  "raw/labour/20261104_bps-static-table-2253-monthly-wage-by-province-and-industry-2024.json": {
+   "sha256": "589d273af4eb13bfcba2f2ae6da3a484cda3afd22fe026cac88c30a7e77d8001"
+  },
+  "raw/labour/20261104_bps-api-var583-monthly-wage-by-province-and-occupation-2016-2016.json": {
+   "sha256": "474c5f4bfb42b205afddef893dd9cd6d9d67b81df78e48eaf15d4af573b68723"
+  },
+  "raw/labour/20261104_bps-api-var583-monthly-wage-by-province-and-occupation-2024-2025.json": {
+   "sha256": "4c1998e5614923b24d4758e30b5ca3ef32870bd70889a79b4ab3a257e8458b3f"
+  }
+ }
+}

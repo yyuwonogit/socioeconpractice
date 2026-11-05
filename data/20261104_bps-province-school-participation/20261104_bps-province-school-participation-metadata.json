@@ -1,0 +1,1313 @@
+{
+ "title": "BPS school participation rate (APS) by province and age group, 2015-2025, Indonesia",
+ "columns": {
+  "province_code": "BPS province code (kode_bps); 00 = Indonesia. Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definition in 'indicators'.",
+  "age_group": "Age group in years, as BPS labels it; names in 'age_groups'.",
+  "period": "YYYY, the year BPS gives the value for. The table labels its one sub-period 'Tahun' (year), and its note names the source only as 'BPS, Susenas', without the Susenas round (March or September), so periods are written YYYY, not YYYYS1 or YYYYS2.",
+  "status": "Revision marker; the table note states none, so every row is empty (final).",
+  "value": "Percent of the age group, 2 decimals, as published by BPS. Multiply by 'multiplier' for base units."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  },
+  "00": {
+   "name": "INDONESIA",
+   "kode_dagri": null
+  }
+ },
+ "province_source": {
+  "url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=provinsi&periode_merge=2025_1.2025",
+  "file": "raw/province-codes/20261102_bps-province-codes-2025-s1.json",
+  "note": "BPS and Kemendagri codes differ for the six Papua provinces; join other datasets on the code system they use. Every region label in the table matches the BPS list after cleaning.normalise_name, so no alias is declared."
+ },
+ "indicators": {
+  "school_participation_rate": {
+   "name": "Angka Partisipasi Sekolah, APS (school participation rate), by age group",
+   "unit": "percent of the age group",
+   "multiplier": 0.01,
+   "base_unit": "fraction of the age group",
+   "decimals": 2,
+   "periods": "2015-2025, yearly",
+   "unit_reading": "The table's unit field reads 'Tidak Ada Satuan' (no unit). Every value lies between 0 and 100 with at most 2 decimals (checks.unit, which stops the build otherwise), so the values are read as percent of the age group.",
+   "definition": "The raw files do not define the rate: the definition field is empty, and the note's definition ('Angka yang menggambarkan ketimpangan partisipasi sekolah antara penduduk berusia 7-17 tahun dengan disabilitas dan tanpa disabilitas') describes another indicator, the gap in school participation between people aged 7-17 with and without disabilities. The label names the rate as Angka Partisipasi Sekolah (APS) by age group.",
+   "source": "BPS WebAPI var 2211 'Angka Partisipasi Sekolah (APS) Menurut Provinsi dan Kelompok Umur', from Susenas; see 'source_table'",
+   "download_script": "raw/education/20261104_download-bps-school-participation-by-province.py"
+  }
+ },
+ "age_groups": {
+  "7-12": {
+   "name": "Ages 7-12 (primary school age, SD)",
+   "bps_label": "7-12",
+   "turvar": 2001
+  },
+  "13-15": {
+   "name": "Ages 13-15 (junior secondary age, SMP)",
+   "bps_label": "13-15",
+   "turvar": 2002
+  },
+  "16-18": {
+   "name": "Ages 16-18 (senior secondary age, SMA/SMK)",
+   "bps_label": "16-18",
+   "turvar": 2003
+  },
+  "19-23": {
+   "name": "Ages 19-23 (higher education age)",
+   "bps_label": "19-23",
+   "turvar": 2004
+  }
+ },
+ "periods": {
+  "held": [
+   "2015",
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "survey_round": "The table does not state its Susenas round: its one sub-period is 'Tahun' (year) and its note names only 'BPS, Susenas'. Each value is BPS's figure for the year, written YYYY."
+ },
+ "coverage": {
+  "years": {
+   "2015-2023": {
+    "provinces": 34,
+    "absent": [
+     "92",
+     "95",
+     "96",
+     "97"
+    ]
+   },
+   "2024-2025": {
+    "provinces": 38,
+    "absent": []
+   }
+  },
+  "first_year": {
+   "92": {
+    "year": 2024,
+    "reason": "PAPUA BARAT DAYA became a province in 2022; the table gives it its own values from 2024, and 91 covers it before"
+   },
+   "95": {
+    "year": 2024,
+    "reason": "PAPUA SELATAN became a province in 2022; the table gives it its own values from 2024, and 94 covers it before"
+   },
+   "96": {
+    "year": 2024,
+    "reason": "PAPUA TENGAH became a province in 2022; the table gives it its own values from 2024, and 94 covers it before"
+   },
+   "97": {
+    "year": 2024,
+    "reason": "PAPUA PEGUNUNGAN became a province in 2022; the table gives it its own values from 2024, and 94 covers it before"
+   }
+  },
+  "indonesia": "The table lists Indonesia (row 9999 'INDONESIA') after the 38 provinces, with a value in every age group and year; it is written as code 00."
+ },
+ "borders": [
+  "65 (Kalimantan Utara) has its own values from 2015, the first year held, so 64 (Kalimantan Timur) excludes it in every year held.",
+  "91 (Papua Barat) and 94 (Papua) up to 2023 cover the areas before the 2022 split: the table gives 92, 95, 96 and 97 no value before 2024. From 2024, 91 and 94 cover the provinces after the split.",
+  "Rates do not add across provinces. A rate for an area of several provinces, such as Papua Barat before the split (91 + 92), needs each province's population in the age group, which this table does not give.",
+  "A change of 91 or 94 from 2023 to 2024 compares different areas; the change check leaves those changes out (checks.change_not_compared)."
+ ],
+ "source_table": {
+  "role": "gives every value in the CSV",
+  "label": "Angka Partisipasi Sekolah (APS) Menurut Provinsi dan Kelompok Umur",
+  "subject": [
+   {
+    "val": 521,
+    "label": "Pendidikan"
+   }
+  ],
+  "collection": "Pendidikan",
+  "unit": "Tidak Ada Satuan",
+  "decimals": 2,
+  "definition": "none: the table's definition field ('def') is empty; the note's definition describes another indicator (see 'indicators')",
+  "turvar": {
+   "2001": "7-12",
+   "2002": "13-15",
+   "2003": "16-18",
+   "2004": "19-23"
+  },
+  "turtahun": {
+   "0": "Tahun"
+  },
+  "regions": "38 Provinsi",
+  "years": "2015-2025",
+  "last_update": "2026-08-28 03:20:36",
+  "note": "Sumber : BPS, Susenas Definisi : Angka yang menggambarkan ketimpangan partisipasi sekolah antara penduduk berusia 7-17 tahun dengan disabilitas dan tanpa disabilitas",
+  "note_clauses": [
+   "Sumber : BPS, Susenas",
+   "Definisi : Angka yang menggambarkan ketimpangan partisipasi sekolah antara penduduk berusia 7-17 tahun dengan disabilitas dan tanpa disabilitas"
+  ],
+  "request": "https://webapi.bps.go.id/v1/api/list/model/data/domain/0000/var/2211/th/{th}/key/{key} (th = first:last year minus 1900, such as 115:117 for 2015-2017; the key is not stored)",
+  "download_script": "raw/education/20261104_download-bps-school-participation-by-province.py",
+  "files": [
+   "raw/education/20261104_bps-api-var2211-school-participation-by-province-and-age-2015-2017.json",
+   "raw/education/20261104_bps-api-var2211-school-participation-by-province-and-age-2018-2020.json",
+   "raw/education/20261104_bps-api-var2211-school-participation-by-province-and-age-2021-2023.json",
+   "raw/education/20261104_bps-api-var2211-school-participation-by-province-and-age-2024-2025.json"
+  ]
+ },
+ "notes": [
+  "No other raw file in the repository holds these rates, so there is no cross-source check (layer 4).",
+  "Indonesia's value is BPS's own national figure, not computed here. It lies between the lowest and the highest province in every age group and year (checks.identities), as a national rate over the same age group must.",
+  "Derived values are not stored. Change in a rate (percentage points) = rate in t - rate in t-1.",
+  "checks.flags lists every value or change outside its range in checks.plausible_ranges for a person to review, with the two values each change compares; a flag stays whether it reflects a real event or a source error."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "unit",
+   "identities",
+   "plausibility checked (layer 5, flags listed)"
+  ],
+  "unit": {
+   "check": "every value lies between 0 and 100, as a rate written per 100 must; the unit field reads 'Tidak Ada Satuan', so this is what declares the values percentages",
+   "compared": 1572,
+   "lowest": 12.48,
+   "highest": 99.9
+  },
+  "identities": {
+   "check": "Indonesia (00) lies between the lowest and the highest province rate, every age group and year",
+   "compared": 44,
+   "tolerance": 0,
+   "tolerance_reason": "rounding to the published decimals cannot move a weighted mean outside the rounded lowest and highest values",
+   "groups": {
+    "7-12 2015": {
+     "indonesia": 99.09,
+     "lowest": [
+      "94",
+      81.04
+     ],
+     "highest": [
+      "11",
+      99.9
+     ],
+     "provinces": 34
+    },
+    "7-12 2016": {
+     "indonesia": 99.09,
+     "lowest": [
+      "94",
+      81.11
+     ],
+     "highest": [
+      "34",
+      99.84
+     ],
+     "provinces": 34
+    },
+    "7-12 2017": {
+     "indonesia": 99.14,
+     "lowest": [
+      "94",
+      81.8
+     ],
+     "highest": [
+      "34",
+      99.87
+     ],
+     "provinces": 34
+    },
+    "7-12 2018": {
+     "indonesia": 99.22,
+     "lowest": [
+      "94",
+      82.43
+     ],
+     "highest": [
+      "34",
+      99.9
+     ],
+     "provinces": 34
+    },
+    "7-12 2019": {
+     "indonesia": 99.24,
+     "lowest": [
+      "94",
+      82.67
+     ],
+     "highest": [
+      "34",
+      99.9
+     ],
+     "provinces": 34
+    },
+    "7-12 2020": {
+     "indonesia": 99.26,
+     "lowest": [
+      "94",
+      82.99
+     ],
+     "highest": [
+      "34",
+      99.89
+     ],
+     "provinces": 34
+    },
+    "7-12 2021": {
+     "indonesia": 99.19,
+     "lowest": [
+      "94",
+      83.43
+     ],
+     "highest": [
+      "17",
+      99.76
+     ],
+     "provinces": 34
+    },
+    "7-12 2022": {
+     "indonesia": 99.1,
+     "lowest": [
+      "94",
+      84.35
+     ],
+     "highest": [
+      "14",
+      99.61
+     ],
+     "provinces": 34
+    },
+    "7-12 2023": {
+     "indonesia": 99.16,
+     "lowest": [
+      "94",
+      83.61
+     ],
+     "highest": [
+      "13",
+      99.76
+     ],
+     "provinces": 34
+    },
+    "7-12 2024": {
+     "indonesia": 99.19,
+     "lowest": [
+      "96",
+      74.63
+     ],
+     "highest": [
+      "13",
+      99.71
+     ],
+     "provinces": 38
+    },
+    "7-12 2025": {
+     "indonesia": 99.23,
+     "lowest": [
+      "96",
+      80.13
+     ],
+     "highest": [
+      "14",
+      99.74
+     ],
+     "provinces": 38
+    },
+    "13-15 2015": {
+     "indonesia": 94.72,
+     "lowest": [
+      "94",
+      78.14
+     ],
+     "highest": [
+      "34",
+      99.68
+     ],
+     "provinces": 34
+    },
+    "13-15 2016": {
+     "indonesia": 94.88,
+     "lowest": [
+      "94",
+      78.86
+     ],
+     "highest": [
+      "34",
+      99.62
+     ],
+     "provinces": 34
+    },
+    "13-15 2017": {
+     "indonesia": 95.08,
+     "lowest": [
+      "94",
+      79.09
+     ],
+     "highest": [
+      "34",
+      99.63
+     ],
+     "provinces": 34
+    },
+    "13-15 2018": {
+     "indonesia": 95.36,
+     "lowest": [
+      "94",
+      80.0
+     ],
+     "highest": [
+      "34",
+      99.72
+     ],
+     "provinces": 34
+    },
+    "13-15 2019": {
+     "indonesia": 95.51,
+     "lowest": [
+      "94",
+      80.13
+     ],
+     "highest": [
+      "34",
+      99.56
+     ],
+     "provinces": 34
+    },
+    "13-15 2020": {
+     "indonesia": 95.74,
+     "lowest": [
+      "94",
+      80.48
+     ],
+     "highest": [
+      "34",
+      99.45
+     ],
+     "provinces": 34
+    },
+    "13-15 2021": {
+     "indonesia": 95.99,
+     "lowest": [
+      "94",
+      80.02
+     ],
+     "highest": [
+      "34",
+      99.43
+     ],
+     "provinces": 34
+    },
+    "13-15 2022": {
+     "indonesia": 95.92,
+     "lowest": [
+      "94",
+      81.66
+     ],
+     "highest": [
+      "21",
+      99.01
+     ],
+     "provinces": 34
+    },
+    "13-15 2023": {
+     "indonesia": 96.1,
+     "lowest": [
+      "94",
+      80.91
+     ],
+     "highest": [
+      "21",
+      99.07
+     ],
+     "provinces": 34
+    },
+    "13-15 2024": {
+     "indonesia": 96.17,
+     "lowest": [
+      "96",
+      68.42
+     ],
+     "highest": [
+      "21",
+      98.91
+     ],
+     "provinces": 38
+    },
+    "13-15 2025": {
+     "indonesia": 96.3,
+     "lowest": [
+      "96",
+      67.86
+     ],
+     "highest": [
+      "34",
+      99.6
+     ],
+     "provinces": 38
+    },
+    "16-18 2015": {
+     "indonesia": 70.61,
+     "lowest": [
+      "94",
+      61.96
+     ],
+     "highest": [
+      "34",
+      86.78
+     ],
+     "provinces": 34
+    },
+    "16-18 2016": {
+     "indonesia": 70.83,
+     "lowest": [
+      "94",
+      62.07
+     ],
+     "highest": [
+      "34",
+      87.2
+     ],
+     "provinces": 34
+    },
+    "16-18 2017": {
+     "indonesia": 71.42,
+     "lowest": [
+      "94",
+      63.35
+     ],
+     "highest": [
+      "34",
+      87.61
+     ],
+     "provinces": 34
+    },
+    "16-18 2018": {
+     "indonesia": 71.99,
+     "lowest": [
+      "94",
+      63.48
+     ],
+     "highest": [
+      "34",
+      88.39
+     ],
+     "provinces": 34
+    },
+    "16-18 2019": {
+     "indonesia": 72.36,
+     "lowest": [
+      "94",
+      63.5
+     ],
+     "highest": [
+      "34",
+      88.97
+     ],
+     "provinces": 34
+    },
+    "16-18 2020": {
+     "indonesia": 72.72,
+     "lowest": [
+      "94",
+      64.83
+     ],
+     "highest": [
+      "34",
+      88.95
+     ],
+     "provinces": 34
+    },
+    "16-18 2021": {
+     "indonesia": 73.09,
+     "lowest": [
+      "94",
+      63.98
+     ],
+     "highest": [
+      "34",
+      89.63
+     ],
+     "provinces": 34
+    },
+    "16-18 2022": {
+     "indonesia": 73.15,
+     "lowest": [
+      "94",
+      65.93
+     ],
+     "highest": [
+      "34",
+      89.95
+     ],
+     "provinces": 34
+    },
+    "16-18 2023": {
+     "indonesia": 73.42,
+     "lowest": [
+      "94",
+      64.15
+     ],
+     "highest": [
+      "34",
+      91.17
+     ],
+     "provinces": 34
+    },
+    "16-18 2024": {
+     "indonesia": 74.64,
+     "lowest": [
+      "96",
+      47.65
+     ],
+     "highest": [
+      "34",
+      90.36
+     ],
+     "provinces": 38
+    },
+    "16-18 2025": {
+     "indonesia": 77.86,
+     "lowest": [
+      "96",
+      44.61
+     ],
+     "highest": [
+      "34",
+      93.03
+     ],
+     "provinces": 38
+    },
+    "19-23 2015": {
+     "indonesia": 25.92,
+     "lowest": [
+      "19",
+      14.95
+     ],
+     "highest": [
+      "34",
+      54.45
+     ],
+     "provinces": 34
+    },
+    "19-23 2016": {
+     "indonesia": 26.83,
+     "lowest": [
+      "19",
+      14.62
+     ],
+     "highest": [
+      "34",
+      56.48
+     ],
+     "provinces": 34
+    },
+    "19-23 2017": {
+     "indonesia": 27.86,
+     "lowest": [
+      "19",
+      17.21
+     ],
+     "highest": [
+      "34",
+      56.94
+     ],
+     "provinces": 34
+    },
+    "19-23 2018": {
+     "indonesia": 27.92,
+     "lowest": [
+      "19",
+      18.66
+     ],
+     "highest": [
+      "34",
+      56.81
+     ],
+     "provinces": 34
+    },
+    "19-23 2019": {
+     "indonesia": 26.87,
+     "lowest": [
+      "19",
+      18.45
+     ],
+     "highest": [
+      "34",
+      56.74
+     ],
+     "provinces": 34
+    },
+    "19-23 2020": {
+     "indonesia": 27.41,
+     "lowest": [
+      "19",
+      18.92
+     ],
+     "highest": [
+      "34",
+      56.75
+     ],
+     "provinces": 34
+    },
+    "19-23 2021": {
+     "indonesia": 27.72,
+     "lowest": [
+      "19",
+      19.1
+     ],
+     "highest": [
+      "34",
+      56.41
+     ],
+     "provinces": 34
+    },
+    "19-23 2022": {
+     "indonesia": 27.61,
+     "lowest": [
+      "19",
+      18.88
+     ],
+     "highest": [
+      "34",
+      56.69
+     ],
+     "provinces": 34
+    },
+    "19-23 2023": {
+     "indonesia": 28.96,
+     "lowest": [
+      "19",
+      19.38
+     ],
+     "highest": [
+      "34",
+      55.8
+     ],
+     "provinces": 34
+    },
+    "19-23 2024": {
+     "indonesia": 29.01,
+     "lowest": [
+      "97",
+      17.84
+     ],
+     "highest": [
+      "34",
+      54.17
+     ],
+     "provinces": 38
+    },
+    "19-23 2025": {
+     "indonesia": 29.13,
+     "lowest": [
+      "97",
+      12.48
+     ],
+     "highest": [
+      "34",
+      54.72
+     ],
+     "provinces": 38
+    }
+   }
+  },
+  "cross_source": "Not applicable (layer 4): no other raw file holds these values; see 'notes'.",
+  "plausible_ranges": {
+   "rate_7-12": {
+    "range": [
+     90,
+     100
+    ],
+    "measure": "Every value, percent of the age group, against its age group's range: nearly every child of primary age is in school, fewer at each later stage, and fewest at higher-education age. A value outside its group's range lies far from Indonesia's in every year (checks.identities), so it is flagged for review."
+   },
+   "rate_13-15": {
+    "range": [
+     75,
+     100
+    ],
+    "measure": "Every value, percent of the age group, against its age group's range: nearly every child of primary age is in school, fewer at each later stage, and fewest at higher-education age. A value outside its group's range lies far from Indonesia's in every year (checks.identities), so it is flagged for review."
+   },
+   "rate_16-18": {
+    "range": [
+     45,
+     100
+    ],
+    "measure": "Every value, percent of the age group, against its age group's range: nearly every child of primary age is in school, fewer at each later stage, and fewest at higher-education age. A value outside its group's range lies far from Indonesia's in every year (checks.identities), so it is flagged for review."
+   },
+   "rate_19-23": {
+    "range": [
+     8,
+     75
+    ],
+    "measure": "Every value, percent of the age group, against its age group's range: nearly every child of primary age is in school, fewer at each later stage, and fewest at higher-education age. A value outside its group's range lies far from Indonesia's in every year (checks.identities), so it is flagged for review."
+   },
+   "change": {
+    "range": [
+     -6,
+     6
+    ],
+    "measure": "Change from the same region's value for the same age group the year before, in percentage points. School participation moves slowly, so a move of more than 6 points in one year is flagged for review."
+   }
+  },
+  "plausibility_observed": {
+   "7-12": {
+    "read": 393,
+    "lowest": {
+     "province_code": "96",
+     "period": "2024",
+     "value": 74.63
+    },
+    "highest": {
+     "province_code": "11",
+     "period": "2015",
+     "value": 99.9
+    }
+   },
+   "13-15": {
+    "read": 393,
+    "lowest": {
+     "province_code": "96",
+     "period": "2025",
+     "value": 67.86
+    },
+    "highest": {
+     "province_code": "34",
+     "period": "2018",
+     "value": 99.72
+    }
+   },
+   "16-18": {
+    "read": 393,
+    "lowest": {
+     "province_code": "96",
+     "period": "2025",
+     "value": 44.61
+    },
+    "highest": {
+     "province_code": "34",
+     "period": "2025",
+     "value": 93.03
+    }
+   },
+   "19-23": {
+    "read": 393,
+    "lowest": {
+     "province_code": "97",
+     "period": "2025",
+     "value": 12.48
+    },
+    "highest": {
+     "province_code": "34",
+     "period": "2017",
+     "value": 56.94
+    }
+   },
+   "change": {
+    "read": 1408,
+    "lowest": {
+     "province_code": "81",
+     "period": "2025",
+     "value": -9.92
+    },
+    "highest": {
+     "province_code": "31",
+     "period": "2025",
+     "value": 8.27
+    }
+   }
+  },
+  "change_not_compared": [
+   {
+    "province_code": "91",
+    "age_group": "13-15",
+    "period": "2024",
+    "reason": "91 in 2023 includes 92, which has its own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "91",
+    "age_group": "16-18",
+    "period": "2024",
+    "reason": "91 in 2023 includes 92, which has its own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "91",
+    "age_group": "19-23",
+    "period": "2024",
+    "reason": "91 in 2023 includes 92, which has its own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "91",
+    "age_group": "7-12",
+    "period": "2024",
+    "reason": "91 in 2023 includes 92, which has its own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "94",
+    "age_group": "13-15",
+    "period": "2024",
+    "reason": "94 in 2023 includes 95, 96 and 97, which have their own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "94",
+    "age_group": "16-18",
+    "period": "2024",
+    "reason": "94 in 2023 includes 95, 96 and 97, which have their own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "94",
+    "age_group": "19-23",
+    "period": "2024",
+    "reason": "94 in 2023 includes 95, 96 and 97, which have their own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "94",
+    "age_group": "7-12",
+    "period": "2024",
+    "reason": "94 in 2023 includes 95, 96 and 97, which have their own values from 2024, so the change compares different areas"
+   }
+  ],
+  "flags": [
+   {
+    "check": "rate_7-12",
+    "province_code": "94",
+    "age_group": "7-12",
+    "period": "2015",
+    "value": 81.04,
+    "range": [
+     90,
+     100
+    ]
+   },
+   {
+    "check": "rate_7-12",
+    "province_code": "94",
+    "age_group": "7-12",
+    "period": "2016",
+    "value": 81.11,
+    "range": [
+     90,
+     100
+    ]
+   },
+   {
+    "check": "rate_7-12",
+    "province_code": "94",
+    "age_group": "7-12",
+    "period": "2017",
+    "value": 81.8,
+    "range": [
+     90,
+     100
+    ]
+   },
+   {
+    "check": "rate_7-12",
+    "province_code": "94",
+    "age_group": "7-12",
+    "period": "2018",
+    "value": 82.43,
+    "range": [
+     90,
+     100
+    ]
+   },
+   {
+    "check": "rate_7-12",
+    "province_code": "94",
+    "age_group": "7-12",
+    "period": "2019",
+    "value": 82.67,
+    "range": [
+     90,
+     100
+    ]
+   },
+   {
+    "check": "rate_7-12",
+    "province_code": "94",
+    "age_group": "7-12",
+    "period": "2020",
+    "value": 82.99,
+    "range": [
+     90,
+     100
+    ]
+   },
+   {
+    "check": "rate_7-12",
+    "province_code": "94",
+    "age_group": "7-12",
+    "period": "2021",
+    "value": 83.43,
+    "range": [
+     90,
+     100
+    ]
+   },
+   {
+    "check": "rate_7-12",
+    "province_code": "94",
+    "age_group": "7-12",
+    "period": "2022",
+    "value": 84.35,
+    "range": [
+     90,
+     100
+    ]
+   },
+   {
+    "check": "rate_7-12",
+    "province_code": "94",
+    "age_group": "7-12",
+    "period": "2023",
+    "value": 83.61,
+    "range": [
+     90,
+     100
+    ]
+   },
+   {
+    "check": "rate_7-12",
+    "province_code": "96",
+    "age_group": "7-12",
+    "period": "2024",
+    "value": 74.63,
+    "range": [
+     90,
+     100
+    ]
+   },
+   {
+    "check": "rate_7-12",
+    "province_code": "96",
+    "age_group": "7-12",
+    "period": "2025",
+    "value": 80.13,
+    "range": [
+     90,
+     100
+    ]
+   },
+   {
+    "check": "rate_7-12",
+    "province_code": "97",
+    "age_group": "7-12",
+    "period": "2024",
+    "value": 79.98,
+    "range": [
+     90,
+     100
+    ]
+   },
+   {
+    "check": "rate_7-12",
+    "province_code": "97",
+    "age_group": "7-12",
+    "period": "2025",
+    "value": 82.24,
+    "range": [
+     90,
+     100
+    ]
+   },
+   {
+    "check": "rate_13-15",
+    "province_code": "96",
+    "age_group": "13-15",
+    "period": "2024",
+    "value": 68.42,
+    "range": [
+     75,
+     100
+    ]
+   },
+   {
+    "check": "rate_13-15",
+    "province_code": "96",
+    "age_group": "13-15",
+    "period": "2025",
+    "value": 67.86,
+    "range": [
+     75,
+     100
+    ]
+   },
+   {
+    "check": "rate_13-15",
+    "province_code": "97",
+    "age_group": "13-15",
+    "period": "2024",
+    "value": 73.12,
+    "range": [
+     75,
+     100
+    ]
+   },
+   {
+    "check": "rate_13-15",
+    "province_code": "97",
+    "age_group": "13-15",
+    "period": "2025",
+    "value": 71.08,
+    "range": [
+     75,
+     100
+    ]
+   },
+   {
+    "check": "rate_16-18",
+    "province_code": "96",
+    "age_group": "16-18",
+    "period": "2025",
+    "value": 44.61,
+    "range": [
+     45,
+     100
+    ]
+   },
+   {
+    "check": "change",
+    "province_code": "31",
+    "age_group": "16-18",
+    "period": "2024",
+    "from_period": "2023",
+    "values": {
+     "2023": 72.5,
+     "2024": 79.95
+    },
+    "value": 7.45,
+    "range": [
+     -6,
+     6
+    ]
+   },
+   {
+    "check": "change",
+    "province_code": "31",
+    "age_group": "16-18",
+    "period": "2025",
+    "from_period": "2024",
+    "values": {
+     "2024": 79.95,
+     "2025": 88.22
+    },
+    "value": 8.27,
+    "range": [
+     -6,
+     6
+    ]
+   },
+   {
+    "check": "change",
+    "province_code": "33",
+    "age_group": "16-18",
+    "period": "2025",
+    "from_period": "2024",
+    "values": {
+     "2024": 71.6,
+     "2025": 77.97
+    },
+    "value": 6.37,
+    "range": [
+     -6,
+     6
+    ]
+   },
+   {
+    "check": "change",
+    "province_code": "81",
+    "age_group": "19-23",
+    "period": "2025",
+    "from_period": "2024",
+    "values": {
+     "2024": 39.58,
+     "2025": 29.66
+    },
+    "value": -9.92,
+    "range": [
+     -6,
+     6
+    ]
+   }
+  ]
+ },
+ "file": "20261104_bps-province-school-participation.csv",
+ "rows": 1572,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/education/20261104_bps-api-var2211-school-participation-by-province-and-age-2015-2017.json": {
+   "sha256": "0f1b670545dfea9813b015d8e8ec6fdbf118f800f47598e23132c25834e99361"
+  },
+  "raw/education/20261104_bps-api-var2211-school-participation-by-province-and-age-2018-2020.json": {
+   "sha256": "0d3aa781d6fd6966d9452128e85f1de07e684f1b70c18397ca9368a24fa41513"
+  },
+  "raw/education/20261104_bps-api-var2211-school-participation-by-province-and-age-2021-2023.json": {
+   "sha256": "be6b02ef3e8730f9bffccd08d70ab2631556c29c907475c3f70a121a7ddde790"
+  },
+  "raw/education/20261104_bps-api-var2211-school-participation-by-province-and-age-2024-2025.json": {
+   "sha256": "f3fa4f50f338a242e210669fa042b1008a06dbca4836647e97ed575d0f25ba97"
+  }
+ }
+}

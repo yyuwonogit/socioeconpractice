@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rich, commodity-reliant and unequal: Indonesian provinces, 2025</title>
+<style>
+html, body { margin: 0; height: 100%; overflow: hidden; background: #fcfcfb; color: #0b0b0b;
+  font-family: 'DejaVu Sans', Arial, sans-serif; }
+#scene { position: absolute; inset: 0; }
+#header { position: absolute; top: 12px; left: 16px; right: 320px; z-index: 5; pointer-events: none; }
+#header h1 { font-size: 18px; margin: 0 0 4px; }
+#header p { font-size: 13px; margin: 0; color: #52514e; max-width: 920px; line-height: 1.4; }
+#controls { position: absolute; top: 48px; left: 16px; z-index: 5; font-size: 13px; color: #52514e; }
+#controls button { font: inherit; padding: 4px 10px; margin: 0 4px 0 0; border: 1px solid #e4e3df; border-radius: 4px;
+  background: #f1f0ec; color: #0b0b0b; cursor: pointer; }
+#controls button.on { background: #0b0b0b; color: #fcfcfb; }
+#info { position: absolute; top: 82px; left: 16px; z-index: 5; max-width: 430px; font-size: 13px; line-height: 1.45; }
+#legend { position: absolute; top: 14px; right: 16px; z-index: 5; font-size: 12px; color: #52514e; }
+#legend .title { font-weight: bold; margin-bottom: 4px; }
+#legend .row { display: flex; align-items: center; gap: 6px; margin: 3px 0; }
+#legend .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+#tip { position: absolute; z-index: 6; pointer-events: none; display: none; background: #ffffff; border: 1px solid #e4e3df;
+  border-radius: 4px; padding: 6px 8px; font-size: 12px; line-height: 1.4; box-shadow: 0 1px 4px rgba(0,0,0,0.12); }
+.name { font-size: 10px; color: #0b0b0b; white-space: nowrap; pointer-events: none;
+  text-shadow: 0 0 3px #fcfcfb, 0 0 3px #fcfcfb, 0 0 2px #fcfcfb; }
+.name span { position: relative; top: -13px; }
+.axis { font-size: 13px; color: #52514e; white-space: nowrap; pointer-events: none; }
+</style>
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+</head>
+<body>
+<div id="scene"></div>
+<div id="header"><h1>Rich, commodity-reliant and unequal: Indonesian provinces, 2025</h1></div>
+<div id="controls">Constellation: <button data-mode="zone" class="on">Zone</button><button data-mode="commodity">Commodity</button>
+&nbsp; <button id="names">Names off</button><button id="clear">Clear</button></div>
+<div id="info"></div>
+<div id="legend"></div>
+<div id="tip"></div>
+<script id="data" type="application/json">{"colors": {"surface": "#fcfcfb", "text": "#0b0b0b", "axis": "#52514e", "cut": "#9b9a96", "wire": "#e4e3df"}, "camera": [2.7514, -4.5023, 1.876], "axes": [{"dir": [1.0, 0.0, 0.0], "high": "More commodity-reliant", "low": "More diverse"}, {"dir": [0.0, 1.0, 0.0], "high": "More unequal", "low": "Less unequal"}, {"dir": [0.0, 0.0, 1.0], "high": "Richer", "low": "Poorer"}], "reference": {"perCapita": 83.1, "third": 0.3, "line": 20.0}, "provinces": [{"name": "Papua Tengah", "pos": [0.8022, 0.2635, 0.3139], "color": "#CC79A7", "zone": "Rich × more unequal × commodity-reliant", "commodity": "metals", "commodityName": "Metals", "perCapita": 107.56, "share": 66.42, "thirdText": "Gini ratio (March 2025): 0.333"}, {"name": "Papua Barat", "pos": [0.5724, 0.4725, 0.3544], "color": "#D55E00", "zone": "Rich × more unequal × commodity-reliant", "commodity": "oil_gas", "commodityName": "Oil & gas", "perCapita": 139.22, "share": 63.02, "thirdText": "Gini ratio (March 2025): 0.374"}, {"name": "Maluku Utara", "pos": [0.6973, -0.04, 0.2569], "color": "#CC79A7", "zone": "Rich × less unequal × commodity-reliant", "commodity": "metals", "commodityName": "Metals", "perCapita": 97.26, "share": 59.35, "thirdText": "Gini ratio (March 2025): 0.299"}, {"name": "Sulawesi Tengah", "pos": [0.4497, -0.4906, 0.291], "color": "#CC79A7", "zone": "Rich × less unequal × commodity-reliant", "commodity": "metals", "commodityName": "Metals", "perCapita": 131.64, "share": 44.44, "thirdText": "Gini ratio (March 2025): 0.279"}, {"name": "Riau", "pos": [0.4398, 0.0391, 0.4984], "color": "#009E73", "zone": "Rich × more unequal × commodity-reliant", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 176.38, "share": 42.46, "thirdText": "Gini ratio (March 2025): 0.307"}, {"name": "Sulawesi Barat", "pos": [0.4088, 0.1677, -0.595], "color": "#009E73", "zone": "Poor × more unequal × commodity-reliant", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 46.65, "share": 36.24, "thirdText": "Gini ratio (March 2025): 0.316"}, {"name": "Kalimantan Tengah", "pos": [0.3301, -0.2619, 0.09], "color": "#009E73", "zone": "Rich × less unequal × commodity-reliant", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 84.73, "share": 30.89, "thirdText": "Gini ratio (March 2025): 0.292"}, {"name": "Jambi", "pos": [0.3079, 0.0152, 0.171], "color": "#009E73", "zone": "Rich × more unequal × commodity-reliant", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 92.79, "share": 30.66, "thirdText": "Gini ratio (March 2025): 0.301"}, {"name": "Sumatera Utara", "pos": [0.2032, -0.1583, -0.0938], "color": "#009E73", "zone": "Poor × less unequal × commodity-reliant", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 78.31, "share": 30.08, "thirdText": "Gini ratio (March 2025): 0.295"}, {"name": "Kalimantan Barat", "pos": [0.1719, 0.1833, -0.4601], "color": "#009E73", "zone": "Poor × more unequal × commodity-reliant", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 56.98, "share": 26.74, "thirdText": "Gini ratio (March 2025): 0.316"}, {"name": "Kalimantan Selatan", "pos": [0.093, -0.372, -0.2718], "color": "#000000", "zone": "Poor × less unequal × commodity-reliant", "commodity": "coal", "commodityName": "Coal", "perCapita": 70.58, "share": 26.33, "thirdText": "Gini ratio (March 2025): 0.287"}, {"name": "Kalimantan Timur", "pos": [0.0387, 0.1204, 0.8127], "color": "#000000", "zone": "Rich × more unequal × commodity-reliant", "commodity": "coal", "commodityName": "Coal", "perCapita": 208.33, "share": 25.09, "thirdText": "Gini ratio (March 2025): 0.312"}, {"name": "Papua Barat Daya", "pos": [-0.0143, 0.4273, -0.3292], "color": "#D55E00", "zone": "Poor × more unequal × diverse", "commodity": "oil_gas", "commodityName": "Oil & gas", "perCapita": 61.63, "share": 19.5, "thirdText": "Gini ratio (March 2025): 0.363"}, {"name": "Kalimantan Utara", "pos": [-0.0399, -0.5977, 0.5479], "color": "#000000", "zone": "Rich × less unequal × diverse", "commodity": "coal", "commodityName": "Coal", "perCapita": 208.2, "share": 19.23, "thirdText": "Gini ratio (March 2025): 0.261"}, {"name": "Sulawesi Tenggara", "pos": [-0.0777, 0.464, -0.2643], "color": "#CC79A7", "zone": "Poor × more unequal × diverse", "commodity": "metals", "commodityName": "Metals", "perCapita": 72.03, "share": 18.98, "thirdText": "Gini ratio (March 2025): 0.363"}, {"name": "Gorontalo", "pos": [-0.0914, 0.5408, -0.5094], "color": "#E69F00", "zone": "Poor × more unequal × diverse", "commodity": "food_crops", "commodityName": "Food crops", "perCapita": 47.48, "share": 18.51, "thirdText": "Gini ratio (March 2025): 0.392"}, {"name": "Nusa Tenggara Barat", "pos": [-0.1273, 0.4903, -0.6365], "color": "#CC79A7", "zone": "Poor × more unequal × diverse", "commodity": "metals", "commodityName": "Metals", "perCapita": 33.67, "share": 16.45, "thirdText": "Gini ratio (March 2025): 0.369"}, {"name": "Aceh", "pos": [-0.1544, -0.4646, -0.6037], "color": "#009E73", "zone": "Poor × less unequal × diverse", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 45.77, "share": 15.08, "thirdText": "Gini ratio (March 2025): 0.282"}, {"name": "Sumatera Selatan", "pos": [-0.2154, 0.0798, -0.0497], "color": "#000000", "zone": "Poor × more unequal × diverse", "commodity": "coal", "commodityName": "Coal", "perCapita": 80.66, "share": 13.93, "thirdText": "Gini ratio (March 2025): 0.311"}, {"name": "Maluku", "pos": [-0.2557, -0.1209, -0.8012], "color": "#56B4E9", "zone": "Poor × less unequal × diverse", "commodity": "fisheries", "commodityName": "Fisheries", "perCapita": 33.65, "share": 13.92, "thirdText": "Gini ratio (March 2025): 0.296"}, {"name": "Kepulauan Bangka Belitung", "pos": [-0.2865, -0.8366, -0.1517], "color": "#CC79A7", "zone": "Poor × less unequal × diverse", "commodity": "metals", "commodityName": "Metals", "perCapita": 75.32, "share": 13.79, "thirdText": "Gini ratio (March 2025): 0.222"}, {"name": "Nusa Tenggara Timur", "pos": [-0.316, 0.1441, -0.8149], "color": "#0072B2", "zone": "Poor × more unequal × diverse", "commodity": "livestock", "commodityName": "Livestock", "perCapita": 25.84, "share": 10.29, "thirdText": "Gini ratio (March 2025): 0.315"}, {"name": "Papua Selatan", "pos": [-0.3174, 0.684, -0.3174], "color": "#56B4E9", "zone": "Poor × more unequal × diverse", "commodity": "fisheries", "commodityName": "Fisheries", "perCapita": 64.92, "share": 9.38, "thirdText": "Gini ratio (March 2025): 0.412"}, {"name": "Papua Pegunungan", "pos": [-0.3544, 0.3265, -0.786], "color": "#E69F00", "zone": "Poor × more unequal × diverse", "commodity": "food_crops", "commodityName": "Food crops", "perCapita": 19.11, "share": 8.87, "thirdText": "Gini ratio (March 2025): 0.349"}, {"name": "Kepulauan Riau", "pos": [-0.3135, 0.495, 0.4075], "color": "#D55E00", "zone": "Rich × more unequal × diverse", "commodity": "oil_gas", "commodityName": "Oil & gas", "perCapita": 172.46, "share": 8.54, "thirdText": "Gini ratio (March 2025): 0.382"}, {"name": "Papua", "pos": [-0.4139, 0.6642, 0.0332], "color": "#56B4E9", "zone": "Rich × more unequal × diverse", "commodity": "fisheries", "commodityName": "Fisheries", "perCapita": 84.31, "share": 8.32, "thirdText": "Gini ratio (March 2025): 0.404"}, {"name": "Sulawesi Selatan", "pos": [-0.3733, 0.3843, -0.0644], "color": "#56B4E9", "zone": "Poor × more unequal × diverse", "commodity": "fisheries", "commodityName": "Fisheries", "perCapita": 78.75, "share": 8.09, "thirdText": "Gini ratio (March 2025): 0.363"}, {"name": "Lampung", "pos": [-0.3769, -0.2299, -0.4012], "color": "#E69F00", "zone": "Poor × less unequal × diverse", "commodity": "food_crops", "commodityName": "Food crops", "perCapita": 55.01, "share": 8.01, "thirdText": "Gini ratio (March 2025): 0.292"}, {"name": "Sulawesi Utara", "pos": [-0.5009, 0.2777, -0.167], "color": "#56B4E9", "zone": "Poor × more unequal × diverse", "commodity": "fisheries", "commodityName": "Fisheries", "perCapita": 75.24, "share": 7.95, "thirdText": "Gini ratio (March 2025): 0.343"}, {"name": "Bengkulu", "pos": [-0.4113, 0.249, -0.4113], "color": "#009E73", "zone": "Poor × more unequal × diverse", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 52.31, "share": 7.79, "thirdText": "Gini ratio (March 2025): 0.349"}, {"name": "Sumatera Barat", "pos": [-0.438, -0.3917, -0.3196], "color": "#009E73", "zone": "Poor × less unequal × diverse", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 59.55, "share": 6.87, "thirdText": "Gini ratio (March 2025): 0.282"}, {"name": "Bali", "pos": [-0.5702, 0.3519, -0.2193], "color": "#8a8985", "zone": "Poor × more unequal × diverse", "commodity": "none_above_5", "commodityName": "Livestock", "perCapita": 72.66, "share": 4.67, "thirdText": "Gini ratio (March 2025): 0.353"}, {"name": "DI Yogyakarta", "pos": [-0.512, 0.6133, -0.3871], "color": "#8a8985", "zone": "Poor × more unequal × diverse", "commodity": "none_above_5", "commodityName": "Food crops", "perCapita": 55.04, "share": 4.0, "thirdText": "Gini ratio (March 2025): 0.426"}, {"name": "Jawa Barat", "pos": [-0.535, 0.587, -0.311], "color": "#8a8985", "zone": "Poor × more unequal × diverse", "commodity": "none_above_5", "commodityName": "Food crops", "perCapita": 59.86, "share": 3.98, "thirdText": "Gini ratio (March 2025): 0.416"}, {"name": "Jawa Tengah", "pos": [-0.5738, 0.3315, -0.4718], "color": "#8a8985", "zone": "Poor × more unequal × diverse", "commodity": "none_above_5", "commodityName": "Food crops", "perCapita": 50.82, "share": 3.8, "thirdText": "Gini ratio (March 2025): 0.359"}, {"name": "Banten", "pos": [-0.7851, 0.2413, -0.2172], "color": "#8a8985", "zone": "Poor × more unequal × diverse", "commodity": "none_above_5", "commodityName": "Metals", "perCapita": 74.67, "share": 3.36, "thirdText": "Gini ratio (March 2025): 0.330"}, {"name": "Jawa Timur", "pos": [-0.723, 0.5115, -0.0148], "color": "#8a8985", "zone": "Poor × more unequal × diverse", "commodity": "none_above_5", "commodityName": "Food crops", "perCapita": 80.86, "share": 2.86, "thirdText": "Gini ratio (March 2025): 0.369"}, {"name": "DKI Jakarta", "pos": [-0.5366, 0.537, 0.5243], "color": "#8a8985", "zone": "Rich × more unequal × diverse", "commodity": "none_above_5", "commodityName": "Metals", "perCapita": 367.69, "share": 0.31, "thirdText": "Gini ratio (March 2025): 0.441"}], "groups": {"zone": {"Rich × more unequal × commodity-reliant": {"label": "Rich × more unequal × commodity-reliant", "color": "#b2182b", "members": [0, 1, 4, 7, 11], "edges": [[0, 1], [0, 4], [4, 7], [4, 11]]}, "Rich × less unequal × commodity-reliant": {"label": "Rich × less unequal × commodity-reliant", "color": "#d6604d", "members": [2, 3, 6], "edges": [[2, 6], [6, 3]]}, "Poor × more unequal × commodity-reliant": {"label": "Poor × more unequal × commodity-reliant", "color": "#2166ac", "members": [5, 9], "edges": [[5, 9]]}, "Poor × less unequal × commodity-reliant": {"label": "Poor × less unequal × commodity-reliant", "color": "#4393c3", "members": [8, 10], "edges": [[8, 10]]}, "Poor × more unequal × diverse": {"label": "Poor × more unequal × diverse", "color": "#67a9cf", "members": [12, 14, 15, 16, 18, 21, 22, 23, 26, 28, 29, 31, 32, 33, 34, 35, 36], "edges": [[12, 14], [12, 15], [15, 16], [16, 23], [23, 21], [15, 22], [22, 32], [32, 33], [33, 31], [31, 28], [28, 26], [31, 35], [31, 34], [34, 29], [31, 36], [26, 18]]}, "Rich × less unequal × diverse": {"label": "Rich × less unequal × diverse", "color": "#fddbc7", "members": [13], "edges": []}, "Poor × less unequal × diverse": {"label": "Poor × less unequal × diverse", "color": "#d1e5f0", "members": [17, 19, 20, 27, 30], "edges": [[17, 27], [27, 30], [17, 19], [30, 20]]}, "Rich × more unequal × diverse": {"label": "Rich × more unequal × diverse", "color": "#ef8a62", "members": [24, 25, 37], "edges": [[24, 37], [24, 25]]}}, "commodity": {"metals": {"label": "Metals (6)", "color": "#CC79A7", "members": [0, 2, 3, 14, 16, 20], "edges": [[0, 2], [2, 3], [3, 20], [2, 14], [14, 16]]}, "oil_gas": {"label": "Oil & gas (3)", "color": "#D55E00", "members": [1, 12, 24], "edges": [[1, 24], [24, 12]]}, "estate_crops": {"label": "Estate crops (9)", "color": "#009E73", "members": [4, 5, 6, 7, 8, 9, 17, 29, 30], "edges": [[4, 7], [7, 6], [6, 8], [8, 9], [9, 5], [9, 29], [29, 30], [30, 17]]}, "coal": {"label": "Coal (4)", "color": "#000000", "members": [10, 11, 13, 18], "edges": [[10, 18], [10, 13], [13, 11]]}, "food_crops": {"label": "Food crops (3)", "color": "#E69F00", "members": [15, 23, 27], "edges": [[15, 23], [23, 27]]}, "fisheries": {"label": "Fisheries (5)", "color": "#56B4E9", "members": [19, 22, 25, 26, 28], "edges": [[19, 28], [28, 26], [26, 25], [25, 22]]}, "livestock": {"label": "Livestock (1)", "color": "#0072B2", "members": [21], "edges": []}, "none_above_5": {"label": "No commodity above 5% (7)", "color": "#8a8985", "members": [31, 32, 33, 34, 35, 36, 37], "edges": [[31, 35], [31, 34], [31, 33], [33, 32], [31, 36], [36, 37]]}}}, "legend": [{"label": "Estate crops (9)", "color": "#009E73"}, {"label": "Metals (6)", "color": "#CC79A7"}, {"label": "Fisheries (5)", "color": "#56B4E9"}, {"label": "Coal (4)", "color": "#000000"}, {"label": "Oil & gas (3)", "color": "#D55E00"}, {"label": "Food crops (3)", "color": "#E69F00"}, {"label": "Livestock (1)", "color": "#0072B2"}, {"label": "No commodity above 5% (7)", "color": "#8a8985"}]}</script>
+<script type="module">
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { CSS2DRenderer, CSS2DObject } from "three/addons/renderers/CSS2DRenderer.js";
+import { LineSegments2 } from "three/addons/lines/LineSegments2.js";
+import { LineSegmentsGeometry } from "three/addons/lines/LineSegmentsGeometry.js";
+import { LineMaterial } from "three/addons/lines/LineMaterial.js";
+
+const D = JSON.parse(document.getElementById("data").textContent);
+const holder = document.getElementById("scene");
+const info = document.getElementById("info");
+const tip = document.getElementById("tip");
+const size = () => [holder.clientWidth, holder.clientHeight];
+
+// Renderer, label layer, camera with z pointing up, and orbit controls around Indonesia at the centre
+const renderer = new THREE.WebGLRenderer({antialias: true});
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setSize(...size());
+renderer.setClearColor(D.colors.surface);
+holder.appendChild(renderer.domElement);
+const labels = new CSS2DRenderer();
+labels.setSize(...size());
+Object.assign(labels.domElement.style, {position: "absolute", top: "0", left: "0", pointerEvents: "none"});
+holder.appendChild(labels.domElement);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(35, size()[0] / size()[1], 0.1, 100);
+camera.up.set(0, 0, 1);
+camera.position.set(...D.camera);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.target.set(0, 0, 0);
+controls.update();
+scene.add(new THREE.AmbientLight(0xffffff, 1.6));
+const sun = new THREE.DirectionalLight(0xffffff, 1.8);
+sun.position.set(2, -3, 4);
+scene.add(sun);
+
+// Thin lines from lists of points: the wire sphere, the cuts and the axes
+function lineSet(paths, color) {
+  const points = [];
+  for (const path of paths) for (let i = 0; i + 1 < path.length; i++) points.push(...path[i], ...path[i + 1]);
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute("position", new THREE.Float32BufferAttribute(points, 3));
+  return new THREE.LineSegments(geometry, new THREE.LineBasicMaterial({color}));
+}
+function circle(at) {
+  const path = [];
+  for (let i = 0; i <= 96; i++) { const t = i / 96 * 2 * Math.PI; path.push(at(Math.cos(t), Math.sin(t))); }
+  return path;
+}
+const rad = d => d * Math.PI / 180;
+const wire = [];
+for (const lat of [-60, -30, 30, 60]) wire.push(circle((c, s) => [Math.cos(rad(lat)) * c, Math.cos(rad(lat)) * s, Math.sin(rad(lat))]));
+for (const lon of [30, 60, 120, 150]) wire.push(circle((c, s) => [c * Math.cos(rad(lon)), c * Math.sin(rad(lon)), s]));
+scene.add(lineSet(wire, D.colors.wire));
+// The three cuts through Indonesia, where the sphere meets the plane of each reference value
+scene.add(lineSet([circle((c, s) => [c, s, 0]), circle((c, s) => [c, 0, s]), circle((c, s) => [0, c, s])], D.colors.cut));
+
+// Measure axes through the centre, an arrowhead at each high end, and names at both ends outside the sphere
+function textLabel(text, className, position, bold) {
+  const element = document.createElement("div");
+  element.className = className;
+  element.innerHTML = bold ? "<b>" + text + "</b>" : text;
+  const label = new CSS2DObject(element);
+  label.position.copy(position);
+  scene.add(label);
+  return label;
+}
+for (const axis of D.axes) {
+  const d = new THREE.Vector3(...axis.dir);
+  scene.add(lineSet([[d.clone().multiplyScalar(-1.35).toArray(), d.clone().multiplyScalar(1.35).toArray()]], D.colors.axis));
+  const head = new THREE.Mesh(new THREE.ConeGeometry(0.035, 0.11, 16), new THREE.MeshBasicMaterial({color: D.colors.axis}));
+  head.position.copy(d.clone().multiplyScalar(1.35));
+  head.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), d);
+  scene.add(head);
+  textLabel(axis.high, "axis", d.clone().multiplyScalar(1.55), true);
+  textLabel(axis.low, "axis", d.clone().multiplyScalar(-1.55), false);
+}
+// Indonesia at the centre
+scene.add(new THREE.Mesh(new THREE.SphereGeometry(0.022, 16, 12), new THREE.MeshBasicMaterial({color: D.colors.text})));
+
+// Provinces as shaded balls coloured by largest commodity, each with its name just above
+const ball = new THREE.SphereGeometry(0.034, 24, 16);
+const names = D.provinces.map(p => {
+  const dot = new THREE.Mesh(ball, new THREE.MeshStandardMaterial({color: p.color, roughness: 0.45, metalness: 0.05}));
+  dot.position.set(...p.pos);
+  scene.add(dot);
+  const element = document.createElement("div");
+  element.className = "name";
+  element.innerHTML = "<span></span>";
+  element.firstChild.textContent = p.name;
+  const label = new CSS2DObject(element);
+  label.position.set(...p.pos);
+  scene.add(label);
+  return label;
+});
+
+// Legend of commodity colours
+const legend = document.getElementById("legend");
+legend.innerHTML = '<div class="title">Largest commodity</div>' + D.legend.map(item =>
+  '<div class="row"><span class="dot" style="background:' + item.color + '"></span>' + item.label + "</div>").join("");
+
+// The constellation: thick lines along the group's shortest tree and halos around its provinces, added on a click
+const lineMaterial = new LineMaterial({color: 0x000000, linewidth: 3.5, transparent: true, opacity: 0.9});
+lineMaterial.resolution.set(...size());
+const halo = new THREE.SphereGeometry(0.06, 24, 16);
+let mode = "zone", selected = null, showNames = true, drawn = [];
+function draw() {
+  for (const object of drawn) { scene.remove(object); if (object.geometry !== halo) object.geometry.dispose(); }
+  drawn = [];
+  if (selected === null) { info.textContent = ""; return; }
+  const group = D.groups[mode][D.provinces[selected][mode]];
+  if (group.edges.length) {
+    const points = [];
+    for (const [a, b] of group.edges) points.push(...D.provinces[a].pos, ...D.provinces[b].pos);
+    const geometry = new LineSegmentsGeometry();
+    geometry.setPositions(points);
+    lineMaterial.color.set(group.color);
+    const lines = new LineSegments2(geometry, lineMaterial);
+    scene.add(lines);
+    drawn.push(lines);
+  }
+  for (const i of group.members) {
+    const ring = new THREE.Mesh(halo, new THREE.MeshBasicMaterial({color: group.color, transparent: true,
+      opacity: i === selected ? 0.5 : 0.28, depthWrite: false}));
+    ring.position.set(...D.provinces[i].pos);
+    scene.add(ring);
+    drawn.push(ring);
+  }
+  const title = mode === "zone" ? group.label + " (" + group.members.length + ")" : group.label;
+  info.innerHTML = "<b>" + title + "</b><br>" + group.members.map(i => D.provinces[i].name).join(", ");
+}
+
+// Find the province whose ball is nearest a point on screen, within a radius in pixels
+const projected = new THREE.Vector3();
+function nearest(x, y, radius) {
+  const box = renderer.domElement.getBoundingClientRect();
+  let best = null, bestDistance = radius;
+  D.provinces.forEach((p, i) => {
+    projected.set(...p.pos).project(camera);
+    const sx = (projected.x + 1) / 2 * box.width + box.left, sy = (1 - projected.y) / 2 * box.height + box.top;
+    const distance = Math.hypot(sx - x, sy - y);
+    if (distance < bestDistance) { best = i; bestDistance = distance; }
+  });
+  return best;
+}
+
+// A press and release without dragging selects the nearest province; a second click on it clears the constellation
+let pressed = null;
+renderer.domElement.addEventListener("pointerdown", event => { pressed = [event.clientX, event.clientY]; });
+renderer.domElement.addEventListener("pointerup", event => {
+  if (!pressed) return;
+  const moved = Math.hypot(event.clientX - pressed[0], event.clientY - pressed[1]);
+  pressed = null;
+  if (moved > 5) return;
+  const hit = nearest(event.clientX, event.clientY, 16);
+  if (hit === null) return;
+  selected = selected === hit ? null : hit;
+  draw();
+});
+// Hovering near a province shows its values
+renderer.domElement.addEventListener("pointermove", event => {
+  if (pressed) { tip.style.display = "none"; return; }
+  const hit = nearest(event.clientX, event.clientY, 12);
+  renderer.domElement.style.cursor = hit === null ? "grab" : "pointer";
+  if (hit === null) { tip.style.display = "none"; return; }
+  const p = D.provinces[hit];
+  tip.innerHTML = "<b>" + p.name + "</b><br>" + p.zone + "<br>GRDP per capita: Rp " + p.perCapita.toFixed(1) +
+    " million<br>Largest commodity: " + p.commodityName + ", " + p.share.toFixed(1) + "% of GRDP<br>" + p.thirdText;
+  tip.style.left = (event.clientX + 14) + "px";
+  tip.style.top = (event.clientY + 14) + "px";
+  tip.style.display = "block";
+});
+renderer.domElement.addEventListener("pointerleave", () => { tip.style.display = "none"; });
+
+// The switch picks the grouping, the names button shows or hides the names, and clear removes the constellation
+document.querySelectorAll("[data-mode]").forEach(button => button.addEventListener("click", () => {
+  mode = button.dataset.mode;
+  document.querySelectorAll("[data-mode]").forEach(other => other.classList.toggle("on", other === button));
+  draw();
+}));
+document.getElementById("names").addEventListener("click", event => {
+  showNames = !showNames;
+  for (const label of names) label.visible = showNames;
+  event.target.textContent = showNames ? "Names off" : "Names on";
+});
+document.getElementById("clear").addEventListener("click", () => { selected = null; draw(); });
+
+// Keep the view sized to the window, and draw every frame so the rotation glides
+window.addEventListener("resize", () => {
+  const [w, h] = size();
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+  labels.setSize(w, h);
+  lineMaterial.resolution.set(w, h);
+});
+renderer.setAnimationLoop(() => { controls.update(); renderer.render(scene, camera); labels.render(scene, camera); });
+window.sphereReady = true;
+draw();
+</script>
+<script>
+// Say so if three.js could not be loaded from the web, instead of leaving an empty page
+setTimeout(() => { if (!window.sphereReady) document.getElementById("info").textContent =
+  "Could not load three.js from cdn.jsdelivr.net. The page needs an internet connection the first time it opens."; }, 8000);
+</script>
+</body>
+</html>

@@ -1,2 +1,5 @@
 # Keep every file in raw/ byte for byte as received: git never converts its line endings
 raw/** -text
+# Keep every text file in data/ and analysis/ as the scripts write it: git checks it out with LF line endings on every OS
+data/** text=auto eol=lf
+analysis/** text=auto eol=lf

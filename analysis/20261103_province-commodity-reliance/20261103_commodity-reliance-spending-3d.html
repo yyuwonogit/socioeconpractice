@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wealth, commodity reliance and household spending: Indonesian provinces, 2025</title>
+<style>
+html, body { margin: 0; height: 100%; overflow: hidden; background: #fcfcfb; color: #0b0b0b;
+  font-family: 'DejaVu Sans', Arial, sans-serif; }
+#scene { position: absolute; inset: 0; }
+#header { position: absolute; top: 12px; left: 16px; right: 320px; z-index: 5; pointer-events: none; }
+#header h1 { font-size: 18px; margin: 0 0 4px; }
+#header p { font-size: 13px; margin: 0; color: #52514e; max-width: 920px; line-height: 1.4; }
+#controls { position: absolute; top: 48px; left: 16px; z-index: 5; font-size: 13px; color: #52514e; }
+#controls button { font: inherit; padding: 4px 10px; margin: 0 4px 0 0; border: 1px solid #e4e3df; border-radius: 4px;
+  background: #f1f0ec; color: #0b0b0b; cursor: pointer; }
+#controls button.on { background: #0b0b0b; color: #fcfcfb; }
+#info { position: absolute; top: 82px; left: 16px; z-index: 5; max-width: 430px; font-size: 13px; line-height: 1.45; }
+#legend { position: absolute; top: 14px; right: 16px; z-index: 5; font-size: 12px; color: #52514e; }
+#legend .title { font-weight: bold; margin-bottom: 4px; }
+#legend .row { display: flex; align-items: center; gap: 6px; margin: 3px 0; }
+#legend .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+#tip { position: absolute; z-index: 6; pointer-events: none; display: none; background: #ffffff; border: 1px solid #e4e3df;
+  border-radius: 4px; padding: 6px 8px; font-size: 12px; line-height: 1.4; box-shadow: 0 1px 4px rgba(0,0,0,0.12); }
+.name { font-size: 10px; color: #0b0b0b; white-space: nowrap; pointer-events: none;
+  text-shadow: 0 0 3px #fcfcfb, 0 0 3px #fcfcfb, 0 0 2px #fcfcfb; }
+.name span { position: relative; top: -13px; }
+.axis { font-size: 13px; color: #52514e; white-space: nowrap; pointer-events: none; }
+</style>
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+</head>
+<body>
+<div id="scene"></div>
+<div id="header"><h1>Wealth, commodity reliance and household spending: Indonesian provinces, 2025</h1></div>
+<div id="controls">Constellation: <button data-mode="zone" class="on">Zone</button><button data-mode="commodity">Commodity</button>
+&nbsp; <button id="names">Names off</button><button id="clear">Clear</button></div>
+<div id="info"></div>
+<div id="legend"></div>
+<div id="tip"></div>
+<script id="data" type="application/json">{"colors": {"surface": "#fcfcfb", "text": "#0b0b0b", "axis": "#52514e", "cut": "#9b9a96", "wire": "#e4e3df"}, "camera": [2.7514, -4.5023, 1.876], "axes": [{"dir": [1.0, 0.0, 0.0], "high": "More commodity-reliant", "low": "More diverse"}, {"dir": [0.0, 1.0, 0.0], "high": "Households spend more", "low": "Households spend less"}, {"dir": [0.0, 0.0, 1.0], "high": "Richer", "low": "Poorer"}], "reference": {"perCapita": 83.1, "third": 1569088.0, "line": 20.0}, "provinces": [{"name": "Papua Tengah", "pos": [0.8063, -0.2486, 0.3155], "color": "#CC79A7", "zone": "Rich × commodity-reliant × households spend less", "commodity": "metals", "commodityName": "Metals", "perCapita": 107.56, "share": 66.42, "thirdText": "Household spending: Rp 1,459,088 a month per person (2025)"}, {"name": "Papua Barat", "pos": [0.6841, 0.171, 0.4235], "color": "#D55E00", "zone": "Rich × commodity-reliant × households spend more", "commodity": "oil_gas", "commodityName": "Oil & gas", "perCapita": 139.22, "share": 63.02, "thirdText": "Household spending: Rp 1,705,338 a month per person (2025)"}, {"name": "Maluku Utara", "pos": [0.6862, -0.1379, 0.2528], "color": "#CC79A7", "zone": "Rich × commodity-reliant × households spend less", "commodity": "metals", "commodityName": "Metals", "perCapita": 97.26, "share": 59.35, "thirdText": "Household spending: Rp 1,492,532 a month per person (2025)"}, {"name": "Sulawesi Tengah", "pos": [0.47, -0.558, 0.3041], "color": "#CC79A7", "zone": "Rich × commodity-reliant × households spend less", "commodity": "metals", "commodityName": "Metals", "perCapita": 131.64, "share": 44.44, "thirdText": "Household spending: Rp 1,256,394 a month per person (2025)"}, {"name": "Riau", "pos": [0.4346, 0.1087, 0.4926], "color": "#009E73", "zone": "Rich × commodity-reliant × households spend more", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 176.38, "share": 42.46, "thirdText": "Household spending: Rp 1,610,427 a month per person (2025)"}, {"name": "Sulawesi Barat", "pos": [0.3553, -0.6112, -0.5172], "color": "#009E73", "zone": "Poor × commodity-reliant × households spend less", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 46.65, "share": 36.24, "thirdText": "Household spending: Rp 1,069,314 a month per person (2025)"}, {"name": "Kalimantan Tengah", "pos": [0.4148, 0.0283, 0.1131], "color": "#009E73", "zone": "Rich × commodity-reliant × households spend more", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 84.73, "share": 30.89, "thirdText": "Household spending: Rp 1,596,165 a month per person (2025)"}, {"name": "Jambi", "pos": [0.2781, -0.1517, 0.1545], "color": "#009E73", "zone": "Rich × commodity-reliant × households spend less", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 92.79, "share": 30.66, "thirdText": "Household spending: Rp 1,477,104 a month per person (2025)"}, {"name": "Sumatera Utara", "pos": [0.2336, -0.4186, -0.1078], "color": "#009E73", "zone": "Poor × commodity-reliant × households spend less", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 78.31, "share": 30.08, "thirdText": "Household spending: Rp 1,397,887 a month per person (2025)"}, {"name": "Kalimantan Barat", "pos": [0.1691, -0.203, -0.4528], "color": "#009E73", "zone": "Poor × commodity-reliant × households spend less", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 56.98, "share": 26.74, "thirdText": "Household spending: Rp 1,469,934 a month per person (2025)"}, {"name": "Kalimantan Selatan", "pos": [0.108, 0.081, -0.3158], "color": "#000000", "zone": "Poor × commodity-reliant × households spend more", "commodity": "coal", "commodityName": "Coal", "perCapita": 70.58, "share": 26.33, "thirdText": "Household spending: Rp 1,603,501 a month per person (2025)"}, {"name": "Kalimantan Timur", "pos": [0.0282, 0.5706, 0.5917], "color": "#000000", "zone": "Rich × commodity-reliant × households spend more", "commodity": "coal", "commodityName": "Coal", "perCapita": 208.33, "share": 25.09, "thirdText": "Household spending: Rp 2,117,354 a month per person (2025)"}, {"name": "Papua Barat Daya", "pos": [-0.0145, 0.4474, -0.3333], "color": "#D55E00", "zone": "Poor × diverse × households spend more", "commodity": "oil_gas", "commodityName": "Oil & gas", "perCapita": 61.63, "share": 19.5, "thirdText": "Household spending: Rp 1,816,875 a month per person (2025)"}, {"name": "Kalimantan Utara", "pos": [-0.0496, 0.2957, 0.6811], "color": "#000000", "zone": "Rich × diverse × households spend more", "commodity": "coal", "commodityName": "Coal", "perCapita": 208.2, "share": 19.23, "thirdText": "Household spending: Rp 1,726,451 a month per person (2025)"}, {"name": "Sulawesi Tenggara", "pos": [-0.0803, -0.5503, -0.273], "color": "#CC79A7", "zone": "Poor × diverse × households spend less", "commodity": "metals", "commodityName": "Metals", "perCapita": 72.03, "share": 18.98, "thirdText": "Household spending: Rp 1,325,085 a month per person (2025)"}, {"name": "Gorontalo", "pos": [-0.0914, -0.4786, -0.5095], "color": "#E69F00", "zone": "Poor × diverse × households spend less", "commodity": "food_crops", "commodityName": "Food crops", "perCapita": 47.48, "share": 18.51, "thirdText": "Household spending: Rp 1,315,738 a month per person (2025)"}, {"name": "Nusa Tenggara Barat", "pos": [-0.1433, -0.3575, -0.7165], "color": "#CC79A7", "zone": "Poor × diverse × households spend less", "commodity": "metals", "commodityName": "Metals", "perCapita": 33.67, "share": 16.45, "thirdText": "Household spending: Rp 1,402,118 a month per person (2025)"}, {"name": "Aceh", "pos": [-0.1447, -0.5131, -0.5657], "color": "#009E73", "zone": "Poor × diverse × households spend less", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 45.77, "share": 15.08, "thirdText": "Household spending: Rp 1,299,756 a month per person (2025)"}, {"name": "Sumatera Selatan", "pos": [-0.2237, -0.7116, -0.0516], "color": "#000000", "zone": "Poor × diverse × households spend less", "commodity": "coal", "commodityName": "Coal", "perCapita": 80.66, "share": 13.93, "thirdText": "Household spending: Rp 1,283,538 a month per person (2025)"}, {"name": "Maluku", "pos": [-0.2308, -0.3818, -0.7231], "color": "#56B4E9", "zone": "Poor × diverse × households spend less", "commodity": "fisheries", "commodityName": "Fisheries", "perCapita": 33.65, "share": 13.92, "thirdText": "Household spending: Rp 1,398,498 a month per person (2025)"}, {"name": "Kepulauan Bangka Belitung", "pos": [-0.2412, 0.3459, -0.1277], "color": "#CC79A7", "zone": "Poor × diverse × households spend more", "commodity": "metals", "commodityName": "Metals", "perCapita": 75.32, "share": 13.79, "thirdText": "Household spending: Rp 1,765,551 a month per person (2025)"}, {"name": "Nusa Tenggara Timur", "pos": [-0.2388, -0.6386, -0.6157], "color": "#0072B2", "zone": "Poor × diverse × households spend less", "commodity": "livestock", "commodityName": "Livestock", "perCapita": 25.84, "share": 10.29, "thirdText": "Household spending: Rp 1,028,875 a month per person (2025)"}, {"name": "Papua Selatan", "pos": [-0.2665, -0.045, -0.2665], "color": "#56B4E9", "zone": "Poor × diverse × households spend less", "commodity": "fisheries", "commodityName": "Fisheries", "perCapita": 64.92, "share": 9.38, "thirdText": "Household spending: Rp 1,517,419 a month per person (2025)"}, {"name": "Papua Pegunungan", "pos": [-0.3152, 0.5121, -0.6988], "color": "#E69F00", "zone": "Poor × diverse × households spend more", "commodity": "food_crops", "commodityName": "Food crops", "perCapita": 19.11, "share": 8.87, "thirdText": "Household spending: Rp 1,941,997 a month per person (2025)"}, {"name": "Kepulauan Riau", "pos": [-0.3409, 0.6427, 0.4432], "color": "#D55E00", "zone": "Rich × diverse × households spend more", "commodity": "oil_gas", "commodityName": "Oil & gas", "perCapita": 172.46, "share": 8.54, "thirdText": "Household spending: Rp 2,468,319 a month per person (2025)"}, {"name": "Papua", "pos": [-0.3485, 0.3566, 0.028], "color": "#56B4E9", "zone": "Rich × diverse × households spend more", "commodity": "fisheries", "commodityName": "Fisheries", "perCapita": 84.31, "share": 8.32, "thirdText": "Household spending: Rp 1,810,767 a month per person (2025)"}, {"name": "Sulawesi Selatan", "pos": [-0.3714, -0.3784, -0.064], "color": "#56B4E9", "zone": "Poor × diverse × households spend less", "commodity": "fisheries", "commodityName": "Fisheries", "perCapita": 78.75, "share": 8.09, "thirdText": "Household spending: Rp 1,358,821 a month per person (2025)"}, {"name": "Lampung", "pos": [-0.3998, -0.5944, -0.4256], "color": "#E69F00", "zone": "Poor × diverse × households spend less", "commodity": "food_crops", "commodityName": "Food crops", "perCapita": 55.01, "share": 8.01, "thirdText": "Household spending: Rp 1,239,613 a month per person (2025)"}, {"name": "Sulawesi Utara", "pos": [-0.4901, -0.2984, -0.1634], "color": "#56B4E9", "zone": "Poor × diverse × households spend less", "commodity": "fisheries", "commodityName": "Fisheries", "perCapita": 75.24, "share": 7.95, "thirdText": "Household spending: Rp 1,410,504 a month per person (2025)"}, {"name": "Bengkulu", "pos": [-0.4442, -0.075, -0.4442], "color": "#009E73", "zone": "Poor × diverse × households spend less", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 52.31, "share": 7.79, "thirdText": "Household spending: Rp 1,498,744 a month per person (2025)"}, {"name": "Sumatera Barat", "pos": [-0.5401, -0.0173, -0.3941], "color": "#009E73", "zone": "Poor × diverse × households spend less", "commodity": "estate_crops", "commodityName": "Estate crops", "perCapita": 59.55, "share": 6.87, "thirdText": "Household spending: Rp 1,542,109 a month per person (2025)"}, {"name": "Bali", "pos": [-0.4914, 0.5119, -0.189], "color": "#8a8985", "zone": "Poor × diverse × households spend more", "commodity": "none_above_5", "commodityName": "Livestock", "perCapita": 72.66, "share": 4.67, "thirdText": "Household spending: Rp 1,964,618 a month per person (2025)"}, {"name": "DI Yogyakarta", "pos": [-0.4925, 0.4099, -0.3724], "color": "#8a8985", "zone": "Poor × diverse × households spend more", "commodity": "none_above_5", "commodityName": "Food crops", "perCapita": 55.04, "share": 4.0, "thirdText": "Household spending: Rp 1,843,212 a month per person (2025)"}, {"name": "Jawa Barat", "pos": [-0.6447, 0.2193, -0.3748], "color": "#8a8985", "zone": "Poor × diverse × households spend more", "commodity": "none_above_5", "commodityName": "Food crops", "perCapita": 59.86, "share": 3.98, "thirdText": "Household spending: Rp 1,724,367 a month per person (2025)"}, {"name": "Jawa Tengah", "pos": [-0.5511, -0.3908, -0.4531], "color": "#8a8985", "zone": "Poor × diverse × households spend less", "commodity": "none_above_5", "commodityName": "Food crops", "perCapita": 50.82, "share": 3.8, "thirdText": "Household spending: Rp 1,337,028 a month per person (2025)"}, {"name": "Banten", "pos": [-0.7514, 0.3377, -0.2078], "color": "#8a8985", "zone": "Poor × diverse × households spend more", "commodity": "none_above_5", "commodityName": "Metals", "perCapita": 74.67, "share": 3.36, "thirdText": "Household spending: Rp 1,750,546 a month per person (2025)"}, {"name": "Jawa Timur", "pos": [-0.8328, -0.3013, -0.017], "color": "#8a8985", "zone": "Poor × diverse × households spend less", "commodity": "none_above_5", "commodityName": "Food crops", "perCapita": 80.86, "share": 2.86, "thirdText": "Household spending: Rp 1,419,140 a month per person (2025)"}, {"name": "DKI Jakarta", "pos": [-0.5386, 0.532, 0.5262], "color": "#8a8985", "zone": "Rich × diverse × households spend more", "commodity": "none_above_5", "commodityName": "Metals", "perCapita": 367.69, "share": 0.31, "thirdText": "Household spending: Rp 2,962,412 a month per person (2025)"}], "groups": {"zone": {"Rich × commodity-reliant × households spend less": {"label": "Rich × commodity-reliant × households spend less", "color": "#b2182b", "members": [0, 2, 3, 7], "edges": [[0, 2], [2, 7], [0, 3]]}, "Rich × commodity-reliant × households spend more": {"label": "Rich × commodity-reliant × households spend more", "color": "#d6604d", "members": [1, 4, 6, 11], "edges": [[1, 4], [4, 6], [4, 11]]}, "Poor × commodity-reliant × households spend less": {"label": "Poor × commodity-reliant × households spend less", "color": "#2166ac", "members": [5, 8, 9], "edges": [[5, 9], [9, 8]]}, "Poor × commodity-reliant × households spend more": {"label": "Poor × commodity-reliant × households spend more", "color": "#4393c3", "members": [10], "edges": []}, "Poor × diverse × households spend more": {"label": "Poor × diverse × households spend more", "color": "#d1e5f0", "members": [12, 20, 23, 31, 32, 33, 35], "edges": [[12, 20], [20, 31], [31, 32], [32, 33], [33, 35], [32, 23]]}, "Rich × diverse × households spend more": {"label": "Rich × diverse × households spend more", "color": "#fddbc7", "members": [13, 24, 25, 37], "edges": [[13, 24], [24, 37], [24, 25]]}, "Poor × diverse × households spend less": {"label": "Poor × diverse × households spend less", "color": "#67a9cf", "members": [14, 15, 16, 17, 18, 19, 21, 22, 26, 27, 28, 29, 30, 34, 36], "edges": [[14, 15], [15, 17], [17, 21], [17, 16], [16, 19], [21, 27], [27, 34], [14, 18], [34, 28], [28, 26], [34, 29], [29, 30], [29, 22], [28, 36]]}}, "commodity": {"metals": {"label": "Metals (6)", "color": "#CC79A7", "members": [0, 2, 3, 14, 16, 20], "edges": [[0, 2], [0, 3], [3, 14], [14, 16], [14, 20]]}, "oil_gas": {"label": "Oil & gas (3)", "color": "#D55E00", "members": [1, 12, 24], "edges": [[1, 12], [12, 24]]}, "estate_crops": {"label": "Estate crops (9)", "color": "#009E73", "members": [4, 5, 6, 7, 8, 9, 17, 29, 30], "edges": [[4, 6], [6, 7], [7, 8], [8, 9], [9, 5], [9, 17], [17, 29], [29, 30]]}, "coal": {"label": "Coal (4)", "color": "#000000", "members": [10, 11, 13, 18], "edges": [[10, 18], [10, 13], [13, 11]]}, "food_crops": {"label": "Food crops (3)", "color": "#E69F00", "members": [15, 23, 27], "edges": [[15, 27], [15, 23]]}, "fisheries": {"label": "Fisheries (5)", "color": "#56B4E9", "members": [19, 22, 25, 26, 28], "edges": [[19, 22], [22, 28], [28, 26], [22, 25]]}, "livestock": {"label": "Livestock (1)", "color": "#0072B2", "members": [21], "edges": []}, "none_above_5": {"label": "No commodity above 5% (7)", "color": "#8a8985", "members": [31, 32, 33, 34, 35, 36, 37], "edges": [[31, 32], [32, 33], [33, 35], [33, 34], [34, 36], [31, 37]]}}}, "legend": [{"label": "Estate crops (9)", "color": "#009E73"}, {"label": "Metals (6)", "color": "#CC79A7"}, {"label": "Fisheries (5)", "color": "#56B4E9"}, {"label": "Coal (4)", "color": "#000000"}, {"label": "Oil & gas (3)", "color": "#D55E00"}, {"label": "Food crops (3)", "color": "#E69F00"}, {"label": "Livestock (1)", "color": "#0072B2"}, {"label": "No commodity above 5% (7)", "color": "#8a8985"}]}</script>
+<script type="module">
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { CSS2DRenderer, CSS2DObject } from "three/addons/renderers/CSS2DRenderer.js";
+import { LineSegments2 } from "three/addons/lines/LineSegments2.js";
+import { LineSegmentsGeometry } from "three/addons/lines/LineSegmentsGeometry.js";
+import { LineMaterial } from "three/addons/lines/LineMaterial.js";
+
+const D = JSON.parse(document.getElementById("data").textContent);
+const holder = document.getElementById("scene");
+const info = document.getElementById("info");
+const tip = document.getElementById("tip");
+const size = () => [holder.clientWidth, holder.clientHeight];
+
+// Renderer, label layer, camera with z pointing up, and orbit controls around Indonesia at the centre
+const renderer = new THREE.WebGLRenderer({antialias: true});
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setSize(...size());
+renderer.setClearColor(D.colors.surface);
+holder.appendChild(renderer.domElement);
+const labels = new CSS2DRenderer();
+labels.setSize(...size());
+Object.assign(labels.domElement.style, {position: "absolute", top: "0", left: "0", pointerEvents: "none"});
+holder.appendChild(labels.domElement);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(35, size()[0] / size()[1], 0.1, 100);
+camera.up.set(0, 0, 1);
+camera.position.set(...D.camera);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.target.set(0, 0, 0);
+controls.update();
+scene.add(new THREE.AmbientLight(0xffffff, 1.6));
+const sun = new THREE.DirectionalLight(0xffffff, 1.8);
+sun.position.set(2, -3, 4);
+scene.add(sun);
+
+// Thin lines from lists of points: the wire sphere, the cuts and the axes
+function lineSet(paths, color) {
+  const points = [];
+  for (const path of paths) for (let i = 0; i + 1 < path.length; i++) points.push(...path[i], ...path[i + 1]);
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute("position", new THREE.Float32BufferAttribute(points, 3));
+  return new THREE.LineSegments(geometry, new THREE.LineBasicMaterial({color}));
+}
+function circle(at) {
+  const path = [];
+  for (let i = 0; i <= 96; i++) { const t = i / 96 * 2 * Math.PI; path.push(at(Math.cos(t), Math.sin(t))); }
+  return path;
+}
+const rad = d => d * Math.PI / 180;
+const wire = [];
+for (const lat of [-60, -30, 30, 60]) wire.push(circle((c, s) => [Math.cos(rad(lat)) * c, Math.cos(rad(lat)) * s, Math.sin(rad(lat))]));
+for (const lon of [30, 60, 120, 150]) wire.push(circle((c, s) => [c * Math.cos(rad(lon)), c * Math.sin(rad(lon)), s]));
+scene.add(lineSet(wire, D.colors.wire));
+// The three cuts through Indonesia, where the sphere meets the plane of each reference value
+scene.add(lineSet([circle((c, s) => [c, s, 0]), circle((c, s) => [c, 0, s]), circle((c, s) => [0, c, s])], D.colors.cut));
+
+// Measure axes through the centre, an arrowhead at each high end, and names at both ends outside the sphere
+function textLabel(text, className, position, bold) {
+  const element = document.createElement("div");
+  element.className = className;
+  element.innerHTML = bold ? "<b>" + text + "</b>" : text;
+  const label = new CSS2DObject(element);
+  label.position.copy(position);
+  scene.add(label);
+  return label;
+}
+for (const axis of D.axes) {
+  const d = new THREE.Vector3(...axis.dir);
+  scene.add(lineSet([[d.clone().multiplyScalar(-1.35).toArray(), d.clone().multiplyScalar(1.35).toArray()]], D.colors.axis));
+  const head = new THREE.Mesh(new THREE.ConeGeometry(0.035, 0.11, 16), new THREE.MeshBasicMaterial({color: D.colors.axis}));
+  head.position.copy(d.clone().multiplyScalar(1.35));
+  head.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), d);
+  scene.add(head);
+  textLabel(axis.high, "axis", d.clone().multiplyScalar(1.55), true);
+  textLabel(axis.low, "axis", d.clone().multiplyScalar(-1.55), false);
+}
+// Indonesia at the centre
+scene.add(new THREE.Mesh(new THREE.SphereGeometry(0.022, 16, 12), new THREE.MeshBasicMaterial({color: D.colors.text})));
+
+// Provinces as shaded balls coloured by largest commodity, each with its name just above
+const ball = new THREE.SphereGeometry(0.034, 24, 16);
+const names = D.provinces.map(p => {
+  const dot = new THREE.Mesh(ball, new THREE.MeshStandardMaterial({color: p.color, roughness: 0.45, metalness: 0.05}));
+  dot.position.set(...p.pos);
+  scene.add(dot);
+  const element = document.createElement("div");
+  element.className = "name";
+  element.innerHTML = "<span></span>";
+  element.firstChild.textContent = p.name;
+  const label = new CSS2DObject(element);
+  label.position.set(...p.pos);
+  scene.add(label);
+  return label;
+});
+
+// Legend of commodity colours
+const legend = document.getElementById("legend");
+legend.innerHTML = '<div class="title">Largest commodity</div>' + D.legend.map(item =>
+  '<div class="row"><span class="dot" style="background:' + item.color + '"></span>' + item.label + "</div>").join("");
+
+// The constellation: thick lines along the group's shortest tree and halos around its provinces, added on a click
+const lineMaterial = new LineMaterial({color: 0x000000, linewidth: 3.5, transparent: true, opacity: 0.9});
+lineMaterial.resolution.set(...size());
+const halo = new THREE.SphereGeometry(0.06, 24, 16);
+let mode = "zone", selected = null, showNames = true, drawn = [];
+function draw() {
+  for (const object of drawn) { scene.remove(object); if (object.geometry !== halo) object.geometry.dispose(); }
+  drawn = [];
+  if (selected === null) { info.textContent = ""; return; }
+  const group = D.groups[mode][D.provinces[selected][mode]];
+  if (group.edges.length) {
+    const points = [];
+    for (const [a, b] of group.edges) points.push(...D.provinces[a].pos, ...D.provinces[b].pos);
+    const geometry = new LineSegmentsGeometry();
+    geometry.setPositions(points);
+    lineMaterial.color.set(group.color);
+    const lines = new LineSegments2(geometry, lineMaterial);
+    scene.add(lines);
+    drawn.push(lines);
+  }
+  for (const i of group.members) {
+    const ring = new THREE.Mesh(halo, new THREE.MeshBasicMaterial({color: group.color, transparent: true,
+      opacity: i === selected ? 0.5 : 0.28, depthWrite: false}));
+    ring.position.set(...D.provinces[i].pos);
+    scene.add(ring);
+    drawn.push(ring);
+  }
+  const title = mode === "zone" ? group.label + " (" + group.members.length + ")" : group.label;
+  info.innerHTML = "<b>" + title + "</b><br>" + group.members.map(i => D.provinces[i].name).join(", ");
+}
+
+// Find the province whose ball is nearest a point on screen, within a radius in pixels
+const projected = new THREE.Vector3();
+function nearest(x, y, radius) {
+  const box = renderer.domElement.getBoundingClientRect();
+  let best = null, bestDistance = radius;
+  D.provinces.forEach((p, i) => {
+    projected.set(...p.pos).project(camera);
+    const sx = (projected.x + 1) / 2 * box.width + box.left, sy = (1 - projected.y) / 2 * box.height + box.top;
+    const distance = Math.hypot(sx - x, sy - y);
+    if (distance < bestDistance) { best = i; bestDistance = distance; }
+  });
+  return best;
+}
+
+// A press and release without dragging selects the nearest province; a second click on it clears the constellation
+let pressed = null;
+renderer.domElement.addEventListener("pointerdown", event => { pressed = [event.clientX, event.clientY]; });
+renderer.domElement.addEventListener("pointerup", event => {
+  if (!pressed) return;
+  const moved = Math.hypot(event.clientX - pressed[0], event.clientY - pressed[1]);
+  pressed = null;
+  if (moved > 5) return;
+  const hit = nearest(event.clientX, event.clientY, 16);
+  if (hit === null) return;
+  selected = selected === hit ? null : hit;
+  draw();
+});
+// Hovering near a province shows its values
+renderer.domElement.addEventListener("pointermove", event => {
+  if (pressed) { tip.style.display = "none"; return; }
+  const hit = nearest(event.clientX, event.clientY, 12);
+  renderer.domElement.style.cursor = hit === null ? "grab" : "pointer";
+  if (hit === null) { tip.style.display = "none"; return; }
+  const p = D.provinces[hit];
+  tip.innerHTML = "<b>" + p.name + "</b><br>" + p.zone + "<br>GRDP per capita: Rp " + p.perCapita.toFixed(1) +
+    " million<br>Largest commodity: " + p.commodityName + ", " + p.share.toFixed(1) + "% of GRDP<br>" + p.thirdText;
+  tip.style.left = (event.clientX + 14) + "px";
+  tip.style.top = (event.clientY + 14) + "px";
+  tip.style.display = "block";
+});
+renderer.domElement.addEventListener("pointerleave", () => { tip.style.display = "none"; });
+
+// The switch picks the grouping, the names button shows or hides the names, and clear removes the constellation
+document.querySelectorAll("[data-mode]").forEach(button => button.addEventListener("click", () => {
+  mode = button.dataset.mode;
+  document.querySelectorAll("[data-mode]").forEach(other => other.classList.toggle("on", other === button));
+  draw();
+}));
+document.getElementById("names").addEventListener("click", event => {
+  showNames = !showNames;
+  for (const label of names) label.visible = showNames;
+  event.target.textContent = showNames ? "Names off" : "Names on";
+});
+document.getElementById("clear").addEventListener("click", () => { selected = null; draw(); });
+
+// Keep the view sized to the window, and draw every frame so the rotation glides
+window.addEventListener("resize", () => {
+  const [w, h] = size();
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+  labels.setSize(w, h);
+  lineMaterial.resolution.set(w, h);
+});
+renderer.setAnimationLoop(() => { controls.update(); renderer.render(scene, camera); labels.render(scene, camera); });
+window.sphereReady = true;
+draw();
+</script>
+<script>
+// Say so if three.js could not be loaded from the web, instead of leaving an empty page
+setTimeout(() => { if (!window.sphereReady) document.getElementById("info").textContent =
+  "Could not load three.js from cdn.jsdelivr.net. The page needs an internet connection the first time it opens."; }, 8000);
+</script>
+</body>
+</html>

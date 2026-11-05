@@ -1,0 +1,39 @@
+province_code,province,grdp_per_capita_2025,coal_2025,grdp_2025_simdasi,coal_share_2025_pct,b2_marker_2025,status_2025,quadrant_2025,grdp_per_capita_2024,coal_share_2024_pct,status_2024,quadrant_2024
+63,Kalimantan Selatan,70.58,80351.18,305126.93,26.333690,,**,Poorer & coal-reliant,67.12,28.223031,*,Poorer & coal-reliant
+64,Kalimantan Timur,208.33,223100.62,889072.55,25.093635,,**,Rich & coal-reliant,212.11,29.079899,*,Rich & coal-reliant
+65,Kalimantan Utara,208.20,30010.92,156025.74,19.234596,,**,Rich & coal-reliant,198.67,20.861620,*,Rich & coal-reliant
+16,Sumatera Selatan,80.66,100298.17,720205.22,13.926332,,**,Poorer & coal-reliant,75.13,13.878871,*,Poorer & coal-reliant
+62,Kalimantan Tengah,84.73,17223.06,241055.70,7.144847,,**,Rich & coal-reliant,79.32,8.009696,*,Rich & coal-reliant
+15,Jambi,92.79,10815.96,349662.60,3.093256,,**,Rich & coal-reliant,86.77,3.027128,*,Rich & coal-reliant
+17,Bengkulu,52.31,2075.85,111829.42,1.856265,,**,Poorer & less coal-reliant,49.23,2.499761,*,Poorer & coal-reliant
+11,Aceh,45.77,4402.74,257502.43,1.709786,,**,Poorer & less coal-reliant,43.78,1.757480,*,Poorer & less coal-reliant
+14,Riau,176.38,2668.36,1201383.76,0.222107,,**,Rich & less coal-reliant,165.35,0.286967,*,Rich & less coal-reliant
+13,Sumatera Barat,59.55,298.99,352189.40,0.084895,,**,Poorer & less coal-reliant,57.08,0.098951,*,Poorer & less coal-reliant
+36,Banten,74.67,143.10,936203.98,0.015285,,**,Poorer & less coal-reliant,70.28,0.019944,*,Poorer & less coal-reliant
+92,Papua Barat Daya,61.63,0.68,39219.64,0.001734,,**,Poorer & less coal-reliant,59.07,0.001917,*,Poorer & less coal-reliant
+76,Sulawesi Barat,46.65,0.80,71162.44,0.001124,,**,Poorer & less coal-reliant,42.72,0.090306,*,Poorer & less coal-reliant
+61,Kalimantan Barat,56.98,1.20,328569.51,0.000365,,**,Poorer & less coal-reliant,52.70,0.000793,*,Poorer & less coal-reliant
+73,Sulawesi Selatan,78.75,0.07,753077.16,0.000009,,**,Poorer & less coal-reliant,73.57,0.000379,*,Poorer & less coal-reliant
+12,Sumatera Utara,78.31,,1236193.57,0.000000,–,**,Poorer & less coal-reliant,73.57,0.000000,*,Poorer & less coal-reliant
+18,Lampung,55.01,,523846.54,0.000000,–,**,Poorer & less coal-reliant,51.39,0.000000,*,Poorer & less coal-reliant
+19,Kepulauan Bangka Belitung,75.32,,116811.75,0.000000,–,**,Poorer & less coal-reliant,70.19,0.000000,*,Poorer & less coal-reliant
+21,Kepulauan Riau,172.46,,381729.88,0.000000,–,**,Rich & less coal-reliant,161.42,0.000000,*,Rich & less coal-reliant
+31,DKI Jakarta,367.69,,3926153.30,0.000000,–,**,Rich & less coal-reliant,344.38,0.000000,*,Rich & less coal-reliant
+32,Jawa Barat,59.86,,3038667.95,0.000000,–,**,Poorer & less coal-reliant,56.08,0.000000,*,Poorer & less coal-reliant
+33,Jawa Tengah,50.82,,1943187.66,0.000000,–,**,Poorer & less coal-reliant,47.97,0.000000,*,Poorer & less coal-reliant
+34,DI Yogyakarta,55.04,,208133.80,0.000000,–,**,Poorer & less coal-reliant,51.49,0.000000,*,Poorer & less coal-reliant
+35,Jawa Timur,80.86,,3403166.85,0.000000,–,**,Poorer & less coal-reliant,75.77,0.000000,*,Poorer & less coal-reliant
+51,Bali,72.66,,324148.94,0.000000,–,**,Poorer & less coal-reliant,67.32,0.000000,*,Poorer & less coal-reliant
+52,Nusa Tenggara Barat,33.67,,192951.54,0.000000,–,**,Poorer & less coal-reliant,32.28,0.000000,*,Poorer & less coal-reliant
+53,Nusa Tenggara Timur,25.84,,148373.38,0.000000,–,**,Poorer & less coal-reliant,24.30,0.000000,*,Poorer & less coal-reliant
+71,Sulawesi Utara,75.24,,204747.14,0.000000,–,**,Poorer & less coal-reliant,69.35,0.000000,*,Poorer & less coal-reliant
+72,Sulawesi Tengah,131.64,,415477.22,0.000000,–,**,Rich & less coal-reliant,120.75,0.000000,*,Rich & less coal-reliant
+74,Sulawesi Tenggara,72.03,,204333.57,0.000000,–,**,Poorer & less coal-reliant,67.84,0.000000,*,Poorer & less coal-reliant
+75,Gorontalo,47.48,,58977.51,0.000000,–,**,Poorer & less coal-reliant,44.44,0.000000,*,Poorer & less coal-reliant
+81,Maluku,33.65,,66313.12,0.000000,–,**,Poorer & less coal-reliant,32.20,0.000000,*,Poorer & less coal-reliant
+82,Maluku Utara,97.26,,133620.32,0.000000,–,**,Rich & less coal-reliant,71.52,0.000000,*,Poorer & less coal-reliant
+91,Papua Barat,139.22,,81807.57,0.000000,–,**,Rich & less coal-reliant,131.64,0.000000,*,Rich & less coal-reliant
+94,Papua,84.31,,90513.18,0.000000,–,**,Rich & less coal-reliant,81.01,0.000000,*,Rich & less coal-reliant
+95,Papua Selatan,64.92,,35687.86,0.000000,–,**,Poorer & less coal-reliant,61.62,0.000000,*,Poorer & less coal-reliant
+96,Papua Tengah,107.56,,160519.15,0.000000,–,**,Rich & less coal-reliant,118.77,0.000000,*,Rich & less coal-reliant
+97,Papua Pegunungan,19.11,,28377.77,0.000000,–,**,Poorer & less coal-reliant,18.11,0.000000,*,Poorer & less coal-reliant

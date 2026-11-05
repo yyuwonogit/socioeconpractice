@@ -1,0 +1,2724 @@
+{
+ "title": "Provincial minimum wage (Upah Minimum Provinsi, UMP) by province, Indonesia, 1997-2025: BPS figures, with Ministry of Manpower (Kemnaker) figures for the years BPS does not publish",
+ "columns": {
+  "province_code": "BPS province code (kode_bps) of the 38 provinces; there is no Indonesia row (see 'national_rows'). Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definition in 'indicators'.",
+  "period": "YYYY, the year the minimum wage is set for; a UMP applies to the whole calendar year from 1 January.",
+  "status": "Revision marker; no source gives one, so every row is empty (see notes on dataset 473's '2022*').",
+  "value": "Rupiah per month: whole rupiah in the years from BPS, and up to 2 decimals, as Kemnaker stores them, in the years from Kemnaker (see 'sources')."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  }
+ },
+ "province_source": {
+  "url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=provinsi&periode_merge=2025_1.2025",
+  "file": "raw/province-codes/20261102_bps-province-codes-2025-s1.json",
+  "note": "BPS and Kemendagri codes differ for the six Papua provinces; join other datasets on the code system they use."
+ },
+ "indicators": {
+  "minimum_wage": {
+   "name": "Upah Minimum Provinsi (UMP), provincial minimum wage; BPS labels it 'Upah Minimum Regional/Propinsi', naming the older term UMR beside UMP",
+   "definition": "Upah Minimum adalah upah bulanan terendah berupa upah tanpa tunjangan atau upah pokok termasuk tunjangan tetap yang ditetapkan oleh gubernur sebagai jaring pengaman.Upah Minimum Provinsi yang selanjutnya disingkat UMP adalah Upah Minimum yang berlaku untuk seluruh kabupaten/kota di dalam wilayah 1 (satu) provinsi.",
+   "definition_english": "The minimum wage is the lowest monthly wage, being the wage without allowances or the basic wage including fixed allowances, set by the governor as a safety net. The UMP is the minimum wage that applies to every regency and city within one province.",
+   "unit": "rupiah per month (BPS unit 'Rupiah'; Kemnaker '(Rp)', and 'upah bulanan' in its definition)",
+   "multiplier": 1,
+   "base_unit": "Rp per month",
+   "decimals": "0 in the BPS years; up to 2 in the Kemnaker years, shown by Kemnaker with the format #,##0.00",
+   "periods": "1997-2025, annual",
+   "source": "see 'sources': BPS WebAPI var 220 where BPS publishes the year, Kemnaker Satu Data otherwise"
+  }
+ },
+ "sources": {
+  "statement": "Every value of 1997-2016 and 2018-2020 is BPS's (WebAPI var 220). The values of 2017 and 2021-2025 are not BPS figures: BPS publishes none for those years, so they come from the Ministry of Manpower (Kementerian Ketenagakerjaan, Kemnaker) Satu Data portal. This departs from the project's practice of using BPS numbers only, by the user's choice. BPS's own note names Kemnaker as its source ('Sumber: Kementerian Ketenagakerjaan').",
+  "by_year": {
+   "1997-2016 and 2018-2020": "BPS WebAPI var 220",
+   "2017": "Kemnaker Satu Data dataset 36",
+   "2021-2022": "Kemnaker Satu Data dataset 473",
+   "2023": "Kemnaker Satu Data dataset 942",
+   "2024": "Kemnaker Satu Data dataset 1611",
+   "2025": "Kemnaker Satu Data dataset 2252"
+  },
+  "rows_by_source": {
+   "bps_var220": 736,
+   "kemnaker_473": 68,
+   "kemnaker_36": 34,
+   "kemnaker_942": 34,
+   "kemnaker_1611": 38,
+   "kemnaker_2252": 38
+  },
+  "priority": [
+   {
+    "rank": 1,
+    "source": "bps_var220",
+    "name": "BPS WebAPI var 220",
+    "years_held": "1997-2016 and 2018-2020"
+   },
+   {
+    "rank": 2,
+    "source": "kemnaker_473",
+    "name": "Kemnaker Satu Data dataset 473",
+    "years_held": "2018-2022"
+   },
+   {
+    "rank": 3,
+    "source": "kemnaker_36",
+    "name": "Kemnaker Satu Data dataset 36",
+    "years_held": "2016-2020"
+   },
+   {
+    "rank": 4,
+    "source": "kemnaker_942",
+    "name": "Kemnaker Satu Data dataset 942",
+    "years_held": "2023"
+   },
+   {
+    "rank": 5,
+    "source": "kemnaker_1611",
+    "name": "Kemnaker Satu Data dataset 1611",
+    "years_held": "2024"
+   },
+   {
+    "rank": 6,
+    "source": "kemnaker_2252",
+    "name": "Kemnaker Satu Data dataset 2252",
+    "years_held": "2025"
+   }
+  ],
+  "rule": "Each year takes all its values from the first source in this order that holds the year; the lower-priority copies serve as checks (checks.cross_source). Kemnaker's datasets repeat only 2018-2020 (36 and 473), all BPS years, and 473, the later release, ranks above 36."
+ },
+ "source_tables": {
+  "bps_var220": {
+   "role": "gives every value of 1997-2016 and 2018-2020",
+   "label": "Upah Minimum Regional/Propinsi",
+   "subject": [
+    "Upah Buruh",
+    "Biaya Tenaga Kerja"
+   ],
+   "unit": "Rupiah",
+   "decimals": "the var declares decimal null; every value is a JSON integer (whole rupiah)",
+   "regions": "38 Provinsi",
+   "turvar": "Tidak ada",
+   "turtahun": "Tahun",
+   "last_update": "2017-03-23 00:00:00",
+   "note_items": [
+    "Sumber: Kementerian Ketenagakerjaan",
+    "Data Kalimantan Utara tahun 2013 masih bergabung dengan Kalimantan Timur",
+    "Data dikutip dari Publikasi Statistik Indonesia"
+   ],
+   "note_english": [
+    "Source: Ministry of Manpower (Kementerian Ketenagakerjaan)",
+    "Kalimantan Utara's 2013 figure is still combined with Kalimantan Timur",
+    "The data are quoted from the publication Statistik Indonesia"
+   ],
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/domain/0000/var/220/th/{th}/key/{key} (th = years minus 1900 joined by ';', such as 97;98;99; the key is not stored)",
+   "download_script": "raw/labour/20261104_download-bps-monthly-wage-and-minimum-wage-by-province.py",
+   "files": [
+    "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-1997-1999.json",
+    "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-2000-2002.json",
+    "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-2003-2005.json",
+    "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-2006-2008.json",
+    "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-2009-2011.json",
+    "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-2012-2014.json",
+    "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-2015-2016.json",
+    "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-2018-2020.json"
+   ]
+  },
+  "kemnaker_36": {
+   "role": "gives every value of 2017; checks 2016 and 2018-2020 against BPS",
+   "title": "UMP Nasional Tahun 2016-2020",
+   "abstract": "Dalam kurun waktu 5 (lima) tahun terakhir telah terjadi peningkatan rata-rata UMP nasional sebesar 35,82 persen atau sekitar Rp 704.798,77 dari Rp 1.967.572,00 pada tahun 2016 menjadi Rp 2.672.370,77 pada tahun 2020. Dlihat dari nilai UMP yang ditetapkan oleh masing-masing provinsi, rentang nilai UMP di Indonesia cenderung mengalami peningkatan sejak tahun 2016 – 2020. Pada tahun 2016 rentang nilai UMP di Indonesia berada pada rentang nilai Rp 1.312.355,00 – Rp 3.100.000,00 dan kini pada tahun 2020 telah meningkat menjadi Rp 1.704.608,25 – Rp 4.276.349,91.",
+   "file_address": "https://satudata-dev.kemnaker.go.id/satudata-public/old/files/data/Upah%20Minimum%20Provinsi%20Menurut%20Provinsi%20Tahun%202016-2020_1603420133.xlsx",
+   "created_at": "2020-10-23T02:28:53.000Z",
+   "updated_at": "2026-11-03T04:54:49.000Z",
+   "sheet": "Sheet4",
+   "titles": [
+    "Upah Minimum Provinsi Menurut Provinsi",
+    "Tahun 2016 – 2020"
+   ],
+   "columns": {
+    "Tahun 2016": "2016",
+    "Tahun 2017": "2017",
+    "Tahun 2018": "2018",
+    "Tahun 2019": "2019",
+    "Tahun 2020": "2020"
+   },
+   "unit_text": "(Rp)",
+   "unit_place": "row below the header",
+   "provinces": 34,
+   "number_format": "#,##0.00",
+   "max_decimals": 3,
+   "lines_below_table": [
+    "Sumber: Ditjend. PHI dan JSK, diolah oleh Pusdatinaker",
+    "Sesuai PP No.78 Tahun 2015 tentang Pengupahan dengan Pentahapan Pencapaian KHL",
+    "Tidak sesuai dengan PP 78 Tahun 2015 yaitu Bengkulu, Bali dan Papua Barat"
+   ],
+   "cells_holding_one_space": 0,
+   "missing_markers": [
+    {
+     "province_code": "33",
+     "period": "2016",
+     "marker": "-"
+    },
+    {
+     "province_code": "34",
+     "period": "2016",
+     "marker": "-"
+    },
+    {
+     "province_code": "35",
+     "period": "2016",
+     "marker": "-"
+    }
+   ],
+   "cell_notes": [
+    {
+     "fill": "FFFFE699",
+     "note": "Sesuai PP No.78 Tahun 2015 tentang Pengupahan dengan Pentahapan Pencapaian KHL",
+     "english": "set in line with Government Regulation (PP) 78/2015 on Wages, with the phased approach to decent living needs (Kebutuhan Hidup Layak, KHL)",
+     "cells": [
+      [
+       "53",
+       "2020"
+      ],
+      [
+       "62",
+       "2020"
+      ],
+      [
+       "75",
+       "2020"
+      ],
+      [
+       "76",
+       "2020"
+      ]
+     ]
+    },
+    {
+     "fill": "FFFFC000",
+     "note": "Tidak sesuai dengan PP 78 Tahun 2015 yaitu Bengkulu, Bali dan Papua Barat",
+     "english": "not in line with PP 78/2015, namely Bengkulu, Bali and Papua Barat",
+     "cells": [
+      [
+       "17",
+       "2020"
+      ],
+      [
+       "51",
+       "2020"
+      ],
+      [
+       "91",
+       "2020"
+      ]
+     ]
+    }
+   ],
+   "column_marker": null,
+   "standard_data": {
+    "Konsep": "Upah Minimum Provinsi",
+    "Definisi": "Upah Minimum adalah upah bulanan terendah berupa upah tanpa tunjangan atau upah pokok termasuk tunjangan tetap yang ditetapkan oleh gubernur sebagai jaring pengaman.Upah Minimum Provinsi yang selanjutnya disingkat UMP adalah Upah Minimum yang berlaku untuk seluruh kabupaten/kota di dalam wilayah 1 (satu) provinsi.",
+    "Klasifikasi": "Provinsi",
+    "Ukuran": "Rupiah",
+    "Satuan": "Jumlah",
+    "Dasar Rujukan": "UU No. 13 Tahun 2003 tentang KetenagakerjaanPP RI No. 78 Tahun 2015 tentang PengupahanPermenaker RI Nomor 15 Tahun 2018 Tentang Upah Minimum"
+   },
+   "indicator_metadata": {
+    "Nama Indikator": "Rata-Rata Upah Minimum Provinsi",
+    "Konsep": "Upah Minimum Provinsi",
+    "Definisi": "Upah Minimum adalah upah bulanan terendah berupa upah tanpa tunjangan atau upah pokok termasuk tunjangan tetap yang ditetapkan oleh gubernur sebagai jaring pengaman. Upah Minimum Provinsi yang selanjutnya disingkat UMP adalah Upah Minimum yang berlaku untuk seluruh kabupaten/kota di dalam wilayah 1 (satu) provinsi.",
+    "Interpretasi": "Rata-Rata Upah Minimum Provinsi (UMP) pada tahun 2020 sebesar Rp 2.672.370,77 Artinya bahwa nilai rata-rata UMP Indonesia yang terdata di Kementerian Ketenagakerjaan sebesar Rp 2.672.370,77",
+    "Ukuran": "Rupiah",
+    "Satuan": "Jumlah",
+    "Level Estimasi": "Nasional"
+   },
+   "average_row": "national_rows.kemnaker_rata_rata",
+   "detail_request": "https://satudata.kemnaker.go.id/api/v1/data/detail_data, POST {\"id\": <dataset>}",
+   "download_script": "raw/labour/20261104_download-kemnaker-minimum-wage-by-province.py",
+   "files": [
+    "raw/labour/20261104_kemnaker-dataset-36-minimum-wage-by-province-2016-2020-detail.json",
+    "raw/labour/20261104_kemnaker-dataset-36-minimum-wage-by-province-2016-2020.xlsx"
+   ]
+  },
+  "kemnaker_473": {
+   "role": "gives every value of 2021-2022; checks 2018-2020 against BPS",
+   "title": "Nilai Upah Minimum Provinsi (UMP) di Indonesia Tahun 2018 sampai dengan Tahun 2022",
+   "abstract": "Nilai rata-rata Upah Minimum Provinsi (UMP) di Indonesia pada tahun 2018 sampai dengan 2022 mengalami peningkatan. Begitu juga dengan upah minimum dari masing-masing provinsi tiap tahunnya, kecuali pada tahun 2021 dimana sebagian besar provinsi menetapkan upah minimum yang nilainya sama dengan tahun sebelumnya sesuai dengan SE Menaker Nomor M/11/HK.04/X/2020 tentang Penetapan Upah Minimum Tahun 2021 Pada Masa Pandemi Corona Virus Disease 2019 (Covid-19).",
+   "file_address": "https://satudata.kemnaker.go.id/satudata-public/2024/07/files/data/1723516865012_UMP%25202018%2520s.d.%25202022.xlsx",
+   "created_at": "2022-03-15T07:42:25.000Z",
+   "updated_at": "2026-11-03T16:04:21.000Z",
+   "sheet": "ump",
+   "titles": [
+    "Upah Minimum Provinsi Di Indonesia",
+    "Tahun 2018-2022"
+   ],
+   "columns": {
+    "2018": "2018",
+    "2019": "2019",
+    "2020": "2020",
+    "2021": "2021",
+    "2022*": "2022"
+   },
+   "unit_text": null,
+   "unit_place": "nowhere: the file states no unit",
+   "provinces": 34,
+   "number_format": "#,##0.00",
+   "max_decimals": 3,
+   "lines_below_table": [
+    "Sumber : Ditjend. PHI dan JSK, Kemnaker RI",
+    "Note: *) data per 8 Februari 2022"
+   ],
+   "cells_holding_one_space": 0,
+   "missing_markers": [],
+   "cell_notes": [],
+   "column_marker": {
+    "column": "2022*",
+    "year": "2022",
+    "marker": "*",
+    "note": "Note: *) data per 8 Februari 2022",
+    "english": "the 2022 values are as recorded on 8 February 2022",
+    "use": "a date of record, not a revision status, so the 2022 rows keep an empty status"
+   },
+   "average_row": "national_rows.kemnaker_rata_rata",
+   "detail_request": "https://satudata.kemnaker.go.id/api/v1/data/detail_data, POST {\"id\": <dataset>}",
+   "download_script": "raw/labour/20261104_download-kemnaker-minimum-wage-by-province.py",
+   "files": [
+    "raw/labour/20261104_kemnaker-dataset-473-minimum-wage-by-province-2018-2022-detail.json",
+    "raw/labour/20261104_kemnaker-dataset-473-minimum-wage-by-province-2018-2022.xlsx"
+   ]
+  },
+  "kemnaker_942": {
+   "role": "gives every value of 2023",
+   "title": "Upah Minimum Provinsi (UMP) Tahun 2023",
+   "abstract": "Nilai rata-rata Upah Minimum Provinsi (UMP) tahun 2023 di Indonesia sebesar Rp 2.923.309,40. Penghitungan UMP tahun ini berdasarkan Permenaker Nomor 18 Tahun 2022 dan rata-rata kenaikan UMP sebesar 7,26%.",
+   "file_address": "https://satudata.kemnaker.go.id/satudata-public/2022/10/files/data/1672730776274_UMP%25202023.xlsx",
+   "created_at": "2023-01-03T07:26:17.000Z",
+   "updated_at": "2026-11-03T19:32:26.000Z",
+   "sheet": "data",
+   "titles": [
+    "Upah Minimum Provinsi",
+    "Tahun 2023"
+   ],
+   "columns": {
+    "UMP": "2023"
+   },
+   "unit_text": "(Rp)",
+   "unit_place": "row below the header",
+   "provinces": 34,
+   "number_format": "#,##0.00",
+   "max_decimals": 2,
+   "lines_below_table": [
+    "Sumber: Ditjend. PHI dan JSK"
+   ],
+   "cells_holding_one_space": 1,
+   "missing_markers": [],
+   "cell_notes": [],
+   "column_marker": null,
+   "standard_data": {
+    "Konsep": "Upah Minimum Provinsi (UMP)",
+    "Definisi": "Upah minimum provinsi adalah Upah minimum yang berlaku untuk seluruh kabupaten/kota di satu provinsi.",
+    "Klasifikasi": "-",
+    "Ukuran": "Jumlah",
+    "Satuan": "Rupiah",
+    "Dasar Rujukan": "1. Peraturan Pemerintah No. 36 Tahun 2021 tentang Pengupahan 2. Peraturan Menteri Ketenagakerjaan No. 18 tahun 2022 tentang Penetapan Upah Minimum Tahun 2023"
+   },
+   "indicator_metadata": {
+    "Nama Indikator": "Upah Minimum Provinsi (UMP)",
+    "Konsep": "Upah Minimum Provinsi (UMP)",
+    "Definisi": "Upah minimum provinsi adalah Upah minimum yang berlaku untuk seluruh kabupaten/kota di satu provinsi.",
+    "Interpretasi": "Nilai rata-rata Upah Minimum Provinsi (UMP) pada tahun 2023 adalah Rp. 2.923.309,40",
+    "Ukuran": "Jumlah",
+    "Satuan": "Rupiah",
+    "Level Estimasi": "Nasional"
+   },
+   "average_row": "national_rows.kemnaker_rata_rata",
+   "detail_request": "https://satudata.kemnaker.go.id/api/v1/data/detail_data, POST {\"id\": <dataset>}",
+   "download_script": "raw/labour/20261104_download-kemnaker-minimum-wage-by-province.py",
+   "files": [
+    "raw/labour/20261104_kemnaker-dataset-942-minimum-wage-by-province-2023-detail.json",
+    "raw/labour/20261104_kemnaker-dataset-942-minimum-wage-by-province-2023.xlsx"
+   ]
+  },
+  "kemnaker_1611": {
+   "role": "gives every value of 2024",
+   "title": "Upah Minimum Provinsi (UMP) Tahun 2024",
+   "abstract": "Upah Minimum Provinsi (UMP) tahun 2024 telah ditetapkan oleh pemerintah berdasarkan Peraturan Pemerintah Nomor 51 Tahun 2023 Tentang Perubahan Atas Peraturan Pemerintah Nomor 36 Tahun 2021 Tentang Pengupahan, termasuk upah minimum bagi provinsi baru di Indonesia. Nilai rata-rata UMP tahun 2024 adalah Rp3.113.359,85.",
+   "file_address": "https://satudata.kemnaker.go.id/satudata-public/2023/11/files/data/1704427855898_UMP%25202024.xlsx",
+   "created_at": "2024-01-05T04:10:57.000Z",
+   "updated_at": "2026-11-03T19:32:27.000Z",
+   "sheet": "data",
+   "titles": [
+    "Upah Minimum Provinsi di Indonesia",
+    "Tahun 2024"
+   ],
+   "columns": {
+    "Upah Minimum (Rp)": "2024"
+   },
+   "unit_text": "(Rp)",
+   "unit_place": "header",
+   "provinces": 38,
+   "number_format": "#,##0.00",
+   "max_decimals": 2,
+   "lines_below_table": [
+    "Sumber: Kemnaker RI"
+   ],
+   "cells_holding_one_space": 1,
+   "missing_markers": [],
+   "cell_notes": [],
+   "column_marker": null,
+   "standard_data": {
+    "Konsep": "Upah Minimum Provinsi (UMP)",
+    "Definisi": "Upah minimum provinsi adalah Upah minimum yang berlaku untuk seluruh kabupaten/kota di satu provinsi.",
+    "Klasifikasi": "-",
+    "Ukuran": "Jumlah",
+    "Satuan": "Rupiah",
+    "Dasar Rujukan": "Peraturan Pemerintah No. 51 Tahun 2023 tentang Perubahan Atas Peraturan Pemerintah No.36 Tahun 2021 Tentang Pengupahan"
+   },
+   "indicator_metadata": {
+    "Nama Indikator": "Upah Minimum Provinsi (UMP)",
+    "Konsep": "Upah Minimum Provinsi (UMP)",
+    "Definisi": "Upah minimum provinsi adalah Upah minimum yang berlaku untuk seluruh kabupaten/kota di satu provinsi.",
+    "Interpretasi": "-",
+    "Ukuran": "Jumlah",
+    "Satuan": "Rupiah",
+    "Level Estimasi": "Nasional"
+   },
+   "average_row": "national_rows.kemnaker_rata_rata",
+   "detail_request": "https://satudata.kemnaker.go.id/api/v1/data/detail_data, POST {\"id\": <dataset>}",
+   "download_script": "raw/labour/20261104_download-kemnaker-minimum-wage-by-province.py",
+   "files": [
+    "raw/labour/20261104_kemnaker-dataset-1611-minimum-wage-by-province-2024-detail.json",
+    "raw/labour/20261104_kemnaker-dataset-1611-minimum-wage-by-province-2024.xlsx"
+   ]
+  },
+  "kemnaker_2252": {
+   "role": "gives every value of 2025",
+   "title": "Upah Minimum Provinsi (UMP) Tahun 2025",
+   "abstract": "Upah Minimum Provinsi (UMP) tahun 2025 telah ditetapkan oleh pemerintah berdasarkan Peraturan Menteri Ketenagakerjaan Nomor 16 Tahun 2024 Tentang Penetapan Upah Minimum Tahun 2025.",
+   "file_address": "https://satudata.kemnaker.go.id/satudata-public/2025/04/files/data/1746434071703_UMP%25202025.xlsx",
+   "created_at": "2025-01-14T07:51:04.000Z",
+   "updated_at": "2026-11-03T19:32:28.000Z",
+   "sheet": "data",
+   "titles": [
+    "Upah Minimum Provinsi di Indonesia",
+    "Tahun 2025"
+   ],
+   "columns": {
+    "Upah Minimum (Rp)": "2025"
+   },
+   "unit_text": "(Rp)",
+   "unit_place": "header",
+   "provinces": 38,
+   "number_format": "#,##0.00",
+   "max_decimals": 2,
+   "lines_below_table": [
+    "Sumber: Kemnaker RI"
+   ],
+   "cells_holding_one_space": 1,
+   "missing_markers": [],
+   "cell_notes": [],
+   "column_marker": null,
+   "standard_data": {
+    "Konsep": "Upah Minimum Provinsi (UMP)",
+    "Definisi": "Upah minimum provinsi adalah Upah minimum yang berlaku untuk seluruh kabupaten/kota di satu provinsi.",
+    "Klasifikasi": "-",
+    "Ukuran": "Jumlah",
+    "Satuan": "Rupiah",
+    "Dasar Rujukan": "Peraturan Menteri Ketenagakerjaan No. 16 Tahun 2024 Tentang Penetapan Upah Minimum Tahun 2025."
+   },
+   "indicator_metadata": {
+    "Nama Indikator": "Upah Minimum Provinsi (UMP)",
+    "Konsep": "Upah Minimum Provinsi (UMP)",
+    "Definisi": "Upah minimum provinsi adalah Upah minimum yang berlaku untuk seluruh kabupaten/kota di satu provinsi",
+    "Interpretasi": "-",
+    "Ukuran": "Jumlah",
+    "Satuan": "Rupiah",
+    "Level Estimasi": "Nasional"
+   },
+   "average_row": "national_rows.kemnaker_rata_rata",
+   "detail_request": "https://satudata.kemnaker.go.id/api/v1/data/detail_data, POST {\"id\": <dataset>}",
+   "download_script": "raw/labour/20261104_download-kemnaker-minimum-wage-by-province.py",
+   "files": [
+    "raw/labour/20261104_kemnaker-dataset-2252-minimum-wage-by-province-2025-detail.json",
+    "raw/labour/20261104_kemnaker-dataset-2252-minimum-wage-by-province-2025.xlsx"
+   ]
+  }
+ },
+ "periods": {
+  "held": [
+   "1997",
+   "1998",
+   "1999",
+   "2000",
+   "2001",
+   "2002",
+   "2003",
+   "2004",
+   "2005",
+   "2006",
+   "2007",
+   "2008",
+   "2009",
+   "2010",
+   "2011",
+   "2012",
+   "2013",
+   "2014",
+   "2015",
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "note": "One value per province and year: the year the UMP is set for, as BPS's tahun and Kemnaker's titles and year columns name it. A UMP is set by the governor before the year starts and applies from 1 January."
+ },
+ "coverage": {
+  "years": {
+   "1997": {
+    "provinces": 27,
+    "absent": [
+     "19",
+     "36",
+     "65",
+     "75",
+     "76",
+     "82",
+     "91",
+     "92",
+     "95",
+     "96",
+     "97"
+    ]
+   },
+   "1998-2001": {
+    "provinces": 31,
+    "absent": [
+     "65",
+     "76",
+     "91",
+     "92",
+     "95",
+     "96",
+     "97"
+    ]
+   },
+   "2002-2004": {
+    "provinces": 30,
+    "absent": [
+     "21",
+     "65",
+     "76",
+     "91",
+     "92",
+     "95",
+     "96",
+     "97"
+    ]
+   },
+   "2005": {
+    "provinces": 31,
+    "absent": [
+     "65",
+     "76",
+     "91",
+     "92",
+     "95",
+     "96",
+     "97"
+    ]
+   },
+   "2006-2014": {
+    "provinces": 33,
+    "absent": [
+     "65",
+     "92",
+     "95",
+     "96",
+     "97"
+    ]
+   },
+   "2015": {
+    "provinces": 34,
+    "absent": [
+     "92",
+     "95",
+     "96",
+     "97"
+    ]
+   },
+   "2016": {
+    "provinces": 31,
+    "absent": [
+     "33",
+     "34",
+     "35",
+     "92",
+     "95",
+     "96",
+     "97"
+    ]
+   },
+   "2017-2023": {
+    "provinces": 34,
+    "absent": [
+     "92",
+     "95",
+     "96",
+     "97"
+    ]
+   },
+   "2024-2025": {
+    "provinces": 38,
+    "absent": []
+   }
+  },
+  "first_year": {
+   "19": {
+    "year": 1998,
+    "source": "bps_var220"
+   },
+   "36": {
+    "year": 1998,
+    "source": "bps_var220"
+   },
+   "65": {
+    "year": 2015,
+    "source": "bps_var220"
+   },
+   "75": {
+    "year": 1998,
+    "source": "bps_var220"
+   },
+   "76": {
+    "year": 2006,
+    "source": "bps_var220"
+   },
+   "82": {
+    "year": 1998,
+    "source": "bps_var220"
+   },
+   "91": {
+    "year": 2006,
+    "source": "bps_var220"
+   },
+   "92": {
+    "year": 2024,
+    "source": "kemnaker_1611"
+   },
+   "95": {
+    "year": 2024,
+    "source": "kemnaker_1611"
+   },
+   "96": {
+    "year": 2024,
+    "source": "kemnaker_1611"
+   },
+   "97": {
+    "year": 2024,
+    "source": "kemnaker_1611"
+   }
+  },
+  "gaps": {
+   "21 2002": "BPS var 220 holds no value for Kepulauan Riau in 2002-2004, between its values for 1997-2001 and from 2005, and no Kemnaker file covers those years",
+   "21 2003": "BPS var 220 holds no value for Kepulauan Riau in 2002-2004, between its values for 1997-2001 and from 2005, and no Kemnaker file covers those years",
+   "21 2004": "BPS var 220 holds no value for Kepulauan Riau in 2002-2004, between its values for 1997-2001 and from 2005, and no Kemnaker file covers those years",
+   "33 2016": "neither source gives a 2016 value: BPS var 220 has no key, and Kemnaker dataset 36 prints '-'",
+   "34 2016": "neither source gives a 2016 value: BPS var 220 has no key, and Kemnaker dataset 36 prints '-'",
+   "35 2016": "neither source gives a 2016 value: BPS var 220 has no key, and Kemnaker dataset 36 prints '-'"
+  },
+  "same_as_parent": {
+   "19": {
+    "name": "KEPULAUAN BANGKA BELITUNG",
+    "formed_from": "16",
+    "formed": 2000,
+    "first_year": 1998,
+    "years_equal_to_parent": "1998-2001"
+   },
+   "21": {
+    "name": "KEPULAUAN RIAU",
+    "formed_from": "14",
+    "formed": 2002,
+    "first_year": 1997,
+    "years_equal_to_parent": "1998-1999"
+   },
+   "36": {
+    "name": "BANTEN",
+    "formed_from": "32",
+    "formed": 2000,
+    "first_year": 1998,
+    "years_equal_to_parent": "1998-2001"
+   },
+   "75": {
+    "name": "GORONTALO",
+    "formed_from": "71",
+    "formed": 2000,
+    "first_year": 1998,
+    "years_equal_to_parent": "1998-2001"
+   },
+   "76": {
+    "name": "SULAWESI BARAT",
+    "formed_from": "73",
+    "formed": 2004,
+    "first_year": 2006,
+    "years_equal_to_parent": "2006"
+   },
+   "82": {
+    "name": "MALUKU UTARA",
+    "formed_from": "81",
+    "formed": 1999,
+    "first_year": 1998,
+    "years_equal_to_parent": "1998-2001, 2003 and 2008"
+   },
+   "91": {
+    "name": "PAPUA BARAT",
+    "formed_from": "94",
+    "formed": 2003,
+    "first_year": 2006,
+    "years_equal_to_parent": "2006-2008"
+   },
+   "65": {
+    "name": "KALIMANTAN UTARA",
+    "formed_from": "64",
+    "formed": 2012,
+    "first_year": 2015,
+    "years_equal_to_parent": "2015"
+   },
+   "92": {
+    "name": "PAPUA BARAT DAYA",
+    "formed_from": "91",
+    "formed": 2022,
+    "first_year": 2024,
+    "years_equal_to_parent": "2024"
+   },
+   "95": {
+    "name": "PAPUA SELATAN",
+    "formed_from": "94",
+    "formed": 2022,
+    "first_year": 2024,
+    "years_equal_to_parent": "2024-2025"
+   },
+   "96": {
+    "name": "PAPUA TENGAH",
+    "formed_from": "94",
+    "formed": 2022,
+    "first_year": 2024,
+    "years_equal_to_parent": "2024"
+   },
+   "97": {
+    "name": "PAPUA PEGUNUNGAN",
+    "formed_from": "94",
+    "formed": 2022,
+    "first_year": 2024,
+    "years_equal_to_parent": "2024-2025"
+   }
+  },
+  "formed_note": "'formed' gives the year each later province was formed, which is general knowledge, not read from these files. BPS var 220 lists several of them from 1997 or 1998, before they were formed, mostly with the value of the province they were formed from ('years_equal_to_parent'); the values are kept as BPS publishes them.",
+  "kalimantan_utara": "BPS var 220 starts Kalimantan Utara (65) in 2015, with Kalimantan Timur's value; its note says the 2013 figure is still combined with Kalimantan Timur ('Data Kalimantan Utara tahun 2013 masih bergabung dengan Kalimantan Timur'), and the files give no 2014 value either.",
+  "new_papua_provinces": "Kemnaker dataset 1611 (2024) is the first file to list Papua Barat Daya (92), Papua Selatan (95), Papua Tengah (96) and Papua Pegunungan (97), as its abstract says ('termasuk upah minimum bagi provinsi baru di Indonesia'); dataset 942 (2023) lists only Papua Barat (91) and Papua (94)."
+ },
+ "borders": [
+  "A UMP is a rate set for a province, not a total over its area, so a value does not change because the province's area changes; still, a change of a province from the year before is left out of the change checks when a province formed from it gains or loses its own value that year (checks.change_not_compared).",
+  "91 (Papua Barat) and 94 (Papua) up to 2023 are the UMPs of the pre-split provinces; the four new Papua provinces have their own values from 2024."
+ ],
+ "national_rows": {
+  "decision": "The dataset has no Indonesia (00) row. Indonesia has no national minimum wage: each source's national row is an average of the provincial UMPs, a derived value that belongs in analysis/. Kemnaker labels its row 'Rata-rata' (average) and computes it as the unweighted mean of the provinces it lists; BPS's INDONESIA row is not described by BPS and, in every year but 2014, is such a mean over a set of provinces that changes from year to year (checks.identities).",
+  "formula": "unweighted mean (Rp per month) = sum of minimum_wage over the provinces with a value that year / the number of those provinces",
+  "bps_var220_indonesia": {
+   "1997": 135000.0,
+   "1998": 150900.0,
+   "1999": 175400.0,
+   "2000": 216500.0,
+   "2001": 290500.0,
+   "2002": 362700.0,
+   "2003": 414700.0,
+   "2004": 458500.0,
+   "2005": 507697.0,
+   "2006": 602702.0,
+   "2007": 672480.0,
+   "2008": 745709.0,
+   "2009": 841530.0,
+   "2010": 908824.0,
+   "2011": 988829.0,
+   "2012": 1088903.0,
+   "2013": 1296908.0,
+   "2014": 1584391.0,
+   "2015": 1790342.0,
+   "2016": 1997819.0,
+   "2018": 2268874.0,
+   "2019": 2455662.0,
+   "2020": 2672371.0
+  },
+  "kemnaker_rata_rata": {
+   "kemnaker_36": {
+    "2016": {
+     "label": "Rata-Rata",
+     "cell": "a value, not a formula",
+     "value": 1967572.0,
+     "provinces": 31,
+     "mean_of_provinces": 1967572.0
+    },
+    "2017": {
+     "label": "Rata-Rata",
+     "cell": "a value, not a formula",
+     "value": 2074151.08,
+     "provinces": 34,
+     "mean_of_provinces": 2074151.082941
+    },
+    "2018": {
+     "label": "Rata-Rata",
+     "cell": "a value, not a formula",
+     "value": 2268874.19,
+     "provinces": 34,
+     "mean_of_provinces": 2268874.192941
+    },
+    "2019": {
+     "label": "Rata-Rata",
+     "cell": "a value, not a formula",
+     "value": 2455662.23,
+     "provinces": 34,
+     "mean_of_provinces": 2455662.228412
+    },
+    "2020": {
+     "label": "Rata-Rata",
+     "cell": "a value, not a formula",
+     "value": 2672370.77,
+     "provinces": 34,
+     "mean_of_provinces": 2672370.766765
+    }
+   },
+   "kemnaker_473": {
+    "2018": {
+     "label": "Rata-Rata",
+     "cell": "=SUM(C6:C39)/34",
+     "value": 2268874.192941,
+     "provinces": 34,
+     "mean_of_provinces": 2268874.192941
+    },
+    "2019": {
+     "label": "Rata-Rata",
+     "cell": "=SUM(D6:D39)/34",
+     "value": 2455662.228412,
+     "provinces": 34,
+     "mean_of_provinces": 2455662.228412
+    },
+    "2020": {
+     "label": "Rata-Rata",
+     "cell": "=AVERAGE(E6:E39)",
+     "value": 2672370.766765,
+     "provinces": 34,
+     "mean_of_provinces": 2672370.766765
+    },
+    "2021": {
+     "label": "Rata-Rata",
+     "cell": "=SUM(F6:F39)/34",
+     "value": 2687723.687059,
+     "provinces": 34,
+     "mean_of_provinces": 2687723.687059
+    },
+    "2022": {
+     "label": "Rata-Rata",
+     "cell": "=SUM(G6:G39)/34",
+     "value": 2725504.953824,
+     "provinces": 34,
+     "mean_of_provinces": 2725504.953824
+    }
+   },
+   "kemnaker_942": {
+    "2023": {
+     "label": "Rata-rata",
+     "cell": "=SUM(B6:B39)/34",
+     "value": 2923309.395294,
+     "provinces": 34,
+     "mean_of_provinces": 2923309.395294
+    }
+   },
+   "kemnaker_1611": {
+    "2024": {
+     "label": "Rata-rata",
+     "cell": "=SUM(C5:C42)/38",
+     "value": 3113359.849211,
+     "provinces": 38,
+     "mean_of_provinces": 3113359.849211
+    }
+   },
+   "kemnaker_2252": {
+    "2025": {
+     "label": "Rata-Rata",
+     "cell": "=AVERAGE(C5:C42)",
+     "value": 3315761.649474,
+     "provinces": 38,
+     "mean_of_provinces": 3315761.649474
+    }
+   }
+  }
+ },
+ "notes": [
+  "Sources by year: 1997-2016 and 2018-2020: BPS WebAPI var 220; 2017: Kemnaker Satu Data dataset 36; 2021-2022: Kemnaker Satu Data dataset 473; 2023: Kemnaker Satu Data dataset 942; 2024: Kemnaker Satu Data dataset 1611; 2025: Kemnaker Satu Data dataset 2252. Every value of 2017 and 2021-2025 is a Kemnaker figure, not a BPS figure.",
+  "Where BPS and Kemnaker hold the same year (2016, 2018-2020), BPS's whole-rupiah values equal Kemnaker's rounded to whole rupiah, within 0.5 rupiah, except Jawa Barat 2016 and Banten 2019 (checks.cross_source, declared_differences). The two Kemnaker releases 36 and 473 agree exactly in 2018-2020.",
+  "Jawa Barat (32) 2016: BPS publishes 2,250,000, Kemnaker dataset 36 1,312,355. BPS's figure equals its own 2016 value for Sulawesi Selatan (73), and Kemnaker's abstract names 1,312,355 as the lowest UMP of 2016, so BPS's figure looks like an error; the CSV keeps it by the stated priority, and checks.flags lists the rise into 2016 and the fall into 2017 for a person to decide.",
+  "Jawa Barat, Jawa Tengah, DI Yogyakarta and Jawa Timur (32-35) have the same value in 2015 as in 2014 in BPS var 220, and BPS's own 2015 INDONESIA mean leaves these four out (checks.identities); neither source gives them a 2016 value (coverage.gaps). checks.flags lists the four unchanged 2015 values.",
+  "2021: dataset 473's abstract says most provinces set the same UMP as in 2020, under SE Menaker Nomor M/11/HK.04/X/2020, so 2021 values equal to 2020's are expected and the unchanged check does not read 2021.",
+  "Dataset 473 heads its 2022 column '2022*' with the note '*) data per 8 Februari 2022': the 2022 values are as Kemnaker recorded them on 8 February 2022. This is a date of record, not a BPS revision status, so the 2022 rows keep an empty status (source_tables.kemnaker_473.column_marker).",
+  "The series switches between BPS's whole rupiah and Kemnaker's decimals at 2016/2017, 2017/2018 and 2020/2021, so a change across a switch includes up to 0.5 rupiah of BPS's rounding: an unchanged 2021 UMP can show as a change of a few tenths of a rupiah.",
+  "Dataset 36 fills 2020 cells with two colours that its legend explains (source_tables.kemnaker_36.cell_notes): Nusa Tenggara Timur, Kalimantan Tengah, Gorontalo and Sulawesi Barat set their 2020 UMP under PP 78/2015 with the phased approach to decent living needs (KHL), and Bengkulu, Bali and Papua Barat not under PP 78/2015.",
+  "Derived values are not stored: change from the year before (%) = (value in year t / value in year t-1 - 1) x 100; the national mean is in 'national_rows'.",
+  "checks.flags lists every value, change and unchanged value outside its range in checks.plausible_ranges for a person to review, with the two values and their sources each change compares; a flag stays whether it reflects a real event or a source error."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "identities",
+   "cross-source",
+   "plausibility checked (layer 5, flags listed)"
+  ],
+  "identities": [
+   {
+    "check": "BPS var 220's INDONESIA row equals the unweighted mean of the provinces the file lists that year, with the declared exceptions; written to the metadata only",
+    "years": {
+     "1997": {
+      "published": 135000.0,
+      "provinces_averaged": 27,
+      "left_out": [],
+      "mean_of_provinces": 134962.963,
+      "rounded_to": 100,
+      "gap": 37.037,
+      "matches": true
+     },
+     "1998": {
+      "published": 150900.0,
+      "provinces_averaged": 31,
+      "left_out": [],
+      "mean_of_provinces": 150938.71,
+      "rounded_to": 100,
+      "gap": -38.71,
+      "matches": true
+     },
+     "1999": {
+      "published": 175400.0,
+      "provinces_averaged": 31,
+      "left_out": [],
+      "mean_of_provinces": 175390.323,
+      "rounded_to": 100,
+      "gap": 9.677,
+      "matches": true
+     },
+     "2000": {
+      "published": 216500.0,
+      "provinces_averaged": 31,
+      "left_out": [],
+      "mean_of_provinces": 216506.452,
+      "rounded_to": 100,
+      "gap": -6.452,
+      "matches": true
+     },
+     "2001": {
+      "published": 290500.0,
+      "provinces_averaged": 31,
+      "left_out": [],
+      "mean_of_provinces": 290487.097,
+      "rounded_to": 100,
+      "gap": 12.903,
+      "matches": true
+     },
+     "2002": {
+      "published": 362700.0,
+      "provinces_averaged": 30,
+      "left_out": [],
+      "mean_of_provinces": 362746.667,
+      "rounded_to": 100,
+      "gap": -46.667,
+      "matches": true
+     },
+     "2003": {
+      "published": 414700.0,
+      "provinces_averaged": 30,
+      "left_out": [],
+      "mean_of_provinces": 414716.667,
+      "rounded_to": 100,
+      "gap": -16.667,
+      "matches": true
+     },
+     "2004": {
+      "published": 458500.0,
+      "provinces_averaged": 30,
+      "left_out": [],
+      "mean_of_provinces": 458503.333,
+      "rounded_to": 100,
+      "gap": -3.333,
+      "matches": true
+     },
+     "2005": {
+      "published": 507697.0,
+      "provinces_averaged": 31,
+      "left_out": [],
+      "mean_of_provinces": 507696.806,
+      "rounded_to": 1,
+      "gap": 0.194,
+      "matches": true
+     },
+     "2006": {
+      "published": 602702.0,
+      "provinces_averaged": 32,
+      "left_out": [
+       "91"
+      ],
+      "mean_of_provinces": 602701.906,
+      "rounded_to": 1,
+      "gap": 0.094,
+      "matches": true
+     },
+     "2007": {
+      "published": 672480.0,
+      "provinces_averaged": 32,
+      "left_out": [
+       "91"
+      ],
+      "mean_of_provinces": 672480.469,
+      "rounded_to": 1,
+      "gap": -0.469,
+      "matches": true
+     },
+     "2008": {
+      "published": 745709.0,
+      "provinces_averaged": 32,
+      "left_out": [
+       "91"
+      ],
+      "mean_of_provinces": 745709.188,
+      "rounded_to": 1,
+      "gap": -0.188,
+      "matches": true
+     },
+     "2009": {
+      "published": 841530.0,
+      "provinces_averaged": 33,
+      "left_out": [],
+      "mean_of_provinces": 841529.545,
+      "rounded_to": 1,
+      "gap": 0.455,
+      "matches": true
+     },
+     "2010": {
+      "published": 908824.0,
+      "provinces_averaged": 33,
+      "left_out": [],
+      "mean_of_provinces": 908824.515,
+      "rounded_to": 1,
+      "gap": -0.515,
+      "matches": true
+     },
+     "2011": {
+      "published": 988829.0,
+      "provinces_averaged": 33,
+      "left_out": [],
+      "mean_of_provinces": 988829.394,
+      "rounded_to": 1,
+      "gap": -0.394,
+      "matches": true
+     },
+     "2012": {
+      "published": 1088903.0,
+      "provinces_averaged": 33,
+      "left_out": [],
+      "mean_of_provinces": 1088902.636,
+      "rounded_to": 1,
+      "gap": 0.364,
+      "matches": true
+     },
+     "2013": {
+      "published": 1296908.0,
+      "provinces_averaged": 33,
+      "left_out": [],
+      "mean_of_provinces": 1296908.485,
+      "rounded_to": 1,
+      "gap": -0.485,
+      "matches": true
+     },
+     "2014": {
+      "published": 1584391.0,
+      "provinces_averaged": 33,
+      "left_out": [],
+      "mean_of_provinces": 1510464.182,
+      "rounded_to": 1,
+      "gap": 73926.818,
+      "matches": false
+     },
+     "2015": {
+      "published": 1790342.0,
+      "provinces_averaged": 30,
+      "left_out": [
+       "32",
+       "33",
+       "34",
+       "35"
+      ],
+      "mean_of_provinces": 1790341.8,
+      "rounded_to": 1,
+      "gap": 0.2,
+      "matches": true
+     },
+     "2016": {
+      "published": 1997819.0,
+      "provinces_averaged": 31,
+      "left_out": [],
+      "mean_of_provinces": 1997818.613,
+      "rounded_to": 1,
+      "gap": 0.387,
+      "matches": true
+     },
+     "2018": {
+      "published": 2268874.0,
+      "provinces_averaged": 34,
+      "left_out": [],
+      "mean_of_provinces": 2268874.235,
+      "rounded_to": 1,
+      "gap": -0.235,
+      "matches": true
+     },
+     "2019": {
+      "published": 2455662.0,
+      "provinces_averaged": 34,
+      "left_out": [],
+      "mean_of_provinces": 2455662.206,
+      "rounded_to": 1,
+      "gap": -0.206,
+      "matches": true
+     },
+     "2020": {
+      "published": 2672371.0,
+      "provinces_averaged": 34,
+      "left_out": [],
+      "mean_of_provinces": 2672370.824,
+      "rounded_to": 1,
+      "gap": 0.176,
+      "matches": true
+     }
+    }
+   },
+   {
+    "check": "each Kemnaker average row (Rata-rata) equals the unweighted mean of the provinces its dataset lists, within 0.005 rupiah, and each average formula covers exactly the province rows of its column",
+    "compared": 13,
+    "tolerance": 0.005,
+    "largest_gap": 0.003235,
+    "values": "national_rows.kemnaker_rata_rata"
+   }
+  ],
+  "cross_source": [
+   {
+    "check": "BPS WebAPI var 220 = Kemnaker Satu Data dataset 36, 2016 and 2018-2020, every province, rupiah per month, except the declared differences",
+    "compared": 131,
+    "tolerance": 0.5,
+    "relative": false,
+    "largest_gap": 0.5,
+    "differences": [
+     {
+      "key": [
+       "12",
+       "2018"
+      ],
+      "first": 2132189.0,
+      "second": 2132188.68,
+      "gap": 0.32
+     },
+     {
+      "key": [
+       "12",
+       "2019"
+      ],
+      "first": 2303403.0,
+      "second": 2303403.43,
+      "gap": 0.43
+     },
+     {
+      "key": [
+       "12",
+       "2020"
+      ],
+      "first": 2499423.0,
+      "second": 2499423.06,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "14",
+       "2018"
+      ],
+      "first": 2464154.0,
+      "second": 2464154.06,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "14",
+       "2019"
+      ],
+      "first": 2662026.0,
+      "second": 2662025.63,
+      "gap": 0.37
+     },
+     {
+      "key": [
+       "14",
+       "2020"
+      ],
+      "first": 2888564.0,
+      "second": 2888564.01,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "15",
+       "2018"
+      ],
+      "first": 2243719.0,
+      "second": 2243718.56,
+      "gap": 0.44
+     },
+     {
+      "key": [
+       "15",
+       "2019"
+      ],
+      "first": 2423889.0,
+      "second": 2423889.16,
+      "gap": 0.16
+     },
+     {
+      "key": [
+       "15",
+       "2020"
+      ],
+      "first": 2630162.0,
+      "second": 2630162.13,
+      "gap": 0.13
+     },
+     {
+      "key": [
+       "18",
+       "2018"
+      ],
+      "first": 2074673.0,
+      "second": 2074673.27,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "18",
+       "2019"
+      ],
+      "first": 2241270.0,
+      "second": 2241269.53,
+      "gap": 0.47
+     },
+     {
+      "key": [
+       "18",
+       "2020"
+      ],
+      "first": 2432002.0,
+      "second": 2432001.57,
+      "gap": 0.43
+     },
+     {
+      "key": [
+       "19",
+       "2018"
+      ],
+      "first": 2755444.0,
+      "second": 2755443.83,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "19",
+       "2019"
+      ],
+      "first": 2976706.0,
+      "second": 2976705.97,
+      "gap": 0.03
+     },
+     {
+      "key": [
+       "19",
+       "2020"
+      ],
+      "first": 3230024.0,
+      "second": 3230023.66,
+      "gap": 0.34
+     },
+     {
+      "key": [
+       "31",
+       "2018"
+      ],
+      "first": 3648036.0,
+      "second": 3648035.82,
+      "gap": 0.18
+     },
+     {
+      "key": [
+       "31",
+       "2019"
+      ],
+      "first": 3940973.0,
+      "second": 3940973.096,
+      "gap": 0.096
+     },
+     {
+      "key": [
+       "31",
+       "2020"
+      ],
+      "first": 4276350.0,
+      "second": 4276349.91,
+      "gap": 0.09
+     },
+     {
+      "key": [
+       "32",
+       "2018"
+      ],
+      "first": 1544361.0,
+      "second": 1544360.67,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "32",
+       "2019"
+      ],
+      "first": 1668373.0,
+      "second": 1668372.83,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "32",
+       "2020"
+      ],
+      "first": 1810351.0,
+      "second": 1810351.36,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "33",
+       "2019"
+      ],
+      "first": 1605396.0,
+      "second": 1605396.02,
+      "gap": 0.02
+     },
+     {
+      "key": [
+       "33",
+       "2020"
+      ],
+      "first": 1742015.0,
+      "second": 1742015.22,
+      "gap": 0.22
+     },
+     {
+      "key": [
+       "34",
+       "2018"
+      ],
+      "first": 1454154.0,
+      "second": 1454154.15,
+      "gap": 0.15
+     },
+     {
+      "key": [
+       "34",
+       "2019"
+      ],
+      "first": 1570923.0,
+      "second": 1570922.73,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "34",
+       "2020"
+      ],
+      "first": 1704608.0,
+      "second": 1704608.25,
+      "gap": 0.25
+     },
+     {
+      "key": [
+       "35",
+       "2018"
+      ],
+      "first": 1508895.0,
+      "second": 1508894.8,
+      "gap": 0.2
+     },
+     {
+      "key": [
+       "35",
+       "2019"
+      ],
+      "first": 1630059.0,
+      "second": 1630059.05,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "35",
+       "2020"
+      ],
+      "first": 1768777.0,
+      "second": 1768777.08,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "36",
+       "2020"
+      ],
+      "first": 2460997.0,
+      "second": 2460996.54,
+      "gap": 0.46
+     },
+     {
+      "key": [
+       "51",
+       "2019"
+      ],
+      "first": 2297969.0,
+      "second": 2297968.7,
+      "gap": 0.3
+     },
+     {
+      "key": [
+       "61",
+       "2020"
+      ],
+      "first": 2399699.0,
+      "second": 2399698.65,
+      "gap": 0.35
+     },
+     {
+      "key": [
+       "62",
+       "2019"
+      ],
+      "first": 2663435.0,
+      "second": 2663435.5,
+      "gap": 0.5
+     },
+     {
+      "key": [
+       "62",
+       "2020"
+      ],
+      "first": 2903145.0,
+      "second": 2903144.7,
+      "gap": 0.3
+     },
+     {
+      "key": [
+       "63",
+       "2019"
+      ],
+      "first": 2651782.0,
+      "second": 2651781.95,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "63",
+       "2020"
+      ],
+      "first": 2877449.0,
+      "second": 2877448.59,
+      "gap": 0.41
+     },
+     {
+      "key": [
+       "64",
+       "2018"
+      ],
+      "first": 2543332.0,
+      "second": 2543331.72,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "64",
+       "2019"
+      ],
+      "first": 2747561.0,
+      "second": 2747561.26,
+      "gap": 0.26
+     },
+     {
+      "key": [
+       "64",
+       "2020"
+      ],
+      "first": 2981379.0,
+      "second": 2981378.72,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "74",
+       "2019"
+      ],
+      "first": 2351870.0,
+      "second": 2351870.36,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "74",
+       "2020"
+      ],
+      "first": 2552015.0,
+      "second": 2552014.52,
+      "gap": 0.48
+     },
+     {
+      "key": [
+       "76",
+       "2020"
+      ],
+      "first": 2678863.0,
+      "second": 2678863.1,
+      "gap": 0.1
+     }
+    ],
+    "keys": "[province_code, period]; first = bps_var220, second = kemnaker_36",
+    "tolerance_reason": "BPS publishes whole rupiah and Kemnaker up to 3 decimals; rounding to whole rupiah moves a value by at most 0.5 rupiah",
+    "declared_differences": [
+     {
+      "key": [
+       "32",
+       "2016"
+      ],
+      "first": 2250000,
+      "second": 1312355,
+      "gap": 937645.0,
+      "reason": "BPS's 2,250,000 equals BPS's own 2016 value for Sulawesi Selatan (73); Kemnaker dataset 36 gives 1,312,355, which its abstract names as the lowest UMP of 2016 (checks.abstract_figures). The CSV keeps BPS's value by the stated priority, and checks.flags lists the changes into and out of 2016 for a person to decide"
+     },
+     {
+      "key": [
+       "36",
+       "2019"
+      ],
+      "first": 2267990,
+      "second": 2267990.55,
+      "gap": 0.55,
+      "reason": "BPS writes 2,267,990 where both Kemnaker releases give 2,267,990.55: BPS dropped the decimals instead of rounding them to 2,267,991, a gap of under 1 rupiah"
+     }
+    ]
+   },
+   {
+    "check": "BPS WebAPI var 220 = Kemnaker Satu Data dataset 473, 2018-2020, every province, rupiah per month, except the declared differences",
+    "compared": 101,
+    "tolerance": 0.5,
+    "relative": false,
+    "largest_gap": 0.5,
+    "differences": [
+     {
+      "key": [
+       "12",
+       "2018"
+      ],
+      "first": 2132189.0,
+      "second": 2132188.68,
+      "gap": 0.32
+     },
+     {
+      "key": [
+       "12",
+       "2019"
+      ],
+      "first": 2303403.0,
+      "second": 2303403.43,
+      "gap": 0.43
+     },
+     {
+      "key": [
+       "12",
+       "2020"
+      ],
+      "first": 2499423.0,
+      "second": 2499423.06,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "14",
+       "2018"
+      ],
+      "first": 2464154.0,
+      "second": 2464154.06,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "14",
+       "2019"
+      ],
+      "first": 2662026.0,
+      "second": 2662025.63,
+      "gap": 0.37
+     },
+     {
+      "key": [
+       "14",
+       "2020"
+      ],
+      "first": 2888564.0,
+      "second": 2888564.01,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "15",
+       "2018"
+      ],
+      "first": 2243719.0,
+      "second": 2243718.56,
+      "gap": 0.44
+     },
+     {
+      "key": [
+       "15",
+       "2019"
+      ],
+      "first": 2423889.0,
+      "second": 2423889.16,
+      "gap": 0.16
+     },
+     {
+      "key": [
+       "15",
+       "2020"
+      ],
+      "first": 2630162.0,
+      "second": 2630162.13,
+      "gap": 0.13
+     },
+     {
+      "key": [
+       "18",
+       "2018"
+      ],
+      "first": 2074673.0,
+      "second": 2074673.27,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "18",
+       "2019"
+      ],
+      "first": 2241270.0,
+      "second": 2241269.53,
+      "gap": 0.47
+     },
+     {
+      "key": [
+       "18",
+       "2020"
+      ],
+      "first": 2432002.0,
+      "second": 2432001.57,
+      "gap": 0.43
+     },
+     {
+      "key": [
+       "19",
+       "2018"
+      ],
+      "first": 2755444.0,
+      "second": 2755443.83,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "19",
+       "2019"
+      ],
+      "first": 2976706.0,
+      "second": 2976705.97,
+      "gap": 0.03
+     },
+     {
+      "key": [
+       "19",
+       "2020"
+      ],
+      "first": 3230024.0,
+      "second": 3230023.66,
+      "gap": 0.34
+     },
+     {
+      "key": [
+       "31",
+       "2018"
+      ],
+      "first": 3648036.0,
+      "second": 3648035.82,
+      "gap": 0.18
+     },
+     {
+      "key": [
+       "31",
+       "2019"
+      ],
+      "first": 3940973.0,
+      "second": 3940973.096,
+      "gap": 0.096
+     },
+     {
+      "key": [
+       "31",
+       "2020"
+      ],
+      "first": 4276350.0,
+      "second": 4276349.91,
+      "gap": 0.09
+     },
+     {
+      "key": [
+       "32",
+       "2018"
+      ],
+      "first": 1544361.0,
+      "second": 1544360.67,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "32",
+       "2019"
+      ],
+      "first": 1668373.0,
+      "second": 1668372.83,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "32",
+       "2020"
+      ],
+      "first": 1810351.0,
+      "second": 1810351.36,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "33",
+       "2019"
+      ],
+      "first": 1605396.0,
+      "second": 1605396.02,
+      "gap": 0.02
+     },
+     {
+      "key": [
+       "33",
+       "2020"
+      ],
+      "first": 1742015.0,
+      "second": 1742015.22,
+      "gap": 0.22
+     },
+     {
+      "key": [
+       "34",
+       "2018"
+      ],
+      "first": 1454154.0,
+      "second": 1454154.15,
+      "gap": 0.15
+     },
+     {
+      "key": [
+       "34",
+       "2019"
+      ],
+      "first": 1570923.0,
+      "second": 1570922.73,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "34",
+       "2020"
+      ],
+      "first": 1704608.0,
+      "second": 1704608.25,
+      "gap": 0.25
+     },
+     {
+      "key": [
+       "35",
+       "2018"
+      ],
+      "first": 1508895.0,
+      "second": 1508894.8,
+      "gap": 0.2
+     },
+     {
+      "key": [
+       "35",
+       "2019"
+      ],
+      "first": 1630059.0,
+      "second": 1630059.05,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "35",
+       "2020"
+      ],
+      "first": 1768777.0,
+      "second": 1768777.08,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "36",
+       "2020"
+      ],
+      "first": 2460997.0,
+      "second": 2460996.54,
+      "gap": 0.46
+     },
+     {
+      "key": [
+       "51",
+       "2019"
+      ],
+      "first": 2297969.0,
+      "second": 2297968.7,
+      "gap": 0.3
+     },
+     {
+      "key": [
+       "61",
+       "2020"
+      ],
+      "first": 2399699.0,
+      "second": 2399698.65,
+      "gap": 0.35
+     },
+     {
+      "key": [
+       "62",
+       "2019"
+      ],
+      "first": 2663435.0,
+      "second": 2663435.5,
+      "gap": 0.5
+     },
+     {
+      "key": [
+       "62",
+       "2020"
+      ],
+      "first": 2903145.0,
+      "second": 2903144.7,
+      "gap": 0.3
+     },
+     {
+      "key": [
+       "63",
+       "2019"
+      ],
+      "first": 2651782.0,
+      "second": 2651781.95,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "63",
+       "2020"
+      ],
+      "first": 2877449.0,
+      "second": 2877448.59,
+      "gap": 0.41
+     },
+     {
+      "key": [
+       "64",
+       "2018"
+      ],
+      "first": 2543332.0,
+      "second": 2543331.72,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "64",
+       "2019"
+      ],
+      "first": 2747561.0,
+      "second": 2747561.26,
+      "gap": 0.26
+     },
+     {
+      "key": [
+       "64",
+       "2020"
+      ],
+      "first": 2981379.0,
+      "second": 2981378.72,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "74",
+       "2019"
+      ],
+      "first": 2351870.0,
+      "second": 2351870.36,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "74",
+       "2020"
+      ],
+      "first": 2552015.0,
+      "second": 2552014.52,
+      "gap": 0.48
+     },
+     {
+      "key": [
+       "76",
+       "2020"
+      ],
+      "first": 2678863.0,
+      "second": 2678863.1,
+      "gap": 0.1
+     }
+    ],
+    "keys": "[province_code, period]; first = bps_var220, second = kemnaker_473",
+    "tolerance_reason": "BPS publishes whole rupiah and Kemnaker up to 3 decimals; rounding to whole rupiah moves a value by at most 0.5 rupiah",
+    "declared_differences": [
+     {
+      "key": [
+       "36",
+       "2019"
+      ],
+      "first": 2267990,
+      "second": 2267990.55,
+      "gap": 0.55,
+      "reason": "BPS writes 2,267,990 where both Kemnaker releases give 2,267,990.55: BPS dropped the decimals instead of rounding them to 2,267,991, a gap of under 1 rupiah"
+     }
+    ]
+   },
+   {
+    "check": "Kemnaker Satu Data dataset 473 = Kemnaker Satu Data dataset 36, 2018-2020, every province, rupiah per month, except the declared differences",
+    "compared": 102,
+    "tolerance": 0,
+    "relative": false,
+    "largest_gap": 0.0,
+    "differences": [],
+    "keys": "[province_code, period]; first = kemnaker_473, second = kemnaker_36",
+    "tolerance_reason": "two releases of the same Kemnaker figures must match exactly",
+    "declared_differences": []
+   }
+  ],
+  "abstract_figures": {
+   "check": "every figure a Kemnaker abstract states equals the statistic of the dataset's own values, to 2 decimals",
+   "figures": [
+    {
+     "dataset": 36,
+     "text": "Rp 1.967.572,00",
+     "statistic": "mean",
+     "year": "2016",
+     "from": null,
+     "stated": 1967572.0,
+     "from_the_file": 1967572.0
+    },
+    {
+     "dataset": 36,
+     "text": "Rp 2.672.370,77",
+     "statistic": "mean",
+     "year": "2020",
+     "from": null,
+     "stated": 2672370.77,
+     "from_the_file": 2672370.7668
+    },
+    {
+     "dataset": 36,
+     "text": "Rp 704.798,77",
+     "statistic": "mean_change",
+     "year": "2020",
+     "from": "dataset 36, 2016",
+     "stated": 704798.77,
+     "from_the_file": 704798.7668
+    },
+    {
+     "dataset": 36,
+     "text": "35,82 persen",
+     "statistic": "mean_change_pct",
+     "year": "2020",
+     "from": "dataset 36, 2016",
+     "stated": 35.82,
+     "from_the_file": 35.8207
+    },
+    {
+     "dataset": 36,
+     "text": "Rp 1.312.355,00",
+     "statistic": "lowest",
+     "year": "2016",
+     "from": null,
+     "stated": 1312355.0,
+     "from_the_file": 1312355.0
+    },
+    {
+     "dataset": 36,
+     "text": "Rp 3.100.000,00",
+     "statistic": "highest",
+     "year": "2016",
+     "from": null,
+     "stated": 3100000.0,
+     "from_the_file": 3100000.0
+    },
+    {
+     "dataset": 36,
+     "text": "Rp 1.704.608,25",
+     "statistic": "lowest",
+     "year": "2020",
+     "from": null,
+     "stated": 1704608.25,
+     "from_the_file": 1704608.25
+    },
+    {
+     "dataset": 36,
+     "text": "Rp 4.276.349,91",
+     "statistic": "highest",
+     "year": "2020",
+     "from": null,
+     "stated": 4276349.91,
+     "from_the_file": 4276349.91
+    },
+    {
+     "dataset": 942,
+     "text": "Rp 2.923.309,40",
+     "statistic": "mean",
+     "year": "2023",
+     "from": null,
+     "stated": 2923309.4,
+     "from_the_file": 2923309.3953
+    },
+    {
+     "dataset": 942,
+     "text": "7,26%",
+     "statistic": "mean_change_pct",
+     "year": "2023",
+     "from": "dataset 473, 2022",
+     "stated": 7.26,
+     "from_the_file": 7.2575
+    },
+    {
+     "dataset": 1611,
+     "text": "Rp3.113.359,85",
+     "statistic": "mean",
+     "year": "2024",
+     "from": null,
+     "stated": 3113359.85,
+     "from_the_file": 3113359.8492
+    }
+   ]
+  },
+  "name_aliases": {
+   "BANGKA BELITUNG": {
+    "bps_name": "KEPULAUAN BANGKA BELITUNG",
+    "reason": "Kemnaker writes the province without 'Kepulauan'"
+   },
+   "DI. YOGYAKARTA": {
+    "bps_name": "DI YOGYAKARTA",
+    "reason": "Kemnaker writes 'DI.' with a full stop, which normalise_name keeps"
+   }
+  },
+  "plausible_ranges": {
+   "minimum_wage_rupiah": {
+    "range": [
+     100000,
+     6000000
+    ],
+    "measure": "every value, rupiah per month. The UMPs in these files run from 106,000 (1997) to 5,396,761 (2025), so a value below 100,000 or above 6,000,000 is a unit or digit error rather than a minimum wage"
+   },
+   "minimum_wage_change_pct": {
+    "range": [
+     -0.001,
+     50
+    ],
+    "measure": "(value in year t / value in year t-1 - 1) x 100. Below -0.001: the UMP fell (one rupiah of rounding where the series switches between BPS's whole rupiah and Kemnaker's decimals is under 0.001% of any UMP here). Above 50: a rise of more than half in one year, beyond the largest median rise across provinces in these files (32.4%, 2001)"
+   },
+   "unchanged_from_previous_year_rupiah": {
+    "range": [
+     1,
+     null
+    ],
+    "measure": "|value in year t - value in year t-1|, rupiah. Below 1 rupiah the UMP did not change (allowing for the rounding at a switch of source); 2021 is not read, since dataset 473's abstract states the 2021 freeze"
+   }
+  },
+  "plausibility_compared": {
+   "minimum_wage_rupiah": 948,
+   "minimum_wage_change_pct": 895,
+   "unchanged_from_previous_year_rupiah": 861
+  },
+  "change_not_compared": [
+   {
+    "province_code": "14",
+    "period": "2002",
+    "reason": "21 has no value in 2002 (formed from 14), so the provinces listed for 14's former area change from 2001 to 2002; no change check reads 14's change"
+   },
+   {
+    "province_code": "14",
+    "period": "2005",
+    "reason": "21 has its own value from 2005 (formed from 14), so the provinces listed for 14's former area change from 2004 to 2005; no change check reads 14's change"
+   },
+   {
+    "province_code": "16",
+    "period": "1998",
+    "reason": "19 has its own value from 1998 (formed from 16), so the provinces listed for 16's former area change from 1997 to 1998; no change check reads 16's change"
+   },
+   {
+    "province_code": "32",
+    "period": "1998",
+    "reason": "36 has its own value from 1998 (formed from 32), so the provinces listed for 32's former area change from 1997 to 1998; no change check reads 32's change"
+   },
+   {
+    "province_code": "64",
+    "period": "2015",
+    "reason": "65 has its own value from 2015 (formed from 64), so the provinces listed for 64's former area change from 2014 to 2015; no change check reads 64's change"
+   },
+   {
+    "province_code": "71",
+    "period": "1998",
+    "reason": "75 has its own value from 1998 (formed from 71), so the provinces listed for 71's former area change from 1997 to 1998; no change check reads 71's change"
+   },
+   {
+    "province_code": "73",
+    "period": "2006",
+    "reason": "76 has its own value from 2006 (formed from 73), so the provinces listed for 73's former area change from 2005 to 2006; no change check reads 73's change"
+   },
+   {
+    "province_code": "81",
+    "period": "1998",
+    "reason": "82 has its own value from 1998 (formed from 81), so the provinces listed for 81's former area change from 1997 to 1998; no change check reads 81's change"
+   },
+   {
+    "province_code": "91",
+    "period": "2024",
+    "reason": "92 has its own value from 2024 (formed from 91), so the provinces listed for 91's former area change from 2023 to 2024; no change check reads 91's change"
+   },
+   {
+    "province_code": "94",
+    "period": "2006",
+    "reason": "91 has its own value from 2006 (formed from 94), so the provinces listed for 94's former area change from 2005 to 2006; no change check reads 94's change"
+   },
+   {
+    "province_code": "94",
+    "period": "2024",
+    "reason": "95, 96 and 97 have their own values from 2024 (formed from 94), so the provinces listed for 94's former area change from 2023 to 2024; no change check reads 94's change"
+   }
+  ],
+  "flags": [
+   {
+    "check": "minimum_wage_change_pct",
+    "province_code": "11",
+    "period": "2000",
+    "from_period": "1999",
+    "rupiah": {
+     "1999": 171000.0,
+     "2000": 265000.0
+    },
+    "sources": {
+     "1999": "bps_var220",
+     "2000": "bps_var220"
+    },
+    "value": 54.9708,
+    "range": [
+     -0.001,
+     50
+    ]
+   },
+   {
+    "check": "minimum_wage_change_pct",
+    "province_code": "13",
+    "period": "2002",
+    "from_period": "2001",
+    "rupiah": {
+     "2001": 250000.0,
+     "2002": 385000.0
+    },
+    "sources": {
+     "2001": "bps_var220",
+     "2002": "bps_var220"
+    },
+    "value": 54.0,
+    "range": [
+     -0.001,
+     50
+    ]
+   },
+   {
+    "check": "minimum_wage_change_pct",
+    "province_code": "21",
+    "period": "1998",
+    "from_period": "1997",
+    "rupiah": {
+     "1997": 235000.0,
+     "1998": 174000.0
+    },
+    "sources": {
+     "1997": "bps_var220",
+     "1998": "bps_var220"
+    },
+    "value": -25.9574,
+    "range": [
+     -0.001,
+     50
+    ]
+   },
+   {
+    "check": "minimum_wage_change_pct",
+    "province_code": "32",
+    "period": "2016",
+    "from_period": "2015",
+    "rupiah": {
+     "2015": 1000000.0,
+     "2016": 2250000.0
+    },
+    "sources": {
+     "2015": "bps_var220",
+     "2016": "bps_var220"
+    },
+    "value": 125.0,
+    "range": [
+     -0.001,
+     50
+    ]
+   },
+   {
+    "check": "minimum_wage_change_pct",
+    "province_code": "32",
+    "period": "2017",
+    "from_period": "2016",
+    "rupiah": {
+     "2016": 2250000.0,
+     "2017": 1420624.29
+    },
+    "sources": {
+     "2016": "bps_var220",
+     "2017": "kemnaker_36"
+    },
+    "value": -36.8611,
+    "range": [
+     -0.001,
+     50
+    ]
+   },
+   {
+    "check": "minimum_wage_change_pct",
+    "province_code": "64",
+    "period": "2002",
+    "from_period": "2001",
+    "rupiah": {
+     "2001": 300000.0,
+     "2002": 500000.0
+    },
+    "sources": {
+     "2001": "bps_var220",
+     "2002": "bps_var220"
+    },
+    "value": 66.6667,
+    "range": [
+     -0.001,
+     50
+    ]
+   },
+   {
+    "check": "minimum_wage_change_pct",
+    "province_code": "71",
+    "period": "2001",
+    "from_period": "2000",
+    "rupiah": {
+     "2000": 186000.0,
+     "2001": 372000.0
+    },
+    "sources": {
+     "2000": "bps_var220",
+     "2001": "bps_var220"
+    },
+    "value": 100.0,
+    "range": [
+     -0.001,
+     50
+    ]
+   },
+   {
+    "check": "minimum_wage_change_pct",
+    "province_code": "75",
+    "period": "2001",
+    "from_period": "2000",
+    "rupiah": {
+     "2000": 186000.0,
+     "2001": 372000.0
+    },
+    "sources": {
+     "2000": "bps_var220",
+     "2001": "bps_var220"
+    },
+    "value": 100.0,
+    "range": [
+     -0.001,
+     50
+    ]
+   },
+   {
+    "check": "unchanged_from_previous_year_rupiah",
+    "province_code": "16",
+    "period": "2022",
+    "from_period": "2021",
+    "rupiah": {
+     "2021": 3144446.0,
+     "2022": 3144446.0
+    },
+    "sources": {
+     "2021": "kemnaker_473",
+     "2022": "kemnaker_473"
+    },
+    "value": 0.0,
+    "range": [
+     1,
+     null
+    ]
+   },
+   {
+    "check": "unchanged_from_previous_year_rupiah",
+    "province_code": "32",
+    "period": "2015",
+    "from_period": "2014",
+    "rupiah": {
+     "2014": 1000000.0,
+     "2015": 1000000.0
+    },
+    "sources": {
+     "2014": "bps_var220",
+     "2015": "bps_var220"
+    },
+    "value": 0.0,
+    "range": [
+     1,
+     null
+    ]
+   },
+   {
+    "check": "unchanged_from_previous_year_rupiah",
+    "province_code": "33",
+    "period": "2015",
+    "from_period": "2014",
+    "rupiah": {
+     "2014": 910000.0,
+     "2015": 910000.0
+    },
+    "sources": {
+     "2014": "bps_var220",
+     "2015": "bps_var220"
+    },
+    "value": 0.0,
+    "range": [
+     1,
+     null
+    ]
+   },
+   {
+    "check": "unchanged_from_previous_year_rupiah",
+    "province_code": "34",
+    "period": "2015",
+    "from_period": "2014",
+    "rupiah": {
+     "2014": 988500.0,
+     "2015": 988500.0
+    },
+    "sources": {
+     "2014": "bps_var220",
+     "2015": "bps_var220"
+    },
+    "value": 0.0,
+    "range": [
+     1,
+     null
+    ]
+   },
+   {
+    "check": "unchanged_from_previous_year_rupiah",
+    "province_code": "35",
+    "period": "2015",
+    "from_period": "2014",
+    "rupiah": {
+     "2014": 1000000.0,
+     "2015": 1000000.0
+    },
+    "sources": {
+     "2014": "bps_var220",
+     "2015": "bps_var220"
+    },
+    "value": 0.0,
+    "range": [
+     1,
+     null
+    ]
+   },
+   {
+    "check": "unchanged_from_previous_year_rupiah",
+    "province_code": "62",
+    "period": "2002",
+    "from_period": "2001",
+    "rupiah": {
+     "2001": 362000.0,
+     "2002": 362000.0
+    },
+    "sources": {
+     "2001": "bps_var220",
+     "2002": "bps_var220"
+    },
+    "value": 0.0,
+    "range": [
+     1,
+     null
+    ]
+   },
+   {
+    "check": "unchanged_from_previous_year_rupiah",
+    "province_code": "71",
+    "period": "2022",
+    "from_period": "2021",
+    "rupiah": {
+     "2021": 3310723.0,
+     "2022": 3310723.0
+    },
+    "sources": {
+     "2021": "kemnaker_473",
+     "2022": "kemnaker_473"
+    },
+    "value": 0.0,
+    "range": [
+     1,
+     null
+    ]
+   },
+   {
+    "check": "unchanged_from_previous_year_rupiah",
+    "province_code": "73",
+    "period": "2022",
+    "from_period": "2021",
+    "rupiah": {
+     "2021": 3165876.0,
+     "2022": 3165876.0
+    },
+    "sources": {
+     "2021": "kemnaker_473",
+     "2022": "kemnaker_473"
+    },
+    "value": 0.0,
+    "range": [
+     1,
+     null
+    ]
+   },
+   {
+    "check": "unchanged_from_previous_year_rupiah",
+    "province_code": "76",
+    "period": "2022",
+    "from_period": "2021",
+    "rupiah": {
+     "2021": 2678863.1,
+     "2022": 2678863.1
+    },
+    "sources": {
+     "2021": "kemnaker_473",
+     "2022": "kemnaker_473"
+    },
+    "value": 0.0,
+    "range": [
+     1,
+     null
+    ]
+   },
+   {
+    "check": "unchanged_from_previous_year_rupiah",
+    "province_code": "81",
+    "period": "2000",
+    "from_period": "1999",
+    "rupiah": {
+     "1999": 180000.0,
+     "2000": 180000.0
+    },
+    "sources": {
+     "1999": "bps_var220",
+     "2000": "bps_var220"
+    },
+    "value": 0.0,
+    "range": [
+     1,
+     null
+    ]
+   },
+   {
+    "check": "unchanged_from_previous_year_rupiah",
+    "province_code": "82",
+    "period": "2000",
+    "from_period": "1999",
+    "rupiah": {
+     "1999": 180000.0,
+     "2000": 180000.0
+    },
+    "sources": {
+     "1999": "bps_var220",
+     "2000": "bps_var220"
+    },
+    "value": 0.0,
+    "range": [
+     1,
+     null
+    ]
+   }
+  ]
+ },
+ "file": "20261104_bps-kemnaker-province-minimum-wage.csv",
+ "rows": 948,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-1997-1999.json": {
+   "sha256": "0f697d0ff01c6ba7352087d59d031486a4e64fe4f19099410062d3e837911287"
+  },
+  "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-2000-2002.json": {
+   "sha256": "a5536e43c67ef4d0c4a35e25bc3ccd4ef6de28ec38bdb99544d75dc51bae5c0e"
+  },
+  "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-2003-2005.json": {
+   "sha256": "6fddb74f67289bb4d2158bef5171922758ddfde3eb965444ccfc7e342fa93f3a"
+  },
+  "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-2006-2008.json": {
+   "sha256": "156a0b48ba6ca205ebbf8227bcce4a37097d7ab28da7f57664c4d788eda29f7a"
+  },
+  "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-2009-2011.json": {
+   "sha256": "1857853616522cd8f2a87101775c88206565a99be1e2ec17388a2e5586daf402"
+  },
+  "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-2012-2014.json": {
+   "sha256": "3d210c2e956410e6fc30c3ec62997ac7c4a77065732d54d5adee88c3f6cea1f6"
+  },
+  "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-2015-2016.json": {
+   "sha256": "4d60e56225621958bc76a85f1e4abfe6cdddf8ef52f66cedf6124294a77ac588"
+  },
+  "raw/labour/20261104_bps-api-var220-minimum-wage-by-province-2018-2020.json": {
+   "sha256": "7c2b8cb91ad583e2e50d502abdf46fa298527f4852fedbdebd2e64c3e01126c5"
+  },
+  "raw/labour/20261104_kemnaker-dataset-36-minimum-wage-by-province-2016-2020-detail.json": {
+   "sha256": "d597355876eae8e38b3be911b13a30bd6d6421153f24ea0e5703e35936b3f9c9"
+  },
+  "raw/labour/20261104_kemnaker-dataset-36-minimum-wage-by-province-2016-2020.xlsx": {
+   "sha256": "c2e20c26f574cc4a73abfa0a5efb19d23dc1b3caa1186733ba28eae52f923e98"
+  },
+  "raw/labour/20261104_kemnaker-dataset-473-minimum-wage-by-province-2018-2022-detail.json": {
+   "sha256": "ddfcd301526c9e0c9e9f16d8f13ccd9b60964eca18fdea30ff61072fde6d8384"
+  },
+  "raw/labour/20261104_kemnaker-dataset-473-minimum-wage-by-province-2018-2022.xlsx": {
+   "sha256": "cd264d1378e23b1b6c6c39b04df857b72887a405fa4a91127e1834e33b06fa47"
+  },
+  "raw/labour/20261104_kemnaker-dataset-942-minimum-wage-by-province-2023-detail.json": {
+   "sha256": "f7cfbf7136f1fc95829accb76198b92fbd47506f17121fcda0794b24371f8153"
+  },
+  "raw/labour/20261104_kemnaker-dataset-942-minimum-wage-by-province-2023.xlsx": {
+   "sha256": "de82ee63af4e56ff1c4533126e648af675e694f1b55b66e026d5b5a9cdb6c33d"
+  },
+  "raw/labour/20261104_kemnaker-dataset-1611-minimum-wage-by-province-2024-detail.json": {
+   "sha256": "40e5aad82a54c44e18488a8e905b1d0d02ab3b8e9f04fa9c9102f9540de41a57"
+  },
+  "raw/labour/20261104_kemnaker-dataset-1611-minimum-wage-by-province-2024.xlsx": {
+   "sha256": "4e9e1838fa8664c11b2093220bddc8b87e6830316e3c85ffcf57b4d6f2794d42"
+  },
+  "raw/labour/20261104_kemnaker-dataset-2252-minimum-wage-by-province-2025-detail.json": {
+   "sha256": "a4483206e35c1b34c0420156dc4b03ddadc1c6e981bdaee0c3f6fa304fcff175"
+  },
+  "raw/labour/20261104_kemnaker-dataset-2252-minimum-wage-by-province-2025.xlsx": {
+   "sha256": "023382f88b992828c8f6092b76c5ff8ce0f1ae033e3b6b86a72d118158bebfb2"
+  }
+ }
+}

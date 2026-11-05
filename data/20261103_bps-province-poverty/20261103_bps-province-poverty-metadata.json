@@ -1,0 +1,842 @@
+{
+ "title": "BPS poverty rate (P0) by province and area, Indonesia, 2007-2026",
+ "columns": {
+  "province_code": "BPS province code (kode_bps); 00 = Indonesia. Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definition in 'indicators'.",
+  "area": "Area code; BPS labels in 'areas'.",
+  "period": "YYYY for a yearly figure (2007-2011), YYYYS1 for the March round (BPS Semester 1) and YYYYS2 for the September round (BPS Semester 2).",
+  "status": "Revision marker; the table gives none, so every row is empty (final).",
+  "value": "Percentage of the population below the poverty line, as published by BPS: percent, 2 decimals."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  },
+  "00": {
+   "name": "INDONESIA",
+   "kode_dagri": null
+  }
+ },
+ "province_source": {
+  "url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=provinsi&periode_merge=2025_1.2025",
+  "file": "raw/province-codes/20261102_bps-province-codes-2025-s1.json"
+ },
+ "indicators": {
+  "poverty_rate": {
+   "name": "Persentase Penduduk Miskin (P0) Menurut Provinsi dan Daerah (poverty headcount index P0: the percentage of people whose monthly per capita expenditure is below the poverty line)",
+   "unit": "percent of the population (Persen)",
+   "multiplier": 1,
+   "decimals": 2,
+   "source": "BPS WebAPI dynamic table 192, https://webapi.bps.go.id/v1/api/list/model/data/domain/0000/var/192/th/{th} (key omitted; th lists up to three years, each minus 1900, joined by ';'), subject Kemiskinan dan Ketimpangan",
+   "download_script": "raw/poverty/20261103_download-bps-poverty-rate-p0-by-province.py",
+   "note_as_published": "<p><br /></p><ul><li>Data Provinsi Kalimantan Utara pada tahun 2013 dan 2014 masih bergabung dengan Provinsi Kalimantan Timur</li><li>Angka Provinsi Papua Barat dan Papua sebelum tahun 2024 merupakan angka provinsi sebelum mengalami pemekaran Daerah Otonom Baru (DOB)</li></ul><p><br /></p>"
+  }
+ },
+ "areas": {
+  "total": "Jumlah",
+  "urban": "Perkotaan",
+  "rural": "Perdesaan"
+ },
+ "periods": {
+  "held": [
+   "2007",
+   "2008",
+   "2009",
+   "2010",
+   "2011",
+   "2012S1",
+   "2012S2",
+   "2013S1",
+   "2013S2",
+   "2014S1",
+   "2014S2",
+   "2015S1",
+   "2015S2",
+   "2016S1",
+   "2016S2",
+   "2017S1",
+   "2017S2",
+   "2018S1",
+   "2018S2",
+   "2019S1",
+   "2019S2",
+   "2020S1",
+   "2020S2",
+   "2021S1",
+   "2021S2",
+   "2022S1",
+   "2022S2",
+   "2023S1",
+   "2024S1",
+   "2024S2",
+   "2025S1",
+   "2025S2",
+   "2026S1"
+  ],
+  "note": "The table gives yearly figures (BPS 'Tahunan') for 2007-2011, the March and September rounds for 2012-2022, 2024 and 2025, and March only for 2023 and 2026: it holds no September 2023 value. Its note names no survey round for the yearly figures, so they are written YYYY, not YYYYS1."
+ },
+ "coverage": {
+  "first_period": {
+   "65": {
+    "period": "2015S1",
+    "reason": "Kalimantan Utara became a province in 2012; the table's note says its 2013 and 2014 data are still part of Kalimantan Timur, and the table starts it in March 2015"
+   },
+   "92": {
+    "period": "2024S1",
+    "reason": "Papua Barat Daya became a province in 2022; the table starts it in March 2024"
+   },
+   "95": {
+    "period": "2024S1",
+    "reason": "Papua Selatan became a province in 2022; the table starts it in March 2024"
+   },
+   "96": {
+    "period": "2024S1",
+    "reason": "Papua Tengah became a province in 2022; the table starts it in March 2024"
+   },
+   "97": {
+    "period": "2024S1",
+    "reason": "Papua Pegunungan became a province in 2022; the table starts it in March 2024"
+   }
+  },
+  "other_regions": "Every other region has a value in every period from 2007, the table's first.",
+  "gaps": [],
+  "no_rural": {
+   "31": "DKI Jakarta has no rural area, so BPS publishes no rural poverty rate for it"
+  }
+ },
+ "dropped_cells": {
+  "cells": [
+   {
+    "province_code": "31",
+    "area": "rural",
+    "period": "2012S2"
+   },
+   {
+    "province_code": "31",
+    "area": "rural",
+    "period": "2016S2"
+   }
+  ],
+  "reason": "BPS publishes these as 0.00, which is not a poverty rate: DKI Jakarta has no rural area, the table has no rural cell for it in its other 31 periods, and its total rate equals its urban rate in every period, these two included. They are left out rather than written as values."
+ },
+ "borders": [
+  "91 (Papua Barat) and 94 (Papua) before March 2024 cover the areas before the 2022 split, as the table's note says; 92, 95, 96 and 97 start in March 2024.",
+  "64 (Kalimantan Timur) before March 2015 includes Kalimantan Utara, which the table's note says is still part of it in 2013 and 2014; 65 starts in March 2015."
+ ],
+ "source_tables": {
+  "20261103_bps-poverty-rate-p0-by-province-2007-2009.json": {
+   "last_update": "2026-08-05 12:36:39",
+   "label": "Persentase Penduduk Miskin (P0) Menurut Provinsi dan Daerah",
+   "subject": "Kemiskinan dan Ketimpangan"
+  },
+  "20261103_bps-poverty-rate-p0-by-province-2010-2012.json": {
+   "last_update": "2026-08-05 12:36:39",
+   "label": "Persentase Penduduk Miskin (P0) Menurut Provinsi dan Daerah",
+   "subject": "Kemiskinan dan Ketimpangan"
+  },
+  "20261103_bps-poverty-rate-p0-by-province-2013-2015.json": {
+   "last_update": "2026-08-05 12:36:39",
+   "label": "Persentase Penduduk Miskin (P0) Menurut Provinsi dan Daerah",
+   "subject": "Kemiskinan dan Ketimpangan"
+  },
+  "20261103_bps-poverty-rate-p0-by-province-2016-2018.json": {
+   "last_update": "2026-08-05 12:36:39",
+   "label": "Persentase Penduduk Miskin (P0) Menurut Provinsi dan Daerah",
+   "subject": "Kemiskinan dan Ketimpangan"
+  },
+  "20261103_bps-poverty-rate-p0-by-province-2019-2021.json": {
+   "last_update": "2026-08-05 12:36:39",
+   "label": "Persentase Penduduk Miskin (P0) Menurut Provinsi dan Daerah",
+   "subject": "Kemiskinan dan Ketimpangan"
+  },
+  "20261103_bps-poverty-rate-p0-by-province-2022-2024.json": {
+   "last_update": "2026-08-05 12:36:39",
+   "label": "Persentase Penduduk Miskin (P0) Menurut Provinsi dan Daerah",
+   "subject": "Kemiskinan dan Ketimpangan"
+  },
+  "20261103_bps-poverty-rate-p0-by-province-2025-2026.json": {
+   "last_update": "2026-08-05 12:36:39",
+   "label": "Persentase Penduduk Miskin (P0) Menurut Provinsi dan Daerah",
+   "subject": "Kemiskinan dan Ketimpangan"
+  }
+ },
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "identities",
+   "plausibility checked (layer 5, flags listed)"
+  ],
+  "identities": [
+   {
+    "check": "poverty_rate: total lies between urban and rural, every region and period with both",
+    "compared": 1131,
+    "tolerance": 0.01,
+    "largest_gap": 0.0
+   },
+   {
+    "check": "poverty_rate: total equals urban where BPS publishes no rural rate (31)",
+    "compared": 33,
+    "tolerance": 0,
+    "largest_gap": 0.0
+   }
+  ],
+  "plausible_ranges": {
+   "poverty_rate": [
+    1.0,
+    50.0
+   ],
+   "poverty_rate_change": {
+    "half_year": {
+     "total": [
+      -2.0,
+      2.0
+     ],
+     "urban": [
+      -3.0,
+      3.0
+     ],
+     "rural": [
+      -3.0,
+      3.0
+     ]
+    },
+    "year": {
+     "total": [
+      -3.0,
+      3.0
+     ],
+     "urban": [
+      -4.5,
+      4.5
+     ],
+     "rural": [
+      -4.5,
+      4.5
+     ]
+    }
+   }
+  },
+  "plausible_ranges_reason": "Rates in percent, changes in percentage points from the region's previous period in the same area. Urban and rural rates come from smaller samples than the total, so their change range is wider, and a step of about a year gets 1.5 times the half-year range.",
+  "change_steps": {
+   "half_year": "S1 to S2 of the same year, or S2 to S1 of the next year",
+   "year": [
+    "2007 to 2008",
+    "2008 to 2009",
+    "2009 to 2010",
+    "2010 to 2011",
+    "2011 to 2012S1",
+    "2023S1 to 2024S1"
+   ],
+   "year_reason": "the yearly figures of 2007-2011 are a year apart, the 2011 yearly figure is followed by March 2012, and the table holds no September 2023 value"
+  },
+  "change_compared": 3334,
+  "change_not_compared": [
+   {
+    "province_code": "64",
+    "area": "total",
+    "period": "2015S1",
+    "from_period": "2014S2",
+    "reason": "Kalimantan Timur loses Kalimantan Utara"
+   },
+   {
+    "province_code": "64",
+    "area": "urban",
+    "period": "2015S1",
+    "from_period": "2014S2",
+    "reason": "Kalimantan Timur loses Kalimantan Utara"
+   },
+   {
+    "province_code": "64",
+    "area": "rural",
+    "period": "2015S1",
+    "from_period": "2014S2",
+    "reason": "Kalimantan Timur loses Kalimantan Utara"
+   },
+   {
+    "province_code": "91",
+    "area": "total",
+    "period": "2024S1",
+    "from_period": "2023S1",
+    "reason": "Papua Barat loses Papua Barat Daya"
+   },
+   {
+    "province_code": "91",
+    "area": "urban",
+    "period": "2024S1",
+    "from_period": "2023S1",
+    "reason": "Papua Barat loses Papua Barat Daya"
+   },
+   {
+    "province_code": "91",
+    "area": "rural",
+    "period": "2024S1",
+    "from_period": "2023S1",
+    "reason": "Papua Barat loses Papua Barat Daya"
+   },
+   {
+    "province_code": "94",
+    "area": "total",
+    "period": "2024S1",
+    "from_period": "2023S1",
+    "reason": "Papua loses Papua Selatan, Papua Tengah and Papua Pegunungan"
+   },
+   {
+    "province_code": "94",
+    "area": "urban",
+    "period": "2024S1",
+    "from_period": "2023S1",
+    "reason": "Papua loses Papua Selatan, Papua Tengah and Papua Pegunungan"
+   },
+   {
+    "province_code": "94",
+    "area": "rural",
+    "period": "2024S1",
+    "from_period": "2023S1",
+    "reason": "Papua loses Papua Selatan, Papua Tengah and Papua Pegunungan"
+   }
+  ],
+  "change_not_compared_note": "A region's first period has no earlier value, so it has no change to compare.",
+  "plausibility_rules": {
+   "urban_equals_rural": "an urban rate equal to the rural rate of the same region and period, which two different populations rarely give; listed for a person to compare with the BPS release"
+  },
+  "flags": [
+   {
+    "check": "poverty_rate",
+    "province_code": "94",
+    "indicator": "poverty_rate",
+    "area": "rural",
+    "period": "2007",
+    "status": "",
+    "value": 50.47,
+    "range": [
+     1.0,
+     50.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "11",
+    "indicator": "poverty_rate_change",
+    "area": "total",
+    "period": "2008",
+    "from_period": "2007",
+    "step": "year",
+    "value": -3.12,
+    "range": [
+     -3.0,
+     3.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "53",
+    "indicator": "poverty_rate_change",
+    "area": "total",
+    "period": "2015S1",
+    "from_period": "2014S2",
+    "step": "half_year",
+    "value": 3.01,
+    "range": [
+     -2.0,
+     2.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "53",
+    "indicator": "poverty_rate_change",
+    "area": "rural",
+    "period": "2015S1",
+    "from_period": "2014S2",
+    "step": "half_year",
+    "value": 3.68,
+    "range": [
+     -3.0,
+     3.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "65",
+    "indicator": "poverty_rate_change",
+    "area": "rural",
+    "period": "2024S2",
+    "from_period": "2024S1",
+    "step": "half_year",
+    "value": -3.27,
+    "range": [
+     -3.0,
+     3.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "75",
+    "indicator": "poverty_rate_change",
+    "area": "total",
+    "period": "2011",
+    "from_period": "2010",
+    "step": "year",
+    "value": -4.44,
+    "range": [
+     -3.0,
+     3.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "75",
+    "indicator": "poverty_rate_change",
+    "area": "rural",
+    "period": "2011",
+    "from_period": "2010",
+    "step": "year",
+    "value": -5.24,
+    "range": [
+     -4.5,
+     4.5
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "81",
+    "indicator": "poverty_rate_change",
+    "area": "total",
+    "period": "2011",
+    "from_period": "2010",
+    "step": "year",
+    "value": -4.74,
+    "range": [
+     -3.0,
+     3.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "91",
+    "indicator": "poverty_rate_change",
+    "area": "total",
+    "period": "2008",
+    "from_period": "2007",
+    "step": "year",
+    "value": -4.19,
+    "range": [
+     -3.0,
+     3.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "91",
+    "indicator": "poverty_rate_change",
+    "area": "total",
+    "period": "2012S1",
+    "from_period": "2011",
+    "step": "year",
+    "value": -3.72,
+    "range": [
+     -3.0,
+     3.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "91",
+    "indicator": "poverty_rate_change",
+    "area": "rural",
+    "period": "2008",
+    "from_period": "2007",
+    "step": "year",
+    "value": -5.08,
+    "range": [
+     -4.5,
+     4.5
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "92",
+    "indicator": "poverty_rate_change",
+    "area": "rural",
+    "period": "2025S1",
+    "from_period": "2024S2",
+    "step": "half_year",
+    "value": 3.81,
+    "range": [
+     -3.0,
+     3.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "94",
+    "indicator": "poverty_rate_change",
+    "area": "total",
+    "period": "2008",
+    "from_period": "2007",
+    "step": "year",
+    "value": -3.7,
+    "range": [
+     -3.0,
+     3.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "94",
+    "indicator": "poverty_rate_change",
+    "area": "total",
+    "period": "2011",
+    "from_period": "2010",
+    "step": "year",
+    "value": -4.82,
+    "range": [
+     -3.0,
+     3.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "94",
+    "indicator": "poverty_rate_change",
+    "area": "total",
+    "period": "2014S2",
+    "from_period": "2014S1",
+    "step": "half_year",
+    "value": -2.25,
+    "range": [
+     -2.0,
+     2.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "94",
+    "indicator": "poverty_rate_change",
+    "area": "rural",
+    "period": "2008",
+    "from_period": "2007",
+    "step": "year",
+    "value": -4.51,
+    "range": [
+     -4.5,
+     4.5
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "94",
+    "indicator": "poverty_rate_change",
+    "area": "rural",
+    "period": "2014S2",
+    "from_period": "2014S1",
+    "step": "half_year",
+    "value": -3.05,
+    "range": [
+     -3.0,
+     3.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "96",
+    "indicator": "poverty_rate_change",
+    "area": "total",
+    "period": "2024S2",
+    "from_period": "2024S1",
+    "step": "half_year",
+    "value": -2.16,
+    "range": [
+     -2.0,
+     2.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "96",
+    "indicator": "poverty_rate_change",
+    "area": "rural",
+    "period": "2024S2",
+    "from_period": "2024S1",
+    "step": "half_year",
+    "value": -3.12,
+    "range": [
+     -3.0,
+     3.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "97",
+    "indicator": "poverty_rate_change",
+    "area": "total",
+    "period": "2024S2",
+    "from_period": "2024S1",
+    "step": "half_year",
+    "value": -3.31,
+    "range": [
+     -2.0,
+     2.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "97",
+    "indicator": "poverty_rate_change",
+    "area": "total",
+    "period": "2025S2",
+    "from_period": "2025S1",
+    "step": "half_year",
+    "value": -2.82,
+    "range": [
+     -2.0,
+     2.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "97",
+    "indicator": "poverty_rate_change",
+    "area": "urban",
+    "period": "2024S2",
+    "from_period": "2024S1",
+    "step": "half_year",
+    "value": -4.45,
+    "range": [
+     -3.0,
+     3.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "97",
+    "indicator": "poverty_rate_change",
+    "area": "urban",
+    "period": "2026S1",
+    "from_period": "2025S2",
+    "step": "half_year",
+    "value": 3.66,
+    "range": [
+     -3.0,
+     3.0
+    ]
+   },
+   {
+    "check": "poverty_rate_change",
+    "province_code": "97",
+    "indicator": "poverty_rate_change",
+    "area": "rural",
+    "period": "2024S2",
+    "from_period": "2024S1",
+    "step": "half_year",
+    "value": -3.21,
+    "range": [
+     -3.0,
+     3.0
+    ]
+   },
+   {
+    "check": "urban_equals_rural",
+    "province_code": "17",
+    "indicator": "poverty_rate",
+    "period": "2024S1",
+    "urban": 13.56,
+    "rural": 13.56,
+    "total": 13.56
+   }
+  ]
+ },
+ "notes": [
+  "No other raw file holds these values, so there is no cross-source check (layer 4).",
+  "Area 'total' is BPS's Jumlah, the rate over everyone in the region: the population-weighted average of the urban and rural rates, which checks.identities tests."
+ ],
+ "file": "20261103_bps-province-poverty.csv",
+ "rows": 3459,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/poverty/20261103_bps-poverty-rate-p0-by-province-2007-2009.json": {
+   "sha256": "e5cdca5d5bef3b2e33300262501e3bebe5a61d54c1f50ec8a4573df295bf7976"
+  },
+  "raw/poverty/20261103_bps-poverty-rate-p0-by-province-2010-2012.json": {
+   "sha256": "1e5e61bb7978ced128114c58e98bd2902db1ff8b8887abeab8ba98fe7c9ed38b"
+  },
+  "raw/poverty/20261103_bps-poverty-rate-p0-by-province-2013-2015.json": {
+   "sha256": "95c9127417b6a662d3f6a04e63c989271cc7300607b3af1267e7883410d95fce"
+  },
+  "raw/poverty/20261103_bps-poverty-rate-p0-by-province-2016-2018.json": {
+   "sha256": "27c333d8ee64b09a96182bbfd0d079c09ab5a9ccdf6ae9458c7c27a277afb0ad"
+  },
+  "raw/poverty/20261103_bps-poverty-rate-p0-by-province-2019-2021.json": {
+   "sha256": "285c0485e55203e939b9e75e9b5b5a1469efcfeddcd9f8c6a7df65d814ae8f43"
+  },
+  "raw/poverty/20261103_bps-poverty-rate-p0-by-province-2022-2024.json": {
+   "sha256": "a23830369f944c2e2fe1bcb5bd46f8764b47fda920bb676fa6502c364b05a4db"
+  },
+  "raw/poverty/20261103_bps-poverty-rate-p0-by-province-2025-2026.json": {
+   "sha256": "a588ffa50d98ee9aa44e0f91af40e80fd9e4f306d970de7ab2bce1e65e6bd30e"
+  }
+ }
+}

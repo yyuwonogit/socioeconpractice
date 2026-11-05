@@ -1,0 +1,769 @@
+{
+ "title": "BPS employed persons by status in the main job, by province, Sakernas Februari and Agustus rounds, 2017S1-2026S1, Indonesia",
+ "columns": {
+  "province_code": "BPS province code (kode_bps); 00 = Indonesia. Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definition in 'indicators'.",
+  "work_status": "Status in the main job (status pekerjaan utama), BPS's seven statuses and their TOTAL; names in 'work_status'.",
+  "period": "YYYYS1 = the Februari round of Sakernas in year YYYY, YYYYS2 = the Agustus round (see 'periods').",
+  "status": "Revision marker; the table note states none, so every row is empty (final).",
+  "value": "Persons (Orang), whole persons as BPS publishes them. Multiply by 'multiplier' for base units."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  },
+  "00": {
+   "name": "INDONESIA",
+   "kode_dagri": null
+  }
+ },
+ "province_source": {
+  "url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=provinsi&periode_merge=2025_1.2025",
+  "file": "raw/province-codes/20261102_bps-province-codes-2025-s1.json",
+  "note": "BPS and Kemendagri codes differ for the six Papua provinces; join other datasets on the code system they use. Every region label in the table matches the BPS list after cleaning.normalise_name, so no alias is declared."
+ },
+ "indicators": {
+  "employed_persons": {
+   "name": "Penduduk berumur 15 tahun ke atas yang bekerja selama seminggu terakhir (persons aged 15 and over who worked in the past week), by status in the main job",
+   "unit": "persons (Orang)",
+   "multiplier": 1,
+   "base_unit": "persons",
+   "decimals": 0,
+   "periods": "2017S1-2026S1, two rounds a year (Februari and Agustus); 2026 has the Februari round only",
+   "definition": "The table's definition field is empty; its label defines the count: persons aged 15 and over who worked during the past week (yang bekerja selama seminggu terakhir), by status in their main job.",
+   "source": "BPS WebAPI var 2335 'Penduduk Berumur 15 Tahun Keatas yang Bekerja Selama Seminggu Terakhir Menurut Provinsi dan Status Pekerjaan Utama', from Sakernas; see 'source_table'",
+   "download_script": "raw/labour/20261104_download-bps-employment-by-status-by-province.py"
+  }
+ },
+ "work_status": {
+  "own_account": {
+   "name": "Berusaha sendiri (own-account worker)",
+   "bps_label": "1. Berusaha Sendiri",
+   "turvar": 2086
+  },
+  "employer_temporary_or_unpaid_help": {
+   "name": "Berusaha dibantu buruh tidak tetap/pekerja keluarga/tidak dibayar (employer helped by temporary workers or unpaid workers)",
+   "bps_label": "2. Berusaha Dibantu Buruh Tidak Tetap/Pekerja Keluarga/Tidak dibayar",
+   "turvar": 2087
+  },
+  "employer_permanent_paid_help": {
+   "name": "Berusaha dibantu buruh tetap dan dibayar (employer helped by permanent paid workers)",
+   "bps_label": "3. Berusaha Dibantu Buruh Tetap dan Dibayar",
+   "turvar": 2088
+  },
+  "employee": {
+   "name": "Buruh/karyawan/pegawai (employee)",
+   "bps_label": "4. Buruh / Karyawan / Pegawai",
+   "turvar": 2089
+  },
+  "casual_agriculture": {
+   "name": "Pekerja bebas di pertanian (casual worker in agriculture)",
+   "bps_label": "5. Pekerja Bebas di Pertanian",
+   "turvar": 2090
+  },
+  "casual_non_agriculture": {
+   "name": "Pekerja bebas di non pertanian (casual worker outside agriculture)",
+   "bps_label": "6. Pekerja Bebas di Non Pertanian",
+   "turvar": 2091
+  },
+  "unpaid_family": {
+   "name": "Pekerja keluarga/tak dibayar (unpaid family worker)",
+   "bps_label": "7. Pekerja Keluarga Tak Dibayar",
+   "turvar": 2092
+  },
+  "TOTAL": {
+   "name": "Total (all statuses)",
+   "bps_label": "Total",
+   "turvar": 2093
+  }
+ },
+ "periods": {
+  "held": [
+   "2017S1",
+   "2017S2",
+   "2018S1",
+   "2018S2",
+   "2019S1",
+   "2019S2",
+   "2020S1",
+   "2020S2",
+   "2021S1",
+   "2021S2",
+   "2022S1",
+   "2022S2",
+   "2023S1",
+   "2023S2",
+   "2024S1",
+   "2024S2",
+   "2025S1",
+   "2025S2",
+   "2026S1"
+  ],
+  "rounds": {
+   "S1": {
+    "turtahun": 254,
+    "bps_label": "Februari "
+   },
+   "S2": {
+    "turtahun": 255,
+    "bps_label": "Agustus"
+   }
+  },
+  "not_published": "2026S2: the 2026 file lists the Agustus round (turtahun 255) but holds no value for it."
+ },
+ "coverage": {
+  "rounds": {
+   "2017S1-2023S2": {
+    "provinces": 34,
+    "absent": [
+     "92",
+     "95",
+     "96",
+     "97"
+    ]
+   },
+   "2024S1-2026S1": {
+    "provinces": 38,
+    "absent": []
+   }
+  },
+  "first_year": {
+   "92": {
+    "year": 2024,
+    "reason": "PAPUA BARAT DAYA became a province in 2022; the table gives it its own values from 2024, and 91 covers it before"
+   },
+   "95": {
+    "year": 2024,
+    "reason": "PAPUA SELATAN became a province in 2022; the table gives it its own values from 2024, and 94 covers it before"
+   },
+   "96": {
+    "year": 2024,
+    "reason": "PAPUA TENGAH became a province in 2022; the table gives it its own values from 2024, and 94 covers it before"
+   },
+   "97": {
+    "year": 2024,
+    "reason": "PAPUA PEGUNUNGAN became a province in 2022; the table gives it its own values from 2024, and 94 covers it before"
+   }
+  },
+  "hidden_cells": {
+   "reason": "Note line 2: '2. Data yang kosong menandakan bahwa nilai RSE ≥ 50%, sehingga data tidak ditampilkan' (an empty cell has a relative standard error of 50% or more and is not shown). 21 cells are empty for this reason; each has no row.",
+   "cells": {
+    "31 casual_agriculture": [
+     "2018S1",
+     "2021S1",
+     "2023S1",
+     "2025S1",
+     "2025S2",
+     "2026S1"
+    ],
+    "81 casual_agriculture": [
+     "2026S1"
+    ],
+    "91 casual_agriculture": [
+     "2025S1"
+    ],
+    "92 casual_agriculture": [
+     "2025S1",
+     "2026S1"
+    ],
+    "92 casual_non_agriculture": [
+     "2025S1"
+    ],
+    "94 casual_agriculture": [
+     "2025S1",
+     "2026S1"
+    ],
+    "97 employer_permanent_paid_help": [
+     "2025S2",
+     "2026S1"
+    ],
+    "97 casual_agriculture": [
+     "2025S1",
+     "2025S2",
+     "2026S1"
+    ],
+    "97 casual_non_agriculture": [
+     "2025S1",
+     "2025S2",
+     "2026S1"
+    ]
+   }
+  },
+  "indonesia": "The table lists Indonesia (row 9999 'INDONESIA') after the 38 provinces, with a value in every status and round; it is written as code 00."
+ },
+ "borders": [
+  "65 (Kalimantan Utara) has its own values in every round held, so 64 (Kalimantan Timur) excludes it.",
+  "91 (Papua Barat) and 94 (Papua) up to 2023 cover the areas before the 2022 split: the table gives 92, 95, 96 and 97 no value before 2024. From 2024, 91 and 94 cover the provinces after the split.",
+  "Counts add across provinces, so an area of several provinces, such as Papua Barat before the split (91 + 92) or Papua (94 + 95 + 96 + 97), is the sum of its provinces' values from 2024, except where a cell is hidden.",
+  "A change of 91 or 94 from 2023 to 2024 compares different areas; the change checks leave those changes out (checks.change_not_compared)."
+ ],
+ "source_table": {
+  "role": "gives every value in the CSV",
+  "label": "Penduduk Berumur 15 Tahun Keatas yang Bekerja Selama Seminggu Terakhir Menurut Provinsi dan Status Pekerjaan Utama",
+  "subject": [
+   {
+    "val": 520,
+    "label": "Tenaga Kerja"
+   }
+  ],
+  "collection": "Tenaga Kerja",
+  "unit": "Orang",
+  "decimals": 0,
+  "definition": "none: the table's definition field ('def') is empty",
+  "turvar": {
+   "2086": "1. Berusaha Sendiri",
+   "2087": "2. Berusaha Dibantu Buruh Tidak Tetap/Pekerja Keluarga/Tidak dibayar",
+   "2088": "3. Berusaha Dibantu Buruh Tetap dan Dibayar",
+   "2089": "4. Buruh / Karyawan / Pegawai",
+   "2090": "5. Pekerja Bebas di Pertanian",
+   "2091": "6. Pekerja Bebas di Non Pertanian",
+   "2092": "7. Pekerja Keluarga Tak Dibayar",
+   "2093": "Total"
+  },
+  "turtahun": {
+   "254": "Februari ",
+   "255": "Agustus"
+  },
+  "regions": "38 Provinsi",
+  "years": "2017-2026",
+  "last_update": "2026-07-16 09:14:45",
+  "note": "Catatan: 1. Beberapa angka memiliki nilai Kesalahan Baku Relatif (Relative Standard Error/RSE) dalam rentang 25%≤ RSE ≤ 50%. Informasi lebih lanjut dapat dilihat pada Publikasi Statistik Pendapatan Februari dan Agustus 2026. 2. Data yang kosong menandakan bahwa nilai RSE ≥ 50%, sehingga data tidak ditampilkan 3. Lapangan usaha adalah bidang kegiatan dari pekerjaan/usaha/ perusahaan/kantor tempat seseorang bekerja. Lapangan usaha pada publikasi ini didasarkan pada KBLI 2025. Sumber: Survei Angkatan Kerja Nasional (Sakernas) Februari dan Agustus 2025",
+  "note_clauses": [
+   "Catatan:",
+   "1. Beberapa angka memiliki nilai Kesalahan Baku Relatif (Relative Standard Error/RSE) dalam rentang 25%≤ RSE ≤ 50%. Informasi lebih lanjut dapat dilihat pada Publikasi Statistik Pendapatan Februari dan Agustus 2026.",
+   "2. Data yang kosong menandakan bahwa nilai RSE ≥ 50%, sehingga data tidak ditampilkan",
+   "3. Lapangan usaha adalah bidang kegiatan dari pekerjaan/usaha/ perusahaan/kantor tempat seseorang bekerja. Lapangan usaha pada publikasi ini didasarkan pada KBLI 2025.",
+   "Sumber: Survei Angkatan Kerja Nasional (Sakernas) Februari dan Agustus 2025"
+  ],
+  "note_reading": "The note's source line names only the 2025 rounds and its publication line the 2026 publication, though the table holds 2017-2026; its third line defines industry (lapangan usaha, KBLI 2025), a breakdown this table does not have. All four files carry the same note and release date. The note states no revision status.",
+  "request": "https://webapi.bps.go.id/v1/api/list/model/data/domain/0000/var/2335/th/{th}/key/{key} (th = first:last year minus 1900, such as 117:119 for 2017-2019; the key is not stored)",
+  "download_script": "raw/labour/20261104_download-bps-employment-by-status-by-province.py",
+  "files": [
+   "raw/labour/20261104_bps-api-var2335-employment-by-status-by-province-2017-2019.json",
+   "raw/labour/20261104_bps-api-var2335-employment-by-status-by-province-2020-2022.json",
+   "raw/labour/20261104_bps-api-var2335-employment-by-status-by-province-2023-2025.json",
+   "raw/labour/20261104_bps-api-var2335-employment-by-status-by-province-2026-2026.json"
+  ]
+ },
+ "notes": [
+  "No other raw file in the repository holds these counts, so there is no cross-source check (layer 4).",
+  "Indonesia's values are BPS's own national figures, not computed here; the provinces add to them to the person in every status and round of 2017-2025 (checks.identities).",
+  "The Februari 2026 round does not add up: in ten provinces the published statuses exceed TOTAL, and in three statuses the provinces exceed Indonesia, by up to 869,515 persons. The values are kept as published and the gaps declared (checks.identities, declared_gaps); a later BPS release is filed as a new raw file.",
+  "Derived values are not stored. Share of a status in employment (%) = status / TOTAL x 100; change from the same round a year before (%) = (value in t / value in t-1 - 1) x 100.",
+  "checks.flags lists every value or change outside its range in checks.plausible_ranges for a person to review; a flag stays whether it reflects a real event or a source error."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "identities",
+   "plausibility checked (layer 5, flags listed)"
+  ],
+  "identities": [
+   {
+    "check": "the seven statuses add to TOTAL (key: region, round)",
+    "exact": 663,
+    "tolerance": 0,
+    "bounded_by_hidden_cells": 12,
+    "declared_gaps": [
+     {
+      "key": [
+       "21",
+       "2026S1"
+      ],
+      "gap": -373468.0,
+      "published_parts": 7,
+      "parts": 7
+     },
+     {
+      "key": [
+       "51",
+       "2026S1"
+      ],
+      "gap": -598052.0,
+      "published_parts": 7,
+      "parts": 7
+     },
+     {
+      "key": [
+       "65",
+       "2026S1"
+      ],
+      "gap": -228730.0,
+      "published_parts": 7,
+      "parts": 7
+     },
+     {
+      "key": [
+       "81",
+       "2026S1"
+      ],
+      "gap": -202788.0,
+      "published_parts": 6,
+      "parts": 7
+     },
+     {
+      "key": [
+       "82",
+       "2026S1"
+      ],
+      "gap": -57215.0,
+      "published_parts": 7,
+      "parts": 7
+     },
+     {
+      "key": [
+       "91",
+       "2026S1"
+      ],
+      "gap": -156615.0,
+      "published_parts": 7,
+      "parts": 7
+     },
+     {
+      "key": [
+       "92",
+       "2026S1"
+      ],
+      "gap": -153886.0,
+      "published_parts": 6,
+      "parts": 7
+     },
+     {
+      "key": [
+       "94",
+       "2026S1"
+      ],
+      "gap": -79038.0,
+      "published_parts": 6,
+      "parts": 7
+     },
+     {
+      "key": [
+       "95",
+       "2026S1"
+      ],
+      "gap": -41458.0,
+      "published_parts": 7,
+      "parts": 7
+     },
+     {
+      "key": [
+       "96",
+       "2026S1"
+      ],
+      "gap": -89088.0,
+      "published_parts": 7,
+      "parts": 7
+     }
+    ]
+   },
+   {
+    "check": "the provinces add to Indonesia (key: status, round)",
+    "exact": 141,
+    "tolerance": 0,
+    "bounded_by_hidden_cells": 8,
+    "declared_gaps": [
+     {
+      "key": [
+       "casual_agriculture",
+       "2026S1"
+      ],
+      "gap": -869515.0,
+      "published_parts": 33,
+      "parts": 38
+     },
+     {
+      "key": [
+       "casual_non_agriculture",
+       "2026S1"
+      ],
+      "gap": -608750.0,
+      "published_parts": 37,
+      "parts": 38
+     },
+     {
+      "key": [
+       "employer_permanent_paid_help",
+       "2026S1"
+      ],
+      "gap": -494698.0,
+      "published_parts": 37,
+      "parts": 38
+     }
+    ]
+   }
+  ],
+  "cross_source": "Not applicable (layer 4): no other raw file holds these values; see 'notes'.",
+  "plausible_ranges": {
+   "total_change_pct": {
+    "range": [
+     -10,
+     15
+    ],
+    "measure": "Change of TOTAL from the same region's same round a year before, in percent ((TOTAL in t / TOTAL in t-1 - 1) x 100). Employment grows with the working-age population and seldom moves more than a few percent a year, so a fall of more than 10 percent or a rise of more than 15 percent is flagged for review."
+   },
+   "employee_change_pct": {
+    "range": [
+     -20,
+     30
+    ],
+    "measure": "Change of employee from the same region's same round a year before, in percent. Employees are a sample estimate that moves more than all employment in a small province, so only a fall of more than 20 percent or a rise of more than 30 percent is flagged for review."
+   },
+   "employee_share_pct": {
+    "range": [
+     3,
+     80
+    ],
+    "measure": "Employees as a percent of TOTAL in the same region and round (employee / TOTAL x 100). Below 3 or above 80 would lie far outside the provinces' values (checks.plausibility_observed), so it is flagged for review."
+   }
+  },
+  "plausibility_observed": {
+   "total_change_pct": {
+    "read": 603,
+    "lowest": {
+     "province_code": "21",
+     "period": "2023S2",
+     "value": -11.8202
+    },
+    "highest": {
+     "province_code": "94",
+     "period": "2022S1",
+     "value": 41.3239
+    }
+   },
+   "employee_change_pct": {
+    "read": 603,
+    "lowest": {
+     "province_code": "95",
+     "period": "2025S1",
+     "value": -19.5237
+    },
+    "highest": {
+     "province_code": "96",
+     "period": "2026S1",
+     "value": 29.8832
+    }
+   },
+   "employee_share_pct": {
+    "read": 685,
+    "lowest": {
+     "province_code": "97",
+     "period": "2024S2",
+     "value": 3.9759
+    },
+    "highest": {
+     "province_code": "31",
+     "period": "2017S2",
+     "value": 68.2869
+    }
+   }
+  },
+  "change_not_compared": [
+   {
+    "province_code": "91",
+    "work_status": "TOTAL",
+    "period": "2024S1",
+    "reason": "91 in 2023S1 includes 92, which has its own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "91",
+    "work_status": "TOTAL",
+    "period": "2024S2",
+    "reason": "91 in 2023S2 includes 92, which has its own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "91",
+    "work_status": "employee",
+    "period": "2024S1",
+    "reason": "91 in 2023S1 includes 92, which has its own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "91",
+    "work_status": "employee",
+    "period": "2024S2",
+    "reason": "91 in 2023S2 includes 92, which has its own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "94",
+    "work_status": "TOTAL",
+    "period": "2024S1",
+    "reason": "94 in 2023S1 includes 95, 96 and 97, which have their own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "94",
+    "work_status": "TOTAL",
+    "period": "2024S2",
+    "reason": "94 in 2023S2 includes 95, 96 and 97, which have their own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "94",
+    "work_status": "employee",
+    "period": "2024S1",
+    "reason": "94 in 2023S1 includes 95, 96 and 97, which have their own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "94",
+    "work_status": "employee",
+    "period": "2024S2",
+    "reason": "94 in 2023S2 includes 95, 96 and 97, which have their own values from 2024, so the change compares different areas"
+   }
+  ],
+  "flags": [
+   {
+    "check": "total_change_pct",
+    "province_code": "21",
+    "period": "2023S2",
+    "from_period": "2022S2",
+    "persons": {
+     "2022S2": 1155997.0,
+     "2023S2": 1019356.0
+    },
+    "value": -11.8202,
+    "range": [
+     -10,
+     15
+    ]
+   },
+   {
+    "check": "total_change_pct",
+    "province_code": "91",
+    "period": "2022S1",
+    "from_period": "2021S1",
+    "persons": {
+     "2021S1": 459890.0,
+     "2022S1": 572114.0
+    },
+    "value": 24.4024,
+    "range": [
+     -10,
+     15
+    ]
+   },
+   {
+    "check": "total_change_pct",
+    "province_code": "91",
+    "period": "2023S2",
+    "from_period": "2022S2",
+    "persons": {
+     "2022S2": 487705.0,
+     "2023S2": 560883.0
+    },
+    "value": 15.0046,
+    "range": [
+     -10,
+     15
+    ]
+   },
+   {
+    "check": "total_change_pct",
+    "province_code": "94",
+    "period": "2022S1",
+    "from_period": "2021S1",
+    "persons": {
+     "2021S1": 1763180.0,
+     "2022S1": 2491795.0
+    },
+    "value": 41.3239,
+    "range": [
+     -10,
+     15
+    ]
+   },
+   {
+    "check": "total_change_pct",
+    "province_code": "94",
+    "period": "2023S2",
+    "from_period": "2022S2",
+    "persons": {
+     "2022S2": 1934767.0,
+     "2023S2": 2448947.0
+    },
+    "value": 26.5758,
+    "range": [
+     -10,
+     15
+    ]
+   }
+  ]
+ },
+ "file": "20261104_bps-province-employment-by-status.csv",
+ "rows": 5459,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/labour/20261104_bps-api-var2335-employment-by-status-by-province-2017-2019.json": {
+   "sha256": "b4f90fbb0ae74943e0e4c965db8eb8482af1d0e9ff76f0352691c79ac6f3ea66"
+  },
+  "raw/labour/20261104_bps-api-var2335-employment-by-status-by-province-2020-2022.json": {
+   "sha256": "fad244540a83bf833627f85643159293c4578c29ba8b244fd77ece46d9701252"
+  },
+  "raw/labour/20261104_bps-api-var2335-employment-by-status-by-province-2023-2025.json": {
+   "sha256": "75b6a109f126f9ed854f7de8de8db98dc1615c09eae931c8fd6892ecc3a0d1ee"
+  },
+  "raw/labour/20261104_bps-api-var2335-employment-by-status-by-province-2026-2026.json": {
+   "sha256": "4f0efcd388ddc49fd35034ed682bcb87c5e98319c2de8d9185d2c3127299017d"
+  }
+ }
+}

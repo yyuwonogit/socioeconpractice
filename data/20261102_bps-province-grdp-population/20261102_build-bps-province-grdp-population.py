@@ -29,6 +29,7 @@ OUT_CSV = HERE / "20261102_bps-province-grdp-population.csv"
 
 # How each raw file writes numbers, read from opening the files
 READ_CONTEXT = {
+    RAW_PROVINCES: {"encoding": "utf-8"},
     "pop_pages": {"decimal": ",", "thousands": "."},
     "grdp_page": {"unit": "Milyar Rupiah", "decimals": 2, "var": 2268},
     RAW_GRDP_INDUSTRY: {"encoding": "utf-8-sig", "delimiter": ",", "decimal": ".", "thousands": None, "unit_text": "(Milyar Rupiah)"},
@@ -323,7 +324,9 @@ def plausibility_flags(df):
 
 # Steps
 
-# Read the BPS province list that every province name and code is matched against
+# Read the BPS province list that every province name and code is matched against;
+# load_bps_provinces reads UTF-8, so a list declared in another encoding stops the build
+assert READ_CONTEXT[RAW_PROVINCES]["encoding"] == "utf-8", READ_CONTEXT[RAW_PROVINCES]
 provinces, lookup = cleaning.load_bps_provinces(RAW_PROVINCES)
 
 # Read the BPS population pages, 2020-2026
@@ -381,7 +384,7 @@ meta = {
         "value": "Number in the indicator's unit, as published by BPS. Multiply by 'multiplier' for base units.",
     },
     "provinces": provinces,
-    "province_source": {"url": URL_PROVINCES, "file": str(RAW_PROVINCES.relative_to(ROOT)),
+    "province_source": {"url": URL_PROVINCES, "file": RAW_PROVINCES.relative_to(ROOT).as_posix(),
                         "note": "BPS and Kemendagri codes differ for the six Papua provinces; join other datasets on the code system they use."},
     "sectors": SECTORS,
     "indicators": {
