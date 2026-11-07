@@ -142,7 +142,7 @@ Every build script in `data/` turns raw files into one long CSV and one metadata
 | Province codes and names, BPS and Kemendagri | BPS region bridging service, `https://sig.bps.go.id/rest-bridging/getwilayah?level=provinsi&periode_merge=2025_1.2025`, where the default period without `periode_merge` returns the old 34 provinces | `raw/province-codes/` |
 | Province area and official names | Keputusan Menteri Dalam Negeri on Kode dan Data Wilayah Administrasi Pemerintahan (BPS cites Nomor 100.1.1-6117 Tahun 2022) | Not yet filed |
 | BPS tables, one year per page | bps.go.id statistics-table pages saved as received; population pages take `?year=YYYY`, while GRDP pages serve only the latest year | `raw/population/`, `raw/grdp/` |
-| BPS tables for any year by script | BPS WebAPI, `https://webapi.bps.go.id`, with a free key registered at that site; needed for quarterly and sector GRDP before 2025 | Not yet used |
+| BPS tables for any year by script | BPS WebAPI, `https://webapi.bps.go.id`, with a free key registered at that site and kept in the git-ignored `.env` as `BPS_WEBAPI_KEY`; download scripts save each response as received, one per line in a `.jsonl` file, with the key removed from the saved request address | `raw/grdp/`, `raw/welfare/` |
 
 ## .inbox and .outbox
 
