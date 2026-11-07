@@ -1,0 +1,4029 @@
+{
+ "title": "BPS provincial GRDP at current prices by detailed industry, Indonesia, 2024-2025",
+ "columns": {
+  "province_code": "BPS province code (kode_bps) of the 38 provinces; there is no Indonesia row. Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definition in 'indicators'.",
+  "sector": "Industry code: the 17 KBLI categories, their numbered sub-categories and lettered items, and TOTAL. Names, levels and parents in 'sectors'.",
+  "period": "YYYY = annual.",
+  "status": "BPS revision marker of each cell; meanings in 'status'.",
+  "value": "Rp billion at current prices, as published by BPS. Multiply by 'multiplier' for rupiah."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  }
+ },
+ "province_source": {
+  "url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=provinsi&periode_merge=2025_1.2025",
+  "file": "raw/province-codes/20261102_bps-province-codes-2025-s1.json",
+  "note": "BPS and Kemendagri codes differ for the six Papua provinces; join other datasets on the code system they use."
+ },
+ "sectors": {
+  "A": {
+   "name": "Pertanian, Kehutanan, dan Perikanan",
+   "label_raw": "A Pertanian, Kehutanan, dan Perikanan",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "A1": {
+   "name": "Pertanian, Peternakan, Perburuan, dan Jasa Pertanian",
+   "label_raw": "Pertanian, Peternakan, Perburuan, dan Jasa Pertanian",
+   "level": "subcategory",
+   "parent": "A"
+  },
+  "A1a": {
+   "name": "Tanaman Pangan",
+   "label_raw": "Tanaman Pangan",
+   "level": "item",
+   "parent": "A1"
+  },
+  "A1b": {
+   "name": "Tanaman Hortikultura",
+   "label_raw": "Tanaman Hortikultura",
+   "level": "item",
+   "parent": "A1"
+  },
+  "A1c": {
+   "name": "Tanaman Perkebunan",
+   "label_raw": "Tanaman Perkebunan",
+   "level": "item",
+   "parent": "A1"
+  },
+  "A1d": {
+   "name": "Peternakan",
+   "label_raw": "Peternakan",
+   "level": "item",
+   "parent": "A1"
+  },
+  "A1e": {
+   "name": "Jasa Pertanian dan Perburuan",
+   "label_raw": "Jasa Pertanian dan Perburuan",
+   "level": "item",
+   "parent": "A1"
+  },
+  "A2": {
+   "name": "Kehutanan dan Penebangan Kayu",
+   "label_raw": "Kehutanan dan Penebangan Kayu",
+   "level": "subcategory",
+   "parent": "A"
+  },
+  "A3": {
+   "name": "Perikanan",
+   "label_raw": "Perikanan",
+   "level": "subcategory",
+   "parent": "A"
+  },
+  "B": {
+   "name": "Pertambangan dan Penggalian",
+   "label_raw": "B Pertambangan dan Penggalian",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "B1": {
+   "name": "Pertambangan Minyak, Gas, dan Panas Bumi",
+   "label_raw": "Pertambangan Minyak, Gas, dan Panas Bumi",
+   "level": "subcategory",
+   "parent": "B"
+  },
+  "B2": {
+   "name": "Pertambangan Batubara dan Lignit",
+   "label_raw": "Pertambangan Batubara dan Lignit",
+   "level": "subcategory",
+   "parent": "B"
+  },
+  "B3": {
+   "name": "Pertambangan Bijih Logam",
+   "label_raw": "Pertambangan Bijih Logam",
+   "level": "subcategory",
+   "parent": "B"
+  },
+  "B4": {
+   "name": "Pertambangan dan Penggalian Lainnya",
+   "label_raw": "Pertambangan dan Penggalian Lainnya",
+   "level": "subcategory",
+   "parent": "B"
+  },
+  "C": {
+   "name": "Industri Pengolahan",
+   "label_raw": "C Industri Pengolahan",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "C1": {
+   "name": "Industri Batubara dan Pengilangan Migas",
+   "label_raw": "Industri Batubara dan Pengilangan Migas",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "C2": {
+   "name": "Industri Makanan dan Minuman",
+   "label_raw": "Industri Makanan dan Minuman",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "C3": {
+   "name": "Industri Pengolahan Tembakau",
+   "label_raw": "Industri Pengolahan Tembakau",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "C4": {
+   "name": "Industri Tekstil dan Pakaian Jadi",
+   "label_raw": "Industri Tekstil dan Pakaian Jadi",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "C5": {
+   "name": "Industri Kulit, Barang dari Kulit, dan Alas Kaki",
+   "label_raw": "Industri Kulit, Barang dari Kulit, dan Alas Kaki",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "C6": {
+   "name": "Industri Kayu, Barang dari Kayu dan Gabus; dan Barang Anyaman dari Bambu, Rotan, dan Sejenisnya",
+   "label_raw": "Industri Kayu, Barang dari Kayu dan Gabus; dan Barang Anyaman dari Bambu, Rotan, dan Sejenisnya",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "C7": {
+   "name": "Industri Kertas dan Barang dari Kertas; Percetakan dan Reproduksi Media Rekaman",
+   "label_raw": "Industri Kertas dan Barang dari Kertas; Percetakan dan Reproduksi Media Rekaman",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "C8": {
+   "name": "Industri Kimia, Farmasi, dan Obat Tradisional",
+   "label_raw": "Industri Kimia, Farmasi, dan Obat Tradisional",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "C9": {
+   "name": "Industri Karet; Barang dari Karet dan Plastik",
+   "label_raw": "Industri Karet; Barang dari Karet dan Plastik",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "C10": {
+   "name": "Industri Barang Galian bukan Logam",
+   "label_raw": "Industri Barang Galian bukan Logam",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "C11": {
+   "name": "Industri Logam Dasar",
+   "label_raw": "Industri Logam Dasar",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "C12": {
+   "name": "Industri Barang Logam; Komputer, Barang Elektronik, Optik; dan Peralatan Listrik",
+   "label_raw": "Industri Barang Logam; Komputer, Barang Elektronik, Optik; dan Peralatan Listrik",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "C13": {
+   "name": "Industri Mesin dan Perlengkapan",
+   "label_raw": "Industri Mesin dan Perlengkapan",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "C14": {
+   "name": "Industri Alat Angkutan",
+   "label_raw": "Industri Alat Angkutan",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "C15": {
+   "name": "Industri Furnitur",
+   "label_raw": "Industri Furnitur",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "C16": {
+   "name": "Industri Pengolahan Lainnya; Jasa Reparasi dan Pemasangan Mesin dan Peralatan",
+   "label_raw": "Industri Pengolahan Lainnya; Jasa Reparasi dan Pemasangan Mesin dan Peralatan",
+   "level": "subcategory",
+   "parent": "C"
+  },
+  "D": {
+   "name": "Pengadaan Listrik dan Gas",
+   "label_raw": "D Pengadaan Listrik dan Gas",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "D1": {
+   "name": "Ketenagalistrikan",
+   "label_raw": "Ketenagalistrikan",
+   "level": "subcategory",
+   "parent": "D"
+  },
+  "D2": {
+   "name": "Pengadaan Gas dan Produksi Es",
+   "label_raw": "Pengadaan Gas dan Produksi Es",
+   "level": "subcategory",
+   "parent": "D"
+  },
+  "E": {
+   "name": "Pengadaan Air; Pengelolaan Sampah, Limbah, dan Daur Ulang",
+   "label_raw": "E Pengadaan Air; Pengelolaan Sampah, Limbah, dan Daur Ulang",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "F": {
+   "name": "Konstruksi",
+   "label_raw": "F Konstruksi",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "G": {
+   "name": "Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor",
+   "label_raw": "G Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "G1": {
+   "name": "Perdagangan Mobil, Sepeda Motor dan Reparasinya",
+   "label_raw": "Perdagangan Mobil, Sepeda Motor dan Reparasinya",
+   "level": "subcategory",
+   "parent": "G"
+  },
+  "G2": {
+   "name": "Perdagangan Besar dan Eceran, Bukan Mobil dan Sepeda Motor",
+   "label_raw": "Perdagangan Besar dan Eceran, Bukan Mobil dan Sepeda Motor",
+   "level": "subcategory",
+   "parent": "G"
+  },
+  "H": {
+   "name": "Transportasi dan Pergudangan",
+   "label_raw": "H Transportasi dan Pergudangan",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "H1": {
+   "name": "Angkutan Rel",
+   "label_raw": "Angkutan Rel",
+   "level": "subcategory",
+   "parent": "H"
+  },
+  "H2": {
+   "name": "Angkutan Darat",
+   "label_raw": "Angkutan Darat",
+   "level": "subcategory",
+   "parent": "H"
+  },
+  "H3": {
+   "name": "Angkutan Laut",
+   "label_raw": "Angkutan Laut",
+   "level": "subcategory",
+   "parent": "H"
+  },
+  "H4": {
+   "name": "Angkutan Sungai, Danau, dan Penyeberangan",
+   "label_raw": "Angkutan Sungai, Danau, dan Penyeberangan",
+   "level": "subcategory",
+   "parent": "H"
+  },
+  "H5": {
+   "name": "Angkutan Udara",
+   "label_raw": "Angkutan Udara",
+   "level": "subcategory",
+   "parent": "H"
+  },
+  "H6": {
+   "name": "Pergudangan dan Jasa Penunjang Angkutan; Pos dan Kurir",
+   "label_raw": "Pergudangan dan Jasa Penunjang Angkutan; Pos dan Kurir",
+   "level": "subcategory",
+   "parent": "H"
+  },
+  "I": {
+   "name": "Penyediaan Akomodasi dan Makan Minum",
+   "label_raw": "I Penyediaan Akomodasi dan Makan Minum",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "I1": {
+   "name": "Penyediaan Akomodasi",
+   "label_raw": "Penyediaan Akomodasi",
+   "level": "subcategory",
+   "parent": "I"
+  },
+  "I2": {
+   "name": "Penyediaan Makan Minum",
+   "label_raw": "Penyediaan Makan Minum",
+   "level": "subcategory",
+   "parent": "I"
+  },
+  "J": {
+   "name": "Informasi dan Komunikasi",
+   "label_raw": "J Informasi dan Komunikasi",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "K": {
+   "name": "Jasa Keuangan dan Asuransi",
+   "label_raw": "K Jasa Keuangan dan Asuransi",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "K1": {
+   "name": "Jasa Perantara Keuangan",
+   "label_raw": "Jasa Perantara Keuangan",
+   "level": "subcategory",
+   "parent": "K"
+  },
+  "K2": {
+   "name": "Asuransi dan Dana Pensiun",
+   "label_raw": "Asuransi dan Dana Pensiun",
+   "level": "subcategory",
+   "parent": "K"
+  },
+  "K3": {
+   "name": "Jasa Keuangan Lainnya",
+   "label_raw": "Jasa Keuangan Lainnya",
+   "level": "subcategory",
+   "parent": "K"
+  },
+  "K4": {
+   "name": "Jasa Penunjang Keuangan",
+   "label_raw": "Jasa Penunjang Keuangan",
+   "level": "subcategory",
+   "parent": "K"
+  },
+  "L": {
+   "name": "Real Estat",
+   "label_raw": "L Real Estat",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "MN": {
+   "name": "Jasa Perusahaan",
+   "label_raw": "M,N Jasa Perusahaan",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "O": {
+   "name": "Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib",
+   "label_raw": "O Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "P": {
+   "name": "Jasa Pendidikan",
+   "label_raw": "P Jasa Pendidikan",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "Q": {
+   "name": "Jasa Kesehatan dan Kegiatan Sosial",
+   "label_raw": "Q Jasa Kesehatan dan Kegiatan Sosial",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "RSTU": {
+   "name": "Jasa Lainnya",
+   "label_raw": "R,S,T,U Jasa Lainnya",
+   "level": "category",
+   "parent": "TOTAL"
+  },
+  "TOTAL": {
+   "name": "Produk Domestik Regional Bruto",
+   "label_raw": "Produk Domestik Bruto",
+   "level": "total",
+   "parent": null
+  }
+ },
+ "sector_notes": [
+  "The 17 KBLI categories use the codes of data/20261102_bps-province-grdp-population, where MN and RSTU are the categories BPS prints as M,N and R,S,T,U. A numbered sub-category appends its number to its category (B2 = Pertambangan Batubara dan Lignit, coal and lignite mining), and a lettered item appends its letter to its sub-category (A1a = Tanaman Pangan). TOTAL is the province's GRDP, the table's last row.",
+  "'label_raw' is each row's label_raw as BPS publishes it, and 'name' is the same text without the code a category prints ('M,N Jasa Perusahaan' is named 'Jasa Perusahaan'). TOTAL's label_raw reads 'Produk Domestik Bruto', so TOTAL is named 'Produk Domestik Regional Bruto', as var 2268 labels the same row.",
+  "Each level sums to its parent: the 17 categories to TOTAL, the numbered sub-categories to their category, and A1a-A1e to A1. Summing every row under A (A1, A1a-A1e, A2 and A3) would double count A1's items, so add up one level at a time.",
+  "Categories E, F, J, L, MN, O, P, Q, RSTU have no sub-categories."
+ ],
+ "indicators": {
+  "grdp_current": {
+   "name": "Produk Domestik Regional Bruto atas dasar harga berlaku menurut lapangan usaha (GRDP at current prices by industry)",
+   "unit": "Rp billion (miliar rupiah)",
+   "multiplier": 1000000000.0,
+   "base_unit": "Rp",
+   "decimals": 2,
+   "periods": "2024 and 2025, annual",
+   "source": "https://webapi.bps.go.id/v1/api/interoperabilitas/datasource/simdasi/id/25/wilayah/<kode_bps>00000/tahun/<year>/id_tabel/S1RMUWRYb0NWc0Y5L05QQkxzcWw3Zz09",
+   "download_script": "raw/grdp-detailed-industry/20261103_download-bps-grdp-detailed-industry.py",
+   "table": "Produk Domestik Regional Bruto Atas Dasar Harga Berlaku Menurut Lapangan Usaha di Provinsi <province> (miliar rupiah), <year>",
+   "table_en": "Gross Regional Domestic Product at Current Market Prices by Industry in <province> Province (billion rupiahs), <year>",
+   "column": "Produk Domestik Bruto/Produk Domestik Regional Bruto Atas Dasar Harga Berlaku",
+   "notes": [
+    "BPS table note: Perbedaan antara jumlah PDRB 34 Provinsi dan PDB Indonesia antara lain disebabkan oleh diskrepansi statistik.",
+    "BPS source line: BPS, berbagai sensus, survei, dan sumber lain/BPS-Statistics Indonesia, various census, survey, and other sources.",
+    "BPS publishes no Indonesia row in these tables; the sum of provincial GRDP is not national GDP.",
+    "BPS publishes every value with 2 decimals, which the build checks; the CSV writes each value without trailing zeros, so a value BPS prints as 1.234,50 is written 1234.5."
+   ]
+  }
+ },
+ "legend": {
+  "note": "The marker legend (keterangan_data) of the SIMDASI tables, as published; all 76 tables carry the same legend.",
+  "markers": {
+   "...": "Data tidak tersedia",
+   "–": "Tidak ada atau nol",
+   "NA": "Data tidak dapat ditampilkan",
+   "e": "Angka estimasi",
+   "r": "Angka diperbaiki",
+   "~0": "Data dapat diabaikan",
+   "*": "Angka sementara",
+   "**": "Angka sangat sementara",
+   "***": "Angka sangat sangat sementara",
+   "a": "25% < RSE ≤ 50%",
+   "b": "RSE < 50%",
+   "c": "Penjumlahan tidak sama dengan wilayah diatasnya"
+  }
+ },
+ "none_or_zero_cells": {
+  "marker": "–",
+  "meaning": "Tidak ada atau nol (none or zero)",
+  "rule": "BPS prints these cells as an en dash with no value. They have no row in the CSV; an analysis may treat each listed cell as 0 Rp billion, as the identity checks do. Every other cell has a row.",
+  "count": 344,
+  "cells": [
+   {
+    "province_code": "11",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "11",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "12",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "12",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "12",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "12",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "13",
+    "sector": "B1",
+    "period": "2024"
+   },
+   {
+    "province_code": "13",
+    "sector": "B1",
+    "period": "2025"
+   },
+   {
+    "province_code": "13",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "13",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "13",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "13",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "14",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "14",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "14",
+    "sector": "C5",
+    "period": "2024"
+   },
+   {
+    "province_code": "14",
+    "sector": "C5",
+    "period": "2025"
+   },
+   {
+    "province_code": "14",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "14",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "14",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "14",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "14",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "14",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "15",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "15",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "15",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "15",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "16",
+    "sector": "B3",
+    "period": "2024"
+   },
+   {
+    "province_code": "16",
+    "sector": "B3",
+    "period": "2025"
+   },
+   {
+    "province_code": "17",
+    "sector": "B1",
+    "period": "2024"
+   },
+   {
+    "province_code": "17",
+    "sector": "B1",
+    "period": "2025"
+   },
+   {
+    "province_code": "17",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "17",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "17",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "17",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "17",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "17",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "18",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "18",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "18",
+    "sector": "C5",
+    "period": "2024"
+   },
+   {
+    "province_code": "18",
+    "sector": "C5",
+    "period": "2025"
+   },
+   {
+    "province_code": "19",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "19",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "19",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "19",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "19",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "19",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "19",
+    "sector": "C5",
+    "period": "2024"
+   },
+   {
+    "province_code": "19",
+    "sector": "C5",
+    "period": "2025"
+   },
+   {
+    "province_code": "19",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "19",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "19",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "19",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "21",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "21",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "21",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "21",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "21",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "21",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "31",
+    "sector": "A1c",
+    "period": "2024"
+   },
+   {
+    "province_code": "31",
+    "sector": "A1c",
+    "period": "2025"
+   },
+   {
+    "province_code": "31",
+    "sector": "A2",
+    "period": "2024"
+   },
+   {
+    "province_code": "31",
+    "sector": "A2",
+    "period": "2025"
+   },
+   {
+    "province_code": "31",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "31",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "31",
+    "sector": "B3",
+    "period": "2024"
+   },
+   {
+    "province_code": "31",
+    "sector": "B3",
+    "period": "2025"
+   },
+   {
+    "province_code": "31",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "31",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "32",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "32",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "33",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "33",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "33",
+    "sector": "B3",
+    "period": "2024"
+   },
+   {
+    "province_code": "33",
+    "sector": "B3",
+    "period": "2025"
+   },
+   {
+    "province_code": "34",
+    "sector": "B1",
+    "period": "2024"
+   },
+   {
+    "province_code": "34",
+    "sector": "B1",
+    "period": "2025"
+   },
+   {
+    "province_code": "34",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "34",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "34",
+    "sector": "B3",
+    "period": "2024"
+   },
+   {
+    "province_code": "34",
+    "sector": "B3",
+    "period": "2025"
+   },
+   {
+    "province_code": "34",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "34",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "34",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "34",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "34",
+    "sector": "H3",
+    "period": "2024"
+   },
+   {
+    "province_code": "34",
+    "sector": "H3",
+    "period": "2025"
+   },
+   {
+    "province_code": "34",
+    "sector": "H4",
+    "period": "2024"
+   },
+   {
+    "province_code": "34",
+    "sector": "H4",
+    "period": "2025"
+   },
+   {
+    "province_code": "35",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "35",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "51",
+    "sector": "B1",
+    "period": "2024"
+   },
+   {
+    "province_code": "51",
+    "sector": "B1",
+    "period": "2025"
+   },
+   {
+    "province_code": "51",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "51",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "51",
+    "sector": "B3",
+    "period": "2024"
+   },
+   {
+    "province_code": "51",
+    "sector": "B3",
+    "period": "2025"
+   },
+   {
+    "province_code": "51",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "51",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "51",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "51",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "51",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "51",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "52",
+    "sector": "B1",
+    "period": "2024"
+   },
+   {
+    "province_code": "52",
+    "sector": "B1",
+    "period": "2025"
+   },
+   {
+    "province_code": "52",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "52",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "52",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "52",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "52",
+    "sector": "C5",
+    "period": "2024"
+   },
+   {
+    "province_code": "52",
+    "sector": "C5",
+    "period": "2025"
+   },
+   {
+    "province_code": "52",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "52",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "52",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "52",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "53",
+    "sector": "B1",
+    "period": "2024"
+   },
+   {
+    "province_code": "53",
+    "sector": "B1",
+    "period": "2025"
+   },
+   {
+    "province_code": "53",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "53",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "53",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "53",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "53",
+    "sector": "C5",
+    "period": "2024"
+   },
+   {
+    "province_code": "53",
+    "sector": "C5",
+    "period": "2025"
+   },
+   {
+    "province_code": "53",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "53",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "53",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "53",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "53",
+    "sector": "C14",
+    "period": "2024"
+   },
+   {
+    "province_code": "53",
+    "sector": "C14",
+    "period": "2025"
+   },
+   {
+    "province_code": "53",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "53",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "61",
+    "sector": "B1",
+    "period": "2024"
+   },
+   {
+    "province_code": "61",
+    "sector": "B1",
+    "period": "2025"
+   },
+   {
+    "province_code": "61",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "61",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "61",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "61",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "61",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "61",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "62",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "62",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "62",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "62",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "62",
+    "sector": "C5",
+    "period": "2024"
+   },
+   {
+    "province_code": "62",
+    "sector": "C5",
+    "period": "2025"
+   },
+   {
+    "province_code": "62",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "62",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "62",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "62",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "63",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "63",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "63",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "63",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "63",
+    "sector": "C5",
+    "period": "2024"
+   },
+   {
+    "province_code": "63",
+    "sector": "C5",
+    "period": "2025"
+   },
+   {
+    "province_code": "63",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "63",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "63",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "63",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "64",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "64",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "64",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "64",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "65",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "65",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "65",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "65",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "65",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "65",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "71",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "71",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "71",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "71",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "71",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "71",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "71",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "71",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "71",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "71",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "72",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "72",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "72",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "72",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "72",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "72",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "73",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "73",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "73",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "73",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "73",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "73",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "74",
+    "sector": "B1",
+    "period": "2024"
+   },
+   {
+    "province_code": "74",
+    "sector": "B1",
+    "period": "2025"
+   },
+   {
+    "province_code": "74",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "74",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "74",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "74",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "74",
+    "sector": "C5",
+    "period": "2024"
+   },
+   {
+    "province_code": "74",
+    "sector": "C5",
+    "period": "2025"
+   },
+   {
+    "province_code": "74",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "74",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "74",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "74",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "75",
+    "sector": "B1",
+    "period": "2024"
+   },
+   {
+    "province_code": "75",
+    "sector": "B1",
+    "period": "2025"
+   },
+   {
+    "province_code": "75",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "75",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "75",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "75",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "75",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "75",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "75",
+    "sector": "C5",
+    "period": "2024"
+   },
+   {
+    "province_code": "75",
+    "sector": "C5",
+    "period": "2025"
+   },
+   {
+    "province_code": "75",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "75",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "75",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "75",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "76",
+    "sector": "B1",
+    "period": "2024"
+   },
+   {
+    "province_code": "76",
+    "sector": "B1",
+    "period": "2025"
+   },
+   {
+    "province_code": "76",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "76",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "76",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "76",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "76",
+    "sector": "C5",
+    "period": "2024"
+   },
+   {
+    "province_code": "76",
+    "sector": "C5",
+    "period": "2025"
+   },
+   {
+    "province_code": "76",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "76",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "76",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "76",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "76",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "76",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "81",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "81",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "81",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "81",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "81",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "81",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "81",
+    "sector": "C5",
+    "period": "2024"
+   },
+   {
+    "province_code": "81",
+    "sector": "C5",
+    "period": "2025"
+   },
+   {
+    "province_code": "81",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "81",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "82",
+    "sector": "B1",
+    "period": "2024"
+   },
+   {
+    "province_code": "82",
+    "sector": "B1",
+    "period": "2025"
+   },
+   {
+    "province_code": "82",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "82",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "82",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "82",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "82",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "82",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "82",
+    "sector": "C5",
+    "period": "2024"
+   },
+   {
+    "province_code": "82",
+    "sector": "C5",
+    "period": "2025"
+   },
+   {
+    "province_code": "82",
+    "sector": "C9",
+    "period": "2024"
+   },
+   {
+    "province_code": "82",
+    "sector": "C9",
+    "period": "2025"
+   },
+   {
+    "province_code": "82",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "82",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "82",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "82",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "91",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "91",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "91",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "91",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "91",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "91",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "91",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "91",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "91",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "91",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "92",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "92",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "92",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "92",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "92",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "92",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "92",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "92",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "94",
+    "sector": "B1",
+    "period": "2024"
+   },
+   {
+    "province_code": "94",
+    "sector": "B1",
+    "period": "2025"
+   },
+   {
+    "province_code": "94",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "94",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "94",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "94",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "94",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "94",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "94",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "94",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "94",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "94",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "94",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "94",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "95",
+    "sector": "B1",
+    "period": "2024"
+   },
+   {
+    "province_code": "95",
+    "sector": "B1",
+    "period": "2025"
+   },
+   {
+    "province_code": "95",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "95",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "95",
+    "sector": "B3",
+    "period": "2024"
+   },
+   {
+    "province_code": "95",
+    "sector": "B3",
+    "period": "2025"
+   },
+   {
+    "province_code": "95",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "95",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "95",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "95",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "95",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "95",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "95",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "95",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "95",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "95",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "96",
+    "sector": "B1",
+    "period": "2024"
+   },
+   {
+    "province_code": "96",
+    "sector": "B1",
+    "period": "2025"
+   },
+   {
+    "province_code": "96",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "96",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "96",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "96",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "96",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "96",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "96",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "96",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "96",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "96",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "96",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "96",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "97",
+    "sector": "B1",
+    "period": "2024"
+   },
+   {
+    "province_code": "97",
+    "sector": "B1",
+    "period": "2025"
+   },
+   {
+    "province_code": "97",
+    "sector": "B2",
+    "period": "2024"
+   },
+   {
+    "province_code": "97",
+    "sector": "B2",
+    "period": "2025"
+   },
+   {
+    "province_code": "97",
+    "sector": "B3",
+    "period": "2024"
+   },
+   {
+    "province_code": "97",
+    "sector": "B3",
+    "period": "2025"
+   },
+   {
+    "province_code": "97",
+    "sector": "C1",
+    "period": "2024"
+   },
+   {
+    "province_code": "97",
+    "sector": "C1",
+    "period": "2025"
+   },
+   {
+    "province_code": "97",
+    "sector": "C3",
+    "period": "2024"
+   },
+   {
+    "province_code": "97",
+    "sector": "C3",
+    "period": "2025"
+   },
+   {
+    "province_code": "97",
+    "sector": "C5",
+    "period": "2024"
+   },
+   {
+    "province_code": "97",
+    "sector": "C5",
+    "period": "2025"
+   },
+   {
+    "province_code": "97",
+    "sector": "C9",
+    "period": "2024"
+   },
+   {
+    "province_code": "97",
+    "sector": "C9",
+    "period": "2025"
+   },
+   {
+    "province_code": "97",
+    "sector": "C11",
+    "period": "2024"
+   },
+   {
+    "province_code": "97",
+    "sector": "C11",
+    "period": "2025"
+   },
+   {
+    "province_code": "97",
+    "sector": "C13",
+    "period": "2024"
+   },
+   {
+    "province_code": "97",
+    "sector": "C13",
+    "period": "2025"
+   },
+   {
+    "province_code": "97",
+    "sector": "C14",
+    "period": "2024"
+   },
+   {
+    "province_code": "97",
+    "sector": "C14",
+    "period": "2025"
+   },
+   {
+    "province_code": "97",
+    "sector": "H1",
+    "period": "2024"
+   },
+   {
+    "province_code": "97",
+    "sector": "H1",
+    "period": "2025"
+   },
+   {
+    "province_code": "97",
+    "sector": "H3",
+    "period": "2024"
+   },
+   {
+    "province_code": "97",
+    "sector": "H3",
+    "period": "2025"
+   },
+   {
+    "province_code": "97",
+    "sector": "K4",
+    "period": "2024"
+   },
+   {
+    "province_code": "97",
+    "sector": "K4",
+    "period": "2025"
+   }
+  ]
+ },
+ "source_tables": {
+  "11": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:44",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "12": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "13": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:47",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:44",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "14": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:35",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "15": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:47",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "16": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:47",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "17": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "18": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:47",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "19": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "21": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:22",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "31": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:47",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:22",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "32": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:22",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "33": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:22",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "34": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:22",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "35": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:44",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "36": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:47",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "51": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:47",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:22",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "52": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:26",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:47",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "53": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:44",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "61": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:44",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "62": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "63": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "64": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:44",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "65": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:44",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:22",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "71": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:47",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:22",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "72": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:22",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "73": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:47",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "74": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:47",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:44",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:22",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "75": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:47",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "76": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:47",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "81": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:47",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:22",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "82": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:47",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "91": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "92": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "94": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "95": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:22",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "96": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  },
+  "97": {
+   "2024": {
+    "table_updated": "2026-03-10 10:22:25",
+    "change_log": [
+     {
+      "time": "2026-03-10 10:22:25",
+      "change": "angka sangat sementara menjadi angka sementara"
+     },
+     {
+      "time": "2026-03-10 10:18:46",
+      "change": "angka sementara menjadi angka tetap"
+     },
+     {
+      "time": "2026-03-06 09:36:43",
+      "change": "angka sangat sementara menjadi angka sementara"
+     }
+    ]
+   },
+   "2025": {
+    "table_updated": "2026-03-10 11:05:21",
+    "change_log": [
+     {
+      "time": "2026-03-10 11:05:21",
+      "change": "-"
+     },
+     {
+      "time": "2026-03-06 10:01:36",
+      "change": "angka sangat sementara"
+     }
+    ]
+   }
+  }
+ },
+ "cross_check_source": {
+  "url": "https://webapi.bps.go.id/v1/api/list/model/data/domain/0000/var/2268/th/124:125",
+  "file": "raw/grdp/20261103_bps-api-var2268-grdp-quarterly-current-prices-by-industry-by-province-2024-2025.json",
+  "download_script": "raw/grdp/20261103_download-bps-api-grdp-2010-2025.py",
+  "table": "[Seri 2010] PDRB Triwulanan Atas Dasar Harga Berlaku Menurut Lapangan Usaha di Provinsi Seluruh Indonesia",
+  "last_update": "2026-08-05 07:05:09",
+  "note": "Perbedaan antara jumlah PDRB 34 Provinsi dan PDB Indonesia antara lain disebabkan oleh diskrepansi statistik. Triwulan I–IV 2024 dan Tahun 2024: Angka sementara Triwulan I–IV 2025 dan Tahun 2025: Angka sangat sementara Triwulan I–II 2026 : Angka sangat sangat sementara Sumber: BPS, berbagai sensus, survei, dan sumber lain.",
+  "use": "Annual (Tahunan) values of the 17 categories and TOTAL, compared with the SIMDASI values; its quarterly values are not used."
+ },
+ "notes": [
+  "Every value comes from the SIMDASI yearbook table of its province and year, the only source of the 62 rows, so all rows of a province and year come from one table and its sums hold. Var 2268 gives the same 17 categories and TOTAL; they match within 0.01 Rp billion, and every difference is listed under checks.cross_source.",
+  "Status is each cell's marker: * (Angka sementara) for 2024 and ** (Angka sangat sementara) for 2025. The var 2268 note gives the same status for each year.",
+  "Maluku (81) C13 Industri Mesin dan Perlengkapan is printed as 0,00 with no status marker in 2024 and in 2025, unlike every other value cell. It is written as 0 with an empty status: it is a published zero, not an en-dash cell.",
+  "Each table's change_log under source_tables is BPS's revision history of that yearbook table, kept as published; the status column follows each cell's marker, not the change log.",
+  "All 38 provinces, including Papua Barat Daya (92), Papua Selatan (95), Papua Tengah (96) and Papua Pegunungan (97), have their own table for 2024 and 2025, so the Papua split leaves no gap.",
+  "Keys whose value here differs from the sibling datasets under the same indicator code grdp_current: (12, grdp_current, TOTAL, 2024) is 1146919.76 here but 1146919.75 in data/20261102_bps-province-grdp-population and data/20261103_bps-province-grdp-2010-2025; (13, grdp_current, A, 2025) is 77911.41 here but 77911.4 in data/20261102_bps-province-grdp-population. The sibling datasets carry the WebAPI value, which var 2268 gives here as well, while this dataset keeps the SIMDASI value, so an analysis that joins them chooses one source on purpose.",
+  "Coal share of GRDP (%) = B2 / TOTAL x 100, GRDP growth (%) = TOTAL 2025 / TOTAL 2024 x 100 - 100 and sector growth (%) = sector 2025 / sector 2024 x 100 - 100, all at current prices; none is stored because all are derived. A sector whose 2024 value is 0 has no growth rate and is checked under sector_growth_from_zero instead.",
+  "checks.flags lists every value or change outside its range in checks.plausible_ranges for a person to review, and a growth flag gives the two values it compares under rp_billion; a flag stays whether it reflects a real event or a source error."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "identities",
+   "cross-source"
+  ],
+  "identities": [
+   {
+    "check": "17 categories sum to TOTAL, en-dash cells counted as zero",
+    "compared": 76,
+    "largest_gap": 0.03,
+    "tolerance": 0.05
+   },
+   {
+    "check": "numbered sub-categories sum to their category, en-dash cells counted as zero",
+    "compared": 608,
+    "largest_gap": 0.03,
+    "tolerance": 0.05
+   },
+   {
+    "check": "lettered items A1a-A1e sum to A1, en-dash cells counted as zero",
+    "compared": 76,
+    "largest_gap": 0.02,
+    "tolerance": 0.05
+   }
+  ],
+  "cross_source": [
+   {
+    "check": "SIMDASI 17 categories and TOTAL = var 2268 annual (Tahunan)",
+    "compared": 1368,
+    "tolerance": 0.01,
+    "relative": false,
+    "largest_gap": 0.01,
+    "differences": [
+     {
+      "key": [
+       "12",
+       "TOTAL",
+       "2024"
+      ],
+      "first": 1146919.76,
+      "second": 1146919.75,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "13",
+       "A",
+       "2025"
+      ],
+      "first": 77911.41,
+      "second": 77911.4,
+      "gap": 0.01
+     }
+    ],
+    "note": "BPS rounds each table separately, so the two may differ by 0.01 in the last decimal; the CSV keeps the SIMDASI value. Keys are [province_code, sector, period]."
+   },
+   {
+    "check": "status by year: SIMDASI cell markers = var 2268 note",
+    "status": {
+     "2024": "*",
+     "2025": "**"
+    }
+   }
+  ],
+  "none_or_zero_declared": {
+   "check": "en-dash cells the tables print = NONE_OR_ZERO_CELLS declared in the build, the same in every year; completeness expects every other key of the full grid of provinces, sectors and years",
+   "per_year": {
+    "2024": 172,
+    "2025": 172
+   }
+  },
+  "plausible_ranges": {
+   "coal_share_pct": [
+    0,
+    40
+   ],
+   "grdp_growth_pct": [
+    -20,
+    40
+   ],
+   "sector_growth_pct": [
+    -50,
+    100
+   ],
+   "sector_growth_from_zero": [
+    0,
+    0
+   ],
+   "value_nonnegative": [
+    0,
+    null
+   ]
+  },
+  "plausibility_compared": {
+   "coal_share_pct": 30,
+   "grdp_growth_pct": 38,
+   "sector_growth_pct": 2183,
+   "sector_growth_from_zero": 1,
+   "value_nonnegative": 4368
+  },
+  "flags": [
+   {
+    "check": "sector_growth_pct",
+    "province_code": "17",
+    "sector": "C3",
+    "period": "2025",
+    "rp_billion": {
+     "2024": 0.13,
+     "2025": 0.01
+    },
+    "value": -92.3077,
+    "range": [
+     -50,
+     100
+    ]
+   },
+   {
+    "check": "sector_growth_pct",
+    "province_code": "32",
+    "sector": "H5",
+    "period": "2025",
+    "rp_billion": {
+     "2024": 1808.43,
+     "2025": 582.39
+    },
+    "value": -67.7958,
+    "range": [
+     -50,
+     100
+    ]
+   },
+   {
+    "check": "sector_growth_pct",
+    "province_code": "52",
+    "sector": "C11",
+    "period": "2025",
+    "rp_billion": {
+     "2024": 13.47,
+     "2025": 5348.49
+    },
+    "value": 39606.6815,
+    "range": [
+     -50,
+     100
+    ]
+   },
+   {
+    "check": "sector_growth_pct",
+    "province_code": "73",
+    "sector": "B2",
+    "period": "2025",
+    "rp_billion": {
+     "2024": 2.64,
+     "2025": 0.07
+    },
+    "value": -97.3485,
+    "range": [
+     -50,
+     100
+    ]
+   },
+   {
+    "check": "sector_growth_pct",
+    "province_code": "75",
+    "sector": "B3",
+    "period": "2025",
+    "rp_billion": {
+     "2024": 89.55,
+     "2025": 179.9
+    },
+    "value": 100.8934,
+    "range": [
+     -50,
+     100
+    ]
+   },
+   {
+    "check": "sector_growth_pct",
+    "province_code": "76",
+    "sector": "B2",
+    "period": "2025",
+    "rp_billion": {
+     "2024": 57.99,
+     "2025": 0.8
+    },
+    "value": -98.6205,
+    "range": [
+     -50,
+     100
+    ]
+   },
+   {
+    "check": "sector_growth_pct",
+    "province_code": "76",
+    "sector": "B3",
+    "period": "2025",
+    "rp_billion": {
+     "2024": 1.43,
+     "2025": 6.4
+    },
+    "value": 347.5524,
+    "range": [
+     -50,
+     100
+    ]
+   },
+   {
+    "check": "sector_growth_pct",
+    "province_code": "76",
+    "sector": "C8",
+    "period": "2025",
+    "rp_billion": {
+     "2024": 5.92,
+     "2025": 15.75
+    },
+    "value": 166.0473,
+    "range": [
+     -50,
+     100
+    ]
+   }
+  ]
+ },
+ "file": "20261103_bps-province-grdp-detailed-industry.csv",
+ "rows": 4368,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source",
+  "*": "Angka sementara (preliminary)",
+  "**": "Angka sangat sementara (very preliminary)"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-11-2024.json": {
+   "sha256": "073693cbaddb778bc17d41e80cdd87bbb01b13c17ad64b4fc98af78ae49b426a"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-11-2025.json": {
+   "sha256": "087e281f3e5d8531d19bc01b7b6a020ffe2f60409f721139f33d0cb6ec51f8a9"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-12-2024.json": {
+   "sha256": "b3211b9a05899b08c851579d257a2f2d5985766d02349dfb033c5cef6c57123d"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-12-2025.json": {
+   "sha256": "bd39b8ac2f2a5b63611749dcd3da2874fb43e0579ce8231012d2ead642cf39d2"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-13-2024.json": {
+   "sha256": "97c9ac5cc1dcdcab03a7652bb02ad2181310a2705b9d2ddfcd143154a3ad7557"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-13-2025.json": {
+   "sha256": "268cb5de1289667e224627501e0d0049467d96cd56b5cdc1238f3dd20d9f4932"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-14-2024.json": {
+   "sha256": "d56fe43881a43bc6d3e8b249b4ae271f35b9edea6e9a4f9e921412f33292c1cf"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-14-2025.json": {
+   "sha256": "de0e191cc80d6b481b469e98a01818ab451a8129f88ccbf65f35f8dea7da987a"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-15-2024.json": {
+   "sha256": "b35781561bd8a75da2a99ab93d85a4d1a6a1bbaf3310009b6ed953da73734176"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-15-2025.json": {
+   "sha256": "025859ef21116ece7db4af4f8459ade17c6490a47c851c0c8cfb046405d615b7"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-16-2024.json": {
+   "sha256": "e159e195a01ae4781308109054cafcb047cd43a179aa0fbe6b32cef340e0299b"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-16-2025.json": {
+   "sha256": "16a8d268c1ecf0aa6f37900b614f6767714c43a93fc9873b8efe8d05855dfdd6"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-17-2024.json": {
+   "sha256": "36b729e55cc1dce3a9cd81ea2627317d3590697c06be975a33139276700c28a8"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-17-2025.json": {
+   "sha256": "d9c866360fb2ad4fb418ba27e7c637136917488053974e9b7c2ac68d21e263d5"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-18-2024.json": {
+   "sha256": "4f60ef8572f051622ffe01f280fc82f95f3da30aa662c1de7222a7dd56607cfa"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-18-2025.json": {
+   "sha256": "cbfb7952cbbdb8435481edefb8df72fe672d8363dcd9bf3cecba74dba7089d0b"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-19-2024.json": {
+   "sha256": "f25ee99fc5f2207236d958be221ae012d1e4b321aed98339b9a0a8e20893944f"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-19-2025.json": {
+   "sha256": "7fc8e4e4c5a032a1f473e61cbcd429a8787c03d3b4558ce7286fe628eb87bfbb"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-21-2024.json": {
+   "sha256": "bbdf70702371743e53dfe060f7a4f35f21676a4ee5a487bb39e49fc413cb27cc"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-21-2025.json": {
+   "sha256": "e12f04c42288ef733626720bb46314809a32d5497f1624b6eb2443a092ff35b2"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-31-2024.json": {
+   "sha256": "7241cf6c9d26e1d2e11568abf29c802910c488e2205807249fc7b58932561e1b"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-31-2025.json": {
+   "sha256": "962b150fb27974b8466f3fce48050ef36b16786d9a558bd9c968778fc88ff020"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-32-2024.json": {
+   "sha256": "2d668e352e7721a85d6296d10b988103526a8c022e11799c02b3fb03de2a6668"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-32-2025.json": {
+   "sha256": "ddac148adcceb1871d08d3f8710e58ab7d8837425e807a9c8332a8b91455d730"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-33-2024.json": {
+   "sha256": "b6fc3eea38551725d58909c7e1cbe47029a050d0a3c5607eeeb27815bdb4ac9b"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-33-2025.json": {
+   "sha256": "5a250be6fdb2a12d6ffa8c4ac56c1674c17573e3450240a498bae0bb398dc9df"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-34-2024.json": {
+   "sha256": "1da4fb828b893c15b7a3875a1fc56c9a227afbee4b0c6666382a4cded96cfd08"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-34-2025.json": {
+   "sha256": "8062f3236ada648029de677e77002fe7deee567e5a46b31fa94fddc45bd9cc51"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-35-2024.json": {
+   "sha256": "af010373a2ecb6e31af43fa4d5a380ae4dc8213961d2e4cb10b7911a84fa47f3"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-35-2025.json": {
+   "sha256": "90001e5c4e4661d9922a1893700241a4668519bab7d4af5bf110b5b517a55809"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-36-2024.json": {
+   "sha256": "df81709ab4859db1f14b2c7005d39d5926f175acca133532a51bdc573876bd7b"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-36-2025.json": {
+   "sha256": "9a04293003c87a16d48547e4982b946de856cf58667dd460a82bb039450e02e9"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-51-2024.json": {
+   "sha256": "d3399454e83bcdb6630844bf06555be80f664dc3db8fc2c97234001aa55e5df4"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-51-2025.json": {
+   "sha256": "a30f0e0c59c11eb2fc19a33b80760245a4e7cf93d41f61028888b73be8b68b27"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-52-2024.json": {
+   "sha256": "38b32c736467968991e541ba926c6e948c1ccf872b7ea7af2e1c17ae34b14b46"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-52-2025.json": {
+   "sha256": "e679795b5532ac9e7bff1547f60755307213718818e1ec24b37f3041a55510ee"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-53-2024.json": {
+   "sha256": "759670a2f64f0b347ecb064924bde1b26307cf86c186306d8812b519906d98b1"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-53-2025.json": {
+   "sha256": "e7fa43d384e290f6482fe9871af5e8b709eefc2f2de25d936d2b5305b54f91d7"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-61-2024.json": {
+   "sha256": "7bd16150c5bbfe049263e1cc728f819145f4e9cb9b8dc2c53e99f01ea068b7cf"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-61-2025.json": {
+   "sha256": "56ec9cc97ce03467e8cae4568c4581798727069db48fd705c79066f312aa5575"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-62-2024.json": {
+   "sha256": "353d3ca53c296c65dc3ad2cffe85b09f97194a0741fce507a3ddf823e089e542"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-62-2025.json": {
+   "sha256": "6272a0050ae136ed5ae2e9eda37f47669ac68788facb4d3790a906010fec6012"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-63-2024.json": {
+   "sha256": "b841933ca48d66fe1381e8c3be762cde69705807a0836ec8e50758fcb8afd32b"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-63-2025.json": {
+   "sha256": "145eb7f292eefe10ca7fbb60e9c97212bfb3f62e8baef8c9d61d88c131e7ee23"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-64-2024.json": {
+   "sha256": "8852f929fed0f461548d3f7cf33aa621a6e6951cfb324d3af92605eef74f5706"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-64-2025.json": {
+   "sha256": "caea154fa50972cd6101475ab1e7bcb6d72d58b90136e3ba456344ad5122a022"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-65-2024.json": {
+   "sha256": "35275919c28d15e224ea8614e0f892f7801fe365ba4e80f2e2de9446c8d253fc"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-65-2025.json": {
+   "sha256": "a2ad116022f6522a612d55b2510d515cd469753275e2d5a3a700fd3b416ea9f9"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-71-2024.json": {
+   "sha256": "9a35992bab4f4d65f7d2bc4a009c24db5fbc2e252b5e68e5a32dcc690795889e"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-71-2025.json": {
+   "sha256": "3f42ed4fda9654fb8c1e62ded8cf10705e20034fdda494eb343ece26f2bbeaea"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-72-2024.json": {
+   "sha256": "1c627cbf810dd3032e6537813b1d0c360d492c9a3bc1a3a7360bd003a337c6ec"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-72-2025.json": {
+   "sha256": "630a2962bfe1cac14b53e2e3218bb89d9f29d6e33771a8f1bbff2f90da7b26cd"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-73-2024.json": {
+   "sha256": "77c0b7a509eb194fcf99bfaf3e1780ae244857be9a995884b41e162e6e5908bd"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-73-2025.json": {
+   "sha256": "77f4c14cd4633208c8c74a676530205c1154d42123c7f15e7dfb253f57737a79"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-74-2024.json": {
+   "sha256": "a864d9463897705a64cdeb120267b5ca2a78629fe0a3990f4252a5be82c9e0e8"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-74-2025.json": {
+   "sha256": "ae4260fe46b2d06549a930e7490bf34a3b4846129ce0643b39ac94bc039e22dc"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-75-2024.json": {
+   "sha256": "01029dded7205a454129d4f2f70089814c7e8fb326bd5dfc47615b658d58630b"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-75-2025.json": {
+   "sha256": "0609bd2114a680a14804d9b353b7f4598fd3483638c84373a4398f7190ec9ef3"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-76-2024.json": {
+   "sha256": "f08fc9419759ba912ef7ce172f9729084a1d813881f651c2dc8eefce80505346"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-76-2025.json": {
+   "sha256": "a2cdc0214427718d2095e30b68b24f036ae11e6509218983257a28d795a72ef9"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-81-2024.json": {
+   "sha256": "b15e84d8412711f95f2196d0586ec4ea534ba903d4dc5803ee89baf36e81c949"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-81-2025.json": {
+   "sha256": "7de3d519f394ed1018040a5d589af494d5570ae61547dc013ae5d3fc1f058b80"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-82-2024.json": {
+   "sha256": "3b20443c17492aeefa63a23c6f9a5fec442529d55fd1eed4149dc5efbc8ebb33"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-82-2025.json": {
+   "sha256": "2c06ad5bb683db7fa3661af7c50a4db11e5e7628511be6398844956c17685068"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-91-2024.json": {
+   "sha256": "3695686e50319bc422291de8555615260c846210a03a2fedfd4790f62df60fe5"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-91-2025.json": {
+   "sha256": "eba8ebad5ad2c3c075ee2c1769d8b78880f868a212314836b24f326d0c09a382"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-92-2024.json": {
+   "sha256": "014b18d347c3d0c48ef8a7acaea77bd1196e1057bfca91351c028482dcd776d3"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-92-2025.json": {
+   "sha256": "a48cbfc21bdc1f348f4e6cc6a1f139f0a0e8d0c4f2a406be9f9be16fa0c7885f"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-94-2024.json": {
+   "sha256": "2176cc810abb55cc33abd6da35abe79a5f4ef87cb43732e2f24fe0b6eaa0e5c5"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-94-2025.json": {
+   "sha256": "6b31833055966e3ca98e4554d15f587bb901ca2baca1a0732306e844b876cdc2"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-95-2024.json": {
+   "sha256": "74f6af0b2cef536cca05b761bdfc19963d4adf83fffed0867a41caa2d386a1e9"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-95-2025.json": {
+   "sha256": "f92ed2f657e5af77a383a82b3d9831781a9696cfdbfd6d828b5ffb83c0d08a0c"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-96-2024.json": {
+   "sha256": "0f53f307f00d7c16aaa4a3af6c5dce0206fd37cb6c2712b72db71e55deb50ea1"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-96-2025.json": {
+   "sha256": "82218b6144090b5a7bcf1ff21abe9e35f2d24a57eeb62117ab41700c3eada753"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-97-2024.json": {
+   "sha256": "79a0e5774f0f7a4fbe84a192383852e7a6c3b79bfe52ec093de9b7a23037ba34"
+  },
+  "raw/grdp-detailed-industry/20261103_bps-grdp-current-prices-detailed-industry-97-2025.json": {
+   "sha256": "950b995da98216a9f7a683aba9ecdd8bb25a49be6b2375eefc437e4ab71b8889"
+  },
+  "raw/grdp/20261103_bps-api-var2268-grdp-quarterly-current-prices-by-industry-by-province-2024-2025.json": {
+   "sha256": "bf6af214a422fd373a6667f17cfebe9f46ef1825273ceb069e63441aab20e72e"
+  }
+ }
+}

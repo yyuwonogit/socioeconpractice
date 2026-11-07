@@ -1,0 +1,9 @@
+area_code,series,from_year,to_year,from_value,to_value,step,median_abs_step_before
+91,grdp_pc_real (% change),2022,2023,53517.07,54726.5461,2.26,1.961
+91,extractive_share (points),2022,2023,46.8003,48.9099,2.11,1.694
+91,real_spending (% change),2023,2024,8404.0,8767.555,4.326,2.955
+91,nominal_spending (% change),2023,2024,1598254.0,1643093.7872,2.806,6.818
+94,grdp_pc_real (% change),2022,2023,39112.71,40584.1579,3.762,7.393
+94,extractive_share (points),2022,2023,41.168,42.1093,0.941,1.602
+94,real_spending (% change),2023,2024,7562.0,8116.1922,7.329,2.672
+94,nominal_spending (% change),2023,2024,1509992.0,1579511.5013,4.604,7.05

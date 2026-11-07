@@ -1,0 +1,6114 @@
+{
+ "title": "BPS average monthly spending per capita on food and non-food by province, Indonesia, 2011-2025",
+ "columns": {
+  "province_code": "BPS province code (kode_bps); 00 = Indonesia. Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definition in 'indicators'.",
+  "item": "Spending group; BPS names in 'items'. total is food and non_food together.",
+  "period": "YYYY = survey year of the Susenas round (see 'periods').",
+  "status": "Revision marker; neither source gives one, so every row is empty (final).",
+  "value": "Rupiah per person per month at current prices, whole rupiah as BPS static table 945 publishes it."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  },
+  "00": {
+   "name": "INDONESIA",
+   "kode_dagri": null
+  }
+ },
+ "province_source": {
+  "url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=provinsi&periode_merge=2025_1.2025",
+  "file": "raw/province-codes/20261102_bps-province-codes-2025-s1.json",
+  "note": "BPS and Kemendagri codes differ for the six Papua provinces; join other datasets on the code system they use."
+ },
+ "indicators": {
+  "spending_per_capita_month": {
+   "name": "Rata-rata pengeluaran per kapita sebulan (average monthly spending per capita), urban and rural areas together (daerah perkotaan dan perdesaan)",
+   "unit": "rupiah per person per month, current prices",
+   "multiplier": 1,
+   "base_unit": "Rp per person per month",
+   "decimals": 0,
+   "periods": "2011-2025, annual",
+   "source": "BPS WebAPI static table 945, https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/945/key/<key>/ (key not stored), from Susenas (Survei Sosial Ekonomi Nasional)",
+   "download_script": "raw/household-spending/20261103_download-bps-per-capita-expenditure-by-province.py",
+   "table": "Rata‑Rata Pengeluaran per Kapita Sebulan Untuk Makanan dan Bukan Makanan di Daerah Perkotaan dan Perdesaan Menurut Provinsi (rupiah), 2011-2025",
+   "notes": [
+    "Static table 945 publishes whole rupiah (Excel number format #\\ ###\\ ##0); the CSV keeps them.",
+    "Per capita values do not add across provinces; 00 is BPS's national figure from the same survey."
+   ]
+  }
+ },
+ "items": {
+  "food": "Makanan (food)",
+  "non_food": "Bukan makanan (non-food)",
+  "total": "Jumlah (food and non-food together)"
+ },
+ "periods": {
+  "held": [
+   "2011",
+   "2012",
+   "2013",
+   "2014",
+   "2015",
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "note": "One value per year. The static table's notes name Susenas Triwulan I (the first-quarter round) for 2012-2014, and the yearly tables' source lines name Susenas Maret (March) for 2017-2025; no raw file names the round for 2011, 2015 or 2016."
+ },
+ "coverage": {
+  "first_year": {
+   "65": {
+    "year": "2015",
+    "reason": "Kalimantan Utara became a province in 2012; the static table prints '-' for 2011-2014 under its footnote 1), 'Data masih bergabung dengan Provinsi Kalimantan Timur' (data still combined with Kalimantan Timur)"
+   },
+   "92": {
+    "year": "2024",
+    "reason": "Papua Barat Daya became a province in 2022; the static table prints '-' for 2011-2023, and the 2023 yearly table's note says its 2023 figures still follow those of Papua Barat"
+   },
+   "95": {
+    "year": "2024",
+    "reason": "Papua Selatan became a province in 2022; the static table prints '-' for 2011-2023, and the 2023 yearly table's note says its 2023 figures still follow those of Papua"
+   },
+   "96": {
+    "year": "2024",
+    "reason": "Papua Tengah became a province in 2022; the static table prints '-' for 2011-2023, and the 2023 yearly table's note says its 2023 figures still follow those of Papua"
+   },
+   "97": {
+    "year": "2024",
+    "reason": "Papua Pegunungan became a province in 2022; the static table prints '-' for 2011-2023, and the 2023 yearly table's note says its 2023 figures still follow those of Papua"
+   }
+  },
+  "not_published": {
+   "marker": "-",
+   "meaning": "no value for the region in that year; the cell is left out, never written as 0",
+   "cells": 168,
+   "years_by_region": {
+    "65": "2011-2014",
+    "92": "2011-2023",
+    "95": "2011-2023",
+    "96": "2011-2023",
+    "97": "2011-2023"
+   }
+  },
+  "gaps": "none: every other region, Indonesia included, has food, non_food and total in every year 2011-2025"
+ },
+ "borders": [
+  "64 (Kalimantan Timur) in 2011-2014 includes Kalimantan Utara, as the static table's footnote 1) states ('Data masih bergabung dengan Provinsi Kalimantan Timur'); 65 (Kalimantan Utara) has its own values from 2015.",
+  "91 (Papua Barat) and 94 (Papua) in 2011-2023 cover the pre-split provinces: the 2023 yearly table's note says Papua Barat Daya still follows the Papua Barat figures, and Papua Selatan, Papua Tengah and Papua Pegunungan the Papua figures. From 2024, 91 and 94 cover the post-split areas, and 92, 95, 96 and 97 start.",
+  "A per capita value of a pre-split area cannot be rebuilt from the post-split provinces without their populations, and a change from the year before across a border change compares different areas: 64 in 2015, 91 and 94 in 2024 (checks.change_not_compared)."
+ ],
+ "source_priority": [
+  {
+   "source": "static table 945",
+   "years": "2011-2025",
+   "use": "every value in the CSV"
+  },
+  {
+   "source": "statistics table (tablestatistic), one file per year",
+   "years": "2017-2025",
+   "use": "lower-priority copy, compared in checks.cross_source and never written"
+  }
+ ],
+ "source_tables": {
+  "static_table_945": {
+   "file": "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2011-2025-static-table.json",
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/statictable/lang/ind/id/945/key/<key>/",
+   "download_script": "raw/household-spending/20261103_download-bps-per-capita-expenditure-by-province.py",
+   "title": "Rata‑Rata Pengeluaran per Kapita Sebulan Untuk Makanan dan Bukan Makanan di Daerah Perkotaan dan Perdesaan Menurut Provinsi (rupiah), 2011-2025",
+   "subject": "Konsumsi dan Pendapatan",
+   "created": "2014-09-08 00:00:00",
+   "updated": "2025-12-16 08:37:33.175261",
+   "source_line": "Sumber : Publikasi Statistik Indonesia",
+   "footnotes": {
+    "1)": {
+     "text": "Data masih bergabung dengan Provinsi Kalimantan Timur",
+     "rows": [
+      "65"
+     ]
+    }
+   },
+   "notes_as_published": [
+    "Catatan:",
+    "- Data 2012, diolah dari Hasil Survei Sosial Ekonomi Nasional (Susenas) Triwulan I-2012, BPS",
+    "- Data 2013, diolah dari Hasil Survei Sosial Ekonomi Nasional (Susenas) Triwulan I-2013, BPS",
+    "- Data 2014, diolah dari Hasil Survei Sosial Ekonomi Nasional (Susenas) Triwulan I-2014, BPS",
+    "1) Data masih bergabung dengan Provinsi Kalimantan Timur",
+    "Sumber : Publikasi Statistik Indonesia"
+   ]
+  },
+  "statistics_table": {
+   "url": "https://webapi.bps.go.id/v1/api/view/domain/0000/model/tablestatistic/id/V1ZKMWVrSTNOek5ZZUZOcVZEZGFValJvV0hWalFUMDkjMyMwMDAw/lang/ind/key/<key>/?year=<year>",
+   "download_script": "raw/household-spending/20261103_download-bps-per-capita-expenditure-by-province.py",
+   "legend": {
+    "note": "The marker legend (keterangan_data) of the yearly tables, as published; all nine carry the same legend.",
+    "markers": {
+     "...": "Data tidak tersedia",
+     "–": "Tidak ada atau nol",
+     "NA": "Data tidak dapat ditampilkan",
+     "e": "Angka estimasi",
+     "r": "Angka diperbaiki",
+     "~0": "Data dapat diabaikan",
+     "*": "Angka sementara",
+     "**": "Angka sangat sementara",
+     "***": "Angka sangat sangat sementara",
+     "a": "25% < RSE ≤ 50%",
+     "b": "RSE < 50%",
+     "c": "Penjumlahan tidak sama dengan wilayah diatasnya"
+    }
+   },
+   "years": {
+    "2017": {
+     "file": "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2017.json",
+     "title": "Rata-rata Pengeluaran per Kapita Sebulan Makanan dan Bukan Makanan di Daerah Perkotaan dan Perdesaan Menurut Provinsi (rupiah), 2017",
+     "source": "BPS, Survei Sosial Ekonomi Nasional (Susenas) Maret 2017/BPS-Statistics Indonesia, National Socioeconomic Survey March 2017",
+     "notes": "",
+     "version": 1,
+     "created": "2021-08-23 19:17:00",
+     "change_log": []
+    },
+    "2018": {
+     "file": "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2018.json",
+     "title": "Rata-rata Pengeluaran per Kapita Sebulan Makanan dan Bukan Makanan di Daerah Perkotaan dan Perdesaan Menurut Provinsi (rupiah), 2018",
+     "source": "BPS, Survei Sosial Ekonomi Nasional (Susenas) Maret 2018/BPS-Statistics Indonesia, National Socioeconomic Survey March 2018",
+     "notes": "",
+     "version": 1,
+     "created": "2021-08-23 19:36:50",
+     "change_log": []
+    },
+    "2019": {
+     "file": "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2019.json",
+     "title": "Rata-rata Pengeluaran per Kapita Sebulan Makanan dan Bukan Makanan di Daerah Perkotaan dan Perdesaan  Menurut Provinsi, 2019",
+     "source": "BPS, Survei Sosial Ekonomi Nasional (Susenas) Maret 2019/ BPS-Statistics Indonesia, National Socioeconomic Survey March 2019",
+     "notes": "",
+     "version": 1,
+     "created": "2020-02-13 12:11:31",
+     "change_log": []
+    },
+    "2020": {
+     "file": "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2020.json",
+     "title": "Rata-rata Pengeluaran per Kapita Sebulan Makanan dan Bukan Makanan di Daerah Perkotaan dan Perdesaan Menurut Provinsi (rupiah), 2020",
+     "source": "BPS, Survei Sosial Ekonomi Nasional (Susenas) Maret / BPS-Statistics Indonesia, National Socioeconomic Survey March",
+     "notes": "",
+     "version": 1,
+     "created": "2021-01-12 17:13:03",
+     "change_log": []
+    },
+    "2021": {
+     "file": "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2021.json",
+     "title": "Rata-rata Pengeluaran per Kapita Sebulan Makanan dan Bukan Makanan di Daerah Perkotaan dan Perdesaan Menurut Provinsi (rupiah), 2021",
+     "source": "BPS, Survei Sosial Ekonomi Nasional (Susenas) Maret 2021/ BPS-Statistics Indonesia, National Socioeconomic Survey March 2021",
+     "notes": "",
+     "version": 1,
+     "created": "2022-01-24 21:57:54",
+     "change_log": []
+    },
+    "2022": {
+     "file": "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2022.json",
+     "title": "Rata-rata Pengeluaran per Kapita Sebulan Makanan dan Bukan Makanan di Daerah Perkotaan dan Perdesaan Menurut Provinsi (rupiah), 2022",
+     "source": "BPS, Survei Sosial Ekonomi Nasional (Susenas) Maret / BPS-Statistics Indonesia, National Socioeconomic Survey March",
+     "notes": "",
+     "version": 1,
+     "created": "2023-02-22 23:24:04",
+     "change_log": []
+    },
+    "2023": {
+     "file": "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2023.json",
+     "title": "Rata-rata Pengeluaran per Kapita Sebulan Makanan dan Bukan Makanan di Daerah Perkotaan dan Perdesaan Menurut Provinsi (rupiah), 2023",
+     "source": "Badan Pusat Statistik, Survei Sosial Ekonomi Nasional (Susenas) Maret 2023/ BPS-Statistics Indonesia, National Socioeconomic Survey March 2023.",
+     "notes": "*Provinsi Papua Barat Daya masih mengikuti angka Provinsi Papua Barat/ Papua Barat Daya Province still follows Papua Barat Province figures. *Provinsi Papua Selatan, Papua Tengah, dan Papua Pegunungan masih mengikuti angka Provinsi Papua/ The provinces of Papua Selatan, Papua Tengah, and Papua Pegunungan still follow Papua Province figures.",
+     "version": 1,
+     "created": "2024-02-02 14:28:50",
+     "change_log": []
+    },
+    "2024": {
+     "file": "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2024.json",
+     "title": "Rata-rata Pengeluaran per Kapita Sebulan Makanan dan Bukan Makanan di Daerah Perkotaan dan Perdesaan Menurut Provinsi (rupiah), 2024",
+     "source": "Badan Pusat Statistik, Survei Sosial Ekonomi Nasional (Susenas) Maret 2024/BPS-Statistics Indonesia, National Socioeconomic Survey March 2024",
+     "notes": "",
+     "version": 1,
+     "created": "2025-01-31 14:22:35",
+     "change_log": []
+    },
+    "2025": {
+     "file": "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2025.json",
+     "title": "Rata-rata Pengeluaran per Kapita Sebulan Makanan dan Bukan Makanan di Daerah Perkotaan dan Perdesaan Menurut Provinsi (rupiah), 2025",
+     "source": "Badan Pusat Statistik, Survei Sosial Ekonomi Nasional (Susenas) Maret 2025/BPS-Statistics Indonesia, National Socioeconomic Survey March 2025",
+     "notes": "",
+     "version": 2,
+     "created": "2026-01-02 09:42:05",
+     "change_log": [
+      {
+       "time": "2026-02-19 09:15:04",
+       "change": "Perubahan/perbaikan angka provinsi saja (all provinsi), angka kabupaten kotanya sudah sesuai."
+      }
+     ]
+    }
+   }
+  }
+ },
+ "notes": [
+  "Every value comes from static table 945, the one raw file that holds all 15 years, so the series has one source and one precision throughout. The yearly statistics tables repeat 2017-2025, with 2 decimals in 2017, 2018 and 2020-2022 and whole rupiah in 2019 and 2023-2025; every shared value agrees within 1 rupiah, and every difference is listed under checks.cross_source.",
+  "The static table rounds food, non_food and total to whole rupiah one by one, so food + non_food differs from total by up to 1 rupiah. In 2018 its totals are its rounded food plus its rounded non_food, which is why 9 totals of 2018 differ from the yearly table by more than 0.5 rupiah.",
+  "Nusa Tenggara Barat (52) in 2012: the static table prints food 291 176, non_food 234 901 and total 484 661, so food + non_food exceeds total by 41 416 rupiah. The three values are kept as published; one of them is a BPS error, and no raw file here can tell which (checks.identities, declared_breaks; checks.flags).",
+  "The 2025 yearly table is version 2, whose change log records a correction of all province figures; static table 945 (updated 2025-12-16) matches it in all 117 values of 2025.",
+  "Derived values are not stored: food share (%) = food / total x 100, and the change from the year before (%) = value in year t / value in year t-1 x 100 - 100, at current prices; the change is computed here only for the plausibility flags.",
+  "checks.flags lists every value, change and identity gap outside its range in checks.plausible_ranges for a person to review; a change flag gives the two values it compares under rupiah. A flag stays whether it reflects a real event or a source error."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "identities",
+   "cross-source"
+  ],
+  "identities": [
+   {
+    "check": "food + non_food = total, rupiah, every region and year except declared_breaks",
+    "compared": 528,
+    "largest_gap": 1.0,
+    "tolerance": 1,
+    "declared_breaks": [
+     {
+      "province_code": "52",
+      "period": "2012",
+      "food": 291176.0,
+      "non_food": 234901.0,
+      "total": 484661.0,
+      "food_plus_non_food_minus_total": 41416.0,
+      "declared": 41416.0,
+      "reason": "BPS's own inconsistency inside static table 945, read correctly: the row's food, non_food and total cells sit in their columns and parse cleanly, and every other region and year adds up within 1 rupiah. No other raw file holds 2012, so the three values are kept as published"
+     }
+    ]
+   }
+  ],
+  "cross_source": [
+   {
+    "check": "static table 945 = yearly statistics tables, 2017-2025, rupiah",
+    "compared": 969,
+    "tolerance": 1,
+    "relative": false,
+    "largest_gap": 0.83,
+    "differences": [
+     {
+      "key": [
+       "00",
+       "food",
+       "2017"
+      ],
+      "first": 527956.0,
+      "second": 527955.82,
+      "gap": 0.18
+     },
+     {
+      "key": [
+       "00",
+       "food",
+       "2018"
+      ],
+      "first": 556899.0,
+      "second": 556899.25,
+      "gap": 0.25
+     },
+     {
+      "key": [
+       "00",
+       "food",
+       "2020"
+      ],
+      "first": 603236.0,
+      "second": 603235.72,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "00",
+       "food",
+       "2021"
+      ],
+      "first": 622845.0,
+      "second": 622845.47,
+      "gap": 0.47
+     },
+     {
+      "key": [
+       "00",
+       "food",
+       "2022"
+      ],
+      "first": 665757.0,
+      "second": 665756.94,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "00",
+       "non_food",
+       "2017"
+      ],
+      "first": 508541.0,
+      "second": 508541.45,
+      "gap": 0.45
+     },
+     {
+      "key": [
+       "00",
+       "non_food",
+       "2018"
+      ],
+      "first": 567818.0,
+      "second": 567817.6,
+      "gap": 0.4
+     },
+     {
+      "key": [
+       "00",
+       "non_food",
+       "2020"
+      ],
+      "first": 622449.0,
+      "second": 622448.97,
+      "gap": 0.03
+     },
+     {
+      "key": [
+       "00",
+       "non_food",
+       "2021"
+      ],
+      "first": 641744.0,
+      "second": 641744.27,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "00",
+       "non_food",
+       "2022"
+      ],
+      "first": 662025.0,
+      "second": 662025.11,
+      "gap": 0.11
+     },
+     {
+      "key": [
+       "00",
+       "total",
+       "2017"
+      ],
+      "first": 1036497.0,
+      "second": 1036497.27,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "00",
+       "total",
+       "2018"
+      ],
+      "first": 1124717.0,
+      "second": 1124716.85,
+      "gap": 0.15
+     },
+     {
+      "key": [
+       "00",
+       "total",
+       "2020"
+      ],
+      "first": 1225685.0,
+      "second": 1225684.68,
+      "gap": 0.32
+     },
+     {
+      "key": [
+       "00",
+       "total",
+       "2021"
+      ],
+      "first": 1264590.0,
+      "second": 1264589.74,
+      "gap": 0.26
+     },
+     {
+      "key": [
+       "00",
+       "total",
+       "2022"
+      ],
+      "first": 1327782.0,
+      "second": 1327782.05,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "11",
+       "food",
+       "2017"
+      ],
+      "first": 529162.0,
+      "second": 529161.55,
+      "gap": 0.45
+     },
+     {
+      "key": [
+       "11",
+       "food",
+       "2018"
+      ],
+      "first": 547668.0,
+      "second": 547668.08,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "11",
+       "food",
+       "2020"
+      ],
+      "first": 595635.0,
+      "second": 595634.83,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "11",
+       "food",
+       "2021"
+      ],
+      "first": 643591.0,
+      "second": 643591.4,
+      "gap": 0.4
+     },
+     {
+      "key": [
+       "11",
+       "food",
+       "2022"
+      ],
+      "first": 668481.0,
+      "second": 668480.98,
+      "gap": 0.02
+     },
+     {
+      "key": [
+       "11",
+       "non_food",
+       "2017"
+      ],
+      "first": 373833.0,
+      "second": 373833.04,
+      "gap": 0.04
+     },
+     {
+      "key": [
+       "11",
+       "non_food",
+       "2018"
+      ],
+      "first": 426149.0,
+      "second": 426149.27,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "11",
+       "non_food",
+       "2020"
+      ],
+      "first": 484536.0,
+      "second": 484536.41,
+      "gap": 0.41
+     },
+     {
+      "key": [
+       "11",
+       "non_food",
+       "2021"
+      ],
+      "first": 494228.0,
+      "second": 494227.92,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "11",
+       "non_food",
+       "2022"
+      ],
+      "first": 511652.0,
+      "second": 511651.95,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "11",
+       "total",
+       "2017"
+      ],
+      "first": 902995.0,
+      "second": 902994.59,
+      "gap": 0.41
+     },
+     {
+      "key": [
+       "11",
+       "total",
+       "2018"
+      ],
+      "first": 973817.0,
+      "second": 973817.35,
+      "gap": 0.35
+     },
+     {
+      "key": [
+       "11",
+       "total",
+       "2020"
+      ],
+      "first": 1080171.0,
+      "second": 1080171.23,
+      "gap": 0.23
+     },
+     {
+      "key": [
+       "11",
+       "total",
+       "2021"
+      ],
+      "first": 1137819.0,
+      "second": 1137819.32,
+      "gap": 0.32
+     },
+     {
+      "key": [
+       "11",
+       "total",
+       "2022"
+      ],
+      "first": 1180133.0,
+      "second": 1180132.93,
+      "gap": 0.07
+     },
+     {
+      "key": [
+       "12",
+       "food",
+       "2017"
+      ],
+      "first": 522766.0,
+      "second": 522766.38,
+      "gap": 0.38
+     },
+     {
+      "key": [
+       "12",
+       "food",
+       "2018"
+      ],
+      "first": 554754.0,
+      "second": 554754.23,
+      "gap": 0.23
+     },
+     {
+      "key": [
+       "12",
+       "food",
+       "2020"
+      ],
+      "first": 598245.0,
+      "second": 598244.67,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "12",
+       "food",
+       "2021"
+      ],
+      "first": 607812.0,
+      "second": 607811.56,
+      "gap": 0.44
+     },
+     {
+      "key": [
+       "12",
+       "food",
+       "2022"
+      ],
+      "first": 663927.0,
+      "second": 663926.75,
+      "gap": 0.25
+     },
+     {
+      "key": [
+       "12",
+       "non_food",
+       "2017"
+      ],
+      "first": 387051.0,
+      "second": 387051.28,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "12",
+       "non_food",
+       "2018"
+      ],
+      "first": 446955.0,
+      "second": 446955.12,
+      "gap": 0.12
+     },
+     {
+      "key": [
+       "12",
+       "non_food",
+       "2020"
+      ],
+      "first": 526008.0,
+      "second": 526007.92,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "12",
+       "non_food",
+       "2021"
+      ],
+      "first": 534905.0,
+      "second": 534905.1,
+      "gap": 0.1
+     },
+     {
+      "key": [
+       "12",
+       "non_food",
+       "2022"
+      ],
+      "first": 552570.0,
+      "second": 552569.9,
+      "gap": 0.1
+     },
+     {
+      "key": [
+       "12",
+       "total",
+       "2017"
+      ],
+      "first": 909818.0,
+      "second": 909817.66,
+      "gap": 0.34
+     },
+     {
+      "key": [
+       "12",
+       "total",
+       "2018"
+      ],
+      "first": 1001709.0,
+      "second": 1001709.36,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "12",
+       "total",
+       "2020"
+      ],
+      "first": 1124253.0,
+      "second": 1124252.59,
+      "gap": 0.41
+     },
+     {
+      "key": [
+       "12",
+       "total",
+       "2021"
+      ],
+      "first": 1142717.0,
+      "second": 1142716.66,
+      "gap": 0.34
+     },
+     {
+      "key": [
+       "12",
+       "total",
+       "2022"
+      ],
+      "first": 1216497.0,
+      "second": 1216496.65,
+      "gap": 0.35
+     },
+     {
+      "key": [
+       "13",
+       "food",
+       "2017"
+      ],
+      "first": 584045.0,
+      "second": 584045.24,
+      "gap": 0.24
+     },
+     {
+      "key": [
+       "13",
+       "food",
+       "2018"
+      ],
+      "first": 604871.0,
+      "second": 604871.24,
+      "gap": 0.24
+     },
+     {
+      "key": [
+       "13",
+       "food",
+       "2020"
+      ],
+      "first": 644853.0,
+      "second": 644852.66,
+      "gap": 0.34
+     },
+     {
+      "key": [
+       "13",
+       "food",
+       "2021"
+      ],
+      "first": 668029.0,
+      "second": 668029.07,
+      "gap": 0.07
+     },
+     {
+      "key": [
+       "13",
+       "food",
+       "2022"
+      ],
+      "first": 716262.0,
+      "second": 716261.97,
+      "gap": 0.03
+     },
+     {
+      "key": [
+       "13",
+       "non_food",
+       "2017"
+      ],
+      "first": 469758.0,
+      "second": 469758.24,
+      "gap": 0.24
+     },
+     {
+      "key": [
+       "13",
+       "non_food",
+       "2018"
+      ],
+      "first": 543759.0,
+      "second": 543759.42,
+      "gap": 0.42
+     },
+     {
+      "key": [
+       "13",
+       "non_food",
+       "2020"
+      ],
+      "first": 590197.0,
+      "second": 590197.45,
+      "gap": 0.45
+     },
+     {
+      "key": [
+       "13",
+       "non_food",
+       "2021"
+      ],
+      "first": 613629.0,
+      "second": 613628.96,
+      "gap": 0.04
+     },
+     {
+      "key": [
+       "13",
+       "non_food",
+       "2022"
+      ],
+      "first": 626724.0,
+      "second": 626723.54,
+      "gap": 0.46
+     },
+     {
+      "key": [
+       "13",
+       "total",
+       "2017"
+      ],
+      "first": 1053803.0,
+      "second": 1053803.48,
+      "gap": 0.48
+     },
+     {
+      "key": [
+       "13",
+       "total",
+       "2018"
+      ],
+      "first": 1148630.0,
+      "second": 1148630.67,
+      "gap": 0.67
+     },
+     {
+      "key": [
+       "13",
+       "total",
+       "2020"
+      ],
+      "first": 1235050.0,
+      "second": 1235050.11,
+      "gap": 0.11
+     },
+     {
+      "key": [
+       "13",
+       "total",
+       "2021"
+      ],
+      "first": 1281658.0,
+      "second": 1281658.04,
+      "gap": 0.04
+     },
+     {
+      "key": [
+       "13",
+       "total",
+       "2022"
+      ],
+      "first": 1342986.0,
+      "second": 1342985.51,
+      "gap": 0.49
+     },
+     {
+      "key": [
+       "14",
+       "food",
+       "2017"
+      ],
+      "first": 603401.0,
+      "second": 603401.3,
+      "gap": 0.3
+     },
+     {
+      "key": [
+       "14",
+       "food",
+       "2018"
+      ],
+      "first": 599873.0,
+      "second": 599873.4,
+      "gap": 0.4
+     },
+     {
+      "key": [
+       "14",
+       "food",
+       "2020"
+      ],
+      "first": 668074.0,
+      "second": 668073.75,
+      "gap": 0.25
+     },
+     {
+      "key": [
+       "14",
+       "food",
+       "2021"
+      ],
+      "first": 672143.0,
+      "second": 672142.73,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "14",
+       "food",
+       "2022"
+      ],
+      "first": 730826.0,
+      "second": 730825.57,
+      "gap": 0.43
+     },
+     {
+      "key": [
+       "14",
+       "non_food",
+       "2017"
+      ],
+      "first": 517536.0,
+      "second": 517536.34,
+      "gap": 0.34
+     },
+     {
+      "key": [
+       "14",
+       "non_food",
+       "2018"
+      ],
+      "first": 587899.0,
+      "second": 587899.36,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "14",
+       "non_food",
+       "2020"
+      ],
+      "first": 672373.0,
+      "second": 672372.58,
+      "gap": 0.42
+     },
+     {
+      "key": [
+       "14",
+       "non_food",
+       "2021"
+      ],
+      "first": 670528.0,
+      "second": 670527.59,
+      "gap": 0.41
+     },
+     {
+      "key": [
+       "14",
+       "non_food",
+       "2022"
+      ],
+      "first": 694345.0,
+      "second": 694345.29,
+      "gap": 0.29
+     },
+     {
+      "key": [
+       "14",
+       "total",
+       "2017"
+      ],
+      "first": 1120938.0,
+      "second": 1120937.64,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "14",
+       "total",
+       "2018"
+      ],
+      "first": 1187772.0,
+      "second": 1187772.76,
+      "gap": 0.76
+     },
+     {
+      "key": [
+       "14",
+       "total",
+       "2020"
+      ],
+      "first": 1340446.0,
+      "second": 1340446.33,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "14",
+       "total",
+       "2021"
+      ],
+      "first": 1342670.0,
+      "second": 1342670.32,
+      "gap": 0.32
+     },
+     {
+      "key": [
+       "14",
+       "total",
+       "2022"
+      ],
+      "first": 1425171.0,
+      "second": 1425170.86,
+      "gap": 0.14
+     },
+     {
+      "key": [
+       "15",
+       "food",
+       "2017"
+      ],
+      "first": 538360.0,
+      "second": 538359.98,
+      "gap": 0.02
+     },
+     {
+      "key": [
+       "15",
+       "food",
+       "2018"
+      ],
+      "first": 555989.0,
+      "second": 555989.05,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "15",
+       "food",
+       "2020"
+      ],
+      "first": 590173.0,
+      "second": 590173.34,
+      "gap": 0.34
+     },
+     {
+      "key": [
+       "15",
+       "food",
+       "2021"
+      ],
+      "first": 613753.0,
+      "second": 613752.76,
+      "gap": 0.24
+     },
+     {
+      "key": [
+       "15",
+       "food",
+       "2022"
+      ],
+      "first": 663021.0,
+      "second": 663020.58,
+      "gap": 0.42
+     },
+     {
+      "key": [
+       "15",
+       "non_food",
+       "2017"
+      ],
+      "first": 430865.0,
+      "second": 430864.64,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "15",
+       "non_food",
+       "2018"
+      ],
+      "first": 496432.0,
+      "second": 496432.46,
+      "gap": 0.46
+     },
+     {
+      "key": [
+       "15",
+       "non_food",
+       "2020"
+      ],
+      "first": 536516.0,
+      "second": 536516.27,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "15",
+       "non_food",
+       "2022"
+      ],
+      "first": 598816.0,
+      "second": 598816.2,
+      "gap": 0.2
+     },
+     {
+      "key": [
+       "15",
+       "total",
+       "2017"
+      ],
+      "first": 969225.0,
+      "second": 969224.62,
+      "gap": 0.38
+     },
+     {
+      "key": [
+       "15",
+       "total",
+       "2018"
+      ],
+      "first": 1052421.0,
+      "second": 1052421.51,
+      "gap": 0.51
+     },
+     {
+      "key": [
+       "15",
+       "total",
+       "2020"
+      ],
+      "first": 1126690.0,
+      "second": 1126689.61,
+      "gap": 0.39
+     },
+     {
+      "key": [
+       "15",
+       "total",
+       "2021"
+      ],
+      "first": 1180260.0,
+      "second": 1180259.76,
+      "gap": 0.24
+     },
+     {
+      "key": [
+       "15",
+       "total",
+       "2022"
+      ],
+      "first": 1261837.0,
+      "second": 1261836.78,
+      "gap": 0.22
+     },
+     {
+      "key": [
+       "16",
+       "food",
+       "2018"
+      ],
+      "first": 503297.0,
+      "second": 503297.45,
+      "gap": 0.45
+     },
+     {
+      "key": [
+       "16",
+       "food",
+       "2020"
+      ],
+      "first": 535136.0,
+      "second": 535136.35,
+      "gap": 0.35
+     },
+     {
+      "key": [
+       "16",
+       "food",
+       "2021"
+      ],
+      "first": 579032.0,
+      "second": 579031.72,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "16",
+       "food",
+       "2022"
+      ],
+      "first": 620732.0,
+      "second": 620732.28,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "16",
+       "non_food",
+       "2017"
+      ],
+      "first": 417174.0,
+      "second": 417173.81,
+      "gap": 0.19
+     },
+     {
+      "key": [
+       "16",
+       "non_food",
+       "2018"
+      ],
+      "first": 466781.0,
+      "second": 466781.1,
+      "gap": 0.1
+     },
+     {
+      "key": [
+       "16",
+       "non_food",
+       "2020"
+      ],
+      "first": 486894.0,
+      "second": 486893.93,
+      "gap": 0.07
+     },
+     {
+      "key": [
+       "16",
+       "non_food",
+       "2021"
+      ],
+      "first": 517376.0,
+      "second": 517375.56,
+      "gap": 0.44
+     },
+     {
+      "key": [
+       "16",
+       "non_food",
+       "2022"
+      ],
+      "first": 528080.0,
+      "second": 528080.19,
+      "gap": 0.19
+     },
+     {
+      "key": [
+       "16",
+       "total",
+       "2017"
+      ],
+      "first": 924847.0,
+      "second": 924846.81,
+      "gap": 0.19
+     },
+     {
+      "key": [
+       "16",
+       "total",
+       "2018"
+      ],
+      "first": 970078.0,
+      "second": 970078.55,
+      "gap": 0.55
+     },
+     {
+      "key": [
+       "16",
+       "total",
+       "2020"
+      ],
+      "first": 1022030.0,
+      "second": 1022030.29,
+      "gap": 0.29
+     },
+     {
+      "key": [
+       "16",
+       "total",
+       "2021"
+      ],
+      "first": 1096407.0,
+      "second": 1096407.27,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "16",
+       "total",
+       "2022"
+      ],
+      "first": 1148812.0,
+      "second": 1148812.47,
+      "gap": 0.47
+     },
+     {
+      "key": [
+       "17",
+       "food",
+       "2017"
+      ],
+      "first": 523329.0,
+      "second": 523328.71,
+      "gap": 0.29
+     },
+     {
+      "key": [
+       "17",
+       "food",
+       "2018"
+      ],
+      "first": 548879.0,
+      "second": 548879.18,
+      "gap": 0.18
+     },
+     {
+      "key": [
+       "17",
+       "food",
+       "2020"
+      ],
+      "first": 573500.0,
+      "second": 573499.58,
+      "gap": 0.42
+     },
+     {
+      "key": [
+       "17",
+       "food",
+       "2021"
+      ],
+      "first": 580273.0,
+      "second": 580273.31,
+      "gap": 0.31
+     },
+     {
+      "key": [
+       "17",
+       "food",
+       "2022"
+      ],
+      "first": 626209.0,
+      "second": 626208.94,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "17",
+       "non_food",
+       "2017"
+      ],
+      "first": 467580.0,
+      "second": 467579.85,
+      "gap": 0.15
+     },
+     {
+      "key": [
+       "17",
+       "non_food",
+       "2018"
+      ],
+      "first": 558899.0,
+      "second": 558899.08,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "17",
+       "non_food",
+       "2020"
+      ],
+      "first": 566575.0,
+      "second": 566575.09,
+      "gap": 0.09
+     },
+     {
+      "key": [
+       "17",
+       "non_food",
+       "2021"
+      ],
+      "first": 558299.0,
+      "second": 558299.08,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "17",
+       "non_food",
+       "2022"
+      ],
+      "first": 570275.0,
+      "second": 570274.83,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "17",
+       "total",
+       "2017"
+      ],
+      "first": 990909.0,
+      "second": 990908.56,
+      "gap": 0.44
+     },
+     {
+      "key": [
+       "17",
+       "total",
+       "2018"
+      ],
+      "first": 1107778.0,
+      "second": 1107778.26,
+      "gap": 0.26
+     },
+     {
+      "key": [
+       "17",
+       "total",
+       "2020"
+      ],
+      "first": 1140075.0,
+      "second": 1140074.67,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "17",
+       "total",
+       "2021"
+      ],
+      "first": 1138572.0,
+      "second": 1138572.4,
+      "gap": 0.4
+     },
+     {
+      "key": [
+       "17",
+       "total",
+       "2022"
+      ],
+      "first": 1196484.0,
+      "second": 1196483.76,
+      "gap": 0.24
+     },
+     {
+      "key": [
+       "18",
+       "food",
+       "2017"
+      ],
+      "first": 467940.0,
+      "second": 467939.94,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "18",
+       "food",
+       "2018"
+      ],
+      "first": 478452.0,
+      "second": 478451.88,
+      "gap": 0.12
+     },
+     {
+      "key": [
+       "18",
+       "food",
+       "2020"
+      ],
+      "first": 503976.0,
+      "second": 503976.2,
+      "gap": 0.2
+     },
+     {
+      "key": [
+       "18",
+       "food",
+       "2021"
+      ],
+      "first": 539964.0,
+      "second": 539963.55,
+      "gap": 0.45
+     },
+     {
+      "key": [
+       "18",
+       "food",
+       "2022"
+      ],
+      "first": 575673.0,
+      "second": 575672.68,
+      "gap": 0.32
+     },
+     {
+      "key": [
+       "18",
+       "non_food",
+       "2017"
+      ],
+      "first": 381353.0,
+      "second": 381353.5,
+      "gap": 0.5
+     },
+     {
+      "key": [
+       "18",
+       "non_food",
+       "2018"
+      ],
+      "first": 444186.0,
+      "second": 444185.79,
+      "gap": 0.21
+     },
+     {
+      "key": [
+       "18",
+       "non_food",
+       "2020"
+      ],
+      "first": 470448.0,
+      "second": 470447.72,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "18",
+       "non_food",
+       "2021"
+      ],
+      "first": 490615.0,
+      "second": 490615.03,
+      "gap": 0.03
+     },
+     {
+      "key": [
+       "18",
+       "non_food",
+       "2022"
+      ],
+      "first": 499315.0,
+      "second": 499314.76,
+      "gap": 0.24
+     },
+     {
+      "key": [
+       "18",
+       "total",
+       "2017"
+      ],
+      "first": 849293.0,
+      "second": 849293.44,
+      "gap": 0.44
+     },
+     {
+      "key": [
+       "18",
+       "total",
+       "2018"
+      ],
+      "first": 922638.0,
+      "second": 922637.67,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "18",
+       "total",
+       "2020"
+      ],
+      "first": 974424.0,
+      "second": 974423.91,
+      "gap": 0.09
+     },
+     {
+      "key": [
+       "18",
+       "total",
+       "2021"
+      ],
+      "first": 1030579.0,
+      "second": 1030578.58,
+      "gap": 0.42
+     },
+     {
+      "key": [
+       "18",
+       "total",
+       "2022"
+      ],
+      "first": 1074987.0,
+      "second": 1074987.43,
+      "gap": 0.43
+     },
+     {
+      "key": [
+       "19",
+       "food",
+       "2017"
+      ],
+      "first": 721045.0,
+      "second": 721045.3,
+      "gap": 0.3
+     },
+     {
+      "key": [
+       "19",
+       "food",
+       "2018"
+      ],
+      "first": 710401.0,
+      "second": 710401.17,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "19",
+       "food",
+       "2020"
+      ],
+      "first": 771121.0,
+      "second": 771121.02,
+      "gap": 0.02
+     },
+     {
+      "key": [
+       "19",
+       "food",
+       "2021"
+      ],
+      "first": 783204.0,
+      "second": 783203.97,
+      "gap": 0.03
+     },
+     {
+      "key": [
+       "19",
+       "food",
+       "2022"
+      ],
+      "first": 881622.0,
+      "second": 881622.45,
+      "gap": 0.45
+     },
+     {
+      "key": [
+       "19",
+       "non_food",
+       "2017"
+      ],
+      "first": 639949.0,
+      "second": 639949.01,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "19",
+       "non_food",
+       "2018"
+      ],
+      "first": 709094.0,
+      "second": 709094.02,
+      "gap": 0.02
+     },
+     {
+      "key": [
+       "19",
+       "non_food",
+       "2020"
+      ],
+      "first": 730723.0,
+      "second": 730722.53,
+      "gap": 0.47
+     },
+     {
+      "key": [
+       "19",
+       "non_food",
+       "2021"
+      ],
+      "first": 748970.0,
+      "second": 748970.15,
+      "gap": 0.15
+     },
+     {
+      "key": [
+       "19",
+       "non_food",
+       "2022"
+      ],
+      "first": 772658.0,
+      "second": 772658.08,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "19",
+       "total",
+       "2017"
+      ],
+      "first": 1360994.0,
+      "second": 1360994.31,
+      "gap": 0.31
+     },
+     {
+      "key": [
+       "19",
+       "total",
+       "2018"
+      ],
+      "first": 1419495.0,
+      "second": 1419495.19,
+      "gap": 0.19
+     },
+     {
+      "key": [
+       "19",
+       "total",
+       "2020"
+      ],
+      "first": 1501844.0,
+      "second": 1501843.55,
+      "gap": 0.45
+     },
+     {
+      "key": [
+       "19",
+       "total",
+       "2021"
+      ],
+      "first": 1532174.0,
+      "second": 1532174.12,
+      "gap": 0.12
+     },
+     {
+      "key": [
+       "19",
+       "total",
+       "2022"
+      ],
+      "first": 1654281.0,
+      "second": 1654280.53,
+      "gap": 0.47
+     },
+     {
+      "key": [
+       "21",
+       "food",
+       "2017"
+      ],
+      "first": 759544.0,
+      "second": 759543.86,
+      "gap": 0.14
+     },
+     {
+      "key": [
+       "21",
+       "food",
+       "2018"
+      ],
+      "first": 747944.0,
+      "second": 747943.58,
+      "gap": 0.42
+     },
+     {
+      "key": [
+       "21",
+       "food",
+       "2020"
+      ],
+      "first": 800424.0,
+      "second": 800424.35,
+      "gap": 0.35
+     },
+     {
+      "key": [
+       "21",
+       "food",
+       "2021"
+      ],
+      "first": 828206.0,
+      "second": 828206.18,
+      "gap": 0.18
+     },
+     {
+      "key": [
+       "21",
+       "food",
+       "2022"
+      ],
+      "first": 846222.0,
+      "second": 846221.75,
+      "gap": 0.25
+     },
+     {
+      "key": [
+       "21",
+       "non_food",
+       "2017"
+      ],
+      "first": 805334.0,
+      "second": 805333.64,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "21",
+       "non_food",
+       "2018"
+      ],
+      "first": 826448.0,
+      "second": 826447.94,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "21",
+       "non_food",
+       "2020"
+      ],
+      "first": 973097.0,
+      "second": 973096.69,
+      "gap": 0.31
+     },
+     {
+      "key": [
+       "21",
+       "non_food",
+       "2021"
+      ],
+      "first": 1027089.0,
+      "second": 1027089.42,
+      "gap": 0.42
+     },
+     {
+      "key": [
+       "21",
+       "non_food",
+       "2022"
+      ],
+      "first": 985479.0,
+      "second": 985478.65,
+      "gap": 0.35
+     },
+     {
+      "key": [
+       "21",
+       "total",
+       "2017"
+      ],
+      "first": 1564877.0,
+      "second": 1564877.5,
+      "gap": 0.5
+     },
+     {
+      "key": [
+       "21",
+       "total",
+       "2018"
+      ],
+      "first": 1574392.0,
+      "second": 1574391.51,
+      "gap": 0.49
+     },
+     {
+      "key": [
+       "21",
+       "total",
+       "2020"
+      ],
+      "first": 1773521.0,
+      "second": 1773521.04,
+      "gap": 0.04
+     },
+     {
+      "key": [
+       "21",
+       "total",
+       "2021"
+      ],
+      "first": 1855296.0,
+      "second": 1855295.6,
+      "gap": 0.4
+     },
+     {
+      "key": [
+       "21",
+       "total",
+       "2022"
+      ],
+      "first": 1831700.0,
+      "second": 1831700.4,
+      "gap": 0.4
+     },
+     {
+      "key": [
+       "31",
+       "food",
+       "2017"
+      ],
+      "first": 797828.0,
+      "second": 797828.39,
+      "gap": 0.39
+     },
+     {
+      "key": [
+       "31",
+       "food",
+       "2018"
+      ],
+      "first": 847847.0,
+      "second": 847846.53,
+      "gap": 0.47
+     },
+     {
+      "key": [
+       "31",
+       "food",
+       "2020"
+      ],
+      "first": 944687.0,
+      "second": 944687.09,
+      "gap": 0.09
+     },
+     {
+      "key": [
+       "31",
+       "food",
+       "2021"
+      ],
+      "first": 923933.0,
+      "second": 923932.8,
+      "gap": 0.2
+     },
+     {
+      "key": [
+       "31",
+       "food",
+       "2022"
+      ],
+      "first": 953321.0,
+      "second": 953320.89,
+      "gap": 0.11
+     },
+     {
+      "key": [
+       "31",
+       "non_food",
+       "2017"
+      ],
+      "first": 1199618.0,
+      "second": 1199617.99,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "31",
+       "non_food",
+       "2018"
+      ],
+      "first": 1191310.0,
+      "second": 1191309.83,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "31",
+       "non_food",
+       "2020"
+      ],
+      "first": 1313304.0,
+      "second": 1313304.39,
+      "gap": 0.39
+     },
+     {
+      "key": [
+       "31",
+       "non_food",
+       "2021"
+      ],
+      "first": 1412497.0,
+      "second": 1412496.63,
+      "gap": 0.37
+     },
+     {
+      "key": [
+       "31",
+       "non_food",
+       "2022"
+      ],
+      "first": 1572026.0,
+      "second": 1572026.48,
+      "gap": 0.48
+     },
+     {
+      "key": [
+       "31",
+       "total",
+       "2017"
+      ],
+      "first": 1997446.0,
+      "second": 1997446.38,
+      "gap": 0.38
+     },
+     {
+      "key": [
+       "31",
+       "total",
+       "2018"
+      ],
+      "first": 2039157.0,
+      "second": 2039156.36,
+      "gap": 0.64
+     },
+     {
+      "key": [
+       "31",
+       "total",
+       "2020"
+      ],
+      "first": 2257991.0,
+      "second": 2257991.48,
+      "gap": 0.48
+     },
+     {
+      "key": [
+       "31",
+       "total",
+       "2021"
+      ],
+      "first": 2336429.0,
+      "second": 2336429.43,
+      "gap": 0.43
+     },
+     {
+      "key": [
+       "31",
+       "total",
+       "2022"
+      ],
+      "first": 2525347.0,
+      "second": 2525347.37,
+      "gap": 0.37
+     },
+     {
+      "key": [
+       "32",
+       "food",
+       "2017"
+      ],
+      "first": 562767.0,
+      "second": 562766.74,
+      "gap": 0.26
+     },
+     {
+      "key": [
+       "32",
+       "food",
+       "2018"
+      ],
+      "first": 600967.0,
+      "second": 600966.61,
+      "gap": 0.39
+     },
+     {
+      "key": [
+       "32",
+       "food",
+       "2020"
+      ],
+      "first": 655838.0,
+      "second": 655838.24,
+      "gap": 0.24
+     },
+     {
+      "key": [
+       "32",
+       "food",
+       "2021"
+      ],
+      "first": 677383.0,
+      "second": 677382.61,
+      "gap": 0.39
+     },
+     {
+      "key": [
+       "32",
+       "food",
+       "2022"
+      ],
+      "first": 708390.0,
+      "second": 708389.69,
+      "gap": 0.31
+     },
+     {
+      "key": [
+       "32",
+       "non_food",
+       "2017"
+      ],
+      "first": 540571.0,
+      "second": 540570.55,
+      "gap": 0.45
+     },
+     {
+      "key": [
+       "32",
+       "non_food",
+       "2018"
+      ],
+      "first": 617112.0,
+      "second": 617111.56,
+      "gap": 0.44
+     },
+     {
+      "key": [
+       "32",
+       "non_food",
+       "2020"
+      ],
+      "first": 669122.0,
+      "second": 669121.59,
+      "gap": 0.41
+     },
+     {
+      "key": [
+       "32",
+       "non_food",
+       "2021"
+      ],
+      "first": 695276.0,
+      "second": 695276.49,
+      "gap": 0.49
+     },
+     {
+      "key": [
+       "32",
+       "non_food",
+       "2022"
+      ],
+      "first": 729004.0,
+      "second": 729004.43,
+      "gap": 0.43
+     },
+     {
+      "key": [
+       "32",
+       "total",
+       "2017"
+      ],
+      "first": 1103337.0,
+      "second": 1103337.29,
+      "gap": 0.29
+     },
+     {
+      "key": [
+       "32",
+       "total",
+       "2018"
+      ],
+      "first": 1218079.0,
+      "second": 1218078.17,
+      "gap": 0.83
+     },
+     {
+      "key": [
+       "32",
+       "total",
+       "2020"
+      ],
+      "first": 1324960.0,
+      "second": 1324959.83,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "32",
+       "total",
+       "2021"
+      ],
+      "first": 1372659.0,
+      "second": 1372659.1,
+      "gap": 0.1
+     },
+     {
+      "key": [
+       "32",
+       "total",
+       "2022"
+      ],
+      "first": 1437394.0,
+      "second": 1437394.12,
+      "gap": 0.12
+     },
+     {
+      "key": [
+       "33",
+       "food",
+       "2017"
+      ],
+      "first": 421515.0,
+      "second": 421514.91,
+      "gap": 0.09
+     },
+     {
+      "key": [
+       "33",
+       "food",
+       "2018"
+      ],
+      "first": 460891.0,
+      "second": 460891.08,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "33",
+       "food",
+       "2020"
+      ],
+      "first": 496173.0,
+      "second": 496173.09,
+      "gap": 0.09
+     },
+     {
+      "key": [
+       "33",
+       "food",
+       "2021"
+      ],
+      "first": 519009.0,
+      "second": 519009.15,
+      "gap": 0.15
+     },
+     {
+      "key": [
+       "33",
+       "food",
+       "2022"
+      ],
+      "first": 572808.0,
+      "second": 572808.11,
+      "gap": 0.11
+     },
+     {
+      "key": [
+       "33",
+       "non_food",
+       "2017"
+      ],
+      "first": 405709.0,
+      "second": 405708.55,
+      "gap": 0.45
+     },
+     {
+      "key": [
+       "33",
+       "non_food",
+       "2018"
+      ],
+      "first": 477690.0,
+      "second": 477690.34,
+      "gap": 0.34
+     },
+     {
+      "key": [
+       "33",
+       "non_food",
+       "2020"
+      ],
+      "first": 522314.0,
+      "second": 522314.29,
+      "gap": 0.29
+     },
+     {
+      "key": [
+       "33",
+       "non_food",
+       "2021"
+      ],
+      "first": 529600.0,
+      "second": 529599.86,
+      "gap": 0.14
+     },
+     {
+      "key": [
+       "33",
+       "non_food",
+       "2022"
+      ],
+      "first": 548986.0,
+      "second": 548985.75,
+      "gap": 0.25
+     },
+     {
+      "key": [
+       "33",
+       "total",
+       "2017"
+      ],
+      "first": 827223.0,
+      "second": 827223.45,
+      "gap": 0.45
+     },
+     {
+      "key": [
+       "33",
+       "total",
+       "2018"
+      ],
+      "first": 938581.0,
+      "second": 938581.42,
+      "gap": 0.42
+     },
+     {
+      "key": [
+       "33",
+       "total",
+       "2020"
+      ],
+      "first": 1018487.0,
+      "second": 1018487.38,
+      "gap": 0.38
+     },
+     {
+      "key": [
+       "33",
+       "total",
+       "2022"
+      ],
+      "first": 1121794.0,
+      "second": 1121793.86,
+      "gap": 0.14
+     },
+     {
+      "key": [
+       "34",
+       "food",
+       "2017"
+      ],
+      "first": 490249.0,
+      "second": 490248.61,
+      "gap": 0.39
+     },
+     {
+      "key": [
+       "34",
+       "food",
+       "2018"
+      ],
+      "first": 529012.0,
+      "second": 529012.33,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "34",
+       "food",
+       "2020"
+      ],
+      "first": 579279.0,
+      "second": 579279.07,
+      "gap": 0.07
+     },
+     {
+      "key": [
+       "34",
+       "food",
+       "2021"
+      ],
+      "first": 594622.0,
+      "second": 594622.24,
+      "gap": 0.24
+     },
+     {
+      "key": [
+       "34",
+       "food",
+       "2022"
+      ],
+      "first": 628845.0,
+      "second": 628844.56,
+      "gap": 0.44
+     },
+     {
+      "key": [
+       "34",
+       "non_food",
+       "2017"
+      ],
+      "first": 649918.0,
+      "second": 649917.77,
+      "gap": 0.23
+     },
+     {
+      "key": [
+       "34",
+       "non_food",
+       "2018"
+      ],
+      "first": 773649.0,
+      "second": 773648.73,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "34",
+       "non_food",
+       "2020"
+      ],
+      "first": 832693.0,
+      "second": 832692.77,
+      "gap": 0.23
+     },
+     {
+      "key": [
+       "34",
+       "non_food",
+       "2021"
+      ],
+      "first": 823248.0,
+      "second": 823248.11,
+      "gap": 0.11
+     },
+     {
+      "key": [
+       "34",
+       "non_food",
+       "2022"
+      ],
+      "first": 851530.0,
+      "second": 851529.72,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "34",
+       "total",
+       "2017"
+      ],
+      "first": 1140166.0,
+      "second": 1140166.38,
+      "gap": 0.38
+     },
+     {
+      "key": [
+       "34",
+       "total",
+       "2018"
+      ],
+      "first": 1302661.0,
+      "second": 1302661.06,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "34",
+       "total",
+       "2020"
+      ],
+      "first": 1411972.0,
+      "second": 1411971.84,
+      "gap": 0.16
+     },
+     {
+      "key": [
+       "34",
+       "total",
+       "2021"
+      ],
+      "first": 1417870.0,
+      "second": 1417870.35,
+      "gap": 0.35
+     },
+     {
+      "key": [
+       "34",
+       "total",
+       "2022"
+      ],
+      "first": 1480374.0,
+      "second": 1480374.28,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "35",
+       "food",
+       "2017"
+      ],
+      "first": 476861.0,
+      "second": 476861.4,
+      "gap": 0.4
+     },
+     {
+      "key": [
+       "35",
+       "food",
+       "2018"
+      ],
+      "first": 502761.0,
+      "second": 502760.6,
+      "gap": 0.4
+     },
+     {
+      "key": [
+       "35",
+       "food",
+       "2020"
+      ],
+      "first": 521577.0,
+      "second": 521577.12,
+      "gap": 0.12
+     },
+     {
+      "key": [
+       "35",
+       "food",
+       "2021"
+      ],
+      "first": 557791.0,
+      "second": 557790.8,
+      "gap": 0.2
+     },
+     {
+      "key": [
+       "35",
+       "food",
+       "2022"
+      ],
+      "first": 600848.0,
+      "second": 600847.63,
+      "gap": 0.37
+     },
+     {
+      "key": [
+       "35",
+       "non_food",
+       "2017"
+      ],
+      "first": 461940.0,
+      "second": 461939.92,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "35",
+       "non_food",
+       "2018"
+      ],
+      "first": 503317.0,
+      "second": 503316.92,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "35",
+       "non_food",
+       "2020"
+      ],
+      "first": 542805.0,
+      "second": 542804.78,
+      "gap": 0.22
+     },
+     {
+      "key": [
+       "35",
+       "non_food",
+       "2021"
+      ],
+      "first": 555211.0,
+      "second": 555211.15,
+      "gap": 0.15
+     },
+     {
+      "key": [
+       "35",
+       "non_food",
+       "2022"
+      ],
+      "first": 564290.0,
+      "second": 564290.28,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "35",
+       "total",
+       "2017"
+      ],
+      "first": 938801.0,
+      "second": 938801.32,
+      "gap": 0.32
+     },
+     {
+      "key": [
+       "35",
+       "total",
+       "2018"
+      ],
+      "first": 1006078.0,
+      "second": 1006077.52,
+      "gap": 0.48
+     },
+     {
+      "key": [
+       "35",
+       "total",
+       "2020"
+      ],
+      "first": 1064382.0,
+      "second": 1064381.9,
+      "gap": 0.1
+     },
+     {
+      "key": [
+       "35",
+       "total",
+       "2021"
+      ],
+      "first": 1113002.0,
+      "second": 1113001.95,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "35",
+       "total",
+       "2022"
+      ],
+      "first": 1165138.0,
+      "second": 1165137.91,
+      "gap": 0.09
+     },
+     {
+      "key": [
+       "36",
+       "food",
+       "2017"
+      ],
+      "first": 623084.0,
+      "second": 623084.35,
+      "gap": 0.35
+     },
+     {
+      "key": [
+       "36",
+       "food",
+       "2018"
+      ],
+      "first": 672918.0,
+      "second": 672917.64,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "36",
+       "food",
+       "2020"
+      ],
+      "first": 756673.0,
+      "second": 756673.23,
+      "gap": 0.23
+     },
+     {
+      "key": [
+       "36",
+       "food",
+       "2021"
+      ],
+      "first": 744893.0,
+      "second": 744893.26,
+      "gap": 0.26
+     },
+     {
+      "key": [
+       "36",
+       "food",
+       "2022"
+      ],
+      "first": 830111.0,
+      "second": 830110.79,
+      "gap": 0.21
+     },
+     {
+      "key": [
+       "36",
+       "non_food",
+       "2017"
+      ],
+      "first": 628887.0,
+      "second": 628887.44,
+      "gap": 0.44
+     },
+     {
+      "key": [
+       "36",
+       "non_food",
+       "2018"
+      ],
+      "first": 711628.0,
+      "second": 711628.08,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "36",
+       "non_food",
+       "2020"
+      ],
+      "first": 760371.0,
+      "second": 760370.87,
+      "gap": 0.13
+     },
+     {
+      "key": [
+       "36",
+       "non_food",
+       "2021"
+      ],
+      "first": 766363.0,
+      "second": 766363.4,
+      "gap": 0.4
+     },
+     {
+      "key": [
+       "36",
+       "non_food",
+       "2022"
+      ],
+      "first": 789461.0,
+      "second": 789460.92,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "36",
+       "total",
+       "2017"
+      ],
+      "first": 1251972.0,
+      "second": 1251971.79,
+      "gap": 0.21
+     },
+     {
+      "key": [
+       "36",
+       "total",
+       "2018"
+      ],
+      "first": 1384546.0,
+      "second": 1384545.72,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "36",
+       "total",
+       "2020"
+      ],
+      "first": 1517044.0,
+      "second": 1517044.1,
+      "gap": 0.1
+     },
+     {
+      "key": [
+       "36",
+       "total",
+       "2021"
+      ],
+      "first": 1511257.0,
+      "second": 1511256.67,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "36",
+       "total",
+       "2022"
+      ],
+      "first": 1619572.0,
+      "second": 1619571.71,
+      "gap": 0.29
+     },
+     {
+      "key": [
+       "51",
+       "food",
+       "2017"
+      ],
+      "first": 569168.0,
+      "second": 569168.04,
+      "gap": 0.04
+     },
+     {
+      "key": [
+       "51",
+       "food",
+       "2018"
+      ],
+      "first": 599976.0,
+      "second": 599976.09,
+      "gap": 0.09
+     },
+     {
+      "key": [
+       "51",
+       "food",
+       "2020"
+      ],
+      "first": 675146.0,
+      "second": 675145.59,
+      "gap": 0.41
+     },
+     {
+      "key": [
+       "51",
+       "food",
+       "2021"
+      ],
+      "first": 628472.0,
+      "second": 628472.06,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "51",
+       "food",
+       "2022"
+      ],
+      "first": 609855.0,
+      "second": 609855.33,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "51",
+       "non_food",
+       "2017"
+      ],
+      "first": 762917.0,
+      "second": 762916.85,
+      "gap": 0.15
+     },
+     {
+      "key": [
+       "51",
+       "non_food",
+       "2018"
+      ],
+      "first": 767056.0,
+      "second": 767056.4,
+      "gap": 0.4
+     },
+     {
+      "key": [
+       "51",
+       "non_food",
+       "2020"
+      ],
+      "first": 834520.0,
+      "second": 834520.05,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "51",
+       "non_food",
+       "2021"
+      ],
+      "first": 840152.0,
+      "second": 840152.05,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "51",
+       "non_food",
+       "2022"
+      ],
+      "first": 832754.0,
+      "second": 832754.43,
+      "gap": 0.43
+     },
+     {
+      "key": [
+       "51",
+       "total",
+       "2017"
+      ],
+      "first": 1332085.0,
+      "second": 1332084.88,
+      "gap": 0.12
+     },
+     {
+      "key": [
+       "51",
+       "total",
+       "2018"
+      ],
+      "first": 1367032.0,
+      "second": 1367032.49,
+      "gap": 0.49
+     },
+     {
+      "key": [
+       "51",
+       "total",
+       "2020"
+      ],
+      "first": 1509666.0,
+      "second": 1509665.64,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "51",
+       "total",
+       "2021"
+      ],
+      "first": 1468624.0,
+      "second": 1468624.11,
+      "gap": 0.11
+     },
+     {
+      "key": [
+       "51",
+       "total",
+       "2022"
+      ],
+      "first": 1442610.0,
+      "second": 1442609.77,
+      "gap": 0.23
+     },
+     {
+      "key": [
+       "52",
+       "food",
+       "2017"
+      ],
+      "first": 457616.0,
+      "second": 457616.36,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "52",
+       "food",
+       "2018"
+      ],
+      "first": 525091.0,
+      "second": 525091.4,
+      "gap": 0.4
+     },
+     {
+      "key": [
+       "52",
+       "food",
+       "2020"
+      ],
+      "first": 574202.0,
+      "second": 574202.21,
+      "gap": 0.21
+     },
+     {
+      "key": [
+       "52",
+       "food",
+       "2021"
+      ],
+      "first": 637898.0,
+      "second": 637897.8,
+      "gap": 0.2
+     },
+     {
+      "key": [
+       "52",
+       "food",
+       "2022"
+      ],
+      "first": 666966.0,
+      "second": 666966.05,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "52",
+       "non_food",
+       "2017"
+      ],
+      "first": 363436.0,
+      "second": 363435.73,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "52",
+       "non_food",
+       "2018"
+      ],
+      "first": 393108.0,
+      "second": 393107.84,
+      "gap": 0.16
+     },
+     {
+      "key": [
+       "52",
+       "non_food",
+       "2020"
+      ],
+      "first": 515561.0,
+      "second": 515561.39,
+      "gap": 0.39
+     },
+     {
+      "key": [
+       "52",
+       "non_food",
+       "2021"
+      ],
+      "first": 559650.0,
+      "second": 559650.1,
+      "gap": 0.1
+     },
+     {
+      "key": [
+       "52",
+       "non_food",
+       "2022"
+      ],
+      "first": 493696.0,
+      "second": 493696.03,
+      "gap": 0.03
+     },
+     {
+      "key": [
+       "52",
+       "total",
+       "2017"
+      ],
+      "first": 821052.0,
+      "second": 821052.09,
+      "gap": 0.09
+     },
+     {
+      "key": [
+       "52",
+       "total",
+       "2018"
+      ],
+      "first": 918199.0,
+      "second": 918199.24,
+      "gap": 0.24
+     },
+     {
+      "key": [
+       "52",
+       "total",
+       "2020"
+      ],
+      "first": 1089764.0,
+      "second": 1089763.6,
+      "gap": 0.4
+     },
+     {
+      "key": [
+       "52",
+       "total",
+       "2021"
+      ],
+      "first": 1197548.0,
+      "second": 1197547.9,
+      "gap": 0.1
+     },
+     {
+      "key": [
+       "52",
+       "total",
+       "2022"
+      ],
+      "first": 1160662.0,
+      "second": 1160662.07,
+      "gap": 0.07
+     },
+     {
+      "key": [
+       "53",
+       "food",
+       "2017"
+      ],
+      "first": 399251.0,
+      "second": 399251.2,
+      "gap": 0.2
+     },
+     {
+      "key": [
+       "53",
+       "food",
+       "2018"
+      ],
+      "first": 402922.0,
+      "second": 402921.78,
+      "gap": 0.22
+     },
+     {
+      "key": [
+       "53",
+       "food",
+       "2020"
+      ],
+      "first": 442700.0,
+      "second": 442700.04,
+      "gap": 0.04
+     },
+     {
+      "key": [
+       "53",
+       "food",
+       "2021"
+      ],
+      "first": 468252.0,
+      "second": 468252.17,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "53",
+       "food",
+       "2022"
+      ],
+      "first": 480749.0,
+      "second": 480749.17,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "53",
+       "non_food",
+       "2017"
+      ],
+      "first": 282232.0,
+      "second": 282232.3,
+      "gap": 0.3
+     },
+     {
+      "key": [
+       "53",
+       "non_food",
+       "2018"
+      ],
+      "first": 301832.0,
+      "second": 301832.28,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "53",
+       "non_food",
+       "2020"
+      ],
+      "first": 351661.0,
+      "second": 351661.11,
+      "gap": 0.11
+     },
+     {
+      "key": [
+       "53",
+       "non_food",
+       "2021"
+      ],
+      "first": 372106.0,
+      "second": 372106.44,
+      "gap": 0.44
+     },
+     {
+      "key": [
+       "53",
+       "non_food",
+       "2022"
+      ],
+      "first": 403353.0,
+      "second": 403352.91,
+      "gap": 0.09
+     },
+     {
+      "key": [
+       "53",
+       "total",
+       "2017"
+      ],
+      "first": 681484.0,
+      "second": 681483.51,
+      "gap": 0.49
+     },
+     {
+      "key": [
+       "53",
+       "total",
+       "2018"
+      ],
+      "first": 704754.0,
+      "second": 704754.06,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "53",
+       "total",
+       "2020"
+      ],
+      "first": 794361.0,
+      "second": 794361.15,
+      "gap": 0.15
+     },
+     {
+      "key": [
+       "53",
+       "total",
+       "2021"
+      ],
+      "first": 840359.0,
+      "second": 840358.61,
+      "gap": 0.39
+     },
+     {
+      "key": [
+       "53",
+       "total",
+       "2022"
+      ],
+      "first": 884102.0,
+      "second": 884102.08,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "61",
+       "food",
+       "2017"
+      ],
+      "first": 519469.0,
+      "second": 519469.03,
+      "gap": 0.03
+     },
+     {
+      "key": [
+       "61",
+       "food",
+       "2018"
+      ],
+      "first": 535534.0,
+      "second": 535533.56,
+      "gap": 0.44
+     },
+     {
+      "key": [
+       "61",
+       "food",
+       "2020"
+      ],
+      "first": 584259.0,
+      "second": 584259.49,
+      "gap": 0.49
+     },
+     {
+      "key": [
+       "61",
+       "food",
+       "2021"
+      ],
+      "first": 603291.0,
+      "second": 603291.38,
+      "gap": 0.38
+     },
+     {
+      "key": [
+       "61",
+       "food",
+       "2022"
+      ],
+      "first": 666066.0,
+      "second": 666065.89,
+      "gap": 0.11
+     },
+     {
+      "key": [
+       "61",
+       "non_food",
+       "2017"
+      ],
+      "first": 409666.0,
+      "second": 409666.38,
+      "gap": 0.38
+     },
+     {
+      "key": [
+       "61",
+       "non_food",
+       "2018"
+      ],
+      "first": 493138.0,
+      "second": 493138.29,
+      "gap": 0.29
+     },
+     {
+      "key": [
+       "61",
+       "non_food",
+       "2020"
+      ],
+      "first": 540804.0,
+      "second": 540803.99,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "61",
+       "non_food",
+       "2021"
+      ],
+      "first": 559767.0,
+      "second": 559766.88,
+      "gap": 0.12
+     },
+     {
+      "key": [
+       "61",
+       "non_food",
+       "2022"
+      ],
+      "first": 566552.0,
+      "second": 566552.33,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "61",
+       "total",
+       "2017"
+      ],
+      "first": 929135.0,
+      "second": 929135.41,
+      "gap": 0.41
+     },
+     {
+      "key": [
+       "61",
+       "total",
+       "2018"
+      ],
+      "first": 1028672.0,
+      "second": 1028671.85,
+      "gap": 0.15
+     },
+     {
+      "key": [
+       "61",
+       "total",
+       "2020"
+      ],
+      "first": 1125063.0,
+      "second": 1125063.49,
+      "gap": 0.49
+     },
+     {
+      "key": [
+       "61",
+       "total",
+       "2021"
+      ],
+      "first": 1163058.0,
+      "second": 1163058.26,
+      "gap": 0.26
+     },
+     {
+      "key": [
+       "61",
+       "total",
+       "2022"
+      ],
+      "first": 1232618.0,
+      "second": 1232618.22,
+      "gap": 0.22
+     },
+     {
+      "key": [
+       "62",
+       "food",
+       "2017"
+      ],
+      "first": 621622.0,
+      "second": 621621.65,
+      "gap": 0.35
+     },
+     {
+      "key": [
+       "62",
+       "food",
+       "2018"
+      ],
+      "first": 632493.0,
+      "second": 632492.71,
+      "gap": 0.29
+     },
+     {
+      "key": [
+       "62",
+       "food",
+       "2020"
+      ],
+      "first": 675948.0,
+      "second": 675947.95,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "62",
+       "food",
+       "2021"
+      ],
+      "first": 713145.0,
+      "second": 713144.53,
+      "gap": 0.47
+     },
+     {
+      "key": [
+       "62",
+       "food",
+       "2022"
+      ],
+      "first": 762634.0,
+      "second": 762633.94,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "62",
+       "non_food",
+       "2017"
+      ],
+      "first": 513358.0,
+      "second": 513357.71,
+      "gap": 0.29
+     },
+     {
+      "key": [
+       "62",
+       "non_food",
+       "2018"
+      ],
+      "first": 591814.0,
+      "second": 591813.8,
+      "gap": 0.2
+     },
+     {
+      "key": [
+       "62",
+       "non_food",
+       "2020"
+      ],
+      "first": 657370.0,
+      "second": 657370.07,
+      "gap": 0.07
+     },
+     {
+      "key": [
+       "62",
+       "non_food",
+       "2021"
+      ],
+      "first": 682681.0,
+      "second": 682681.29,
+      "gap": 0.29
+     },
+     {
+      "key": [
+       "62",
+       "non_food",
+       "2022"
+      ],
+      "first": 679661.0,
+      "second": 679661.3,
+      "gap": 0.3
+     },
+     {
+      "key": [
+       "62",
+       "total",
+       "2017"
+      ],
+      "first": 1134979.0,
+      "second": 1134979.36,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "62",
+       "total",
+       "2018"
+      ],
+      "first": 1224307.0,
+      "second": 1224306.51,
+      "gap": 0.49
+     },
+     {
+      "key": [
+       "62",
+       "total",
+       "2020"
+      ],
+      "first": 1333318.0,
+      "second": 1333318.03,
+      "gap": 0.03
+     },
+     {
+      "key": [
+       "62",
+       "total",
+       "2021"
+      ],
+      "first": 1395826.0,
+      "second": 1395825.82,
+      "gap": 0.18
+     },
+     {
+      "key": [
+       "62",
+       "total",
+       "2022"
+      ],
+      "first": 1442295.0,
+      "second": 1442295.24,
+      "gap": 0.24
+     },
+     {
+      "key": [
+       "63",
+       "food",
+       "2017"
+      ],
+      "first": 612237.0,
+      "second": 612237.07,
+      "gap": 0.07
+     },
+     {
+      "key": [
+       "63",
+       "food",
+       "2018"
+      ],
+      "first": 626241.0,
+      "second": 626241.39,
+      "gap": 0.39
+     },
+     {
+      "key": [
+       "63",
+       "food",
+       "2020"
+      ],
+      "first": 675979.0,
+      "second": 675978.56,
+      "gap": 0.44
+     },
+     {
+      "key": [
+       "63",
+       "food",
+       "2022"
+      ],
+      "first": 727961.0,
+      "second": 727960.88,
+      "gap": 0.12
+     },
+     {
+      "key": [
+       "63",
+       "non_food",
+       "2017"
+      ],
+      "first": 545569.0,
+      "second": 545568.9,
+      "gap": 0.1
+     },
+     {
+      "key": [
+       "63",
+       "non_food",
+       "2018"
+      ],
+      "first": 600228.0,
+      "second": 600227.61,
+      "gap": 0.39
+     },
+     {
+      "key": [
+       "63",
+       "non_food",
+       "2020"
+      ],
+      "first": 659478.0,
+      "second": 659478.42,
+      "gap": 0.42
+     },
+     {
+      "key": [
+       "63",
+       "non_food",
+       "2021"
+      ],
+      "first": 682572.0,
+      "second": 682572.4,
+      "gap": 0.4
+     },
+     {
+      "key": [
+       "63",
+       "non_food",
+       "2022"
+      ],
+      "first": 679758.0,
+      "second": 679758.06,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "63",
+       "total",
+       "2017"
+      ],
+      "first": 1157806.0,
+      "second": 1157805.97,
+      "gap": 0.03
+     },
+     {
+      "key": [
+       "63",
+       "total",
+       "2020"
+      ],
+      "first": 1335457.0,
+      "second": 1335456.98,
+      "gap": 0.02
+     },
+     {
+      "key": [
+       "63",
+       "total",
+       "2021"
+      ],
+      "first": 1383800.0,
+      "second": 1383800.41,
+      "gap": 0.41
+     },
+     {
+      "key": [
+       "63",
+       "total",
+       "2022"
+      ],
+      "first": 1407719.0,
+      "second": 1407718.94,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "64",
+       "food",
+       "2017"
+      ],
+      "first": 663535.0,
+      "second": 663534.51,
+      "gap": 0.49
+     },
+     {
+      "key": [
+       "64",
+       "food",
+       "2018"
+      ],
+      "first": 702905.0,
+      "second": 702905.18,
+      "gap": 0.18
+     },
+     {
+      "key": [
+       "64",
+       "food",
+       "2020"
+      ],
+      "first": 790469.0,
+      "second": 790469.29,
+      "gap": 0.29
+     },
+     {
+      "key": [
+       "64",
+       "food",
+       "2021"
+      ],
+      "first": 736465.0,
+      "second": 736465.16,
+      "gap": 0.16
+     },
+     {
+      "key": [
+       "64",
+       "food",
+       "2022"
+      ],
+      "first": 813448.0,
+      "second": 813447.68,
+      "gap": 0.32
+     },
+     {
+      "key": [
+       "64",
+       "non_food",
+       "2017"
+      ],
+      "first": 780393.0,
+      "second": 780393.37,
+      "gap": 0.37
+     },
+     {
+      "key": [
+       "64",
+       "non_food",
+       "2018"
+      ],
+      "first": 857449.0,
+      "second": 857449.31,
+      "gap": 0.31
+     },
+     {
+      "key": [
+       "64",
+       "non_food",
+       "2020"
+      ],
+      "first": 963725.0,
+      "second": 963725.48,
+      "gap": 0.48
+     },
+     {
+      "key": [
+       "64",
+       "non_food",
+       "2021"
+      ],
+      "first": 982146.0,
+      "second": 982145.65,
+      "gap": 0.35
+     },
+     {
+      "key": [
+       "64",
+       "non_food",
+       "2022"
+      ],
+      "first": 984038.0,
+      "second": 984037.85,
+      "gap": 0.15
+     },
+     {
+      "key": [
+       "64",
+       "total",
+       "2017"
+      ],
+      "first": 1443928.0,
+      "second": 1443927.87,
+      "gap": 0.13
+     },
+     {
+      "key": [
+       "64",
+       "total",
+       "2018"
+      ],
+      "first": 1560354.0,
+      "second": 1560354.49,
+      "gap": 0.49
+     },
+     {
+      "key": [
+       "64",
+       "total",
+       "2020"
+      ],
+      "first": 1754195.0,
+      "second": 1754194.77,
+      "gap": 0.23
+     },
+     {
+      "key": [
+       "64",
+       "total",
+       "2021"
+      ],
+      "first": 1718611.0,
+      "second": 1718610.81,
+      "gap": 0.19
+     },
+     {
+      "key": [
+       "64",
+       "total",
+       "2022"
+      ],
+      "first": 1797486.0,
+      "second": 1797485.53,
+      "gap": 0.47
+     },
+     {
+      "key": [
+       "65",
+       "food",
+       "2017"
+      ],
+      "first": 667280.0,
+      "second": 667279.7,
+      "gap": 0.3
+     },
+     {
+      "key": [
+       "65",
+       "food",
+       "2018"
+      ],
+      "first": 671612.0,
+      "second": 671612.17,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "65",
+       "food",
+       "2020"
+      ],
+      "first": 743894.0,
+      "second": 743893.54,
+      "gap": 0.46
+     },
+     {
+      "key": [
+       "65",
+       "food",
+       "2021"
+      ],
+      "first": 742834.0,
+      "second": 742833.93,
+      "gap": 0.07
+     },
+     {
+      "key": [
+       "65",
+       "food",
+       "2022"
+      ],
+      "first": 758431.0,
+      "second": 758431.1,
+      "gap": 0.1
+     },
+     {
+      "key": [
+       "65",
+       "non_food",
+       "2017"
+      ],
+      "first": 636486.0,
+      "second": 636486.14,
+      "gap": 0.14
+     },
+     {
+      "key": [
+       "65",
+       "non_food",
+       "2018"
+      ],
+      "first": 742961.0,
+      "second": 742960.64,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "65",
+       "non_food",
+       "2020"
+      ],
+      "first": 801796.0,
+      "second": 801795.67,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "65",
+       "non_food",
+       "2021"
+      ],
+      "first": 811876.0,
+      "second": 811875.93,
+      "gap": 0.07
+     },
+     {
+      "key": [
+       "65",
+       "non_food",
+       "2022"
+      ],
+      "first": 811755.0,
+      "second": 811754.88,
+      "gap": 0.12
+     },
+     {
+      "key": [
+       "65",
+       "total",
+       "2017"
+      ],
+      "first": 1303766.0,
+      "second": 1303765.84,
+      "gap": 0.16
+     },
+     {
+      "key": [
+       "65",
+       "total",
+       "2018"
+      ],
+      "first": 1414573.0,
+      "second": 1414572.81,
+      "gap": 0.19
+     },
+     {
+      "key": [
+       "65",
+       "total",
+       "2020"
+      ],
+      "first": 1545689.0,
+      "second": 1545689.21,
+      "gap": 0.21
+     },
+     {
+      "key": [
+       "65",
+       "total",
+       "2021"
+      ],
+      "first": 1554710.0,
+      "second": 1554709.86,
+      "gap": 0.14
+     },
+     {
+      "key": [
+       "65",
+       "total",
+       "2022"
+      ],
+      "first": 1570186.0,
+      "second": 1570185.98,
+      "gap": 0.02
+     },
+     {
+      "key": [
+       "71",
+       "food",
+       "2017"
+      ],
+      "first": 594833.0,
+      "second": 594832.56,
+      "gap": 0.44
+     },
+     {
+      "key": [
+       "71",
+       "food",
+       "2018"
+      ],
+      "first": 560514.0,
+      "second": 560514.33,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "71",
+       "food",
+       "2020"
+      ],
+      "first": 590062.0,
+      "second": 590061.88,
+      "gap": 0.12
+     },
+     {
+      "key": [
+       "71",
+       "food",
+       "2021"
+      ],
+      "first": 612972.0,
+      "second": 612971.86,
+      "gap": 0.14
+     },
+     {
+      "key": [
+       "71",
+       "food",
+       "2022"
+      ],
+      "first": 674114.0,
+      "second": 674114.08,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "71",
+       "non_food",
+       "2017"
+      ],
+      "first": 511880.0,
+      "second": 511880.27,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "71",
+       "non_food",
+       "2018"
+      ],
+      "first": 601014.0,
+      "second": 601014.13,
+      "gap": 0.13
+     },
+     {
+      "key": [
+       "71",
+       "non_food",
+       "2020"
+      ],
+      "first": 621777.0,
+      "second": 621777.26,
+      "gap": 0.26
+     },
+     {
+      "key": [
+       "71",
+       "non_food",
+       "2021"
+      ],
+      "first": 598708.0,
+      "second": 598707.81,
+      "gap": 0.19
+     },
+     {
+      "key": [
+       "71",
+       "non_food",
+       "2022"
+      ],
+      "first": 562591.0,
+      "second": 562591.43,
+      "gap": 0.43
+     },
+     {
+      "key": [
+       "71",
+       "total",
+       "2017"
+      ],
+      "first": 1106713.0,
+      "second": 1106712.83,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "71",
+       "total",
+       "2018"
+      ],
+      "first": 1161528.0,
+      "second": 1161528.46,
+      "gap": 0.46
+     },
+     {
+      "key": [
+       "71",
+       "total",
+       "2020"
+      ],
+      "first": 1211839.0,
+      "second": 1211839.14,
+      "gap": 0.14
+     },
+     {
+      "key": [
+       "71",
+       "total",
+       "2021"
+      ],
+      "first": 1211680.0,
+      "second": 1211679.67,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "71",
+       "total",
+       "2022"
+      ],
+      "first": 1236706.0,
+      "second": 1236705.51,
+      "gap": 0.49
+     },
+     {
+      "key": [
+       "72",
+       "food",
+       "2017"
+      ],
+      "first": 480987.0,
+      "second": 480987.35,
+      "gap": 0.35
+     },
+     {
+      "key": [
+       "72",
+       "food",
+       "2018"
+      ],
+      "first": 474811.0,
+      "second": 474810.78,
+      "gap": 0.22
+     },
+     {
+      "key": [
+       "72",
+       "food",
+       "2020"
+      ],
+      "first": 516839.0,
+      "second": 516838.74,
+      "gap": 0.26
+     },
+     {
+      "key": [
+       "72",
+       "food",
+       "2021"
+      ],
+      "first": 512309.0,
+      "second": 512309.16,
+      "gap": 0.16
+     },
+     {
+      "key": [
+       "72",
+       "food",
+       "2022"
+      ],
+      "first": 561739.0,
+      "second": 561738.97,
+      "gap": 0.03
+     },
+     {
+      "key": [
+       "72",
+       "non_food",
+       "2017"
+      ],
+      "first": 437362.0,
+      "second": 437362.07,
+      "gap": 0.07
+     },
+     {
+      "key": [
+       "72",
+       "non_food",
+       "2018"
+      ],
+      "first": 465824.0,
+      "second": 465823.53,
+      "gap": 0.47
+     },
+     {
+      "key": [
+       "72",
+       "non_food",
+       "2020"
+      ],
+      "first": 518938.0,
+      "second": 518938.32,
+      "gap": 0.32
+     },
+     {
+      "key": [
+       "72",
+       "non_food",
+       "2021"
+      ],
+      "first": 539396.0,
+      "second": 539396.49,
+      "gap": 0.49
+     },
+     {
+      "key": [
+       "72",
+       "non_food",
+       "2022"
+      ],
+      "first": 521940.0,
+      "second": 521939.99,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "72",
+       "total",
+       "2017"
+      ],
+      "first": 918349.0,
+      "second": 918349.42,
+      "gap": 0.42
+     },
+     {
+      "key": [
+       "72",
+       "total",
+       "2018"
+      ],
+      "first": 940635.0,
+      "second": 940634.31,
+      "gap": 0.69
+     },
+     {
+      "key": [
+       "72",
+       "total",
+       "2020"
+      ],
+      "first": 1035777.0,
+      "second": 1035777.06,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "72",
+       "total",
+       "2021"
+      ],
+      "first": 1051706.0,
+      "second": 1051705.66,
+      "gap": 0.34
+     },
+     {
+      "key": [
+       "72",
+       "total",
+       "2022"
+      ],
+      "first": 1083679.0,
+      "second": 1083678.96,
+      "gap": 0.04
+     },
+     {
+      "key": [
+       "73",
+       "food",
+       "2017"
+      ],
+      "first": 450618.0,
+      "second": 450618.06,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "73",
+       "food",
+       "2018"
+      ],
+      "first": 495465.0,
+      "second": 495464.54,
+      "gap": 0.46
+     },
+     {
+      "key": [
+       "73",
+       "food",
+       "2020"
+      ],
+      "first": 516183.0,
+      "second": 516183.11,
+      "gap": 0.11
+     },
+     {
+      "key": [
+       "73",
+       "food",
+       "2021"
+      ],
+      "first": 533482.0,
+      "second": 533482.09,
+      "gap": 0.09
+     },
+     {
+      "key": [
+       "73",
+       "food",
+       "2022"
+      ],
+      "first": 566224.0,
+      "second": 566223.75,
+      "gap": 0.25
+     },
+     {
+      "key": [
+       "73",
+       "non_food",
+       "2017"
+      ],
+      "first": 477290.0,
+      "second": 477290.33,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "73",
+       "non_food",
+       "2018"
+      ],
+      "first": 520779.0,
+      "second": 520779.04,
+      "gap": 0.04
+     },
+     {
+      "key": [
+       "73",
+       "non_food",
+       "2020"
+      ],
+      "first": 541681.0,
+      "second": 541681.06,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "73",
+       "non_food",
+       "2021"
+      ],
+      "first": 570615.0,
+      "second": 570614.67,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "73",
+       "non_food",
+       "2022"
+      ],
+      "first": 576388.0,
+      "second": 576387.95,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "73",
+       "total",
+       "2017"
+      ],
+      "first": 927908.0,
+      "second": 927908.39,
+      "gap": 0.39
+     },
+     {
+      "key": [
+       "73",
+       "total",
+       "2018"
+      ],
+      "first": 1016244.0,
+      "second": 1016243.58,
+      "gap": 0.42
+     },
+     {
+      "key": [
+       "73",
+       "total",
+       "2020"
+      ],
+      "first": 1057864.0,
+      "second": 1057864.17,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "73",
+       "total",
+       "2021"
+      ],
+      "first": 1104097.0,
+      "second": 1104096.77,
+      "gap": 0.23
+     },
+     {
+      "key": [
+       "73",
+       "total",
+       "2022"
+      ],
+      "first": 1142612.0,
+      "second": 1142611.7,
+      "gap": 0.3
+     },
+     {
+      "key": [
+       "74",
+       "food",
+       "2017"
+      ],
+      "first": 409857.0,
+      "second": 409856.81,
+      "gap": 0.19
+     },
+     {
+      "key": [
+       "74",
+       "food",
+       "2018"
+      ],
+      "first": 457497.0,
+      "second": 457496.66,
+      "gap": 0.34
+     },
+     {
+      "key": [
+       "74",
+       "food",
+       "2020"
+      ],
+      "first": 506740.0,
+      "second": 506739.57,
+      "gap": 0.43
+     },
+     {
+      "key": [
+       "74",
+       "food",
+       "2021"
+      ],
+      "first": 509723.0,
+      "second": 509723.28,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "74",
+       "food",
+       "2022"
+      ],
+      "first": 535048.0,
+      "second": 535048.46,
+      "gap": 0.46
+     },
+     {
+      "key": [
+       "74",
+       "non_food",
+       "2017"
+      ],
+      "first": 443863.0,
+      "second": 443862.72,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "74",
+       "non_food",
+       "2018"
+      ],
+      "first": 512253.0,
+      "second": 512252.73,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "74",
+       "non_food",
+       "2020"
+      ],
+      "first": 531060.0,
+      "second": 531059.69,
+      "gap": 0.31
+     },
+     {
+      "key": [
+       "74",
+       "non_food",
+       "2021"
+      ],
+      "first": 560770.0,
+      "second": 560769.94,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "74",
+       "non_food",
+       "2022"
+      ],
+      "first": 576547.0,
+      "second": 576546.85,
+      "gap": 0.15
+     },
+     {
+      "key": [
+       "74",
+       "total",
+       "2017"
+      ],
+      "first": 853720.0,
+      "second": 853719.53,
+      "gap": 0.47
+     },
+     {
+      "key": [
+       "74",
+       "total",
+       "2018"
+      ],
+      "first": 969750.0,
+      "second": 969749.39,
+      "gap": 0.61
+     },
+     {
+      "key": [
+       "74",
+       "total",
+       "2020"
+      ],
+      "first": 1037799.0,
+      "second": 1037799.26,
+      "gap": 0.26
+     },
+     {
+      "key": [
+       "74",
+       "total",
+       "2021"
+      ],
+      "first": 1070493.0,
+      "second": 1070493.21,
+      "gap": 0.21
+     },
+     {
+      "key": [
+       "74",
+       "total",
+       "2022"
+      ],
+      "first": 1111595.0,
+      "second": 1111595.3,
+      "gap": 0.3
+     },
+     {
+      "key": [
+       "75",
+       "food",
+       "2017"
+      ],
+      "first": 441999.0,
+      "second": 441998.96,
+      "gap": 0.04
+     },
+     {
+      "key": [
+       "75",
+       "food",
+       "2018"
+      ],
+      "first": 423926.0,
+      "second": 423925.99,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "75",
+       "food",
+       "2020"
+      ],
+      "first": 476069.0,
+      "second": 476069.17,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "75",
+       "food",
+       "2021"
+      ],
+      "first": 529729.0,
+      "second": 529729.27,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "75",
+       "food",
+       "2022"
+      ],
+      "first": 534461.0,
+      "second": 534461.48,
+      "gap": 0.48
+     },
+     {
+      "key": [
+       "75",
+       "non_food",
+       "2017"
+      ],
+      "first": 456384.0,
+      "second": 456383.55,
+      "gap": 0.45
+     },
+     {
+      "key": [
+       "75",
+       "non_food",
+       "2018"
+      ],
+      "first": 475802.0,
+      "second": 475801.89,
+      "gap": 0.11
+     },
+     {
+      "key": [
+       "75",
+       "non_food",
+       "2020"
+      ],
+      "first": 592213.0,
+      "second": 592212.63,
+      "gap": 0.37
+     },
+     {
+      "key": [
+       "75",
+       "non_food",
+       "2021"
+      ],
+      "first": 616061.0,
+      "second": 616060.84,
+      "gap": 0.16
+     },
+     {
+      "key": [
+       "75",
+       "non_food",
+       "2022"
+      ],
+      "first": 608535.0,
+      "second": 608535.25,
+      "gap": 0.25
+     },
+     {
+      "key": [
+       "75",
+       "total",
+       "2017"
+      ],
+      "first": 898383.0,
+      "second": 898382.51,
+      "gap": 0.49
+     },
+     {
+      "key": [
+       "75",
+       "total",
+       "2018"
+      ],
+      "first": 899728.0,
+      "second": 899727.88,
+      "gap": 0.12
+     },
+     {
+      "key": [
+       "75",
+       "total",
+       "2020"
+      ],
+      "first": 1068282.0,
+      "second": 1068281.8,
+      "gap": 0.2
+     },
+     {
+      "key": [
+       "75",
+       "total",
+       "2021"
+      ],
+      "first": 1145790.0,
+      "second": 1145790.12,
+      "gap": 0.12
+     },
+     {
+      "key": [
+       "75",
+       "total",
+       "2022"
+      ],
+      "first": 1142997.0,
+      "second": 1142996.73,
+      "gap": 0.27
+     },
+     {
+      "key": [
+       "76",
+       "food",
+       "2017"
+      ],
+      "first": 393943.0,
+      "second": 393942.7,
+      "gap": 0.3
+     },
+     {
+      "key": [
+       "76",
+       "food",
+       "2018"
+      ],
+      "first": 433929.0,
+      "second": 433929.17,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "76",
+       "food",
+       "2020"
+      ],
+      "first": 457059.0,
+      "second": 457059.22,
+      "gap": 0.22
+     },
+     {
+      "key": [
+       "76",
+       "food",
+       "2021"
+      ],
+      "first": 453031.0,
+      "second": 453030.94,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "76",
+       "food",
+       "2022"
+      ],
+      "first": 491876.0,
+      "second": 491876.25,
+      "gap": 0.25
+     },
+     {
+      "key": [
+       "76",
+       "non_food",
+       "2017"
+      ],
+      "first": 328683.0,
+      "second": 328683.05,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "76",
+       "non_food",
+       "2018"
+      ],
+      "first": 385717.0,
+      "second": 385717.2,
+      "gap": 0.2
+     },
+     {
+      "key": [
+       "76",
+       "non_food",
+       "2020"
+      ],
+      "first": 436701.0,
+      "second": 436701.42,
+      "gap": 0.42
+     },
+     {
+      "key": [
+       "76",
+       "non_food",
+       "2021"
+      ],
+      "first": 439349.0,
+      "second": 439349.35,
+      "gap": 0.35
+     },
+     {
+      "key": [
+       "76",
+       "non_food",
+       "2022"
+      ],
+      "first": 464029.0,
+      "second": 464029.03,
+      "gap": 0.03
+     },
+     {
+      "key": [
+       "76",
+       "total",
+       "2017"
+      ],
+      "first": 722626.0,
+      "second": 722625.75,
+      "gap": 0.25
+     },
+     {
+      "key": [
+       "76",
+       "total",
+       "2018"
+      ],
+      "first": 819646.0,
+      "second": 819646.37,
+      "gap": 0.37
+     },
+     {
+      "key": [
+       "76",
+       "total",
+       "2020"
+      ],
+      "first": 893761.0,
+      "second": 893760.64,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "76",
+       "total",
+       "2021"
+      ],
+      "first": 892380.0,
+      "second": 892380.3,
+      "gap": 0.3
+     },
+     {
+      "key": [
+       "76",
+       "total",
+       "2022"
+      ],
+      "first": 955905.0,
+      "second": 955905.28,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "81",
+       "food",
+       "2017"
+      ],
+      "first": 485033.0,
+      "second": 485032.59,
+      "gap": 0.41
+     },
+     {
+      "key": [
+       "81",
+       "food",
+       "2018"
+      ],
+      "first": 491426.0,
+      "second": 491426.44,
+      "gap": 0.44
+     },
+     {
+      "key": [
+       "81",
+       "food",
+       "2020"
+      ],
+      "first": 532135.0,
+      "second": 532135.38,
+      "gap": 0.38
+     },
+     {
+      "key": [
+       "81",
+       "food",
+       "2021"
+      ],
+      "first": 536327.0,
+      "second": 536326.5,
+      "gap": 0.5
+     },
+     {
+      "key": [
+       "81",
+       "food",
+       "2022"
+      ],
+      "first": 589485.0,
+      "second": 589485.16,
+      "gap": 0.16
+     },
+     {
+      "key": [
+       "81",
+       "non_food",
+       "2017"
+      ],
+      "first": 418827.0,
+      "second": 418826.72,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "81",
+       "non_food",
+       "2018"
+      ],
+      "first": 474411.0,
+      "second": 474411.17,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "81",
+       "non_food",
+       "2020"
+      ],
+      "first": 551786.0,
+      "second": 551786.07,
+      "gap": 0.07
+     },
+     {
+      "key": [
+       "81",
+       "non_food",
+       "2021"
+      ],
+      "first": 576419.0,
+      "second": 576419.33,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "81",
+       "non_food",
+       "2022"
+      ],
+      "first": 580343.0,
+      "second": 580343.17,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "81",
+       "total",
+       "2017"
+      ],
+      "first": 903859.0,
+      "second": 903859.3,
+      "gap": 0.3
+     },
+     {
+      "key": [
+       "81",
+       "total",
+       "2018"
+      ],
+      "first": 965837.0,
+      "second": 965837.61,
+      "gap": 0.61
+     },
+     {
+      "key": [
+       "81",
+       "total",
+       "2020"
+      ],
+      "first": 1083921.0,
+      "second": 1083921.45,
+      "gap": 0.45
+     },
+     {
+      "key": [
+       "81",
+       "total",
+       "2021"
+      ],
+      "first": 1112746.0,
+      "second": 1112745.83,
+      "gap": 0.17
+     },
+     {
+      "key": [
+       "81",
+       "total",
+       "2022"
+      ],
+      "first": 1169828.0,
+      "second": 1169828.33,
+      "gap": 0.33
+     },
+     {
+      "key": [
+       "82",
+       "food",
+       "2017"
+      ],
+      "first": 486734.0,
+      "second": 486734.45,
+      "gap": 0.45
+     },
+     {
+      "key": [
+       "82",
+       "food",
+       "2018"
+      ],
+      "first": 502810.0,
+      "second": 502810.2,
+      "gap": 0.2
+     },
+     {
+      "key": [
+       "82",
+       "food",
+       "2020"
+      ],
+      "first": 537605.0,
+      "second": 537605.49,
+      "gap": 0.49
+     },
+     {
+      "key": [
+       "82",
+       "food",
+       "2021"
+      ],
+      "first": 556903.0,
+      "second": 556903.28,
+      "gap": 0.28
+     },
+     {
+      "key": [
+       "82",
+       "food",
+       "2022"
+      ],
+      "first": 585162.0,
+      "second": 585162.43,
+      "gap": 0.43
+     },
+     {
+      "key": [
+       "82",
+       "non_food",
+       "2017"
+      ],
+      "first": 440060.0,
+      "second": 440060.24,
+      "gap": 0.24
+     },
+     {
+      "key": [
+       "82",
+       "non_food",
+       "2018"
+      ],
+      "first": 503588.0,
+      "second": 503588.16,
+      "gap": 0.16
+     },
+     {
+      "key": [
+       "82",
+       "non_food",
+       "2020"
+      ],
+      "first": 555218.0,
+      "second": 555218.26,
+      "gap": 0.26
+     },
+     {
+      "key": [
+       "82",
+       "non_food",
+       "2021"
+      ],
+      "first": 572438.0,
+      "second": 572438.1,
+      "gap": 0.1
+     },
+     {
+      "key": [
+       "82",
+       "non_food",
+       "2022"
+      ],
+      "first": 543424.0,
+      "second": 543423.92,
+      "gap": 0.08
+     },
+     {
+      "key": [
+       "82",
+       "total",
+       "2017"
+      ],
+      "first": 926795.0,
+      "second": 926794.69,
+      "gap": 0.31
+     },
+     {
+      "key": [
+       "82",
+       "total",
+       "2018"
+      ],
+      "first": 1006398.0,
+      "second": 1006398.37,
+      "gap": 0.37
+     },
+     {
+      "key": [
+       "82",
+       "total",
+       "2020"
+      ],
+      "first": 1092824.0,
+      "second": 1092823.75,
+      "gap": 0.25
+     },
+     {
+      "key": [
+       "82",
+       "total",
+       "2021"
+      ],
+      "first": 1129341.0,
+      "second": 1129341.37,
+      "gap": 0.37
+     },
+     {
+      "key": [
+       "82",
+       "total",
+       "2022"
+      ],
+      "first": 1128586.0,
+      "second": 1128586.35,
+      "gap": 0.35
+     },
+     {
+      "key": [
+       "91",
+       "food",
+       "2017"
+      ],
+      "first": 551032.0,
+      "second": 551032.1,
+      "gap": 0.1
+     },
+     {
+      "key": [
+       "91",
+       "food",
+       "2018"
+      ],
+      "first": 614330.0,
+      "second": 614330.23,
+      "gap": 0.23
+     },
+     {
+      "key": [
+       "91",
+       "food",
+       "2020"
+      ],
+      "first": 687944.0,
+      "second": 687943.88,
+      "gap": 0.12
+     },
+     {
+      "key": [
+       "91",
+       "food",
+       "2021"
+      ],
+      "first": 698303.0,
+      "second": 698303.14,
+      "gap": 0.14
+     },
+     {
+      "key": [
+       "91",
+       "food",
+       "2022"
+      ],
+      "first": 723855.0,
+      "second": 723854.71,
+      "gap": 0.29
+     },
+     {
+      "key": [
+       "91",
+       "non_food",
+       "2017"
+      ],
+      "first": 570860.0,
+      "second": 570859.84,
+      "gap": 0.16
+     },
+     {
+      "key": [
+       "91",
+       "non_food",
+       "2018"
+      ],
+      "first": 631187.0,
+      "second": 631186.81,
+      "gap": 0.19
+     },
+     {
+      "key": [
+       "91",
+       "non_food",
+       "2020"
+      ],
+      "first": 707070.0,
+      "second": 707070.04,
+      "gap": 0.04
+     },
+     {
+      "key": [
+       "91",
+       "non_food",
+       "2021"
+      ],
+      "first": 749178.0,
+      "second": 749177.85,
+      "gap": 0.15
+     },
+     {
+      "key": [
+       "91",
+       "non_food",
+       "2022"
+      ],
+      "first": 724651.0,
+      "second": 724650.68,
+      "gap": 0.32
+     },
+     {
+      "key": [
+       "91",
+       "total",
+       "2017"
+      ],
+      "first": 1121892.0,
+      "second": 1121891.94,
+      "gap": 0.06
+     },
+     {
+      "key": [
+       "91",
+       "total",
+       "2018"
+      ],
+      "first": 1245517.0,
+      "second": 1245517.04,
+      "gap": 0.04
+     },
+     {
+      "key": [
+       "91",
+       "total",
+       "2020"
+      ],
+      "first": 1395014.0,
+      "second": 1395013.91,
+      "gap": 0.09
+     },
+     {
+      "key": [
+       "91",
+       "total",
+       "2021"
+      ],
+      "first": 1447481.0,
+      "second": 1447480.99,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "91",
+       "total",
+       "2022"
+      ],
+      "first": 1448505.0,
+      "second": 1448505.39,
+      "gap": 0.39
+     },
+     {
+      "key": [
+       "94",
+       "food",
+       "2017"
+      ],
+      "first": 638354.0,
+      "second": 638353.51,
+      "gap": 0.49
+     },
+     {
+      "key": [
+       "94",
+       "food",
+       "2018"
+      ],
+      "first": 623987.0,
+      "second": 623986.57,
+      "gap": 0.43
+     },
+     {
+      "key": [
+       "94",
+       "food",
+       "2021"
+      ],
+      "first": 792781.0,
+      "second": 792780.9,
+      "gap": 0.1
+     },
+     {
+      "key": [
+       "94",
+       "food",
+       "2022"
+      ],
+      "first": 858106.0,
+      "second": 858106.47,
+      "gap": 0.47
+     },
+     {
+      "key": [
+       "94",
+       "non_food",
+       "2017"
+      ],
+      "first": 441507.0,
+      "second": 441507.44,
+      "gap": 0.44
+     },
+     {
+      "key": [
+       "94",
+       "non_food",
+       "2018"
+      ],
+      "first": 500709.0,
+      "second": 500709.37,
+      "gap": 0.37
+     },
+     {
+      "key": [
+       "94",
+       "non_food",
+       "2020"
+      ],
+      "first": 585893.0,
+      "second": 585893.36,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "94",
+       "non_food",
+       "2021"
+      ],
+      "first": 575598.0,
+      "second": 575598.21,
+      "gap": 0.21
+     },
+     {
+      "key": [
+       "94",
+       "non_food",
+       "2022"
+      ],
+      "first": 596214.0,
+      "second": 596214.24,
+      "gap": 0.24
+     },
+     {
+      "key": [
+       "94",
+       "total",
+       "2017"
+      ],
+      "first": 1079861.0,
+      "second": 1079860.95,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "94",
+       "total",
+       "2018"
+      ],
+      "first": 1124696.0,
+      "second": 1124695.95,
+      "gap": 0.05
+     },
+     {
+      "key": [
+       "94",
+       "total",
+       "2020"
+      ],
+      "first": 1309714.0,
+      "second": 1309714.36,
+      "gap": 0.36
+     },
+     {
+      "key": [
+       "94",
+       "total",
+       "2021"
+      ],
+      "first": 1368379.0,
+      "second": 1368379.11,
+      "gap": 0.11
+     },
+     {
+      "key": [
+       "94",
+       "total",
+       "2022"
+      ],
+      "first": 1454321.0,
+      "second": 1454320.71,
+      "gap": 0.29
+     }
+    ],
+    "first": "static table 945, whole rupiah",
+    "second": "statistics table, one file per year, 2 decimals (written ,00 in 2019 and 2023-2025)",
+    "key": "[province_code, item, period]",
+    "tolerance_reason": "The static table rounds to whole rupiah, so a copy with 2 decimals differs by up to 0.5 rupiah; its 2018 totals are its rounded food plus its rounded non_food, which differ from the total rounded on its own by up to 1",
+    "within_half_rupiah": 510,
+    "beyond_half_rupiah": {
+     "keys": [
+      [
+       "13",
+       "total",
+       "2018"
+      ],
+      [
+       "14",
+       "total",
+       "2018"
+      ],
+      [
+       "15",
+       "total",
+       "2018"
+      ],
+      [
+       "16",
+       "total",
+       "2018"
+      ],
+      [
+       "31",
+       "total",
+       "2018"
+      ],
+      [
+       "32",
+       "total",
+       "2018"
+      ],
+      [
+       "72",
+       "total",
+       "2018"
+      ],
+      [
+       "74",
+       "total",
+       "2018"
+      ],
+      [
+       "81",
+       "total",
+       "2018"
+      ]
+     ],
+     "reason": "2018 totals: the static total equals the static food plus the static non_food, both already rounded (checked for each key)"
+    },
+    "exact_by_year": {
+     "2017": 1,
+     "2018": 1,
+     "2019": 105,
+     "2020": 1,
+     "2021": 3,
+     "2022": 0,
+     "2023": 105,
+     "2024": 117,
+     "2025": 117
+    },
+    "compared_by_year": {
+     "2017": 105,
+     "2018": 105,
+     "2019": 105,
+     "2020": 105,
+     "2021": 105,
+     "2022": 105,
+     "2023": 105,
+     "2024": 117,
+     "2025": 117
+    },
+    "not_compared": {
+     "yearly '...' cells, '-' in the static table": [
+      [
+       "92",
+       "food",
+       "2023"
+      ],
+      [
+       "92",
+       "non_food",
+       "2023"
+      ],
+      [
+       "92",
+       "total",
+       "2023"
+      ],
+      [
+       "95",
+       "food",
+       "2023"
+      ],
+      [
+       "95",
+       "non_food",
+       "2023"
+      ],
+      [
+       "95",
+       "total",
+       "2023"
+      ],
+      [
+       "96",
+       "food",
+       "2023"
+      ],
+      [
+       "96",
+       "non_food",
+       "2023"
+      ],
+      [
+       "96",
+       "total",
+       "2023"
+      ],
+      [
+       "97",
+       "food",
+       "2023"
+      ],
+      [
+       "97",
+       "non_food",
+       "2023"
+      ],
+      [
+       "97",
+       "total",
+       "2023"
+      ]
+     ],
+     "static table only": "2011-2016"
+    }
+   },
+   {
+    "check": "status: no cell of either source carries a revision marker, and no note gives a status, so every row is final"
+   }
+  ],
+  "plausible_ranges": {
+   "spending_rupiah": [
+    100000,
+    5000000
+   ],
+   "spending_change_pct": [
+    -10,
+    25
+   ],
+   "food_plus_non_food_minus_total": [
+    -1,
+    1
+   ]
+  },
+  "plausibility_compared": {
+   "spending_rupiah": 1587,
+   "spending_change_pct": 1461,
+   "food_plus_non_food_minus_total": 529
+  },
+  "change_not_compared": [
+   {
+    "province_code": "64",
+    "period": "2015",
+    "reason": "Kalimantan Timur: 2014 includes Kalimantan Utara, 2015 does not"
+   },
+   {
+    "province_code": "91",
+    "period": "2024",
+    "reason": "Papua Barat: 2023 includes Papua Barat Daya, 2024 does not"
+   },
+   {
+    "province_code": "94",
+    "period": "2024",
+    "reason": "Papua: 2023 includes Papua Selatan, Papua Tengah and Papua Pegunungan, 2024 does not"
+   }
+  ],
+  "flags": [
+   {
+    "check": "spending_change_pct",
+    "province_code": "15",
+    "item": "non_food",
+    "period": "2015",
+    "from_period": "2014",
+    "rupiah": {
+     "2014": 317342.0,
+     "2015": 412239.0
+    },
+    "value": 29.9037,
+    "range": [
+     -10,
+     25
+    ]
+   },
+   {
+    "check": "spending_change_pct",
+    "province_code": "16",
+    "item": "non_food",
+    "period": "2012",
+    "from_period": "2011",
+    "rupiah": {
+     "2011": 218859.0,
+     "2012": 290035.0
+    },
+    "value": 32.5214,
+    "range": [
+     -10,
+     25
+    ]
+   },
+   {
+    "check": "spending_change_pct",
+    "province_code": "17",
+    "item": "non_food",
+    "period": "2013",
+    "from_period": "2012",
+    "rupiah": {
+     "2012": 235436.0,
+     "2013": 306290.0
+    },
+    "value": 30.0948,
+    "range": [
+     -10,
+     25
+    ]
+   },
+   {
+    "check": "spending_change_pct",
+    "province_code": "34",
+    "item": "non_food",
+    "period": "2015",
+    "from_period": "2014",
+    "rupiah": {
+     "2014": 444796.0,
+     "2015": 563591.0
+    },
+    "value": 26.7077,
+    "range": [
+     -10,
+     25
+    ]
+   },
+   {
+    "check": "spending_change_pct",
+    "province_code": "35",
+    "item": "non_food",
+    "period": "2015",
+    "from_period": "2014",
+    "rupiah": {
+     "2014": 320664.0,
+     "2015": 449479.0
+    },
+    "value": 40.1713,
+    "range": [
+     -10,
+     25
+    ]
+   },
+   {
+    "check": "spending_change_pct",
+    "province_code": "35",
+    "item": "total",
+    "period": "2015",
+    "from_period": "2014",
+    "rupiah": {
+     "2014": 659839.0,
+     "2015": 830472.0
+    },
+    "value": 25.8598,
+    "range": [
+     -10,
+     25
+    ]
+   },
+   {
+    "check": "spending_change_pct",
+    "province_code": "51",
+    "item": "food",
+    "period": "2013",
+    "from_period": "2012",
+    "rupiah": {
+     "2012": 330963.0,
+     "2013": 449048.0
+    },
+    "value": 35.6792,
+    "range": [
+     -10,
+     25
+    ]
+   },
+   {
+    "check": "spending_change_pct",
+    "province_code": "51",
+    "item": "food",
+    "period": "2015",
+    "from_period": "2014",
+    "rupiah": {
+     "2014": 471149.0,
+     "2015": 421577.0
+    },
+    "value": -10.5215,
+    "range": [
+     -10,
+     25
+    ]
+   },
+   {
+    "check": "spending_change_pct",
+    "province_code": "52",
+    "item": "non_food",
+    "period": "2022",
+    "from_period": "2021",
+    "rupiah": {
+     "2021": 559650.0,
+     "2022": 493696.0
+    },
+    "value": -11.7849,
+    "range": [
+     -10,
+     25
+    ]
+   },
+   {
+    "check": "spending_change_pct",
+    "province_code": "53",
+    "item": "food",
+    "period": "2017",
+    "from_period": "2016",
+    "rupiah": {
+     "2016": 312312.0,
+     "2017": 399251.0
+    },
+    "value": 27.8372,
+    "range": [
+     -10,
+     25
+    ]
+   },
+   {
+    "check": "spending_change_pct",
+    "province_code": "74",
+    "item": "non_food",
+    "period": "2016",
+    "from_period": "2015",
+    "rupiah": {
+     "2015": 344281.0,
+     "2016": 434835.0
+    },
+    "value": 26.3024,
+    "range": [
+     -10,
+     25
+    ]
+   },
+   {
+    "check": "spending_change_pct",
+    "province_code": "94",
+    "item": "food",
+    "period": "2014",
+    "from_period": "2013",
+    "rupiah": {
+     "2013": 379876.0,
+     "2014": 487272.0
+    },
+    "value": 28.2713,
+    "range": [
+     -10,
+     25
+    ]
+   },
+   {
+    "check": "spending_change_pct",
+    "province_code": "94",
+    "item": "non_food",
+    "period": "2014",
+    "from_period": "2013",
+    "rupiah": {
+     "2013": 296036.0,
+     "2014": 212753.0
+    },
+    "value": -28.1327,
+    "range": [
+     -10,
+     25
+    ]
+   },
+   {
+    "check": "spending_change_pct",
+    "province_code": "94",
+    "item": "non_food",
+    "period": "2015",
+    "from_period": "2014",
+    "rupiah": {
+     "2014": 212753.0,
+     "2015": 356371.0
+    },
+    "value": 67.5046,
+    "range": [
+     -10,
+     25
+    ]
+   },
+   {
+    "check": "food_plus_non_food_minus_total",
+    "province_code": "52",
+    "period": "2012",
+    "rupiah": {
+     "food": 291176.0,
+     "non_food": 234901.0,
+     "total": 484661.0
+    },
+    "value": 41416.0,
+    "range": [
+     -1,
+     1
+    ]
+   }
+  ]
+ },
+ "file": "20261103_bps-province-household-spending.csv",
+ "rows": 1587,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2011-2025-static-table.json": {
+   "sha256": "9efaefd2cc03595a4753f2a7ecb2a2f3d2de6ee19871357ea2eddd3351aea288"
+  },
+  "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2017.json": {
+   "sha256": "19e7d3833d5595deffdbaf64bdb5cf340e461aab0b1679c60b7a60d6c3bc3d10"
+  },
+  "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2018.json": {
+   "sha256": "744975c80a215ba263e74b52b70a893e75a8afb75eb70b17ba81f7b612244602"
+  },
+  "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2019.json": {
+   "sha256": "f418674794e6b4d84b40519914650f2f8274567510b9ea702ca55d0478f37477"
+  },
+  "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2020.json": {
+   "sha256": "37c514e4f765c9e27adc8f336888fd8c37a60f2c19d84f23960b1272b97bfe22"
+  },
+  "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2021.json": {
+   "sha256": "b00217d1b099c269e39903a79b5b47f71fe5b10e465d35bb3dbe8e7b3047d29c"
+  },
+  "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2022.json": {
+   "sha256": "0a858ebf96cc2f27417823bcaa5c2f990b67bb2a85ab3b89b069a759358ac83c"
+  },
+  "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2023.json": {
+   "sha256": "3ca589f4dd9aaa60dff33b31f4b1cac13da5af1977d741576ed2bad3caeee4d6"
+  },
+  "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2024.json": {
+   "sha256": "1704c4bc707a3adb3a7d69b181c800a38ca866c443ccfe507d66fed1e11c937b"
+  },
+  "raw/household-spending/20261103_bps-per-capita-expenditure-by-province-2025.json": {
+   "sha256": "8975a1a49337c495799cb93cb229eedf467b5787a4d84558276a2641ae59369d"
+  }
+ }
+}

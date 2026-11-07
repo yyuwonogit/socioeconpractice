@@ -1,0 +1,39 @@
+unit,province,extractive_share_pct,group,grdp_pc_m,real_spending_m,fitted_m,residual_log
+11,Aceh,22.715758,high extraction,28.1446,11.191,10.83453,0.032372
+12,Sumatera Utara,34.294107,high extraction,41.88591,11.898,11.681589,0.018356
+13,Sumatera Barat,12.97691,low extraction,34.85417,12.041,11.282128,0.065098
+14,Riau,68.281918,high extraction,87.88674,12.233,13.441206,-0.094188
+15,Jambi,49.546978,high extraction,49.24588,12.018,12.045146,-0.002256
+16,Sumatera Selatan,35.67513,high extraction,44.73149,12.416,11.827866,0.048528
+17,Bengkulu,11.73675,low extraction,26.69113,12.197,10.726306,0.128491
+18,Lampung,12.512638,low extraction,31.1271,11.683,11.043125,0.056327
+19,Kepulauan Bangka Belitung,28.025306,high extraction,40.81139,13.837,11.624253,0.174252
+21,Kepulauan Riau,14.778285,low extraction,101.42723,15.881,13.810849,0.139669
+31,DKI Jakarta,0.917617,low extraction,211.95377,20.676,15.878951,0.263979
+32,Jawa Barat,5.803073,low extraction,36.35447,12.447,11.37251,0.090281
+33,Jawa Tengah,8.880289,low extraction,31.88656,12.746,11.093639,0.138846
+34,DI Yogyakarta,1.777808,low extraction,34.75717,15.855,11.276177,0.340793
+35,Jawa Timur,9.977922,low extraction,48.44374,13.509,12.007753,0.117804
+36,Banten,8.704592,low extraction,44.68783,13.498,11.825679,0.132268
+51,Bali,3.962203,low extraction,39.8974,15.383,11.574512,0.284458
+52,Nusa Tenggara Barat,21.166242,high extraction,19.70632,11.922,10.127542,0.163127
+53,Nusa Tenggara Timur,4.477791,low extraction,14.31007,8.735,9.532225,-0.08734
+61,Kalimantan Barat,35.342135,high extraction,29.7138,10.689,10.946398,-0.023795
+62,Kalimantan Tengah,42.312681,high extraction,43.71851,12.612,11.776682,0.068527
+63,Kalimantan Selatan,32.761268,high extraction,38.15538,13.757,11.477091,0.181195
+64,Kalimantan Timur,52.974008,high extraction,139.81182,14.254,14.676102,-0.029183
+65,Kalimantan Utara,36.999382,high extraction,102.04464,10.568,13.826726,-0.268773
+71,Sulawesi Utara,11.530667,low extraction,41.76448,12.45,11.67517,0.064256
+72,Sulawesi Tengah,62.359551,high extraction,72.95874,10.934,12.97573,-0.171204
+73,Sulawesi Selatan,14.080545,low extraction,43.67127,12.773,11.774271,0.081417
+74,Sulawesi Tenggara,36.23362,high extraction,42.51017,10.992,11.714354,-0.063647
+75,Gorontalo,5.839141,low extraction,28.0417,11.937,10.827019,0.097598
+76,Sulawesi Barat,39.147323,high extraction,25.61779,10.516,10.643277,-0.012031
+81,Maluku,8.362538,low extraction,19.74362,9.9,10.131168,-0.023082
+82,Maluku Utara,64.405818,high extraction,54.43949,9.613,12.275981,-0.244528
+91,Papua Barat,66.71,high extraction,89.65173,9.115,13.491901,-0.392168
+92,Papua Barat Daya,28.428588,high extraction,40.65659,9.076,11.615893,-0.246741
+94,Papua,4.74342,low extraction,49.95604,11.342,12.077842,-0.06286
+95,Papua Selatan,8.47644,low extraction,35.85322,9.983,11.342655,-0.127687
+96,Papua Tengah,74.510101,high extraction,55.26777,8.036,12.311127,-0.426572
+97,Papua Pegunungan,2.612362,low extraction,9.64104,5.861,8.845474,-0.411586

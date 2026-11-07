@@ -1,0 +1,1201 @@
+{
+ "title": "BPS provincial GRDP by expenditure, quarterly and annual, at current prices, with each component's share, Indonesia, 2010-2025",
+ "columns": {
+  "province_code": "BPS province code (kode_bps) of the 38 provinces; these tables publish no Indonesia value. Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definitions in 'indicators'.",
+  "component": "Expenditure component code: the six components and TOTAL (PDRB); BPS labels in 'components'.",
+  "period": "YYYY = year (BPS 'Tahunan'); YYYYQn = quarter n (BPS 'Triwulan I' to 'Triwulan IV').",
+  "status": "BPS revision marker from the table note; meanings in 'status'.",
+  "value": "grdp_current: Rp billion; grdp_distribution_current: percent of TOTAL; both as published by BPS with 2 decimals. Multiply by 'multiplier' for base units."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  }
+ },
+ "province_source": {
+  "url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=provinsi&periode_merge=2025_1.2025",
+  "file": "raw/province-codes/20261102_bps-province-codes-2025-s1.json",
+  "note": "BPS and Kemendagri codes differ for the six Papua provinces; join other datasets on the code system they use."
+ },
+ "components": {
+  "PKRT": {
+   "label": "Pengeluaran Konsumsi Rumah Tangga",
+   "name": "household final consumption expenditure",
+   "turvar": 1544
+  },
+  "PKLNPRT": {
+   "label": "Pengeluaran Konsumsi LNPRT",
+   "name": "final consumption expenditure of non-profit institutions serving households (lembaga nonprofit yang melayani rumah tangga)",
+   "turvar": 1545
+  },
+  "PKP": {
+   "label": "Pengeluaran Konsumsi Pemerintah",
+   "name": "government final consumption expenditure",
+   "turvar": 1546
+  },
+  "PMTB": {
+   "label": "Pembentukan Modal Tetap Bruto",
+   "name": "gross fixed capital formation",
+   "turvar": 1547
+  },
+  "PI": {
+   "label": "Perubahan Inventori",
+   "name": "change in inventories",
+   "turvar": 1548
+  },
+  "NETEKSPOR": {
+   "label": "Net Ekspor",
+   "name": "net exports",
+   "turvar": 1549
+  },
+  "TOTAL": {
+   "label": "PDRB",
+   "name": "GRDP (Produk Domestik Regional Bruto), the sum of the six components",
+   "turvar": 1550
+  }
+ },
+ "component_notes": [
+  "TOTAL is BPS's row 'PDRB', published by BPS, not summed here. The six components sum to it within 0.02 Rp billion and the four quarters to the year within 0.02 Rp billion, inside the rounding tolerances of 0.035 and 0.025 (checks.identities).",
+  "PI and NETEKSPOR can be negative; every other component is positive in every cell (checks.flags lists any that is not)."
+ ],
+ "indicators": {
+  "grdp_current": {
+   "name": "PDRB atas dasar harga berlaku menurut pengeluaran (GRDP by expenditure at current prices), Seri 2010",
+   "unit": "Rp billion (Milyar Rupiah)",
+   "multiplier": 1000000000.0,
+   "base_unit": "Rp",
+   "decimals": 2,
+   "periods": "2010-2025: each year and its four quarters",
+   "source": "BPS WebAPI var 534 '[SERI 2010] 1. PDRB Atas Dasar Harga Berlaku Menurut Pengeluaran'; see 'source_tables'",
+   "download_script": "raw/grdp/20261104_download-bps-api-grdp-by-expenditure-2010-2025.py",
+   "notes": [
+    "BPS table note (last updated 2026-08-05 07:26:38): 2024: Angka sementara 2025: Angka sangat sementara 2026: Angka sangat sangat sementara Data Daerah Otonom Baru (DOB) mulai dirilis tahun 2024"
+   ]
+  },
+  "grdp_distribution_current": {
+   "name": "Distribusi PDRB atas dasar harga berlaku menurut pengeluaran (each component's share of GRDP at current prices), Seri 2010",
+   "unit": "percent of TOTAL (Persen)",
+   "multiplier": 0.01,
+   "base_unit": "fraction of TOTAL",
+   "decimals": 2,
+   "periods": "2010-2025: each year and its four quarters",
+   "source": "BPS WebAPI var 542 '[SERI 2010] 3. Distribusi PDRB Atas Dasar Harga Berlaku Menurut Pengeluaran'; see 'source_tables'",
+   "download_script": "raw/grdp/20261104_download-bps-api-grdp-by-expenditure-2010-2025.py",
+   "notes": [
+    "BPS table note (last updated 2026-08-05 07:26:09): 2024: Angka sementara 2025: Angka sangat sementara 2026: Angka sangat sangat sementara Data Daerah Otonom Baru (DOB) mulai dirilis tahun 2024"
+   ]
+  }
+ },
+ "coverage": {
+  "years": {
+   "2010-2023": {
+    "provinces": 34,
+    "absent": [
+     "92",
+     "95",
+     "96",
+     "97"
+    ]
+   },
+   "2024-2025": {
+    "provinces": 38,
+    "absent": []
+   }
+  },
+  "first_year": {
+   "92": {
+    "year": 2024,
+    "reason": "PAPUA BARAT DAYA became a province in 2022; these tables give it its own values from 2024, as their note states ('Data Daerah Otonom Baru (DOB) mulai dirilis tahun 2024'), and 91 covers it before"
+   },
+   "95": {
+    "year": 2024,
+    "reason": "PAPUA SELATAN became a province in 2022; these tables give it its own values from 2024, as their note states ('Data Daerah Otonom Baru (DOB) mulai dirilis tahun 2024'), and 94 covers it before"
+   },
+   "96": {
+    "year": 2024,
+    "reason": "PAPUA TENGAH became a province in 2022; these tables give it its own values from 2024, as their note states ('Data Daerah Otonom Baru (DOB) mulai dirilis tahun 2024'), and 94 covers it before"
+   },
+   "97": {
+    "year": 2024,
+    "reason": "PAPUA PEGUNUNGAN became a province in 2022; these tables give it its own values from 2024, as their note states ('Data Daerah Otonom Baru (DOB) mulai dirilis tahun 2024'), and 94 covers it before"
+   }
+  },
+  "cells": "A province with values in a year has all seven components in the year and in each of its four quarters, in both indicators; completeness expects exactly this grid.",
+  "no_indonesia_row": "Both tables list a row 9999 'TOTAL' after the 38 provinces, which holds no value in any file, so the dataset has no Indonesia (00) row; the sum of the provinces is not national GDP."
+ },
+ "borders": [
+  "65 (Kalimantan Utara) has its own values from 2010 in these tables, so 64 (Kalimantan Timur) excludes it in every year, as in the industry tables vars 2267 and 2268; the annual table var 286 (data/20261103_bps-province-grdp-2010-2025) holds it inside 64 until 2012.",
+  "91 (Papua Barat) and 94 (Papua) in 2010-2023 cover the pre-split provinces: Papua Barat then included Papua Barat Daya, and Papua included Papua Selatan, Papua Tengah and Papua Pegunungan. From 2024, 91 and 94 cover the post-split areas, and 92, 95, 96 and 97 start.",
+  "On fixed borders: Papua Barat (pre-2024 area) = 91 + 92 and Papua (pre-2024 area) = 94 + 95 + 96 + 97 from 2024. grdp_current adds across provinces; a share of a combined area is the combined component over the combined TOTAL x 100, never a sum or average of the provinces' shares.",
+  "A change of 91 or 94 from 2023 to 2024 compares different areas; the growth checks leave those changes out (checks.growth_not_compared)."
+ ],
+ "source_tables": {
+  "534": {
+   "role": "gives every grdp_current value in the CSV",
+   "label": "[SERI 2010] 1. PDRB Atas Dasar Harga Berlaku Menurut Pengeluaran",
+   "subject": "Produk Domestik Regional Bruto (Pengeluaran)",
+   "unit": "Milyar Rupiah",
+   "decimals": 2,
+   "turvar": {
+    "1544": "Pengeluaran Konsumsi Rumah Tangga",
+    "1545": "Pengeluaran Konsumsi LNPRT",
+    "1546": "Pengeluaran Konsumsi Pemerintah",
+    "1547": "Pembentukan Modal Tetap Bruto",
+    "1548": "Perubahan Inventori",
+    "1549": "Net Ekspor",
+    "1550": "PDRB"
+   },
+   "turtahun": {
+    "31": "Triwulan I",
+    "32": "Triwulan II",
+    "33": "Triwulan III",
+    "34": "Triwulan IV",
+    "35": "Tahunan"
+   },
+   "regions": "Provinsi (PDRB)",
+   "last_update": "2026-08-05 07:26:38",
+   "note": "2024: Angka sementara 2025: Angka sangat sementara 2026: Angka sangat sangat sementara Data Daerah Otonom Baru (DOB) mulai dirilis tahun 2024",
+   "note_statuses": {
+    "2024": "*",
+    "2025": "**",
+    "2026": "***"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/domain/0000/var/534/th/{th}/key/{key} (th = first:last year minus 1900, such as 110:112 for 2010-2012; the key is not stored)",
+   "download_script": "raw/grdp/20261104_download-bps-api-grdp-by-expenditure-2010-2025.py",
+   "files": [
+    "raw/grdp/20261104_bps-api-var534-grdp-by-expenditure-by-province-2010-2012.json",
+    "raw/grdp/20261104_bps-api-var534-grdp-by-expenditure-by-province-2013-2015.json",
+    "raw/grdp/20261104_bps-api-var534-grdp-by-expenditure-by-province-2016-2018.json",
+    "raw/grdp/20261104_bps-api-var534-grdp-by-expenditure-by-province-2019-2021.json",
+    "raw/grdp/20261104_bps-api-var534-grdp-by-expenditure-by-province-2022-2023.json",
+    "raw/grdp/20261104_bps-api-var534-grdp-by-expenditure-by-province-2024-2025.json"
+   ]
+  },
+  "542": {
+   "role": "gives every grdp_distribution_current value in the CSV",
+   "label": "[SERI 2010] 3. Distribusi PDRB Atas Dasar Harga Berlaku Menurut Pengeluaran",
+   "subject": "Produk Domestik Regional Bruto (Pengeluaran)",
+   "unit": "Persen",
+   "decimals": 2,
+   "turvar": {
+    "1544": "Pengeluaran Konsumsi Rumah Tangga",
+    "1545": "Pengeluaran Konsumsi LNPRT",
+    "1546": "Pengeluaran Konsumsi Pemerintah",
+    "1547": "Pembentukan Modal Tetap Bruto",
+    "1548": "Perubahan Inventori",
+    "1549": "Net Ekspor",
+    "1550": "PDRB"
+   },
+   "turtahun": {
+    "31": "Triwulan I",
+    "32": "Triwulan II",
+    "33": "Triwulan III",
+    "34": "Triwulan IV",
+    "35": "Tahunan"
+   },
+   "regions": "Provinsi (PDRB)",
+   "last_update": "2026-08-05 07:26:09",
+   "note": "2024: Angka sementara 2025: Angka sangat sementara 2026: Angka sangat sangat sementara Data Daerah Otonom Baru (DOB) mulai dirilis tahun 2024",
+   "note_statuses": {
+    "2024": "*",
+    "2025": "**",
+    "2026": "***"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/domain/0000/var/542/th/{th}/key/{key} (th = first:last year minus 1900, such as 110:112 for 2010-2012; the key is not stored)",
+   "download_script": "raw/grdp/20261104_download-bps-api-grdp-by-expenditure-2010-2025.py",
+   "files": [
+    "raw/grdp/20261104_bps-api-var542-grdp-distribution-by-expenditure-by-province-2010-2012.json",
+    "raw/grdp/20261104_bps-api-var542-grdp-distribution-by-expenditure-by-province-2013-2015.json",
+    "raw/grdp/20261104_bps-api-var542-grdp-distribution-by-expenditure-by-province-2016-2018.json",
+    "raw/grdp/20261104_bps-api-var542-grdp-distribution-by-expenditure-by-province-2019-2021.json",
+    "raw/grdp/20261104_bps-api-var542-grdp-distribution-by-expenditure-by-province-2022-2023.json",
+    "raw/grdp/20261104_bps-api-var542-grdp-distribution-by-expenditure-by-province-2024-2025.json"
+   ]
+  }
+ },
+ "unlisted_cells": [
+  {
+   "file": "raw/grdp/20261104_bps-api-var534-grdp-by-expenditure-by-province-2019-2021.json",
+   "cells": 1666,
+   "turvars": [
+    686,
+    687,
+    688,
+    689,
+    690,
+    693,
+    694
+   ],
+   "periods": [
+    "2019",
+    "2019Q1",
+    "2019Q2",
+    "2019Q3",
+    "2019Q4",
+    "2020Q1",
+    "2020Q2"
+   ],
+   "provinces_per_period": 34,
+   "scale": 1000,
+   "by_turvar": {
+    "686": {
+     "cells": 238,
+     "nearest_component": "PKRT",
+     "mean_abs_gap": 202.3379,
+     "next_nearest": "PMTB",
+     "next_mean_abs_gap": 42022.6933
+    },
+    "687": {
+     "cells": 238,
+     "nearest_component": "PKLNPRT",
+     "mean_abs_gap": 7.4144,
+     "next_nearest": "PI",
+     "next_mean_abs_gap": 2459.0343
+    },
+    "688": {
+     "cells": 238,
+     "nearest_component": "PKP",
+     "mean_abs_gap": 382.1349,
+     "next_nearest": "PKLNPRT",
+     "next_mean_abs_gap": 12664.3173
+    },
+    "689": {
+     "cells": 238,
+     "nearest_component": "PMTB",
+     "mean_abs_gap": 253.2185,
+     "next_nearest": "PKP",
+     "next_mean_abs_gap": 39415.9969
+    },
+    "690": {
+     "cells": 238,
+     "nearest_component": "PI",
+     "mean_abs_gap": 190.7911,
+     "next_nearest": "PKLNPRT",
+     "next_mean_abs_gap": 2375.3555
+    },
+    "693": {
+     "cells": 238,
+     "nearest_component": "NETEKSPOR",
+     "mean_abs_gap": 920.1955,
+     "next_nearest": "PI",
+     "next_mean_abs_gap": 17243.6263
+    },
+    "694": {
+     "cells": 238,
+     "nearest_component": "TOTAL",
+     "mean_abs_gap": 955.2074,
+     "next_nearest": "PKRT",
+     "next_mean_abs_gap": 74468.0186
+    }
+   },
+   "reason": "BPS left these cells in datacontent under turvar codes that the table's turvar list no longer names. Divided by 1000, as values in Rp million would need to be, each code's values lie nearest one listed component (by_turvar, mean absolute gap in Rp billion) but not on it, as an earlier release of the table would. None is written: every value in the CSV comes from the listed turvars."
+  },
+  {
+   "file": "raw/grdp/20261104_bps-api-var542-grdp-distribution-by-expenditure-by-province-2019-2021.json",
+   "cells": 476,
+   "turvars": [
+    686,
+    687,
+    688,
+    689,
+    690,
+    693,
+    694
+   ],
+   "periods": [
+    "2020Q1",
+    "2020Q2"
+   ],
+   "provinces_per_period": 34,
+   "scale": 1,
+   "by_turvar": {
+    "686": {
+     "cells": 68,
+     "nearest_component": "PKRT",
+     "mean_abs_gap": 0.5703,
+     "next_nearest": "PMTB",
+     "next_mean_abs_gap": 22.4415
+    },
+    "687": {
+     "cells": 68,
+     "nearest_component": "PKLNPRT",
+     "mean_abs_gap": 0.0243,
+     "next_nearest": "PI",
+     "next_mean_abs_gap": 1.7024
+    },
+    "688": {
+     "cells": 68,
+     "nearest_component": "PKP",
+     "mean_abs_gap": 0.6769,
+     "next_nearest": "PKLNPRT",
+     "next_mean_abs_gap": 10.444
+    },
+    "689": {
+     "cells": 68,
+     "nearest_component": "PMTB",
+     "mean_abs_gap": 0.5816,
+     "next_nearest": "PKP",
+     "next_mean_abs_gap": 21.9109
+    },
+    "690": {
+     "cells": 68,
+     "nearest_component": "PI",
+     "mean_abs_gap": 0.4954,
+     "next_nearest": "PKLNPRT",
+     "next_mean_abs_gap": 1.5153
+    },
+    "693": {
+     "cells": 68,
+     "nearest_component": "NETEKSPOR",
+     "mean_abs_gap": 1.7051,
+     "next_nearest": "PI",
+     "next_mean_abs_gap": 15.2574
+    },
+    "694": {
+     "cells": 68,
+     "nearest_component": "TOTAL",
+     "mean_abs_gap": 0.0,
+     "next_nearest": "PKRT",
+     "next_mean_abs_gap": 46.4349
+    }
+   },
+   "reason": "BPS left these cells in datacontent under turvar codes that the table's turvar list no longer names. Each code's values lie nearest one listed component (by_turvar, mean absolute gap in percentage points) but not on it, as an earlier release of the table would. None is written: every value in the CSV comes from the listed turvars."
+  }
+ ],
+ "notes": [
+  "status: both notes give 2024 '*', 2025 '**' and 2026 '***'; every row of 2024 and 2025 carries the status of its year, in the year and its four quarters and in both indicators, and 2010-2023 are final. 2026 is after the last year these files hold, so its status applies to no row. The WebAPI gives no status per cell.",
+  "grdp_distribution_current is BPS's own share, var 542, kept as published. It equals 100 x the component's grdp_current over TOTAL's within 0.005113 percentage points (checks.identities), so a share of an area made of several provinces can be rebuilt from grdp_current.",
+  "PDRB (TOTAL) is the GRDP of the production side: it equals the industry TOTAL of var 2268 in data/20261103_bps-province-grdp-by-industry-2010-2025/ within 0.01 Rp billion in every year and quarter except BPS's declared gap for pre-split Papua Barat in 2023, and var 286 in data/20261103_bps-province-grdp-2010-2025/ within 0.03 Rp billion in every year (checks.cross_source).",
+  "Derived values are not stored. A component's share (%) of an area = sum of the component's grdp_current / sum of TOTAL's grdp_current x 100; nominal growth (%) = (grdp_current in year t / grdp_current in year t-1 - 1) x 100.",
+  "checks.flags lists every value or change outside its range in checks.plausible_ranges for a person to review, with the two values each growth compares under rp_billion; a flag stays whether it reflects a real event or a source error."
+ ],
+ "check_datasets": {
+  "build_order": "data/20261103_bps-province-grdp-2010-2025/ and data/20261103_bps-province-grdp-by-industry-2010-2025/ must be rebuilt before this dataset: this build reads their CSVs and metadata as checks and records their hashes as they are when it runs",
+  "files": {
+   "data/20261103_bps-province-grdp-2010-2025/20261103_bps-province-grdp-2010-2025.csv": {
+    "sha256": "6ebeae62ccaa41c732065b88453738adc400c6a75ca085b7b2e9d5015a6bb041"
+   },
+   "data/20261103_bps-province-grdp-2010-2025/20261103_bps-province-grdp-2010-2025-metadata.json": {
+    "sha256": "e412c3075023bd0e1fe05fcfe40c8c2c2c4843f3601fcbdc8eaf7bc2f0134205"
+   },
+   "data/20261103_bps-province-grdp-by-industry-2010-2025/20261103_bps-province-grdp-by-industry-2010-2025.csv": {
+    "sha256": "e0166a5cf3d5cc9bda6c837c719f8c53b2b4003540d976b48a78d80560d287bc"
+   },
+   "data/20261103_bps-province-grdp-by-industry-2010-2025/20261103_bps-province-grdp-by-industry-2010-2025-metadata.json": {
+    "sha256": "42a65439ccecd536bfdfab79ed0af1e3a336edaadcb20cc94fce89fd8eb0b090"
+   }
+  }
+ },
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "identities",
+   "cross-source"
+  ],
+  "identities": [
+   {
+    "check": "grdp_current: the six components sum to TOTAL (PDRB), every province, year and quarter, Rp billion",
+    "compared": 2760,
+    "largest_gap": 0.02,
+    "tolerance": 0.035,
+    "tolerance_reason": "six components and PDRB, each rounded to 0.01, can differ by up to 7 x 0.005 = 0.035"
+   },
+   {
+    "check": "grdp_current: the four quarters sum to the year, every province and component, TOTAL included, Rp billion",
+    "compared": 3864,
+    "largest_gap": 0.02,
+    "tolerance": 0.025,
+    "tolerance_reason": "four quarters and the year, each rounded to 0.01, can differ by up to 5 x 0.005 = 0.025"
+   },
+   {
+    "check": "grdp_distribution_current: the six shares sum to 100, every province, year and quarter, percent",
+    "compared": 2760,
+    "largest_gap": 0.02,
+    "tolerance": 0.03,
+    "tolerance_reason": "six shares, each rounded to 0.01, can differ from 100 by up to 6 x 0.005 = 0.03",
+    "total_is_100": "TOTAL is exactly 100 in all 2760 cells"
+   },
+   {
+    "check": "grdp_distribution_current (var 542) equals 100 x the component's grdp_current over TOTAL's (var 534), every province, component, year and quarter, percentage points",
+    "compared": 16560,
+    "largest_gap": 0.005113,
+    "tolerance": 0.006,
+    "tolerance_reason": "the published share is rounded to 0.01 (up to 0.005), and the two levels the share is recomputed from are rounded to 0.01 Rp billion, which moves it by under 0.001 point; tolerance 0.006",
+    "rounded_differ": 11
+   }
+  ],
+  "cross_source": [
+   {
+    "check": "grdp_current TOTAL (var 534) equals the industry TOTAL (var 2268) in 20261103_bps-province-grdp-by-industry-2010-2025.csv, every province, year and quarter, Rp billion",
+    "compared": 2758,
+    "tolerance": 0.01,
+    "relative": false,
+    "largest_gap": 0.01,
+    "differences": [
+     {
+      "key": [
+       "31",
+       "2011"
+      ],
+      "first": 1224218.48,
+      "second": 1224218.49,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "32",
+       "2012"
+      ],
+      "first": 1128245.68,
+      "second": 1128245.69,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "32",
+       "2013Q4"
+      ],
+      "first": 326040.78,
+      "second": 326040.79,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "33",
+       "2014Q3"
+      ],
+      "first": 240152.34,
+      "second": 240152.35,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "31",
+       "2017"
+      ],
+      "first": 2365353.85,
+      "second": 2365353.86,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "63",
+       "2017"
+      ],
+      "first": 159104.55,
+      "second": 159104.56,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "64",
+       "2021Q3"
+      ],
+      "first": 179706.35,
+      "second": 179706.36,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "18",
+       "2022Q4"
+      ],
+      "first": 103753.16,
+      "second": 103753.17,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "33",
+       "2023Q2"
+      ],
+      "first": 420508.08,
+      "second": 420508.09,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "91",
+       "2023Q2"
+      ],
+      "first": 23999.72,
+      "second": 23999.71,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "91",
+       "2023Q3"
+      ],
+      "first": 24444.46,
+      "second": 24444.47,
+      "gap": 0.01
+     }
+    ],
+    "keys": "[province_code, period]; first = this dataset (var 534), second = var 2268",
+    "tolerance_reason": "one unit in the last decimal (0.01): BPS rounds var 534 and var 2268 separately",
+    "declared_gaps": {
+     "gaps": [
+      {
+       "key": [
+        "91",
+        "2023"
+       ],
+       "var_534": 97680.94,
+       "var_2268": 97675.84,
+       "gap": -5.1
+      },
+      {
+       "key": [
+        "91",
+        "2023Q1"
+       ],
+       "var_534": 23934.06,
+       "var_2268": 23928.97,
+       "gap": -5.09
+      }
+     ],
+     "reason": "BPS's own inconsistency between two of its tables: here pre-split Papua Barat (91) in 2023 is var 286's 91 + 92 (97680.94), and var 2268's 91 is 5.10 lower in the year and 5.09 lower in the first quarter, the gap data/20261103_bps-province-grdp-by-industry-2010-2025 declares against var 286. Declared exactly; the build stops if it changes"
+    },
+    "statuses_equal": 2760
+   },
+   {
+    "check": "annual grdp_current TOTAL (var 534) equals var 286 in 20261103_bps-province-grdp-2010-2025.csv, on the same borders or summed over the area both cover, Rp billion",
+    "compared": 549,
+    "tolerance": 0.05,
+    "relative": false,
+    "largest_gap": 0.03,
+    "differences": [
+     {
+      "key": [
+       "64",
+       "2011"
+      ],
+      "first": 515191.47,
+      "second": 515191.48,
+      "gap": 0.01
+     },
+     {
+      "key": [
+       "31",
+       "2016"
+      ],
+      "first": 2159073.62,
+      "second": 2159073.6,
+      "gap": 0.02
+     },
+     {
+      "key": [
+       "32",
+       "2016"
+      ],
+      "first": 1653238.42,
+      "second": 1653238.4,
+      "gap": 0.02
+     },
+     {
+      "key": [
+       "33",
+       "2016"
+      ],
+      "first": 1087316.68,
+      "second": 1087316.7,
+      "gap": 0.02
+     },
+     {
+      "key": [
+       "35",
+       "2016"
+      ],
+      "first": 1855738.43,
+      "second": 1855738.4,
+      "gap": 0.03
+     },
+     {
+      "key": [
+       "94",
+       "2023"
+      ],
+      "first": 287849.36,
+      "second": 287849.35,
+      "gap": 0.01
+     }
+    ],
+    "keys": "[province_code, period]; first = this dataset (var 534), second = var 286",
+    "tolerance_reason": "BPS rounds var 286 separately, and a border area sums up to five values rounded to 0.01; tolerance 0.05",
+    "border_areas": {
+     "64 2010": {
+      "this_dataset": "64+65",
+      "var_286": "64"
+     },
+     "64 2011": {
+      "this_dataset": "64+65",
+      "var_286": "64"
+     },
+     "64 2012": {
+      "this_dataset": "64+65",
+      "var_286": "64"
+     },
+     "91 2023": {
+      "this_dataset": "91",
+      "var_286": "91+92"
+     },
+     "94 2023": {
+      "this_dataset": "94",
+      "var_286": "94+95+96+97"
+     }
+    },
+    "statuses_equal": 549,
+    "not_compared": {
+     "inside a border area's sum": [
+      [
+       "65",
+       "2010"
+      ],
+      [
+       "65",
+       "2011"
+      ],
+      [
+       "65",
+       "2012"
+      ],
+      [
+       "92",
+       "2023"
+      ],
+      [
+       "95",
+       "2023"
+      ],
+      [
+       "96",
+       "2023"
+      ],
+      [
+       "97",
+       "2023"
+      ]
+     ],
+     "Indonesia (00): var 534 publishes no value in its TOTAL row": [
+      [
+       "00",
+       "2010"
+      ],
+      [
+       "00",
+       "2011"
+      ],
+      [
+       "00",
+       "2012"
+      ],
+      [
+       "00",
+       "2013"
+      ],
+      [
+       "00",
+       "2014"
+      ],
+      [
+       "00",
+       "2015"
+      ],
+      [
+       "00",
+       "2016"
+      ],
+      [
+       "00",
+       "2017"
+      ],
+      [
+       "00",
+       "2018"
+      ],
+      [
+       "00",
+       "2019"
+      ],
+      [
+       "00",
+       "2020"
+      ],
+      [
+       "00",
+       "2021"
+      ],
+      [
+       "00",
+       "2022"
+      ],
+      [
+       "00",
+       "2023"
+      ],
+      [
+       "00",
+       "2024"
+      ],
+      [
+       "00",
+       "2025"
+      ]
+     ]
+    }
+   }
+  ],
+  "plausible_ranges": {
+   "value_positive": {
+    "range": [
+     0.01,
+     null
+    ],
+    "measure": "every value of the components other than PI and NETEKSPOR, in both indicators; 0.01 is the smallest positive value with 2 decimals"
+   },
+   "pkrt_share_pct": {
+    "range": [
+     15,
+     85
+    ],
+    "measure": "PKRT's share of PDRB in each year, as var 542 publishes it (grdp_distribution_current of PKRT); below 15 households consume less than a seventh of the province's GRDP, above 85 nearly all of it"
+   },
+   "nominal_growth_pct": {
+    "range": [
+     -10,
+     30
+    ],
+    "measure": "PKRT and PDRB at current prices, each year against the year before: (grdp_current in year t / grdp_current in year t-1 - 1) x 100"
+   }
+  },
+  "plausibility_compared": {
+   "value_positive": 27600,
+   "pkrt_share_pct": 552,
+   "nominal_growth_pct": 1024
+  },
+  "growth_not_compared": [
+   {
+    "province_code": "91",
+    "period": "2024",
+    "old_area": "91+92",
+    "reason": "91 in 2023 includes 92, which has its own values from 2024, so the change of 91 from 2023 compares different areas; no growth check reads it"
+   },
+   {
+    "province_code": "94",
+    "period": "2024",
+    "old_area": "94+95+96+97",
+    "reason": "94 in 2023 includes 95, 96 and 97, which have their own values from 2024, so the change of 94 from 2023 compares different areas; no growth check reads it"
+   }
+  ],
+  "flags": [
+   {
+    "check": "pkrt_share_pct",
+    "province_code": "64",
+    "period": "2010",
+    "value": 13.32,
+    "range": [
+     15,
+     85
+    ]
+   },
+   {
+    "check": "pkrt_share_pct",
+    "province_code": "64",
+    "period": "2011",
+    "value": 12.17,
+    "range": [
+     15,
+     85
+    ]
+   },
+   {
+    "check": "pkrt_share_pct",
+    "province_code": "64",
+    "period": "2012",
+    "value": 13.01,
+    "range": [
+     15,
+     85
+    ]
+   },
+   {
+    "check": "pkrt_share_pct",
+    "province_code": "64",
+    "period": "2013",
+    "value": 14.14,
+    "range": [
+     15,
+     85
+    ]
+   },
+   {
+    "check": "pkrt_share_pct",
+    "province_code": "64",
+    "period": "2022",
+    "value": 13.66,
+    "range": [
+     15,
+     85
+    ]
+   },
+   {
+    "check": "pkrt_share_pct",
+    "province_code": "65",
+    "period": "2021",
+    "value": 14.88,
+    "range": [
+     15,
+     85
+    ]
+   },
+   {
+    "check": "pkrt_share_pct",
+    "province_code": "65",
+    "period": "2022",
+    "value": 12.98,
+    "range": [
+     15,
+     85
+    ]
+   },
+   {
+    "check": "pkrt_share_pct",
+    "province_code": "65",
+    "period": "2023",
+    "value": 13.34,
+    "range": [
+     15,
+     85
+    ]
+   },
+   {
+    "check": "pkrt_share_pct",
+    "province_code": "65",
+    "period": "2024",
+    "value": 14.54,
+    "range": [
+     15,
+     85
+    ]
+   },
+   {
+    "check": "pkrt_share_pct",
+    "province_code": "65",
+    "period": "2025",
+    "value": 14.85,
+    "range": [
+     15,
+     85
+    ]
+   },
+   {
+    "check": "pkrt_share_pct",
+    "province_code": "97",
+    "period": "2025",
+    "value": 86.49,
+    "range": [
+     15,
+     85
+    ]
+   },
+   {
+    "check": "nominal_growth_pct",
+    "province_code": "51",
+    "component": "TOTAL",
+    "period": "2020",
+    "rp_billion": {
+     "2019": 251934.1,
+     "2020": 224225.72
+    },
+    "value": -10.9983,
+    "range": [
+     -10,
+     30
+    ]
+   },
+   {
+    "check": "nominal_growth_pct",
+    "province_code": "64",
+    "component": "TOTAL",
+    "period": "2022",
+    "rp_billion": {
+     "2021": 696632.67,
+     "2022": 921450.99
+    },
+    "value": 32.2721,
+    "range": [
+     -10,
+     30
+    ]
+   },
+   {
+    "check": "nominal_growth_pct",
+    "province_code": "72",
+    "component": "TOTAL",
+    "period": "2022",
+    "rp_billion": {
+     "2021": 247280.35,
+     "2022": 323630.28
+    },
+    "value": 30.8759,
+    "range": [
+     -10,
+     30
+    ]
+   },
+   {
+    "check": "nominal_growth_pct",
+    "province_code": "82",
+    "component": "TOTAL",
+    "period": "2022",
+    "rp_billion": {
+     "2021": 52480.52,
+     "2022": 70902.61
+    },
+    "value": 35.1027,
+    "range": [
+     -10,
+     30
+    ]
+   },
+   {
+    "check": "nominal_growth_pct",
+    "province_code": "82",
+    "component": "TOTAL",
+    "period": "2025",
+    "rp_billion": {
+     "2024": 96949.45,
+     "2025": 133620.32
+    },
+    "value": 37.8247,
+    "range": [
+     -10,
+     30
+    ]
+   },
+   {
+    "check": "nominal_growth_pct",
+    "province_code": "94",
+    "component": "TOTAL",
+    "period": "2019",
+    "rp_billion": {
+     "2018": 210600.57,
+     "2019": 189510.7
+    },
+    "value": -10.0142,
+    "range": [
+     -10,
+     30
+    ]
+   }
+  ]
+ },
+ "file": "20261104_bps-province-grdp-by-expenditure-2010-2025.csv",
+ "rows": 38640,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source",
+  "*": "Angka sementara (preliminary)",
+  "**": "Angka sangat sementara (very preliminary)"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/grdp/20261104_bps-api-var534-grdp-by-expenditure-by-province-2010-2012.json": {
+   "sha256": "e3aca58e0ae478db52a85eb47ea44297308d6c3fde9cae203324696ddc6a5952"
+  },
+  "raw/grdp/20261104_bps-api-var534-grdp-by-expenditure-by-province-2013-2015.json": {
+   "sha256": "d1c41f2ea1baf2bb44561db74a0c2ad9b68e0fcd68cff29d7943b21ca95b7327"
+  },
+  "raw/grdp/20261104_bps-api-var534-grdp-by-expenditure-by-province-2016-2018.json": {
+   "sha256": "e259b3c581735e00b614ef492ef6c5f5fbf20112191e8b5f5979c6ea31b385cf"
+  },
+  "raw/grdp/20261104_bps-api-var534-grdp-by-expenditure-by-province-2019-2021.json": {
+   "sha256": "5de034fb0bfe47770c2f78afa9dcd0d55481f0b04add99720ef9d4afa88e7ef4"
+  },
+  "raw/grdp/20261104_bps-api-var534-grdp-by-expenditure-by-province-2022-2023.json": {
+   "sha256": "1989f49c762d8027c2b0f0e915bf2107229458e5e21b93d5f9fed0a38236f92f"
+  },
+  "raw/grdp/20261104_bps-api-var534-grdp-by-expenditure-by-province-2024-2025.json": {
+   "sha256": "2897d987aab05ef9d2afc9f9e1af7b387d87007d1c25a4122611641dbd96e018"
+  },
+  "raw/grdp/20261104_bps-api-var542-grdp-distribution-by-expenditure-by-province-2010-2012.json": {
+   "sha256": "760369cc98fe984190bc1a628d5e68dc80b443342795e7de974210a132e2ac3a"
+  },
+  "raw/grdp/20261104_bps-api-var542-grdp-distribution-by-expenditure-by-province-2013-2015.json": {
+   "sha256": "4e301150a9ba95e3032b99107698b784a9f5dfcb1b5f78b5aa55613cd9eec075"
+  },
+  "raw/grdp/20261104_bps-api-var542-grdp-distribution-by-expenditure-by-province-2016-2018.json": {
+   "sha256": "c4ce340187e12342769c88ab5ea8e00fd4c6de8a1cc14f5350c9cc34f599a4d3"
+  },
+  "raw/grdp/20261104_bps-api-var542-grdp-distribution-by-expenditure-by-province-2019-2021.json": {
+   "sha256": "d5d94ba0b8b68839ce1c1c9bc4583e98427e7142c8a09ed1972acab8ccae7dc2"
+  },
+  "raw/grdp/20261104_bps-api-var542-grdp-distribution-by-expenditure-by-province-2022-2023.json": {
+   "sha256": "9431ae2845fded02d18555b0f25facc29e25dcffc61c742d8887812d73b06e50"
+  },
+  "raw/grdp/20261104_bps-api-var542-grdp-distribution-by-expenditure-by-province-2024-2025.json": {
+   "sha256": "a4cabc7239af907f279944b326d3de85cc5889d657b80c4a187f54f1d82b39c5"
+  }
+ }
+}

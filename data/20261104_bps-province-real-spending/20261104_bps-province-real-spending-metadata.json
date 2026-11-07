@@ -1,0 +1,342 @@
+{
+ "title": "BPS real spending per person by province (new-method HDI), Indonesia, 2010-2025",
+ "columns": {
+  "province_code": "BPS province code (kode_bps); 00 = Indonesia. Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definition in 'indicators'.",
+  "period": "YYYY, the year of the March Susenas round the value comes from.",
+  "status": "Revision marker; the table gives none, so every row is empty (final).",
+  "value": "Thousand rupiah per person per year at constant 2012 prices, adjusted for regional price differences, as published by BPS (0 decimals)."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  },
+  "00": {
+   "name": "INDONESIA",
+   "kode_dagri": null
+  }
+ },
+ "province_source": {
+  "url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=provinsi&periode_merge=2025_1.2025",
+  "file": "raw/province-codes/20261102_bps-province-codes-2025-s1.json"
+ },
+ "indicators": {
+  "real_spending_per_capita": {
+   "name": "[Metode Baru] Pengeluaran per Kapita Disesuaikan (adjusted real spending per person, the spending part of BPS's new-method Human Development Index)",
+   "unit": "thousand rupiah per person per year, constant 2012 prices (Ribu Rupiah/Orang/Tahun)",
+   "multiplier": 1000,
+   "decimals": 0,
+   "source": "BPS WebAPI dynamic table 416, https://webapi.bps.go.id/v1/api/list/model/data/domain/0000/var/416/th/{th} (key omitted), from Susenas",
+   "download_script": "raw/household-spending/20261104_download-bps-real-spending-per-capita-by-province.py",
+   "note_as_published": "<p><br /></p><p><br /></p><p><br /></p><p>Untuk penjelasan lebih lanjut mengenai IPM metode baru silahkan klik link di bawah ini\n<br /><a href=\"https://searchengine.web.bps.go.id/filemenu/Booklet-IPM-Metode-Baru.pdf\">-Booklet IPM metode Baru</a>\n<br /><a href=\"https://searchengine.web.bps.go.id/filemenu/Bahan-Sosialisasi-IPM-Metode-Baru.pdf\">-Bahan Sosialisasi IPM metode baru</a><br /></p><p><br /></p><p><br /></p><p><br /></p>"
+  }
+ },
+ "periods": {
+  "held": [
+   "2010",
+   "2011",
+   "2012",
+   "2013",
+   "2014",
+   "2015",
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ]
+ },
+ "coverage": {
+  "first_period": {
+   "65": {
+    "period": "2013",
+    "reason": "Kalimantan Utara became a province in 2012; the table starts it in 2013"
+   },
+   "92": {
+    "period": "2024",
+    "reason": "Papua Barat Daya became a province in 2022; the table starts it in 2024"
+   },
+   "95": {
+    "period": "2024",
+    "reason": "Papua Selatan became a province in 2022; the table starts it in 2024"
+   },
+   "96": {
+    "period": "2024",
+    "reason": "Papua Tengah became a province in 2022; the table starts it in 2024"
+   },
+   "97": {
+    "period": "2024",
+    "reason": "Papua Pegunungan became a province in 2022; the table starts it in 2024"
+   }
+  },
+  "local_rows_left_out": {
+   "values": 8157,
+   "reason": "The table also holds every regency and city; this dataset keeps the provinces and Indonesia, which BPS labels in bold."
+  }
+ },
+ "borders": [
+  "91 (Papua Barat) and 94 (Papua) up to 2023 cover the areas before the 2022 split; from 2024 they cover the provinces after it, and 92, 95, 96 and 97 start in 2024.",
+  "64 (Kalimantan Timur) before 2013 includes Kalimantan Utara, which starts in 2013."
+ ],
+ "source_tables": {
+  "20261104_bps-real-spending-per-capita-by-province-2010-2012.json": {
+   "last_update": "2025-11-05 12:01:09",
+   "label": "[Metode Baru] Pengeluaran per Kapita Disesuaikan",
+   "subject": "Tujuan Pembangunan Berkelanjutan Edisi I"
+  },
+  "20261104_bps-real-spending-per-capita-by-province-2013-2015.json": {
+   "last_update": "2025-11-05 12:01:09",
+   "label": "[Metode Baru] Pengeluaran per Kapita Disesuaikan",
+   "subject": "Tujuan Pembangunan Berkelanjutan Edisi I"
+  },
+  "20261104_bps-real-spending-per-capita-by-province-2016-2018.json": {
+   "last_update": "2025-11-05 12:01:09",
+   "label": "[Metode Baru] Pengeluaran per Kapita Disesuaikan",
+   "subject": "Tujuan Pembangunan Berkelanjutan Edisi I"
+  },
+  "20261104_bps-real-spending-per-capita-by-province-2019-2021.json": {
+   "last_update": "2025-11-05 12:01:09",
+   "label": "[Metode Baru] Pengeluaran per Kapita Disesuaikan",
+   "subject": "Tujuan Pembangunan Berkelanjutan Edisi I"
+  },
+  "20261104_bps-real-spending-per-capita-by-province-2022-2024.json": {
+   "last_update": "2025-11-05 12:01:09",
+   "label": "[Metode Baru] Pengeluaran per Kapita Disesuaikan",
+   "subject": "Tujuan Pembangunan Berkelanjutan Edisi I"
+  },
+  "20261104_bps-real-spending-per-capita-by-province-2025-2025.json": {
+   "last_update": "2025-11-05 12:01:09",
+   "label": "[Metode Baru] Pengeluaran per Kapita Disesuaikan",
+   "subject": "Tujuan Pembangunan Berkelanjutan Edisi I"
+  }
+ },
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "plausibility checked (layer 5, flags listed)"
+  ],
+  "plausible_ranges": {
+   "real_spending_per_capita": [
+    3000,
+    30000
+   ],
+   "real_spending_change": [
+    -0.08,
+    0.1
+   ]
+  },
+  "change_not_compared": [
+   {
+    "province_code": "64",
+    "period": "2013",
+    "reason": "Kalimantan Timur loses Kalimantan Utara"
+   },
+   {
+    "province_code": "91",
+    "period": "2024",
+    "reason": "Papua Barat loses Papua Barat Daya"
+   },
+   {
+    "province_code": "94",
+    "period": "2024",
+    "reason": "Papua loses Papua Selatan, Papua Tengah and Papua Pegunungan"
+   }
+  ],
+  "flags": []
+ },
+ "notes": [
+  "No other raw file holds these values, so there is no cross-source check (layer 4).",
+  "Indonesia's value is BPS's own national figure, not a sum or average of the provinces, so there is no provinces-to-Indonesia identity (layer 3)."
+ ],
+ "file": "20261104_bps-province-real-spending.csv",
+ "rows": 565,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/household-spending/20261104_bps-real-spending-per-capita-by-province-2010-2012.json": {
+   "sha256": "3fcf0eb9f4bcad54a2197ff7bd7c904cf7065948cd545f281e36de5d60c3ad7c"
+  },
+  "raw/household-spending/20261104_bps-real-spending-per-capita-by-province-2013-2015.json": {
+   "sha256": "339dc9954ae1beb765670a853a885a7ab6961cda64a343e51177592ef944b8b9"
+  },
+  "raw/household-spending/20261104_bps-real-spending-per-capita-by-province-2016-2018.json": {
+   "sha256": "d2558802de13e20408e44758c00d1c0eca6f9e941ad24652460dd777cb09ec6d"
+  },
+  "raw/household-spending/20261104_bps-real-spending-per-capita-by-province-2019-2021.json": {
+   "sha256": "ce7e08491810f2d6108218af8f6a17681e42291fe09d7308ba2f1ae4f7421a03"
+  },
+  "raw/household-spending/20261104_bps-real-spending-per-capita-by-province-2022-2024.json": {
+   "sha256": "cf0511010aa7af175f4ed6731c9a4b9ae985c5d868d942b90d5fb56756beb7c3"
+  },
+  "raw/household-spending/20261104_bps-real-spending-per-capita-by-province-2025-2025.json": {
+   "sha256": "535f29e0b67b748810637ba986ac515222e1487d06aad2423e8476b76b1b571f"
+  }
+ }
+}

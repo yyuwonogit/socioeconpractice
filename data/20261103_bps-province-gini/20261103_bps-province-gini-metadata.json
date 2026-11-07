@@ -1,0 +1,972 @@
+{
+ "title": "BPS Gini ratio by province and area, Indonesia, 2002-2026",
+ "columns": {
+  "province_code": "BPS province code (kode_bps); 00 = Indonesia. Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definition in 'indicators'.",
+  "area": "Area code; BPS labels in 'areas'.",
+  "period": "YYYY for a yearly figure (2002-2008), YYYYS1 for the March Susenas round and YYYYS2 for the September round.",
+  "status": "Revision marker; the table gives none, so every row is empty (final).",
+  "value": "Gini ratio as published by BPS, 3 decimals: 0 means every household spends the same, 1 that one household spends everything."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  },
+  "00": {
+   "name": "INDONESIA",
+   "kode_dagri": null
+  }
+ },
+ "province_source": {
+  "url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=provinsi&periode_merge=2025_1.2025",
+  "file": "raw/province-codes/20261102_bps-province-codes-2025-s1.json"
+ },
+ "indicators": {
+  "gini_ratio": {
+   "name": "Gini Ratio Menurut Provinsi dan Daerah (Gini ratio of household per capita expenditure)",
+   "unit": "ratio, no unit (Tidak Ada Satuan)",
+   "multiplier": 1,
+   "decimals": 3,
+   "source": "BPS WebAPI dynamic table 98, https://webapi.bps.go.id/v1/api/list/model/data/domain/0000/var/98/th/{th} (key omitted), from Susenas",
+   "download_script": "raw/inequality/20261103_download-bps-gini-ratio-by-province.py",
+   "note_as_published": "- Sumber  : BPS, Susenas  \n<br />- Tahun 2002, Susenas Modul Konsumsi reguler\n<br />- Tahun 2005, Susenas Panel (Februari)\n<br />- Tahun 2006-2010, Susenas Panel (Maret)\n<br />- Tahun 2011-2016, Susenas Modul Konsumsi (Maret dan September)\n<br />- Angka Provinsi Papua Barat dan Papua sebelum tahun 2024 merupakan angka provinsi sebelum mengalami pemekaran Daerah Otonom Baru (DOB)"
+  }
+ },
+ "areas": {
+  "total": "Perkotaan+Perdesaan",
+  "urban": "Perkotaan",
+  "rural": "Perdesaan"
+ },
+ "periods": {
+  "held": [
+   "2002",
+   "2005",
+   "2007",
+   "2008",
+   "2009S1",
+   "2010S1",
+   "2011S1",
+   "2011S2",
+   "2012S1",
+   "2012S2",
+   "2013S1",
+   "2013S2",
+   "2014S1",
+   "2014S2",
+   "2015S1",
+   "2015S2",
+   "2016S1",
+   "2016S2",
+   "2017S1",
+   "2017S2",
+   "2018S1",
+   "2018S2",
+   "2019S1",
+   "2019S2",
+   "2020S1",
+   "2020S2",
+   "2021S1",
+   "2021S2",
+   "2022S1",
+   "2022S2",
+   "2023S1",
+   "2024S1",
+   "2024S2",
+   "2025S1",
+   "2025S2",
+   "2026S1"
+  ],
+  "note": "The table holds no value for 2003, 2004 or 2006, and no September value for 2009, 2010, 2023 or 2026. 2002-2008 are yearly figures from the survey rounds the note names."
+ },
+ "coverage": {
+  "first_period": {
+   "21": {
+    "period": "2005",
+    "reason": "Kepulauan Riau became a province in 2002; the table starts it in 2005"
+   },
+   "76": {
+    "period": "2007",
+    "reason": "Sulawesi Barat became a province in 2004; the table's 2005 cells are 0.000 placeholders"
+   },
+   "91": {
+    "period": "2007",
+    "reason": "Papua Barat (Irian Jaya Barat until 2007) became a province in 2003; the table starts it in 2007"
+   },
+   "65": {
+    "period": "2015S1",
+    "reason": "Kalimantan Utara became a province in 2012; the table starts it in March 2015"
+   },
+   "92": {
+    "period": "2024S1",
+    "reason": "Papua Barat Daya became a province in 2022; the table starts it in March 2024"
+   },
+   "95": {
+    "period": "2024S1",
+    "reason": "Papua Selatan became a province in 2022; the table starts it in March 2024"
+   },
+   "96": {
+    "period": "2024S1",
+    "reason": "Papua Tengah became a province in 2022; the table starts it in March 2024"
+   },
+   "97": {
+    "period": "2024S1",
+    "reason": "Papua Pegunungan became a province in 2022; the table starts it in March 2024"
+   }
+  },
+  "gaps": [
+   {
+    "province_code": "11",
+    "period": "2002",
+    "reason": "BPS publishes no 2002 value for Aceh"
+   },
+   {
+    "province_code": "81",
+    "period": "2002",
+    "reason": "BPS publishes no 2002 value for Maluku"
+   },
+   {
+    "province_code": "82",
+    "period": "2002",
+    "reason": "BPS publishes no 2002 value for Maluku Utara"
+   },
+   {
+    "province_code": "94",
+    "period": "2002",
+    "reason": "BPS publishes no 2002 value for Papua"
+   }
+  ],
+  "no_rural": {
+   "31": "DKI Jakarta has no rural area, so BPS publishes no rural Gini ratio for it"
+  }
+ },
+ "dropped_cells": {
+  "cells": [
+   {
+    "province_code": "76",
+    "area": "rural",
+    "period": "2005"
+   },
+   {
+    "province_code": "76",
+    "area": "total",
+    "period": "2005"
+   },
+   {
+    "province_code": "76",
+    "area": "urban",
+    "period": "2005"
+   }
+  ],
+  "reason": "BPS publishes these as 0.000, which is not a Gini ratio; they are left out rather than written as values."
+ },
+ "borders": [
+  "91 (Papua Barat) and 94 (Papua) before March 2024 cover the areas before the 2022 split, as the table's note says; 92, 95, 96 and 97 start in March 2024.",
+  "64 (Kalimantan Timur) before March 2015 includes Kalimantan Utara, which starts in March 2015."
+ ],
+ "source_tables": {
+  "20261103_bps-gini-ratio-by-province-2002-2005.json": {
+   "last_update": "2026-08-05 12:26:57",
+   "label": "Gini Ratio Menurut Provinsi dan Daerah",
+   "subject": "Kemiskinan dan Ketimpangan"
+  },
+  "20261103_bps-gini-ratio-by-province-2007-2009.json": {
+   "last_update": "2026-08-05 12:26:57",
+   "label": "Gini Ratio Menurut Provinsi dan Daerah",
+   "subject": "Kemiskinan dan Ketimpangan"
+  },
+  "20261103_bps-gini-ratio-by-province-2010-2012.json": {
+   "last_update": "2026-08-05 12:26:57",
+   "label": "Gini Ratio Menurut Provinsi dan Daerah",
+   "subject": "Kemiskinan dan Ketimpangan"
+  },
+  "20261103_bps-gini-ratio-by-province-2013-2015.json": {
+   "last_update": "2026-08-05 12:26:57",
+   "label": "Gini Ratio Menurut Provinsi dan Daerah",
+   "subject": "Kemiskinan dan Ketimpangan"
+  },
+  "20261103_bps-gini-ratio-by-province-2016-2018.json": {
+   "last_update": "2026-08-05 12:26:57",
+   "label": "Gini Ratio Menurut Provinsi dan Daerah",
+   "subject": "Kemiskinan dan Ketimpangan"
+  },
+  "20261103_bps-gini-ratio-by-province-2019-2021.json": {
+   "last_update": "2026-08-05 12:26:57",
+   "label": "Gini Ratio Menurut Provinsi dan Daerah",
+   "subject": "Kemiskinan dan Ketimpangan"
+  },
+  "20261103_bps-gini-ratio-by-province-2022-2024.json": {
+   "last_update": "2026-08-05 12:26:57",
+   "label": "Gini Ratio Menurut Provinsi dan Daerah",
+   "subject": "Kemiskinan dan Ketimpangan"
+  },
+  "20261103_bps-gini-ratio-by-province-2025-2026.json": {
+   "last_update": "2026-08-05 12:26:57",
+   "label": "Gini Ratio Menurut Provinsi dan Daerah",
+   "subject": "Kemiskinan dan Ketimpangan"
+  }
+ },
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "plausibility checked (layer 5, flags listed)"
+  ],
+  "plausible_ranges": {
+   "gini_ratio": [
+    0.15,
+    0.55
+   ],
+   "gini_change": [
+    -0.05,
+    0.05
+   ]
+  },
+  "change_not_compared": [
+   {
+    "province_code": "64",
+    "period": "2015S1",
+    "reason": "Kalimantan Timur loses Kalimantan Utara"
+   },
+   {
+    "province_code": "94",
+    "period": "2024S1",
+    "reason": "Papua loses Papua Selatan, Papua Tengah and Papua Pegunungan"
+   },
+   {
+    "province_code": "91",
+    "period": "2024S1",
+    "reason": "Papua Barat loses Papua Barat Daya"
+   }
+  ],
+  "flags": [
+   {
+    "check": "gini_change",
+    "province_code": "13",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2005",
+    "from_period": "2002",
+    "value": 0.107,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "13",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2007",
+    "from_period": "2005",
+    "value": -0.067,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "14",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2012S1",
+    "from_period": "2011S2",
+    "value": 0.08,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "16",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2011S2",
+    "from_period": "2011S1",
+    "value": 0.059,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "17",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2007",
+    "from_period": "2005",
+    "value": 0.064,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "17",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2010S1",
+    "from_period": "2009S1",
+    "value": 0.063,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "18",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2007",
+    "from_period": "2005",
+    "value": 0.092,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "21",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2007",
+    "from_period": "2005",
+    "value": -0.079,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "21",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2011S2",
+    "from_period": "2011S1",
+    "value": 0.062,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "21",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2015S1",
+    "from_period": "2014S2",
+    "value": -0.073,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "31",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2011S1",
+    "from_period": "2010S1",
+    "value": 0.077,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "32",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2011S1",
+    "from_period": "2010S1",
+    "value": 0.055,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "36",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2007",
+    "from_period": "2005",
+    "value": 0.055,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "51",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2010S1",
+    "from_period": "2009S1",
+    "value": 0.051,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "51",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2015S1",
+    "from_period": "2014S2",
+    "value": -0.065,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "52",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2005",
+    "from_period": "2002",
+    "value": 0.053,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "53",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2007",
+    "from_period": "2005",
+    "value": 0.062,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "61",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2015S1",
+    "from_period": "2014S2",
+    "value": -0.068,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "62",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2005",
+    "from_period": "2002",
+    "value": 0.064,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "63",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2007",
+    "from_period": "2005",
+    "value": 0.065,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "64",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2011S2",
+    "from_period": "2011S1",
+    "value": -0.052,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "71",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2005",
+    "from_period": "2002",
+    "value": 0.119,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "71",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2007",
+    "from_period": "2005",
+    "value": -0.063,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "71",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2010S1",
+    "from_period": "2009S1",
+    "value": 0.059,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "71",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2012S1",
+    "from_period": "2011S2",
+    "value": 0.069,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "71",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2015S1",
+    "from_period": "2014S2",
+    "value": -0.068,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "74",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2010S1",
+    "from_period": "2009S1",
+    "value": 0.062,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "75",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2007",
+    "from_period": "2005",
+    "value": 0.15,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "75",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2010S1",
+    "from_period": "2009S1",
+    "value": 0.076,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "75",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2011S2",
+    "from_period": "2011S1",
+    "value": -0.059,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "81",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2007",
+    "from_period": "2005",
+    "value": 0.074,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "81",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2011S1",
+    "from_period": "2010S1",
+    "value": 0.083,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "81",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2011S2",
+    "from_period": "2011S1",
+    "value": -0.056,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "82",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2007",
+    "from_period": "2005",
+    "value": 0.07,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "94",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2007",
+    "from_period": "2005",
+    "value": -0.084,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "94",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2012S1",
+    "from_period": "2011S2",
+    "value": 0.055,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "94",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2014S2",
+    "from_period": "2014S1",
+    "value": 0.051,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "76",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2010S1",
+    "from_period": "2009S1",
+    "value": 0.063,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "76",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2012S1",
+    "from_period": "2011S2",
+    "value": -0.056,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "91",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2012S1",
+    "from_period": "2011S2",
+    "value": 0.051,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   },
+   {
+    "check": "gini_change",
+    "province_code": "91",
+    "indicator": "gini_change",
+    "area": "total",
+    "period": "2016S1",
+    "from_period": "2015S2",
+    "value": -0.055,
+    "range": [
+     -0.05,
+     0.05
+    ]
+   }
+  ]
+ },
+ "notes": [
+  "No other raw file holds these values, so there is no cross-source check (layer 4).",
+  "Area 'total' is BPS's Perkotaan+Perdesaan, computed by BPS from all households, not an average of the urban and rural ratios."
+ ],
+ "file": "20261103_bps-province-gini.csv",
+ "rows": 3735,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/inequality/20261103_bps-gini-ratio-by-province-2002-2005.json": {
+   "sha256": "4a2446033949ea8bfd809a0c95504283286a1410909840b8919ffd5b948c5a8a"
+  },
+  "raw/inequality/20261103_bps-gini-ratio-by-province-2007-2009.json": {
+   "sha256": "b9d5adb0fbed57a42c19ddaa5f2d1218a27d990dc53a8a7cbd6319db630f4b8b"
+  },
+  "raw/inequality/20261103_bps-gini-ratio-by-province-2010-2012.json": {
+   "sha256": "c1df8ee9ab4f6393e42d5fa815b18bbaad6c688ba98c7f187bde6b297e3d19af"
+  },
+  "raw/inequality/20261103_bps-gini-ratio-by-province-2013-2015.json": {
+   "sha256": "a2f46f9d7078c337721149f239ff72d78d0836e13630bf08be18f60c7a7a0b8e"
+  },
+  "raw/inequality/20261103_bps-gini-ratio-by-province-2016-2018.json": {
+   "sha256": "91ddd5a97e9778cf227b77efda9d9760bcd88067f72a107aebc20d491259d874"
+  },
+  "raw/inequality/20261103_bps-gini-ratio-by-province-2019-2021.json": {
+   "sha256": "5eda30c5231e8a9734681f5c0c7bc42a9f5ee1a28d304d35123e68499cfb91a6"
+  },
+  "raw/inequality/20261103_bps-gini-ratio-by-province-2022-2024.json": {
+   "sha256": "c81ec2e02e872a9ec0f2905acb6872fe8b33a983001616b9723adcd55b454402"
+  },
+  "raw/inequality/20261103_bps-gini-ratio-by-province-2025-2026.json": {
+   "sha256": "220737c850dfb5867a8d87c3f8513105dd3f0ac2f674e3a7c3f72a34fd6dacec"
+  }
+ }
+}

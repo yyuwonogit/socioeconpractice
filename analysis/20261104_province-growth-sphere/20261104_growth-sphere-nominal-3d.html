@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GRDP growth, extraction and household spending at current prices: Indonesian provinces, 2015–2025</title>
+<style>
+html, body { margin: 0; height: 100%; overflow: hidden; background: #fcfcfb; color: #0b0b0b;
+  font-family: 'DejaVu Sans', Arial, sans-serif; }
+#scene { position: absolute; inset: 0; }
+#header { position: absolute; top: 12px; left: 16px; right: 320px; z-index: 5; pointer-events: none; }
+#header h1 { font-size: 18px; margin: 0 0 4px; }
+#controls { position: absolute; top: 48px; left: 16px; z-index: 5; font-size: 13px; color: #52514e; }
+#controls button { font: inherit; padding: 4px 10px; margin: 0 4px 0 0; border: 1px solid #e4e3df; border-radius: 4px;
+  background: #f1f0ec; color: #0b0b0b; cursor: pointer; }
+#controls button.on { background: #0b0b0b; color: #fcfcfb; }
+#info { position: absolute; top: 82px; left: 16px; z-index: 5; max-width: 430px; font-size: 13px; line-height: 1.45; }
+#legend { position: absolute; top: 14px; right: 16px; z-index: 5; font-size: 12px; color: #52514e; }
+#legend .title { font-weight: bold; margin-bottom: 4px; }
+#legend .row { display: flex; align-items: center; gap: 6px; margin: 3px 0; }
+#legend .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+#tip { position: absolute; z-index: 6; pointer-events: none; display: none; background: #ffffff; border: 1px solid #e4e3df;
+  border-radius: 4px; padding: 6px 8px; font-size: 12px; line-height: 1.4; box-shadow: 0 1px 4px rgba(0,0,0,0.12); }
+.name { font-size: 10px; color: #0b0b0b; white-space: nowrap; pointer-events: none;
+  text-shadow: 0 0 3px #fcfcfb, 0 0 3px #fcfcfb, 0 0 2px #fcfcfb; }
+.name span { position: relative; top: -13px; }
+.axis { font-size: 13px; color: #52514e; white-space: nowrap; pointer-events: none; }
+</style>
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+</head>
+<body>
+<div id="scene"></div>
+<div id="header"><h1>GRDP growth, extraction and household spending at current prices: Indonesian provinces, 2015–2025</h1></div>
+<div id="controls"></div>
+<div id="info"></div>
+<div id="legend"></div>
+<div id="tip"></div>
+<script id="data" type="application/json">{"colors": {"surface": "#fcfcfb", "text": "#0b0b0b", "axis": "#52514e", "cut": "#9b9a96", "wire": "#e4e3df"}, "camera": [2.7514, -4.5023, 1.876], "axes": [{"dir": [1.0, 0.0, 0.0], "high": "More extractive", "low": "Less extractive"}, {"dir": [0.0, 1.0, 0.0], "high": "Spending grew faster", "low": "Spending grew slower"}, {"dir": [0.0, 0.0, 1.0], "high": "GRDP per person grew faster", "low": "GRDP per person grew slower"}], "points": [{"name": "Aceh", "pos": [0.5451, -0.3022, -0.1259], "color": "#009E73", "groups": {"zone": "Slower GRDP growth × more extractive × spending grew slower", "group": "plantation"}, "tip": ["Slower GRDP growth × more extractive × spending grew slower", "GRDP per person: +5.9% a year (current prices)", "Extractive share of GRDP: 15.6% → 20.0% (+4.4 points)", "Spending per person: +5.6% a year (current prices)", "Largest extractive group, 2025: Plantation (12.3% of GRDP)"]}, {"name": "Sumatera Utara", "pos": [0.4605, -0.0206, 0.2518], "color": "#009E73", "groups": {"zone": "Faster GRDP growth × more extractive × spending grew slower", "group": "plantation"}, "tip": ["Faster GRDP growth × more extractive × spending grew slower", "GRDP per person: +6.7% a year (current prices)", "Extractive share of GRDP: 30.0% → 34.3% (+4.3 points)", "Spending per person: +6.1% a year (current prices)", "Largest extractive group, 2025: Plantation (30.1% of GRDP)"]}, {"name": "Sumatera Barat", "pos": [-0.229, -0.2545, -0.2059], "color": "#009E73", "groups": {"zone": "Slower GRDP growth × less extractive × spending grew slower", "group": "plantation"}, "tip": ["Slower GRDP growth × less extractive × spending grew slower", "GRDP per person: +5.6% a year (current prices)", "Extractive share of GRDP: 15.0% → 13.0% (-2.0 points)", "Spending per person: +5.6% a year (current prices)", "Largest extractive group, 2025: Plantation (6.9% of GRDP)"]}, {"name": "Riau", "pos": [-0.348, -0.7296, -0.3204], "color": "#009E73", "groups": {"zone": "Slower GRDP growth × less extractive × spending grew slower", "group": "plantation"}, "tip": ["Slower GRDP growth × less extractive × spending grew slower", "GRDP per person: +5.5% a year (current prices)", "Extractive share of GRDP: 70.3% → 68.3% (-2.0 points)", "Spending per person: +4.8% a year (current prices)", "Largest extractive group, 2025: Plantation (42.5% of GRDP)"]}, {"name": "Jambi", "pos": [0.2636, -0.1426, 0.5205], "color": "#009E73", "groups": {"zone": "Faster GRDP growth × more extractive × spending grew slower", "group": "plantation"}, "tip": ["Faster GRDP growth × more extractive × spending grew slower", "GRDP per person: +7.4% a year (current prices)", "Extractive share of GRDP: 47.1% → 49.5% (+2.4 points)", "Spending per person: +5.8% a year (current prices)", "Largest extractive group, 2025: Plantation (30.7% of GRDP)"]}, {"name": "Sumatera Selatan", "pos": [-0.1911, -0.1624, 0.3008], "color": "#000000", "groups": {"zone": "Faster GRDP growth × less extractive × spending grew slower", "group": "fossil"}, "tip": ["Faster GRDP growth × less extractive × spending grew slower", "GRDP per person: +6.9% a year (current prices)", "Extractive share of GRDP: 36.8% → 35.7% (-1.1 points)", "Spending per person: +5.8% a year (current prices)", "Largest extractive group, 2025: Fossil fuels (22.4% of GRDP)"]}, {"name": "Bengkulu", "pos": [0.2474, 0.1156, 0.2337], "color": "#009E73", "groups": {"zone": "Faster GRDP growth × more extractive × spending grew faster", "group": "plantation"}, "tip": ["Faster GRDP growth × more extractive × spending grew faster", "GRDP per person: +6.9% a year (current prices)", "Extractive share of GRDP: 9.2% → 11.7% (+2.5 points)", "Spending per person: +6.3% a year (current prices)", "Largest extractive group, 2025: Plantation (7.8% of GRDP)"]}, {"name": "Lampung", "pos": [-0.4047, -0.525, -0.1584], "color": "#009E73", "groups": {"zone": "Slower GRDP growth × less extractive × spending grew slower", "group": "plantation"}, "tip": ["Slower GRDP growth × less extractive × spending grew slower", "GRDP per person: +5.9% a year (current prices)", "Extractive share of GRDP: 14.7% → 12.5% (-2.2 points)", "Spending per person: +5.3% a year (current prices)", "Largest extractive group, 2025: Plantation (7.3% of GRDP)"]}, {"name": "Kepulauan Bangka Belitung", "pos": [-0.5383, -0.6153, -0.4142], "color": "#CC79A7", "groups": {"zone": "Slower GRDP growth × less extractive × spending grew slower", "group": "metals"}, "tip": ["Slower GRDP growth × less extractive × spending grew slower", "GRDP per person: +5.4% a year (current prices)", "Extractive share of GRDP: 35.5% → 28.0% (-7.5 points)", "Spending per person: +4.7% a year (current prices)", "Largest extractive group, 2025: Metals (13.8% of GRDP)"]}, {"name": "Kepulauan Riau", "pos": [-0.7367, 0.0866, -0.4293], "color": "#000000", "groups": {"zone": "Slower GRDP growth × less extractive × spending grew faster", "group": "fossil"}, "tip": ["Slower GRDP growth × less extractive × spending grew faster", "GRDP per person: +5.5% a year (current prices)", "Extractive share of GRDP: 22.9% → 14.8% (-8.1 points)", "Spending per person: +6.3% a year (current prices)", "Largest extractive group, 2025: Fossil fuels (8.5% of GRDP)"]}, {"name": "DKI Jakarta", "pos": [-0.0268, -0.7061, 0.1772], "color": "#8a8985", "groups": {"zone": "Faster GRDP growth × less extractive × spending grew slower", "group": "low"}, "tip": ["Faster GRDP growth × less extractive × spending grew slower", "GRDP per person: +6.5% a year (current prices)", "Extractive share of GRDP: 1.2% → 0.9% (-0.3 points)", "Spending per person: +5.3% a year (current prices)", "Largest extractive group, 2025: No group above 5% of GRDP (0.4% of GRDP)"]}, {"name": "Jawa Barat", "pos": [-0.26, 0.4305, -0.0251], "color": "#8a8985", "groups": {"zone": "Slower GRDP growth × less extractive × spending grew faster", "group": "low"}, "tip": ["Slower GRDP growth × less extractive × spending grew faster", "GRDP per person: +6.3% a year (current prices)", "Extractive share of GRDP: 7.6% → 5.8% (-1.8 points)", "Spending per person: +6.8% a year (current prices)", "Largest extractive group, 2025: No group above 5% of GRDP (1.8% of GRDP)"]}, {"name": "Jawa Tengah", "pos": [-0.5414, 0.3165, -0.4048], "color": "#8a8985", "groups": {"zone": "Slower GRDP growth × less extractive × spending grew faster", "group": "low"}, "tip": ["Slower GRDP growth × less extractive × spending grew faster", "GRDP per person: +5.4% a year (current prices)", "Extractive share of GRDP: 12.5% → 8.9% (-3.6 points)", "Spending per person: +6.7% a year (current prices)", "Largest extractive group, 2025: No group above 5% of GRDP (2.6% of GRDP)"]}, {"name": "DI Yogyakarta", "pos": [-0.1115, 0.6229, 0.4424], "color": "#8a8985", "groups": {"zone": "Faster GRDP growth × less extractive × spending grew faster", "group": "low"}, "tip": ["Faster GRDP growth × less extractive × spending grew faster", "GRDP per person: +7.2% a year (current prices)", "Extractive share of GRDP: 2.6% → 1.8% (-0.9 points)", "Spending per person: +7.1% a year (current prices)", "Largest extractive group, 2025: No group above 5% of GRDP (0.8% of GRDP)"]}, {"name": "Jawa Timur", "pos": [-0.3544, -0.4076, 0.0197], "color": "#8a8985", "groups": {"zone": "Faster GRDP growth × less extractive × spending grew slower", "group": "low"}, "tip": ["Faster GRDP growth × less extractive × spending grew slower", "GRDP per person: +6.4% a year (current prices)", "Extractive share of GRDP: 12.1% → 10.0% (-2.1 points)", "Spending per person: +5.5% a year (current prices)", "Largest extractive group, 2025: No group above 5% of GRDP (2.8% of GRDP)"]}, {"name": "Banten", "pos": [-0.0802, -0.5681, 0.1263], "color": "#8a8985", "groups": {"zone": "Faster GRDP growth × less extractive × spending grew slower", "group": "low"}, "tip": ["Faster GRDP growth × less extractive × spending grew slower", "GRDP per person: +6.4% a year (current prices)", "Extractive share of GRDP: 9.0% → 8.7% (-0.3 points)", "Spending per person: +5.4% a year (current prices)", "Largest extractive group, 2025: No group above 5% of GRDP (3.4% of GRDP)"]}, {"name": "Bali", "pos": [-0.1501, 0.2343, -0.3417], "color": "#8a8985", "groups": {"zone": "Slower GRDP growth × less extractive × spending grew faster", "group": "low"}, "tip": ["Slower GRDP growth × less extractive × spending grew faster", "GRDP per person: +5.5% a year (current prices)", "Extractive share of GRDP: 5.0% → 4.0% (-1.1 points)", "Spending per person: +6.5% a year (current prices)", "Largest extractive group, 2025: No group above 5% of GRDP (1.5% of GRDP)"]}, {"name": "Nusa Tenggara Barat", "pos": [-0.4039, 0.6305, -0.5108], "color": "#CC79A7", "groups": {"zone": "Slower GRDP growth × less extractive × spending grew faster", "group": "metals"}, "tip": ["Slower GRDP growth × less extractive × spending grew faster", "GRDP per person: +4.4% a year (current prices)", "Extractive share of GRDP: 24.5% → 21.2% (-3.4 points)", "Spending per person: +7.7% a year (current prices)", "Largest extractive group, 2025: Metals (16.5% of GRDP)"]}, {"name": "Nusa Tenggara Timur", "pos": [0.0251, 0.5174, -0.2397], "color": "#8a8985", "groups": {"zone": "Slower GRDP growth × more extractive × spending grew faster", "group": "low"}, "tip": ["Slower GRDP growth × more extractive × spending grew faster", "GRDP per person: +5.7% a year (current prices)", "Extractive share of GRDP: 4.3% → 4.5% (+0.1 points)", "Spending per person: +6.8% a year (current prices)", "Largest extractive group, 2025: No group above 5% of GRDP (3.1% of GRDP)"]}, {"name": "Kalimantan Barat", "pos": [0.6507, 0.2212, 0.0737], "color": "#009E73", "groups": {"zone": "Faster GRDP growth × more extractive × spending grew faster", "group": "plantation"}, "tip": ["Faster GRDP growth × more extractive × spending grew faster", "GRDP per person: +6.4% a year (current prices)", "Extractive share of GRDP: 29.8% → 35.3% (+5.5 points)", "Spending per person: +6.5% a year (current prices)", "Largest extractive group, 2025: Plantation (26.7% of GRDP)"]}, {"name": "Kalimantan Tengah", "pos": [0.2207, -0.271, 0.6717], "color": "#009E73", "groups": {"zone": "Faster GRDP growth × more extractive × spending grew slower", "group": "plantation"}, "tip": ["Faster GRDP growth × more extractive × spending grew slower", "GRDP per person: +7.8% a year (current prices)", "Extractive share of GRDP: 40.1% → 42.3% (+2.2 points)", "Spending per person: +5.7% a year (current prices)", "Largest extractive group, 2025: Plantation (30.9% of GRDP)"]}, {"name": "Kalimantan Selatan", "pos": [0.2824, -0.4321, 0.4801], "color": "#000000", "groups": {"zone": "Faster GRDP growth × more extractive × spending grew slower", "group": "fossil"}, "tip": ["Faster GRDP growth × more extractive × spending grew slower", "GRDP per person: +7.5% a year (current prices)", "Extractive share of GRDP: 30.1% → 32.8% (+2.6 points)", "Spending per person: +5.3% a year (current prices)", "Largest extractive group, 2025: Fossil fuels (26.6% of GRDP)"]}, {"name": "Kalimantan Timur", "pos": [-0.6658, -0.0514, -0.6217], "color": "#000000", "groups": {"zone": "Slower GRDP growth × less extractive × spending grew slower", "group": "fossil"}, "tip": ["Slower GRDP growth × less extractive × spending grew slower", "GRDP per person: +3.5% a year (current prices)", "Extractive share of GRDP: 64.9% → 53.0% (-11.9 points)", "Spending per person: +5.9% a year (current prices)", "Largest extractive group, 2025: Fossil fuels (40.3% of GRDP)"]}, {"name": "Kalimantan Utara", "pos": [-0.4248, -0.4767, 0.4975], "color": "#000000", "groups": {"zone": "Faster GRDP growth × less extractive × spending grew slower", "group": "fossil"}, "tip": ["Faster GRDP growth × less extractive × spending grew slower", "GRDP per person: +8.0% a year (current prices)", "Extractive share of GRDP: 40.6% → 37.0% (-3.6 points)", "Spending per person: +5.2% a year (current prices)", "Largest extractive group, 2025: Fossil fuels (21.5% of GRDP)"]}, {"name": "Sulawesi Utara", "pos": [0.1006, -0.325, 0.3611], "color": "#009E73", "groups": {"zone": "Faster GRDP growth × more extractive × spending grew slower", "group": "plantation"}, "tip": ["Faster GRDP growth × more extractive × spending grew slower", "GRDP per person: +7.1% a year (current prices)", "Extractive share of GRDP: 11.3% → 11.5% (+0.2 points)", "Spending per person: +5.6% a year (current prices)", "Largest extractive group, 2025: Plantation (5.2% of GRDP)"]}, {"name": "Sulawesi Tengah", "pos": [0.5032, -0.4829, 0.5059], "color": "#CC79A7", "groups": {"zone": "Faster GRDP growth × more extractive × spending grew slower", "group": "metals"}, "tip": ["Faster GRDP growth × more extractive × spending grew slower", "GRDP per person: +13.4% a year (current prices)", "Extractive share of GRDP: 31.5% → 62.4% (+30.9 points)", "Spending per person: +5.1% a year (current prices)", "Largest extractive group, 2025: Metals (44.4% of GRDP)"]}, {"name": "Sulawesi Selatan", "pos": [-0.5209, 0.0275, 0.3636], "color": "#0072B2", "groups": {"zone": "Faster GRDP growth × less extractive × spending grew faster", "group": "quarrying"}, "tip": ["Faster GRDP growth × less extractive × spending grew faster", "GRDP per person: +7.0% a year (current prices)", "Extractive share of GRDP: 17.5% → 14.1% (-3.4 points)", "Spending per person: +6.2% a year (current prices)", "Largest extractive group, 2025: Quarrying (6.3% of GRDP)"]}, {"name": "Sulawesi Tenggara", "pos": [0.5292, 0.421, 0.4308], "color": "#CC79A7", "groups": {"zone": "Faster GRDP growth × more extractive × spending grew faster", "group": "metals"}, "tip": ["Faster GRDP growth × more extractive × spending grew faster", "GRDP per person: +7.5% a year (current prices)", "Extractive share of GRDP: 29.8% → 36.2% (+6.4 points)", "Spending per person: +7.0% a year (current prices)", "Largest extractive group, 2025: Metals (19.0% of GRDP)"]}, {"name": "Gorontalo", "pos": [0.0782, 0.6647, 0.2216], "color": "#8a8985", "groups": {"zone": "Faster GRDP growth × more extractive × spending grew faster", "group": "low"}, "tip": ["Faster GRDP growth × more extractive × spending grew faster", "GRDP per person: +6.6% a year (current prices)", "Extractive share of GRDP: 5.7% → 5.8% (+0.2 points)", "Spending per person: +7.0% a year (current prices)", "Largest extractive group, 2025: No group above 5% of GRDP (2.7% of GRDP)"]}, {"name": "Sulawesi Barat", "pos": [0.701, -0.2428, -0.0828], "color": "#009E73", "groups": {"zone": "Slower GRDP growth × more extractive × spending grew slower", "group": "plantation"}, "tip": ["Slower GRDP growth × more extractive × spending grew slower", "GRDP per person: +6.1% a year (current prices)", "Extractive share of GRDP: 33.5% → 39.1% (+5.7 points)", "Spending per person: +5.7% a year (current prices)", "Largest extractive group, 2025: Plantation (36.2% of GRDP)"]}, {"name": "Maluku", "pos": [0.1835, -0.1114, -0.6406], "color": "#8a8985", "groups": {"zone": "Slower GRDP growth × more extractive × spending grew slower", "group": "low"}, "tip": ["Slower GRDP growth × more extractive × spending grew slower", "GRDP per person: +5.2% a year (current prices)", "Extractive share of GRDP: 7.8% → 8.4% (+0.6 points)", "Spending per person: +5.8% a year (current prices)", "Largest extractive group, 2025: No group above 5% of GRDP (3.7% of GRDP)"]}, {"name": "Maluku Utara", "pos": [0.6208, 0.2513, 0.6218], "color": "#CC79A7", "groups": {"zone": "Faster GRDP growth × more extractive × spending grew faster", "group": "metals"}, "tip": ["Faster GRDP growth × more extractive × spending grew faster", "GRDP per person: +15.6% a year (current prices)", "Extractive share of GRDP: 25.1% → 64.4% (+39.3 points)", "Spending per person: +6.6% a year (current prices)", "Largest extractive group, 2025: Metals (59.3% of GRDP)"]}, {"name": "Papua Barat (pre-2022)", "pos": [0.3763, -0.3951, -0.7291], "color": "#000000", "groups": {"zone": "Slower GRDP growth × more extractive × spending grew slower", "group": "fossil"}, "tip": ["Slower GRDP growth × more extractive × spending grew slower", "GRDP per person: +3.2% a year (current prices)", "Extractive share of GRDP: 50.5% → 54.3% (+3.8 points)", "Spending per person: +5.5% a year (current prices)", "Largest extractive group, 2025: Fossil fuels (48.9% of GRDP)", "Borders before the 2022 split"]}, {"name": "Papua (pre-2022)", "pos": [0.377, 0.545, -0.515], "color": "#CC79A7", "groups": {"zone": "Slower GRDP growth × more extractive × spending grew faster", "group": "metals"}, "tip": ["Slower GRDP growth × more extractive × spending grew faster", "GRDP per person: +3.7% a year (current prices)", "Extractive share of GRDP: 36.1% → 40.5% (+4.4 points)", "Spending per person: +7.5% a year (current prices)", "Largest extractive group, 2025: Metals (33.9% of GRDP)", "Borders before the 2022 split"]}], "groups": {"zone": {"Slower GRDP growth × more extractive × spending grew slower": {"label": "Slower GRDP growth × more extractive × spending grew slower", "color": "#2166ac", "members": [0, 29, 30, 32], "edges": [[0, 29], [0, 32], [32, 30]]}, "Faster GRDP growth × more extractive × spending grew slower": {"label": "Faster GRDP growth × more extractive × spending grew slower", "color": "#b2182b", "members": [1, 4, 20, 21, 24, 25], "edges": [[1, 4], [4, 20], [20, 21], [21, 25], [21, 24]]}, "Slower GRDP growth × less extractive × spending grew slower": {"label": "Slower GRDP growth × less extractive × spending grew slower", "color": "#67a9cf", "members": [2, 3, 7, 8, 22], "edges": [[2, 7], [7, 3], [3, 8], [8, 22]]}, "Faster GRDP growth × less extractive × spending grew slower": {"label": "Faster GRDP growth × less extractive × spending grew slower", "color": "#ef8a62", "members": [5, 10, 14, 15, 23], "edges": [[5, 14], [14, 15], [15, 10], [5, 23]]}, "Faster GRDP growth × more extractive × spending grew faster": {"label": "Faster GRDP growth × more extractive × spending grew faster", "color": "#d6604d", "members": [6, 19, 27, 28, 31], "edges": [[6, 19], [19, 27], [27, 31], [27, 28]]}, "Slower GRDP growth × less extractive × spending grew faster": {"label": "Slower GRDP growth × less extractive × spending grew faster", "color": "#d1e5f0", "members": [9, 11, 12, 16, 17], "edges": [[9, 12], [12, 17], [12, 16], [16, 11]]}, "Faster GRDP growth × less extractive × spending grew faster": {"label": "Faster GRDP growth × less extractive × spending grew faster", "color": "#fddbc7", "members": [13, 26], "edges": [[13, 26]]}, "Slower GRDP growth × more extractive × spending grew faster": {"label": "Slower GRDP growth × more extractive × spending grew faster", "color": "#4393c3", "members": [18, 33], "edges": [[18, 33]]}}, "group": {"plantation": {"label": "Plantation", "color": "#009E73", "members": [0, 1, 2, 3, 4, 6, 7, 19, 20, 24, 29], "edges": [[0, 29], [29, 1], [1, 6], [1, 4], [4, 20], [4, 24], [1, 19], [24, 2], [2, 7], [7, 3]]}, "fossil": {"label": "Fossil fuels", "color": "#000000", "members": [5, 9, 21, 22, 23, 32], "edges": [[5, 23], [5, 21], [5, 9], [9, 22], [22, 32]]}, "metals": {"label": "Metals", "color": "#CC79A7", "members": [8, 17, 25, 27, 31, 33], "edges": [[8, 17], [17, 33], [33, 27], [27, 31], [31, 25]]}, "low": {"label": "No group above 5% of GRDP", "color": "#8a8985", "members": [10, 11, 12, 13, 14, 15, 16, 18, 28, 30], "edges": [[10, 15], [15, 14], [14, 16], [16, 18], [18, 11], [16, 12], [11, 28], [28, 13], [16, 30]]}, "quarrying": {"label": "Quarrying", "color": "#0072B2", "members": [26], "edges": []}}}, "modes": [["zone", "Zone"], ["group", "Extractive group"]], "legend": {"title": "Largest extractive group, 2025", "items": [{"label": "Fossil fuels", "color": "#000000"}, {"label": "Metals", "color": "#CC79A7"}, {"label": "Plantation", "color": "#009E73"}, {"label": "Quarrying", "color": "#0072B2"}, {"label": "No group above 5% of GRDP", "color": "#8a8985"}]}}</script>
+<script type="module">
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { CSS2DRenderer, CSS2DObject } from "three/addons/renderers/CSS2DRenderer.js";
+import { LineSegments2 } from "three/addons/lines/LineSegments2.js";
+import { LineSegmentsGeometry } from "three/addons/lines/LineSegmentsGeometry.js";
+import { LineMaterial } from "three/addons/lines/LineMaterial.js";
+
+const D = JSON.parse(document.getElementById("data").textContent);
+const holder = document.getElementById("scene");
+const info = document.getElementById("info");
+const tip = document.getElementById("tip");
+const size = () => [holder.clientWidth, holder.clientHeight];
+const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+// Renderer, label layer, camera with z pointing up, and orbit controls around the centre
+const renderer = new THREE.WebGLRenderer({antialias: true, preserveDrawingBuffer: true});
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setSize(...size());
+renderer.setClearColor(D.colors.surface);
+holder.appendChild(renderer.domElement);
+const labels = new CSS2DRenderer();
+labels.setSize(...size());
+Object.assign(labels.domElement.style, {position: "absolute", top: "0", left: "0", pointerEvents: "none"});
+holder.appendChild(labels.domElement);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(35, size()[0] / size()[1], 0.1, 100);
+camera.up.set(0, 0, 1);
+camera.position.set(...D.camera);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.target.set(0, 0, 0);
+controls.update();
+scene.add(new THREE.AmbientLight(0xffffff, 1.6));
+const sun = new THREE.DirectionalLight(0xffffff, 1.8);
+sun.position.set(2, -3, 4);
+scene.add(sun);
+
+// Thin lines from lists of points: the wire sphere, the cuts and the axes
+function lineSet(paths, color) {
+  const points = [];
+  for (const path of paths) for (let i = 0; i + 1 < path.length; i++) points.push(...path[i], ...path[i + 1]);
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute("position", new THREE.Float32BufferAttribute(points, 3));
+  return new THREE.LineSegments(geometry, new THREE.LineBasicMaterial({color}));
+}
+function circle(at) {
+  const path = [];
+  for (let i = 0; i <= 96; i++) { const t = i / 96 * 2 * Math.PI; path.push(at(Math.cos(t), Math.sin(t))); }
+  return path;
+}
+const rad = d => d * Math.PI / 180;
+const wire = [];
+for (const lat of [-60, -30, 30, 60]) wire.push(circle((c, s) => [Math.cos(rad(lat)) * c, Math.cos(rad(lat)) * s, Math.sin(rad(lat))]));
+for (const lon of [30, 60, 120, 150]) wire.push(circle((c, s) => [c * Math.cos(rad(lon)), c * Math.sin(rad(lon)), s]));
+scene.add(lineSet(wire, D.colors.wire));
+// The three cuts through the centre, where the sphere meets the plane of each reference value
+scene.add(lineSet([circle((c, s) => [c, s, 0]), circle((c, s) => [c, 0, s]), circle((c, s) => [0, c, s])], D.colors.cut));
+
+// Axes through the centre, an arrowhead at each high end, and names at both ends outside the sphere
+function textLabel(text, className, position, bold) {
+  const element = document.createElement("div");
+  element.className = className;
+  element.innerHTML = bold ? "<b>" + esc(text) + "</b>" : esc(text);
+  const label = new CSS2DObject(element);
+  label.position.copy(position);
+  scene.add(label);
+  return label;
+}
+for (const axis of D.axes) {
+  const d = new THREE.Vector3(...axis.dir);
+  scene.add(lineSet([[d.clone().multiplyScalar(-1.35).toArray(), d.clone().multiplyScalar(1.35).toArray()]], D.colors.axis));
+  const head = new THREE.Mesh(new THREE.ConeGeometry(0.035, 0.11, 16), new THREE.MeshBasicMaterial({color: D.colors.axis}));
+  head.position.copy(d.clone().multiplyScalar(1.35));
+  head.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), d);
+  scene.add(head);
+  textLabel(axis.high, "axis", d.clone().multiplyScalar(1.55), true);
+  textLabel(axis.low, "axis", d.clone().multiplyScalar(-1.55), false);
+}
+// The centre, where the three cuts meet
+scene.add(new THREE.Mesh(new THREE.SphereGeometry(0.022, 16, 12), new THREE.MeshBasicMaterial({color: D.colors.text})));
+
+// Points as shaded balls in their colours, each with its name just above
+const ball = new THREE.SphereGeometry(0.034, 24, 16);
+const names = D.points.map(p => {
+  const dot = new THREE.Mesh(ball, new THREE.MeshStandardMaterial({color: p.color, roughness: 0.45, metalness: 0.05}));
+  dot.position.set(...p.pos);
+  scene.add(dot);
+  const element = document.createElement("div");
+  element.className = "name";
+  element.innerHTML = "<span></span>";
+  element.firstChild.textContent = p.name;
+  const label = new CSS2DObject(element);
+  label.position.set(...p.pos);
+  scene.add(label);
+  return label;
+});
+
+// Legend of point colours
+document.getElementById("legend").innerHTML = '<div class="title">' + esc(D.legend.title) + "</div>" +
+  D.legend.items.map(item => '<div class="row"><span class="dot" style="background:' + item.color + '"></span>' +
+  esc(item.label) + "</div>").join("");
+
+// Controls: one button per constellation mode, then names on or off, and clear
+document.getElementById("controls").innerHTML = "Constellation: " + D.modes.map(([m, label], i) =>
+  '<button data-mode="' + m + '"' + (i === 0 ? ' class="on"' : "") + ">" + esc(label) + "</button>").join("") +
+  ' &nbsp; <button id="names">Names off</button><button id="clear">Clear</button>';
+
+// The constellation: thick lines along the group's shortest tree and halos around its points, added on a click
+const lineMaterial = new LineMaterial({color: 0x000000, linewidth: 3.5, transparent: true, opacity: 0.9});
+lineMaterial.resolution.set(...size());
+const halo = new THREE.SphereGeometry(0.06, 24, 16);
+let mode = D.modes[0][0], selected = null, showNames = true, drawn = [];
+function draw() {
+  for (const object of drawn) { scene.remove(object); if (object.geometry !== halo) object.geometry.dispose(); }
+  drawn = [];
+  if (selected === null) { info.textContent = ""; return; }
+  const group = D.groups[mode][D.points[selected].groups[mode]];
+  if (group.edges.length) {
+    const points = [];
+    for (const [a, b] of group.edges) points.push(...D.points[a].pos, ...D.points[b].pos);
+    const geometry = new LineSegmentsGeometry();
+    geometry.setPositions(points);
+    lineMaterial.color.set(group.color);
+    const lines = new LineSegments2(geometry, lineMaterial);
+    scene.add(lines);
+    drawn.push(lines);
+  }
+  for (const i of group.members) {
+    const ring = new THREE.Mesh(halo, new THREE.MeshBasicMaterial({color: group.color, transparent: true,
+      opacity: i === selected ? 0.5 : 0.28, depthWrite: false}));
+    ring.position.set(...D.points[i].pos);
+    scene.add(ring);
+    drawn.push(ring);
+  }
+  info.innerHTML = "<b>" + esc(group.label) + " (" + group.members.length + ")</b><br>" +
+    group.members.map(i => esc(D.points[i].name)).join(", ");
+}
+
+// Find the point whose ball is nearest a spot on screen, within a radius in pixels
+const projected = new THREE.Vector3();
+function nearest(x, y, radius) {
+  const box = renderer.domElement.getBoundingClientRect();
+  let best = null, bestDistance = radius;
+  D.points.forEach((p, i) => {
+    projected.set(...p.pos).project(camera);
+    const sx = (projected.x + 1) / 2 * box.width + box.left, sy = (1 - projected.y) / 2 * box.height + box.top;
+    const distance = Math.hypot(sx - x, sy - y);
+    if (distance < bestDistance) { best = i; bestDistance = distance; }
+  });
+  return best;
+}
+
+// A press and release without dragging selects the nearest point; a second click on it clears the constellation
+let pressed = null;
+renderer.domElement.addEventListener("pointerdown", event => { pressed = [event.clientX, event.clientY]; });
+renderer.domElement.addEventListener("pointerup", event => {
+  if (!pressed) return;
+  const moved = Math.hypot(event.clientX - pressed[0], event.clientY - pressed[1]);
+  pressed = null;
+  if (moved > 5) return;
+  const hit = nearest(event.clientX, event.clientY, 16);
+  if (hit === null) return;
+  selected = selected === hit ? null : hit;
+  draw();
+});
+// Hovering near a point shows its tip lines
+renderer.domElement.addEventListener("pointermove", event => {
+  if (pressed) { tip.style.display = "none"; return; }
+  const hit = nearest(event.clientX, event.clientY, 12);
+  renderer.domElement.style.cursor = hit === null ? "grab" : "pointer";
+  if (hit === null) { tip.style.display = "none"; return; }
+  const p = D.points[hit];
+  tip.innerHTML = "<b>" + esc(p.name) + "</b><br>" + p.tip.map(esc).join("<br>");
+  tip.style.left = (event.clientX + 14) + "px";
+  tip.style.top = (event.clientY + 14) + "px";
+  tip.style.display = "block";
+});
+renderer.domElement.addEventListener("pointerleave", () => { tip.style.display = "none"; });
+
+// The mode buttons pick the grouping, the names button shows or hides the names, and clear removes the constellation
+document.querySelectorAll("[data-mode]").forEach(button => button.addEventListener("click", () => {
+  mode = button.dataset.mode;
+  document.querySelectorAll("[data-mode]").forEach(other => other.classList.toggle("on", other === button));
+  draw();
+}));
+document.getElementById("names").addEventListener("click", event => {
+  showNames = !showNames;
+  for (const label of names) label.visible = showNames;
+  event.target.textContent = showNames ? "Names off" : "Names on";
+});
+document.getElementById("clear").addEventListener("click", () => { selected = null; draw(); });
+
+// Keep the view sized to the window, and draw every frame so the rotation glides
+window.addEventListener("resize", () => {
+  const [w, h] = size();
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+  labels.setSize(w, h);
+  lineMaterial.resolution.set(w, h);
+});
+renderer.setAnimationLoop(() => { controls.update(); renderer.render(scene, camera); labels.render(scene, camera); });
+window.sphereReady = true;
+draw();
+</script>
+<script>
+// Say so if three.js could not be loaded from the web, instead of leaving an empty page
+setTimeout(() => { if (!window.sphereReady) document.getElementById("info").textContent =
+  "Could not load three.js from cdn.jsdelivr.net. The page needs an internet connection the first time it opens."; }, 8000);
+</script>
+</body>
+</html>

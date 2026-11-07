@@ -1,0 +1,39 @@
+province_code,province,grdp_per_capita_2025,hhi_2025,effective_sectors,largest_sector,largest_sector_name,largest_sector_pct,coal_pct,coal_producer,status_2025,quadrant
+96,Papua Tengah,107.56,0.454691,2.20,B3,Pertambangan Bijih Logam,66.42,0.000000,no,**,Rich & concentrated
+91,Papua Barat,139.22,0.224036,4.46,C1,Industri Batubara dan Pengilangan Migas,38.02,0.000000,no,**,Rich & concentrated
+82,Maluku Utara,97.26,0.208418,4.80,C11,Industri Logam Dasar,38.54,0.000000,no,**,Rich & concentrated
+72,Sulawesi Tengah,131.64,0.145669,6.86,C11,Industri Logam Dasar,33.29,0.000000,no,**,Rich & concentrated
+21,Kepulauan Riau,172.46,0.134174,7.45,C12,"Industri Barang Logam; Komputer, Barang Elektronik, Optik; dan Peralatan Listrik",27.46,0.000000,no,**,Rich & concentrated
+14,Riau,176.38,0.124793,8.01,C2,Industri Makanan dan Minuman,22.51,0.222107,no,**,Rich & concentrated
+97,Papua Pegunungan,19.11,0.120827,8.28,O,"Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib",20.73,0.000000,no,**,Poorer & concentrated
+76,Sulawesi Barat,46.65,0.111042,9.01,A1c,Tanaman Perkebunan,25.55,0.001124,no,**,Poorer & concentrated
+64,Kalimantan Timur,208.33,0.105674,9.46,B2,Pertambangan Batubara dan Lignit,25.09,25.093635,yes,**,Rich & concentrated
+15,Jambi,92.79,0.102219,9.78,A1c,Tanaman Perkebunan,25.53,3.093256,yes,**,Rich & concentrated
+63,Kalimantan Selatan,70.58,0.101978,9.81,B2,Pertambangan Batubara dan Lignit,26.33,26.333690,yes,**,Poorer & concentrated
+95,Papua Selatan,64.92,0.100559,9.94,F,Konstruksi,23.50,0.000000,no,**,Poorer & concentrated
+12,Sumatera Utara,78.31,0.099680,10.03,G2,"Perdagangan Besar dan Eceran, Bukan Mobil dan Sepeda Motor",17.72,0.000000,no,**,Poorer & diversified
+94,Papua,84.31,0.092850,10.77,F,Konstruksi,19.15,0.000000,no,**,Rich & diversified
+81,Maluku,33.65,0.090435,11.06,O,"Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib",20.75,0.000000,no,**,Poorer & diversified
+65,Kalimantan Utara,208.20,0.088510,11.30,B2,Pertambangan Batubara dan Lignit,19.23,19.234596,yes,**,Rich & diversified
+75,Gorontalo,47.48,0.087785,11.39,A1a,Tanaman Pangan,18.51,0.000000,no,**,Poorer & diversified
+92,Papua Barat Daya,61.63,0.085637,11.68,F,Konstruksi,14.46,0.001734,no,**,Poorer & diversified
+62,Kalimantan Tengah,84.73,0.085517,11.69,A1c,Tanaman Perkebunan,16.31,7.144847,yes,**,Rich & diversified
+74,Sulawesi Tenggara,72.03,0.078356,12.76,B3,Pertambangan Bijih Logam,11.74,0.000000,no,**,Poorer & diversified
+18,Lampung,55.01,0.077580,12.89,C2,Industri Makanan dan Minuman,16.46,0.000000,no,**,Poorer & diversified
+31,DKI Jakarta,367.69,0.075890,13.18,G2,"Perdagangan Besar dan Eceran, Bukan Mobil dan Sepeda Motor",16.05,0.000000,no,**,Rich & diversified
+61,Kalimantan Barat,56.98,0.075870,13.18,A1c,Tanaman Perkebunan,13.52,0.000365,no,**,Poorer & diversified
+53,Nusa Tenggara Timur,25.84,0.075067,13.32,O,"Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib",12.95,0.000000,no,**,Poorer & diversified
+16,Sumatera Selatan,80.66,0.071974,13.89,B2,Pertambangan Batubara dan Lignit,13.93,13.926332,yes,**,Poorer & diversified
+19,Kepulauan Bangka Belitung,75.32,0.071778,13.93,G2,"Perdagangan Besar dan Eceran, Bukan Mobil dan Sepeda Motor",14.36,0.000000,no,**,Poorer & diversified
+33,Jawa Tengah,50.82,0.068907,14.51,C2,Industri Makanan dan Minuman,16.26,0.000000,no,**,Poorer & diversified
+52,Nusa Tenggara Barat,33.67,0.068162,14.67,B3,Pertambangan Bijih Logam,13.68,0.000000,no,**,Poorer & diversified
+11,Aceh,45.77,0.068116,14.68,G2,"Perdagangan Besar dan Eceran, Bukan Mobil dan Sepeda Motor",13.71,1.709786,yes,**,Poorer & diversified
+73,Sulawesi Selatan,78.75,0.065668,15.23,F,Konstruksi,13.09,0.000009,no,**,Poorer & diversified
+13,Sumatera Barat,59.55,0.065452,15.28,G2,"Perdagangan Besar dan Eceran, Bukan Mobil dan Sepeda Motor",15.22,0.084895,no,**,Poorer & diversified
+35,Jawa Timur,80.86,0.064676,15.46,G2,"Perdagangan Besar dan Eceran, Bukan Mobil dan Sepeda Motor",14.18,0.000000,no,**,Poorer & diversified
+51,Bali,72.66,0.061387,16.29,I1,Penyediaan Akomodasi,12.53,0.000000,no,**,Poorer & diversified
+34,DI Yogyakarta,55.04,0.061138,16.36,F,Konstruksi,9.81,0.000000,no,**,Poorer & diversified
+71,Sulawesi Utara,75.24,0.057111,17.51,F,Konstruksi,10.16,0.000000,no,**,Poorer & diversified
+32,Jawa Barat,59.86,0.056750,17.62,G2,"Perdagangan Besar dan Eceran, Bukan Mobil dan Sepeda Motor",12.83,0.000000,no,**,Poorer & diversified
+36,Banten,74.67,0.056425,17.72,F,Konstruksi,11.81,0.015285,no,**,Poorer & diversified
+17,Bengkulu,52.31,0.056366,17.74,G2,"Perdagangan Besar dan Eceran, Bukan Mobil dan Sepeda Motor",10.43,1.856265,yes,**,Poorer & diversified

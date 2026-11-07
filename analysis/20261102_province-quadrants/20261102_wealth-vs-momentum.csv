@@ -1,0 +1,39 @@
+province_code,province,grdp_per_capita_2025,grdp_growth_2025_pct,quadrant
+35,Jawa Timur,80.86,7.41,Catching up
+16,Sumatera Selatan,80.66,8.47,Catching up
+73,Sulawesi Selatan,78.75,8.16,Catching up
+12,Sumatera Utara,78.31,7.78,Catching up
+19,Kepulauan Bangka Belitung,75.32,8.66,Catching up
+71,Sulawesi Utara,75.24,9.27,Catching up
+51,Bali,72.66,8.61,Catching up
+74,Sulawesi Tenggara,72.03,7.84,Catching up
+32,Jawa Barat,59.86,7.62,Catching up
+61,Kalimantan Barat,56.98,9.46,Catching up
+34,DI Yogyakarta,55.04,7.53,Catching up
+18,Lampung,55.01,8.22,Catching up
+17,Bengkulu,52.31,7.54,Catching up
+75,Gorontalo,47.48,8.10,Catching up
+76,Sulawesi Barat,46.65,10.82,Catching up
+53,Nusa Tenggara Timur,25.84,7.94,Catching up
+36,Banten,74.67,7.16,Lagging
+63,Kalimantan Selatan,70.58,6.38,Lagging
+95,Papua Selatan,64.92,6.84,Lagging
+92,Papua Barat Daya,61.63,5.88,Lagging
+13,Sumatera Barat,59.55,5.72,Lagging
+33,Jawa Tengah,50.82,6.90,Lagging
+11,Aceh,45.77,5.88,Lagging
+52,Nusa Tenggara Barat,33.67,5.86,Lagging
+81,Maluku,33.65,5.85,Lagging
+97,Papua Pegunungan,19.11,6.84,Lagging
+14,Riau,176.38,7.99,Rich & fast
+21,Kepulauan Riau,172.46,8.31,Rich & fast
+91,Papua Barat,139.22,7.39,Rich & fast
+72,Sulawesi Tengah,131.64,10.22,Rich & fast
+82,Maluku Utara,97.26,37.82,Rich & fast
+15,Jambi,92.79,8.20,Rich & fast
+62,Kalimantan Tengah,84.73,8.16,Rich & fast
+31,DKI Jakarta,367.69,6.70,Rich & slowing
+64,Kalimantan Timur,208.33,3.60,Rich & slowing
+65,Kalimantan Utara,208.20,6.16,Rich & slowing
+96,Papua Tengah,107.56,-8.24,Rich & slowing
+94,Papua,84.31,5.35,Rich & slowing

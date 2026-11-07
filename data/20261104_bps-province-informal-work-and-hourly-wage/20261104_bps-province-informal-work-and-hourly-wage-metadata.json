@@ -1,0 +1,1155 @@
+{
+ "title": "BPS informal employment share (2018-2025) and average hourly wage (2015-2025) by province, Indonesia",
+ "columns": {
+  "province_code": "BPS province code (kode_bps); 00 = Indonesia. Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definitions in 'indicators'.",
+  "period": "YYYY, the year BPS gives the value for. Both tables label their one sub-period 'Tahun' (year), and their notes name the source only as 'Sumber: Sakernas, BPS'; neither states which Sakernas round (February or August) a value comes from, so periods are written YYYY, not YYYYS1 or YYYYS2.",
+  "status": "Revision marker from the table note: 'r' (revised) on every hourly_wage row of 2015-2019, which the var 1172 note states are revised figures ('Tahun 2015-2019 angka revisi karena perubahan penimbang'); empty (final, no marker) on every other row. Meanings in 'status'.",
+  "value": "informal_employment_share: percent of employment, 2 decimals; hourly_wage: Rupiah per hour, 0 decimals; both as published by BPS. Multiply by 'multiplier' for base units."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  },
+  "00": {
+   "name": "INDONESIA",
+   "kode_dagri": null
+  }
+ },
+ "province_source": {
+  "url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=provinsi&periode_merge=2025_1.2025",
+  "file": "raw/province-codes/20261102_bps-province-codes-2025-s1.json",
+  "note": "BPS and Kemendagri codes differ for the six Papua provinces; join other datasets on the code system they use. Every region label in both tables matches the BPS list after cleaning.normalise_name, so no alias is declared."
+ },
+ "indicators": {
+  "informal_employment_share": {
+   "name": "Proporsi lapangan kerja informal (informal employment as a share of employment)",
+   "unit": "percent of employment",
+   "multiplier": 0.01,
+   "base_unit": "fraction of employment",
+   "decimals": 2,
+   "periods": "2018-2025, yearly",
+   "unit_reading": "The table's unit field reads 'Tidak Ada Satuan' (no unit). Its label calls the value a proportion (Proporsi) of informal employment (lapangan kerja informal), and every value lies between 0 and 100 with at most 2 decimals (checks.unit, which stops the build otherwise), so the values are read as percent of employment.",
+   "definition": "The table gives none (its definition field is empty), so which jobs BPS counts as informal is not stated in the raw files.",
+   "source": "BPS WebAPI var 2153 'Proporsi Lapangan Kerja Informal Menurut Provinsi', from Sakernas; see 'source_tables'",
+   "download_script": "raw/labour/20261104_download-bps-informal-work-and-hourly-wage-by-province.py"
+  },
+  "hourly_wage": {
+   "name": "Upah rata-rata per jam pekerja (average hourly wage of workers)",
+   "unit": "Rupiah per hour (Rupiah/Jam)",
+   "multiplier": 1,
+   "base_unit": "Rupiah per hour",
+   "decimals": 0,
+   "periods": "2015-2025, yearly",
+   "price_basis": "The table names no price base or deflator; values are the rupiah of each year as published.",
+   "definition": "The table gives none (its definition field is empty), so who counts as a worker (pekerja) and what the wage (upah) includes are not stated in the raw files.",
+   "revision": "The note states 'Tahun 2015-2019 angka revisi karena perubahan penimbang': the 2015-2019 values are revised figures because of a change of survey weights (penimbang), and carry status 'r'. The note does not say which weights replaced which, or whether 2020-2025 use the same weights.",
+   "source": "BPS WebAPI var 1172 'Upah Rata - Rata Per Jam Pekerja Menurut Provinsi', from Sakernas; see 'source_tables'",
+   "download_script": "raw/labour/20261104_download-bps-informal-work-and-hourly-wage-by-province.py"
+  }
+ },
+ "periods": {
+  "held": [
+   "2015",
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025"
+  ],
+  "by_indicator": {
+   "informal_employment_share": "2018-2025",
+   "hourly_wage": "2015-2025"
+  },
+  "survey_round": "Neither table states its Sakernas round: the one sub-period is 'Tahun' (year) and the notes name only 'Sumber: Sakernas, BPS'. Each value is BPS's figure for the year, written YYYY."
+ },
+ "coverage": {
+  "years": {
+   "informal_employment_share": {
+    "2018-2023": {
+     "provinces": 34,
+     "absent": [
+      "92",
+      "95",
+      "96",
+      "97"
+     ]
+    },
+    "2024-2025": {
+     "provinces": 38,
+     "absent": []
+    }
+   },
+   "hourly_wage": {
+    "2015-2023": {
+     "provinces": 34,
+     "absent": [
+      "92",
+      "95",
+      "96",
+      "97"
+     ]
+    },
+    "2024-2025": {
+     "provinces": 38,
+     "absent": []
+    }
+   }
+  },
+  "first_year": {
+   "92": {
+    "year": 2024,
+    "reason": "PAPUA BARAT DAYA became a province in 2022; both tables give it its own values from 2024, and 91 covers it before"
+   },
+   "95": {
+    "year": 2024,
+    "reason": "PAPUA SELATAN became a province in 2022; both tables give it its own values from 2024, and 94 covers it before"
+   },
+   "96": {
+    "year": 2024,
+    "reason": "PAPUA TENGAH became a province in 2022; both tables give it its own values from 2024, and 94 covers it before"
+   },
+   "97": {
+    "year": 2024,
+    "reason": "PAPUA PEGUNUNGAN became a province in 2022; both tables give it its own values from 2024, and 94 covers it before"
+   }
+  },
+  "indonesia": "Both tables list Indonesia (row 9999 'INDONESIA') after the 38 provinces, with a value in every year; it is written as code 00."
+ },
+ "borders": [
+  "65 (Kalimantan Utara) has its own values from the first year of each table (2015 for hourly_wage, 2018 for informal_employment_share), so 64 (Kalimantan Timur) excludes it in every year held.",
+  "91 (Papua Barat) and 94 (Papua) up to 2023 cover the areas before the 2022 split: the tables give 92, 95, 96 and 97 no value before 2024. From 2024, 91 and 94 cover the provinces after the split: Papua's (94) informal_employment_share falls from 84.43 in 2023 to 57.28 in 2024, the first year Papua Tengah (96) and Papua Pegunungan (97) have their own values, at 87.02 and 95.76.",
+  "Neither indicator adds across provinces. A share or an average for an area of several provinces, such as Papua Barat before the split (91 + 92) or Papua (94 + 95 + 96 + 97), needs the employment, hours and wages behind each value, which these tables do not give.",
+  "A change of 91 or 94 from 2023 to 2024 compares different areas; the change checks leave those changes out (checks.change_not_compared)."
+ ],
+ "source_tables": {
+  "2153": {
+   "role": "gives every informal_employment_share value in the CSV",
+   "label": "Proporsi Lapangan Kerja Informal Menurut Provinsi",
+   "subject": [
+    {
+     "val": 520,
+     "label": "Tenaga Kerja"
+    }
+   ],
+   "collection": "Tujuan Pembangunan Berkelanjutan Edisi I",
+   "sdg_indicator": "8.3.1, as the download script's comments name it; the raw files name only the collection 'Tujuan Pembangunan Berkelanjutan Edisi I'",
+   "unit": "Tidak Ada Satuan",
+   "decimals": 2,
+   "definition": "none: the table's definition field ('def') is empty",
+   "turvar": {
+    "0": "Tidak ada"
+   },
+   "turtahun": {
+    "0": "Tahun"
+   },
+   "regions": "38 Provinsi",
+   "years": "2018-2025",
+   "last_update": "2026-07-07 15:13:52",
+   "note": "Sumber: Sakernas, BPS",
+   "note_clauses": [
+    "Sumber: Sakernas, BPS"
+   ],
+   "note_statuses": {},
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/domain/0000/var/2153/th/{th}/key/{key} (th = first:last year minus 1900, such as 118:120 for 2018-2020; the key is not stored)",
+   "download_script": "raw/labour/20261104_download-bps-informal-work-and-hourly-wage-by-province.py",
+   "files": [
+    "raw/labour/20261104_bps-api-var2153-informal-employment-share-by-province-2018-2020.json",
+    "raw/labour/20261104_bps-api-var2153-informal-employment-share-by-province-2021-2023.json",
+    "raw/labour/20261104_bps-api-var2153-informal-employment-share-by-province-2024-2025.json"
+   ]
+  },
+  "1172": {
+   "role": "gives every hourly_wage value in the CSV",
+   "label": "Upah Rata - Rata Per Jam Pekerja Menurut Provinsi",
+   "subject": [
+    {
+     "val": 537,
+     "label": "Biaya Tenaga Kerja"
+    }
+   ],
+   "collection": "Tujuan Pembangunan Berkelanjutan Edisi I",
+   "sdg_indicator": "8.5.1, as the download script's comments name it; the raw files name only the collection 'Tujuan Pembangunan Berkelanjutan Edisi I'",
+   "unit": "Rupiah/Jam",
+   "decimals": 0,
+   "definition": "none: the table's definition field ('def') is empty",
+   "turvar": {
+    "0": "Tidak ada"
+   },
+   "turtahun": {
+    "0": "Tahun"
+   },
+   "regions": "38 Provinsi",
+   "years": "2015-2025",
+   "last_update": "2025-12-02 09:19:39",
+   "note": "Sumber: Sakernas, BPS Tahun 2015-2019 angka revisi karena perubahan penimbang",
+   "note_clauses": [
+    "Sumber: Sakernas, BPS",
+    "Tahun 2015-2019 angka revisi karena perubahan penimbang"
+   ],
+   "note_statuses": {
+    "2015": "r",
+    "2016": "r",
+    "2017": "r",
+    "2018": "r",
+    "2019": "r"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/domain/0000/var/1172/th/{th}/key/{key} (th = first:last year minus 1900, such as 115:117 for 2015-2017; the key is not stored)",
+   "download_script": "raw/labour/20261104_download-bps-informal-work-and-hourly-wage-by-province.py",
+   "files": [
+    "raw/labour/20261104_bps-api-var1172-hourly-wage-by-province-2015-2017.json",
+    "raw/labour/20261104_bps-api-var1172-hourly-wage-by-province-2018-2020.json",
+    "raw/labour/20261104_bps-api-var1172-hourly-wage-by-province-2021-2023.json",
+    "raw/labour/20261104_bps-api-var1172-hourly-wage-by-province-2024-2025.json"
+   ]
+  }
+ },
+ "notes": [
+  "No other raw file in the repository holds these values: the other wage tables in raw/labour give the average monthly net wage of employees (var 583 and the BPS static tables) and the minimum wage (var 220 and the Kemnaker datasets), which measure other things. There is no cross-source check (layer 4).",
+  "Indonesia's value is BPS's own national figure, not computed here. It lies between the lowest and the highest province in every indicator and year (checks.identities), as a national share or average over the same workers must; the tables give no employment or hours weights, so no closer provinces-to-Indonesia identity can be checked.",
+  "Derived values are not stored. Change in the informal share (percentage points) = informal_employment_share in t - informal_employment_share in t-1; hourly wage growth (%) = (hourly_wage in t / hourly_wage in t-1 - 1) x 100.",
+  "checks.flags lists every value or change outside its range in checks.plausible_ranges for a person to review, with the two values each change compares; a flag stays whether it reflects a real event or a source error."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "unit",
+   "identities",
+   "plausibility checked (layer 5, flags listed)"
+  ],
+  "unit": {
+   "check": "informal_employment_share lies between 0 and 100 in every row, as a share written per 100 must; the unit field reads 'Tidak Ada Satuan', so this is what declares the values percentages",
+   "compared": 288,
+   "lowest": 29.57,
+   "highest": 95.76
+  },
+  "identities": [
+   {
+    "check": "informal_employment_share: Indonesia (00) lies between the lowest and the highest province value, every year",
+    "compared": 8,
+    "tolerance": 0,
+    "tolerance_reason": "rounding to the published decimals cannot move a weighted mean outside the rounded lowest and highest values",
+    "years": {
+     "2018": {
+      "indonesia": 56.98,
+      "lowest": [
+       "31",
+       30.15
+      ],
+      "highest": [
+       "94",
+       78.11
+      ],
+      "provinces": 34
+     },
+     "2019": {
+      "indonesia": 55.88,
+      "lowest": [
+       "21",
+       29.57
+      ],
+      "highest": [
+       "94",
+       79.29
+      ],
+      "provinces": 34
+     },
+     "2020": {
+      "indonesia": 60.47,
+      "lowest": [
+       "21",
+       35.41
+      ],
+      "highest": [
+       "94",
+       79.92
+      ],
+      "provinces": 34
+     },
+     "2021": {
+      "indonesia": 59.45,
+      "lowest": [
+       "21",
+       35.2
+      ],
+      "highest": [
+       "94",
+       80.47
+      ],
+      "provinces": 34
+     },
+     "2022": {
+      "indonesia": 59.31,
+      "lowest": [
+       "21",
+       36.32
+      ],
+      "highest": [
+       "94",
+       84.11
+      ],
+      "provinces": 34
+     },
+     "2023": {
+      "indonesia": 59.11,
+      "lowest": [
+       "21",
+       33.67
+      ],
+      "highest": [
+       "94",
+       84.43
+      ],
+      "provinces": 34
+     },
+     "2024": {
+      "indonesia": 57.95,
+      "lowest": [
+       "21",
+       31.55
+      ],
+      "highest": [
+       "97",
+       95.76
+      ],
+      "provinces": 38
+     },
+     "2025": {
+      "indonesia": 57.8,
+      "lowest": [
+       "21",
+       34.25
+      ],
+      "highest": [
+       "97",
+       95.3
+      ],
+      "provinces": 38
+     }
+    }
+   },
+   {
+    "check": "hourly_wage: Indonesia (00) lies between the lowest and the highest province value, every year",
+    "compared": 11,
+    "tolerance": 0,
+    "tolerance_reason": "rounding to the published decimals cannot move a weighted mean outside the rounded lowest and highest values",
+    "years": {
+     "2015": {
+      "indonesia": 11434.0,
+      "lowest": [
+       "33",
+       8525.0
+      ],
+      "highest": [
+       "94",
+       19290.0
+      ],
+      "provinces": 34
+     },
+     "2016": {
+      "indonesia": 14068.0,
+      "lowest": [
+       "52",
+       9940.0
+      ],
+      "highest": [
+       "74",
+       23444.0
+      ],
+      "provinces": 34
+     },
+     "2017": {
+      "indonesia": 14731.0,
+      "lowest": [
+       "33",
+       10569.0
+      ],
+      "highest": [
+       "94",
+       25657.0
+      ],
+      "provinces": 34
+     },
+     "2018": {
+      "indonesia": 15275.0,
+      "lowest": [
+       "52",
+       11359.0
+      ],
+      "highest": [
+       "94",
+       25987.0
+      ],
+      "provinces": 34
+     },
+     "2019": {
+      "indonesia": 15823.0,
+      "lowest": [
+       "33",
+       11828.0
+      ],
+      "highest": [
+       "31",
+       25236.0
+      ],
+      "provinces": 34
+     },
+     "2020": {
+      "indonesia": 17696.0,
+      "lowest": [
+       "33",
+       12707.0
+      ],
+      "highest": [
+       "94",
+       32138.0
+      ],
+      "provinces": 34
+     },
+     "2021": {
+      "indonesia": 18089.0,
+      "lowest": [
+       "52",
+       12992.0
+      ],
+      "highest": [
+       "31",
+       30662.0
+      ],
+      "provinces": 34
+     },
+     "2022": {
+      "indonesia": 17542.0,
+      "lowest": [
+       "52",
+       11734.0
+      ],
+      "highest": [
+       "31",
+       32685.0
+      ],
+      "provinces": 34
+     },
+     "2023": {
+      "indonesia": 19027.0,
+      "lowest": [
+       "52",
+       12933.0
+      ],
+      "highest": [
+       "31",
+       42354.0
+      ],
+      "provinces": 34
+     },
+     "2024": {
+      "indonesia": 19009.0,
+      "lowest": [
+       "52",
+       13267.0
+      ],
+      "highest": [
+       "31",
+       35281.0
+      ],
+      "provinces": 38
+     },
+     "2025": {
+      "indonesia": 20030.0,
+      "lowest": [
+       "52",
+       14450.0
+      ],
+      "highest": [
+       "31",
+       39019.0
+      ],
+      "provinces": 38
+     }
+    }
+   }
+  ],
+  "cross_source": "Not applicable (layer 4): no other raw file holds these values; see 'notes'.",
+  "plausible_ranges": {
+   "informal_employment_share": {
+    "range": [
+     20,
+     95
+    ],
+    "measure": "Every value, percent of employment. Below 20, more than four jobs in five would be formal; above 95, fewer than one in twenty. Either lies far from Indonesia's share in every year (checks.identities), so it is flagged for review."
+   },
+   "informal_employment_share_change": {
+    "range": [
+     -8,
+     8
+    ],
+    "measure": "Change from the same region's value the year before, in percentage points (share in t - share in t-1). Informality is a share of all employment and shifts slowly, so a move of more than 8 points in one year is flagged for review."
+   },
+   "hourly_wage": {
+    "range": [
+     5000,
+     50000
+    ],
+    "measure": "Every value, Rupiah per hour as published. The range reaches well beyond the published values on both sides (checks.plausibility_observed), so a value below 5,000 or above 50,000 Rupiah per hour in 2015-2025 would point to a unit or entry error, and is flagged for review."
+   },
+   "hourly_wage_change_pct": {
+    "range": [
+     -15,
+     30
+    ],
+    "measure": "Change from the same region's value the year before, in percent ((hourly_wage in t / hourly_wage in t-1 - 1) x 100). An average wage seldom falls by more than 15 percent or rises by more than 30 percent in one year, so such a move is flagged for review."
+   }
+  },
+  "plausibility_observed": {
+   "informal_employment_share": {
+    "read": 288,
+    "lowest": {
+     "province_code": "21",
+     "period": "2019",
+     "value": 29.57
+    },
+    "highest": {
+     "province_code": "97",
+     "period": "2024",
+     "value": 95.76
+    }
+   },
+   "informal_employment_share_change": {
+    "read": 247,
+    "lowest": {
+     "province_code": "82",
+     "period": "2019",
+     "value": -5.23
+    },
+    "highest": {
+     "province_code": "51",
+     "period": "2020",
+     "value": 7.23
+    }
+   },
+   "hourly_wage": {
+    "read": 393,
+    "lowest": {
+     "province_code": "33",
+     "period": "2015",
+     "value": 8525.0
+    },
+    "highest": {
+     "province_code": "31",
+     "period": "2023",
+     "value": 42354.0
+    }
+   },
+   "hourly_wage_change_pct": {
+    "read": 352,
+    "lowest": {
+     "province_code": "74",
+     "period": "2017",
+     "value": -29.1759
+    },
+    "highest": {
+     "province_code": "74",
+     "period": "2016",
+     "value": 71.6126
+    }
+   }
+  },
+  "change_not_compared": [
+   {
+    "province_code": "91",
+    "indicator": "hourly_wage",
+    "period": "2024",
+    "reason": "91 in 2023 includes 92, which has its own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "91",
+    "indicator": "informal_employment_share",
+    "period": "2024",
+    "reason": "91 in 2023 includes 92, which has its own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "94",
+    "indicator": "hourly_wage",
+    "period": "2024",
+    "reason": "94 in 2023 includes 95, 96 and 97, which have their own values from 2024, so the change compares different areas"
+   },
+   {
+    "province_code": "94",
+    "indicator": "informal_employment_share",
+    "period": "2024",
+    "reason": "94 in 2023 includes 95, 96 and 97, which have their own values from 2024, so the change compares different areas"
+   }
+  ],
+  "flags": [
+   {
+    "check": "informal_employment_share",
+    "province_code": "97",
+    "indicator": "informal_employment_share",
+    "period": "2024",
+    "value": 95.76,
+    "range": [
+     20,
+     95
+    ]
+   },
+   {
+    "check": "informal_employment_share",
+    "province_code": "97",
+    "indicator": "informal_employment_share",
+    "period": "2025",
+    "value": 95.3,
+    "range": [
+     20,
+     95
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "31",
+    "indicator": "hourly_wage",
+    "period": "2016",
+    "from_period": "2015",
+    "values": {
+     "2015": 17012.0,
+     "2016": 23181.0
+    },
+    "value": 36.2626,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "31",
+    "indicator": "hourly_wage",
+    "period": "2024",
+    "from_period": "2023",
+    "values": {
+     "2023": 42354.0,
+     "2024": 35281.0
+    },
+    "value": -16.6997,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "32",
+    "indicator": "hourly_wage",
+    "period": "2016",
+    "from_period": "2015",
+    "values": {
+     "2015": 11247.0,
+     "2016": 14791.0
+    },
+    "value": 31.5106,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "36",
+    "indicator": "hourly_wage",
+    "period": "2016",
+    "from_period": "2015",
+    "values": {
+     "2015": 14228.0,
+     "2016": 21033.0
+    },
+    "value": 47.8282,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "51",
+    "indicator": "hourly_wage",
+    "period": "2016",
+    "from_period": "2015",
+    "values": {
+     "2015": 11038.0,
+     "2016": 14852.0
+    },
+    "value": 34.5534,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "53",
+    "indicator": "hourly_wage",
+    "period": "2020",
+    "from_period": "2019",
+    "values": {
+     "2019": 12610.0,
+     "2020": 17696.0
+    },
+    "value": 40.3331,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "53",
+    "indicator": "hourly_wage",
+    "period": "2022",
+    "from_period": "2021",
+    "values": {
+     "2021": 16386.0,
+     "2022": 13012.0
+    },
+    "value": -20.5907,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "72",
+    "indicator": "hourly_wage",
+    "period": "2022",
+    "from_period": "2021",
+    "values": {
+     "2021": 20637.0,
+     "2022": 15890.0
+    },
+    "value": -23.0024,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "74",
+    "indicator": "hourly_wage",
+    "period": "2016",
+    "from_period": "2015",
+    "values": {
+     "2015": 13661.0,
+     "2016": 23444.0
+    },
+    "value": 71.6126,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "74",
+    "indicator": "hourly_wage",
+    "period": "2017",
+    "from_period": "2016",
+    "values": {
+     "2016": 23444.0,
+     "2017": 16604.0
+    },
+    "value": -29.1759,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "75",
+    "indicator": "hourly_wage",
+    "period": "2016",
+    "from_period": "2015",
+    "values": {
+     "2015": 10030.0,
+     "2016": 13088.0
+    },
+    "value": 30.4885,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "76",
+    "indicator": "hourly_wage",
+    "period": "2016",
+    "from_period": "2015",
+    "values": {
+     "2015": 14171.0,
+     "2016": 11730.0
+    },
+    "value": -17.2253,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "76",
+    "indicator": "hourly_wage",
+    "period": "2020",
+    "from_period": "2019",
+    "values": {
+     "2019": 13126.0,
+     "2020": 18136.0
+    },
+    "value": 38.1685,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "76",
+    "indicator": "hourly_wage",
+    "period": "2022",
+    "from_period": "2021",
+    "values": {
+     "2021": 18072.0,
+     "2022": 14774.0
+    },
+    "value": -18.2492,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "81",
+    "indicator": "hourly_wage",
+    "period": "2020",
+    "from_period": "2019",
+    "values": {
+     "2019": 17306.0,
+     "2020": 26198.0
+    },
+    "value": 51.381,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "81",
+    "indicator": "hourly_wage",
+    "period": "2021",
+    "from_period": "2020",
+    "values": {
+     "2020": 26198.0,
+     "2021": 21156.0
+    },
+    "value": -19.2457,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "81",
+    "indicator": "hourly_wage",
+    "period": "2022",
+    "from_period": "2021",
+    "values": {
+     "2021": 21156.0,
+     "2022": 17006.0
+    },
+    "value": -19.6162,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "82",
+    "indicator": "hourly_wage",
+    "period": "2020",
+    "from_period": "2019",
+    "values": {
+     "2019": 17425.0,
+     "2020": 23338.0
+    },
+    "value": 33.934,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "82",
+    "indicator": "hourly_wage",
+    "period": "2023",
+    "from_period": "2022",
+    "values": {
+     "2022": 18278.0,
+     "2023": 27078.0
+    },
+    "value": 48.1453,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "82",
+    "indicator": "hourly_wage",
+    "period": "2024",
+    "from_period": "2023",
+    "values": {
+     "2023": 27078.0,
+     "2024": 21965.0
+    },
+    "value": -18.8825,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "91",
+    "indicator": "hourly_wage",
+    "period": "2022",
+    "from_period": "2021",
+    "values": {
+     "2021": 29600.0,
+     "2022": 24128.0
+    },
+    "value": -18.4865,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "hourly_wage_change_pct",
+    "province_code": "94",
+    "indicator": "hourly_wage",
+    "period": "2022",
+    "from_period": "2021",
+    "values": {
+     "2021": 30382.0,
+     "2022": 24097.0
+    },
+    "value": -20.6866,
+    "range": [
+     -15,
+     30
+    ]
+   }
+  ]
+ },
+ "file": "20261104_bps-province-informal-work-and-hourly-wage.csv",
+ "rows": 681,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source",
+  "r": "Angka diperbaiki (revised)"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/labour/20261104_bps-api-var2153-informal-employment-share-by-province-2018-2020.json": {
+   "sha256": "4c8f5f28590aada09822a2d7237b92f767e3f102c465f1bb34ed9e0833687583"
+  },
+  "raw/labour/20261104_bps-api-var2153-informal-employment-share-by-province-2021-2023.json": {
+   "sha256": "a374ec3345792eb320ead4e6f046578c75bc3a00511c1f9816ddfbdf98fb3c27"
+  },
+  "raw/labour/20261104_bps-api-var2153-informal-employment-share-by-province-2024-2025.json": {
+   "sha256": "33cd0cfba9a0c411d6b5361d7a9a4567e6b14a3fa66821a6c66e9bd2e27b8dbc"
+  },
+  "raw/labour/20261104_bps-api-var1172-hourly-wage-by-province-2015-2017.json": {
+   "sha256": "20cc33eb70f10a5f3930b96b8329b85e488fe7bbb0a843d63ec42082231465cc"
+  },
+  "raw/labour/20261104_bps-api-var1172-hourly-wage-by-province-2018-2020.json": {
+   "sha256": "cd2aca7bd2d034b0c84b4d9da892d237df6ebf9dfe4471af0d847e4d230fb4d9"
+  },
+  "raw/labour/20261104_bps-api-var1172-hourly-wage-by-province-2021-2023.json": {
+   "sha256": "67b4f8f5d184658e43e9649a246c64fa134ecba7ae52e985fb81f0b1d2197bfe"
+  },
+  "raw/labour/20261104_bps-api-var1172-hourly-wage-by-province-2024-2025.json": {
+   "sha256": "c1b10c0699ed0cc3454d76f132a29a3603887fddf8ebceb4b182a85be6358e76"
+  }
+ }
+}
