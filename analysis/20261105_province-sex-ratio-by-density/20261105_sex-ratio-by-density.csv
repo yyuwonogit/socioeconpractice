@@ -1,0 +1,39 @@
+unit,province,density_per_km2,group,sex_ratio
+81,Maluku,43.0,sparse,102.2
+72,Sulawesi Tengah,51.0,sparse,105.1
+82,Maluku Utara,42.0,sparse,105.1
+61,Kalimantan Barat,39.0,sparse,105.3
+62,Kalimantan Tengah,19.0,sparse,106.5
+64,Kalimantan Timur,34.0,sparse,106.8
+95,Papua Selatan,5.0,sparse,107.7
+92,Papua Barat Daya,16.0,sparse,108.5
+94,Papua,13.0,sparse,109.4
+65,Kalimantan Utara,11.0,sparse,110.4
+91,Papua Barat,10.0,sparse,110.5
+96,Papua Tengah,24.0,sparse,113.5
+97,Papua Pegunungan,29.0,sparse,114.0
+34,DI Yogyakarta,1193.0,rest,97.8
+73,Sulawesi Selatan,211.0,rest,98.8
+35,Jawa Timur,876.0,rest,99.4
+53,Nusa Tenggara Timur,124.0,rest,100.0
+51,Bali,798.0,rest,100.4
+12,Sumatera Utara,218.0,rest,100.8
+31,DKI Jakarta,16155.0,rest,100.8
+11,Aceh,99.0,rest,100.9
+33,Jawa Tengah,1113.0,rest,100.9
+52,Nusa Tenggara Barat,291.0,rest,100.9
+13,Sumatera Barat,140.0,rest,101.5
+75,Gorontalo,103.0,rest,101.6
+63,Kalimantan Selatan,116.0,rest,102.2
+32,Jawa Barat,1370.0,rest,102.4
+74,Sulawesi Tenggara,78.0,rest,102.6
+76,Sulawesi Barat,92.0,rest,102.7
+21,Kepulauan Riau,268.0,rest,103.1
+15,Jambi,77.0,rest,103.2
+36,Banten,1341.0,rest,103.3
+16,Sumatera Selatan,103.0,rest,103.6
+18,Lampung,284.0,rest,104.1
+71,Sulawesi Utara,188.0,rest,104.1
+17,Bengkulu,106.0,rest,104.2
+14,Riau,76.0,rest,104.3
+19,Kepulauan Bangka Belitung,93.0,rest,105.2

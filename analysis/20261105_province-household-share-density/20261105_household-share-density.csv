@@ -1,0 +1,39 @@
+unit,province,extractive_share_pct,group,pkrt_share_pct
+65,Kalimantan Utara,36.999382,high,14.845518
+64,Kalimantan Timur,52.974008,high,17.778271
+91,Papua Barat,66.71,high,18.234657
+82,Maluku Utara,64.405818,high,23.338157
+96,Papua Tengah,74.510101,high,25.043317
+72,Sulawesi Tengah,62.359551,high,27.855055
+14,Riau,68.281918,high,34.387903
+62,Kalimantan Tengah,42.312681,high,36.508595
+15,Jambi,49.546978,high,40.878435
+63,Kalimantan Selatan,32.761268,high,42.856919
+74,Sulawesi Tenggara,36.23362,high,46.013296
+76,Sulawesi Barat,39.147323,high,46.670533
+92,Papua Barat Daya,28.428588,high,47.680295
+61,Kalimantan Barat,35.342135,high,48.507958
+12,Sumatera Utara,34.294107,high,51.116152
+11,Aceh,22.715758,high,53.672511
+19,Kepulauan Bangka Belitung,28.025306,high,53.995322
+52,Nusa Tenggara Barat,21.166242,high,58.230341
+16,Sumatera Selatan,35.67513,high,61.330558
+21,Kepulauan Riau,14.778285,low,41.396749
+71,Sulawesi Utara,11.530667,low,43.640629
+13,Sumatera Barat,12.97691,low,51.496996
+51,Bali,3.962203,low,52.515489
+36,Banten,8.704592,low,53.042536
+73,Sulawesi Selatan,14.080545,low,53.599555
+94,Papua,4.74342,low,55.171026
+17,Bengkulu,11.73675,low,60.230626
+35,Jawa Timur,9.977922,low,60.779093
+33,Jawa Tengah,8.880289,low,60.889545
+75,Gorontalo,5.839141,low,61.554955
+34,DI Yogyakarta,1.777808,low,61.628688
+18,Lampung,12.512638,low,62.60551
+31,DKI Jakarta,0.917617,low,62.798255
+53,Nusa Tenggara Timur,4.477791,low,65.164176
+32,Jawa Barat,5.803073,low,65.506206
+81,Maluku,8.362538,low,70.301759
+95,Papua Selatan,8.47644,low,73.042794
+97,Papua Pegunungan,2.612362,low,86.487909

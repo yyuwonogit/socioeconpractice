@@ -1,0 +1,409 @@
+outcome,row,unit,province,x,y,first_year,last_year
+pkrt_share_pct,average,11,Aceh,17.840995,58.961757,2015,2025
+pkrt_share_pct,average,12,Sumatera Utara,28.293529,52.122646,2015,2025
+pkrt_share_pct,average,13,Sumatera Barat,13.023055,53.062531,2015,2025
+pkrt_share_pct,average,14,Riau,67.94941,35.641183,2015,2025
+pkrt_share_pct,average,15,Jambi,47.147427,43.588538,2015,2025
+pkrt_share_pct,average,16,Sumatera Selatan,34.513456,64.024056,2015,2025
+pkrt_share_pct,average,17,Bengkulu,9.809316,62.435399,2015,2025
+pkrt_share_pct,average,18,Lampung,13.077291,61.447937,2015,2025
+pkrt_share_pct,average,19,Kepulauan Bangka Belitung,29.280603,57.955137,2015,2025
+pkrt_share_pct,average,21,Kepulauan Riau,17.724398,40.357618,2015,2025
+pkrt_share_pct,average,31,DKI Jakarta,1.138608,61.600492,2015,2025
+pkrt_share_pct,average,32,Jawa Barat,6.486868,65.318505,2015,2025
+pkrt_share_pct,average,33,Jawa Tengah,10.66503,60.745413,2015,2025
+pkrt_share_pct,average,34,DI Yogyakarta,2.217842,64.957054,2015,2025
+pkrt_share_pct,average,35,Jawa Timur,11.048553,60.039235,2015,2025
+pkrt_share_pct,average,36,Banten,8.705408,53.125442,2015,2025
+pkrt_share_pct,average,51,Bali,4.467819,51.212819,2015,2025
+pkrt_share_pct,average,52,Nusa Tenggara Barat,20.545296,60.579587,2015,2025
+pkrt_share_pct,average,53,Nusa Tenggara Timur,4.16541,70.300529,2015,2025
+pkrt_share_pct,average,61,Kalimantan Barat,30.33252,51.513471,2015,2025
+pkrt_share_pct,average,62,Kalimantan Tengah,40.59424,39.728744,2015,2025
+pkrt_share_pct,average,63,Kalimantan Selatan,29.995572,45.410641,2015,2025
+pkrt_share_pct,average,64,Kalimantan Timur,61.580661,16.754053,2015,2025
+pkrt_share_pct,average,65,Kalimantan Utara,39.294674,16.146691,2015,2025
+pkrt_share_pct,average,71,Sulawesi Utara,11.272047,44.196502,2015,2025
+pkrt_share_pct,average,72,Sulawesi Tengah,49.380435,38.483973,2015,2025
+pkrt_share_pct,average,73,Sulawesi Selatan,14.673626,54.129549,2015,2025
+pkrt_share_pct,average,74,Sulawesi Tenggara,31.368542,48.2473,2015,2025
+pkrt_share_pct,average,75,Gorontalo,5.432872,61.618212,2015,2025
+pkrt_share_pct,average,76,Sulawesi Barat,33.067243,50.600117,2015,2025
+pkrt_share_pct,average,81,Maluku,8.099659,70.174037,2015,2025
+pkrt_share_pct,average,82,Maluku Utara,39.793986,45.102144,2015,2025
+pkrt_share_pct,average,91+92,Papua Barat (pre-split),46.843107,28.973929,2015,2023
+pkrt_share_pct,average,94+95+96+97,Papua (pre-split),37.102278,47.086644,2015,2023
+pkrt_share_pct,change,11,Aceh,7.152301,-8.183159,2015,2025
+pkrt_share_pct,change,12,Sumatera Utara,4.325773,-2.418932,2015,2025
+pkrt_share_pct,change,13,Sumatera Barat,-1.974879,-2.146109,2015,2025
+pkrt_share_pct,change,14,Riau,-2.034401,0.352033,2015,2025
+pkrt_share_pct,change,15,Jambi,2.438373,-5.435842,2015,2025
+pkrt_share_pct,change,16,Sumatera Selatan,-1.099024,-5.731124,2015,2025
+pkrt_share_pct,change,17,Bengkulu,2.493816,-5.659363,2015,2025
+pkrt_share_pct,change,18,Lampung,-2.196075,2.011089,2015,2025
+pkrt_share_pct,change,19,Kepulauan Bangka Belitung,-7.45649,0.579268,2015,2025
+pkrt_share_pct,change,21,Kepulauan Riau,-8.095127,4.786022,2015,2025
+pkrt_share_pct,change,31,DKI Jakarta,-0.277982,2.049453,2015,2025
+pkrt_share_pct,change,32,Jawa Barat,-1.761724,0.995946,2015,2025
+pkrt_share_pct,change,33,Jawa Tengah,-3.623317,-0.462801,2015,2025
+pkrt_share_pct,change,34,DI Yogyakarta,-0.863947,-6.125825,2015,2025
+pkrt_share_pct,change,35,Jawa Timur,-2.101506,0.499107,2015,2025
+pkrt_share_pct,change,36,Banten,-0.345153,0.177446,2015,2025
+pkrt_share_pct,change,51,Bali,-1.065469,3.816634,2015,2025
+pkrt_share_pct,change,52,Nusa Tenggara Barat,-3.362735,-4.251713,2015,2025
+pkrt_share_pct,change,53,Nusa Tenggara Timur,0.148829,-9.521688,2015,2025
+pkrt_share_pct,change,61,Kalimantan Barat,17.751119,-6.679407,2015,2025
+pkrt_share_pct,change,62,Kalimantan Tengah,2.220368,-5.883098,2015,2025
+pkrt_share_pct,change,63,Kalimantan Selatan,2.619075,-3.797028,2015,2025
+pkrt_share_pct,change,64,Kalimantan Timur,-11.926589,0.596455,2015,2025
+pkrt_share_pct,change,65,Kalimantan Utara,-3.557683,-4.991238,2015,2025
+pkrt_share_pct,change,71,Sulawesi Utara,0.242584,-2.226723,2015,2025
+pkrt_share_pct,change,72,Sulawesi Tengah,27.31236,-24.048356,2015,2025
+pkrt_share_pct,change,73,Sulawesi Selatan,-3.403275,-0.921854,2015,2025
+pkrt_share_pct,change,74,Sulawesi Tenggara,6.438448,-4.254642,2015,2025
+pkrt_share_pct,change,75,Gorontalo,0.171692,0.194648,2015,2025
+pkrt_share_pct,change,76,Sulawesi Barat,5.696733,-5.528009,2015,2025
+pkrt_share_pct,change,81,Maluku,0.589775,0.283597,2015,2025
+pkrt_share_pct,change,82,Maluku Utara,38.001205,-34.715735,2015,2025
+pkrt_share_pct,change,91+92,Papua Barat (pre-split),-1.597921,3.727623,2015,2023
+pkrt_share_pct,change,94+95+96+97,Papua (pre-split),5.970693,-4.821548,2015,2023
+hourly_wage_rp,average,11,Aceh,17.840995,15860.090909,2015,2025
+hourly_wage_rp,average,12,Sumatera Utara,28.293529,14678.909091,2015,2025
+hourly_wage_rp,average,13,Sumatera Barat,13.023055,15423.909091,2015,2025
+hourly_wage_rp,average,14,Riau,67.94941,17329.363636,2015,2025
+hourly_wage_rp,average,15,Jambi,47.147427,15561.090909,2015,2025
+hourly_wage_rp,average,16,Sumatera Selatan,34.513456,14877.909091,2015,2025
+hourly_wage_rp,average,17,Bengkulu,9.809316,15988.636364,2015,2025
+hourly_wage_rp,average,18,Lampung,13.077291,13021.818182,2015,2025
+hourly_wage_rp,average,19,Kepulauan Bangka Belitung,29.280603,17098.0,2015,2025
+hourly_wage_rp,average,21,Kepulauan Riau,17.724398,24178.818182,2015,2025
+hourly_wage_rp,average,31,DKI Jakarta,1.138608,29355.818182,2015,2025
+hourly_wage_rp,average,32,Jawa Barat,6.486868,17996.454545,2015,2025
+hourly_wage_rp,average,33,Jawa Tengah,10.66503,12123.272727,2015,2025
+hourly_wage_rp,average,34,DI Yogyakarta,2.217842,14427.0,2015,2025
+hourly_wage_rp,average,35,Jawa Timur,11.048553,13562.545455,2015,2025
+hourly_wage_rp,average,36,Banten,8.705408,22231.454545,2015,2025
+hourly_wage_rp,average,51,Bali,4.467819,16766.363636,2015,2025
+hourly_wage_rp,average,52,Nusa Tenggara Barat,20.545296,12036.818182,2015,2025
+hourly_wage_rp,average,53,Nusa Tenggara Timur,4.16541,14235.090909,2015,2025
+hourly_wage_rp,average,61,Kalimantan Barat,30.33252,15967.0,2015,2025
+hourly_wage_rp,average,62,Kalimantan Tengah,40.59424,18936.181818,2015,2025
+hourly_wage_rp,average,63,Kalimantan Selatan,29.995572,17354.818182,2015,2025
+hourly_wage_rp,average,64,Kalimantan Timur,61.580661,22244.181818,2015,2025
+hourly_wage_rp,average,65,Kalimantan Utara,39.294674,21172.636364,2015,2025
+hourly_wage_rp,average,71,Sulawesi Utara,11.272047,18767.818182,2015,2025
+hourly_wage_rp,average,72,Sulawesi Tengah,49.380435,16088.181818,2015,2025
+hourly_wage_rp,average,73,Sulawesi Selatan,14.673626,17004.636364,2015,2025
+hourly_wage_rp,average,74,Sulawesi Tenggara,31.368542,18526.909091,2015,2025
+hourly_wage_rp,average,75,Gorontalo,5.432872,13867.454545,2015,2025
+hourly_wage_rp,average,76,Sulawesi Barat,33.067243,15171.181818,2015,2025
+hourly_wage_rp,average,81,Maluku,8.099659,18260.909091,2015,2025
+hourly_wage_rp,average,82,Maluku Utara,39.793986,19673.090909,2015,2025
+hourly_wage_rp,average,91+92,Papua Barat (pre-split),46.843107,23064.333333,2015,2023
+hourly_wage_rp,average,94+95+96+97,Papua (pre-split),37.102278,26007.333333,2015,2023
+ln_hourly_wage x 100,change,11,Aceh,7.152301,51.987,2015,2025
+ln_hourly_wage x 100,change,12,Sumatera Utara,4.325773,47.7054,2015,2025
+ln_hourly_wage x 100,change,13,Sumatera Barat,-1.974879,44.782,2015,2025
+ln_hourly_wage x 100,change,14,Riau,-2.034401,43.419,2015,2025
+ln_hourly_wage x 100,change,15,Jambi,2.438373,37.7493,2015,2025
+ln_hourly_wage x 100,change,16,Sumatera Selatan,-1.099024,49.7155,2015,2025
+ln_hourly_wage x 100,change,17,Bengkulu,2.493816,46.9773,2015,2025
+ln_hourly_wage x 100,change,18,Lampung,-2.196075,42.9455,2015,2025
+ln_hourly_wage x 100,change,19,Kepulauan Bangka Belitung,-7.45649,43.7796,2015,2025
+ln_hourly_wage x 100,change,21,Kepulauan Riau,-8.095127,44.4778,2015,2025
+ln_hourly_wage x 100,change,31,DKI Jakarta,-0.277982,83.013,2015,2025
+ln_hourly_wage x 100,change,32,Jawa Barat,-1.761724,65.398,2015,2025
+ln_hourly_wage x 100,change,33,Jawa Tengah,-3.623317,57.2354,2015,2025
+ln_hourly_wage x 100,change,34,DI Yogyakarta,-0.863947,55.8849,2015,2025
+ln_hourly_wage x 100,change,35,Jawa Timur,-2.101506,57.9359,2015,2025
+ln_hourly_wage x 100,change,36,Banten,-0.345153,58.9332,2015,2025
+ln_hourly_wage x 100,change,51,Bali,-1.065469,64.2464,2015,2025
+ln_hourly_wage x 100,change,52,Nusa Tenggara Barat,-3.362735,45.2905,2015,2025
+ln_hourly_wage x 100,change,53,Nusa Tenggara Timur,0.148829,46.6192,2015,2025
+ln_hourly_wage x 100,change,61,Kalimantan Barat,17.751119,40.5281,2015,2025
+ln_hourly_wage x 100,change,62,Kalimantan Tengah,2.220368,44.3103,2015,2025
+ln_hourly_wage x 100,change,63,Kalimantan Selatan,2.619075,37.4532,2015,2025
+ln_hourly_wage x 100,change,64,Kalimantan Timur,-11.926589,52.1066,2015,2025
+ln_hourly_wage x 100,change,65,Kalimantan Utara,-3.557683,32.6913,2015,2025
+ln_hourly_wage x 100,change,71,Sulawesi Utara,0.242584,51.8585,2015,2025
+ln_hourly_wage x 100,change,72,Sulawesi Tengah,27.31236,48.0462,2015,2025
+ln_hourly_wage x 100,change,73,Sulawesi Selatan,-3.403275,46.5915,2015,2025
+ln_hourly_wage x 100,change,74,Sulawesi Tenggara,6.438448,45.8473,2015,2025
+ln_hourly_wage x 100,change,75,Gorontalo,0.171692,53.1273,2015,2025
+ln_hourly_wage x 100,change,76,Sulawesi Barat,5.696733,24.394,2015,2025
+ln_hourly_wage x 100,change,81,Maluku,0.589775,38.4758,2015,2025
+ln_hourly_wage x 100,change,82,Maluku Utara,38.001205,67.5277,2015,2025
+ln_hourly_wage x 100,change,91+92,Papua Barat (pre-split),-1.597921,39.4839,2015,2023
+ln_hourly_wage x 100,change,94+95+96+97,Papua (pre-split),5.970693,39.277,2015,2023
+gini_total,average,11,Aceh,17.840995,0.315455,2015,2025
+gini_total,average,12,Sumatera Utara,28.293529,0.313455,2015,2025
+gini_total,average,13,Sumatera Barat,13.023055,0.306727,2015,2025
+gini_total,average,14,Riau,67.94941,0.328727,2015,2025
+gini_total,average,15,Jambi,47.147427,0.329636,2015,2025
+gini_total,average,16,Sumatera Selatan,34.513456,0.341727,2015,2025
+gini_total,average,17,Bengkulu,9.809316,0.344091,2015,2025
+gini_total,average,18,Lampung,13.077291,0.330091,2015,2025
+gini_total,average,19,Kepulauan Bangka Belitung,29.280603,0.259545,2015,2025
+gini_total,average,21,Kepulauan Riau,17.724398,0.347091,2015,2025
+gini_total,average,31,DKI Jakarta,1.138608,0.415364,2015,2025
+gini_total,average,32,Jawa Barat,6.486868,0.412182,2015,2025
+gini_total,average,33,Jawa Tengah,10.66503,0.368636,2015,2025
+gini_total,average,34,DI Yogyakarta,2.217842,0.433909,2015,2025
+gini_total,average,35,Jawa Timur,11.048553,0.381909,2015,2025
+gini_total,average,36,Banten,8.705408,0.369909,2015,2025
+gini_total,average,51,Bali,4.467819,0.368727,2015,2025
+gini_total,average,52,Nusa Tenggara Barat,20.545296,0.371273,2015,2025
+gini_total,average,53,Nusa Tenggara Timur,4.16541,0.339182,2015,2025
+gini_total,average,61,Kalimantan Barat,30.33252,0.323545,2015,2025
+gini_total,average,62,Kalimantan Tengah,40.59424,0.323455,2015,2025
+gini_total,average,63,Kalimantan Selatan,29.995572,0.326455,2015,2025
+gini_total,average,64,Kalimantan Timur,61.580661,0.325182,2015,2025
+gini_total,average,65,Kalimantan Utara,39.294674,0.287091,2015,2025
+gini_total,average,71,Sulawesi Utara,11.272047,0.371273,2015,2025
+gini_total,average,72,Sulawesi Tengah,49.380435,0.327091,2015,2025
+gini_total,average,73,Sulawesi Selatan,14.673626,0.390364,2015,2025
+gini_total,average,74,Sulawesi Tenggara,31.368542,0.388455,2015,2025
+gini_total,average,75,Gorontalo,5.432872,0.412364,2015,2025
+gini_total,average,76,Sulawesi Barat,33.067243,0.356273,2015,2025
+gini_total,average,81,Maluku,8.099659,0.317909,2015,2025
+gini_total,average,82,Maluku Utara,39.793986,0.302273,2015,2025
+gini_total,average,91+92,Papua Barat (pre-split),46.843107,0.387222,2015,2023
+gini_total,average,94+95+96+97,Papua (pre-split),37.102278,0.396333,2015,2023
+gini_total,change,11,Aceh,7.152301,-0.052,2015,2025
+gini_total,change,12,Sumatera Utara,4.325773,-0.041,2015,2025
+gini_total,change,13,Sumatera Barat,-1.974879,-0.06,2015,2025
+gini_total,change,14,Riau,-2.034401,-0.057,2015,2025
+gini_total,change,15,Jambi,2.438373,-0.06,2015,2025
+gini_total,change,16,Sumatera Selatan,-1.099024,-0.049,2015,2025
+gini_total,change,17,Bengkulu,2.493816,-0.027,2015,2025
+gini_total,change,18,Lampung,-2.196075,-0.084,2015,2025
+gini_total,change,19,Kepulauan Bangka Belitung,-7.45649,-0.061,2015,2025
+gini_total,change,21,Kepulauan Riau,-8.095127,0.018,2015,2025
+gini_total,change,31,DKI Jakarta,-0.277982,0.01,2015,2025
+gini_total,change,32,Jawa Barat,-1.761724,0.001,2015,2025
+gini_total,change,33,Jawa Tengah,-3.623317,-0.023,2015,2025
+gini_total,change,34,DI Yogyakarta,-0.863947,-0.007,2015,2025
+gini_total,change,35,Jawa Timur,-2.101506,-0.046,2015,2025
+gini_total,change,36,Banten,-0.345153,-0.071,2015,2025
+gini_total,change,51,Bali,-1.065469,-0.024,2015,2025
+gini_total,change,52,Nusa Tenggara Barat,-3.362735,0.001,2015,2025
+gini_total,change,53,Nusa Tenggara Timur,0.148829,-0.024,2015,2025
+gini_total,change,61,Kalimantan Barat,17.751119,-0.018,2015,2025
+gini_total,change,62,Kalimantan Tengah,2.220368,-0.034,2015,2025
+gini_total,change,63,Kalimantan Selatan,2.619075,-0.066,2015,2025
+gini_total,change,64,Kalimantan Timur,-11.926589,-0.004,2015,2025
+gini_total,change,65,Kalimantan Utara,-3.557683,-0.033,2015,2025
+gini_total,change,71,Sulawesi Utara,0.242584,-0.025,2015,2025
+gini_total,change,72,Sulawesi Tengah,27.31236,-0.095,2015,2025
+gini_total,change,73,Sulawesi Selatan,-3.403275,-0.061,2015,2025
+gini_total,change,74,Sulawesi Tenggara,6.438448,-0.036,2015,2025
+gini_total,change,75,Gorontalo,0.171692,-0.028,2015,2025
+gini_total,change,76,Sulawesi Barat,5.696733,-0.047,2015,2025
+gini_total,change,81,Maluku,0.589775,-0.044,2015,2025
+gini_total,change,82,Maluku Utara,38.001205,0.019,2015,2025
+gini_total,change,91+92,Papua Barat (pre-split),-1.597921,-0.07,2015,2023
+gini_total,change,94+95+96+97,Papua (pre-split),5.970693,-0.035,2015,2023
+netekspor_share_pct,average,11,Aceh,17.840995,-17.036399,2015,2025
+netekspor_share_pct,average,12,Sumatera Utara,28.293529,8.439385,2015,2025
+netekspor_share_pct,average,13,Sumatera Barat,13.023055,4.563856,2015,2025
+netekspor_share_pct,average,14,Riau,67.94941,26.774683,2015,2025
+netekspor_share_pct,average,15,Jambi,47.147427,25.654065,2015,2025
+netekspor_share_pct,average,16,Sumatera Selatan,34.513456,-6.897281,2015,2025
+netekspor_share_pct,average,17,Bengkulu,9.809316,-24.724279,2015,2025
+netekspor_share_pct,average,18,Lampung,13.077291,-3.232078,2015,2025
+netekspor_share_pct,average,19,Kepulauan Bangka Belitung,29.280603,4.421875,2015,2025
+netekspor_share_pct,average,21,Kepulauan Riau,17.724398,10.180441,2015,2025
+netekspor_share_pct,average,31,DKI Jakarta,1.138608,-13.783031,2015,2025
+netekspor_share_pct,average,32,Jawa Barat,6.486868,2.059689,2015,2025
+netekspor_share_pct,average,33,Jawa Tengah,10.66503,-1.307609,2015,2025
+netekspor_share_pct,average,34,DI Yogyakarta,2.217842,-17.594859,2015,2025
+netekspor_share_pct,average,35,Jawa Timur,11.048553,5.007915,2015,2025
+netekspor_share_pct,average,36,Banten,8.705408,9.246489,2015,2025
+netekspor_share_pct,average,51,Bali,4.467819,6.880175,2015,2025
+netekspor_share_pct,average,52,Nusa Tenggara Barat,20.545296,-13.566867,2015,2025
+netekspor_share_pct,average,53,Nusa Tenggara Timur,4.16541,-45.47753,2015,2025
+netekspor_share_pct,average,61,Kalimantan Barat,30.33252,4.334961,2015,2025
+netekspor_share_pct,average,62,Kalimantan Tengah,40.59424,3.518721,2015,2025
+netekspor_share_pct,average,63,Kalimantan Selatan,29.995572,19.020999,2015,2025
+netekspor_share_pct,average,64,Kalimantan Timur,61.580661,47.978887,2015,2025
+netekspor_share_pct,average,65,Kalimantan Utara,39.294674,44.445559,2015,2025
+netekspor_share_pct,average,71,Sulawesi Utara,11.272047,4.953419,2015,2025
+netekspor_share_pct,average,72,Sulawesi Tengah,49.380435,8.337589,2015,2025
+netekspor_share_pct,average,73,Sulawesi Selatan,14.673626,-2.919728,2015,2025
+netekspor_share_pct,average,74,Sulawesi Tenggara,31.368542,-1.540235,2015,2025
+netekspor_share_pct,average,75,Gorontalo,5.432872,-13.046419,2015,2025
+netekspor_share_pct,average,76,Sulawesi Barat,33.067243,3.254703,2015,2025
+netekspor_share_pct,average,81,Maluku,8.099659,-37.493097,2015,2025
+netekspor_share_pct,average,82,Maluku Utara,39.793986,-13.083788,2015,2025
+netekspor_share_pct,average,91+92,Papua Barat (pre-split),46.843107,28.491999,2015,2023
+netekspor_share_pct,average,94+95+96+97,Papua (pre-split),37.102278,-1.372575,2015,2023
+netekspor_share_pct,change,11,Aceh,7.152301,22.713357,2015,2025
+netekspor_share_pct,change,12,Sumatera Utara,4.325773,11.622177,2015,2025
+netekspor_share_pct,change,13,Sumatera Barat,-1.974879,9.340769,2015,2025
+netekspor_share_pct,change,14,Riau,-2.034401,0.936881,2015,2025
+netekspor_share_pct,change,15,Jambi,2.438373,11.977659,2015,2025
+netekspor_share_pct,change,16,Sumatera Selatan,-1.099024,15.244618,2015,2025
+netekspor_share_pct,change,17,Bengkulu,2.493816,14.485471,2015,2025
+netekspor_share_pct,change,18,Lampung,-2.196075,0.042547,2015,2025
+netekspor_share_pct,change,19,Kepulauan Bangka Belitung,-7.45649,2.903751,2015,2025
+netekspor_share_pct,change,21,Kepulauan Riau,-8.095127,-4.687334,2015,2025
+netekspor_share_pct,change,31,DKI Jakarta,-0.277982,5.058197,2015,2025
+netekspor_share_pct,change,32,Jawa Barat,-1.761724,5.094998,2015,2025
+netekspor_share_pct,change,33,Jawa Tengah,-3.623317,3.005156,2015,2025
+netekspor_share_pct,change,34,DI Yogyakarta,-0.863947,3.81714,2015,2025
+netekspor_share_pct,change,35,Jawa Timur,-2.101506,3.760991,2015,2025
+netekspor_share_pct,change,36,Banten,-0.345153,-5.103204,2015,2025
+netekspor_share_pct,change,51,Bali,-1.065469,-0.087045,2015,2025
+netekspor_share_pct,change,52,Nusa Tenggara Barat,-3.362735,8.799352,2015,2025
+netekspor_share_pct,change,53,Nusa Tenggara Timur,0.148829,16.255333,2015,2025
+netekspor_share_pct,change,61,Kalimantan Barat,17.751119,12.030717,2015,2025
+netekspor_share_pct,change,62,Kalimantan Tengah,2.220368,20.454131,2015,2025
+netekspor_share_pct,change,63,Kalimantan Selatan,2.619075,8.231197,2015,2025
+netekspor_share_pct,change,64,Kalimantan Timur,-11.926589,-6.725162,2015,2025
+netekspor_share_pct,change,65,Kalimantan Utara,-3.557683,16.870416,2015,2025
+netekspor_share_pct,change,71,Sulawesi Utara,0.242584,11.940096,2015,2025
+netekspor_share_pct,change,72,Sulawesi Tengah,27.31236,39.547679,2015,2025
+netekspor_share_pct,change,73,Sulawesi Selatan,-3.403275,5.870838,2015,2025
+netekspor_share_pct,change,74,Sulawesi Tenggara,6.438448,11.95921,2015,2025
+netekspor_share_pct,change,75,Gorontalo,0.171692,12.019877,2015,2025
+netekspor_share_pct,change,76,Sulawesi Barat,5.696733,12.928658,2015,2025
+netekspor_share_pct,change,81,Maluku,0.589775,15.96814,2015,2025
+netekspor_share_pct,change,82,Maluku Utara,38.001205,41.587118,2015,2025
+netekspor_share_pct,change,91+92,Papua Barat (pre-split),-1.597921,4.436873,2015,2023
+netekspor_share_pct,change,94+95+96+97,Papua (pre-split),5.970693,5.460327,2015,2023
+wage_share_pct,average,11,Aceh,18.467362,12.969591,2017,2025
+wage_share_pct,average,12,Sumatera Utara,27.980864,9.119095,2017,2025
+wage_share_pct,average,13,Sumatera Barat,12.648949,10.034338,2017,2025
+wage_share_pct,average,14,Riau,67.567479,4.788372,2017,2025
+wage_share_pct,average,15,Jambi,47.30379,7.56779,2017,2025
+wage_share_pct,average,16,Sumatera Selatan,34.358256,8.369959,2017,2025
+wage_share_pct,average,17,Bengkulu,9.991767,11.570552,2017,2025
+wage_share_pct,average,18,Lampung,12.766174,8.371439,2017,2025
+wage_share_pct,average,19,Kepulauan Bangka Belitung,28.07642,12.683475,2017,2025
+wage_share_pct,average,21,Kepulauan Riau,16.689227,11.257639,2017,2025
+wage_share_pct,average,31,DKI Jakarta,1.130026,5.5921,2017,2025
+wage_share_pct,average,32,Jawa Barat,6.306008,17.385288,2017,2025
+wage_share_pct,average,33,Jawa Tengah,10.308686,12.156887,2017,2025
+wage_share_pct,average,34,DI Yogyakarta,2.131794,17.018285,2017,2025
+wage_share_pct,average,35,Jawa Timur,10.894413,8.727128,2017,2025
+wage_share_pct,average,36,Banten,8.671272,19.616772,2017,2025
+wage_share_pct,average,51,Bali,4.356061,15.992349,2017,2025
+wage_share_pct,average,52,Nusa Tenggara Barat,19.66697,12.336695,2017,2025
+wage_share_pct,average,53,Nusa Tenggara Timur,4.130989,15.037153,2017,2025
+wage_share_pct,average,61,Kalimantan Barat,33.114416,12.479619,2017,2025
+wage_share_pct,average,62,Kalimantan Tengah,40.734199,12.523979,2017,2025
+wage_share_pct,average,63,Kalimantan Selatan,30.220236,13.112098,2017,2025
+wage_share_pct,average,64,Kalimantan Timur,61.048136,6.075965,2017,2025
+wage_share_pct,average,65,Kalimantan Utara,39.316486,6.0987,2017,2025
+wage_share_pct,average,71,Sulawesi Utara,11.27963,12.27749,2017,2025
+wage_share_pct,average,72,Sulawesi Tengah,52.306417,5.970908,2017,2025
+wage_share_pct,average,73,Sulawesi Selatan,14.183096,8.765346,2017,2025
+wage_share_pct,average,74,Sulawesi Tenggara,31.884657,10.003569,2017,2025
+wage_share_pct,average,75,Gorontalo,5.400869,13.392856,2017,2025
+wage_share_pct,average,76,Sulawesi Barat,33.221237,9.146773,2017,2025
+wage_share_pct,average,81,Maluku,8.215186,17.468848,2017,2025
+wage_share_pct,average,82,Maluku Utara,42.7782,12.050301,2017,2025
+wage_share_pct,average,91+92,Papua Barat (pre-split),46.206112,8.771298,2017,2023
+wage_share_pct,average,94+95+96+97,Papua (pre-split),37.14879,7.750857,2017,2023
+wage_share_pct,change,11,Aceh,8.309254,-4.89771,2017,2025
+wage_share_pct,change,12,Sumatera Utara,4.543132,-1.67472,2017,2025
+wage_share_pct,change,13,Sumatera Barat,-0.904178,-1.151994,2017,2025
+wage_share_pct,change,14,Riau,0.146751,-0.85254,2017,2025
+wage_share_pct,change,15,Jambi,2.499793,-2.077414,2017,2025
+wage_share_pct,change,16,Sumatera Selatan,3.189683,-2.558724,2017,2025
+wage_share_pct,change,17,Bengkulu,3.421744,-2.811842,2017,2025
+wage_share_pct,change,18,Lampung,-1.18104,0.061622,2017,2025
+wage_share_pct,change,19,Kepulauan Bangka Belitung,-4.620814,-2.070561,2017,2025
+wage_share_pct,change,21,Kepulauan Riau,-5.743401,-0.966763,2017,2025
+wage_share_pct,change,31,DKI Jakarta,-0.314678,-1.790187,2017,2025
+wage_share_pct,change,32,Jawa Barat,-1.060711,-5.090015,2017,2025
+wage_share_pct,change,33,Jawa Tengah,-2.862517,-0.444011,2017,2025
+wage_share_pct,change,34,DI Yogyakarta,-0.739301,-2.405875,2017,2025
+wage_share_pct,change,35,Jawa Timur,-1.679306,-1.007513,2017,2025
+wage_share_pct,change,36,Banten,0.138814,-6.658104,2017,2025
+wage_share_pct,change,51,Bali,-0.589575,-1.093849,2017,2025
+wage_share_pct,change,52,Nusa Tenggara Barat,-0.230874,2.688213,2017,2025
+wage_share_pct,change,53,Nusa Tenggara Timur,0.235542,5.199021,2017,2025
+wage_share_pct,change,61,Kalimantan Barat,4.414302,-0.869445,2017,2025
+wage_share_pct,change,62,Kalimantan Tengah,1.863146,-2.361762,2017,2025
+wage_share_pct,change,63,Kalimantan Selatan,5.329333,-2.931283,2017,2025
+wage_share_pct,change,64,Kalimantan Timur,-12.192464,-0.571124,2017,2025
+wage_share_pct,change,65,Kalimantan Utara,-2.194603,-3.487184,2017,2025
+wage_share_pct,change,71,Sulawesi Utara,0.425561,-3.125654,2017,2025
+wage_share_pct,change,72,Sulawesi Tengah,23.718646,-3.721226,2017,2025
+wage_share_pct,change,73,Sulawesi Selatan,-1.283602,-1.161479,2017,2025
+wage_share_pct,change,74,Sulawesi Tenggara,6.727595,-1.982876,2017,2025
+wage_share_pct,change,75,Gorontalo,0.593016,-1.306794,2017,2025
+wage_share_pct,change,76,Sulawesi Barat,7.974165,-0.684094,2017,2025
+wage_share_pct,change,81,Maluku,0.621715,-1.321006,2017,2025
+wage_share_pct,change,82,Maluku Utara,37.003011,-9.728942,2017,2025
+wage_share_pct,change,91+92,Papua Barat (pre-split),2.966492,1.629324,2017,2023
+wage_share_pct,change,94+95+96+97,Papua (pre-split),3.395637,-2.215215,2017,2023
+aps_16_18_pct,average,11,Aceh,17.840995,82.466364,2015,2025
+aps_16_18_pct,average,12,Sumatera Utara,28.293529,77.761818,2015,2025
+aps_16_18_pct,average,13,Sumatera Barat,13.023055,83.631818,2015,2025
+aps_16_18_pct,average,14,Riau,67.94941,77.176364,2015,2025
+aps_16_18_pct,average,15,Jambi,47.147427,72.147273,2015,2025
+aps_16_18_pct,average,16,Sumatera Selatan,34.513456,70.52,2015,2025
+aps_16_18_pct,average,17,Bengkulu,9.809316,79.292727,2015,2025
+aps_16_18_pct,average,18,Lampung,13.077291,71.263636,2015,2025
+aps_16_18_pct,average,19,Kepulauan Bangka Belitung,29.280603,68.816364,2015,2025
+aps_16_18_pct,average,21,Kepulauan Riau,17.724398,84.257273,2015,2025
+aps_16_18_pct,average,31,DKI Jakarta,1.138608,74.007273,2015,2025
+aps_16_18_pct,average,32,Jawa Barat,6.486868,68.395455,2015,2025
+aps_16_18_pct,average,33,Jawa Tengah,10.66503,70.45,2015,2025
+aps_16_18_pct,average,34,DI Yogyakarta,2.217842,89.276364,2015,2025
+aps_16_18_pct,average,35,Jawa Timur,11.048553,73.588182,2015,2025
+aps_16_18_pct,average,36,Banten,8.705408,69.170909,2015,2025
+aps_16_18_pct,average,51,Bali,4.467819,83.85,2015,2025
+aps_16_18_pct,average,52,Nusa Tenggara Barat,20.545296,77.286364,2015,2025
+aps_16_18_pct,average,53,Nusa Tenggara Timur,4.16541,75.347273,2015,2025
+aps_16_18_pct,average,61,Kalimantan Barat,30.33252,68.626364,2015,2025
+aps_16_18_pct,average,62,Kalimantan Tengah,40.59424,67.09,2015,2025
+aps_16_18_pct,average,63,Kalimantan Selatan,29.995572,69.776364,2015,2025
+aps_16_18_pct,average,64,Kalimantan Timur,61.580661,81.725455,2015,2025
+aps_16_18_pct,average,65,Kalimantan Utara,39.294674,76.623636,2015,2025
+aps_16_18_pct,average,71,Sulawesi Utara,11.272047,73.302727,2015,2025
+aps_16_18_pct,average,72,Sulawesi Tengah,49.380435,75.206364,2015,2025
+aps_16_18_pct,average,73,Sulawesi Selatan,14.673626,71.366364,2015,2025
+aps_16_18_pct,average,74,Sulawesi Tenggara,31.368542,74.499091,2015,2025
+aps_16_18_pct,average,75,Gorontalo,5.432872,71.000909,2015,2025
+aps_16_18_pct,average,76,Sulawesi Barat,33.067243,69.936364,2015,2025
+aps_16_18_pct,average,81,Maluku,8.099659,78.851818,2015,2025
+aps_16_18_pct,average,82,Maluku Utara,39.793986,76.83,2015,2025
+aps_16_18_pct,average,91+92,Papua Barat (pre-split),46.843107,80.781111,2015,2023
+aps_16_18_pct,average,94+95+96+97,Papua (pre-split),37.102278,63.694444,2015,2023
+aps_16_18_pct,change,11,Aceh,7.152301,-0.49,2015,2025
+aps_16_18_pct,change,12,Sumatera Utara,4.325773,1.28,2015,2025
+aps_16_18_pct,change,13,Sumatera Barat,-1.974879,2.51,2015,2025
+aps_16_18_pct,change,14,Riau,-2.034401,1.85,2015,2025
+aps_16_18_pct,change,15,Jambi,2.438373,3.64,2015,2025
+aps_16_18_pct,change,16,Sumatera Selatan,-1.099024,5.38,2015,2025
+aps_16_18_pct,change,17,Bengkulu,2.493816,2.32,2015,2025
+aps_16_18_pct,change,18,Lampung,-2.196075,6.31,2015,2025
+aps_16_18_pct,change,19,Kepulauan Bangka Belitung,-7.45649,9.86,2015,2025
+aps_16_18_pct,change,21,Kepulauan Riau,-8.095127,6.4,2015,2025
+aps_16_18_pct,change,31,DKI Jakarta,-0.277982,17.49,2015,2025
+aps_16_18_pct,change,32,Jawa Barat,-1.761724,10.08,2015,2025
+aps_16_18_pct,change,33,Jawa Tengah,-3.623317,10.31,2015,2025
+aps_16_18_pct,change,34,DI Yogyakarta,-0.863947,6.25,2015,2025
+aps_16_18_pct,change,35,Jawa Timur,-2.101506,10.52,2015,2025
+aps_16_18_pct,change,36,Banten,-0.345153,7.11,2015,2025
+aps_16_18_pct,change,51,Bali,-1.065469,8.99,2015,2025
+aps_16_18_pct,change,52,Nusa Tenggara Barat,-3.362735,3.35,2015,2025
+aps_16_18_pct,change,53,Nusa Tenggara Timur,0.148829,2.4,2015,2025
+aps_16_18_pct,change,61,Kalimantan Barat,17.751119,4.12,2015,2025
+aps_16_18_pct,change,62,Kalimantan Tengah,2.220368,4.76,2015,2025
+aps_16_18_pct,change,63,Kalimantan Selatan,2.619075,7.67,2015,2025
+aps_16_18_pct,change,64,Kalimantan Timur,-11.926589,3.47,2015,2025
+aps_16_18_pct,change,65,Kalimantan Utara,-3.557683,7.52,2015,2025
+aps_16_18_pct,change,71,Sulawesi Utara,0.242584,-0.77,2015,2025
+aps_16_18_pct,change,72,Sulawesi Tengah,27.31236,1.56,2015,2025
+aps_16_18_pct,change,73,Sulawesi Selatan,-3.403275,6.28,2015,2025
+aps_16_18_pct,change,74,Sulawesi Tenggara,6.438448,7.16,2015,2025
+aps_16_18_pct,change,75,Gorontalo,0.171692,2.97,2015,2025
+aps_16_18_pct,change,76,Sulawesi Barat,5.696733,6.08,2015,2025
+aps_16_18_pct,change,81,Maluku,0.589775,-0.59,2015,2025
+aps_16_18_pct,change,82,Maluku Utara,38.001205,4.46,2015,2025
+aps_16_18_pct,change,91+92,Papua Barat (pre-split),-1.597921,0.59,2015,2023
+aps_16_18_pct,change,94+95+96+97,Papua (pre-split),5.970693,2.19,2015,2023

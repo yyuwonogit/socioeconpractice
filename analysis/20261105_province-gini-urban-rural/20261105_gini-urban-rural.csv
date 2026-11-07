@@ -1,0 +1,76 @@
+unit,province,extractive_share_pct,group,area,gini
+76,Sulawesi Barat,39.147323,high,urban,0.434
+52,Nusa Tenggara Barat,21.166242,high,urban,0.397
+16,Sumatera Selatan,35.67513,high,urban,0.37
+74,Sulawesi Tenggara,36.23362,high,urban,0.359
+61,Kalimantan Barat,35.342135,high,urban,0.348
+14,Riau,68.281918,high,urban,0.345
+82,Maluku Utara,64.405818,high,urban,0.34
+11,Aceh,22.715758,high,urban,0.329
+15,Jambi,49.546978,high,urban,0.328
+12,Sumatera Utara,34.294107,high,urban,0.324
+64,Kalimantan Timur,52.974008,high,urban,0.316
+62,Kalimantan Tengah,42.312681,high,urban,0.31
+72,Sulawesi Tengah,62.359551,high,urban,0.305
+63,Kalimantan Selatan,32.761268,high,urban,0.304
+91,Papua Barat,66.71,high,urban,0.279
+65,Kalimantan Utara,36.999382,high,urban,0.262
+92,Papua Barat Daya,28.428588,high,urban,0.251
+19,Kepulauan Bangka Belitung,28.025306,high,urban,0.232
+96,Papua Tengah,74.510101,high,urban,0.207
+31,DKI Jakarta,0.917617,low,urban,0.441
+34,DI Yogyakarta,1.777808,low,urban,0.434
+32,Jawa Barat,5.803073,low,urban,0.426
+17,Bengkulu,11.73675,low,urban,0.424
+33,Jawa Tengah,8.880289,low,urban,0.39
+75,Gorontalo,5.839141,low,urban,0.389
+21,Kepulauan Riau,14.778285,low,urban,0.383
+35,Jawa Timur,9.977922,low,urban,0.383
+73,Sulawesi Selatan,14.080545,low,urban,0.373
+51,Bali,3.962203,low,urban,0.352
+71,Sulawesi Utara,11.530667,low,urban,0.343
+36,Banten,8.704592,low,urban,0.335
+95,Papua Selatan,8.47644,low,urban,0.326
+18,Lampung,12.512638,low,urban,0.319
+94,Papua,4.74342,low,urban,0.314
+13,Sumatera Barat,12.97691,low,urban,0.307
+97,Papua Pegunungan,2.612362,low,urban,0.301
+53,Nusa Tenggara Timur,4.477791,low,urban,0.28
+81,Maluku,8.362538,low,urban,0.276
+92,Papua Barat Daya,28.428588,high,rural,0.478
+91,Papua Barat,66.71,high,rural,0.409
+96,Papua Tengah,74.510101,high,rural,0.348
+74,Sulawesi Tenggara,36.23362,high,rural,0.345
+52,Nusa Tenggara Barat,21.166242,high,rural,0.323
+64,Kalimantan Timur,52.974008,high,rural,0.287
+15,Jambi,49.546978,high,rural,0.275
+62,Kalimantan Tengah,42.312681,high,rural,0.272
+14,Riau,68.281918,high,rural,0.267
+61,Kalimantan Barat,35.342135,high,rural,0.267
+76,Sulawesi Barat,39.147323,high,rural,0.259
+65,Kalimantan Utara,36.999382,high,rural,0.253
+72,Sulawesi Tengah,62.359551,high,rural,0.249
+82,Maluku Utara,64.405818,high,rural,0.249
+63,Kalimantan Selatan,32.761268,high,rural,0.248
+12,Sumatera Utara,34.294107,high,rural,0.228
+11,Aceh,22.715758,high,rural,0.224
+16,Sumatera Selatan,35.67513,high,rural,0.224
+19,Kepulauan Bangka Belitung,28.025306,high,rural,0.199
+94,Papua,4.74342,low,rural,0.511
+95,Papua Selatan,8.47644,low,rural,0.418
+75,Gorontalo,5.839141,low,rural,0.376
+97,Papua Pegunungan,2.612362,low,rural,0.345
+34,DI Yogyakarta,1.777808,low,rural,0.334
+73,Sulawesi Selatan,14.080545,low,rural,0.333
+71,Sulawesi Utara,11.530667,low,rural,0.332
+35,Jawa Timur,9.977922,low,rural,0.326
+32,Jawa Barat,5.803073,low,rural,0.323
+33,Jawa Tengah,8.880289,low,rural,0.306
+53,Nusa Tenggara Timur,4.477791,low,rural,0.298
+51,Bali,3.962203,low,rural,0.277
+17,Bengkulu,11.73675,low,rural,0.269
+18,Lampung,12.512638,low,rural,0.261
+81,Maluku,8.362538,low,rural,0.249
+21,Kepulauan Riau,14.778285,low,rural,0.238
+13,Sumatera Barat,12.97691,low,rural,0.232
+36,Banten,8.704592,low,rural,0.221

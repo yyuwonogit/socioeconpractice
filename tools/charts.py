@@ -46,6 +46,9 @@ HALO = 2.0
 # Times a chart may be redrawn while its y axis grows to fit flag names
 GROW_PASSES = 6
 
+# Figure size in inches of a full 16:9 PowerPoint slide (widescreen, 13.333 x 7.5 in), for charts that fill a slide
+SLIDE_SIZE = (13.333, 7.5)
+
 
 def display_name(name):
     """Title-case a BPS province name, keeping abbreviations such as DKI and DI in capitals."""
@@ -724,6 +727,52 @@ def quadrant_chart(df, x, y, xcut, ycut, quadrant_names, xlabel, ylabel, title, 
         plt.close(fig)
         ylim = grown
     fig.savefig(path, facecolor=SURFACE)
+    plt.close(fig)
+
+
+# Extractive-group styles, and the axes, title and legend of a chart drawn on its own axes
+
+# Colour, marker and legend label of each group of province_panel.EXTRACTIVE_GROUPS, for points that show a unit's
+# largest extractive group over its years. The five Okabe-Ito colours are those the commodity-reliance chart gives
+# metals, estate crops and oil and gas; checked as a set with the dataviz validator (all pairs, light surface), they
+# clear the normal-vision floor (15.6) but sit in the colour-blind warning band (7.6) and two lie under 3:1 contrast,
+# so each group also has its own marker and the points carry names
+EXTRACTIVE_GROUP_STYLE = {
+    "fossil": {"color": "#D55E00", "marker": "s", "label": "Fossil: oil, gas, coal, refining"},
+    "metals": {"color": "#CC79A7", "marker": "D", "label": "Metals: ores, smelters"},
+    "plantation": {"color": "#009E73", "marker": "o", "label": "Plantation: estate crops, mills"},
+    "forest": {"color": "#0072B2", "marker": "^", "label": "Forest: logging, wood, paper"},
+    "quarrying": {"color": "#E69F00", "marker": "v", "label": "Quarrying: stone, sand, cement"},
+}
+# Marker area of each shape of EXTRACTIVE_GROUP_STYLE as a multiple of a circle's at the same size, so that each looks
+# as large as a circle beside it (at one size matplotlib draws a triangle with half a square's area, and the surface
+# ring takes more of a pointed shape)
+EXTRACTIVE_MARKER_AREA = {"o": 1.0, "s": 0.95, "D": 0.85, "^": 1.35, "v": 1.35}
+
+
+def style_axes(ax):
+    """Style a chart's axes as the shared charts do: recessive grid and spines, secondary-ink ticks."""
+    ax.set_facecolor(SURFACE)
+    ax.grid(color=GRID, lw=0.8, zorder=0)
+    for side in ["top", "right"]:
+        ax.spines[side].set_visible(False)
+    for side in ["left", "bottom"]:
+        ax.spines[side].set_color(GRID)
+    ax.tick_params(colors=TEXT_SECONDARY, labelsize=9, length=0)
+
+
+def finish(fig, title, handles, path, legend_title=None, left=0.07):
+    """Add the title, the legend in one row under it (with its own title above the row when given), and save the
+    chart; left is the figure fraction where both start."""
+    fig.text(left, 0.975, title, fontsize=15, fontweight="bold", color=TEXT_PRIMARY, va="top")
+    if handles:
+        titled = {"title": legend_title, "title_fontsize": 9, "alignment": "left"} if legend_title else {}
+        legend = fig.legend(handles=handles, loc="upper left", bbox_to_anchor=(left, 0.94), ncol=len(handles),
+                            frameon=False, fontsize=9, labelcolor=TEXT_SECONDARY, handletextpad=0.5,
+                            columnspacing=1.8, borderaxespad=0, **titled)
+        if legend_title:
+            legend.get_title().set_color(TEXT_SECONDARY)
+    fig.savefig(path, facecolor=SURFACE, metadata={"Software": None})
     plt.close(fig)
 
 

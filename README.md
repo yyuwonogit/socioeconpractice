@@ -15,7 +15,8 @@ socioeconpractice/
 ├── .venv/                       built on each machine, never committed
 ├── tools/
 │   ├── cleaning.py              shared cleaning and checks, imported by every build script
-│   └── charts.py                shared chart code, imported by analysis scripts that draw charts
+│   ├── charts.py                shared chart code, imported by analysis scripts that draw charts
+│   └── province_panel.py        the harmonised province panel and its estimators, imported by analysis scripts that use the panel
 ├── .inbox/                      drop folder, emptied by Claude
 ├── .outbox/
 │   └── YYYYMMDD_<delivery>/     one folder per delivery
@@ -38,7 +39,7 @@ socioeconpractice/
 
 | Folder | Holds | Scripts |
 |---|---|---|
-| `tools/` | Shared modules, without date prefixes | `cleaning.py` holds the cleaning and checking that every build script uses, and `charts.py` holds the chart code that analysis scripts share |
+| `tools/` | Shared modules, without date prefixes | `cleaning.py` holds the cleaning and checking that every build script uses, `charts.py` holds the chart code that analysis scripts share, and `province_panel.py` holds the harmonised province panel and its estimators for the analysis scripts that use the panel |
 | `reference/` | Papers, reports and method notes | None |
 | `raw/<topic>/` | Source files as received, never edited | A download script sits beside the files it fetched |
 | `data/YYYYMMDD_<dataset>/` | Cleaned datasets and their metadata | The build script sits beside its output, reads `raw/` or other `data/` folders, and follows Cleaning and checking |

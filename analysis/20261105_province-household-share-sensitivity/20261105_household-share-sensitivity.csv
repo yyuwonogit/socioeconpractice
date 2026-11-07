@@ -1,0 +1,54 @@
+row,setting,slope,std_error,p_value,n,units
+Base,"five-group share at current prices, income held equal",-0.50178,0.0902202,2.103e-06,382,40
+One commodity group left out,fossil left out,-0.417399,0.0911446,4.673e-05,382,40
+One commodity group left out,metals left out,-0.134165,0.102184,0.1969,382,40
+One commodity group left out,plantation left out,-0.514036,0.0622631,4.327e-10,382,40
+One commodity group left out,forest left out,-0.491375,0.0811853,4.378e-07,382,40
+One commodity group left out,quarrying left out,-0.49453,0.0889906,2.134e-06,382,40
+Province trends,linear trend for each unit; units with fewer than 3 years left out (91 92 94 95 96 97),-0.329267,0.0956174,0.00158,370,34
+No income control,five-group share alone,-0.662192,0.0983262,4.969e-08,382,40
+One province left out,without Aceh (11),-0.483812,0.0900144,4.096e-06,371,39
+One province left out,without Sumatera Utara (12),-0.571964,0.0802366,1.649e-08,371,39
+One province left out,without Sumatera Barat (13),-0.502039,0.0907512,2.496e-06,371,39
+One province left out,without Riau (14),-0.500317,0.0906676,2.607e-06,371,39
+One province left out,without Jambi (15),-0.499115,0.0905605,2.664e-06,371,39
+One province left out,without Sumatera Selatan (16),-0.506809,0.0915843,2.482e-06,371,39
+One province left out,without Bengkulu (17),-0.499874,0.0903305,2.482e-06,371,39
+One province left out,without Lampung (18),-0.499992,0.0904713,2.539e-06,371,39
+One province left out,without Kepulauan Bangka Belitung (19),-0.502908,0.0930098,3.701e-06,371,39
+One province left out,without Kepulauan Riau (21),-0.493215,0.0932472,5.36e-06,371,39
+One province left out,without DKI Jakarta (31),-0.488705,0.0891573,2.928e-06,371,39
+One province left out,without Jawa Barat (32),-0.495172,0.0904896,3.014e-06,371,39
+One province left out,without Jawa Tengah (33),-0.500205,0.0909864,2.782e-06,371,39
+One province left out,without DI Yogyakarta (34),-0.516753,0.0934667,2.522e-06,371,39
+One province left out,without Jawa Timur (35),-0.494546,0.0903085,2.976e-06,371,39
+One province left out,without Banten (36),-0.490253,0.0896125,3.027e-06,371,39
+One province left out,without Bali (51),-0.507573,0.0922256,2.73e-06,371,39
+One province left out,without Nusa Tenggara Barat (52),-0.493721,0.0900195,2.898e-06,371,39
+One province left out,without Nusa Tenggara Timur (53),-0.504374,0.0902477,2.087e-06,371,39
+One province left out,without Kalimantan Barat (61),-0.546566,0.100714,3.476e-06,371,39
+One province left out,without Kalimantan Tengah (62),-0.501493,0.0906224,2.481e-06,371,39
+One province left out,without Kalimantan Selatan (63),-0.505474,0.0939598,4.034e-06,371,39
+One province left out,without Kalimantan Timur (64),-0.518543,0.0941731,2.707e-06,371,39
+One province left out,without Kalimantan Utara (65),-0.508521,0.0919327,2.5e-06,371,39
+One province left out,without Sulawesi Utara (71),-0.49731,0.0903928,2.747e-06,371,39
+One province left out,without Sulawesi Tengah (72),-0.492057,0.0932554,5.582e-06,371,39
+One province left out,without Sulawesi Selatan (73),-0.49812,0.0923796,3.879e-06,371,39
+One province left out,without Sulawesi Tenggara (74),-0.506359,0.0917888,2.62e-06,371,39
+One province left out,without Gorontalo (75),-0.493889,0.0899152,2.824e-06,371,39
+One province left out,without Sulawesi Barat (76),-0.502878,0.0932449,3.867e-06,371,39
+One province left out,without Maluku (81),-0.501501,0.0904751,2.411e-06,371,39
+One province left out,without Maluku Utara (82),-0.462441,0.0938819,1.674e-05,371,39
+One province left out,without Papua Barat (91),-0.501806,0.0902613,2.289e-06,380,39
+One province left out,without Papua Barat (pre-split) (91+92),-0.503904,0.0943001,4.519e-06,373,39
+One province left out,without Papua Barat Daya (92),-0.5018,0.0902632,2.29e-06,380,39
+One province left out,without Papua (94),-0.501779,0.0902566,2.289e-06,380,39
+One province left out,without Papua (pre-split) (94+95+96+97),-0.463706,0.0846542,2.963e-06,373,39
+One province left out,without Papua Selatan (95),-0.501777,0.0902571,2.289e-06,380,39
+One province left out,without Papua Tengah (96),-0.499883,0.0907214,2.675e-06,380,39
+One province left out,without Papua Pegunungan (97),-0.501803,0.090272,2.294e-06,380,39
+Papua dropped,"units covering 91, 92, 94, 95, 96, 97 left out",-0.457352,0.0896771,1.613e-05,352,32
+Mining and quarrying only,sector B share in place of the five-group share,-0.46523,0.105841,8.249e-05,382,40
+Constant 2010 prices,five-group share at constant 2010 prices,-0.475029,0.10864,8.853e-05,382,40
+2020–21 dropped or years cut at 2023,2020 and 2021 dropped,-0.485295,0.0927106,5.961e-06,314,40
+2020–21 dropped or years cut at 2023,2015-2023 only,-0.492815,0.0951652,1.09e-05,306,34

@@ -1,0 +1,229 @@
+{
+ "title": "Open unemployment rate by province, Sakernas February and August rounds, 2023-2025",
+ "source": "BPS WebAPI var 543 'Tingkat Pengangguran Terbuka Menurut Provinsi' (Sakernas)",
+ "last_update": "2026-05-06 15:41:30",
+ "bps_note": "<p>Data 2011-2013 menggunakan Backcast dari Penimbang Proyeksi Komponen                    <br />Data 2018-2020 menggunakan Backcast dari Penimbang berbasis SUPAS 2015                    <br />1986-1998, penghitungan tanpa data Provinsi Timor Timor                    <br />Pada tahun 1995, Sakernas tidak dilaksanakan                    <br />Pada tahun 2000, tanpa Maluku                    <br />Sumber: Survei Angkatan Kerja Nasional (Sakernas)                    <br /><br /><br /></p><p><br /></p><p><br /></p>",
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  },
+  "00": {
+   "name": "INDONESIA",
+   "kode_dagri": null
+  }
+ },
+ "national_code": "00",
+ "indicators": {
+  "open_unemployment_rate": {
+   "unit": "percent of the labour force (Persen)",
+   "multiplier_to_base": 1,
+   "definition": "unemployed persons as a percentage of the labour force",
+   "source": "BPS WebAPI var 543",
+   "periods": "2023S1-2025S2"
+  }
+ },
+ "periods": {
+  "S1": "Sakernas February round",
+  "S2": "Sakernas August round"
+ },
+ "gaps": {
+  "92": "no value before 2024: the table reports this province apart from 2024; in 2023 its area is inside 91",
+  "95": "no value before 2024: the table reports this province apart from 2024; in 2023 its area is inside 94",
+  "96": "no value before 2024: the table reports this province apart from 2024; in 2023 its area is inside 94",
+  "97": "no value before 2024: the table reports this province apart from 2024; in 2023 its area is inside 94"
+ },
+ "read_context": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "encoding": "utf-8",
+   "numbers": "none: every code and name is a JSON string",
+   "missing": "none: every record carries kode_bps, nama_bps, kode_dagri and nama_dagri",
+   "unit": null
+  },
+  "raw/labour/20261103_bps-unemployment-rate-by-province-2023-2025.json": {
+   "encoding": "utf-8",
+   "numbers": "JSON numbers, decimal point, no thousands separator",
+   "missing": "key absent from datacontent",
+   "var": 543,
+   "unit": "Persen",
+   "decimals": 2
+  }
+ },
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "plausibility"
+  ],
+  "flags": []
+ },
+ "file": "20261105_bps-province-unemployment-rate.csv",
+ "rows": 226,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/labour/20261103_bps-unemployment-rate-by-province-2023-2025.json": {
+   "sha256": "cb059304803062ab22fd2f1203ba34a1ea823201d886876edc87da321779b8b1"
+  }
+ }
+}
