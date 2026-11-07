@@ -73,14 +73,38 @@ Provinces far below the trend line produce wealth that households do not spend l
 
 ## Data
 
-| Priority | Data | Status |
+| Priority | Data | Status (2026-11-07) |
 |---|---|---|
-| Essential | GRDP by subsector, current prices, 2025, all 38 provinces (rows B.1–B.4, C.1, C.11, total) | **Blocked.** Each provincial BPS site publishes it under a different table name and layout, and pages serve only the latest year. Needs the BPS WebAPI key |
-| Strongly recommended | The same table for 2020–2024 | **Blocked.** Same reason; the pages cannot serve earlier years |
-| Recommended | GRDP at constant prices by subsector (same tables, constant-price column) | **Blocked.** Comes with the essential table |
-| Recommended | Adjusted per capita expenditure by province | **Fetched for 2026** (`raw/welfare/`); 2025 needs the WebAPI |
-| Recommended | Poverty rate (P0) by province | **Fetched for March 2026** (`raw/welfare/`); 2025 needs the WebAPI |
+| Essential | GRDP by subsector, current prices, all provinces (rows B.1–B.4, C.1, C.11, total) | **Fetched** through the BPS WebAPI for 27 of 38 provinces (`raw/grdp/20261107_bps-webapi-grdp-by-subsector.jsonl`). Latest year: 2025 for 17, 2024 for 5, 2023 for 3, 2022 for 2 |
+| Strongly recommended | The same table for 2020–2024 | **Fetched** for the same 27 provinces, 2020 onward |
+| Recommended | GRDP at constant prices by subsector | **Fetched** for the same provinces, except Sumatera Selatan, whose subsector table is current prices only |
+| Recommended | Adjusted per capita expenditure by province | **Fetched** 2020–2026 (`raw/welfare/20261107_bps-webapi-welfare-by-province.jsonl`) |
+| Recommended | Poverty rate (P0) by province | **Fetched** 2020–2026, same file |
 | Already in the repository | GRDP total, population, total mining (B) | `data/20261102_bps-province-grdp-population/` |
+
+### Provinces without a subsector table
+
+Eleven BPS provincial offices publish GRDP only by the 17 main sectors, so coal cannot be separated from other mining there: Aceh, DKI Jakarta, Bengkulu, Nusa Tenggara Timur, Kalimantan Barat, Sulawesi Tengah, Maluku, Papua, Papua Selatan, Papua Tengah and Papua Pegunungan (the last three have no BPS office of their own yet).
+
+For these, total mining (B) is an upper bound on coal. Where mining is under 2% of GRDP (Jakarta, for example), the province is classed as low-coal with confidence. Three matter for this analysis and need another source, such as the PDF "PDRB menurut lapangan usaha" publication of each provincial office:
+
+- **Bengkulu**: a coal producer
+- **Sulawesi Tengah**: nickel (Morowali)
+- **Papua Tengah**: copper and gold (Grasberg)
+
+### First look at the 2025 data
+
+| Province | Coal (B.2) | Oil and gas (B.1) | Metal ores (B.3) | Basic metals (C.11) |
+|---|---|---|---|---|
+| Kalimantan Selatan | 26.3% | 0.3% | 0.3% | 0.0% |
+| Kalimantan Timur | 25.1% | 4.9% | 0.0% | 0.1% |
+| Sumatera Selatan | 13.9% | 5.4% | 0.0% | 0.0% |
+| Kalimantan Tengah | 7.2% | 0.4% | 1.7% | 0.0% |
+| Maluku Utara | 0.0% | 0.0% | 20.8% | 38.5% |
+| Papua Barat | 0.0% | 25.0% | 0.0% | 0.0% |
+| Kepulauan Bangka Belitung | 0.0% | 0.4% | 4.9% | 9.0% |
+
+Shares of GRDP at current prices. Some provincial totals differ slightly from the national BPS table already in the repository (Bangka Belitung 116,387 against 116,812; Kalimantan Tengah 240,127 against 241,056), likely because the two tables were revised on different dates. The build step must report these gaps rather than force a match.
 
 ### Why the BPS WebAPI key is needed
 
@@ -104,7 +128,8 @@ The BPS WebAPI (`https://webapi.bps.go.id`) is BPS's official machine access. Wi
 
 ## Next steps
 
-1. Get the BPS WebAPI key.
-2. Write `raw/grdp/` and `raw/welfare/` download scripts that use it, and save the JSON responses as received.
-3. Build `data/YYYYMMDD_bps-province-grdp-subsector/` through `tools/cleaning.py`, with identity checks that subsectors sum to sectors and sectors to total.
-4. Build charts 1–5 in a new `analysis/` folder.
+1. ~~Get the BPS WebAPI key.~~ Done; stored in the git-ignored `.env`.
+2. ~~Download subsector GRDP and welfare tables.~~ Done for 27 provinces and all welfare tables.
+3. Decide how to fill Bengkulu, Sulawesi Tengah and Papua Tengah (provincial PDF publications, or show them as total mining only).
+4. Build `data/YYYYMMDD_bps-province-grdp-subsector/` through `tools/cleaning.py`, mapping each province's row labels to the shared codes, with identity checks that subsectors sum to sectors and sectors to total.
+5. Build charts 1–5 in a new `analysis/` folder.
