@@ -81,6 +81,7 @@ Provinces far below the trend line produce wealth that households do not spend l
 | Recommended | Adjusted per capita expenditure by province | **Fetched** 2020–2026 (`raw/welfare/20261107_bps-webapi-welfare-by-province.jsonl`) |
 | Recommended | Poverty rate (P0) by province | **Fetched** 2020–2026, same file |
 | Already in the repository | GRDP total, population, total mining (B) | `data/20261102_bps-province-grdp-population/` |
+| Cleaned (2026-11-08) | Subsector GRDP, current and constant prices, 26 provinces | `data/20261108_bps-province-grdp-subsector/`. Sulawesi Tenggara's table is excluded because it mixes units (see the metadata `coverage.excluded_tables`) |
 
 ### Provinces without a subsector table
 
@@ -130,6 +131,6 @@ The BPS WebAPI (`https://webapi.bps.go.id`) is BPS's official machine access. Wi
 
 1. ~~Get the BPS WebAPI key.~~ Done; stored in the git-ignored `.env`.
 2. ~~Download subsector GRDP and welfare tables.~~ Done for 27 provinces and all welfare tables.
-3. Decide how to fill Bengkulu, Sulawesi Tengah and Papua Tengah (provincial PDF publications, or show them as total mining only).
-4. Build `data/YYYYMMDD_bps-province-grdp-subsector/` through `tools/cleaning.py`, mapping each province's row labels to the shared codes, with identity checks that subsectors sum to sectors and sectors to total.
-5. Build charts 1–5 in a new `analysis/` folder.
+3. Fill Bengkulu, Sulawesi Tengah and Papua Tengah from the "PDRB menurut lapangan usaha" publications. Sulawesi Tenggara (nickel) now needs the same, since its WebAPI table is unusable. The national compilation "PDRB Provinsi-Provinsi di Indonesia Menurut Lapangan Usaha 2021-2025" may cover all of them and the provinces whose tables stop before 2025; it is not yet downloaded.
+4. ~~Build the subsector dataset.~~ Done 2026-11-08: `data/20261108_bps-province-grdp-subsector/`. Rows are matched by name; identities hold within rounding except six declared source breaks (Sulawesi Selatan 2021 constant, Sulawesi Barat), and values are compared with the national table.
+5. ~~Build charts 1–5.~~ Done 2026-11-08 in `analysis/20261108_coal-reliance/`, with the welfare data cleaned into `data/20261108_bps-province-welfare/`. Chart 1 keeps nominal growth (real growth for 2025 exists in only 16 provincial tables). Charts 3 and 4 use GRDP per capita with Indonesia = 100 in each province's latest subsector year, so provinces whose tables end before 2025 stay comparable. Provinces without a usable subsector table appear in charts 1 and 5 in gray, labelled with total mining.

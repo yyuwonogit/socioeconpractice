@@ -5,10 +5,13 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 
 import json
+import sys
 import textwrap
 
-import matplotlib
-matplotlib.use("Agg")
+# Load the shared chart module from tools/
+sys.path.insert(0, str(ROOT / "tools"))
+import charts
+
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FixedLocator, NullLocator
 import pandas as pd
@@ -21,74 +24,20 @@ METADATA = ROOT / "data/20261102_bps-province-grdp-population/20261102_bps-provi
 OUT_WEALTH_PNG = HERE / "20261102_wealth-vs-momentum.png"
 OUT_WEALTH_CSV = HERE / "20261102_wealth-vs-momentum.csv"
 
-# Chart colours: one series on a light surface, text in ink tokens, recessive grid
-SURFACE = "#fcfcfb"
-SERIES = "#2a78d6"
-TEXT_PRIMARY = "#0b0b0b"
-TEXT_SECONDARY = "#52514e"
-TEXT_MUTED = "#8a8985"
-GRID = "#e4e3df"
-CUT = "#9b9a96"
-
-# Province names kept in capitals when the BPS upper-case name is title-cased
-UPPER_WORDS = {"DKI", "DI"}
+# Chart colours and label placement come from tools/charts.py
+SURFACE, SERIES = charts.SURFACE, charts.SERIES[0]
+TEXT_PRIMARY, TEXT_SECONDARY, TEXT_MUTED = charts.TEXT_PRIMARY, charts.TEXT_SECONDARY, charts.TEXT_MUTED
+GRID, CUT = charts.GRID, charts.CUT
 
 # Functions
-
-def display_name(name):
-    """Title-case a BPS province name, keeping abbreviations such as DKI and DI in capitals."""
-    return " ".join(w if w in UPPER_WORDS else w.capitalize() for w in name.split())
-
 
 def load():
     """Read the dataset and the province names from its metadata."""
     df = pd.read_csv(DATASET, dtype={"province_code": str, "sector": str, "period": str, "status": str},
                      keep_default_na=False)
     meta = json.loads(METADATA.read_text(encoding="utf-8"))
-    names = {code: display_name(p["name"]) for code, p in meta["provinces"].items()}
+    names = {code: charts.display_name(p["name"]) for code, p in meta["provinces"].items()}
     return df, names
-
-
-def place_labels(ax, xs, ys, labels, fontsize=7.5):
-    """Place one label per point, trying offsets around it and skipping any that overlap a placed label or point."""
-    fig = ax.figure
-    fig.canvas.draw()
-    renderer = fig.canvas.get_renderer()
-    pts = ax.transData.transform(list(zip(xs, ys)))
-    placed = []
-    # Points are obstacles too, as 10-pixel boxes
-    obstacles = [(px - 5, py - 5, px + 5, py + 5) for px, py in pts]
-    # Candidate offsets: eight directions at growing distances; past the first ring a leader line is drawn
-    directions = [(1, 0, "left", "center"), (-1, 0, "right", "center"), (0, 1, "center", "bottom"),
-                  (0, -1, "center", "top"), (1, 1, "left", "bottom"), (-1, 1, "right", "bottom"),
-                  (1, -1, "left", "top"), (-1, -1, "right", "top")]
-    offsets = [(dx * r, dy * r, ha, va) for r in (6, 14, 22, 30, 40) for dx, dy, ha, va in directions]
-    # Label the points farthest from the crowd first, then fit the crowded ones around them
-    order = sorted(range(len(labels)), key=lambda i: -min(
-        [abs(pts[i][0] - pts[j][0]) + abs(pts[i][1] - pts[j][1]) for j in range(len(labels)) if j != i] or [0]))
-    for i in order:
-        best = None
-        for dx, dy, ha, va in offsets:
-            leader = {"arrowstyle": "-", "color": TEXT_MUTED, "lw": 0.6, "shrinkA": 0, "shrinkB": 4} \
-                if max(abs(dx), abs(dy)) > 6 else None
-            t = ax.annotate(labels[i], (xs[i], ys[i]), xytext=(dx, dy), textcoords="offset points",
-                            ha=ha, va=va, fontsize=fontsize, color=TEXT_PRIMARY, arrowprops=leader)
-            bb = t.get_window_extent(renderer)
-            box = (bb.x0 - 1, bb.y0 - 1, bb.x1 + 1, bb.y1 + 1)
-            clash = any(not (box[2] < o[0] or box[0] > o[2] or box[3] < o[1] or box[1] > o[3])
-                        for o in placed + [ob for k, ob in enumerate(obstacles) if k != i])
-            if not clash:
-                best = (t, box)
-                break
-            t.remove()
-        if best is None:
-            # No free spot: keep the first position with a leader line so the label still reads
-            t = ax.annotate(labels[i], (xs[i], ys[i]), xytext=(18, 12), textcoords="offset points",
-                            ha="left", va="bottom", fontsize=fontsize, color=TEXT_PRIMARY,
-                            arrowprops={"arrowstyle": "-", "color": TEXT_MUTED, "lw": 0.6})
-            bb = t.get_window_extent(renderer)
-            best = (t, (bb.x0, bb.y0, bb.x1, bb.y1))
-        placed.append(best[1])
 
 
 def quadrant_chart(df, x, y, xcut, ycut, quadrant_names, xlabel, ylabel, title, subtitle, note, path,
@@ -158,7 +107,7 @@ def quadrant_chart(df, x, y, xcut, ycut, quadrant_names, xlabel, ylabel, title, 
     ax.set_ylabel(ylabel, color=TEXT_SECONDARY, fontsize=10)
 
     # Label every province inside the range; edge points were labelled with their values above
-    place_labels(ax, inside[x].tolist(), inside[y].tolist(), inside["province"].tolist())
+    charts.place_labels(ax, inside[x].tolist(), inside[y].tolist(), inside["province"].tolist())
 
     # Title, subtitle and source note
     fig.text(0.06, 0.965, title, fontsize=15, fontweight="bold", color=TEXT_PRIMARY)

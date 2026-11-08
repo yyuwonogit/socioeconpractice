@@ -10,6 +10,7 @@ import hashlib
 import html
 import json
 import re
+from decimal import Decimal
 from pathlib import Path
 
 import pandas as pd
@@ -52,23 +53,26 @@ def number_pattern(decimal, thousands):
     return re.compile(rf"^-?{integer}({d}\d+)?$")
 
 
-def parse_number(text, decimal=".", thousands=None, decimals=None):
+def parse_number(text, decimal=".", thousands=None, decimals=None, max_decimals=None, shift=0):
     """Turn a published number string into a float.
 
     Stops on any text that does not match the declared decimal mark and thousands separator,
     so 1.234,5 written in Indonesian style is never read as 1.2345. When decimals is given,
-    the number of digits after the decimal mark must equal it.
+    the number of digits after the decimal mark must equal it; when max_decimals is given, it
+    must not exceed it (JSON drops trailing zeros). shift moves the decimal point exactly, as
+    in -3 for a value published in Juta Rupiah and written in Milyar Rupiah.
     """
     text = str(text).strip()
     if not number_pattern(decimal, thousands).match(text):
         raise ValueError(f"{text!r} does not match decimal {decimal!r}, thousands {thousands!r}")
-    if decimals is not None:
-        found = len(text.split(decimal)[1]) if decimal in text else 0
-        if found != decimals:
-            raise ValueError(f"{text!r} has {found} decimals, source declares {decimals}")
+    found = len(text.split(decimal)[1]) if decimal in text else 0
+    if decimals is not None and found != decimals:
+        raise ValueError(f"{text!r} has {found} decimals, source declares {decimals}")
+    if max_decimals is not None and found > max_decimals:
+        raise ValueError(f"{text!r} has {found} decimals, source declares at most {max_decimals}")
     if thousands:
         text = text.replace(thousands, "")
-    return float(text.replace(decimal, "."))
+    return float(Decimal(text.replace(decimal, ".")).scaleb(shift))
 
 
 def parse_cell(value, missing=()):
@@ -103,8 +107,9 @@ def html_to_text(s):
 # Regions
 
 def normalise_name(name):
-    """Return a region name in the BPS reference spelling: upper case, KEP. spelled out, single spaces."""
+    """Return a region name in the BPS reference spelling: upper case, KEP. spelled out, D I and D.I. as DI, single spaces."""
     name = " ".join(str(name).upper().split())
+    name = re.sub(r"^D\.? ?I\.? (?=YOGYAKARTA)", "DI ", name)
     return re.sub(r"^KEP\. ", "KEPULAUAN ", name)
 
 
@@ -158,6 +163,86 @@ def bps_resolve(text, value):
         raise ValueError(f"reference {value} not found")
     data = text[m.end():].encode("utf-8")[: int(m.group(1), 16)]
     return data.decode("utf-8")
+
+
+# BPS WebAPI responses
+
+def read_jsonl(path):
+    """Read a .jsonl file of saved responses, keeping every number as its published text."""
+    with open(path, encoding="utf-8") as f:
+        return [json.loads(line, parse_float=str, parse_int=str) for line in f if line.strip()]
+
+
+def bps_api_cells(response):
+    """Yield (vervar, turvar, tahun, turtahun, text) for every filled cell of a WebAPI data response.
+
+    BPS keys datacontent by joining the vervar, var, turvar, tahun and turtahun codes. The function
+    stops if two cells would share a key or if datacontent holds a key that matches no cell, so every
+    published value is read and none is read twice.
+    """
+    var = response["var"][0]["val"]
+    cells = {}
+    for v in response["vervar"]:
+        for tv in response["turvar"]:
+            for th in response["tahun"]:
+                for tt in response["turtahun"]:
+                    k = f"{v['val']}{var}{tv['val']}{th['val']}{tt['val']}"
+                    if k in cells:
+                        raise ValueError(f"datacontent key {k} fits two cells")
+                    cells[k] = (v, tv, th, tt)
+    unknown = set(response["datacontent"]) - set(cells)
+    if unknown:
+        raise ValueError(f"datacontent keys that match no cell: {sorted(unknown)[:5]}")
+    for k, (v, tv, th, tt) in cells.items():
+        if k in response["datacontent"]:
+            yield v, tv, th, tt, response["datacontent"][k]
+
+
+# Row labels
+
+LEADING_CODE = re.compile(r"^(?:[A-U](?:\s*,\s*[A-U])*|\d{1,2}|[a-g])(?:\.|\s|$)\s*")
+
+
+def row_name(label):
+    """Return a table row label without HTML, outline codes (A., B.2., 1., 11., a., R,S,T,U) or extra spaces."""
+    name = html_to_text(label)
+    while True:
+        stripped = LEADING_CODE.sub("", name, count=1)
+        if stripped == name:
+            return name
+        name = stripped
+
+
+def match_rows(labels, patterns, fixes=None, where=""):
+    """Match row labels to codes by name and return code -> row index.
+
+    patterns: code -> regex on the row name (case ignored), in the order the rows must appear.
+    fixes: raw label -> code, for a label the source gets wrong, or -> None for a row whose label
+    names another row and must not be read; each fix must be used.
+    Every code must match exactly one row, and the matched rows must keep the order of patterns.
+    """
+    fixes = dict(fixes or {})
+    found = {}
+    for i, label in enumerate(labels):
+        if label in fixes:
+            code = fixes.pop(label)
+            if code is not None:
+                found.setdefault(code, []).append(i)
+            continue
+        name = row_name(label)
+        for code, pattern in patterns.items():
+            if re.search(pattern, name, re.IGNORECASE):
+                found.setdefault(code, []).append(i)
+    if fixes:
+        raise ValueError(f"{where}: label fixes not used: {fixes}")
+    bad = {c: found.get(c, []) for c in patterns if len(found.get(c, [])) != 1}
+    if bad:
+        raise ValueError(f"{where}: codes without exactly one row: {bad}")
+    index = {c: found[c][0] for c in patterns}
+    order = [index[c] for c in patterns]
+    if order != sorted(order):
+        raise ValueError(f"{where}: rows are out of the expected order")
+    return index
 
 
 # Combining sources

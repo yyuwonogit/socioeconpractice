@@ -12,7 +12,8 @@ socioeconpractice/
 ├── .gitignore                   excludes .venv, caches and Office lock files
 ├── .venv/                       built on each machine, never committed
 ├── tools/
-│   └── cleaning.py              shared cleaning and checks, imported by every build script
+│   ├── cleaning.py              shared cleaning and checks, imported by every build script
+│   └── charts.py                shared chart styling and label placement, used by analysis scripts
 ├── .inbox/                      drop folder, emptied by Claude
 ├── .outbox/
 │   └── YYYYMMDD_<delivery>/     one folder per delivery
@@ -35,7 +36,7 @@ socioeconpractice/
 
 | Folder | Holds | Scripts |
 |---|---|---|
-| `tools/` | Shared modules, without date prefixes | `cleaning.py` holds the cleaning and checking that every build script uses |
+| `tools/` | Shared modules, without date prefixes | `cleaning.py` holds the cleaning and checking that every build script uses; `charts.py` holds the chart colours, axis style and label placement shared by analysis scripts |
 | `reference/` | Papers, reports and method notes | None |
 | `raw/<topic>/` | Source files as received, never edited | A download script sits beside the files it fetched |
 | `data/YYYYMMDD_<dataset>/` | Cleaned datasets and their metadata | The build script sits beside its output, reads `raw/` or other `data/` folders, and follows Cleaning and checking |
@@ -88,6 +89,8 @@ Every build script in `data/` turns raw files into one long CSV and one metadata
 |---|---|
 | Read numbers | `parse_number` (declared decimal mark, thousands separator and decimals), `parse_cell`, `read_csv_rows`, `require_text` |
 | Read BPS website pages | `bps_flight_text`, `bps_find_object`, `bps_resolve`, `html_to_text` |
+| Read BPS WebAPI responses | `read_jsonl` (numbers kept as text), `bps_api_cells` (every published cell, none twice) |
+| Match table rows | `row_name` (strips HTML and outline codes such as `B.2.`), `match_rows` (one row per code, by name, in order, with declared label fixes) |
 | Match regions | `load_bps_provinces`, `province_code`, `normalise_name` |
 | Combine sources | `merge_sources` (priority order, repeated values must match exactly) |
 | Check | `check_sum`, `flag_outside`, and inside `write_dataset`: structure and completeness |
@@ -116,7 +119,7 @@ Every build script in `data/` turns raw files into one long CSV and one metadata
 ### Regions
 
 - Province names map to BPS province codes (`kode_bps`) through the BPS list in `raw/province-codes/`, never through a list typed by hand.
-- Names are normalised before matching (upper case, `KEP.` spelled out as `KEPULAUAN`, single spaces), and a name with no match stops the build.
+- Names are normalised before matching (upper case, `KEP.` spelled out as `KEPULAUAN`, `D I` and `D.I.` written `DI`, single spaces), and a name with no match stops the build.
 - BPS and Kemendagri codes differ for the six Papua provinces, so the metadata keeps both and a join with another dataset uses the code system that dataset uses.
 - Papua Barat Daya, Papua Selatan, Papua Tengah and Papua Pegunungan exist from 2024 in BPS tables, and earlier Papua and Papua Barat values cover the pre-split areas.
 

@@ -1,0 +1,1447 @@
+{
+ "title": "BPS provincial GRDP by industry with mining and manufacturing subsectors, Indonesia",
+ "columns": {
+  "province_code": "BPS province code (kode_bps). Names and Kemendagri codes in 'provinces'.",
+  "indicator": "grdp_current or grdp_constant; definitions in 'indicators'.",
+  "sector": "Sector code; names in 'sectors'. Categories use the codes of data/20261102_bps-province-grdp-population.",
+  "period": "YYYY, annual.",
+  "status": "BPS revision marker from the provincial table note; meanings in 'status'.",
+  "value": "Rp billion (Milyar Rupiah). Multiply by 1e9 for rupiah."
+ },
+ "provinces": {
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  }
+ },
+ "sectors": {
+  "A": "Pertanian, Kehutanan dan Perikanan",
+  "B": "Pertambangan dan Penggalian",
+  "B1": "Pertambangan Minyak, Gas dan Panas Bumi (oil, gas and geothermal)",
+  "B2": "Pertambangan Batubara dan Lignit (coal and lignite)",
+  "B3": "Pertambangan Bijih Logam (metal ores: nickel, copper, gold, tin, bauxite)",
+  "B4": "Pertambangan dan Penggalian Lainnya (other mining and quarrying)",
+  "C": "Industri Pengolahan",
+  "C1": "Industri Batubara dan Pengilangan Migas (coal products and oil refining)",
+  "C1A": "Industri Batubara (coal products), published by some provinces only",
+  "C1B": "Pengilangan Migas (oil and gas refining), published by some provinces only",
+  "C2": "Industri Makanan dan Minuman",
+  "C3": "Industri Pengolahan Tembakau",
+  "C4": "Industri Tekstil dan Pakaian Jadi",
+  "C5": "Industri Kulit, Barang dari Kulit dan Alas Kaki",
+  "C6": "Industri Kayu, Barang dari Kayu dan Gabus dan Barang Anyaman",
+  "C7": "Industri Kertas dan Barang dari Kertas; Percetakan",
+  "C8": "Industri Kimia, Farmasi dan Obat Tradisional",
+  "C9": "Industri Karet, Barang dari Karet dan Plastik",
+  "C10": "Industri Barang Galian bukan Logam",
+  "C11": "Industri Logam Dasar (basic metals, including nickel smelting)",
+  "C12": "Industri Barang Logam; Komputer, Barang Elektronik, Optik; dan Peralatan Listrik",
+  "C13": "Industri Mesin dan Perlengkapan",
+  "C14": "Industri Alat Angkutan",
+  "C15": "Industri Furnitur",
+  "C16": "Industri Pengolahan Lainnya; Jasa Reparasi dan Pemasangan Mesin dan Peralatan",
+  "D": "Pengadaan Listrik dan Gas",
+  "E": "Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang",
+  "F": "Konstruksi",
+  "G": "Perdagangan Besar dan Eceran, Reparasi Mobil dan Sepeda Motor",
+  "H": "Transportasi dan Pergudangan",
+  "I": "Penyediaan Akomodasi dan Makan Minum",
+  "J": "Informasi dan Komunikasi",
+  "K": "Jasa Keuangan dan Asuransi",
+  "L": "Real Estate",
+  "MN": "Jasa Perusahaan",
+  "O": "Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
+  "P": "Jasa Pendidikan",
+  "Q": "Jasa Kesehatan dan Kegiatan Sosial",
+  "RSTU": "Jasa Lainnya",
+  "TOTAL": "Produk Domestik Regional Bruto"
+ },
+ "indicators": {
+  "grdp_current": {
+   "name": "PDRB atas dasar harga berlaku (GRDP at current prices), Seri 2010",
+   "unit": "Rp billion (Milyar Rupiah)",
+   "multiplier": 1000000000.0,
+   "base_unit": "Rp",
+   "source": "BPS provincial offices, statistics tables through the BPS WebAPI; see 'source_tables'"
+  },
+  "grdp_constant": {
+   "name": "PDRB atas dasar harga konstan 2010 (GRDP at constant 2010 prices), Seri 2010",
+   "unit": "Rp billion (Milyar Rupiah)",
+   "multiplier": 1000000000.0,
+   "base_unit": "Rp",
+   "source": "BPS provincial offices, statistics tables through the BPS WebAPI; see 'source_tables'"
+  }
+ },
+ "coverage": {
+  "provinces": 26,
+  "years_by_province": {
+   "12": "2020-2024",
+   "13": "2020-2024",
+   "14": "2020-2024",
+   "15": "2020-2024",
+   "16": "2020-2025",
+   "18": "2020-2024",
+   "19": "2020-2025",
+   "21": "2020-2025",
+   "32": "2020-2025",
+   "33": "2020-2023",
+   "34": "2020-2025",
+   "35": "2020-2025",
+   "36": "2020-2025",
+   "51": "2020-2025",
+   "52": "2020-2025",
+   "62": "2020-2025",
+   "63": "2020-2025",
+   "64": "2020-2025",
+   "65": "2020-2022",
+   "71": "2020-2025",
+   "73": "2020-2025",
+   "75": "2020-2023",
+   "76": "2020-2023",
+   "82": "2020-2025",
+   "91": "2020-2025",
+   "92": "2023-2025"
+  },
+  "constant_prices": [
+   "12",
+   "13",
+   "14",
+   "15",
+   "18",
+   "19",
+   "21",
+   "32",
+   "33",
+   "34",
+   "35",
+   "36",
+   "51",
+   "52",
+   "62",
+   "63",
+   "64",
+   "65",
+   "71",
+   "73",
+   "75",
+   "76",
+   "82",
+   "91",
+   "92"
+  ],
+  "without_subsector_table": {
+   "11": "ACEH",
+   "17": "BENGKULU",
+   "31": "DKI JAKARTA",
+   "53": "NUSA TENGGARA TIMUR",
+   "61": "KALIMANTAN BARAT",
+   "72": "SULAWESI TENGAH",
+   "81": "MALUKU",
+   "94": "PAPUA",
+   "95": "PAPUA SELATAN",
+   "96": "PAPUA TENGAH",
+   "97": "PAPUA PEGUNUNGAN"
+  },
+  "excluded_tables": {
+   "74 var 422": {
+    "title": "[Seri 2010] PDRB Provinsi Sulawesi Tenggara Menurut Subsektor Lapangan Usaha (Tahunan)",
+    "years": [
+     "2020",
+     "2021",
+     "2022"
+    ],
+    "reason": "The table states Juta Rupiah, but its current-price values (2020-2022) and its 2022 constant-price values are 1,000 times larger than its 2020-2021 constant-price values (A 2020: 31,395,380,000 current against 21,728,370 constant), and its 2022 TOTAL is about one tenth of the sum of its categories. The units cannot be read from the table, so no value is written."
+   }
+  },
+  "c1_split": [
+   "15",
+   "52",
+   "62",
+   "65",
+   "75"
+  ]
+ },
+ "source_tables": {
+  "12 var 778": {
+   "domain": "1200",
+   "var": "778",
+   "title": "[Seri 2010] PDRB Provinsi Sumatera Utara Atas Dasar Harga Berlaku Menurut Lapangan Usaha 52 subkategori",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "2023 Angka Sementara, 2024 Angka Sangat Sementara BPS",
+   "last_update": {
+    "2020": "2025-06-11 09:24:46",
+    "2021": "2025-06-11 09:24:46",
+    "2022": "2025-06-11 09:24:46",
+    "2023": "2025-06-11 09:24:46",
+    "2024": "2025-06-11 09:24:46"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/1200/var/778/th/<year id>/key/KEY/"
+  },
+  "12 var 780": {
+   "domain": "1200",
+   "var": "780",
+   "title": "[Seri 2010] PDRB Provinsi Sumatera Utara Atas Dasar Harga Konstan 2010 Menurut Lapangan Usaha 52 Subkategori",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "2023 Angka Sementara, 2024 Angka Sangat Sementara BPS",
+   "last_update": {
+    "2020": "2025-06-11 12:59:36",
+    "2021": "2025-06-11 12:59:36",
+    "2022": "2025-06-11 12:59:36",
+    "2023": "2025-06-11 12:59:36",
+    "2024": "2025-06-11 12:59:36"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/1200/var/780/th/<year id>/key/KEY/"
+  },
+  "13 var 153": {
+   "domain": "1300",
+   "var": "153",
+   "title": "[Seri 2010] Produk Domestik Regional Bruto Provinsi Sumatera Barat (Rinci) Menurut Lapangan Usaha",
+   "unit_published": "Juta Rupiah",
+   "decimal_shift_to_milyar": -3,
+   "note": "2024 Angka Sangat Sementara 2025 Angka Sangat-Sangat Sementara",
+   "last_update": {
+    "2020": "2025-02-05 09:59:29",
+    "2021": "2025-02-05 09:59:29",
+    "2022": "2025-02-05 09:59:29",
+    "2023": "2025-02-05 09:59:29",
+    "2024": "2025-02-05 09:59:29"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/1300/var/153/th/<year id>/key/KEY/"
+  },
+  "14 var 419": {
+   "domain": "1400",
+   "var": "419",
+   "title": "[Seri 2010] PDRB ADHB Menurut Lapangan Usaha Tahunan Provinsi",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "",
+   "last_update": {
+    "2020": "2025-07-24 01:56:01",
+    "2021": "2025-07-24 01:56:01",
+    "2022": "2025-07-24 01:56:01",
+    "2023": "2025-07-24 01:56:01",
+    "2024": "2025-07-24 01:56:01"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/1400/var/419/th/<year id>/key/KEY/"
+  },
+  "14 var 418": {
+   "domain": "1400",
+   "var": "418",
+   "title": "[Seri 2010] PDRB ADHK Menurut Lapangan Usaha Tahunan Provinsi",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "",
+   "last_update": {
+    "2020": "2025-07-24 02:13:47",
+    "2021": "2025-07-24 02:13:47",
+    "2022": "2025-07-24 02:13:47",
+    "2023": "2025-07-24 02:13:47",
+    "2024": "2025-07-24 02:13:47"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/1400/var/418/th/<year id>/key/KEY/"
+  },
+  "15 var 1976": {
+   "domain": "1500",
+   "var": "1976",
+   "title": "[Seri 2010] PDRB Atas Dasar Harga Berlaku Menurut Lapangan Usaha Per Subsektor",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "",
+   "last_update": {
+    "2020": "2026-01-20 09:05:22",
+    "2021": "2026-01-20 09:05:22",
+    "2022": "2026-01-20 09:05:22",
+    "2023": "2026-01-20 09:05:22",
+    "2024": "2026-01-20 09:05:22"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/1500/var/1976/th/<year id>/key/KEY/"
+  },
+  "15 var 1977": {
+   "domain": "1500",
+   "var": "1977",
+   "title": "[Seri 2010] PDRB Atas Dasar Harga Konstan Menurut Lapangan Usaha Per Subsektor",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "",
+   "last_update": {
+    "2020": "2026-01-20 09:05:42",
+    "2021": "2026-01-20 09:05:42",
+    "2022": "2026-01-20 09:05:42",
+    "2023": "2026-01-20 09:05:42",
+    "2024": "2026-01-20 09:05:42"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/1500/var/1977/th/<year id>/key/KEY/"
+  },
+  "16 var 741": {
+   "domain": "1600",
+   "var": "741",
+   "title": "Produk Domestik Regional Bruto (PDRB) Tahunan Provinsi Sumatera Selatan Atas Dasar Harga Berlaku Menurut Lapangan Usaha",
+   "unit_published": "Miliar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "Keterangan data: 2026: Angka sangat sangat sementara 2025: Angka sangat sementara 2024: Angka sementara",
+   "last_update": {
+    "2020": "2026-02-09 13:23:18",
+    "2021": "2026-02-09 13:23:18",
+    "2022": "2026-02-09 13:23:18",
+    "2023": "2026-02-09 13:23:18",
+    "2024": "2026-02-09 13:23:18",
+    "2025": "2026-02-09 13:23:18"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/1600/var/741/th/<year id>/key/KEY/"
+  },
+  "18 var 893": {
+   "domain": "1800",
+   "var": "893",
+   "title": "Produk Domestik Regional Bruto Menurut Lapangan Usaha Seri 2010",
+   "unit_published": "milyar rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "",
+   "last_update": {
+    "2020": "2025-03-07 02:57:44",
+    "2021": "2025-03-07 02:57:44",
+    "2022": "2025-03-07 02:57:44",
+    "2023": "2025-03-07 02:57:44",
+    "2024": "2025-03-07 02:57:44"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/1800/var/893/th/<year id>/key/KEY/"
+  },
+  "19 var 8": {
+   "domain": "1900",
+   "var": "8",
+   "title": "[Tahunan] PDRB Menurut Lapangan Usaha Atas Dasar Harga Berlaku",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "Catatan: Angka revisi *Angka sementara **Angka sangat sementara ***Angka sangat sangat sementara Sumber:Badan Pusat Statistik Provinsi Kepulauan Bangka Belitung",
+   "last_update": {
+    "2020": "2026-02-05 01:34:10",
+    "2021": "2026-02-05 01:34:10",
+    "2022": "2026-02-05 01:34:10",
+    "2023": "2026-02-05 01:34:10",
+    "2024": "2026-02-05 01:34:10",
+    "2025": "2026-02-05 01:34:10"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/1900/var/8/th/<year id>/key/KEY/"
+  },
+  "19 var 32": {
+   "domain": "1900",
+   "var": "32",
+   "title": "[Tahunan] PDRB Menurut Lapangan Usaha Atas Dasar Harga Konstan (2010=100)",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "",
+   "last_update": {
+    "2020": "2026-02-05 01:27:53",
+    "2021": "2026-02-05 01:27:53",
+    "2022": "2026-02-05 01:27:53",
+    "2023": "2026-02-05 01:27:53",
+    "2024": "2026-02-05 01:27:53",
+    "2025": "2026-02-05 01:27:53"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/1900/var/32/th/<year id>/key/KEY/"
+  },
+  "21 var 265": {
+   "domain": "2100",
+   "var": "265",
+   "title": "02. [Seri 2010] PDRB Atas Dasar Harga Berlaku Menurut Lapangan Usaha",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "N: Tahun Terakhir Data Data Tahun ke N : Angka Sangat Sementara Data Tahun ke N-1 : Angka Sementara",
+   "last_update": {
+    "2020": "2026-04-06 10:10:35",
+    "2021": "2026-04-06 10:10:35",
+    "2022": "2026-04-06 10:10:35",
+    "2023": "2026-04-06 10:10:35",
+    "2024": "2026-04-06 10:10:35",
+    "2025": "2026-04-06 10:10:35"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/2100/var/265/th/<year id>/key/KEY/"
+  },
+  "21 var 268": {
+   "domain": "2100",
+   "var": "268",
+   "title": "05. [Seri 2010] PDRB Atas Dasar Harga Konstan Menurut Lapangan Usaha",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "N: Tahun Terakhir Data Data Tahun ke N : Angka Sangat Sementara Data Tahun ke N-1 : Angka Sementara",
+   "last_update": {
+    "2020": "2026-04-06 10:11:14",
+    "2021": "2026-04-06 10:11:14",
+    "2022": "2026-04-06 10:11:14",
+    "2023": "2026-04-06 10:11:14",
+    "2024": "2026-04-06 10:11:14",
+    "2025": "2026-04-06 10:11:14"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/2100/var/268/th/<year id>/key/KEY/"
+  },
+  "32 var 111": {
+   "domain": "3200",
+   "var": "111",
+   "title": "[Seri 2010] PDRB Atas Dasar Harga Berlaku Menurut Lapangan Usaha Provinsi Jawa Barat",
+   "unit_published": "Miliar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "",
+   "last_update": {
+    "2020": "2026-03-02 11:25:41",
+    "2021": "2026-03-02 11:25:41",
+    "2022": "2026-03-02 11:25:41",
+    "2023": "2026-03-02 11:25:41",
+    "2024": "2026-03-02 11:25:41",
+    "2025": "2026-03-02 11:25:41"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/3200/var/111/th/<year id>/key/KEY/"
+  },
+  "32 var 113": {
+   "domain": "3200",
+   "var": "113",
+   "title": "[Seri 2010] PDRB Atas Dasar Harga Konstan Menurut Lapangan Usaha Provinsi Jawa Barat",
+   "unit_published": "Miliar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "",
+   "last_update": {
+    "2020": "2026-03-02 11:24:26",
+    "2021": "2026-03-02 11:24:26",
+    "2022": "2026-03-02 11:24:26",
+    "2023": "2026-03-02 11:24:26",
+    "2024": "2026-03-02 11:24:26",
+    "2025": "2026-03-02 11:24:26"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/3200/var/113/th/<year id>/key/KEY/"
+  },
+  "33 var 2280": {
+   "domain": "3300",
+   "var": "2280",
+   "title": "PDRB Jawa Tengah Atas Dasar Harga Berlaku Menurut Lapangan Usaha",
+   "unit_published": "Juta Rupiah",
+   "decimal_shift_to_milyar": -3,
+   "note": "Catatan: 2022* Angka sementara, 2023** Angka sangat sementara , Sumber: BPS Provinsi Jawa Tengah",
+   "last_update": {
+    "2020": "2024-08-20 09:45:42",
+    "2021": "2024-08-20 09:45:42",
+    "2022": "2024-08-20 09:45:42",
+    "2023": "2024-08-20 09:45:42"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/3300/var/2280/th/<year id>/key/KEY/"
+  },
+  "33 var 2278": {
+   "domain": "3300",
+   "var": "2278",
+   "title": "PDRB Jawa Tengah Atas Dasar Harga Konstan 2010 Menurut Lapangan Usaha",
+   "unit_published": "Juta Rupiah",
+   "decimal_shift_to_milyar": -3,
+   "note": "Catatan: 2022* Angka sementara, 2023** Angka sangat sementara , Sumber: BPS Provinsi Jawa Tengah",
+   "last_update": {
+    "2020": "2024-08-20 10:00:48",
+    "2021": "2024-08-20 10:00:48",
+    "2022": "2024-08-20 10:00:48",
+    "2023": "2024-08-20 10:00:48"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/3300/var/2278/th/<year id>/key/KEY/"
+  },
+  "34 var 268": {
+   "domain": "3400",
+   "var": "268",
+   "title": "[Seri 2010] Produk Domestik Regional Bruto Menurut Lapangan Usaha Tahunan",
+   "unit_published": "Miliar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "",
+   "last_update": {
+    "2020": "2026-05-13 01:19:04",
+    "2021": "2026-05-13 01:19:04",
+    "2022": "2026-05-13 01:19:04",
+    "2023": "2026-05-13 01:19:04",
+    "2024": "2026-05-13 01:19:04",
+    "2025": "2026-05-13 01:19:04"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/3400/var/268/th/<year id>/key/KEY/"
+  },
+  "35 var 483": {
+   "domain": "3500",
+   "var": "483",
+   "title": "[Seri 2010] PDRB Atas Dasar Harga Berlaku Menurut Sub Sektor Lapangan Usaha Tahunan",
+   "unit_published": "Miliar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "Nilai keseluruhan semua barang dan jasa yang diproduksi dalam suatu wilayah dalam suatu jangka waktu tertentu - Nilai tahun ke n-1 merupakan angka Sangat Sementara - Nilai tahun ke n-2 Merupakan Angka Sementara",
+   "last_update": {
+    "2020": "2026-03-05 02:52:22",
+    "2021": "2026-03-05 02:52:22",
+    "2022": "2026-03-05 02:52:22",
+    "2023": "2026-03-05 02:52:22",
+    "2024": "2026-03-05 02:52:22",
+    "2025": "2026-03-05 02:52:22"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/3500/var/483/th/<year id>/key/KEY/"
+  },
+  "35 var 473": {
+   "domain": "3500",
+   "var": "473",
+   "title": "[Seri 2010] PDRB Atas Dasar Harga Konstan Menurut Subsektor Lapangan Usaha Tahunan",
+   "unit_published": "Miliar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "Nilai keseluruhan semua barang dan jasa yang diproduksi dalam suatu wilayah dalam suatu jangka waktu tertentu menurut harga konstan pada tahun 2010 - Nilai tahun ke n-1 merupakan angka Sangat Sementara - Nilai tahun ke n-2 Merupakan Angka Sementara",
+   "last_update": {
+    "2020": "2026-03-05 02:48:37",
+    "2021": "2026-03-05 02:48:37",
+    "2022": "2026-03-05 02:48:37",
+    "2023": "2026-03-05 02:48:37",
+    "2024": "2026-03-05 02:48:37",
+    "2025": "2026-03-05 02:48:37"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/3500/var/473/th/<year id>/key/KEY/"
+  },
+  "36 var 342": {
+   "domain": "3600",
+   "var": "342",
+   "title": "PDRB Atas Dasar Harga Berlaku Menurut Subkategori Lapangan Usaha di Provinsi Banten",
+   "unit_published": "miliar rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "[Seri 2010] PDRB Seri 2010 2023: Angka Sementara 2024: Angka Sangat Sementara 2025: Angka Sangat Sangat Sementara",
+   "last_update": {
+    "2020": "2026-04-09 11:53:42",
+    "2021": "2026-04-09 11:53:42",
+    "2022": "2026-04-09 11:53:42",
+    "2023": "2026-04-09 11:53:42",
+    "2024": "2026-04-09 11:53:42",
+    "2025": "2026-04-09 11:53:42"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/3600/var/342/th/<year id>/key/KEY/"
+  },
+  "36 var 343": {
+   "domain": "3600",
+   "var": "343",
+   "title": "PDRB ADHK 2010 Menurut Subkategori Lapangan Usaha di Provinsi Banten",
+   "unit_published": "miliar rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "[Seri 2010] PDRB Seri 2010 2023: Angka Sementara 2024: Angka Sangat Sementara 2025: Angka Sangat Sangat Sementara",
+   "last_update": {
+    "2020": "2026-04-09 11:56:34",
+    "2021": "2026-04-09 11:56:34",
+    "2022": "2026-04-09 11:56:34",
+    "2023": "2026-04-09 11:56:34",
+    "2024": "2026-04-09 11:56:34",
+    "2025": "2026-04-09 11:56:34"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/3600/var/343/th/<year id>/key/KEY/"
+  },
+  "51 var 363": {
+   "domain": "5100",
+   "var": "363",
+   "title": "PDRB Tahunan Provinsi Bali Atas Dasar Harga Berlaku Menurut Lapangan Usaha",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "2025: Angka sangat sementara, 2024: Angka sementara. Sumber: BPS Provinsi Bali; berbagai sensus, survei, dan sumber lain.",
+   "last_update": {
+    "2020": "2026-02-27 01:53:45",
+    "2021": "2026-02-27 01:53:45",
+    "2022": "2026-02-27 01:53:45",
+    "2023": "2026-02-27 01:53:45",
+    "2024": "2026-02-27 01:53:45",
+    "2025": "2026-02-27 01:53:45"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/5100/var/363/th/<year id>/key/KEY/"
+  },
+  "51 var 365": {
+   "domain": "5100",
+   "var": "365",
+   "title": "PDRB Tahunan Provinsi Bali Atas Dasar Harga Konstan 2010 Menurut Lapangan Usaha",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "2025: Angka sangat sementara, 2024: Angka sementara. Sumber: BPS Provinsi Bali; berbagai sensus, survei, dan sumber lain.",
+   "last_update": {
+    "2020": "2026-02-27 02:03:53",
+    "2021": "2026-02-27 02:03:53",
+    "2022": "2026-02-27 02:03:53",
+    "2023": "2026-02-27 02:03:53",
+    "2024": "2026-02-27 02:03:53",
+    "2025": "2026-02-27 02:03:53"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/5100/var/365/th/<year id>/key/KEY/"
+  },
+  "52 var 352": {
+   "domain": "5200",
+   "var": "352",
+   "title": "[Seri 2010] PDRB Atas Dasar Harga Berlaku Menurut Lapangan Usaha",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "Tahun 2024 : Angka sementara Tahun 2025 : Angka sangat sementara Tahun 2026 : Angka sangat sangat sementara",
+   "last_update": {
+    "2020": "2026-02-27 02:30:25",
+    "2021": "2026-02-27 02:30:25",
+    "2022": "2026-02-27 02:30:25",
+    "2023": "2026-02-27 02:30:25",
+    "2024": "2026-02-27 02:30:25",
+    "2025": "2026-02-27 02:30:25"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/5200/var/352/th/<year id>/key/KEY/"
+  },
+  "52 var 353": {
+   "domain": "5200",
+   "var": "353",
+   "title": "[Seri 2010] PDRB Atas Dasar Harga Konstan Menurut Lapangan Usaha",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "Tahun 2024 : Angka sementara Tahun 2025 : Angka sangat sementara",
+   "last_update": {
+    "2020": "2026-02-27 02:29:58",
+    "2021": "2026-02-27 02:29:58",
+    "2022": "2026-02-27 02:29:58",
+    "2023": "2026-02-27 02:29:58",
+    "2024": "2026-02-27 02:29:58",
+    "2025": "2026-02-27 02:29:58"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/5200/var/353/th/<year id>/key/KEY/"
+  },
+  "62 var 38": {
+   "domain": "6200",
+   "var": "38",
+   "title": "[Seri 2010] PDRB Atas Dasar Harga Berlaku Menurut Lapangan Usaha Provinsi Kalimantan Tengah (miliar rupiah)",
+   "unit_published": "(miliar rupiah)",
+   "decimal_shift_to_milyar": 0,
+   "note": "Data tahun terakhir (n): Data Sangat Sementara Data sebelum tahun terakhir (n-1): Data Sementara",
+   "last_update": {
+    "2020": "2026-02-27 12:12:50",
+    "2021": "2026-02-27 12:12:50",
+    "2022": "2026-02-27 12:12:50",
+    "2023": "2026-02-27 12:12:50",
+    "2024": "2026-02-27 12:12:50",
+    "2025": "2026-02-27 12:12:50"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/6200/var/38/th/<year id>/key/KEY/"
+  },
+  "62 var 437": {
+   "domain": "6200",
+   "var": "437",
+   "title": "[Seri 2010] PDRB Atas Dasar Harga Konstan 2010 Menurut Lapangan Usaha Provinsi Kalimantan Tengah (miliar rupiah)",
+   "unit_published": "(miliar rupiah)",
+   "decimal_shift_to_milyar": 0,
+   "note": "Data tahun terakhir (n): Data Sangat Sementara Data sebelum tahun terakhir (n-1): Data Sementara",
+   "last_update": {
+    "2020": "2026-02-27 12:14:02",
+    "2021": "2026-02-27 12:14:02",
+    "2022": "2026-02-27 12:14:02",
+    "2023": "2026-02-27 12:14:02",
+    "2024": "2026-02-27 12:14:02",
+    "2025": "2026-02-27 12:14:02"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/6200/var/437/th/<year id>/key/KEY/"
+  },
+  "63 var 322": {
+   "domain": "6300",
+   "var": "322",
+   "title": "[Seri 2010] Produk Domestik Regional Bruto (PDRB)  Menurut Lapangan Usaha di Provinsi Kalimantan Selatan",
+   "unit_published": "Miliar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "PDRB Atas Dasar Harga Berlaku dan PDRB Atas Dasar Harga Konstan 2010 Tahun 2024*: Angka Sementara Tahun 2025**: Angka Sangat Sementara Sumber: Badan Pusat Statistik, berbagai sensus, survei, dan sumber lain",
+   "last_update": {
+    "2020": "2026-02-27 12:19:08",
+    "2021": "2026-02-27 12:19:08",
+    "2022": "2026-02-27 12:19:08",
+    "2023": "2026-02-27 12:19:08",
+    "2024": "2026-02-27 12:19:08",
+    "2025": "2026-02-27 12:19:08"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/6300/var/322/th/<year id>/key/KEY/"
+  },
+  "64 var 238": {
+   "domain": "6400",
+   "var": "238",
+   "title": "[Seri 2010] Tahunan - Produk Domestik Regional Bruto Provinsi Kalimantan Timur Atas Dasar Harga Berlaku Menurut kategori dan Lapangan Usaha",
+   "unit_published": "Miliar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "Sumber: Badan Pusat Statistik",
+   "last_update": {
+    "2020": "2026-06-05 03:00:46",
+    "2021": "2026-06-05 03:00:46",
+    "2022": "2026-06-05 03:00:46",
+    "2023": "2026-06-05 03:00:46",
+    "2024": "2026-06-05 03:00:46",
+    "2025": "2026-06-05 03:00:46"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/6400/var/238/th/<year id>/key/KEY/"
+  },
+  "64 var 239": {
+   "domain": "6400",
+   "var": "239",
+   "title": "[Seri 2010] Tahunan - Produk Domestik Regional Bruto Provinsi Kalimantan Timur Atas Dasar Harga Konstan 2010 Menurut kategori dan Lapangan Usaha",
+   "unit_published": "Miliar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "Sumber: Badan Pusat Statistik",
+   "last_update": {
+    "2020": "2026-06-05 03:02:45",
+    "2021": "2026-06-05 03:02:45",
+    "2022": "2026-06-05 03:02:45",
+    "2023": "2026-06-05 03:02:45",
+    "2024": "2026-06-05 03:02:45",
+    "2025": "2026-06-05 03:02:45"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/6400/var/239/th/<year id>/key/KEY/"
+  },
+  "65 var 119": {
+   "domain": "6500",
+   "var": "119",
+   "title": "[Seri 2010] PDRB Atas Dasar Harga Berlaku Menurut Lapangan Usaha dan Subkategori",
+   "unit_published": "Juta Rupiah",
+   "decimal_shift_to_milyar": -3,
+   "note": "Sumber: BPS, diolah dari berbagai Sensus, Survei, dan Sumber lainnya",
+   "last_update": {
+    "2020": "2023-03-17 01:12:38",
+    "2021": "2023-03-17 01:12:38",
+    "2022": "2023-03-17 01:12:38"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/6500/var/119/th/<year id>/key/KEY/"
+  },
+  "65 var 120": {
+   "domain": "6500",
+   "var": "120",
+   "title": "[Seri 2010] PDRB Atas Dasar Harga Konstan 2010 Menurut Lapangan Usaha dan Subkategori",
+   "unit_published": "Juta Rupiah",
+   "decimal_shift_to_milyar": -3,
+   "note": "Sumber: BPS, diolah dari berbagai Sensus, Survei, dan Sumber lainnya",
+   "last_update": {
+    "2020": "2023-03-17 01:26:44",
+    "2021": "2023-03-17 01:26:44",
+    "2022": "2023-03-17 01:26:44"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/6500/var/120/th/<year id>/key/KEY/"
+  },
+  "71 var 206": {
+   "domain": "7100",
+   "var": "206",
+   "title": "[Seri 2010] PDRB Atas Dasar Harga Berlaku Menurut Lapangan Usaha di Provinsi Sulawesi Utara",
+   "unit_published": "Miliar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "Data tahun t: sangat sangat sementara; Data tahun t-1: sangat sementara; Data tahun t-2; Data sementara",
+   "last_update": {
+    "2020": "2026-02-06 10:15:27",
+    "2021": "2026-02-06 10:15:27",
+    "2022": "2026-02-06 10:15:27",
+    "2023": "2026-02-06 10:15:27",
+    "2024": "2026-02-06 10:15:27",
+    "2025": "2026-02-06 10:15:27"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/7100/var/206/th/<year id>/key/KEY/"
+  },
+  "71 var 1877": {
+   "domain": "7100",
+   "var": "1877",
+   "title": "[Seri 2010] PDRB Atas Dasar Harga Konstan Menurut Lapangan Usaha di Provinsi Sulawesi Utara",
+   "unit_published": "Miliar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "Data tahun t: sangat sangat sementara; Data tahun t-1: sangat sementara; Data tahun t-2; Data sementara",
+   "last_update": {
+    "2020": "2026-02-06 10:18:37",
+    "2021": "2026-02-06 10:18:37",
+    "2022": "2026-02-06 10:18:37",
+    "2023": "2026-02-06 10:18:37",
+    "2024": "2026-02-06 10:18:37",
+    "2025": "2026-02-06 10:18:37"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/7100/var/1877/th/<year id>/key/KEY/"
+  },
+  "73 var 1744": {
+   "domain": "7300",
+   "var": "1744",
+   "title": "[Seri 2010] PDRB Tahunan Menurut Lapangan Usaha",
+   "unit_published": "Miliar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "2026: Angka Sangat-sangat Sementara 2025: Angka Sangat Sementara 2024: Angka Sementara",
+   "last_update": {
+    "2020": "2026-02-05 01:51:05",
+    "2021": "2026-02-05 01:51:05",
+    "2022": "2026-02-05 01:51:05",
+    "2023": "2026-02-05 01:51:05",
+    "2024": "2026-02-05 01:51:05",
+    "2025": "2026-02-05 01:51:05"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/7300/var/1744/th/<year id>/key/KEY/"
+  },
+  "75 var 240": {
+   "domain": "7500",
+   "var": "240",
+   "title": "PDRB ADHB Menurut Lapangan Usaha (Subsektor)",
+   "unit_published": "Juta Rupiah",
+   "decimal_shift_to_milyar": -3,
+   "note": "",
+   "last_update": {
+    "2020": "2024-05-07 01:15:36",
+    "2021": "2024-05-07 01:15:36",
+    "2022": "2024-05-07 01:15:36",
+    "2023": "2024-05-07 01:15:36"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/7500/var/240/th/<year id>/key/KEY/"
+  },
+  "75 var 241": {
+   "domain": "7500",
+   "var": "241",
+   "title": "PDRB ADHK Menurut Lapangan Usaha (Subsektor)",
+   "unit_published": "Juta Rupiah",
+   "decimal_shift_to_milyar": -3,
+   "note": "",
+   "last_update": {
+    "2020": "2024-05-07 01:17:33",
+    "2021": "2024-05-07 01:17:33",
+    "2022": "2024-05-07 01:17:33",
+    "2023": "2024-05-07 01:17:33"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/7500/var/241/th/<year id>/key/KEY/"
+  },
+  "76 var 459": {
+   "domain": "7600",
+   "var": "459",
+   "title": "[Prov Tahunan][Seri 2010] Produk Domestik Regional Bruto (PDRB) Atas Dasar Harga Berlaku Menurut Lapangan Usaha",
+   "unit_published": "Juta Rupiah",
+   "decimal_shift_to_milyar": -3,
+   "note": "Catatan: 2022 Angka Sementara 2023 Angka Sangat Sementara Sumber: BPS, berbagai sensus, survei dan sumber lain",
+   "last_update": {
+    "2020": "2024-02-07 02:20:38",
+    "2021": "2024-02-07 02:20:38",
+    "2022": "2024-02-07 02:20:38",
+    "2023": "2024-02-07 02:20:38"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/7600/var/459/th/<year id>/key/KEY/"
+  },
+  "76 var 456": {
+   "domain": "7600",
+   "var": "456",
+   "title": "[Prov Tahunan][Seri 2010] Produk Domestik Regional Bruto (PDRB) Atas Dasar Harga Konstan 2010 Menurut Lapangan Usaha",
+   "unit_published": "Juta Rupiah",
+   "decimal_shift_to_milyar": -3,
+   "note": "Catatan: 2022 Angka Sementara 2023 Angka Sangat Sementara Sumber: BPS, berbagai sensus, survei dan sumber lain",
+   "last_update": {
+    "2020": "2024-02-07 02:21:20",
+    "2021": "2024-02-07 02:21:20",
+    "2022": "2024-02-07 02:21:20",
+    "2023": "2024-02-07 02:21:20"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/7600/var/456/th/<year id>/key/KEY/"
+  },
+  "82 var 294": {
+   "domain": "8200",
+   "var": "294",
+   "title": "[Seri 2010-Tahunan] Produk Domestik Regional Bruto Provinsi Maluku Utara Menurut Lapangan Usaha",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "2024: Angka Sementara 2025: Angka Sangat Sementara",
+   "last_update": {
+    "2020": "2026-02-12 09:36:46",
+    "2021": "2026-02-12 09:36:46",
+    "2022": "2026-02-12 09:36:46",
+    "2023": "2026-02-12 09:36:46",
+    "2024": "2026-02-12 09:36:46",
+    "2025": "2026-02-12 09:36:46"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/8200/var/294/th/<year id>/key/KEY/"
+  },
+  "91 var 177": {
+   "domain": "9100",
+   "var": "177",
+   "title": "[Seri 2010] Produk Domestik Regional Bruto Provinsi Papua Barat Menurut Lapangan Usaha",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "2024 : Angka Sangat Sementara 2023 : Angka Sementara Sejak 2023, data tidak termasuk Provinsi Papua Barat Daya",
+   "last_update": {
+    "2020": "2026-03-16 02:27:26",
+    "2021": "2026-03-16 02:27:26",
+    "2022": "2026-03-16 02:27:26",
+    "2023": "2026-03-16 02:27:26",
+    "2024": "2026-03-16 02:27:26",
+    "2025": "2026-03-16 02:27:26"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/9100/var/177/th/<year id>/key/KEY/"
+  },
+  "92 var 310": {
+   "domain": "9100",
+   "var": "310",
+   "title": "[Seri 2010] Produk Domestik Regional Bruto Provinsi Papua Barat Daya Menurut Lapangan Usaha",
+   "unit_published": "Milyar Rupiah",
+   "decimal_shift_to_milyar": 0,
+   "note": "2023: Angka Sementara 2024: Angka Sangat Sementara",
+   "last_update": {
+    "2023": "2026-03-16 02:22:02",
+    "2024": "2026-03-16 02:22:02",
+    "2025": "2026-03-16 02:22:02"
+   },
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/9100/var/310/th/<year id>/key/KEY/"
+  }
+ },
+ "source_gaps": {
+  "Sumatera Barat grdp_constant B1": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024
+  ],
+  "Sumatera Barat grdp_constant C11": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024
+  ],
+  "Sumatera Barat grdp_constant C13": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024
+  ],
+  "Sumatera Barat grdp_current B1": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024
+  ],
+  "Sumatera Barat grdp_current C11": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024
+  ],
+  "Sumatera Barat grdp_current C13": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024
+  ],
+  "Kepulauan Riau grdp_current C1": [
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "DI Yogyakarta grdp_constant B1": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "DI Yogyakarta grdp_constant B2": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "DI Yogyakarta grdp_constant B3": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "DI Yogyakarta grdp_constant C1": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "DI Yogyakarta grdp_constant C11": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "DI Yogyakarta grdp_current B1": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "DI Yogyakarta grdp_current B2": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "DI Yogyakarta grdp_current B3": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "DI Yogyakarta grdp_current C1": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "DI Yogyakarta grdp_current C11": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "Kalimantan Tengah grdp_constant C1": [
+   2023,
+   2024,
+   2025
+  ],
+  "Kalimantan Tengah grdp_constant C11": [
+   2023,
+   2024,
+   2025
+  ],
+  "Kalimantan Tengah grdp_constant C1A": [
+   2023,
+   2024,
+   2025
+  ],
+  "Kalimantan Tengah grdp_constant C1B": [
+   2023,
+   2024,
+   2025
+  ],
+  "Kalimantan Tengah grdp_constant C3": [
+   2023,
+   2024,
+   2025
+  ],
+  "Kalimantan Tengah grdp_constant C5": [
+   2023,
+   2024,
+   2025
+  ],
+  "Kalimantan Tengah grdp_current C1": [
+   2023,
+   2024,
+   2025
+  ],
+  "Kalimantan Tengah grdp_current C11": [
+   2023,
+   2024,
+   2025
+  ],
+  "Kalimantan Tengah grdp_current C1A": [
+   2023,
+   2024,
+   2025
+  ],
+  "Kalimantan Tengah grdp_current C1B": [
+   2023,
+   2024,
+   2025
+  ],
+  "Kalimantan Tengah grdp_current C3": [
+   2023,
+   2024,
+   2025
+  ],
+  "Kalimantan Tengah grdp_current C5": [
+   2023,
+   2024,
+   2025
+  ],
+  "Kalimantan Selatan grdp_constant C1": [
+   2020
+  ],
+  "Kalimantan Selatan grdp_constant C11": [
+   2020
+  ],
+  "Kalimantan Selatan grdp_constant C3": [
+   2020
+  ],
+  "Kalimantan Selatan grdp_constant C5": [
+   2020
+  ],
+  "Kalimantan Selatan grdp_current C1": [
+   2020
+  ],
+  "Kalimantan Selatan grdp_current C11": [
+   2020
+  ],
+  "Kalimantan Selatan grdp_current C3": [
+   2020
+  ],
+  "Kalimantan Selatan grdp_current C5": [
+   2020
+  ],
+  "Kalimantan Timur grdp_constant C11": [
+   2020,
+   2021,
+   2022,
+   2023
+  ],
+  "Kalimantan Timur grdp_constant C3": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "Kalimantan Timur grdp_current C11": [
+   2020,
+   2021,
+   2022,
+   2023
+  ],
+  "Kalimantan Timur grdp_current C3": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "Sulawesi Selatan grdp_constant C1": [
+   2021
+  ],
+  "Sulawesi Selatan grdp_constant C13": [
+   2021
+  ],
+  "Sulawesi Selatan grdp_constant H": [
+   2021
+  ],
+  "Sulawesi Selatan grdp_current C1": [
+   2021
+  ],
+  "Sulawesi Selatan grdp_current C13": [
+   2021
+  ],
+  "Papua Barat grdp_constant B2": [
+   2023,
+   2024,
+   2025
+  ],
+  "Papua Barat grdp_constant C11": [
+   2023,
+   2024,
+   2025
+  ],
+  "Papua Barat grdp_constant C13": [
+   2023,
+   2024,
+   2025
+  ],
+  "Papua Barat grdp_constant C3": [
+   2023,
+   2024,
+   2025
+  ],
+  "Papua Barat grdp_current B2": [
+   2023,
+   2024,
+   2025
+  ],
+  "Papua Barat grdp_current C11": [
+   2023,
+   2024,
+   2025
+  ],
+  "Papua Barat grdp_current C13": [
+   2023,
+   2024,
+   2025
+  ],
+  "Papua Barat grdp_current C3": [
+   2023,
+   2024,
+   2025
+  ],
+  "Papua Barat Daya grdp_constant C11": [
+   2023,
+   2024,
+   2025
+  ],
+  "Papua Barat Daya grdp_constant C13": [
+   2023,
+   2024,
+   2025
+  ],
+  "Papua Barat Daya grdp_constant C3": [
+   2023,
+   2024,
+   2025
+  ],
+  "Papua Barat Daya grdp_current C11": [
+   2023,
+   2024,
+   2025
+  ],
+  "Papua Barat Daya grdp_current C13": [
+   2023,
+   2024,
+   2025
+  ],
+  "Papua Barat Daya grdp_current C3": [
+   2023,
+   2024,
+   2025
+  ]
+ },
+ "notes": [
+  "Each province's table is a separate BPS release, revised on its own date (see source_tables last_update), so provinces are not of one vintage and do not sum to Indonesia.",
+  "Values published in Juta Rupiah (Sumatera Barat, Jawa Tengah, Kalimantan Utara, Sulawesi Tenggara, Gorontalo, Sulawesi Barat) are written in Milyar Rupiah by moving the decimal point three places; no digit is rounded.",
+  "An empty source cell has no row (see source_gaps); identities count it as zero.",
+  "C1A and C1B split C1 for Jambi, Nusa Tenggara Barat, Kalimantan Tengah, Kalimantan Utara and Gorontalo only.",
+  "Maluku Utara labels its B.4 row 'Perikanan'; the row sits under mining and B1+B2+B3+B4 = B holds with it, so it is read as B4.",
+  "Papua Barat values from 2023 exclude Papua Barat Daya (table note), while the national BPS tables separate the two from 2024. Papua Barat Daya (92) has values from 2023.",
+  "status follows each provincial table note. Tables without a note (Riau, Jambi, Lampung, Kepulauan Bangka Belitung, Jawa Barat, DI Yogyakarta, Kalimantan Timur, Kalimantan Utara, Sulawesi Tenggara, Gorontalo) carry no marker, although their latest years are preliminary. The Jawa Timur (n-1, n-2) and Sulawesi Utara (t-1, t-2) notes are read with n = t = 2026.",
+  "Shares (coal share = B2 / TOTAL, other extractives = (B1 + B3 + C11) / TOTAL) and per-capita values belong in analysis/."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "identities",
+   "cross-source"
+  ],
+  "identities": [
+   {
+    "check": "A..RSTU sum to TOTAL",
+    "compared": 272,
+    "largest_gap_within_rounding": 2.0,
+    "declared_breaks": 3,
+    "tolerance": "one unit in the last written decimal for each part, in Rp billion"
+   },
+   {
+    "check": "B1..B4 sum to B",
+    "compared": 272,
+    "largest_gap_within_rounding": 1.0,
+    "declared_breaks": 0,
+    "tolerance": "one unit in the last written decimal for each part, in Rp billion"
+   },
+   {
+    "check": "C1..C16 sum to C",
+    "compared": 272,
+    "largest_gap_within_rounding": 1.0,
+    "declared_breaks": 3,
+    "tolerance": "one unit in the last written decimal for each part, in Rp billion"
+   },
+   {
+    "check": "C1A..C1B sum to C1",
+    "compared": 42,
+    "largest_gap_within_rounding": 0.0,
+    "declared_breaks": 0,
+    "tolerance": "one unit in the last written decimal for each part, in Rp billion"
+   }
+  ],
+  "identity_breaks": {
+   "Sulawesi Selatan grdp_constant TOTAL 2021": {
+    "parts_minus_total": -9901.01
+   },
+   "Sulawesi Barat grdp_current TOTAL 2021": {
+    "parts_minus_total": 0.0143
+   },
+   "Sulawesi Barat grdp_current TOTAL 2022": {
+    "parts_minus_total": 7.367
+   },
+   "Sulawesi Barat grdp_constant C 2021": {
+    "parts_minus_total": -19.6075
+   },
+   "Sulawesi Barat grdp_constant C 2022": {
+    "parts_minus_total": -17.2204
+   },
+   "Sulawesi Barat grdp_constant C 2023": {
+    "parts_minus_total": -7.8578
+   }
+  },
+  "identity_breaks_note": "Gaps beyond rounding in the source tables. Sulawesi Selatan 2021 constant: H is empty, so the gap equals H. Sulawesi Barat: the published parts do not add up; no value is changed.",
+  "cross_source_overlaps": {},
+  "national_table_comparison": {
+   "against": "data/20261102_bps-province-grdp-population/20261102_bps-province-grdp-population.csv",
+   "compared": 427,
+   "largest_gap_pct": 36.9584,
+   "note": "The national table is a different BPS release, so gaps are recorded, not forced to zero; gaps outside the range are flagged."
+  },
+  "plausible_ranges": {
+   "grdp_current_growth_pct": [
+    -20,
+    40
+   ],
+   "grdp_constant_growth_pct": [
+    -15,
+    30
+   ],
+   "national_table_gap_pct": [
+    -0.5,
+    0.5
+   ]
+  },
+  "flags": [
+   {
+    "check": "grdp_constant_growth_pct",
+    "province_code": "82",
+    "period": "2025",
+    "value": 34.1747,
+    "range": [
+     -15,
+     30
+    ]
+   },
+   {
+    "check": "national_table_gap_pct",
+    "province_code": "65",
+    "sector": "TOTAL",
+    "period": "2021",
+    "value": -0.7722,
+    "range": [
+     -0.5,
+     0.5
+    ]
+   },
+   {
+    "check": "national_table_gap_pct",
+    "province_code": "91",
+    "sector": "TOTAL",
+    "period": "2023",
+    "value": -36.9584,
+    "range": [
+     -0.5,
+     0.5
+    ]
+   }
+  ]
+ },
+ "file": "20261108_bps-province-grdp-subsector.csv",
+ "rows": 10226,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source",
+  "*": "Angka sementara (preliminary)",
+  "**": "Angka sangat sementara (very preliminary)",
+  "***": "Angka sangat sangat sementara (very, very preliminary)"
+ },
+ "raw_files": {
+  "raw/grdp/20261107_bps-webapi-grdp-by-subsector.jsonl": {
+   "sha256": "12f5b5307ed9c4f929d7135eaf2d7318638f75859fdfbefeb7fbe89a9e0143fb"
+  },
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "data/20261102_bps-province-grdp-population/20261102_bps-province-grdp-population.csv": {
+   "sha256": "fcde030cba8524148053d01cfa65f340c3d1e627885f3d855a75ac686c98589c"
+  }
+ }
+}

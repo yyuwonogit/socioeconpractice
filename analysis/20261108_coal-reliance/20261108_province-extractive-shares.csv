@@ -1,0 +1,39 @@
+province_code,province,year,group,coal_band,main_extractive_not_coal,coal_pct,oil_gas_pct,metals_pct,refining_pct,other_extractive_pct,non_extractive_pct,mining_pct_2025,grdp_per_capita_2025,grdp_growth_2025_pct,grdp_pc_index,grdp_pc_index_without_coal,grdp_pc_index_without_extractives
+65,Kalimantan Utara,2022,Coal economy,Over 20%,False,28.18,3.04,1.66,0.00,4.70,67.12,26.84,208.20,6.16,274.55,197.18,184.29
+63,Kalimantan Selatan,2025,Coal economy,Over 20%,False,26.33,0.28,0.26,0.00,0.53,73.13,27.53,70.58,6.38,84.93,62.57,62.11
+64,Kalimantan Timur,2025,Coal economy,Over 20%,False,25.09,4.89,0.13,10.34,5.03,59.54,34.18,208.33,3.60,250.71,187.80,149.27
+16,Sumatera Selatan,2025,Coal economy,5-20%,False,13.93,5.39,0.01,3.13,5.40,77.55,23.99,80.66,8.47,97.07,83.55,75.28
+14,Riau,2024,"Nickel, copper or oil economy",Under 5%,True,0.29,13.43,0.02,2.00,13.45,84.26,16.10,176.38,7.99,211.43,210.82,178.15
+19,Kepulauan Bangka Belitung,2025,"Nickel, copper or oil economy",No coal,True,0.00,0.36,13.79,0.00,14.15,85.85,7.89,75.32,8.66,90.65,90.65,77.82
+21,Kepulauan Riau,2025,"Nickel, copper or oil economy",No coal,True,0.00,8.54,4.66,0.00,13.20,86.80,10.06,172.46,8.31,207.53,207.53,180.15
+52,Nusa Tenggara Barat,2025,"Nickel, copper or oil economy",No coal,True,0.00,0.00,16.45,0.00,16.45,83.55,16.51,33.67,5.86,40.52,40.52,33.85
+82,Maluku Utara,2025,"Nickel, copper or oil economy",No coal,True,0.00,0.00,59.35,0.00,59.35,40.65,20.84,97.26,37.82,117.05,117.05,47.58
+91,Papua Barat,2025,"Nickel, copper or oil economy",No coal,True,0.00,25.00,0.04,38.02,25.04,36.94,25.61,139.22,7.39,167.54,167.54,61.89
+11,Aceh,,No subsector table,,,,,,,,,6.00,45.77,5.88,,,
+17,Bengkulu,,No subsector table,,,,,,,,,3.58,52.31,7.54,,,
+31,DKI Jakarta,,No subsector table,,,,,,,,,0.12,367.69,6.70,,,
+53,Nusa Tenggara Timur,,No subsector table,,,,,,,,,0.96,25.84,7.94,,,
+61,Kalimantan Barat,,No subsector table,,,,,,,,,6.50,56.98,9.46,,,
+72,Sulawesi Tengah,,No subsector table,,,,,,,,,15.22,131.64,10.22,,,
+74,Sulawesi Tenggara,,No subsector table,,,,,,,,,20.50,72.03,7.84,,,
+81,Maluku,,No subsector table,,,,,,,,,1.45,33.65,5.85,,,
+94,Papua,,No subsector table,,,,,,,,,0.85,84.31,5.35,,,
+95,Papua Selatan,,No subsector table,,,,,,,,,1.19,64.92,6.84,,,
+96,Papua Tengah,,No subsector table,,,,,,,,,73.72,107.56,-8.24,,,
+97,Papua Pegunungan,,No subsector table,,,,,,,,,1.14,19.11,6.84,,,
+62,Kalimantan Tengah,2025,Non-extractive economy,5-20%,False,7.14,0.39,1.70,0.00,2.08,90.77,9.88,84.73,8.16,101.96,94.68,92.55
+15,Jambi,2024,Non-extractive economy,Under 5%,True,2.92,9.04,0.05,2.27,9.09,85.72,13.79,92.79,8.20,110.89,107.65,95.05
+13,Sumatera Barat,2024,Non-extractive economy,Under 5%,False,0.10,0.00,0.00,0.00,0.00,99.90,3.77,59.55,5.72,72.94,72.87,72.87
+36,Banten,2025,Non-extractive economy,No coal,False,0.02,0.13,3.36,0.09,3.50,96.40,0.37,74.67,7.16,89.86,89.85,86.63
+92,Papua Barat Daya,2025,Non-extractive economy,No coal,True,0.00,5.66,3.31,13.85,8.97,77.18,10.06,61.63,5.88,74.16,74.16,57.24
+73,Sulawesi Selatan,2025,Non-extractive economy,No coal,False,0.00,0.43,1.93,0.00,2.36,97.64,4.29,78.75,8.16,94.77,94.77,92.53
+12,Sumatera Utara,2024,Non-extractive economy,No coal,False,0.00,0.06,1.95,0.00,2.02,97.98,1.18,78.31,7.78,94.08,94.08,92.18
+18,Lampung,2024,Non-extractive economy,No coal,False,0.00,2.45,0.12,0.00,2.57,97.42,4.66,55.01,8.22,65.69,65.69,63.99
+32,Jawa Barat,2025,Non-extractive economy,No coal,False,0.00,0.49,1.31,1.28,1.81,96.91,0.91,59.86,7.62,72.04,72.04,69.82
+33,Jawa Tengah,2023,Non-extractive economy,No coal,False,0.00,0.41,0.23,2.79,0.63,96.57,2.09,50.82,6.90,61.35,61.35,59.25
+34,DI Yogyakarta,2025,Non-extractive economy,No coal,False,0.00,0.00,0.00,0.00,0.00,100.00,0.38,55.04,7.53,66.24,66.24,66.24
+35,Jawa Timur,2025,Non-extractive economy,No coal,False,0.00,1.96,1.16,0.04,3.12,96.84,3.32,80.86,7.41,97.30,97.30,94.23
+51,Bali,2025,Non-extractive economy,No coal,False,0.00,0.00,0.00,0.00,0.00,100.00,0.82,72.66,8.61,87.44,87.44,87.44
+71,Sulawesi Utara,2025,Non-extractive economy,No coal,False,0.00,0.26,2.00,0.00,2.27,97.73,4.90,75.24,9.27,90.54,90.54,88.49
+75,Gorontalo,2023,Non-extractive economy,No coal,False,0.00,0.00,0.17,0.00,0.17,99.83,1.23,47.48,8.10,57.48,57.48,57.38
+76,Sulawesi Barat,2023,Non-extractive economy,No coal,False,0.00,0.00,0.00,0.00,0.00,100.00,2.10,46.65,10.82,53.66,53.66,53.66

@@ -1,0 +1,280 @@
+{
+ "title": "BPS provincial adjusted per capita expenditure and poverty rate, Indonesia",
+ "columns": {
+  "province_code": "BPS province code (kode_bps); 00 = Indonesia. Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definitions in 'indicators'.",
+  "area": "urban, rural or total for poverty rates; empty for expenditure. Names in 'areas'.",
+  "period": "YYYY. For poverty rates the survey month is in the indicator code.",
+  "status": "BPS revision marker; these tables carry none.",
+  "value": "Number in the indicator's unit, as published by BPS."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  },
+  "00": {
+   "name": "INDONESIA",
+   "kode_dagri": null
+  }
+ },
+ "areas": {
+  "": "not split by area",
+  "urban": "Perkotaan",
+  "rural": "Perdesaan",
+  "total": "Jumlah (urban + rural)"
+ },
+ "indicators": {
+  "expenditure_per_capita_adjusted": {
+   "name": "Pengeluaran per kapita disesuaikan, metode baru (adjusted per capita household expenditure, HDI method)",
+   "unit": "thousand Rp per person per year, at constant 2012 prices (PPP-adjusted)",
+   "multiplier": 1000.0,
+   "base_unit": "Rp per person per year"
+  },
+  "poverty_rate_march": {
+   "name": "Persentase penduduk miskin P0, Susenas Maret (poverty headcount, March survey)",
+   "unit": "percent of population",
+   "multiplier": 1
+  },
+  "poverty_rate_september": {
+   "name": "Persentase penduduk miskin P0, Susenas September (poverty headcount, September survey)",
+   "unit": "percent of population",
+   "multiplier": 1
+  }
+ },
+ "source_tables": {
+  "page 416": {
+   "title": "[Metode Baru] Pengeluaran per Kapita Disesuaikan",
+   "unit": "Ribu Rupiah/Orang/Tahun",
+   "last_update": "2026-11-05 16:57:26",
+   "note": "Untuk penjelasan lebih lanjut mengenai IPM metode baru silahkan klik link di bawah ini -Booklet IPM metode Baru -Bahan Sosialisasi IPM metode baru",
+   "url": "https://www.bps.go.id/id/statistics-table/2/NDE2IzI=/-metode-baru--pengeluaran-per-kapita",
+   "file": "raw/welfare/20261107_bps-adjusted-per-capita-expenditure-by-province-2026.html"
+  },
+  "page 192": {
+   "title": "Persentase Penduduk Miskin (P0) Menurut Provinsi dan Daerah",
+   "unit": "Persen",
+   "last_update": "2026-08-05 12:36:39",
+   "note": "Data Provinsi Kalimantan Utara pada tahun 2013 dan 2014 masih bergabung dengan Provinsi Kalimantan Timur Angka Provinsi Papua Barat dan Papua sebelum tahun 2024 merupakan angka provinsi sebelum mengalami pemekaran Daerah Otonom Baru (DOB)",
+   "url": "https://www.bps.go.id/id/statistics-table/2/MTkyIzI=/persentase-penduduk-miskin--maret-2026.html",
+   "file": "raw/welfare/20261107_bps-poverty-rate-by-province-2026.html"
+  },
+  "webapi 416": {
+   "title": "[Metode Baru] Pengeluaran per Kapita Disesuaikan",
+   "unit": "Ribu Rupiah/Orang/Tahun",
+   "last_update": "2026-11-05 16:57:26",
+   "note": "Untuk penjelasan lebih lanjut mengenai IPM metode baru silahkan klik link di bawah ini -Booklet IPM metode Baru -Bahan Sosialisasi IPM metode baru",
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/416/th/126/key/KEY/"
+  },
+  "webapi 192": {
+   "title": "Persentase Penduduk Miskin (P0) Menurut Provinsi dan Daerah",
+   "unit": "Persen",
+   "last_update": "2026-08-05 12:36:39",
+   "note": "Data Provinsi Kalimantan Utara pada tahun 2013 dan 2014 masih bergabung dengan Provinsi Kalimantan Timur Angka Provinsi Papua Barat dan Papua sebelum tahun 2024 merupakan angka provinsi sebelum mengalami pemekaran Daerah Otonom Baru (DOB)",
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/192/th/126/key/KEY/"
+  }
+ },
+ "notes": [
+  "Papua split: Papua Barat Daya (92), Papua Selatan (95), Papua Tengah (96) and Papua Pegunungan (97) have values from 2024. For 2020-2023, Papua (94) and Papua Barat (91) are the pre-split provinces (BPS table note).",
+  "BPS ran no September Susenas poverty round in 2023; September 2026 is not yet published. The 'Tahunan' column of the poverty table is empty for every year.",
+  "DKI Jakarta has no rural poverty rate because it has no rural area.",
+  "Adjusted per capita expenditure is the HDI expenditure component: real (constant 2012 prices), purchasing-power adjusted. It is not comparable with GRDP per capita in rupiah terms; compare levels across provinces, or ratios.",
+  "Expenditure rows for regencies and cities in the same BPS table are not read."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "cross-source"
+  ],
+  "cross_source_overlaps": {
+   "BPS WebAPI 2020-2026 = BPS pages 2026": 155
+  },
+  "plausible_ranges": {
+   "poverty_rate": [
+    0,
+    45
+   ],
+   "expenditure_change_pct": [
+    -8,
+    12
+   ]
+  },
+  "flags": []
+ },
+ "file": "20261108_bps-province-welfare.csv",
+ "rows": 1565,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/welfare/20261107_bps-adjusted-per-capita-expenditure-by-province-2026.html": {
+   "sha256": "cdc4dd6127c22ac7147f26f53f93433ffb384856f33eb105d755a78b16fdea88"
+  },
+  "raw/welfare/20261107_bps-poverty-rate-by-province-2026.html": {
+   "sha256": "1e47c801b8e96a91a9f70baf18f7ce6883d6dac271172b448500c4bf1cc8dcf9"
+  },
+  "raw/welfare/20261107_bps-webapi-welfare-by-province.jsonl": {
+   "sha256": "8de985d657efaca0ee0dcb021c18d08ff0fba968cb7e61617c96ec0635457f68"
+  }
+ }
+}
