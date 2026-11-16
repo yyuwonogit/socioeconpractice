@@ -1,0 +1,427 @@
+{
+ "title": "BPS employed persons by main industry, by province, Sakernas August 2025, Indonesia",
+ "columns": {
+  "province_code": "BPS province code (kode_bps); 00 = Indonesia. Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definitions in 'indicators'.",
+  "sector": "Main industry (KBLI 2020 categories); names in 'sectors'. TOTAL is all industries.",
+  "period": "YYYY; the survey month (August) is in the indicator code.",
+  "status": "BPS precision marker: rse25-50 where the report marks a relative standard error of 25-50%.",
+  "value": "Persons, as published by BPS."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  },
+  "00": {
+   "name": "INDONESIA",
+   "kode_dagri": null
+  }
+ },
+ "sectors": {
+  "A": "Pertanian, Kehutanan, dan Perikanan (agriculture, forestry and fishing)",
+  "B": "Pertambangan dan Penggalian (mining and quarrying)",
+  "C": "Industri Pengolahan (manufacturing)",
+  "D": "Pengadaan Listrik, Gas, Uap/Air Panas, dan Udara Dingin (electricity, gas, steam and air conditioning)",
+  "E": "Treatment Air, Air Limbah, Sampah dan Remediasi (water supply, sewerage and waste)",
+  "F": "Konstruksi (construction)",
+  "G": "Perdagangan Besar dan Eceran, Reparasi Mobil dan Sepeda Motor (trade and vehicle repair)",
+  "H": "Pengangkutan dan Pergudangan (transport and storage)",
+  "I": "Penyediaan Akomodasi dan Makan Minum (accommodation and food)",
+  "J": "Informasi dan Komunikasi (information and communication)",
+  "K": "Aktivitas Keuangan dan Asuransi (finance and insurance)",
+  "L": "Real Estat (real estate)",
+  "MN": "Aktivitas Profesional dan Perusahaan (professional, administrative and support, M and N)",
+  "O": "Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib (public administration)",
+  "P": "Pendidikan (education)",
+  "Q": "Aktivitas Kesehatan dan Aktivitas Sosial (health and social work)",
+  "RSTU": "Aktivitas Jasa Lainnya (other services, R to U)",
+  "TOTAL": "Jumlah (all industries)"
+ },
+ "indicators": {
+  "employed_persons_august": {
+   "name": "Penduduk berumur 15 tahun ke atas yang bekerja selama seminggu terakhir, Sakernas Agustus (employed persons aged 15 and over, August survey), by main industry",
+   "unit": "persons",
+   "multiplier": 1,
+   "source": "BPS, Keadaan Angkatan Kerja di Indonesia Agustus 2025, Tabel 112"
+  }
+ },
+ "source_tables": {
+  "report": {
+   "title": "Keadaan Angkatan Kerja di Indonesia Agustus 2025, Tabel 112: Penduduk Berumur 15 Tahun ke Atas yang Bekerja Selama Seminggu Terakhir Menurut Provinsi dan Lapangan Pekerjaan Utama di Indonesia, Agustus 2025",
+   "pages": "PDF pages 221-224 (printed pages 163-166)",
+   "file": "raw/labour/20261116_bps-keadaan-angkatan-kerja-agustus-2025.pdf"
+  }
+ },
+ "gaps": {
+  "meaning": {
+   "NA": "BPS publishes no estimate for the cell"
+  },
+  "cells": [
+   {
+    "province_code": "92",
+    "column": "E",
+    "marker": "NA"
+   },
+   {
+    "province_code": "95",
+    "column": "B",
+    "marker": "NA"
+   },
+   {
+    "province_code": "95",
+    "column": "D",
+    "marker": "NA"
+   },
+   {
+    "province_code": "95",
+    "column": "E",
+    "marker": "NA"
+   },
+   {
+    "province_code": "96",
+    "column": "D",
+    "marker": "NA"
+   },
+   {
+    "province_code": "96",
+    "column": "E",
+    "marker": "NA"
+   },
+   {
+    "province_code": "97",
+    "column": "B",
+    "marker": "NA"
+   },
+   {
+    "province_code": "97",
+    "column": "C",
+    "marker": "NA"
+   },
+   {
+    "province_code": "97",
+    "column": "D",
+    "marker": "NA"
+   },
+   {
+    "province_code": "97",
+    "column": "E",
+    "marker": "NA"
+   },
+   {
+    "province_code": "97",
+    "column": "F",
+    "marker": "NA"
+   },
+   {
+    "province_code": "97",
+    "column": "I",
+    "marker": "NA"
+   },
+   {
+    "province_code": "53",
+    "column": "L",
+    "marker": "NA"
+   },
+   {
+    "province_code": "75",
+    "column": "L",
+    "marker": "NA"
+   },
+   {
+    "province_code": "76",
+    "column": "L",
+    "marker": "NA"
+   },
+   {
+    "province_code": "82",
+    "column": "L",
+    "marker": "NA"
+   },
+   {
+    "province_code": "91",
+    "column": "L",
+    "marker": "NA"
+   },
+   {
+    "province_code": "94",
+    "column": "L",
+    "marker": "NA"
+   },
+   {
+    "province_code": "95",
+    "column": "J",
+    "marker": "NA"
+   },
+   {
+    "province_code": "95",
+    "column": "K",
+    "marker": "NA"
+   },
+   {
+    "province_code": "95",
+    "column": "L",
+    "marker": "NA"
+   },
+   {
+    "province_code": "96",
+    "column": "J",
+    "marker": "NA"
+   },
+   {
+    "province_code": "97",
+    "column": "J",
+    "marker": "NA"
+   },
+   {
+    "province_code": "97",
+    "column": "K",
+    "marker": "NA"
+   },
+   {
+    "province_code": "97",
+    "column": "L",
+    "marker": "NA"
+   },
+   {
+    "province_code": "97",
+    "column": "MN",
+    "marker": "NA"
+   }
+  ]
+ },
+ "notes": [
+  "BPS does not split mining and quarrying (B) into coal and other mining in this table.",
+  "Jawa Tengah mining (B) is printed '111071' without its thousands separator; it is read as 111,071, and Jawa Tengah's industries then sum to its total.",
+  "Rows and columns containing NA cells are left out of the sum checks, because NA cells are estimates BPS does not publish.",
+  "Shares are derived in analysis/."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "identities",
+   "cross-source"
+  ],
+  "identities": [
+   {
+    "check": "industries to TOTAL (rows without NA)",
+    "compared": 29,
+    "largest_gap": 0.0,
+    "tolerance": 2
+   },
+   {
+    "check": "provinces to Indonesia (columns without NA)",
+    "compared": 8,
+    "largest_gap": 0.0,
+    "tolerance": 2
+   },
+   {
+    "rows_with_na": [
+     "53",
+     "75",
+     "76",
+     "82",
+     "91",
+     "92",
+     "94",
+     "95",
+     "96",
+     "97"
+    ],
+    "columns_with_na": [
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "I",
+     "J",
+     "K",
+     "L",
+     "MN"
+    ]
+   }
+  ],
+  "cross_source_overlaps": {
+   "TOTAL = Tabel 107 TOTAL (data/20261116_bps-province-workers-by-education)": 39
+  },
+  "plausible_ranges": {
+   "mining_share_pct": [
+    0,
+    15
+   ]
+  },
+  "flags": []
+ },
+ "file": "20261116_bps-province-workers-by-industry.csv",
+ "rows": 676,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source",
+  "rse25-50": "Kesalahan baku relatif 25% <= RSE <= 50% (relative standard error between 25% and 50%; use with caution)"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/labour/20261116_bps-keadaan-angkatan-kerja-agustus-2025.pdf": {
+   "sha256": "96bbdb8acb55c8f6a7e1bbae3ed2366e30cfaf46eb98b35842d68b1df4f09d7f"
+  }
+ }
+}

@@ -96,39 +96,19 @@ def row(code, education, value, status=""):
 def read_pdf_rows(pdf, lookup):
     """Read Table 107 from its two pages into long rows of provinces and Indonesia."""
     c = READ_CONTEXT["pdf"]
-    out, national_label_seen = [], False
     for number in c["pages"]:
         lines = cleaning.pdf_visible_lines(pdf.pages[number - 1])
         text = "\n".join(" ".join(w["text"] for w in line) for line in lines)
         # Check the page still carries its title, column labels and footnote
         for needle in c["page_text"][number] + c["header_text"]:
             cleaning.require_text(text, needle, f"page {number}")
-        for line in lines:
-            label = " ".join(w["text"] for w in line if not NUMBER.match(w["text"]) and w["size"] > c["marker"]["max_size"])
-            if label == c["national_row"]:
-                national_label_seen = True
-                continue
-            values, status = [], []
-            for w in line:
-                if w["size"] <= c["marker"]["max_size"]:
-                    # A small "1" right after a number marks that number's precision; small text
-                    # elsewhere (the footnote line) is not part of a data row
-                    if values:
-                        assert w["text"] == c["marker"]["text"] and status[-1] == "", (number, w)
-                        status[-1] = c["marker"]["status"]
-                elif NUMBER.match(w["text"]):
-                    values.append(cleaning.parse_number(w["text"], c["decimal"], c["thousands"], decimals=0))
-                    status.append("")
-            if len(values) != len(EDUCATION):
-                continue
-            if label == "":
-                # The Indonesia row writes Jumlah on the line above its numbers and Total below
-                assert national_label_seen, (number, line)
-                code = cleaning.NATIONAL_CODE
-            else:
-                code = cleaning.province_code(label, lookup)
-            out += [row(code, e, v, s) for e, v, s in zip(EDUCATION, values, status)]
-    return out
+    # Read the province rows and the Indonesia row (Jumlah above its numbers, Total below)
+    cells, gaps = cleaning.bps_report_province_table(
+        pdf, {number: list(EDUCATION) for number in c["pages"]}, lookup,
+        marker_status=c["marker"]["status"], marker_text=c["marker"]["text"], decimal=c["decimal"],
+        thousands=c["thousands"], national_label=c["national_row"], max_marker_size=c["marker"]["max_size"])
+    assert not gaps, gaps
+    return [row(x["province_code"], x["column"], x["value"], x["status"]) for x in cells]
 
 
 def read_api_totals(record):

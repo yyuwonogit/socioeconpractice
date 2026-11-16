@@ -1,0 +1,578 @@
+{
+ "title": "PLN SAIDI and SAIFI by PLN distribution unit, 2024, with the provinces each unit serves",
+ "columns": {
+  "unit": "PLN unit code; names and the BPS province codes each serves in 'units'.",
+  "indicator": "saidi or saifi; definitions in 'indicators'.",
+  "period": "YYYY.",
+  "status": "Empty; the table carries no markers.",
+  "value": "As published by PLN."
+ },
+ "units": {
+  "ACEH": {
+   "name": "UID Aceh",
+   "provinces": [
+    "11"
+   ],
+   "aggregate": false
+  },
+  "SUMUT": {
+   "name": "UID Sumatera Utara",
+   "provinces": [
+    "12"
+   ],
+   "aggregate": false
+  },
+  "SUMBAR": {
+   "name": "UID Sumatera Barat",
+   "provinces": [
+    "13"
+   ],
+   "aggregate": false
+  },
+  "RIAU_KEPRI": {
+   "name": "UID Riau dan Kepulauan Riau",
+   "provinces": [
+    "14",
+    "21"
+   ],
+   "aggregate": false
+  },
+  "S2JB": {
+   "name": "UID Sumatera Selatan, Jambi dan Bengkulu",
+   "provinces": [
+    "16",
+    "15",
+    "17"
+   ],
+   "aggregate": false
+  },
+  "BABEL": {
+   "name": "UIW Bangka Belitung",
+   "provinces": [
+    "19"
+   ],
+   "aggregate": false
+  },
+  "LAMPUNG": {
+   "name": "UID Lampung",
+   "provinces": [
+    "18"
+   ],
+   "aggregate": false
+  },
+  "KALBAR": {
+   "name": "UID Kalimantan Barat",
+   "provinces": [
+    "61"
+   ],
+   "aggregate": false
+  },
+  "KALSELTENG": {
+   "name": "UID Kalimantan Selatan dan Tengah",
+   "provinces": [
+    "63",
+    "62"
+   ],
+   "aggregate": false
+  },
+  "KALTIMRA": {
+   "name": "UID Kalimantan Timur dan Utara",
+   "provinces": [
+    "64",
+    "65"
+   ],
+   "aggregate": false
+  },
+  "SULUTTENGGO": {
+   "name": "UID Sulawesi Utara,Tengah dan Gorontalo",
+   "provinces": [
+    "71",
+    "72",
+    "75"
+   ],
+   "aggregate": false
+  },
+  "SULSELRABAR": {
+   "name": "UID Sulawesi Selatan, Tenggara dan Barat",
+   "provinces": [
+    "73",
+    "74",
+    "76"
+   ],
+   "aggregate": false
+  },
+  "MALUKU_MALUT": {
+   "name": "UIW Maluku dan Maluku Utara",
+   "provinces": [
+    "81",
+    "82"
+   ],
+   "aggregate": false
+  },
+  "PAPUA_PABAR": {
+   "name": "UIW Papua dan Papua Barat",
+   "provinces": [
+    "94",
+    "91",
+    "92",
+    "95",
+    "96",
+    "97"
+   ],
+   "aggregate": false
+  },
+  "BALI": {
+   "name": "UID Bali",
+   "provinces": [
+    "51"
+   ],
+   "aggregate": false
+  },
+  "NTB": {
+   "name": "UIW Nusa Tenggara Barat",
+   "provinces": [
+    "52"
+   ],
+   "aggregate": false
+  },
+  "NTT": {
+   "name": "UIW Nusa Tenggara Timur",
+   "provinces": [
+    "53"
+   ],
+   "aggregate": false
+  },
+  "BATAM": {
+   "name": "PT PLN Batam",
+   "provinces": [
+    "21"
+   ],
+   "aggregate": false
+  },
+  "OUTSIDE_JAVA": {
+   "name": "Luar Jawa",
+   "provinces": [],
+   "aggregate": true
+  },
+  "JATIM": {
+   "name": "UID Jawa Timur",
+   "provinces": [
+    "35"
+   ],
+   "aggregate": false
+  },
+  "JATENG_DIY": {
+   "name": "UID Jawa Tengah dan Yogyakarta",
+   "provinces": [
+    "33",
+    "34"
+   ],
+   "aggregate": false
+  },
+  "JABAR": {
+   "name": "UID Jawa Barat",
+   "provinces": [
+    "32"
+   ],
+   "aggregate": false
+  },
+  "BANTEN": {
+   "name": "UID Banten",
+   "provinces": [
+    "36"
+   ],
+   "aggregate": false
+  },
+  "JAKARTA": {
+   "name": "UID Jakarta Raya",
+   "provinces": [
+    "31"
+   ],
+   "aggregate": false
+  },
+  "JAVA": {
+   "name": "Jawa",
+   "provinces": [],
+   "aggregate": true
+  },
+  "INDONESIA": {
+   "name": "Indonesia",
+   "provinces": [],
+   "aggregate": true
+  }
+ },
+ "province_unit": {
+  "11": {
+   "unit": "ACEH",
+   "name": "ACEH"
+  },
+  "12": {
+   "unit": "SUMUT",
+   "name": "SUMATERA UTARA"
+  },
+  "13": {
+   "unit": "SUMBAR",
+   "name": "SUMATERA BARAT"
+  },
+  "14": {
+   "unit": "RIAU_KEPRI",
+   "name": "RIAU"
+  },
+  "15": {
+   "unit": "S2JB",
+   "name": "JAMBI"
+  },
+  "16": {
+   "unit": "S2JB",
+   "name": "SUMATERA SELATAN"
+  },
+  "17": {
+   "unit": "S2JB",
+   "name": "BENGKULU"
+  },
+  "18": {
+   "unit": "LAMPUNG",
+   "name": "LAMPUNG"
+  },
+  "19": {
+   "unit": "BABEL",
+   "name": "KEPULAUAN BANGKA BELITUNG"
+  },
+  "21": {
+   "unit": "RIAU_KEPRI",
+   "name": "KEPULAUAN RIAU"
+  },
+  "31": {
+   "unit": "JAKARTA",
+   "name": "DKI JAKARTA"
+  },
+  "32": {
+   "unit": "JABAR",
+   "name": "JAWA BARAT"
+  },
+  "33": {
+   "unit": "JATENG_DIY",
+   "name": "JAWA TENGAH"
+  },
+  "34": {
+   "unit": "JATENG_DIY",
+   "name": "DI YOGYAKARTA"
+  },
+  "35": {
+   "unit": "JATIM",
+   "name": "JAWA TIMUR"
+  },
+  "36": {
+   "unit": "BANTEN",
+   "name": "BANTEN"
+  },
+  "51": {
+   "unit": "BALI",
+   "name": "BALI"
+  },
+  "52": {
+   "unit": "NTB",
+   "name": "NUSA TENGGARA BARAT"
+  },
+  "53": {
+   "unit": "NTT",
+   "name": "NUSA TENGGARA TIMUR"
+  },
+  "61": {
+   "unit": "KALBAR",
+   "name": "KALIMANTAN BARAT"
+  },
+  "62": {
+   "unit": "KALSELTENG",
+   "name": "KALIMANTAN TENGAH"
+  },
+  "63": {
+   "unit": "KALSELTENG",
+   "name": "KALIMANTAN SELATAN"
+  },
+  "64": {
+   "unit": "KALTIMRA",
+   "name": "KALIMANTAN TIMUR"
+  },
+  "65": {
+   "unit": "KALTIMRA",
+   "name": "KALIMANTAN UTARA"
+  },
+  "71": {
+   "unit": "SULUTTENGGO",
+   "name": "SULAWESI UTARA"
+  },
+  "72": {
+   "unit": "SULUTTENGGO",
+   "name": "SULAWESI TENGAH"
+  },
+  "73": {
+   "unit": "SULSELRABAR",
+   "name": "SULAWESI SELATAN"
+  },
+  "74": {
+   "unit": "SULSELRABAR",
+   "name": "SULAWESI TENGGARA"
+  },
+  "75": {
+   "unit": "SULUTTENGGO",
+   "name": "GORONTALO"
+  },
+  "76": {
+   "unit": "SULSELRABAR",
+   "name": "SULAWESI BARAT"
+  },
+  "81": {
+   "unit": "MALUKU_MALUT",
+   "name": "MALUKU"
+  },
+  "82": {
+   "unit": "MALUKU_MALUT",
+   "name": "MALUKU UTARA"
+  },
+  "91": {
+   "unit": "PAPUA_PABAR",
+   "name": "PAPUA BARAT"
+  },
+  "92": {
+   "unit": "PAPUA_PABAR",
+   "name": "PAPUA BARAT DAYA"
+  },
+  "94": {
+   "unit": "PAPUA_PABAR",
+   "name": "PAPUA"
+  },
+  "95": {
+   "unit": "PAPUA_PABAR",
+   "name": "PAPUA SELATAN"
+  },
+  "96": {
+   "unit": "PAPUA_PABAR",
+   "name": "PAPUA TENGAH"
+  },
+  "97": {
+   "unit": "PAPUA_PABAR",
+   "name": "PAPUA PEGUNUNGAN"
+  }
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  }
+ },
+ "indicators": {
+  "saidi": {
+   "name": "System Average Interruption Duration Index (SAIDI): average outage hours per customer in the year",
+   "unit": "hours per customer",
+   "multiplier": 1,
+   "source": "PLN, Statistik PLN 2024, Tabel 16"
+  },
+  "saifi": {
+   "name": "System Average Interruption Frequency Index (SAIFI): average number of outages per customer in the year",
+   "unit": "times per customer",
+   "multiplier": 1,
+   "source": "PLN, Statistik PLN 2024, Tabel 16"
+  }
+ },
+ "source_tables": {
+  "pdf": {
+   "title": "Statistik PLN 2024, Tabel 16: SAIDI dan SAIFI 2024",
+   "page": "PDF page 46 (printed page 30)",
+   "file": "raw/electricity/20261116_pln-statistik-2024.pdf",
+   "url": "https://www.pln.co.id/webapi/media/file/webkorp/asset/Statistik2024.pdf"
+  }
+ },
+ "notes": [
+  "PLN reports reliability by distribution unit (UID/UIW), not by province. A province takes the value of the unit that serves it, so provinces served by one unit share a value.",
+  "Units serving several provinces: Riau dan Kepulauan Riau; Sumatera Selatan, Jambi dan Bengkulu; Kalimantan Selatan dan Tengah; Kalimantan Timur dan Utara; Sulawesi Utara, Tengah dan Gorontalo; Sulawesi Selatan, Tenggara dan Barat; Maluku dan Maluku Utara; Jawa Tengah dan Yogyakarta; Papua dan Papua Barat (all six Papua provinces).",
+  "Kepulauan Riau is served by UID Riau dan Kepulauan Riau and by PT PLN Batam (Batam city); it takes the UID Riau dan Kepulauan Riau value (see 'province_unit').",
+  "SAIDI and SAIFI cover PLN customers only; off-grid households and captive power are outside them."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness"
+  ],
+  "plausible_ranges": {
+   "saidi": [
+    0,
+    50
+   ],
+   "saifi": [
+    0,
+    20
+   ]
+  },
+  "flags": []
+ },
+ "file": "20261116_pln-unit-saidi-saifi-2024.csv",
+ "rows": 52,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/electricity/20261116_pln-statistik-2024.pdf": {
+   "sha256": "3e3ae7aee96b2f29211a9abd9b2c04853a0790ecf54d3c6c42f0c121c7344c4d"
+  }
+ }
+}

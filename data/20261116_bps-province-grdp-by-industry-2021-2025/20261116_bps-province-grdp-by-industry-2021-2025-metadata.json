@@ -1,0 +1,6452 @@
+{
+ "title": "BPS provincial GRDP by industry, current and constant 2010 prices, 2021-2025, Indonesia (38 provinces)",
+ "columns": {
+  "province_code": "BPS province code (kode_bps). Names and Kemendagri codes in 'provinces'.",
+  "indicator": "grdp_current or grdp_constant; definitions in 'indicators'.",
+  "sector": "Industry code; names in 'sectors'. TOTAL is GRDP, NONOIL is GRDP excluding oil and gas.",
+  "period": "YYYY.",
+  "status": "BPS revision marker: * preliminary (2024), ** very preliminary (2025).",
+  "value": "Rp billion, rounded to whole billions as published."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  }
+ },
+ "sectors": {
+  "A": "Pertanian, Kehutanan, dan Perikanan (agriculture, forestry and fishing)",
+  "B": "Pertambangan dan Penggalian (mining and quarrying)",
+  "B1": "Pertambangan Minyak, Gas dan Panas Bumi (crude oil, natural gas and geothermal)",
+  "B2": "Pertambangan Batubara dan Lignit (coal and lignite mining)",
+  "B3": "Pertambangan Bijih Logam (metal ore mining)",
+  "B4": "Pertambangan dan Penggalian Lainnya (other mining and quarrying)",
+  "C": "Industri Pengolahan (manufacturing)",
+  "D": "Pengadaan Listrik dan Gas (electricity and gas)",
+  "E": "Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang (water supply and waste)",
+  "F": "Konstruksi (construction)",
+  "G": "Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor (trade)",
+  "H": "Transportasi dan Pergudangan (transport and storage)",
+  "I": "Penyediaan Akomodasi dan Makan Minum (accommodation and food)",
+  "J": "Informasi dan Komunikasi (information and communication)",
+  "K": "Jasa Keuangan dan Asuransi (finance and insurance)",
+  "L": "Real Estat (real estate)",
+  "MN": "Jasa Perusahaan (business services, M and N)",
+  "O": "Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib (public administration)",
+  "P": "Jasa Pendidikan (education)",
+  "Q": "Jasa Kesehatan dan Kegiatan Sosial (health and social work)",
+  "RSTU": "Jasa Lainnya (other services, R to U)",
+  "TOTAL": "Produk Domestik Regional Bruto (GRDP)",
+  "NONOIL": "PDRB tanpa migas (GRDP excluding oil and gas)"
+ },
+ "indicators": {
+  "grdp_current": {
+   "name": "PDRB atas dasar harga berlaku (GRDP at current prices), Seri 2010",
+   "unit": "Rp billion (miliar rupiah)",
+   "multiplier": 1000000000.0,
+   "base_unit": "Rp",
+   "source": "BPS, PDRB Provinsi-Provinsi di Indonesia Menurut Lapangan Usaha 2021-2025"
+  },
+  "grdp_constant": {
+   "name": "PDRB atas dasar harga konstan 2010 (GRDP at constant 2010 prices), Seri 2010",
+   "unit": "Rp billion (miliar rupiah)",
+   "multiplier": 1000000000.0,
+   "base_unit": "Rp",
+   "source": "BPS, PDRB Provinsi-Provinsi di Indonesia Menurut Lapangan Usaha 2021-2025"
+  }
+ },
+ "source_tables": {
+  "pdf": {
+   "title": "Produk Domestik Regional Bruto Provinsi-Provinsi di Indonesia Menurut Lapangan Usaha 2021-2025, Tabel 9-84",
+   "pages": "PDF pages 53-128",
+   "file": "raw/grdp/20261109_bps-pdrb-provinsi-provinsi-menurut-lapangan-usaha-2021-2025.pdf"
+  }
+ },
+ "gaps": {
+  "meaning": {
+   "–": "nil (no activity)",
+   "~0": "less than half a unit (under Rp 0.5 billion)"
+  },
+  "cells": [
+   {
+    "province_code": "12",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "12",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "12",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "12",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "12",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "12",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "12",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "12",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "12",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "12",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "~0"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "~0"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "~0"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "~0"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "~0"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "~0"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "~0"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "~0"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "~0"
+   },
+   {
+    "province_code": "13",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "~0"
+   },
+   {
+    "province_code": "16",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "16",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "16",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "16",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "16",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "16",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "16",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "16",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "16",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "16",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "17",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "17",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "17",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "17",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "17",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "17",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "17",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "17",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "17",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "17",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "18",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "18",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "18",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "18",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "18",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "18",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "18",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "18",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "18",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "18",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "19",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "19",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "19",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "19",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "19",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "19",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "19",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "19",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "19",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "19",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "21",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "21",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "21",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "21",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "21",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "21",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "21",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "21",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "21",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "21",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "31",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "32",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "32",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "32",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "32",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "32",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "32",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "32",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "32",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "32",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "32",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "33",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "34",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "35",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "35",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "35",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "35",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "35",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "35",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "35",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "35",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "35",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "35",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "51",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "52",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "53",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "61",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "61",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "61",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "61",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "61",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "61",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "61",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "61",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "61",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "61",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "71",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "71",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "71",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "71",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "71",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "71",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "71",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "71",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "71",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "71",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "72",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "72",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "72",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "72",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "72",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "72",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "72",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "72",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "72",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "72",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "73",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "~0"
+   },
+   {
+    "province_code": "73",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "~0"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "74",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "75",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "~0"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "76",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "~0"
+   },
+   {
+    "province_code": "81",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "81",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "81",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "81",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "81",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "81",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "81",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "81",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "81",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "81",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "82",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "91",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "91",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "91",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "91",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "~0"
+   },
+   {
+    "province_code": "91",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "91",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "91",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "A",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "A",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "B",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "B",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "B4",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "B4",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "C",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "C",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "D",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "D",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "E",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "E",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "F",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "F",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "G",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "G",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "H",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "H",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "I",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "I",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "J",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "J",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "K",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "K",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "L",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "L",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "MN",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "MN",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "O",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "O",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "P",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "P",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "Q",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "Q",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "RSTU",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "RSTU",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "TOTAL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "TOTAL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "NONOIL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_current",
+    "sector": "NONOIL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "A",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "A",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "B",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "B",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "~0"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "~0"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "~0"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "B4",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "B4",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "C",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "C",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "D",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "D",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "E",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "E",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "F",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "F",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "G",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "G",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "H",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "H",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "I",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "I",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "J",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "J",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "K",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "K",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "L",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "L",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "MN",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "MN",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "O",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "O",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "P",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "P",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "Q",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "Q",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "RSTU",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "RSTU",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "TOTAL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "TOTAL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "NONOIL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "92",
+    "indicator": "grdp_constant",
+    "sector": "NONOIL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "A",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "A",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B4",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "B4",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "C",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "C",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "D",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "D",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "E",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "E",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "F",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "F",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "G",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "G",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "H",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "H",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "I",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "I",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "J",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "J",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "K",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "K",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "L",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "L",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "MN",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "MN",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "O",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "O",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "P",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "P",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "Q",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "Q",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "RSTU",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "RSTU",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "TOTAL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "TOTAL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "NONOIL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_current",
+    "sector": "NONOIL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "A",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "A",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B4",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "B4",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "C",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "C",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "D",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "D",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "E",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "E",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "F",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "F",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "G",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "G",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "H",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "H",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "I",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "I",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "J",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "J",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "K",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "K",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "L",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "L",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "MN",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "MN",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "O",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "O",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "P",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "P",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "Q",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "Q",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "RSTU",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "RSTU",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "TOTAL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "TOTAL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "NONOIL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "95",
+    "indicator": "grdp_constant",
+    "sector": "NONOIL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "A",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "A",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B4",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "B4",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "C",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "C",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "D",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "D",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "E",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "E",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "F",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "F",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "G",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "G",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "H",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "H",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "I",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "I",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "J",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "J",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "K",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "K",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "L",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "L",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "MN",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "MN",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "O",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "O",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "P",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "P",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "Q",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "Q",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "RSTU",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "RSTU",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "TOTAL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "TOTAL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "NONOIL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_current",
+    "sector": "NONOIL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "A",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "A",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B4",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "B4",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "C",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "C",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "D",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "D",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "E",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "E",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "F",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "F",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "G",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "G",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "H",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "H",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "I",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "I",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "J",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "J",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "K",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "K",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "L",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "L",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "MN",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "MN",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "O",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "O",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "P",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "P",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "Q",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "Q",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "RSTU",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "RSTU",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "TOTAL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "TOTAL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "NONOIL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "96",
+    "indicator": "grdp_constant",
+    "sector": "NONOIL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "A",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "A",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B4",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "B4",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "C",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "C",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "D",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "D",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "E",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "E",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "F",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "F",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "G",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "G",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "H",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "H",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "I",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "I",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "J",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "J",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "K",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "K",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "L",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "L",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "MN",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "MN",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "O",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "O",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "P",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "P",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "Q",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "Q",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "RSTU",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "RSTU",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "TOTAL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "TOTAL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "NONOIL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_current",
+    "sector": "NONOIL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "A",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "A",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B1",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B2",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2024",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B3",
+    "period": "2025",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B4",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "B4",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "C",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "C",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "D",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "D",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "E",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "E",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "F",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "F",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "G",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "G",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "H",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "H",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "I",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "I",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "J",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "J",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "K",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "K",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "L",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "L",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "MN",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "MN",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "O",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "O",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "P",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "P",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "Q",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "Q",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "RSTU",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "RSTU",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "TOTAL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "TOTAL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "NONOIL",
+    "period": "2021",
+    "marker": "–"
+   },
+   {
+    "province_code": "97",
+    "indicator": "grdp_constant",
+    "sector": "NONOIL",
+    "period": "2022",
+    "marker": "–"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_current",
+    "sector": "A",
+    "period": "2023",
+    "marker": "source error: repeats the 2022 value 27048"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_current",
+    "sector": "B",
+    "period": "2023",
+    "marker": "source error: repeats the 2022 value 101325"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_current",
+    "sector": "B3",
+    "period": "2023",
+    "marker": "source error: repeats the 2022 value 90016"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_current",
+    "sector": "B4",
+    "period": "2023",
+    "marker": "source error: repeats the 2022 value 11310"
+   },
+   {
+    "province_code": "94",
+    "indicator": "grdp_current",
+    "sector": "C",
+    "period": "2023",
+    "marker": "source error: repeats the 2022 value 4429"
+   }
+  ]
+ },
+ "notes": [
+  "Source error: Tabel 77 (Papua, current prices) repeats the 2022 values in its 2023 cells for A, B (B1-B4) and C, while its other 2023 cells and its 2023 GRDP cover the post-split province. Those cells are not written (listed in 'gaps' with marker 'source error') and the industries-to-GRDP check skips Papua current 2023.",
+  "A cell marked '–' (nil) or '~0' (under Rp 0.5 billion) has no row; 'gaps' lists every such cell. Where coal mining (B2) has no row, the province has no coal mining output, or under Rp 0.5 billion.",
+  "Papua Barat Daya (92), Papua Selatan (95), Papua Tengah (96) and Papua Pegunungan (97) have values from 2023; Papua (94) and Papua Barat (91) cover the post-split areas in this publication.",
+  "Only the 17 main industries, the four mining sub-industries and the two totals are read; other sub-industries in the tables are not.",
+  "Shares and growth rates are derived in analysis/.",
+  "Compared with the provincial offices' subsector tables in data/20261108_bps-province-grdp-subsector (earlier vintages), some B, B2 and TOTAL values differ ('checks.revision_comparison'); this April 2026 national publication is the later release and is the one used."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "identities",
+   "cross-source"
+  ],
+  "identities": [
+   {
+    "check": "industries A-U to TOTAL",
+    "compared": 363,
+    "largest_gap": 3.0,
+    "tolerance": 9.0
+   },
+   {
+    "check": "B1-B4 to B",
+    "compared": 363,
+    "largest_gap": 1.0,
+    "tolerance": 2.5
+   }
+  ],
+  "cross_source_overlaps": {
+   "TOTAL grdp_current = 20261102_bps-province-grdp-population (rounded to Rp 1 billion)": 176,
+   "skipped": {
+    "91 2023": "pre-split area in the existing dataset",
+    "94 2023": "pre-split area in the existing dataset"
+   }
+  },
+  "revision_comparison": {
+   "against": "20261108_bps-province-grdp-subsector",
+   "compared": 535,
+   "agree_to_Rp_0.5_billion": 475,
+   "differ": [
+    {
+     "province_code": "33",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2023",
+     "this": 1695428.0,
+     "offices": 1696795.419
+    },
+    {
+     "province_code": "65",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2021",
+     "this": 111530.0,
+     "offices": 110668.9416
+    },
+    {
+     "province_code": "65",
+     "indicator": "grdp_current",
+     "sector": "B2",
+     "period": "2021",
+     "this": 20174.0,
+     "offices": 19314.1487
+    },
+    {
+     "province_code": "65",
+     "indicator": "grdp_current",
+     "sector": "B",
+     "period": "2021",
+     "this": 30398.0,
+     "offices": 29547.7577
+    },
+    {
+     "province_code": "33",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2022",
+     "this": 1559140.0,
+     "offices": 1559571.099
+    },
+    {
+     "province_code": "65",
+     "indicator": "grdp_current",
+     "sector": "B2",
+     "period": "2022",
+     "this": 38753.0,
+     "offices": 39092.3074
+    },
+    {
+     "province_code": "15",
+     "indicator": "grdp_current",
+     "sector": "B2",
+     "period": "2024",
+     "this": 9783.0,
+     "offices": 9445.8
+    },
+    {
+     "province_code": "65",
+     "indicator": "grdp_current",
+     "sector": "B",
+     "period": "2022",
+     "this": 50200.0,
+     "offices": 50527.0895
+    },
+    {
+     "province_code": "13",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2024",
+     "this": 333146.0,
+     "offices": 332936.4424
+    },
+    {
+     "province_code": "15",
+     "indicator": "grdp_current",
+     "sector": "B",
+     "period": "2024",
+     "this": 43505.0,
+     "offices": 43306.6
+    },
+    {
+     "province_code": "15",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2024",
+     "this": 323174.0,
+     "offices": 322975.5
+    },
+    {
+     "province_code": "18",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2024",
+     "this": 484043.0,
+     "offices": 483882.92
+    },
+    {
+     "province_code": "15",
+     "indicator": "grdp_current",
+     "sector": "B2",
+     "period": "2023",
+     "this": 15169.0,
+     "offices": 15013.6
+    },
+    {
+     "province_code": "33",
+     "indicator": "grdp_constant",
+     "sector": "TOTAL",
+     "period": "2023",
+     "this": 1102437.0,
+     "offices": 1102563.177
+    },
+    {
+     "province_code": "15",
+     "indicator": "grdp_current",
+     "sector": "B",
+     "period": "2023",
+     "this": 45089.0,
+     "offices": 44971.8
+    },
+    {
+     "province_code": "15",
+     "indicator": "grdp_constant",
+     "sector": "B2",
+     "period": "2024",
+     "this": 8252.0,
+     "offices": 8160.8
+    },
+    {
+     "province_code": "15",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2023",
+     "this": 293868.0,
+     "offices": 293780.0
+    },
+    {
+     "province_code": "34",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2023",
+     "this": 180746.0,
+     "offices": 180696.04
+    },
+    {
+     "province_code": "34",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2024",
+     "this": 193562.0,
+     "offices": 193514.56
+    },
+    {
+     "province_code": "76",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2022",
+     "this": 54028.0,
+     "offices": 54070.98072
+    },
+    {
+     "province_code": "65",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2022",
+     "this": 138675.0,
+     "offices": 138718.1816
+    },
+    {
+     "province_code": "13",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2023",
+     "this": 312811.0,
+     "offices": 312769.3767
+    },
+    {
+     "province_code": "15",
+     "indicator": "grdp_constant",
+     "sector": "TOTAL",
+     "period": "2024",
+     "this": 176868.0,
+     "offices": 176906.5
+    },
+    {
+     "province_code": "18",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2023",
+     "this": 448819.0,
+     "offices": 448850.64
+    },
+    {
+     "province_code": "33",
+     "indicator": "grdp_constant",
+     "sector": "B",
+     "period": "2023",
+     "this": 21232.0,
+     "offices": 21263.33866
+    },
+    {
+     "province_code": "33",
+     "indicator": "grdp_current",
+     "sector": "B",
+     "period": "2023",
+     "this": 38103.0,
+     "offices": 38133.31798
+    },
+    {
+     "province_code": "15",
+     "indicator": "grdp_constant",
+     "sector": "B",
+     "period": "2024",
+     "this": 38164.0,
+     "offices": 38192.9
+    },
+    {
+     "province_code": "76",
+     "indicator": "grdp_current",
+     "sector": "B",
+     "period": "2023",
+     "this": 1289.0,
+     "offices": 1263.83165
+    },
+    {
+     "province_code": "76",
+     "indicator": "grdp_current",
+     "sector": "B2",
+     "period": "2023",
+     "this": 24.0,
+     "offices": 0.0
+    },
+    {
+     "province_code": "76",
+     "indicator": "grdp_constant",
+     "sector": "TOTAL",
+     "period": "2023",
+     "this": 35403.0,
+     "offices": 35426.00616
+    },
+    {
+     "province_code": "76",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2023",
+     "this": 58572.0,
+     "offices": 58551.81524
+    },
+    {
+     "province_code": "15",
+     "indicator": "grdp_constant",
+     "sector": "TOTAL",
+     "period": "2023",
+     "this": 169259.0,
+     "offices": 169277.6
+    },
+    {
+     "province_code": "76",
+     "indicator": "grdp_constant",
+     "sector": "TOTAL",
+     "period": "2022",
+     "this": 33643.0,
+     "offices": 33658.21979
+    },
+    {
+     "province_code": "76",
+     "indicator": "grdp_constant",
+     "sector": "B2",
+     "period": "2023",
+     "this": 13.0,
+     "offices": 0.0
+    },
+    {
+     "province_code": "13",
+     "indicator": "grdp_constant",
+     "sector": "TOTAL",
+     "period": "2024",
+     "this": 199420.0,
+     "offices": 199407.3788
+    },
+    {
+     "province_code": "76",
+     "indicator": "grdp_constant",
+     "sector": "B",
+     "period": "2023",
+     "this": 819.0,
+     "offices": 805.85288
+    },
+    {
+     "province_code": "15",
+     "indicator": "grdp_constant",
+     "sector": "B",
+     "period": "2023",
+     "this": 38518.0,
+     "offices": 38529.0
+    },
+    {
+     "province_code": "12",
+     "indicator": "grdp_current",
+     "sector": "B",
+     "period": "2023",
+     "this": 12290.0,
+     "offices": 12280.21
+    },
+    {
+     "province_code": "16",
+     "indicator": "grdp_current",
+     "sector": "B2",
+     "period": "2024",
+     "this": 92150.0,
+     "offices": 92140.39
+    },
+    {
+     "province_code": "75",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2023",
+     "this": 51367.0,
+     "offices": 51374.40075
+    },
+    {
+     "province_code": "65",
+     "indicator": "grdp_constant",
+     "sector": "TOTAL",
+     "period": "2022",
+     "this": 66528.0,
+     "offices": 66534.388
+    },
+    {
+     "province_code": "65",
+     "indicator": "grdp_constant",
+     "sector": "B",
+     "period": "2022",
+     "this": 17918.0,
+     "offices": 17913.4711
+    },
+    {
+     "province_code": "65",
+     "indicator": "grdp_constant",
+     "sector": "TOTAL",
+     "period": "2021",
+     "this": 63168.0,
+     "offices": 63162.9733
+    },
+    {
+     "province_code": "65",
+     "indicator": "grdp_constant",
+     "sector": "B2",
+     "period": "2022",
+     "this": 11555.0,
+     "offices": 11550.6885
+    },
+    {
+     "province_code": "75",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2022",
+     "this": 47566.0,
+     "offices": 47569.65311
+    },
+    {
+     "province_code": "75",
+     "indicator": "grdp_constant",
+     "sector": "TOTAL",
+     "period": "2023",
+     "this": 31644.0,
+     "offices": 31647.60152
+    },
+    {
+     "province_code": "16",
+     "indicator": "grdp_current",
+     "sector": "B",
+     "period": "2024",
+     "this": 163333.0,
+     "offices": 163335.0
+    },
+    {
+     "province_code": "13",
+     "indicator": "grdp_constant",
+     "sector": "TOTAL",
+     "period": "2023",
+     "this": 191069.0,
+     "offices": 191070.5509
+    },
+    {
+     "province_code": "75",
+     "indicator": "grdp_constant",
+     "sector": "TOTAL",
+     "period": "2022",
+     "this": 30282.0,
+     "offices": 30284.28632
+    },
+    {
+     "province_code": "82",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2021",
+     "this": 52481.0,
+     "offices": 52480.5
+    },
+    {
+     "province_code": "34",
+     "indicator": "grdp_current",
+     "sector": "B",
+     "period": "2024",
+     "this": 871.0,
+     "offices": 869.77
+    },
+    {
+     "province_code": "62",
+     "indicator": "grdp_constant",
+     "sector": "TOTAL",
+     "period": "2021",
+     "this": 102481.0,
+     "offices": 102481.5
+    },
+    {
+     "province_code": "62",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2024",
+     "this": 222865.0,
+     "offices": 222864.5
+    },
+    {
+     "province_code": "34",
+     "indicator": "grdp_constant",
+     "sector": "B",
+     "period": "2024",
+     "this": 557.0,
+     "offices": 556.4
+    },
+    {
+     "province_code": "12",
+     "indicator": "grdp_constant",
+     "sector": "B",
+     "period": "2024",
+     "this": 7812.0,
+     "offices": 7812.53
+    },
+    {
+     "province_code": "21",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2023",
+     "this": 331645.0,
+     "offices": 331644.5
+    },
+    {
+     "province_code": "18",
+     "indicator": "grdp_constant",
+     "sector": "B",
+     "period": "2023",
+     "this": 12684.0,
+     "offices": 12685.06
+    },
+    {
+     "province_code": "18",
+     "indicator": "grdp_current",
+     "sector": "B",
+     "period": "2023",
+     "this": 23585.0,
+     "offices": 23586.28
+    },
+    {
+     "province_code": "16",
+     "indicator": "grdp_current",
+     "sector": "B2",
+     "period": "2023",
+     "this": 100079.0,
+     "offices": 100079.5
+    },
+    {
+     "province_code": "82",
+     "indicator": "grdp_current",
+     "sector": "TOTAL",
+     "period": "2024",
+     "this": 96949.0,
+     "offices": 96949.5
+    }
+   ]
+  },
+  "plausible_ranges": {
+   "coal_share_pct": [
+    0,
+    60
+   ]
+  },
+  "flags": []
+ },
+ "file": "20261116_bps-province-grdp-by-industry-2021-2025.csv",
+ "rows": 7929,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source",
+  "*": "Angka sementara (preliminary)",
+  "**": "Angka sangat sementara (very preliminary)"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/grdp/20261109_bps-pdrb-provinsi-provinsi-menurut-lapangan-usaha-2021-2025.pdf": {
+   "sha256": "588e65d1dd407ff571d22fdba0b77eb7c18fcffc786eb71961df571148f9c86b"
+  }
+ }
+}

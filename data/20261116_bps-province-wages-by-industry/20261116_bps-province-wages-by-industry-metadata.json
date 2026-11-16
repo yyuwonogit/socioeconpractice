@@ -1,0 +1,1322 @@
+{
+ "title": "BPS average net monthly wage of employees by province and 17 industries, Sakernas February and August, 2024-2025, Indonesia",
+ "columns": {
+  "province_code": "BPS province code (kode_bps); 00 = Indonesia. Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Wage by survey round; definitions in 'indicators'.",
+  "sector": "Industry (KBLI 2020 categories); names in 'sectors'. TOTAL is all industries.",
+  "period": "YYYY.",
+  "status": "Empty: the WebAPI table does not mark which values have an RSE of 25-50% (its note says some do).",
+  "value": "Rupiah per month, as published."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  },
+  "00": {
+   "name": "INDONESIA",
+   "kode_dagri": null
+  }
+ },
+ "sectors": {
+  "A": "A Pertanian, Kehutanan dan Perikanan",
+  "B": "B Pertambangan dan Penggalian",
+  "C": "C Industri Pengolahan",
+  "D": "D Pengadaan Listrik dan Gas",
+  "E": "E Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang",
+  "F": "F Konstruksi",
+  "G": "G Perdagangan Besar dan Eceran, Reparasi Mobil dan Sepeda Motor",
+  "H": "H Transportasi dan Pergudangan",
+  "I": "I Penyediaan Akomodasi dan Makan Minum",
+  "J": "J Informasi dan Komunikasi",
+  "K": "K Jasa Keuangan dan Asuransi",
+  "L": "L Real Estate",
+  "MN": "M,N Jasa Perusahaan",
+  "O": "O Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
+  "P": "P Jasa Pendidikan",
+  "Q": "Q Jasa Kesehatan dan Kegiatan Sosial",
+  "RSTU": "R,S,T,U Jasa Lainnya",
+  "TOTAL": "Total"
+ },
+ "indicators": {
+  "wage_monthly_february": {
+   "name": "Rata-rata upah/gaji bersih sebulan buruh/karyawan/pegawai, Sakernas Februari (average net monthly wage of employees, February survey)",
+   "unit": "Rp per month",
+   "multiplier": 1,
+   "source": "BPS WebAPI var 2475"
+  },
+  "wage_monthly_august": {
+   "name": "Rata-rata upah/gaji bersih sebulan buruh/karyawan/pegawai, Sakernas Agustus (average net monthly wage of employees, August survey)",
+   "unit": "Rp per month",
+   "multiplier": 1,
+   "source": "BPS WebAPI var 2475"
+  }
+ },
+ "source_tables": {
+  "webapi 2475": {
+   "title": "Rata-Rata Upah/Gaji Bersih Sebulan Buruh/Karyawan/Pegawai menurut Provinsi dan Lapangan Usaha di 17 Sektor",
+   "unit": "Rupiah",
+   "responses": {
+    "webapi 2475 2024": {
+     "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/2475/th/124/key/KEY/",
+     "last_update": "2026-07-14 14:13:08"
+    },
+    "webapi 2475 2025": {
+     "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/2475/th/125/key/KEY/",
+     "last_update": "2026-07-14 14:13:08"
+    }
+   }
+  }
+ },
+ "gaps": {
+  "meaning": "BPS leaves the cell empty because the estimate's relative standard error is 50% or more",
+  "cells": [
+   [
+    "11",
+    "wage_monthly_august",
+    "L",
+    "2025"
+   ],
+   [
+    "11",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "11",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "13",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "13",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "15",
+    "wage_monthly_february",
+    "E",
+    "2025"
+   ],
+   [
+    "15",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "15",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "17",
+    "wage_monthly_august",
+    "L",
+    "2024"
+   ],
+   [
+    "17",
+    "wage_monthly_february",
+    "E",
+    "2025"
+   ],
+   [
+    "17",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "17",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "18",
+    "wage_monthly_february",
+    "E",
+    "2024"
+   ],
+   [
+    "18",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "19",
+    "wage_monthly_august",
+    "L",
+    "2025"
+   ],
+   [
+    "31",
+    "wage_monthly_february",
+    "A",
+    "2025"
+   ],
+   [
+    "31",
+    "wage_monthly_february",
+    "B",
+    "2024"
+   ],
+   [
+    "31",
+    "wage_monthly_february",
+    "E",
+    "2024"
+   ],
+   [
+    "34",
+    "wage_monthly_august",
+    "B",
+    "2025"
+   ],
+   [
+    "34",
+    "wage_monthly_february",
+    "B",
+    "2024"
+   ],
+   [
+    "34",
+    "wage_monthly_february",
+    "B",
+    "2025"
+   ],
+   [
+    "34",
+    "wage_monthly_february",
+    "D",
+    "2024"
+   ],
+   [
+    "34",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "34",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "36",
+    "wage_monthly_august",
+    "C",
+    "2024"
+   ],
+   [
+    "36",
+    "wage_monthly_february",
+    "C",
+    "2025"
+   ],
+   [
+    "36",
+    "wage_monthly_february",
+    "J",
+    "2024"
+   ],
+   [
+    "51",
+    "wage_monthly_february",
+    "B",
+    "2024"
+   ],
+   [
+    "51",
+    "wage_monthly_february",
+    "B",
+    "2025"
+   ],
+   [
+    "51",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "51",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "52",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "53",
+    "wage_monthly_august",
+    "L",
+    "2024"
+   ],
+   [
+    "53",
+    "wage_monthly_august",
+    "L",
+    "2025"
+   ],
+   [
+    "53",
+    "wage_monthly_february",
+    "B",
+    "2025"
+   ],
+   [
+    "53",
+    "wage_monthly_february",
+    "E",
+    "2025"
+   ],
+   [
+    "53",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "53",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "A",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "B",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "C",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "D",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "E",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "F",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "G",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "H",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "I",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "J",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "K",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "MN",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "O",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "P",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "Q",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "RSTU",
+    "2025"
+   ],
+   [
+    "61",
+    "wage_monthly_february",
+    "TOTAL",
+    "2025"
+   ],
+   [
+    "62",
+    "wage_monthly_february",
+    "D",
+    "2025"
+   ],
+   [
+    "62",
+    "wage_monthly_february",
+    "E",
+    "2025"
+   ],
+   [
+    "62",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "62",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "64",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "65",
+    "wage_monthly_august",
+    "L",
+    "2024"
+   ],
+   [
+    "65",
+    "wage_monthly_february",
+    "D",
+    "2024"
+   ],
+   [
+    "65",
+    "wage_monthly_february",
+    "E",
+    "2024"
+   ],
+   [
+    "65",
+    "wage_monthly_february",
+    "E",
+    "2025"
+   ],
+   [
+    "65",
+    "wage_monthly_february",
+    "J",
+    "2025"
+   ],
+   [
+    "65",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "65",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "71",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "72",
+    "wage_monthly_august",
+    "L",
+    "2024"
+   ],
+   [
+    "72",
+    "wage_monthly_february",
+    "E",
+    "2024"
+   ],
+   [
+    "72",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "72",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "74",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "74",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "75",
+    "wage_monthly_august",
+    "L",
+    "2024"
+   ],
+   [
+    "75",
+    "wage_monthly_august",
+    "L",
+    "2025"
+   ],
+   [
+    "75",
+    "wage_monthly_february",
+    "E",
+    "2024"
+   ],
+   [
+    "75",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "75",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "76",
+    "wage_monthly_august",
+    "L",
+    "2024"
+   ],
+   [
+    "76",
+    "wage_monthly_august",
+    "L",
+    "2025"
+   ],
+   [
+    "76",
+    "wage_monthly_february",
+    "B",
+    "2024"
+   ],
+   [
+    "76",
+    "wage_monthly_february",
+    "B",
+    "2025"
+   ],
+   [
+    "76",
+    "wage_monthly_february",
+    "D",
+    "2024"
+   ],
+   [
+    "76",
+    "wage_monthly_february",
+    "E",
+    "2024"
+   ],
+   [
+    "76",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "76",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "81",
+    "wage_monthly_august",
+    "L",
+    "2025"
+   ],
+   [
+    "81",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "81",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "82",
+    "wage_monthly_august",
+    "L",
+    "2024"
+   ],
+   [
+    "82",
+    "wage_monthly_august",
+    "L",
+    "2025"
+   ],
+   [
+    "82",
+    "wage_monthly_february",
+    "E",
+    "2025"
+   ],
+   [
+    "82",
+    "wage_monthly_february",
+    "J",
+    "2025"
+   ],
+   [
+    "82",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "82",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "91",
+    "wage_monthly_august",
+    "D",
+    "2025"
+   ],
+   [
+    "91",
+    "wage_monthly_august",
+    "E",
+    "2024"
+   ],
+   [
+    "91",
+    "wage_monthly_august",
+    "L",
+    "2024"
+   ],
+   [
+    "91",
+    "wage_monthly_august",
+    "L",
+    "2025"
+   ],
+   [
+    "91",
+    "wage_monthly_february",
+    "B",
+    "2025"
+   ],
+   [
+    "91",
+    "wage_monthly_february",
+    "E",
+    "2024"
+   ],
+   [
+    "91",
+    "wage_monthly_february",
+    "J",
+    "2024"
+   ],
+   [
+    "91",
+    "wage_monthly_february",
+    "K",
+    "2024"
+   ],
+   [
+    "91",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "91",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "92",
+    "wage_monthly_august",
+    "E",
+    "2025"
+   ],
+   [
+    "92",
+    "wage_monthly_august",
+    "L",
+    "2024"
+   ],
+   [
+    "92",
+    "wage_monthly_august",
+    "L",
+    "2025"
+   ],
+   [
+    "92",
+    "wage_monthly_february",
+    "E",
+    "2024"
+   ],
+   [
+    "92",
+    "wage_monthly_february",
+    "E",
+    "2025"
+   ],
+   [
+    "92",
+    "wage_monthly_february",
+    "J",
+    "2024"
+   ],
+   [
+    "92",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "92",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "94",
+    "wage_monthly_august",
+    "L",
+    "2024"
+   ],
+   [
+    "94",
+    "wage_monthly_august",
+    "L",
+    "2025"
+   ],
+   [
+    "94",
+    "wage_monthly_february",
+    "B",
+    "2024"
+   ],
+   [
+    "94",
+    "wage_monthly_february",
+    "E",
+    "2024"
+   ],
+   [
+    "94",
+    "wage_monthly_february",
+    "E",
+    "2025"
+   ],
+   [
+    "94",
+    "wage_monthly_february",
+    "J",
+    "2024"
+   ],
+   [
+    "94",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "94",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "95",
+    "wage_monthly_august",
+    "B",
+    "2025"
+   ],
+   [
+    "95",
+    "wage_monthly_august",
+    "L",
+    "2024"
+   ],
+   [
+    "95",
+    "wage_monthly_august",
+    "L",
+    "2025"
+   ],
+   [
+    "95",
+    "wage_monthly_february",
+    "B",
+    "2025"
+   ],
+   [
+    "95",
+    "wage_monthly_february",
+    "E",
+    "2024"
+   ],
+   [
+    "95",
+    "wage_monthly_february",
+    "E",
+    "2025"
+   ],
+   [
+    "95",
+    "wage_monthly_february",
+    "J",
+    "2025"
+   ],
+   [
+    "95",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "95",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "95",
+    "wage_monthly_february",
+    "MN",
+    "2025"
+   ],
+   [
+    "96",
+    "wage_monthly_august",
+    "I",
+    "2025"
+   ],
+   [
+    "96",
+    "wage_monthly_august",
+    "L",
+    "2024"
+   ],
+   [
+    "96",
+    "wage_monthly_august",
+    "L",
+    "2025"
+   ],
+   [
+    "96",
+    "wage_monthly_february",
+    "D",
+    "2024"
+   ],
+   [
+    "96",
+    "wage_monthly_february",
+    "D",
+    "2025"
+   ],
+   [
+    "96",
+    "wage_monthly_february",
+    "E",
+    "2024"
+   ],
+   [
+    "96",
+    "wage_monthly_february",
+    "E",
+    "2025"
+   ],
+   [
+    "96",
+    "wage_monthly_february",
+    "J",
+    "2025"
+   ],
+   [
+    "96",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "96",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "97",
+    "wage_monthly_august",
+    "B",
+    "2024"
+   ],
+   [
+    "97",
+    "wage_monthly_august",
+    "B",
+    "2025"
+   ],
+   [
+    "97",
+    "wage_monthly_august",
+    "D",
+    "2024"
+   ],
+   [
+    "97",
+    "wage_monthly_august",
+    "D",
+    "2025"
+   ],
+   [
+    "97",
+    "wage_monthly_august",
+    "E",
+    "2024"
+   ],
+   [
+    "97",
+    "wage_monthly_august",
+    "E",
+    "2025"
+   ],
+   [
+    "97",
+    "wage_monthly_august",
+    "G",
+    "2024"
+   ],
+   [
+    "97",
+    "wage_monthly_august",
+    "I",
+    "2024"
+   ],
+   [
+    "97",
+    "wage_monthly_august",
+    "I",
+    "2025"
+   ],
+   [
+    "97",
+    "wage_monthly_august",
+    "J",
+    "2025"
+   ],
+   [
+    "97",
+    "wage_monthly_august",
+    "K",
+    "2025"
+   ],
+   [
+    "97",
+    "wage_monthly_august",
+    "L",
+    "2024"
+   ],
+   [
+    "97",
+    "wage_monthly_august",
+    "L",
+    "2025"
+   ],
+   [
+    "97",
+    "wage_monthly_february",
+    "A",
+    "2024"
+   ],
+   [
+    "97",
+    "wage_monthly_february",
+    "B",
+    "2024"
+   ],
+   [
+    "97",
+    "wage_monthly_february",
+    "B",
+    "2025"
+   ],
+   [
+    "97",
+    "wage_monthly_february",
+    "C",
+    "2024"
+   ],
+   [
+    "97",
+    "wage_monthly_february",
+    "C",
+    "2025"
+   ],
+   [
+    "97",
+    "wage_monthly_february",
+    "D",
+    "2024"
+   ],
+   [
+    "97",
+    "wage_monthly_february",
+    "D",
+    "2025"
+   ],
+   [
+    "97",
+    "wage_monthly_february",
+    "E",
+    "2024"
+   ],
+   [
+    "97",
+    "wage_monthly_february",
+    "E",
+    "2025"
+   ],
+   [
+    "97",
+    "wage_monthly_february",
+    "I",
+    "2024"
+   ],
+   [
+    "97",
+    "wage_monthly_february",
+    "L",
+    "2024"
+   ],
+   [
+    "97",
+    "wage_monthly_february",
+    "L",
+    "2025"
+   ],
+   [
+    "97",
+    "wage_monthly_february",
+    "MN",
+    "2025"
+   ]
+  ]
+ },
+ "notes": [
+  "Wages are for employees (buruh/karyawan/pegawai) only, net of deductions, from the main job.",
+  "Some published values have a relative standard error of 25-50% (BPS table note); the WebAPI does not say which.",
+  "The annual (Tahunan) column of the table is empty."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness"
+  ],
+  "plausible_ranges": {
+   "wage": [
+    500000,
+    20000000
+   ],
+   "mining_relative_wage": [
+    0.5,
+    4.0
+   ]
+  },
+  "flags": [
+   {
+    "check": "wage",
+    "province_code": "31",
+    "indicator": "wage_monthly_february",
+    "sector": "B",
+    "period": "2025",
+    "value": 20842176.0,
+    "range": [
+     500000,
+     20000000
+    ]
+   },
+   {
+    "check": "mining_relative_wage",
+    "province_code": "31",
+    "indicator": "wage_monthly_february",
+    "period": "2025",
+    "value": 4.2719,
+    "range": [
+     0.5,
+     4.0
+    ]
+   },
+   {
+    "check": "mining_relative_wage",
+    "province_code": "53",
+    "indicator": "wage_monthly_february",
+    "period": "2024",
+    "value": 0.4831,
+    "range": [
+     0.5,
+     4.0
+    ]
+   }
+  ]
+ },
+ "file": "20261116_bps-province-wages-by-industry.csv",
+ "rows": 2638,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/labour/20261116_bps-webapi-wages-by-province-and-industry.jsonl": {
+   "sha256": "1bae7085e63d74d3017de52d2ff81fcf7e36315bc0d70544822243d55199649a"
+  }
+ }
+}
