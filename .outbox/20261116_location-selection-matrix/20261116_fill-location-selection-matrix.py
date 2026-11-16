@@ -169,6 +169,8 @@ def write_dbh_sheet(wb, dbh, english, codes):
         ws[ws.max_row][5].number_format = NUMBER_FORMAT
     for col, width in zip("ABCDEF", [32, 18, 20, 18, 26, 22]):
         ws.column_dimensions[col].width = width
+    # Place the sheet right after the CC3 sheet, where readers look for the DBH figures
+    wb.move_sheet(ws, offset=wb.sheetnames.index("CC3 Fiscal & Service Sens. Inde") + 1 - wb.sheetnames.index(DBH_SHEET))
 
 # Steps
 
