@@ -26,6 +26,7 @@ VALUES = ANALYSIS / "20261116_cross-cutting-indicator-values.csv"
 COLUMNS = ANALYSIS / "20261116_cross-cutting-indicator-columns.csv"
 PLN_UNITS = ANALYSIS / "20261116_pln-units-and-provinces.csv"
 DBH = ANALYSIS / "20261116_dbh-2024-by-province.csv"
+RUPTL = ANALYSIS / "20261116_ruptl-chapters-and-provinces.csv"
 
 OUT = HERE / "20261116_location-selection-matrix.xlsx"
 
@@ -74,6 +75,7 @@ DESCRIBED = [s for s in HEADERS if s.startswith("CC")]
 NOTES_SHEET = "Notes"
 PLN_SHEET = "CC6 PLN units"
 DBH_SHEET = "CC3 DBH 2024"
+RUPTL_SHEET = "RUPTL by chapter"
 
 # Header label styling: the template header stays first, the data label follows on its own lines
 LABEL_FONT = Font(italic=True, size=9, color="1F4E79")
@@ -195,6 +197,26 @@ def write_dbh_sheet(wb, dbh, english, codes):
     # Place the sheet right after the CC3 sheet, where readers look for the DBH figures
     wb.move_sheet(ws, offset=wb.sheetnames.index("CC3 Fiscal & Service Sens. Inde") + 1 - wb.sheetnames.index(DBH_SHEET))
 
+def write_ruptl_sheet(wb, ruptl, english):
+    """Add the RUPTL figures by chapter: existing installed and coal capacity, planned transmission and substations."""
+    ws = wb.create_sheet(RUPTL_SHEET)
+    bold = Font(bold=True)
+    ws.append(["RUPTL PLN 2025-2034 by province chapter (used in FA2 C/D and FB2 C)"])
+    ws["A1"].font = Font(bold=True, size=12)
+    ws.append(["Existing plants are on the PLN system only (no captive plants). Two chapters cover several Papua provinces together, so those provinces are blank in FA2 and FB2 unless the group value is 0. Kepulauan Riau excludes Batam."])
+    ws.append([])
+    ws.append(["RUPTL chapter", "Provinces", "Installed capacity, all plants (MW, 2024)", "Coal PLTU capacity (MW, 2024)",
+               "Planned transmission 2025-2034 (kms, RE Base)", "Planned substations 2025-2034 (MVA, RE Base)"])
+    for cell in ws[ws.max_row]:
+        cell.font = bold
+    for r in ruptl.itertuples():
+        ws.append([r.chapter, ", ".join(english[c] for c in str(r.province_codes).split()), r.installed_capacity_mw, r.coal_capacity_mw,
+                   r.transmission_plan_2025_2034_kms, r.substation_plan_2025_2034_mva])
+        for cell in ws[ws.max_row][2:]:
+            cell.number_format = "#,##0.0"
+    for col, width in zip("ABCDEF", [12, 60, 22, 18, 26, 26]):
+        ws.column_dimensions[col].width = width
+
 # Steps
 
 # Check the template is the filed version, unchanged
@@ -207,6 +229,7 @@ columns = pd.read_csv(COLUMNS, dtype={"period": str}, keep_default_na=False)
 units = pd.read_csv(PLN_UNITS, dtype={"province_codes": str}, keep_default_na=False)
 units["aggregate"] = units["aggregate"].astype(str) == "True"
 dbh = pd.read_csv(DBH, dtype={"province_code": str})
+ruptl = pd.read_csv(RUPTL, dtype={"province_codes": str})
 
 # Open the template in memory; only the copy is saved
 wb = openpyxl.load_workbook(TEMPLATE)
@@ -261,6 +284,7 @@ PRIMARY_SAIDI = dict(zip(cc6["province_code"], cc6["value"]))
 write_notes(wb, columns, codes_by_sheet[first_sheet], english, provinces)
 write_pln_sheet(wb, units, english, codes_by_sheet[first_sheet])
 write_dbh_sheet(wb, dbh, english, codes_by_sheet[first_sheet])
+write_ruptl_sheet(wb, ruptl, english)
 wb.save(OUT)
 
 # Confirm the template file was not touched

@@ -18,6 +18,10 @@ import pandas as pd
 # Datasets read; analysis scripts read data/ only
 DATA = ROOT / "data"
 POPULATION = DATA / "20261102_bps-province-grdp-population/20261102_bps-province-grdp-population.csv"
+COAL_RESERVES = DATA / "20261116_neraca-coal-resources-reserves-2024/20261116_neraca-coal-resources-reserves-2024.csv"
+RUPTL = DATA / "20261116_ruptl-province-plants-grid-2025-2034/20261116_ruptl-province-plants-grid-2025-2034.csv"
+RUPTL_META = DATA / "20261116_ruptl-province-plants-grid-2025-2034/20261116_ruptl-province-plants-grid-2025-2034-metadata.json"
+FDI = DATA / "20261116_bps-province-foreign-investment/20261116_bps-province-foreign-investment.csv"
 HOUSEHOLD_ENERGY = DATA / "20261116_bps-province-household-energy/20261116_bps-province-household-energy.csv"
 RE_CAPACITY = DATA / "20261116_province-re-capacity-entered/20261116_province-re-capacity-entered.csv"
 WELFARE = DATA / "20261108_bps-province-welfare/20261108_bps-province-welfare.csv"
@@ -40,6 +44,7 @@ OUT_VALUES = HERE / "20261116_cross-cutting-indicator-values.csv"
 OUT_COLUMNS = HERE / "20261116_cross-cutting-indicator-columns.csv"
 OUT_PLN = HERE / "20261116_pln-units-and-provinces.csv"
 OUT_DBH = HERE / "20261116_dbh-2024-by-province.csv"
+OUT_RUPTL = HERE / "20261116_ruptl-chapters-and-provinces.csv"
 
 # DBH columns shown for CC3, from the DJPK 2024 allocation (thousand rupiah)
 DBH_COLUMNS = ["dbh_sda_total", "dbh_minerba", "dbh_oil_gas", "dbh_total"]
@@ -63,11 +68,6 @@ LOW_EDUCATION = ["primary_or_less", "junior_secondary"]
 
 # Template columns not filled in this version, with the reason
 NOT_FILLED = [
-    {"sheet": FA1, "column": "C", "label": "Coal resources / reserves", "status": "pending: Neraca Sumber Daya dan Cadangan Mineral dan Batubara 2025 (status Dec 2024) to be uploaded"},
-    {"sheet": FA2, "column": "C", "label": "Operating CFPP capacity (on-grid + captive)", "status": "pending: RUPTL to be uploaded"},
-    {"sheet": FA2, "column": "D", "label": "Operating CFPP capacity per resident", "status": "pending: needs column C (RUPTL)"},
-    {"sheet": FB2, "column": "C", "label": "Planned transmission corridors and substations", "status": "pending: RUPTL to be uploaded"},
-    {"sheet": FB3, "column": "D", "label": "Investment realisation", "status": "pending: source to be agreed (BPS foreign investment, total, to 2023, or a battery-sector source)"},
     {"sheet": CC1, "column": "F", "label": "Labor Market Sensitivity Index", "status": "blank on request: index method to be set by the team"},
     {"sheet": CC2, "column": "E", "label": "Economic Dependence & Diversification Index", "status": "blank on request: index method to be set by the team"},
     {"sheet": CC3, "column": "E", "label": "Fiscal & Service Sensitivity Index", "status": "blank on request: index method to be set by the team"},
@@ -90,6 +90,55 @@ def wide(path, column, **where):
     for k, v in where.items():
         df = df[df[k] == v]
     return df.pivot(index="province_code", columns=column, values="value")
+
+
+def coal_reserves():
+    """FA1 C: total coal reserves (cadangan), million tonnes, status December 2024; 0 where the Neraca records none."""
+    df = read(COAL_RESERVES)
+    s = df[df["indicator"] == "reserve_total"].set_index("province_code")["value"]
+    return s.reindex(list(PROVINCE_NAMES)).fillna(0.0), "Dec 2024", {}
+
+
+def ruptl_by_province(indicator):
+    """A RUPTL chapter value for each province; chapters covering several provinces give blanks, unless the value is 0."""
+    meta = json.loads(RUPTL_META.read_text(encoding="utf-8"))
+    df = read(RUPTL)
+    value = df[df["indicator"] == indicator].set_index("region")["value"]
+    out, blank = {}, {}
+    for region, r in meta["regions"].items():
+        v = value[region]
+        for p in r["provinces"]:
+            if len(r["provinces"]) == 1 or v == 0:
+                out[p] = v
+            else:
+                blank[p] = f"RUPTL chapter {region} reports {len(r['provinces'])} provinces together ({v:g} for the group; see sheet 'RUPTL by chapter')"
+    return pd.Series(out), blank
+
+
+def coal_capacity():
+    """FA2 C: existing on-grid coal (PLTU) capacity, MW, from RUPTL."""
+    s, blank = ruptl_by_province("coal_capacity_mw")
+    return s, "2024", blank
+
+
+def coal_capacity_per_resident():
+    """FA2 D: coal capacity per resident, watts per person (MW x 1e6 / people)."""
+    s, blank = ruptl_by_province("coal_capacity_mw")
+    pop = read(POPULATION)
+    pop = pop[(pop["indicator"] == "population") & (pop["period"] == "2025")].set_index("province_code")["value"] * 1000
+    return (s * 1e6 / pop[s.index]), "2024 / pop 2025", blank
+
+
+def transmission_plan():
+    """FB2 C: planned new transmission 2025-2034, kms, RE Base, from RUPTL."""
+    s, blank = ruptl_by_province("transmission_plan_2025_2034_kms")
+    return s, "2025-2034", blank
+
+
+def fdi_value():
+    """FB3 D: realised foreign direct investment, million US$, 2023."""
+    df = read(FDI)
+    return df[(df["indicator"] == "fdi_value") & (df["period"] == "2023")].set_index("province_code")["value"], "2023", {}
 
 
 def metal_ore_share():
@@ -237,6 +286,26 @@ FILLED = [
      "label": "Population", "unit": "thousand people", "short_source": "BPS population projection",
      "definition": "Mid-year (June) population of the province, from BPS's Proyeksi Penduduk Indonesia 2020-2050. Filled in place of the template's 'Share of Coal Sector in the GRDP' header, on request.",
      "source": "BPS, population by province (Proyeksi Penduduk Indonesia 2020-2050); repo dataset data/20261102_bps-province-grdp-population"},
+    {"sheet": FA1, "column": "C", "make": coal_reserves,
+     "label": "Coal reserves (cadangan), million tonnes — reserves, not production", "unit": "million tonnes", "short_source": "ESDM Neraca SD & Cadangan, Tabel 33",
+     "definition": "Total coal reserves (probable + proven), status December 2024. Reserves are coal in the ground that can be mined economically, not annual production; the Neraca gives production for Indonesia only. 0 = no coal resources recorded in the Neraca for the province. Two printed errors in Tabel 33 are corrected (Aceh measured resources, Papua Barat total resources); reserves are not affected.",
+     "source": "Badan Geologi ESDM, Neraca Sumber Daya dan Cadangan Mineral dan Batubara, Tabel 33 (from your screenshot, checked against the table's own totals and the Neraca PDF's Tabel 31); repo dataset data/20261116_neraca-coal-resources-reserves-2024"},
+    {"sheet": FA2, "column": "C", "make": coal_capacity,
+     "label": "Coal power plant (PLTU) capacity ON-GRID, MW — captive plants NOT included", "unit": "MW", "short_source": "RUPTL 2025-2034",
+     "definition": "Installed capacity of existing coal power plants (PLTU, incl. mine-mouth) on the PLN system: PLN, IPP, rented and excess power. Captive plants (e.g. in nickel industrial parks in Sulawesi and Maluku Utara) are NOT included, so those provinces are understated. Kepulauan Riau excludes Batam. Bengkulu shows 0 because RUPTL's table omits PLTU Teluk Sepang (2 x 100 MW).",
+     "source": "PLN, RUPTL 2025-2034, Lampiran A-C, existing-plant tables; repo dataset data/20261116_ruptl-province-plants-grid-2025-2034"},
+    {"sheet": FA2, "column": "D", "make": coal_capacity_per_resident,
+     "label": "On-grid coal capacity per resident, watts per person", "unit": "W per person", "short_source": "RUPTL 2025-2034 & BPS population",
+     "definition": "Column C (MW) x 1,000,000 divided by 2025 population (persons). Same limits as column C.",
+     "source": "RUPTL 2025-2034 (data/20261116_ruptl-province-plants-grid-2025-2034) and BPS population (data/20261102_bps-province-grdp-population)"},
+    {"sheet": FB2, "column": "C", "make": transmission_plan,
+     "label": "Planned new transmission lines 2025-2034, kms (RE Base)", "unit": "kms (circuit km)", "short_source": "RUPTL 2025-2034",
+     "definition": "Total planned new transmission lines over 2025-2034 in RUPTL's RE Base scenario (Rekapitulasi table, Jumlah). Planned substation capacity (MVA) is in sheet 'RUPTL by chapter'. Some lengths are estimates until routes are fixed (RUPTL footnote).",
+     "source": "PLN, RUPTL 2025-2034, Lampiran A-C; repo dataset data/20261116_ruptl-province-plants-grid-2025-2034"},
+    {"sheet": FB3, "column": "D", "make": fdi_value,
+     "label": "Realised foreign direct investment (PMA), million US$ — all sectors", "unit": "million US$", "short_source": "BPS var 1840 (BKPM)",
+     "definition": "Realised foreign direct investment in 2023, all sectors combined (excluding oil and gas, finance and portfolio investment). Not specific to nickel or batteries; domestic investment (PMDN) is not included.",
+     "source": "BPS WebAPI var 1840 (Kementerian Investasi/BKPM); repo dataset data/20261116_bps-province-foreign-investment"},
     {"sheet": FA1, "column": "D", "make": coal_share,
      "label": "Coal mining (B2) share of GRDP, %", "unit": "% of GRDP, current prices", "short_source": "BPS PDRB Provinsi 2021-2025",
      "definition": "GRDP of coal and lignite mining (B2) divided by total GRDP, current prices, times 100; same as CC2 C. 0 where BPS shows no coal mining output. 2025 is very preliminary.",
@@ -312,6 +381,7 @@ FILLED = [
 # The 38 provinces and their BPS names (Indonesia, code 00, is not a template row)
 meta = json.loads(DEPTH_IPM_META.read_text(encoding="utf-8"))
 names = {c: p["name"] for c, p in meta["provinces"].items() if c != "00"}
+PROVINCE_NAMES = names
 assert len(names) == 38
 
 # Make each filled column: values for the provinces that have one, and a reason for each blank province
@@ -353,5 +423,8 @@ cols = pd.DataFrame(columns)[["sheet", "column", "label", "definition", "unit", 
 cols.sort_values(["sheet", "column"]).to_csv(OUT_COLUMNS, index=False, lineterminator="\n")
 units.to_csv(OUT_PLN, index=False, lineterminator="\n", float_format="%.10g")
 dbh.reset_index().to_csv(OUT_DBH, index=False, lineterminator="\n", float_format="%.10g")
+ruptl_meta = json.loads(RUPTL_META.read_text(encoding="utf-8"))
+ruptl = read(RUPTL).pivot(index="region", columns="indicator", values="value")
+pd.DataFrame([{"chapter": c, "province_codes": " ".join(r["provinces"]), **ruptl.loc[c].to_dict()} for c, r in ruptl_meta["regions"].items()]).to_csv(OUT_RUPTL, index=False, lineterminator="\n", float_format="%.10g")
 print(f"{OUT_VALUES.name}: {len(values)} values; {OUT_COLUMNS.name}: {len(cols)} columns; {OUT_PLN.name}: {len(units)} units")
 print(cols.sort_values(["sheet", "column"])[["sheet", "column", "period", "status", "blank_cells"]].to_string(index=False, max_colwidth=70))

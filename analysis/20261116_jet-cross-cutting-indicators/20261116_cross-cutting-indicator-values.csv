@@ -458,6 +458,44 @@ CC6 Inclusion & Ener. Jus.Index,D,81,electric_lighting_bottom40,2019,90.81
 CC6 Inclusion & Ener. Jus.Index,D,82,electric_lighting_bottom40,2019,92
 CC6 Inclusion & Ener. Jus.Index,D,91,electric_lighting_bottom40,2019,87.14
 CC6 Inclusion & Ener. Jus.Index,D,94,electric_lighting_bottom40,2019,56.87
+FA1 Coal Mining Exposure Index,C,11,coal_reserves,Dec 2024,507.05
+FA1 Coal Mining Exposure Index,C,12,coal_reserves,Dec 2024,7.12
+FA1 Coal Mining Exposure Index,C,13,coal_reserves,Dec 2024,29.2
+FA1 Coal Mining Exposure Index,C,14,coal_reserves,Dec 2024,359.27
+FA1 Coal Mining Exposure Index,C,15,coal_reserves,Dec 2024,1700.3
+FA1 Coal Mining Exposure Index,C,16,coal_reserves,Dec 2024,8935.07
+FA1 Coal Mining Exposure Index,C,17,coal_reserves,Dec 2024,110.06
+FA1 Coal Mining Exposure Index,C,18,coal_reserves,Dec 2024,60.32
+FA1 Coal Mining Exposure Index,C,19,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,21,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,31,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,32,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,33,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,34,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,35,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,36,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,51,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,52,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,53,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,61,coal_reserves,Dec 2024,11.22
+FA1 Coal Mining Exposure Index,C,62,coal_reserves,Dec 2024,2949.97
+FA1 Coal Mining Exposure Index,C,63,coal_reserves,Dec 2024,4066.94
+FA1 Coal Mining Exposure Index,C,64,coal_reserves,Dec 2024,12257.02
+FA1 Coal Mining Exposure Index,C,65,coal_reserves,Dec 2024,957.87
+FA1 Coal Mining Exposure Index,C,71,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,72,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,73,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,74,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,75,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,76,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,81,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,82,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,91,coal_reserves,Dec 2024,4.09
+FA1 Coal Mining Exposure Index,C,92,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,94,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,95,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,96,coal_reserves,Dec 2024,0
+FA1 Coal Mining Exposure Index,C,97,coal_reserves,Dec 2024,0
 FA1 Coal Mining Exposure Index,D,11,coal_share,2025,1.709889632
 FA1 Coal Mining Exposure Index,D,12,coal_share,2025,0
 FA1 Coal Mining Exposure Index,D,13,coal_share,2025,0.0848975976
@@ -496,6 +534,74 @@ FA1 Coal Mining Exposure Index,D,94,coal_share,2025,0
 FA1 Coal Mining Exposure Index,D,95,coal_share,2025,0
 FA1 Coal Mining Exposure Index,D,96,coal_share,2025,0
 FA1 Coal Mining Exposure Index,D,97,coal_share,2025,0
+FA2 Coal Power Exposure Index,C,11,coal_capacity,2024,620
+FA2 Coal Power Exposure Index,C,12,coal_capacity,2024,1070
+FA2 Coal Power Exposure Index,C,13,coal_capacity,2024,424
+FA2 Coal Power Exposure Index,C,14,coal_capacity,2024,234
+FA2 Coal Power Exposure Index,C,15,coal_capacity,2024,0
+FA2 Coal Power Exposure Index,C,16,coal_capacity,2024,2510.4
+FA2 Coal Power Exposure Index,C,17,coal_capacity,2024,0
+FA2 Coal Power Exposure Index,C,18,coal_capacity,2024,400
+FA2 Coal Power Exposure Index,C,19,coal_capacity,2024,93
+FA2 Coal Power Exposure Index,C,21,coal_capacity,2024,14
+FA2 Coal Power Exposure Index,C,31,coal_capacity,2024,400
+FA2 Coal Power Exposure Index,C,32,coal_capacity,2024,3624
+FA2 Coal Power Exposure Index,C,33,coal_capacity,2024,10515
+FA2 Coal Power Exposure Index,C,34,coal_capacity,2024,0
+FA2 Coal Power Exposure Index,C,35,coal_capacity,2024,6643
+FA2 Coal Power Exposure Index,C,36,coal_capacity,2024,8492
+FA2 Coal Power Exposure Index,C,51,coal_capacity,2024,380
+FA2 Coal Power Exposure Index,C,52,coal_capacity,2024,157
+FA2 Coal Power Exposure Index,C,53,coal_capacity,2024,177
+FA2 Coal Power Exposure Index,C,61,coal_capacity,2024,355
+FA2 Coal Power Exposure Index,C,62,coal_capacity,2024,336.6
+FA2 Coal Power Exposure Index,C,63,coal_capacity,2024,715
+FA2 Coal Power Exposure Index,C,64,coal_capacity,2024,815
+FA2 Coal Power Exposure Index,C,65,coal_capacity,2024,12
+FA2 Coal Power Exposure Index,C,71,coal_capacity,2024,310
+FA2 Coal Power Exposure Index,C,72,coal_capacity,2024,74.5
+FA2 Coal Power Exposure Index,C,73,coal_capacity,2024,952.4
+FA2 Coal Power Exposure Index,C,74,coal_capacity,2024,150
+FA2 Coal Power Exposure Index,C,75,coal_capacity,2024,155
+FA2 Coal Power Exposure Index,C,76,coal_capacity,2024,50
+FA2 Coal Power Exposure Index,C,81,coal_capacity,2024,0
+FA2 Coal Power Exposure Index,C,82,coal_capacity,2024,14
+FA2 Coal Power Exposure Index,C,91,coal_capacity,2024,0
+FA2 Coal Power Exposure Index,C,92,coal_capacity,2024,0
+FA2 Coal Power Exposure Index,D,11,coal_capacity_per_resident,2024 / pop 2025,110.2026306
+FA2 Coal Power Exposure Index,D,12,coal_capacity_per_resident,2024 / pop 2025,67.78243738
+FA2 Coal Power Exposure Index,D,13,coal_capacity_per_resident,2024 / pop 2025,71.69064809
+FA2 Coal Power Exposure Index,D,14,coal_capacity_per_resident,2024 / pop 2025,34.3551797
+FA2 Coal Power Exposure Index,D,15,coal_capacity_per_resident,2024 / pop 2025,0
+FA2 Coal Power Exposure Index,D,16,coal_capacity_per_resident,2024 / pop 2025,281.1670493
+FA2 Coal Power Exposure Index,D,17,coal_capacity_per_resident,2024 / pop 2025,0
+FA2 Coal Power Exposure Index,D,18,coal_capacity_per_resident,2024 / pop 2025,42.00401138
+FA2 Coal Power Exposure Index,D,19,coal_capacity_per_resident,2024 / pop 2025,59.96904823
+FA2 Coal Power Exposure Index,D,21,coal_capacity_per_resident,2024 / pop 2025,6.324824938
+FA2 Coal Power Exposure Index,D,31,coal_capacity_per_resident,2024 / pop 2025,37.46019854
+FA2 Coal Power Exposure Index,D,32,coal_capacity_per_resident,2024 / pop 2025,71.3962056
+FA2 Coal Power Exposure Index,D,33,coal_capacity_per_resident,2024 / pop 2025,275.0177199
+FA2 Coal Power Exposure Index,D,34,coal_capacity_per_resident,2024 / pop 2025,0
+FA2 Coal Power Exposure Index,D,35,coal_capacity_per_resident,2024 / pop 2025,157.8310877
+FA2 Coal Power Exposure Index,D,36,coal_capacity_per_resident,2024 / pop 2025,677.3334184
+FA2 Coal Power Exposure Index,D,51,coal_capacity_per_resident,2024 / pop 2025,85.17696636
+FA2 Coal Power Exposure Index,D,52,coal_capacity_per_resident,2024 / pop 2025,27.394392
+FA2 Coal Power Exposure Index,D,53,coal_capacity_per_resident,2024 / pop 2025,30.82227562
+FA2 Coal Power Exposure Index,D,61,coal_capacity_per_resident,2024 / pop 2025,61.56781131
+FA2 Coal Power Exposure Index,D,62,coal_capacity_per_resident,2024 / pop 2025,118.3128295
+FA2 Coal Power Exposure Index,D,63,coal_capacity_per_resident,2024 / pop 2025,165.3829251
+FA2 Coal Power Exposure Index,D,64,coal_capacity_per_resident,2024 / pop 2025,190.9738495
+FA2 Coal Power Exposure Index,D,65,coal_capacity_per_resident,2024 / pop 2025,16.01281025
+FA2 Coal Power Exposure Index,D,71,coal_capacity_per_resident,2024 / pop 2025,113.9119571
+FA2 Coal Power Exposure Index,D,72,coal_capacity_per_resident,2024 / pop 2025,23.60508222
+FA2 Coal Power Exposure Index,D,73,coal_capacity_per_resident,2024 / pop 2025,99.59113677
+FA2 Coal Power Exposure Index,D,74,coal_capacity_per_resident,2024 / pop 2025,52.87834456
+FA2 Coal Power Exposure Index,D,75,coal_capacity_per_resident,2024 / pop 2025,124.7786186
+FA2 Coal Power Exposure Index,D,76,coal_capacity_per_resident,2024 / pop 2025,32.78043664
+FA2 Coal Power Exposure Index,D,81,coal_capacity_per_resident,2024 / pop 2025,0
+FA2 Coal Power Exposure Index,D,82,coal_capacity_per_resident,2024 / pop 2025,10.19071189
+FA2 Coal Power Exposure Index,D,91,coal_capacity_per_resident,2024 / pop 2025,0
+FA2 Coal Power Exposure Index,D,92,coal_capacity_per_resident,2024 / pop 2025,0
 FB1 RE Exposure Index,C,11,re_capacity,as entered,3567.7
 FB1 RE Exposure Index,C,12,re_capacity,as entered,3227
 FB1 RE Exposure Index,C,13,re_capacity,as entered,745.9
@@ -572,6 +678,38 @@ FB1 RE Exposure Index,D,94,population,2025,1073.6
 FB1 RE Exposure Index,D,95,population,2025,549.7
 FB1 RE Exposure Index,D,96,population,2025,1492.3
 FB1 RE Exposure Index,D,97,population,2025,1484.9
+FB2 Grid-Transm. Exp. Index,C,11,transmission_plan,2025-2034,2554
+FB2 Grid-Transm. Exp. Index,C,12,transmission_plan,2025-2034,1751
+FB2 Grid-Transm. Exp. Index,C,13,transmission_plan,2025-2034,285
+FB2 Grid-Transm. Exp. Index,C,14,transmission_plan,2025-2034,2687
+FB2 Grid-Transm. Exp. Index,C,15,transmission_plan,2025-2034,205
+FB2 Grid-Transm. Exp. Index,C,16,transmission_plan,2025-2034,1418
+FB2 Grid-Transm. Exp. Index,C,17,transmission_plan,2025-2034,613
+FB2 Grid-Transm. Exp. Index,C,18,transmission_plan,2025-2034,636
+FB2 Grid-Transm. Exp. Index,C,19,transmission_plan,2025-2034,434
+FB2 Grid-Transm. Exp. Index,C,21,transmission_plan,2025-2034,570
+FB2 Grid-Transm. Exp. Index,C,31,transmission_plan,2025-2034,426
+FB2 Grid-Transm. Exp. Index,C,32,transmission_plan,2025-2034,3629
+FB2 Grid-Transm. Exp. Index,C,33,transmission_plan,2025-2034,2591
+FB2 Grid-Transm. Exp. Index,C,34,transmission_plan,2025-2034,97
+FB2 Grid-Transm. Exp. Index,C,35,transmission_plan,2025-2034,4521
+FB2 Grid-Transm. Exp. Index,C,36,transmission_plan,2025-2034,369
+FB2 Grid-Transm. Exp. Index,C,51,transmission_plan,2025-2034,875
+FB2 Grid-Transm. Exp. Index,C,52,transmission_plan,2025-2034,149
+FB2 Grid-Transm. Exp. Index,C,53,transmission_plan,2025-2034,1241
+FB2 Grid-Transm. Exp. Index,C,61,transmission_plan,2025-2034,1885.1
+FB2 Grid-Transm. Exp. Index,C,62,transmission_plan,2025-2034,1114
+FB2 Grid-Transm. Exp. Index,C,63,transmission_plan,2025-2034,665
+FB2 Grid-Transm. Exp. Index,C,64,transmission_plan,2025-2034,4353.2
+FB2 Grid-Transm. Exp. Index,C,65,transmission_plan,2025-2034,1847
+FB2 Grid-Transm. Exp. Index,C,71,transmission_plan,2025-2034,662.7
+FB2 Grid-Transm. Exp. Index,C,72,transmission_plan,2025-2034,3079
+FB2 Grid-Transm. Exp. Index,C,73,transmission_plan,2025-2034,2840
+FB2 Grid-Transm. Exp. Index,C,74,transmission_plan,2025-2034,1599
+FB2 Grid-Transm. Exp. Index,C,75,transmission_plan,2025-2034,232
+FB2 Grid-Transm. Exp. Index,C,76,transmission_plan,2025-2034,606
+FB2 Grid-Transm. Exp. Index,C,81,transmission_plan,2025-2034,507
+FB2 Grid-Transm. Exp. Index,C,82,transmission_plan,2025-2034,978
 FB2 Grid-Transm. Exp. Index,D,11,population,2025,5626
 FB2 Grid-Transm. Exp. Index,D,12,population,2025,15785.8
 FB2 Grid-Transm. Exp. Index,D,13,population,2025,5914.3
@@ -648,6 +786,44 @@ FB3 Crit Min & Bat SC Index,C,94,metal_ore_share,2025,0.2309060577
 FB3 Crit Min & Bat SC Index,C,95,metal_ore_share,2025,0
 FB3 Crit Min & Bat SC Index,C,96,metal_ore_share,2025,66.41643668
 FB3 Crit Min & Bat SC Index,C,97,metal_ore_share,2025,0
+FB3 Crit Min & Bat SC Index,D,11,fdi_value,2023,248.6
+FB3 Crit Min & Bat SC Index,D,12,fdi_value,2023,1181.3
+FB3 Crit Min & Bat SC Index,D,13,fdi_value,2023,120.7
+FB3 Crit Min & Bat SC Index,D,14,fdi_value,2023,2042.3
+FB3 Crit Min & Bat SC Index,D,15,fdi_value,2023,45.1
+FB3 Crit Min & Bat SC Index,D,16,fdi_value,2023,1478.6
+FB3 Crit Min & Bat SC Index,D,17,fdi_value,2023,76.1
+FB3 Crit Min & Bat SC Index,D,18,fdi_value,2023,220.6
+FB3 Crit Min & Bat SC Index,D,19,fdi_value,2023,72.5
+FB3 Crit Min & Bat SC Index,D,21,fdi_value,2023,764.1
+FB3 Crit Min & Bat SC Index,D,31,fdi_value,2023,4830
+FB3 Crit Min & Bat SC Index,D,32,fdi_value,2023,8283.7
+FB3 Crit Min & Bat SC Index,D,33,fdi_value,2023,1563.7
+FB3 Crit Min & Bat SC Index,D,34,fdi_value,2023,46
+FB3 Crit Min & Bat SC Index,D,35,fdi_value,2023,4741
+FB3 Crit Min & Bat SC Index,D,36,fdi_value,2023,4451.6
+FB3 Crit Min & Bat SC Index,D,51,fdi_value,2023,808.5
+FB3 Crit Min & Bat SC Index,D,52,fdi_value,2023,468.4
+FB3 Crit Min & Bat SC Index,D,53,fdi_value,2023,124.3
+FB3 Crit Min & Bat SC Index,D,61,fdi_value,2023,490.5
+FB3 Crit Min & Bat SC Index,D,62,fdi_value,2023,697.6
+FB3 Crit Min & Bat SC Index,D,63,fdi_value,2023,327.9
+FB3 Crit Min & Bat SC Index,D,64,fdi_value,2023,1332.7
+FB3 Crit Min & Bat SC Index,D,65,fdi_value,2023,1272.1
+FB3 Crit Min & Bat SC Index,D,71,fdi_value,2023,203.7
+FB3 Crit Min & Bat SC Index,D,72,fdi_value,2023,7244.1
+FB3 Crit Min & Bat SC Index,D,73,fdi_value,2023,336.7
+FB3 Crit Min & Bat SC Index,D,74,fdi_value,2023,448.3
+FB3 Crit Min & Bat SC Index,D,75,fdi_value,2023,33.8
+FB3 Crit Min & Bat SC Index,D,76,fdi_value,2023,24.3
+FB3 Crit Min & Bat SC Index,D,81,fdi_value,2023,106.3
+FB3 Crit Min & Bat SC Index,D,82,fdi_value,2023,4998.2
+FB3 Crit Min & Bat SC Index,D,91,fdi_value,2023,28.8
+FB3 Crit Min & Bat SC Index,D,92,fdi_value,2023,93
+FB3 Crit Min & Bat SC Index,D,94,fdi_value,2023,8.3
+FB3 Crit Min & Bat SC Index,D,95,fdi_value,2023,86.3
+FB3 Crit Min & Bat SC Index,D,96,fdi_value,2023,968
+FB3 Crit Min & Bat SC Index,D,97,fdi_value,2023,0
 FB4 Energy Access Index,C,11,electric_lighting,2025,99.97
 FB4 Energy Access Index,C,12,electric_lighting,2025,99.72
 FB4 Energy Access Index,C,13,electric_lighting,2025,99.47
