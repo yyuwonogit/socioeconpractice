@@ -28,6 +28,10 @@ GRDP_INDUSTRY = DATA / "20261116_bps-province-grdp-by-industry-2021-2025/2026111
 PLN = DATA / "20261116_pln-unit-saidi-saifi-2024/20261116_pln-unit-saidi-saifi-2024.csv"
 PLN_META = DATA / "20261116_pln-unit-saidi-saifi-2024/20261116_pln-unit-saidi-saifi-2024-metadata.json"
 DBH = DATA / "20261116_djpk-province-dbh-2024/20261116_djpk-province-dbh-2024.csv"
+APBD = DATA / "20261116_djpk-province-apbd-2024/20261116_djpk-province-apbd-2024.csv"
+
+# Provinces whose APBD export is still to come; the others without one were not downloaded (DBH Minerba under Rp 50 billion)
+APBD_PENDING = {"63": "APBD file still to download (first download duplicated Kalimantan Tengah)", "16": "APBD file still to download"}
 
 OUT_VALUES = HERE / "20261116_cross-cutting-indicator-values.csv"
 OUT_COLUMNS = HERE / "20261116_cross-cutting-indicator-columns.csv"
@@ -52,10 +56,6 @@ LOW_EDUCATION = ["primary_or_less", "junior_secondary"]
 NOT_FILLED = [
     {"sheet": CC1, "column": "F", "label": "Labor Market Sensitivity Index", "status": "blank on request: index method to be set by the team"},
     {"sheet": CC2, "column": "E", "label": "Economic Dependence & Diversification Index", "status": "blank on request: index method to be set by the team"},
-    {"sheet": CC3, "column": "C", "label": "DBH Minerba / total regional revenue (Pendapatan Daerah), province government, 2024",
-     "status": "pending: needs 2024 APBD total revenue (Pendapatan Daerah). DBH Minerba amounts are in sheet 'CC3 DBH 2024'"},
-    {"sheet": CC3, "column": "D", "label": "DBH Minerba / own-source revenue (PAD), province government, 2024",
-     "status": "pending: needs 2024 APBD PAD. DBH Minerba amounts are in sheet 'CC3 DBH 2024'"},
     {"sheet": CC3, "column": "E", "label": "Fiscal & Service Sensitivity Index", "status": "blank on request: index method to be set by the team"},
     {"sheet": CC4, "column": "E", "label": "Poverty & Resilience Index", "status": "blank on request: index method to be set by the team"},
     {"sheet": CC5, "column": "E", "label": "Adaptive Capacity Deficit Index", "status": "blank on request: index method to be set by the team"},
@@ -147,6 +147,28 @@ def saidi():
     return pd.Series({p: value[x["unit"]] for p, x in meta["province_unit"].items()}), "2024", {}
 
 
+def dbh_minerba_ratio(denominator):
+    """DBH Minerba allocation 2024 divided by a 2024 APBD budget account of the province government, percent."""
+    dbh = read(DBH)
+    minerba = dbh[dbh["indicator"] == "dbh_minerba"].set_index("province_code")["value"] * 1e3
+    apbd = read(APBD)
+    base = apbd[apbd["indicator"] == denominator].set_index("province_code")["value"]
+    ratio = (minerba[base.index] / base * 100)
+    blank = {c: APBD_PENDING.get(c, "APBD not downloaded: DBH Minerba under Rp 50 billion, so the ratio is near zero")
+             for c in minerba.index if c not in base.index}
+    return ratio, "2024", blank
+
+
+def dbh_minerba_revenue():
+    """CC3 C: DBH Minerba / total revenue (Pendapatan Daerah, APBD murni budget), province government, 2024."""
+    return dbh_minerba_ratio("revenue_budget")
+
+
+def dbh_minerba_pad():
+    """CC3 D: DBH Minerba / own-source revenue (PAD, APBD murni budget), province government, 2024."""
+    return dbh_minerba_ratio("pad_budget")
+
+
 def electric_lighting_bottom40():
     """CC6 D: poorest 40% of households with electric lighting, 2019 (latest BPS year)."""
     df = read(JKN_ELECTRICITY)
@@ -177,6 +199,14 @@ FILLED = [
      "label": "Coal mining (B2) real growth, %", "unit": "% change, constant 2010 prices", "short_source": "BPS PDRB Provinsi 2021-2025",
      "definition": "Change in coal and lignite mining GRDP at constant 2010 prices from 2024 to 2025, percent. Values are rounded to whole Rp billions, so provinces with very small coal output can show large swings. 2024 is preliminary and 2025 very preliminary.",
      "source": "BPS, PDRB Provinsi-Provinsi di Indonesia Menurut Lapangan Usaha 2021-2025; repo dataset data/20261116_bps-province-grdp-by-industry-2021-2025"},
+    {"sheet": CC3, "column": "C", "make": dbh_minerba_revenue,
+     "label": "DBH Minerba ÷ total revenue (Pendapatan Daerah), %", "unit": "% of budgeted revenue", "short_source": "DJPK TKD 2024 & APBD 2024",
+     "definition": "2024 DBH Minerba allocation to the province government divided by its 2024 APBD murni revenue budget (Pendapatan Daerah), times 100. Province government only, not its regencies and cities. DBH Minerba covers coal and other minerals together.",
+     "source": "DJPK, Rincian Dana Transfer Umum TA 2024 (data/20261116_djpk-province-dbh-2024) and DJPK APBD portal exports (data/20261116_djpk-province-apbd-2024)"},
+    {"sheet": CC3, "column": "D", "make": dbh_minerba_pad,
+     "label": "DBH Minerba ÷ own-source revenue (PAD), %", "unit": "% of budgeted PAD", "short_source": "DJPK TKD 2024 & APBD 2024",
+     "definition": "2024 DBH Minerba allocation to the province government divided by its 2024 APBD murni own-source revenue budget (PAD), times 100. Above 100 means the mining transfer at risk is larger than everything the province raises itself.",
+     "source": "DJPK, Rincian Dana Transfer Umum TA 2024 (data/20261116_djpk-province-dbh-2024) and DJPK APBD portal exports (data/20261116_djpk-province-apbd-2024)"},
     {"sheet": CC4, "column": "C", "make": poverty_rate,
      "label": "Poverty rate P0, March, %", "unit": "% of population", "short_source": "BPS Susenas, var 192",
      "definition": "Share of the population whose monthly per capita expenditure is below the provincial poverty line, urban and rural combined.",
