@@ -1,0 +1,812 @@
+{
+ "title": "RUPTL PLN 2025-2034 by province chapter: existing installed and coal (PLTU) capacity, planned transmission (kms) and substations (MVA), RE Base",
+ "columns": {
+  "region": "RUPTL appendix chapter; the provinces each covers are in 'regions' (two chapters cover several provinces).",
+  "indicator": "Indicator code; definitions in 'indicators'.",
+  "period": "2024 for existing plants (latest RUPTL data); 2034 for plans, which are cumulative over 2025-2034 (see the indicator names).",
+  "status": "Empty.",
+  "value": "In the indicator's unit, as printed or summed from printed rows."
+ },
+ "regions": {
+  "A1": {
+   "provinces": [
+    "11"
+   ],
+   "names": [
+    "ACEH"
+   ],
+   "first_page": 601
+  },
+  "A2": {
+   "provinces": [
+    "12"
+   ],
+   "names": [
+    "SUMATERA UTARA"
+   ],
+   "first_page": 615
+  },
+  "A3": {
+   "provinces": [
+    "14"
+   ],
+   "names": [
+    "RIAU"
+   ],
+   "first_page": 632
+  },
+  "A4": {
+   "provinces": [
+    "21"
+   ],
+   "names": [
+    "KEPULAUAN RIAU"
+   ],
+   "first_page": 644
+  },
+  "A5": {
+   "provinces": [
+    "19"
+   ],
+   "names": [
+    "KEPULAUAN BANGKA BELITUNG"
+   ],
+   "first_page": 657
+  },
+  "A6": {
+   "provinces": [
+    "13"
+   ],
+   "names": [
+    "SUMATERA BARAT"
+   ],
+   "first_page": 668
+  },
+  "A7": {
+   "provinces": [
+    "15"
+   ],
+   "names": [
+    "JAMBI"
+   ],
+   "first_page": 680
+  },
+  "A8": {
+   "provinces": [
+    "16"
+   ],
+   "names": [
+    "SUMATERA SELATAN"
+   ],
+   "first_page": 691
+  },
+  "A9": {
+   "provinces": [
+    "17"
+   ],
+   "names": [
+    "BENGKULU"
+   ],
+   "first_page": 704
+  },
+  "A10": {
+   "provinces": [
+    "18"
+   ],
+   "names": [
+    "LAMPUNG"
+   ],
+   "first_page": 715
+  },
+  "A11": {
+   "provinces": [
+    "61"
+   ],
+   "names": [
+    "KALIMANTAN BARAT"
+   ],
+   "first_page": 727
+  },
+  "A12": {
+   "provinces": [
+    "63"
+   ],
+   "names": [
+    "KALIMANTAN SELATAN"
+   ],
+   "first_page": 744
+  },
+  "A13": {
+   "provinces": [
+    "62"
+   ],
+   "names": [
+    "KALIMANTAN TENGAH"
+   ],
+   "first_page": 758
+  },
+  "A14": {
+   "provinces": [
+    "64"
+   ],
+   "names": [
+    "KALIMANTAN TIMUR"
+   ],
+   "first_page": 771
+  },
+  "A15": {
+   "provinces": [
+    "65"
+   ],
+   "names": [
+    "KALIMANTAN UTARA"
+   ],
+   "first_page": 796
+  },
+  "B1": {
+   "provinces": [
+    "31"
+   ],
+   "names": [
+    "DKI JAKARTA"
+   ],
+   "first_page": 812
+  },
+  "B2": {
+   "provinces": [
+    "36"
+   ],
+   "names": [
+    "BANTEN"
+   ],
+   "first_page": 824
+  },
+  "B3": {
+   "provinces": [
+    "32"
+   ],
+   "names": [
+    "JAWA BARAT"
+   ],
+   "first_page": 841
+  },
+  "B4": {
+   "provinces": [
+    "33"
+   ],
+   "names": [
+    "JAWA TENGAH"
+   ],
+   "first_page": 874
+  },
+  "B5": {
+   "provinces": [
+    "34"
+   ],
+   "names": [
+    "DI YOGYAKARTA"
+   ],
+   "first_page": 898
+  },
+  "B6": {
+   "provinces": [
+    "35"
+   ],
+   "names": [
+    "JAWA TIMUR"
+   ],
+   "first_page": 905
+  },
+  "B7": {
+   "provinces": [
+    "51"
+   ],
+   "names": [
+    "BALI"
+   ],
+   "first_page": 938
+  },
+  "C1": {
+   "provinces": [
+    "71"
+   ],
+   "names": [
+    "SULAWESI UTARA"
+   ],
+   "first_page": 952
+  },
+  "C2": {
+   "provinces": [
+    "72"
+   ],
+   "names": [
+    "SULAWESI TENGAH"
+   ],
+   "first_page": 971
+  },
+  "C3": {
+   "provinces": [
+    "75"
+   ],
+   "names": [
+    "GORONTALO"
+   ],
+   "first_page": 990
+  },
+  "C4": {
+   "provinces": [
+    "73"
+   ],
+   "names": [
+    "SULAWESI SELATAN"
+   ],
+   "first_page": 1001
+  },
+  "C5": {
+   "provinces": [
+    "74"
+   ],
+   "names": [
+    "SULAWESI TENGGARA"
+   ],
+   "first_page": 1029
+  },
+  "C6": {
+   "provinces": [
+    "76"
+   ],
+   "names": [
+    "SULAWESI BARAT"
+   ],
+   "first_page": 1049
+  },
+  "C7": {
+   "provinces": [
+    "81"
+   ],
+   "names": [
+    "MALUKU"
+   ],
+   "first_page": 1061
+  },
+  "C8": {
+   "provinces": [
+    "82"
+   ],
+   "names": [
+    "MALUKU UTARA"
+   ],
+   "first_page": 1084
+  },
+  "C9": {
+   "provinces": [
+    "94",
+    "97",
+    "96",
+    "95"
+   ],
+   "names": [
+    "PAPUA",
+    "PAPUA PEGUNUNGAN",
+    "PAPUA TENGAH",
+    "PAPUA SELATAN"
+   ],
+   "first_page": 1104
+  },
+  "C10": {
+   "provinces": [
+    "91",
+    "92"
+   ],
+   "names": [
+    "PAPUA BARAT",
+    "PAPUA BARAT DAYA"
+   ],
+   "first_page": 1130
+  },
+  "C11": {
+   "provinces": [
+    "52"
+   ],
+   "names": [
+    "NUSA TENGGARA BARAT"
+   ],
+   "first_page": 1150
+  },
+  "C12": {
+   "provinces": [
+    "53"
+   ],
+   "names": [
+    "NUSA TENGGARA TIMUR"
+   ],
+   "first_page": 1166
+  }
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  }
+ },
+ "indicators": {
+  "installed_capacity_mw": {
+   "name": "Installed capacity of existing power plants on the PLN system (PLN, IPP, rented and excess power), all types",
+   "unit": "MW"
+  },
+  "coal_capacity_mw": {
+   "name": "Installed capacity of existing coal power plants (PLTU, including mine-mouth) on the PLN system",
+   "unit": "MW"
+  },
+  "transmission_plan_2025_2034_kms": {
+   "name": "Planned new transmission lines 2025-2034, RE Base scenario (Rekapitulasi, Jumlah)",
+   "unit": "kms (circuit km)"
+  },
+  "substation_plan_2025_2034_mva": {
+   "name": "Planned new substation transformer capacity 2025-2034, RE Base scenario (Rekapitulasi, Jumlah)",
+   "unit": "MVA"
+  }
+ },
+ "source_tables": {
+  "pdf": {
+   "title": "Rencana Usaha Penyediaan Tenaga Listrik (RUPTL) PT PLN (Persero) 2025-2034, Lampiran A-C",
+   "file": "raw/electricity/20261116_ruptl-2025-2034.pdf",
+   "pages": {
+    "A1": {
+     "plants_page": 602,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 611,
+     "substation_page": 612
+    },
+    "A2": {
+     "plants_page": 616,
+     "plants_gap_mw": 54.0,
+     "transmission_page": 626,
+     "substation_page": 627
+    },
+    "A3": {
+     "plants_page": 633,
+     "plants_gap_mw": -0.0,
+     "transmission_page": 639,
+     "substation_page": 641
+    },
+    "A4": {
+     "plants_page": 645,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 652,
+     "substation_page": 653
+    },
+    "A5": {
+     "plants_page": 658,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 665,
+     "substation_page": 665
+    },
+    "A6": {
+     "plants_page": 669,
+     "plants_gap_mw": -4.9,
+     "transmission_page": 676,
+     "substation_page": 677
+    },
+    "A7": {
+     "plants_page": 681,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 687,
+     "substation_page": 688
+    },
+    "A8": {
+     "plants_page": 692,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 700,
+     "substation_page": 701
+    },
+    "A9": {
+     "plants_page": 705,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 711,
+     "substation_page": 712
+    },
+    "A10": {
+     "plants_page": 716,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 723,
+     "substation_page": 724
+    },
+    "A11": {
+     "plants_page": 729,
+     "plants_gap_mw": 0.8,
+     "transmission_page": 738,
+     "substation_page": 740
+    },
+    "A12": {
+     "plants_page": 745,
+     "plants_gap_mw": 8.5,
+     "transmission_page": 753,
+     "substation_page": 754
+    },
+    "A13": {
+     "plants_page": 759,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 767,
+     "substation_page": 768
+    },
+    "A14": {
+     "plants_page": 774,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 785,
+     "substation_page": 788
+    },
+    "A15": {
+     "plants_page": 797,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 806,
+     "substation_page": 807
+    },
+    "B1": {
+     "plants_page": 813,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 819,
+     "substation_page": 820
+    },
+    "B2": {
+     "plants_page": 825,
+     "plants_gap_mw": -0.2,
+     "transmission_page": 832,
+     "substation_page": 835
+    },
+    "B3": {
+     "plants_page": 842,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 854,
+     "substation_page": 863
+    },
+    "B4": {
+     "plants_page": 875,
+     "plants_gap_mw": -0.6,
+     "transmission_page": 884,
+     "substation_page": 890
+    },
+    "B5": {
+     "plants_page": null,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 902,
+     "substation_page": 902
+    },
+    "B6": {
+     "plants_page": 906,
+     "plants_gap_mw": 0.24,
+     "transmission_page": 918,
+     "substation_page": 928
+    },
+    "B7": {
+     "plants_page": 939,
+     "plants_gap_mw": -0.1,
+     "transmission_page": 945,
+     "substation_page": 948
+    },
+    "C1": {
+     "plants_page": 954,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 965,
+     "substation_page": 967
+    },
+    "C2": {
+     "plants_page": 972,
+     "plants_gap_mw": 70.6,
+     "transmission_page": 984,
+     "substation_page": 986
+    },
+    "C3": {
+     "plants_page": 991,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 997,
+     "substation_page": 998
+    },
+    "C4": {
+     "plants_page": 1001,
+     "plants_gap_mw": 0.35,
+     "transmission_page": 1021,
+     "substation_page": 1025
+    },
+    "C5": {
+     "plants_page": 1030,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 1043,
+     "substation_page": 1045
+    },
+    "C6": {
+     "plants_page": 1050,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 1056,
+     "substation_page": 1057
+    },
+    "C7": {
+     "plants_page": 1062,
+     "plants_gap_mw": -0.0,
+     "transmission_page": 1079,
+     "substation_page": 1080
+    },
+    "C8": {
+     "plants_page": 1088,
+     "plants_gap_mw": -20.93,
+     "transmission_page": 1099,
+     "substation_page": 1100
+    },
+    "C9": {
+     "plants_page": 1106,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 1124,
+     "substation_page": 1125
+    },
+    "C10": {
+     "plants_page": 1131,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 1145,
+     "substation_page": 1146
+    },
+    "C11": {
+     "plants_page": 1152,
+     "plants_gap_mw": 0.0,
+     "transmission_page": 1161,
+     "substation_page": 1163
+    },
+    "C12": {
+     "plants_page": 1169,
+     "plants_gap_mw": 50.01,
+     "transmission_page": 1184,
+     "substation_page": 1186
+    }
+   }
+  }
+ },
+ "notes": [
+  "RUPTL covers the PLN system: PLN plants, IPPs selling to PLN, rented plants and excess power bought by PLN. Captive plants (e.g. in nickel industrial parks) are not included.",
+  "Chapter A4 covers Kepulauan Riau without Batam, which PT PLN Batam serves outside RUPTL.",
+  "Chapter C9 covers Papua, Papua Pegunungan, Papua Tengah and Papua Selatan together; chapter C10 covers Papua Barat and Papua Barat Daya together. Their values cannot be split by province.",
+  "Coal capacity counts every row under a PLTU plant type (including PLTU MT, mine-mouth); PLTGU (gas combined cycle) is not coal.",
+  "Each chapter's plant rows are checked against its table's grand total (Jumlah). Imported power (Kalimantan Barat buys 120 MW of hydro power from Sarawak) is not counted; the printed total leaves it out too.",
+  "Bengkulu's existing-plant table lists no PLTU, although PLTU Teluk Sepang (2 x 100 MW, IPP, 2020) is in Bengkulu; coal capacity follows RUPTL and is 0."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "identities"
+  ],
+  "tolerance_mw": 2.0,
+  "known_plant_gaps": {
+   "A2": {
+    "gap_mw": 54.0,
+    "why": "Sumatera Utara: IPP PLTG Sumatera 54.0 MW row is not in the printed IPP subtotal (956.7) or the grand total (3,211.3)"
+   },
+   "A6": {
+    "gap_mw": -4.9,
+    "why": "Sumatera Barat: IPP rows add up to 128.9 MW but the printed IPP subtotal is 133.9 MW"
+   },
+   "C2": {
+    "gap_mw": 70.6,
+    "why": "Sulawesi Tengah: the printed Sewa subtotal is 0 MW although its rows add up to 48 MW, and IPP rows add up to 611 MW against a printed 600 MW"
+   },
+   "C8": {
+    "gap_mw": -20.93,
+    "why": "Maluku Utara: PLN and Sewa rows add up to 106.4 MW, matching both printed subtotals, but the printed grand total is 127.3 MW"
+   },
+   "C12": {
+    "gap_mw": 50.01,
+    "why": "Nusa Tenggara Timur: PLN rows add up to 391.46 MW but the printed PLN subtotal is 341.45 MW"
+   },
+   "A12": {
+    "gap_mw": 8.5,
+    "why": "Kalimantan Selatan: PLN rows add up to 595.8 MW but the printed PLN subtotal is 587.3 MW"
+   }
+  },
+  "known_year_gaps": {
+   "B1 gardu induk": {
+    "gap": 60.0,
+    "why": "DKI Jakarta substations: the 150/20 kV row's years add up to 2,040 MVA but its total is printed 1,980, and the grand total 5,980 uses 1,980"
+   }
+  },
+  "no_plant_table": {
+   "B5": "DI Yogyakarta: the chapter has no existing-plant table (it lists substations only); the province is supplied from the Java-Bali grid"
+  },
+  "recap_rows_not_adding_up": [
+   {
+    "chapter": "A7",
+    "page": 688,
+    "table": "gardu induk",
+    "rows_sum": 1450.0,
+    "jumlah": 950.0
+   }
+  ],
+  "totals_summed_from_years": [
+   {
+    "chapter": "B3",
+    "page": 863,
+    "table": "gardu induk",
+    "total": 18220.0
+   }
+  ],
+  "cells_read_with_dot_or_no_separator": [
+   "54.0",
+   "1980"
+  ],
+  "cells_with_footnote_star": [
+   "369*",
+   "5.760*",
+   "3.629*"
+  ],
+  "typos_corrected": {
+   "2`,7": "2,7"
+  },
+  "flags": []
+ },
+ "file": "20261116_ruptl-province-plants-grid-2025-2034.csv",
+ "rows": 136,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/electricity/20261116_ruptl-2025-2034.pdf": {
+   "sha256": "1308ee580c7c1642fe7817e000c87cb2dc87053e1fcef90606dcc1da396fd002"
+  }
+ }
+}
