@@ -17,6 +17,7 @@ import pandas as pd
 
 # Datasets read; analysis scripts read data/ only
 DATA = ROOT / "data"
+POPULATION = DATA / "20261102_bps-province-grdp-population/20261102_bps-province-grdp-population.csv"
 WELFARE = DATA / "20261108_bps-province-welfare/20261108_bps-province-welfare.csv"
 DEPTH_IPM = DATA / "20261116_bps-province-poverty-depth-ipm/20261116_bps-province-poverty-depth-ipm.csv"
 DEPTH_IPM_META = DATA / "20261116_bps-province-poverty-depth-ipm/20261116_bps-province-poverty-depth-ipm-metadata.json"
@@ -42,6 +43,7 @@ OUT_DBH = HERE / "20261116_dbh-2024-by-province.csv"
 DBH_COLUMNS = ["dbh_sda_total", "dbh_minerba", "dbh_oil_gas", "dbh_total"]
 
 # Template sheets, exactly as named in reference/20261116_location-selection-matrix.xlsx
+FB2 = "FB2 Grid-Transm. Exp. Index"
 CC1 = "CC1 Labor Market Sensit. Index"
 CC2 = "CC2 Econ. Depend. & Diver Index"
 CC3 = "CC3 Fiscal & Service Sens. Inde"
@@ -76,6 +78,12 @@ def wide(path, column, **where):
     for k, v in where.items():
         df = df[df[k] == v]
     return df.pivot(index="province_code", columns=column, values="value")
+
+
+def population():
+    """FB2 D (inserted column): population, 2025, thousand people."""
+    df = read(POPULATION)
+    return df[(df["indicator"] == "population") & (df["period"] == "2025")].set_index("province_code")["value"], "2025", {}
 
 
 def poverty_rate():
@@ -179,6 +187,10 @@ def electric_lighting_bottom40():
 
 # Each filled column: how its values are made, and how the sheet and Notes describe it
 FILLED = [
+    {"sheet": FB2, "column": "D", "make": population,
+     "label": "Population", "unit": "thousand people", "short_source": "BPS population projection",
+     "definition": "Mid-year (June) population of the province, from BPS's Proyeksi Penduduk Indonesia 2020-2050. Inserted next to the grid-corridor column on request; the template's (TBD) and index columns move one column right.",
+     "source": "BPS, population by province (Proyeksi Penduduk Indonesia 2020-2050); repo dataset data/20261102_bps-province-grdp-population"},
     {"sheet": CC1, "column": "C", "make": mining_employment_share,
      "label": "Mining & quarrying (B) workers, % of all workers", "unit": "% of employed persons", "short_source": "BPS Sakernas, Tabel 112",
      "definition": "Employed persons aged 15+ whose main job is in mining and quarrying (KBLI category B), divided by all employed persons aged 15+, times 100. BPS does not split coal from other mining at province level, so this is the closest available measure of the coal-linked workforce.",

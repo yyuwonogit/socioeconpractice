@@ -34,6 +34,8 @@ FIRST_ROW, LAST_ROW, NAME_COLUMN = 2, 39, "B"
 
 # Headers each sheet must still carry in the template, so a changed template stops the fill
 HEADERS = {
+    "FB2 Grid-Transm. Exp. Index": {"B": "Province", "C": "Planned / Grid Transmission Corridors and Substation in the Region",
+                                    "D": "(TBD)", "E": "Grid and Transmission Exposure Index"},
     "CC1 Labor Market Sensit. Index": {"B": "Province",
                                        "C": "Employment concentration in the pathway-linked sector as a share of total local employment",
                                        "D": "Wages relative to provincial/national average",
@@ -49,6 +51,13 @@ HEADERS = {
 }
 
 NUMBER_FORMAT = "0.00"
+
+# Columns inserted into the filled copy on request: sheet -> (new column letter, header). The template's
+# columns from that letter on move one column right; the header checks above use the template's letters
+INSERTED = {"FB2 Grid-Transm. Exp. Index": ("D", "Population")}
+
+# Sheets whose every template column is described in the analysis tables (the FB sheets are not filled)
+DESCRIBED = [s for s in HEADERS if s.startswith("CC")]
 NOTES_SHEET = "Notes"
 PLN_SHEET = "CC6 PLN units"
 DBH_SHEET = "CC3 DBH 2024"
@@ -75,7 +84,8 @@ def label_headers(ws, sheet, columns):
     """Write each column's data label under its template header, so the sheet says what each column holds."""
     for c in columns[columns["sheet"] == sheet].itertuples():
         cell = ws[f"{c.column}1"]
-        cell.value = f"{HEADERS[sheet][c.column]}\n\n{c.header_label}"
+        template = INSERTED[sheet][1] if INSERTED.get(sheet, ("",))[0] == c.column else HEADERS[sheet][c.column]
+        cell.value = f"{template}\n\n{c.header_label}"
         cell.alignment = Alignment(wrap_text=True, vertical="top")
         if c.status != "filled":
             cell.fill = PENDING_FILL
@@ -198,7 +208,14 @@ for sheet, headers in HEADERS.items():
     codes_by_sheet[sheet] = sheet_codes(ws, lookup)
 
 # Every described column is a template column, and every filled column is described
-assert {(c.sheet, c.column) for c in columns.itertuples()} == {(s, k) for s, h in HEADERS.items() for k in h if k != "B"}
+assert {(c.sheet, c.column) for c in columns.itertuples()} == ({(s, k) for s in DESCRIBED for k in HEADERS[s] if k != "B"}
+                                                               | {(s, col) for s, (col, _) in INSERTED.items()})
+
+# Insert the requested columns, after the header checks and row matching
+for sheet, (col, header) in INSERTED.items():
+    ws = wb[sheet]
+    ws.insert_cols(openpyxl.utils.column_index_from_string(col))
+    ws[f"{col}1"] = header
 assert set(map(tuple, values[["sheet", "column"]].drop_duplicates().values)) == {(c.sheet, c.column) for c in columns.itertuples() if c.status == "filled"}
 
 # Write each value into its sheet, column and province row; provinces without a value stay blank
@@ -215,7 +232,7 @@ for (sheet, col), group in values.groupby(["sheet", "column"]):
         written += 1
 
 # Label every CC1-CC6 header with the data it holds
-for sheet in HEADERS:
+for sheet in DESCRIBED + list(INSERTED):
     label_headers(wb[sheet], sheet, columns)
 
 # English names from the template, by code
