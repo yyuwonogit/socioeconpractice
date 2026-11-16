@@ -34,6 +34,12 @@ FIRST_ROW, LAST_ROW, NAME_COLUMN = 2, 39, "B"
 
 # Headers each sheet must still carry in the template, so a changed template stops the fill
 HEADERS = {
+    "FA1 Coal Mining Exposure Index": {"B": "Province", "C": "Coal Production", "D": "Share of Coal Sector in the GRDP", "E": "Coal Mining Exposure Index"},
+    "FA2 Coal Power Exposure Index": {"B": "Province", "C": "Operating CFPP Capacity in the Area \n(On Grid + Captive)",
+                                      "D": "Operating CFPP Capacity Per Resident", "E": "Coal Power Exposure Index"},
+    "FB3 Crit Min & Bat SC Index": {"B": "Province", "C": "Nickel (and other battery-mineral) mine and smelter location - IUP?",
+                                    "D": "Investment Realization", "E": "Critical Mineral and Battery Supply Chain Exposure Index"},
+    "FB4 Energy Access Index": {"B": "Province", "C": "Electrification ratio", "D": "Clean-cooking-fuel access", "E": "Energy Access and Affordability Index"},
     "FB1 RE Exposure Index": {"B": "Province", "C": "Operating / Planned RE Capacity in the Region",
                               "D": "Share of Coal Sector in the GRDP", "E": "Renewabe Energy Exposure Index"},
     "FB2 Grid-Transm. Exp. Index": {"B": "Province", "C": "Planned / Grid Transmission Corridors and Substation in the Region",
@@ -56,10 +62,12 @@ NUMBER_FORMAT = "0.00"
 
 # Columns inserted into the filled copy on request: sheet -> (new column letter, header). The template's
 # columns from that letter on move one column right; the header checks above use the template's letters
-INSERTED = {"FB2 Grid-Transm. Exp. Index": ("D", "Population")}
+INSERTED = {}
 
 # Single template columns filled outside the CC sheets: sheet -> columns
-PARTIAL = {"FB1 RE Exposure Index": ["C"]}
+PARTIAL = {"FA1 Coal Mining Exposure Index": ["C", "D"], "FA2 Coal Power Exposure Index": ["C", "D"],
+           "FB1 RE Exposure Index": ["C", "D"], "FB2 Grid-Transm. Exp. Index": ["C", "D"],
+           "FB3 Crit Min & Bat SC Index": ["C", "D"], "FB4 Energy Access Index": ["C", "D"]}
 
 # Sheets whose every template column is described in the analysis tables (the FB sheets are not filled)
 DESCRIBED = [s for s in HEADERS if s.startswith("CC")]

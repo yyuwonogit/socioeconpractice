@@ -18,6 +18,7 @@ import pandas as pd
 # Datasets read; analysis scripts read data/ only
 DATA = ROOT / "data"
 POPULATION = DATA / "20261102_bps-province-grdp-population/20261102_bps-province-grdp-population.csv"
+HOUSEHOLD_ENERGY = DATA / "20261116_bps-province-household-energy/20261116_bps-province-household-energy.csv"
 RE_CAPACITY = DATA / "20261116_province-re-capacity-entered/20261116_province-re-capacity-entered.csv"
 WELFARE = DATA / "20261108_bps-province-welfare/20261108_bps-province-welfare.csv"
 DEPTH_IPM = DATA / "20261116_bps-province-poverty-depth-ipm/20261116_bps-province-poverty-depth-ipm.csv"
@@ -44,8 +45,12 @@ OUT_DBH = HERE / "20261116_dbh-2024-by-province.csv"
 DBH_COLUMNS = ["dbh_sda_total", "dbh_minerba", "dbh_oil_gas", "dbh_total"]
 
 # Template sheets, exactly as named in reference/20261116_location-selection-matrix.xlsx
+FA1 = "FA1 Coal Mining Exposure Index"
+FA2 = "FA2 Coal Power Exposure Index"
 FB1 = "FB1 RE Exposure Index"
 FB2 = "FB2 Grid-Transm. Exp. Index"
+FB3 = "FB3 Crit Min & Bat SC Index"
+FB4 = "FB4 Energy Access Index"
 CC1 = "CC1 Labor Market Sensit. Index"
 CC2 = "CC2 Econ. Depend. & Diver Index"
 CC3 = "CC3 Fiscal & Service Sens. Inde"
@@ -58,6 +63,11 @@ LOW_EDUCATION = ["primary_or_less", "junior_secondary"]
 
 # Template columns not filled in this version, with the reason
 NOT_FILLED = [
+    {"sheet": FA1, "column": "C", "label": "Coal resources / reserves", "status": "pending: Neraca Sumber Daya dan Cadangan Mineral dan Batubara 2025 (status Dec 2024) to be uploaded"},
+    {"sheet": FA2, "column": "C", "label": "Operating CFPP capacity (on-grid + captive)", "status": "pending: RUPTL to be uploaded"},
+    {"sheet": FA2, "column": "D", "label": "Operating CFPP capacity per resident", "status": "pending: needs column C (RUPTL)"},
+    {"sheet": FB2, "column": "C", "label": "Planned transmission corridors and substations", "status": "pending: RUPTL to be uploaded"},
+    {"sheet": FB3, "column": "D", "label": "Investment realisation", "status": "pending: source to be agreed (BPS foreign investment, total, to 2023, or a battery-sector source)"},
     {"sheet": CC1, "column": "F", "label": "Labor Market Sensitivity Index", "status": "blank on request: index method to be set by the team"},
     {"sheet": CC2, "column": "E", "label": "Economic Dependence & Diversification Index", "status": "blank on request: index method to be set by the team"},
     {"sheet": CC3, "column": "E", "label": "Fiscal & Service Sensitivity Index", "status": "blank on request: index method to be set by the team"},
@@ -80,6 +90,26 @@ def wide(path, column, **where):
     for k, v in where.items():
         df = df[df[k] == v]
     return df.pivot(index="province_code", columns=column, values="value")
+
+
+def metal_ore_share():
+    """FB3 C (proxy): metal ore mining (B3) share of GRDP at current prices, 2025; 0 where BPS shows none."""
+    w = wide(GRDP_INDUSTRY, "sector", indicator="grdp_current", period="2025")
+    return w["B3"].fillna(0) / w["TOTAL"] * 100, "2025", {}
+
+
+def electric_lighting():
+    """FB4 C: households whose main lighting is electric, 2025."""
+    df = read(HOUSEHOLD_ENERGY)
+    return df[(df["indicator"] == "electric_lighting") & (df["period"] == "2025")].set_index("province_code")["value"], "2025", {}
+
+
+def clean_cooking():
+    """FB4 D: households cooking mainly with electricity or gas/LPG, 2025."""
+    df = read(HOUSEHOLD_ENERGY)
+    df = df[(df["indicator"] == "cooking_fuel") & (df["period"] == "2025")]
+    w = df.pivot(index="province_code", columns="fuel", values="value")
+    return w["electricity"] + w["gas_lpg"], "2025", {}
 
 
 def re_capacity():
@@ -201,8 +231,28 @@ FILLED = [
      "source": "User entry, kept as received in raw/renewable-energy/20261116_location-selection-matrix-with-re-capacity-entered.xlsx; repo dataset data/20261116_province-re-capacity-entered"},
     {"sheet": FB2, "column": "D", "make": population,
      "label": "Population", "unit": "thousand people", "short_source": "BPS population projection",
-     "definition": "Mid-year (June) population of the province, from BPS's Proyeksi Penduduk Indonesia 2020-2050. Inserted next to the grid-corridor column on request; the template's (TBD) and index columns move one column right.",
+     "definition": "Mid-year (June) population of the province, from BPS's Proyeksi Penduduk Indonesia 2020-2050. Put in the template's (TBD) column on request.",
      "source": "BPS, population by province (Proyeksi Penduduk Indonesia 2020-2050); repo dataset data/20261102_bps-province-grdp-population"},
+    {"sheet": FB1, "column": "D", "make": population,
+     "label": "Population", "unit": "thousand people", "short_source": "BPS population projection",
+     "definition": "Mid-year (June) population of the province, from BPS's Proyeksi Penduduk Indonesia 2020-2050. Filled in place of the template's 'Share of Coal Sector in the GRDP' header, on request.",
+     "source": "BPS, population by province (Proyeksi Penduduk Indonesia 2020-2050); repo dataset data/20261102_bps-province-grdp-population"},
+    {"sheet": FA1, "column": "D", "make": coal_share,
+     "label": "Coal mining (B2) share of GRDP, %", "unit": "% of GRDP, current prices", "short_source": "BPS PDRB Provinsi 2021-2025",
+     "definition": "GRDP of coal and lignite mining (B2) divided by total GRDP, current prices, times 100; same as CC2 C. 0 where BPS shows no coal mining output. 2025 is very preliminary.",
+     "source": "BPS, PDRB Provinsi-Provinsi di Indonesia Menurut Lapangan Usaha 2021-2025; repo dataset data/20261116_bps-province-grdp-by-industry-2021-2025"},
+    {"sheet": FB3, "column": "C", "make": metal_ore_share,
+     "label": "PROXY: metal-ore mining (B3) share of GRDP, %", "unit": "% of GRDP, current prices", "short_source": "BPS PDRB Provinsi 2021-2025",
+     "definition": "Proxy for nickel and battery-mineral mining: GRDP of metal ore mining (B3: nickel, copper, gold, tin, bauxite and others) divided by total GRDP, current prices, times 100. It does not count mines or smelters and mixes battery minerals with copper and gold (e.g. Papua Tengah is copper-gold). 0 where BPS shows none.",
+     "source": "BPS, PDRB Provinsi-Provinsi di Indonesia Menurut Lapangan Usaha 2021-2025; repo dataset data/20261116_bps-province-grdp-by-industry-2021-2025"},
+    {"sheet": FB4, "column": "C", "make": electric_lighting,
+     "label": "Households with electric lighting, %", "unit": "% of households", "short_source": "BPS Susenas, var 772",
+     "definition": "Share of households whose main lighting source is electricity (PLN or non-PLN), Susenas March. A household-based measure of electrification; ESDM's official electrification ratio is computed differently.",
+     "source": "BPS WebAPI var 772; repo dataset data/20261116_bps-province-household-energy"},
+    {"sheet": FB4, "column": "D", "make": clean_cooking,
+     "label": "Households cooking with electricity or gas/LPG, %", "unit": "% of households", "short_source": "BPS Susenas, var 150",
+     "definition": "Share of households whose main cooking fuel is electricity or gas/LPG (clean fuels in the SDG 7.1.2 sense). The rest use kerosene, charcoal, firewood or other fuels, or do not cook.",
+     "source": "BPS WebAPI var 150; repo dataset data/20261116_bps-province-household-energy"},
     {"sheet": CC1, "column": "C", "make": mining_employment_share,
      "label": "Mining & quarrying (B) workers, % of all workers", "unit": "% of employed persons", "short_source": "BPS Sakernas, Tabel 112",
      "definition": "Employed persons aged 15+ whose main job is in mining and quarrying (KBLI category B), divided by all employed persons aged 15+, times 100. BPS does not split coal from other mining at province level, so this is the closest available measure of the coal-linked workforce.",

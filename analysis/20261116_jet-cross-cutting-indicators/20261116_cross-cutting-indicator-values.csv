@@ -458,6 +458,44 @@ CC6 Inclusion & Ener. Jus.Index,D,81,electric_lighting_bottom40,2019,90.81
 CC6 Inclusion & Ener. Jus.Index,D,82,electric_lighting_bottom40,2019,92
 CC6 Inclusion & Ener. Jus.Index,D,91,electric_lighting_bottom40,2019,87.14
 CC6 Inclusion & Ener. Jus.Index,D,94,electric_lighting_bottom40,2019,56.87
+FA1 Coal Mining Exposure Index,D,11,coal_share,2025,1.709889632
+FA1 Coal Mining Exposure Index,D,12,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,13,coal_share,2025,0.0848975976
+FA1 Coal Mining Exposure Index,D,14,coal_share,2025,0.2220772043
+FA1 Coal Mining Exposure Index,D,15,coal_share,2025,3.093264086
+FA1 Coal Mining Exposure Index,D,16,coal_share,2025,13.92631265
+FA1 Coal Mining Exposure Index,D,17,coal_share,2025,1.856405762
+FA1 Coal Mining Exposure Index,D,18,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,19,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,21,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,31,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,32,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,33,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,34,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,35,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,36,coal_share,2025,0.01527444873
+FA1 Coal Mining Exposure Index,D,51,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,52,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,53,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,61,coal_share,2025,0.0003043491493
+FA1 Coal Mining Exposure Index,D,62,coal_share,2025,7.144812824
+FA1 Coal Mining Exposure Index,D,63,coal_share,2025,26.33362502
+FA1 Coal Mining Exposure Index,D,64,coal_share,2025,25.09366497
+FA1 Coal Mining Exposure Index,D,65,coal_share,2025,19.23461474
+FA1 Coal Mining Exposure Index,D,71,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,72,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,73,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,74,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,75,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,76,coal_share,2025,0.001405244372
+FA1 Coal Mining Exposure Index,D,81,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,82,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,91,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,92,coal_share,2025,0.002549719531
+FA1 Coal Mining Exposure Index,D,94,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,95,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,96,coal_share,2025,0
+FA1 Coal Mining Exposure Index,D,97,coal_share,2025,0
 FB1 RE Exposure Index,C,11,re_capacity,as entered,3567.7
 FB1 RE Exposure Index,C,12,re_capacity,as entered,3227
 FB1 RE Exposure Index,C,13,re_capacity,as entered,745.9
@@ -496,6 +534,44 @@ FB1 RE Exposure Index,C,94,re_capacity,as entered,324.909
 FB1 RE Exposure Index,C,95,re_capacity,as entered,60.5918
 FB1 RE Exposure Index,C,96,re_capacity,as entered,200.216
 FB1 RE Exposure Index,C,97,re_capacity,as entered,156.857
+FB1 RE Exposure Index,D,11,population,2025,5626
+FB1 RE Exposure Index,D,12,population,2025,15785.8
+FB1 RE Exposure Index,D,13,population,2025,5914.3
+FB1 RE Exposure Index,D,14,population,2025,6811.2
+FB1 RE Exposure Index,D,15,population,2025,3768.5
+FB1 RE Exposure Index,D,16,population,2025,8928.5
+FB1 RE Exposure Index,D,17,population,2025,2138
+FB1 RE Exposure Index,D,18,population,2025,9522.9
+FB1 RE Exposure Index,D,19,population,2025,1550.8
+FB1 RE Exposure Index,D,21,population,2025,2213.5
+FB1 RE Exposure Index,D,31,population,2025,10678
+FB1 RE Exposure Index,D,32,population,2025,50759
+FB1 RE Exposure Index,D,33,population,2025,38233.9
+FB1 RE Exposure Index,D,34,population,2025,3781.5
+FB1 RE Exposure Index,D,35,population,2025,42089.3
+FB1 RE Exposure Index,D,36,population,2025,12537.4
+FB1 RE Exposure Index,D,51,population,2025,4461.3
+FB1 RE Exposure Index,D,52,population,2025,5731.1
+FB1 RE Exposure Index,D,53,population,2025,5742.6
+FB1 RE Exposure Index,D,61,population,2025,5766
+FB1 RE Exposure Index,D,62,population,2025,2845
+FB1 RE Exposure Index,D,63,population,2025,4323.3
+FB1 RE Exposure Index,D,64,population,2025,4267.6
+FB1 RE Exposure Index,D,65,population,2025,749.4
+FB1 RE Exposure Index,D,71,population,2025,2721.4
+FB1 RE Exposure Index,D,72,population,2025,3156.1
+FB1 RE Exposure Index,D,73,population,2025,9563.1
+FB1 RE Exposure Index,D,74,population,2025,2836.7
+FB1 RE Exposure Index,D,75,population,2025,1242.2
+FB1 RE Exposure Index,D,76,population,2025,1525.3
+FB1 RE Exposure Index,D,81,population,2025,1970.6
+FB1 RE Exposure Index,D,82,population,2025,1373.8
+FB1 RE Exposure Index,D,91,population,2025,587.6
+FB1 RE Exposure Index,D,92,population,2025,636.4
+FB1 RE Exposure Index,D,94,population,2025,1073.6
+FB1 RE Exposure Index,D,95,population,2025,549.7
+FB1 RE Exposure Index,D,96,population,2025,1492.3
+FB1 RE Exposure Index,D,97,population,2025,1484.9
 FB2 Grid-Transm. Exp. Index,D,11,population,2025,5626
 FB2 Grid-Transm. Exp. Index,D,12,population,2025,15785.8
 FB2 Grid-Transm. Exp. Index,D,13,population,2025,5914.3
@@ -534,3 +610,117 @@ FB2 Grid-Transm. Exp. Index,D,94,population,2025,1073.6
 FB2 Grid-Transm. Exp. Index,D,95,population,2025,549.7
 FB2 Grid-Transm. Exp. Index,D,96,population,2025,1492.3
 FB2 Grid-Transm. Exp. Index,D,97,population,2025,1484.9
+FB3 Crit Min & Bat SC Index,C,11,metal_ore_share,2025,0.2508718379
+FB3 Crit Min & Bat SC Index,C,12,metal_ore_share,2025,0.3218750455
+FB3 Crit Min & Bat SC Index,C,13,metal_ore_share,2025,0
+FB3 Crit Min & Bat SC Index,C,14,metal_ore_share,2025,0.02205789323
+FB3 Crit Min & Bat SC Index,C,15,metal_ore_share,2025,0.06291772364
+FB3 Crit Min & Bat SC Index,C,16,metal_ore_share,2025,0
+FB3 Crit Min & Bat SC Index,C,17,metal_ore_share,2025,0.04113423173
+FB3 Crit Min & Bat SC Index,C,18,metal_ore_share,2025,0.08055787281
+FB3 Crit Min & Bat SC Index,C,19,metal_ore_share,2025,4.837687909
+FB3 Crit Min & Bat SC Index,C,21,metal_ore_share,2025,1.164435596
+FB3 Crit Min & Bat SC Index,C,31,metal_ore_share,2025,0
+FB3 Crit Min & Bat SC Index,C,32,metal_ore_share,2025,0.06960286547
+FB3 Crit Min & Bat SC Index,C,33,metal_ore_share,2025,0
+FB3 Crit Min & Bat SC Index,C,34,metal_ore_share,2025,0
+FB3 Crit Min & Bat SC Index,C,35,metal_ore_share,2025,0.03555511675
+FB3 Crit Min & Bat SC Index,C,36,metal_ore_share,2025,0.1656690209
+FB3 Crit Min & Bat SC Index,C,51,metal_ore_share,2025,0
+FB3 Crit Min & Bat SC Index,C,52,metal_ore_share,2025,13.68008624
+FB3 Crit Min & Bat SC Index,C,53,metal_ore_share,2025,0.0006739770713
+FB3 Crit Min & Bat SC Index,C,61,metal_ore_share,2025,3.918799647
+FB3 Crit Min & Bat SC Index,C,62,metal_ore_share,2025,1.69919023
+FB3 Crit Min & Bat SC Index,C,63,metal_ore_share,2025,0.2559589941
+FB3 Crit Min & Bat SC Index,C,64,metal_ore_share,2025,0.03486777801
+FB3 Crit Min & Bat SC Index,C,65,metal_ore_share,2025,1.621524618
+FB3 Crit Min & Bat SC Index,C,71,metal_ore_share,2025,1.920907266
+FB3 Crit Min & Bat SC Index,C,72,metal_ore_share,2025,11.15031638
+FB3 Crit Min & Bat SC Index,C,73,metal_ore_share,2025,1.696373678
+FB3 Crit Min & Bat SC Index,C,74,metal_ore_share,2025,11.73813462
+FB3 Crit Min & Bat SC Index,C,75,metal_ore_share,2025,0.3051985486
+FB3 Crit Min & Bat SC Index,C,76,metal_ore_share,2025,0.008431466232
+FB3 Crit Min & Bat SC Index,C,81,metal_ore_share,2025,0.1583399937
+FB3 Crit Min & Bat SC Index,C,82,metal_ore_share,2025,20.80751385
+FB3 Crit Min & Bat SC Index,C,91,metal_ore_share,2025,0.03544885586
+FB3 Crit Min & Bat SC Index,C,92,metal_ore_share,2025,3.31463539
+FB3 Crit Min & Bat SC Index,C,94,metal_ore_share,2025,0.2309060577
+FB3 Crit Min & Bat SC Index,C,95,metal_ore_share,2025,0
+FB3 Crit Min & Bat SC Index,C,96,metal_ore_share,2025,66.41643668
+FB3 Crit Min & Bat SC Index,C,97,metal_ore_share,2025,0
+FB4 Energy Access Index,C,11,electric_lighting,2025,99.97
+FB4 Energy Access Index,C,12,electric_lighting,2025,99.72
+FB4 Energy Access Index,C,13,electric_lighting,2025,99.47
+FB4 Energy Access Index,C,14,electric_lighting,2025,99.71
+FB4 Energy Access Index,C,15,electric_lighting,2025,99.68
+FB4 Energy Access Index,C,16,electric_lighting,2025,99.77
+FB4 Energy Access Index,C,17,electric_lighting,2025,99.99
+FB4 Energy Access Index,C,18,electric_lighting,2025,99.96
+FB4 Energy Access Index,C,19,electric_lighting,2025,99.93
+FB4 Energy Access Index,C,21,electric_lighting,2025,99.96
+FB4 Energy Access Index,C,31,electric_lighting,2025,100
+FB4 Energy Access Index,C,32,electric_lighting,2025,100
+FB4 Energy Access Index,C,33,electric_lighting,2025,100
+FB4 Energy Access Index,C,34,electric_lighting,2025,100
+FB4 Energy Access Index,C,35,electric_lighting,2025,99.99
+FB4 Energy Access Index,C,36,electric_lighting,2025,99.86
+FB4 Energy Access Index,C,51,electric_lighting,2025,99.98
+FB4 Energy Access Index,C,52,electric_lighting,2025,99.99
+FB4 Energy Access Index,C,53,electric_lighting,2025,98.06
+FB4 Energy Access Index,C,61,electric_lighting,2025,99.16
+FB4 Energy Access Index,C,62,electric_lighting,2025,99.65
+FB4 Energy Access Index,C,63,electric_lighting,2025,99.86
+FB4 Energy Access Index,C,64,electric_lighting,2025,99.97
+FB4 Energy Access Index,C,65,electric_lighting,2025,99.89
+FB4 Energy Access Index,C,71,electric_lighting,2025,99.84
+FB4 Energy Access Index,C,72,electric_lighting,2025,98.7
+FB4 Energy Access Index,C,73,electric_lighting,2025,99.86
+FB4 Energy Access Index,C,74,electric_lighting,2025,99.94
+FB4 Energy Access Index,C,75,electric_lighting,2025,99.67
+FB4 Energy Access Index,C,76,electric_lighting,2025,99.68
+FB4 Energy Access Index,C,81,electric_lighting,2025,98.74
+FB4 Energy Access Index,C,82,electric_lighting,2025,99.26
+FB4 Energy Access Index,C,91,electric_lighting,2025,96.59
+FB4 Energy Access Index,C,92,electric_lighting,2025,98.56
+FB4 Energy Access Index,C,94,electric_lighting,2025,96.65
+FB4 Energy Access Index,C,95,electric_lighting,2025,83.61
+FB4 Energy Access Index,C,96,electric_lighting,2025,67.46
+FB4 Energy Access Index,C,97,electric_lighting,2025,68.88
+FB4 Energy Access Index,D,11,clean_cooking,2025,96.85
+FB4 Energy Access Index,D,12,clean_cooking,2025,95.55
+FB4 Energy Access Index,D,13,clean_cooking,2025,90.85
+FB4 Energy Access Index,D,14,clean_cooking,2025,97.47
+FB4 Energy Access Index,D,15,clean_cooking,2025,94.18
+FB4 Energy Access Index,D,16,clean_cooking,2025,98.19
+FB4 Energy Access Index,D,17,clean_cooking,2025,97.88
+FB4 Energy Access Index,D,18,clean_cooking,2025,96.21
+FB4 Energy Access Index,D,19,clean_cooking,2025,97.5
+FB4 Energy Access Index,D,21,clean_cooking,2025,91.49
+FB4 Energy Access Index,D,31,clean_cooking,2025,98.19
+FB4 Energy Access Index,D,32,clean_cooking,2025,95.43
+FB4 Energy Access Index,D,33,clean_cooking,2025,93.1
+FB4 Energy Access Index,D,34,clean_cooking,2025,86.05
+FB4 Energy Access Index,D,35,clean_cooking,2025,91.96
+FB4 Energy Access Index,D,36,clean_cooking,2025,96.26
+FB4 Energy Access Index,D,51,clean_cooking,2025,90.18
+FB4 Energy Access Index,D,52,clean_cooking,2025,93.53
+FB4 Energy Access Index,D,53,clean_cooking,2025,2.32
+FB4 Energy Access Index,D,61,clean_cooking,2025,98.02
+FB4 Energy Access Index,D,62,clean_cooking,2025,95.85
+FB4 Energy Access Index,D,63,clean_cooking,2025,94.26
+FB4 Energy Access Index,D,64,clean_cooking,2025,99.09
+FB4 Energy Access Index,D,65,clean_cooking,2025,94.03
+FB4 Energy Access Index,D,71,clean_cooking,2025,87.21
+FB4 Energy Access Index,D,72,clean_cooking,2025,79.65
+FB4 Energy Access Index,D,73,clean_cooking,2025,96.57
+FB4 Energy Access Index,D,74,clean_cooking,2025,72.91
+FB4 Energy Access Index,D,75,clean_cooking,2025,97.83
+FB4 Energy Access Index,D,76,clean_cooking,2025,87.81
+FB4 Energy Access Index,D,81,clean_cooking,2025,2.75
+FB4 Energy Access Index,D,82,clean_cooking,2025,2.6
+FB4 Energy Access Index,D,91,clean_cooking,2025,6.95
+FB4 Energy Access Index,D,92,clean_cooking,2025,5.91
+FB4 Energy Access Index,D,94,clean_cooking,2025,7.52
+FB4 Energy Access Index,D,95,clean_cooking,2025,5.31
+FB4 Energy Access Index,D,96,clean_cooking,2025,3.83
+FB4 Energy Access Index,D,97,clean_cooking,2025,0.25
