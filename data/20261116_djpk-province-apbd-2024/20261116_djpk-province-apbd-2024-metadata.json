@@ -16,6 +16,10 @@
    "name": "JAMBI",
    "kode_dagri": "15"
   },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
   "17": {
    "name": "BENGKULU",
    "kode_dagri": "17"
@@ -35,6 +39,10 @@
   "62": {
    "name": "KALIMANTAN TENGAH",
    "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
   },
   "64": {
    "name": "KALIMANTAN TIMUR",
@@ -132,7 +140,9 @@
     "PAPUA TENGAH": "raw/fiscal/20261116_data-apbd-2024-papua-tengah.xls",
     "SULAWESI SELATAN": "raw/fiscal/20261116_data-apbd-2024-sulsel.xls",
     "SULAWESI TENGAH": "raw/fiscal/20261116_data-apbd-2024-sulteng.xls",
-    "SULAWESI TENGGARA": "raw/fiscal/20261116_data-apbd-2024-sultra.xls"
+    "SULAWESI TENGGARA": "raw/fiscal/20261116_data-apbd-2024-sultra.xls",
+    "KALIMANTAN SELATAN": "raw/fiscal/20261116_data-apbd-2024-kalsel.xls",
+    "SUMATERA SELATAN": "raw/fiscal/20261116_data-apbd-2024-sumsel.xls"
    }
   },
   "booklet": {
@@ -144,7 +154,7 @@
  "notes": [
   "Anggaran is the APBD murni budget (the portal notes 'Data APBD Murni'); Realisasi is what SIKD had received when the file was downloaded.",
   "The exports carry no province name or year; each is identified by its file name and checked against the BPS booklet's realised PAD share (checks.cross_source).",
-  "Only the province governments the user downloaded are included: those with DBH Minerba of Rp 50 billion or more in 2024, except Kalimantan Selatan (the first download duplicated Kalimantan Tengah) and Sumatera Selatan (not yet downloaded).",
+  "Only the province governments the user downloaded are included: those with DBH Minerba of Rp 50 billion or more in 2024 (16 provinces). The first Kalimantan Selatan download duplicated the Kalimantan Tengah file and was replaced.",
   "Kalimantan Timur's 2024 revenue budget is exactly Rp 20,000,000,000,000 in the export.",
   "An export that has no row for an account (Bangka Belitung: Pendapatan Lainnya; Papua Tengah: Hasil Pengelolaan Kekayaan Daerah yang Dipisahkan) has no row here; the sum checks count it as zero.",
   "Realisation is partial for some provinces at download time (Maluku Utara about 43% of budgeted revenue); CC3 uses the budget."
@@ -158,8 +168,8 @@
   ],
   "identities": {
    "PAD + TKDD + Pendapatan Lainnya = Pendapatan Daerah, and PAD parts = PAD, budget and realisation": {
-    "compared": 56,
-    "largest_gap_rp": 0.19921875,
+    "compared": 64,
+    "largest_gap_rp": 0.400390625,
     "tolerance_rp": 1000
    }
   },
@@ -235,6 +245,16 @@
      "export_pct": 32.85,
      "booklet_pct": 33.43,
      "difference_pt": -0.58
+    },
+    "63": {
+     "export_pct": 44.9,
+     "booklet_pct": 44.62,
+     "difference_pt": 0.28
+    },
+    "16": {
+     "export_pct": 48.03,
+     "booklet_pct": 48.45,
+     "difference_pt": -0.42
     }
    }
   },
@@ -247,7 +267,7 @@
   "flags": []
  },
  "file": "20261116_djpk-province-apbd-2024.csv",
- "rows": 110,
+ "rows": 126,
  "format": {
   "encoding": "UTF-8, no byte-order mark",
   "delimiter": ",",
@@ -307,6 +327,12 @@
   },
   "raw/fiscal/20261116_data-apbd-2024-sultra.xls": {
    "sha256": "231f0573f5418aea8890ab1b33a797743c0865b1954862e42f3419916b51acbf"
+  },
+  "raw/fiscal/20261116_data-apbd-2024-kalsel.xls": {
+   "sha256": "c691d533a0fef3e5175fe5afef21616de8d137e85bd5d3de02a28164d9d38dfa"
+  },
+  "raw/fiscal/20261116_data-apbd-2024-sumsel.xls": {
+   "sha256": "1de4e15a964fe4b252c4be41ce9e7098726a277304b0cb8e8068ec084da67d14"
   }
  }
 }

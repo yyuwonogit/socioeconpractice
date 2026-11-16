@@ -28,6 +28,7 @@ FILES = {
     "kalbar": "KALIMANTAN BARAT", "kalteng": "KALIMANTAN TENGAH", "kaltim": "KALIMANTAN TIMUR", "kalut": "KALIMANTAN UTARA",
     "malut": "MALUKU UTARA", "ntb": "NUSA TENGGARA BARAT", "papua-tengah": "PAPUA TENGAH", "sulsel": "SULAWESI SELATAN",
     "sulteng": "SULAWESI TENGAH", "sultra": "SULAWESI TENGGARA",
+    "kalsel": "KALIMANTAN SELATAN", "sumsel": "SUMATERA SELATAN",
 }
 RAW_FILE = "raw/fiscal/20261116_data-apbd-2024-{}.xls"
 
@@ -166,7 +167,7 @@ meta = {
     "notes": [
         "Anggaran is the APBD murni budget (the portal notes 'Data APBD Murni'); Realisasi is what SIKD had received when the file was downloaded.",
         "The exports carry no province name or year; each is identified by its file name and checked against the BPS booklet's realised PAD share (checks.cross_source).",
-        "Only the province governments the user downloaded are included: those with DBH Minerba of Rp 50 billion or more in 2024, except Kalimantan Selatan (the first download duplicated Kalimantan Tengah) and Sumatera Selatan (not yet downloaded).",
+        "Only the province governments the user downloaded are included: those with DBH Minerba of Rp 50 billion or more in 2024 (16 provinces). The first Kalimantan Selatan download duplicated the Kalimantan Tengah file and was replaced.",
         "Kalimantan Timur's 2024 revenue budget is exactly Rp 20,000,000,000,000 in the export.",
         "An export that has no row for an account (Bangka Belitung: Pendapatan Lainnya; Papua Tengah: Hasil Pengelolaan Kekayaan Daerah yang Dipisahkan) has no row here; the sum checks count it as zero.",
         "Realisation is partial for some provinces at download time (Maluku Utara about 43% of budgeted revenue); CC3 uses the budget.",

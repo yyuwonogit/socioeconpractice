@@ -31,7 +31,7 @@ DBH = DATA / "20261116_djpk-province-dbh-2024/20261116_djpk-province-dbh-2024.cs
 APBD = DATA / "20261116_djpk-province-apbd-2024/20261116_djpk-province-apbd-2024.csv"
 
 # Provinces whose APBD export is still to come; the others without one were not downloaded (DBH Minerba under Rp 50 billion)
-APBD_PENDING = {"63": "APBD file still to download (first download duplicated Kalimantan Tengah)", "16": "APBD file still to download"}
+APBD_PENDING = {}
 
 OUT_VALUES = HERE / "20261116_cross-cutting-indicator-values.csv"
 OUT_COLUMNS = HERE / "20261116_cross-cutting-indicator-columns.csv"
