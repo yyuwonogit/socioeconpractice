@@ -122,6 +122,35 @@ def load_bps_provinces(path):
     return provinces, lookup
 
 
+# English province names, as in English-language reports and templates: a direction word before
+# the name, "Islands" after it, English spellings of Sumatra and Java, and two names that follow no rule
+ENGLISH_DIRECTIONS = {"NORTH": "UTARA", "SOUTH": "SELATAN", "WEST": "BARAT", "EAST": "TIMUR", "CENTRAL": "TENGAH",
+                      "SOUTHEAST": "TENGGARA", "SOUTHWEST": "BARAT DAYA", "HIGHLAND": "PEGUNUNGAN"}
+ENGLISH_WORDS = {"SUMATRA": "SUMATERA", "JAVA": "JAWA"}
+ENGLISH_NAMES = {"JAKARTA SPECIAL CAPITAL REGION": "DKI JAKARTA", "SPECIAL REGION OF YOGYAKARTA": "DI YOGYAKARTA"}
+
+
+def english_to_bps_name(name):
+    """Return the BPS spelling of an English province name, for matching with province_code.
+
+    North Sumatra -> SUMATERA UTARA, Bangka Belitung Islands -> KEPULAUAN BANGKA BELITUNG,
+    Highland Papua -> PAPUA PEGUNUNGAN. The result is not checked here; province_code stops on a
+    name that is not in the BPS list.
+    """
+    name = " ".join(str(name).upper().split())
+    if name in ENGLISH_NAMES:
+        return ENGLISH_NAMES[name]
+    words = name.split()
+    islands = len(words) > 1 and words[-1] == "ISLANDS"
+    if islands:
+        words = words[:-1]
+    direction = ENGLISH_DIRECTIONS.get(words[0]) if len(words) > 1 else None
+    if direction:
+        words = words[1:]
+    words = [ENGLISH_WORDS.get(w, w) for w in words]
+    return " ".join((["KEPULAUAN"] if islands else []) + words + ([direction] if direction else []))
+
+
 def province_code(name, lookup, code_in_source=None):
     """Return the BPS code for a name, and stop if the source's own code disagrees with it."""
     code = lookup.get(normalise_name(name))

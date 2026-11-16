@@ -4,7 +4,9 @@ Colours follow the reference data-viz palette: a light chart surface, text in in
 categorical slots in fixed order, a blue ramp for ordered bands, and a recessive grid.
 """
 
+import json
 import textwrap
+from pathlib import Path
 
 import matplotlib
 matplotlib.use("Agg")
@@ -32,6 +34,15 @@ UPPER_WORDS = {"DKI", "DI"}
 def display_name(name):
     """Title-case a BPS province name, keeping abbreviations such as DKI and DI in capitals."""
     return " ".join(w if w in UPPER_WORDS else w.capitalize() for w in name.split())
+
+
+def province_names(metadata_path):
+    """Return BPS province code -> display name, read from a dataset's metadata JSON.
+
+    Analyses join on codes; names are only labels, so every script takes them from here.
+    """
+    meta = json.loads(Path(metadata_path).read_text(encoding="utf-8"))
+    return {code: display_name(p["name"]) for code, p in meta["provinces"].items()}
 
 
 def new_figure(width=14, height=10):

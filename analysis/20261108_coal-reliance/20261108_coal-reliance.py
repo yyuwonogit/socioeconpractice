@@ -4,7 +4,6 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 
-import json
 import sys
 
 # Load the shared chart module from tools/
@@ -70,9 +69,7 @@ def load():
     read = lambda p: pd.read_csv(p, dtype={"province_code": str, "sector": str, "period": str, "status": str, "area": str},
                                  keep_default_na=False)
     sub, nat, wel = read(SUBSECTOR), read(NATIONAL), read(WELFARE)
-    meta = json.loads(NATIONAL_META.read_text(encoding="utf-8"))
-    names = {c: charts.display_name(p["name"]) for c, p in meta["provinces"].items()}
-    return sub, nat, wel, names
+    return sub, nat, wel, charts.province_names(NATIONAL_META)
 
 
 def latest_shares(sub, nat):

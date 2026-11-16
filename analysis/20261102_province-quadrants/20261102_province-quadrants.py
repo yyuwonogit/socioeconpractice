@@ -4,7 +4,6 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 
-import json
 import sys
 import textwrap
 
@@ -35,9 +34,7 @@ def load():
     """Read the dataset and the province names from its metadata."""
     df = pd.read_csv(DATASET, dtype={"province_code": str, "sector": str, "period": str, "status": str},
                      keep_default_na=False)
-    meta = json.loads(METADATA.read_text(encoding="utf-8"))
-    names = {code: charts.display_name(p["name"]) for code, p in meta["provinces"].items()}
-    return df, names
+    return df, charts.province_names(METADATA)
 
 
 def quadrant_chart(df, x, y, xcut, ycut, quadrant_names, xlabel, ylabel, title, subtitle, note, path,
