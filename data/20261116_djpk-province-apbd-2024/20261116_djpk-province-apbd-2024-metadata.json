@@ -1,16 +1,28 @@
 {
- "title": "DJPK APBD 2024 revenue and PAD of selected province governments (budget and realisation), Indonesia",
+ "title": "DJPK APBD 2024 revenue and PAD of the 38 province governments (budget and realisation), Indonesia",
  "columns": {
   "province_code": "BPS province code (kode_bps) of the province government. Names and Kemendagri codes in 'provinces'.",
-  "indicator": "Account and column; definitions in 'indicators'.",
+  "indicator": "Account and column; definitions in 'indicators'. Transfers and other revenue come from the exports only (16 provinces).",
   "period": "YYYY, budget year.",
-  "status": "Empty; the exports carry no markers.",
-  "value": "Rupiah, as exported."
+  "status": "Empty; the sources carry no markers.",
+  "value": "Rupiah, rounded to whole rupiah (the sources differ in sen)."
  },
  "provinces": {
   "11": {
    "name": "ACEH",
    "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
   },
   "15": {
    "name": "JAMBI",
@@ -24,13 +36,53 @@
    "name": "BENGKULU",
    "kode_dagri": "17"
   },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
   "19": {
    "name": "KEPULAUAN BANGKA BELITUNG",
    "kode_dagri": "19"
   },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
   "52": {
    "name": "NUSA TENGGARA BARAT",
    "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
   },
   "61": {
    "name": "KALIMANTAN BARAT",
@@ -52,6 +104,10 @@
    "name": "KALIMANTAN UTARA",
    "kode_dagri": "65"
   },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
   "72": {
    "name": "SULAWESI TENGAH",
    "kode_dagri": "72"
@@ -64,68 +120,112 @@
    "name": "SULAWESI TENGGARA",
    "kode_dagri": "74"
   },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
   "82": {
    "name": "MALUKU UTARA",
    "kode_dagri": "82"
   },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
   "96": {
    "name": "PAPUA TENGAH",
    "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
   }
  },
  "indicators": {
   "revenue_budget": {
-   "name": "Pendapatan Daerah (Anggaran, APBD murni), province government",
+   "name": "Pendapatan Daerah, Anggaran (APBD murni budget), province government",
    "unit": "Rp",
-   "multiplier": 1,
-   "source": "DJPK APBD portal, export per province (Tahun 2024)"
+   "multiplier": 1
   },
-  "revenue_actual": {
-   "name": "Pendapatan Daerah (Realisasi), province government",
+  "revenue_actual_nov": {
+   "name": "Pendapatan Daerah, Realisasi to the end of November 2024, province government",
    "unit": "Rp",
-   "multiplier": 1,
-   "source": "DJPK APBD portal, export per province (Tahun 2024)"
+   "multiplier": 1
+  },
+  "revenue_actual_dec": {
+   "name": "Pendapatan Daerah, Realisasi to the end of December 2024, province government",
+   "unit": "Rp",
+   "multiplier": 1
   },
   "pad_budget": {
-   "name": "PAD (Anggaran, APBD murni), province government",
+   "name": "PAD, Anggaran (APBD murni budget), province government",
    "unit": "Rp",
-   "multiplier": 1,
-   "source": "DJPK APBD portal, export per province (Tahun 2024)"
+   "multiplier": 1
   },
-  "pad_actual": {
-   "name": "PAD (Realisasi), province government",
+  "pad_actual_nov": {
+   "name": "PAD, Realisasi to the end of November 2024, province government",
    "unit": "Rp",
-   "multiplier": 1,
-   "source": "DJPK APBD portal, export per province (Tahun 2024)"
+   "multiplier": 1
+  },
+  "pad_actual_dec": {
+   "name": "PAD, Realisasi to the end of December 2024, province government",
+   "unit": "Rp",
+   "multiplier": 1
   },
   "transfers_budget": {
-   "name": "TKDD (Anggaran, APBD murni), province government",
+   "name": "TKDD, Anggaran (APBD murni budget), province government",
    "unit": "Rp",
-   "multiplier": 1,
-   "source": "DJPK APBD portal, export per province (Tahun 2024)"
+   "multiplier": 1
   },
-  "transfers_actual": {
-   "name": "TKDD (Realisasi), province government",
+  "transfers_actual_nov": {
+   "name": "TKDD, Realisasi to the end of November 2024, province government",
    "unit": "Rp",
-   "multiplier": 1,
-   "source": "DJPK APBD portal, export per province (Tahun 2024)"
+   "multiplier": 1
+  },
+  "transfers_actual_dec": {
+   "name": "TKDD, Realisasi to the end of December 2024, province government",
+   "unit": "Rp",
+   "multiplier": 1
   },
   "other_revenue_budget": {
-   "name": "Pendapatan Lainnya (Anggaran, APBD murni), province government",
+   "name": "Pendapatan Lainnya, Anggaran (APBD murni budget), province government",
    "unit": "Rp",
-   "multiplier": 1,
-   "source": "DJPK APBD portal, export per province (Tahun 2024)"
+   "multiplier": 1
   },
-  "other_revenue_actual": {
-   "name": "Pendapatan Lainnya (Realisasi), province government",
+  "other_revenue_actual_nov": {
+   "name": "Pendapatan Lainnya, Realisasi to the end of November 2024, province government",
    "unit": "Rp",
-   "multiplier": 1,
-   "source": "DJPK APBD portal, export per province (Tahun 2024)"
+   "multiplier": 1
+  },
+  "other_revenue_actual_dec": {
+   "name": "Pendapatan Lainnya, Realisasi to the end of December 2024, province government",
+   "unit": "Rp",
+   "multiplier": 1
   }
  },
  "source_tables": {
   "exports": {
-   "source": "DJPK portal, Data APBD (https://djpk.kemenkeu.go.id/portal/data/apbd), Tahun 2024, Sub-wilayah 'Provinsi ...', Excel export, downloaded by the user on 2026-11-16",
+   "source": "DJPK portal, Data APBD (https://djpk.kemenkeu.go.id/portal/data/apbd), Tahun 2024, periode November, Sub-wilayah 'Provinsi ...', Excel export, downloaded by the user on 2026-11-16",
    "files": {
     "ACEH": "raw/fiscal/20261116_data-apbd-2024-aceh.xls",
     "KEPULAUAN BANGKA BELITUNG": "raw/fiscal/20261116_data-apbd-2024-bangka-belitung.xls",
@@ -145,6 +245,11 @@
     "SUMATERA SELATAN": "raw/fiscal/20261116_data-apbd-2024-sumsel.xls"
    }
   },
+  "compiled": {
+   "file": "raw/fiscal/20261116_pendapatan-daerah-pad-provinsi-2024.xlsx",
+   "source": "Compiled by the user with Perplexity from the same DJPK portal (periode 11 and 12, 2024), uploaded 2026-11-16",
+   "trust": "Used because every value it shares with the exports matches exactly and its December PAD shares equal the BPS booklet for all 38 provinces"
+  },
   "booklet": {
    "title": "BPS, Statistik Keuangan Pemerintah Provinsi 2024 dan 2025, Tabel 7",
    "file": "raw/fiscal/20261116_bps-statistik-keuangan-pemerintah-provinsi-2024-dan-2025.pdf",
@@ -152,12 +257,11 @@
   }
  },
  "notes": [
-  "Anggaran is the APBD murni budget (the portal notes 'Data APBD Murni'); Realisasi is what SIKD had received when the file was downloaded.",
-  "The exports carry no province name or year; each is identified by its file name and checked against the BPS booklet's realised PAD share (checks.cross_source).",
-  "Only the province governments the user downloaded are included: those with DBH Minerba of Rp 50 billion or more in 2024 (16 provinces). The first Kalimantan Selatan download duplicated the Kalimantan Tengah file and was replaced.",
-  "Kalimantan Timur's 2024 revenue budget is exactly Rp 20,000,000,000,000 in the export.",
-  "An export that has no row for an account (Bangka Belitung: Pendapatan Lainnya; Papua Tengah: Hasil Pengelolaan Kekayaan Daerah yang Dipisahkan) has no row here; the sum checks count it as zero.",
-  "Realisation is partial for some provinces at download time (Maluku Utara about 43% of budgeted revenue); CC3 uses the budget."
+  "Anggaran is the APBD murni budget (the portal notes 'Data APBD Murni'); Realisasi is cumulative to the end of November or December 2024 as received by SIKD.",
+  "The exports carry no province name or year; each is identified by its file name, and every figure in it matches the compiled workbook.",
+  "The first Kalimantan Selatan export duplicated the Kalimantan Tengah file and was replaced.",
+  "Kalimantan Timur's 2024 revenue budget is exactly Rp 20,000,000,000,000 in both sources.",
+  "An export with no row for an account (Bangka Belitung: Pendapatan Lainnya; Papua Tengah: Hasil Pengelolaan Kekayaan Daerah yang Dipisahkan) has no row here; the sum checks count it as zero."
  ],
  "checks": {
   "passed": [
@@ -167,94 +271,28 @@
    "cross-source"
   ],
   "identities": {
-   "PAD + TKDD + Pendapatan Lainnya = Pendapatan Daerah, and PAD parts = PAD, budget and realisation": {
+   "PAD + TKDD + Pendapatan Lainnya = Pendapatan Daerah, and PAD parts = PAD (exports, budget and November)": {
     "compared": 64,
     "largest_gap_rp": 0.400390625,
     "tolerance_rp": 1000
    }
   },
-  "cross_source": {
-   "tolerance_pt": 3.0,
-   "provinces": {
-    "11": {
-     "export_pct": 27.35,
-     "booklet_pct": 28.31,
-     "difference_pt": -0.96
+  "cross_source_overlaps": {
+   "compiled workbook = DJPK exports": 96,
+   "compiled workbook = compiled workbook": 44
+  },
+  "booklet_december_pad_share": {
+   "tolerance_pt": 0.011,
+   "matching_provinces": 36,
+   "largest_difference_pt_among_them": 0.0047,
+   "known_differences": {
+    "94": {
+     "difference_pt": 4.5966,
+     "why": "Papua: portal December realisation (22.05%) differs from the booklet (17.45%), likely a later realisation update"
     },
-    "19": {
-     "export_pct": 35.54,
-     "booklet_pct": 37.78,
-     "difference_pt": -2.24
-    },
-    "17": {
-     "export_pct": 34.89,
-     "booklet_pct": 34.0,
-     "difference_pt": 0.89
-    },
-    "15": {
-     "export_pct": 44.21,
-     "booklet_pct": 44.21,
-     "difference_pt": -0.0
-    },
-    "61": {
-     "export_pct": 51.38,
-     "booklet_pct": 52.15,
-     "difference_pt": -0.77
-    },
-    "62": {
-     "export_pct": 32.4,
-     "booklet_pct": 33.86,
-     "difference_pt": -1.46
-    },
-    "64": {
-     "export_pct": 46.09,
-     "booklet_pct": 46.92,
-     "difference_pt": -0.83
-    },
-    "65": {
-     "export_pct": 28.61,
-     "booklet_pct": 29.89,
-     "difference_pt": -1.28
-    },
-    "82": {
-     "export_pct": 25.93,
-     "booklet_pct": 27.65,
-     "difference_pt": -1.72
-    },
-    "52": {
-     "export_pct": 49.26,
-     "booklet_pct": 49.75,
-     "difference_pt": -0.49
-    },
-    "96": {
-     "export_pct": 15.1,
-     "booklet_pct": 15.32,
-     "difference_pt": -0.22
-    },
-    "73": {
-     "export_pct": 53.98,
-     "booklet_pct": 53.79,
-     "difference_pt": 0.19
-    },
-    "72": {
-     "export_pct": 36.03,
-     "booklet_pct": 38.07,
-     "difference_pt": -2.04
-    },
-    "74": {
-     "export_pct": 32.85,
-     "booklet_pct": 33.43,
-     "difference_pt": -0.58
-    },
-    "63": {
-     "export_pct": 44.9,
-     "booklet_pct": 44.62,
-     "difference_pt": 0.28
-    },
-    "16": {
-     "export_pct": 48.03,
-     "booklet_pct": 48.45,
-     "difference_pt": -0.42
+    "76": {
+     "difference_pt": -0.0359,
+     "why": "Sulawesi Barat: 26.27% against 26.31%, timing of the realisation data"
     }
    }
   },
@@ -267,7 +305,7 @@
   "flags": []
  },
  "file": "20261116_djpk-province-apbd-2024.csv",
- "rows": 126,
+ "rows": 290,
  "format": {
   "encoding": "UTF-8, no byte-order mark",
   "delimiter": ",",
@@ -285,6 +323,9 @@
   },
   "raw/fiscal/20261116_bps-statistik-keuangan-pemerintah-provinsi-2024-dan-2025.pdf": {
    "sha256": "0454e8b18cad9875e983bd37b1f38be7abe93054ee989bb592f0a207c1c14ef0"
+  },
+  "raw/fiscal/20261116_pendapatan-daerah-pad-provinsi-2024.xlsx": {
+   "sha256": "38f6dbca62719cf3b8d484b19736fd8d90e299c9c1125b60692448518ae478af"
   },
   "raw/fiscal/20261116_data-apbd-2024-aceh.xls": {
    "sha256": "c3ce36acca3243e65b182a573af0466ebbab18c97a1671aea7b87d89fbef6230"
