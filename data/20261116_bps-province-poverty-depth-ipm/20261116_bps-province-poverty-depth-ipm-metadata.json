@@ -1,0 +1,347 @@
+{
+ "title": "BPS provincial poverty depth index (P1) and Human Development Index (IPM), Indonesia, 2020-2026",
+ "columns": {
+  "province_code": "BPS province code (kode_bps); 00 = Indonesia. Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definitions in 'indicators'.",
+  "area": "urban, rural or total for P1; empty for IPM. Names in 'areas'.",
+  "period": "YYYY. For P1 the survey month is in the indicator code.",
+  "status": "BPS revision marker; these tables carry none.",
+  "value": "Number in the indicator's unit, as published by BPS."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  },
+  "00": {
+   "name": "INDONESIA",
+   "kode_dagri": null
+  }
+ },
+ "areas": {
+  "": "not split by area",
+  "urban": "Perkotaan",
+  "rural": "Perdesaan",
+  "total": "Perkotaan+Perdesaan (urban + rural)"
+ },
+ "indicators": {
+  "poverty_depth_march": {
+   "name": "Indeks Kedalaman Kemiskinan P1, Susenas Maret (poverty gap index, March survey)",
+   "unit": "index (percent of the poverty line, averaged over the whole population)",
+   "multiplier": 1,
+   "definition": "Average shortfall of the poor's expenditure below the poverty line, as a percent of the line, with the non-poor counted as zero. Higher means poverty is deeper.",
+   "source": "BPS WebAPI var 503"
+  },
+  "poverty_depth_september": {
+   "name": "Indeks Kedalaman Kemiskinan P1, Susenas September (poverty gap index, September survey)",
+   "unit": "index (percent of the poverty line, averaged over the whole population)",
+   "multiplier": 1,
+   "source": "BPS WebAPI var 503"
+  },
+  "ipm": {
+   "name": "Indeks Pembangunan Manusia, metode baru, UHH hasil Long Form SP2020 (Human Development Index)",
+   "unit": "index, 0-100",
+   "multiplier": 1,
+   "definition": "Geometric mean of three dimension indices: health (life expectancy at birth, UHH), education (mean of the expected years of schooling index, HLS, and the mean years of schooling index, RLS) and standard of living (adjusted per capita expenditure).",
+   "source": "BPS WebAPI var 2207"
+  }
+ },
+ "source_tables": {
+  "webapi 503": {
+   "title": "Indeks Kedalaman Kemiskinan (P1) Menurut Provinsi dan Daerah",
+   "unit": "Persen",
+   "last_update": "2026-08-05 13:38:47",
+   "note": "- Referensi waktu untuk data tahun 1999–2005 adalah Februari, sedangkan tahun 2006–2010 adalah Maret - Angka Provinsi Papua Barat dan Papua sebelum tahun 2024 merupakan angka provinsi sebelum mengalami pemekaran Daerah Otonom Baru (DOB)",
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/503/th/126/key/KEY/"
+  },
+  "webapi 2207": {
+   "title": "[Metode Baru] Indeks Pembangunan Manusia (IPM) menurut Provinsi (Umur Harapan Hidup Hasil Long Form SP2020)",
+   "unit": null,
+   "last_update": "2026-11-05 14:56:01",
+   "note": "Umur Harapan Hidup (UHH) menggunakan hasil Long Form Sensus Penduduk 2020 (SP2020)",
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/2207/th/126/key/KEY/"
+  }
+ },
+ "notes": [
+  "P1 Papua split: Papua Barat Daya (92), Papua Selatan (95), Papua Tengah (96) and Papua Pegunungan (97) have values from 2024; for 2020-2023, Papua (94) and Papua Barat (91) are the pre-split provinces (BPS table note).",
+  "IPM Papua split: the four new provinces have IPM values from 2022, so IPM for Papua (94) and Papua Barat (91) covers the post-split areas from 2022 and the pre-split areas in 2020-2021.",
+  "BPS ran no September Susenas poverty round in 2023; September 2026 is not yet published. The 'Tahunan' column of the P1 table is empty for every year.",
+  "DKI Jakarta has no rural P1 because it has no rural area.",
+  "IPM is var 2207, which uses life expectancy from the SP2020 Long Form and is the series BPS currently updates. The older IPM table (var 494) stops at 2024 and is not read; its values differ because of the life-expectancy basis."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness"
+  ],
+  "plausible_ranges": {
+   "poverty_depth": [
+    0,
+    10
+   ],
+   "ipm": [
+    55,
+    85
+   ],
+   "ipm_change": [
+    -1.5,
+    2.5
+   ]
+  },
+  "flags": [
+   {
+    "check": "poverty_depth",
+    "province_code": "96",
+    "indicator": "poverty_depth_september",
+    "area": "rural",
+    "period": "2025",
+    "value": 10.8,
+    "range": [
+     0,
+     10
+    ]
+   },
+   {
+    "check": "poverty_depth",
+    "province_code": "94",
+    "indicator": "poverty_depth_march",
+    "area": "rural",
+    "period": "2026",
+    "value": 10.17,
+    "range": [
+     0,
+     10
+    ]
+   },
+   {
+    "check": "ipm",
+    "province_code": "31",
+    "period": "2025",
+    "value": 85.05,
+    "range": [
+     55,
+     85
+    ]
+   },
+   {
+    "check": "ipm",
+    "province_code": "31",
+    "period": "2026",
+    "value": 85.88,
+    "range": [
+     55,
+     85
+    ]
+   },
+   {
+    "check": "ipm",
+    "province_code": "97",
+    "period": "2022",
+    "value": 52.69,
+    "range": [
+     55,
+     85
+    ]
+   },
+   {
+    "check": "ipm",
+    "province_code": "97",
+    "period": "2023",
+    "value": 53.45,
+    "range": [
+     55,
+     85
+    ]
+   },
+   {
+    "check": "ipm",
+    "province_code": "97",
+    "period": "2024",
+    "value": 54.43,
+    "range": [
+     55,
+     85
+    ]
+   },
+   {
+    "check": "ipm",
+    "province_code": "97",
+    "period": "2025",
+    "value": 54.91,
+    "range": [
+     55,
+     85
+    ]
+   }
+  ]
+ },
+ "file": "20261116_bps-province-poverty-depth-ipm.csv",
+ "rows": 1573,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/welfare/20261116_bps-webapi-p1-and-ipm-by-province.jsonl": {
+   "sha256": "4fa8d95fb5de5894fb95e7f1ed1cf851600e3619fcd4e2e30d9c14451a2ea0b8"
+  }
+ }
+}
