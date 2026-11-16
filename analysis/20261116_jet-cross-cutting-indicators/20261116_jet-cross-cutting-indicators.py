@@ -18,6 +18,7 @@ import pandas as pd
 # Datasets read; analysis scripts read data/ only
 DATA = ROOT / "data"
 POPULATION = DATA / "20261102_bps-province-grdp-population/20261102_bps-province-grdp-population.csv"
+RE_CAPACITY = DATA / "20261116_province-re-capacity-entered/20261116_province-re-capacity-entered.csv"
 WELFARE = DATA / "20261108_bps-province-welfare/20261108_bps-province-welfare.csv"
 DEPTH_IPM = DATA / "20261116_bps-province-poverty-depth-ipm/20261116_bps-province-poverty-depth-ipm.csv"
 DEPTH_IPM_META = DATA / "20261116_bps-province-poverty-depth-ipm/20261116_bps-province-poverty-depth-ipm-metadata.json"
@@ -43,6 +44,7 @@ OUT_DBH = HERE / "20261116_dbh-2024-by-province.csv"
 DBH_COLUMNS = ["dbh_sda_total", "dbh_minerba", "dbh_oil_gas", "dbh_total"]
 
 # Template sheets, exactly as named in reference/20261116_location-selection-matrix.xlsx
+FB1 = "FB1 RE Exposure Index"
 FB2 = "FB2 Grid-Transm. Exp. Index"
 CC1 = "CC1 Labor Market Sensit. Index"
 CC2 = "CC2 Econ. Depend. & Diver Index"
@@ -78,6 +80,12 @@ def wide(path, column, **where):
     for k, v in where.items():
         df = df[df[k] == v]
     return df.pivot(index="province_code", columns=column, values="value")
+
+
+def re_capacity():
+    """FB1 C: operating / planned RE capacity, as entered by the user."""
+    df = read(RE_CAPACITY)
+    return df.set_index("province_code")["value"], "as entered", {}
 
 
 def population():
@@ -187,6 +195,10 @@ def electric_lighting_bottom40():
 
 # Each filled column: how its values are made, and how the sheet and Notes describe it
 FILLED = [
+    {"sheet": FB1, "column": "C", "make": re_capacity,
+     "label": "Operating / planned RE capacity (entered by you)", "unit": "MW? (unit and source to confirm)", "short_source": "your entry, 16 Nov 2026",
+     "definition": "Values you typed into this column on 16 Nov 2026, kept unchanged. Unit, year and source still to be confirmed.",
+     "source": "User entry, kept as received in raw/renewable-energy/20261116_location-selection-matrix-with-re-capacity-entered.xlsx; repo dataset data/20261116_province-re-capacity-entered"},
     {"sheet": FB2, "column": "D", "make": population,
      "label": "Population", "unit": "thousand people", "short_source": "BPS population projection",
      "definition": "Mid-year (June) population of the province, from BPS's Proyeksi Penduduk Indonesia 2020-2050. Inserted next to the grid-corridor column on request; the template's (TBD) and index columns move one column right.",

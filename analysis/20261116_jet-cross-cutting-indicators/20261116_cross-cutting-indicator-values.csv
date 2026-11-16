@@ -414,6 +414,44 @@ CC6 Inclusion & Ener. Jus.Index,D,81,electric_lighting_bottom40,2019,90.81
 CC6 Inclusion & Ener. Jus.Index,D,82,electric_lighting_bottom40,2019,92
 CC6 Inclusion & Ener. Jus.Index,D,91,electric_lighting_bottom40,2019,87.14
 CC6 Inclusion & Ener. Jus.Index,D,94,electric_lighting_bottom40,2019,56.87
+FB1 RE Exposure Index,C,11,re_capacity,as entered,3567.7
+FB1 RE Exposure Index,C,12,re_capacity,as entered,3227
+FB1 RE Exposure Index,C,13,re_capacity,as entered,745.9
+FB1 RE Exposure Index,C,14,re_capacity,as entered,213.1
+FB1 RE Exposure Index,C,15,re_capacity,as entered,1812
+FB1 RE Exposure Index,C,16,re_capacity,as entered,3079
+FB1 RE Exposure Index,C,17,re_capacity,as entered,235.5
+FB1 RE Exposure Index,C,18,re_capacity,as entered,1737.4
+FB1 RE Exposure Index,C,19,re_capacity,as entered,394.5
+FB1 RE Exposure Index,C,21,re_capacity,as entered,44.8
+FB1 RE Exposure Index,C,31,re_capacity,as entered,185
+FB1 RE Exposure Index,C,32,re_capacity,as entered,9817
+FB1 RE Exposure Index,C,33,re_capacity,as entered,7403
+FB1 RE Exposure Index,C,34,re_capacity,as entered,450
+FB1 RE Exposure Index,C,35,re_capacity,as entered,7865
+FB1 RE Exposure Index,C,36,re_capacity,as entered,5087
+FB1 RE Exposure Index,C,51,re_capacity,as entered,2744
+FB1 RE Exposure Index,C,52,re_capacity,as entered,1237
+FB1 RE Exposure Index,C,53,re_capacity,as entered,946
+FB1 RE Exposure Index,C,61,re_capacity,as entered,1672
+FB1 RE Exposure Index,C,62,re_capacity,as entered,794
+FB1 RE Exposure Index,C,63,re_capacity,as entered,193
+FB1 RE Exposure Index,C,64,re_capacity,as entered,1677
+FB1 RE Exposure Index,C,65,re_capacity,as entered,1431
+FB1 RE Exposure Index,C,71,re_capacity,as entered,1104
+FB1 RE Exposure Index,C,72,re_capacity,as entered,1935
+FB1 RE Exposure Index,C,73,re_capacity,as entered,3669
+FB1 RE Exposure Index,C,74,re_capacity,as entered,1848
+FB1 RE Exposure Index,C,75,re_capacity,as entered,62.9
+FB1 RE Exposure Index,C,76,re_capacity,as entered,1804
+FB1 RE Exposure Index,C,81,re_capacity,as entered,539
+FB1 RE Exposure Index,C,82,re_capacity,as entered,934
+FB1 RE Exposure Index,C,91,re_capacity,as entered,153.29
+FB1 RE Exposure Index,C,92,re_capacity,as entered,161.35461
+FB1 RE Exposure Index,C,94,re_capacity,as entered,324.909
+FB1 RE Exposure Index,C,95,re_capacity,as entered,60.5918
+FB1 RE Exposure Index,C,96,re_capacity,as entered,200.216
+FB1 RE Exposure Index,C,97,re_capacity,as entered,156.857
 FB2 Grid-Transm. Exp. Index,D,11,population,2025,5626
 FB2 Grid-Transm. Exp. Index,D,12,population,2025,15785.8
 FB2 Grid-Transm. Exp. Index,D,13,population,2025,5914.3

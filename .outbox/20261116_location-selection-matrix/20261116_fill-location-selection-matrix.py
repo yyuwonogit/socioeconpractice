@@ -34,6 +34,8 @@ FIRST_ROW, LAST_ROW, NAME_COLUMN = 2, 39, "B"
 
 # Headers each sheet must still carry in the template, so a changed template stops the fill
 HEADERS = {
+    "FB1 RE Exposure Index": {"B": "Province", "C": "Operating / Planned RE Capacity in the Region",
+                              "D": "Share of Coal Sector in the GRDP", "E": "Renewabe Energy Exposure Index"},
     "FB2 Grid-Transm. Exp. Index": {"B": "Province", "C": "Planned / Grid Transmission Corridors and Substation in the Region",
                                     "D": "(TBD)", "E": "Grid and Transmission Exposure Index"},
     "CC1 Labor Market Sensit. Index": {"B": "Province",
@@ -55,6 +57,9 @@ NUMBER_FORMAT = "0.00"
 # Columns inserted into the filled copy on request: sheet -> (new column letter, header). The template's
 # columns from that letter on move one column right; the header checks above use the template's letters
 INSERTED = {"FB2 Grid-Transm. Exp. Index": ("D", "Population")}
+
+# Single template columns filled outside the CC sheets: sheet -> columns
+PARTIAL = {"FB1 RE Exposure Index": ["C"]}
 
 # Sheets whose every template column is described in the analysis tables (the FB sheets are not filled)
 DESCRIBED = [s for s in HEADERS if s.startswith("CC")]
@@ -209,7 +214,8 @@ for sheet, headers in HEADERS.items():
 
 # Every described column is a template column, and every filled column is described
 assert {(c.sheet, c.column) for c in columns.itertuples()} == ({(s, k) for s in DESCRIBED for k in HEADERS[s] if k != "B"}
-                                                               | {(s, col) for s, (col, _) in INSERTED.items()})
+                                                               | {(s, col) for s, (col, _) in INSERTED.items()}
+                                                               | {(s, col) for s, cols in PARTIAL.items() for col in cols})
 
 # Insert the requested columns, after the header checks and row matching
 for sheet, (col, header) in INSERTED.items():
@@ -232,7 +238,7 @@ for (sheet, col), group in values.groupby(["sheet", "column"]):
         written += 1
 
 # Label every CC1-CC6 header with the data it holds
-for sheet in DESCRIBED + list(INSERTED):
+for sheet in DESCRIBED + list(INSERTED) + list(PARTIAL):
     label_headers(wb[sheet], sheet, columns)
 
 # English names from the template, by code
