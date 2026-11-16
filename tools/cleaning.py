@@ -223,6 +223,8 @@ def pdf_visible_lines(page, line_tolerance=4):
         return fill is None or tuple(round(float(c), 3) for c in fill) not in WHITE_FILLS
 
     words = page.filter(visible).extract_words(extra_attrs=["size"], keep_blank_chars=False)
+    if not words:
+        return []
     main = max({round(w["size"], 1) for w in words}, key=lambda s: sum(round(w["size"], 1) == s for w in words))
     lines = []
     for w in sorted((w for w in words if round(w["size"], 1) == main), key=lambda w: (w["top"], w["x0"])):
