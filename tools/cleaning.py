@@ -241,6 +241,72 @@ def pdf_visible_lines(page, line_tolerance=4):
              for x in sorted(line, key=lambda x: x["x0"])] for line in lines]
 
 
+def bps_report_province_table(pdf, pages, lookup, marker_status, marker_text, no_value=("NA",), cell_fixes=None,
+                              decimal=",", thousands=".", decimals=0, national_label="Jumlah", max_marker_size=7.5):
+    """Read a province table from a BPS report PDF into cells, by name and column order.
+
+    pages: page number -> the column codes its value cells hold, left to right.
+    Each data line is a province name (matched to a BPS code) or, after a line reading national_label,
+    an unlabelled line of numbers for Indonesia. A small superscript marker_text after a value sets
+    that value's status to marker_status. Lines whose label is not a province name (headers, page
+    numbers) are skipped, so the caller must check every province is present. Cells in no_value (such as NA) give no value and are
+    returned as gaps. cell_fixes: (province name as printed, column) -> (printed text, corrected text)
+    for a value the report prints wrongly; each fix must be used and its printed text must still match.
+    Returns cells (province_code, column, value, status) and gaps (province_code, column, marker).
+    A labelled line with the wrong number of values stops the read.
+    """
+    fixes = dict(cell_fixes or {})
+    cells, gaps, seen = [], [], set()
+    token = re.compile(r"^[\d.,]+$")
+    for number, columns in pages.items():
+        national_next = False
+        for line in pdf_visible_lines(pdf.pages[number - 1]):
+            big = [w for w in line if w["size"] > max_marker_size]
+            label = " ".join(w["text"] for w in big if not token.match(w["text"]) and w["text"] not in no_value)
+            if label == national_label:
+                national_next = True
+                continue
+            values = []
+            for w in line:
+                if w["size"] <= max_marker_size:
+                    if values:
+                        if w["text"] != marker_text or values[-1][1]:
+                            raise ValueError(f"page {number}: unexpected small text {w['text']!r} after a value")
+                        values[-1][1] = marker_status
+                elif token.match(w["text"]) or w["text"] in no_value:
+                    values.append([w["text"], ""])
+            if not values:
+                continue
+            if label == "":
+                if not national_next:
+                    continue
+                code, name, national_next = NATIONAL_CODE, national_label, False
+            elif normalise_name(label) in lookup:
+                code, name = province_code(label, lookup), label
+            else:
+                # Headers and page numbers; a missing province is caught by the caller's completeness check
+                continue
+            if len(values) != len(columns):
+                raise ValueError(f"page {number}: {label!r} has {len(values)} values for {len(columns)} columns")
+            for column, (text, status) in zip(columns, values):
+                if (code, column) in seen:
+                    raise ValueError(f"page {number}: {name} {column} read twice")
+                seen.add((code, column))
+                if text in no_value:
+                    gaps.append({"province_code": code, "column": column, "marker": text})
+                    continue
+                if (name, column) in fixes:
+                    printed, corrected = fixes.pop((name, column))
+                    if text != printed:
+                        raise ValueError(f"{name} {column}: declared fix expects {printed!r}, page has {text!r}")
+                    text = corrected
+                value = parse_number(text, decimal, thousands, decimals=decimals)
+                cells.append({"province_code": code, "column": column, "value": value, "status": status})
+    if fixes:
+        raise ValueError(f"cell fixes not used: {fixes}")
+    return cells, gaps
+
+
 def read_jsonl(path):
     """Read a .jsonl file of saved responses, keeping every number as its published text."""
     with open(path, encoding="utf-8") as f:
@@ -270,6 +336,24 @@ def bps_api_cells(response):
     for k, (v, tv, th, tt) in cells.items():
         if k in response["datacontent"]:
             yield v, tv, th, tt, response["datacontent"][k]
+
+
+def bps_api_province_cells(table, lookup, national_source_code="9999", national_label="INDONESIA"):
+    """Yield (province code, turvar label, turtahun label, year, text) for every filled cell of a national WebAPI table.
+
+    Rows are matched to BPS codes by name, and each name's code must agree with the first two digits
+    of the source's own region code. The source writes Indonesia as national_source_code with the row
+    label national_label (INDONESIA in most tables, RATA-RATA in some wage tables); it becomes code 00.
+    """
+    for r, tv, th, tt, text in bps_api_cells(table):
+        source, name = str(r["val"]), html_to_text(r["label"])
+        if source == national_source_code:
+            if normalise_name(name) != normalise_name(national_label):
+                raise ValueError(f"region {source} is labelled {name!r}, expected {national_label!r}")
+            code = NATIONAL_CODE
+        else:
+            code = province_code(name, lookup, source[:2])
+        yield code, html_to_text(tv["label"]).strip(), html_to_text(tt["label"]).strip(), str(th["label"]), text
 
 
 # Row labels
