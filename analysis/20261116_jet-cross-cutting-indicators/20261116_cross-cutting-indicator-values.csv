@@ -1,80 +1,239 @@
 sheet,column,province_code,indicator,period,value
-CC4 Poverty & Resilience Index,C,11,poverty_rate_march,2025,12.33
-CC4 Poverty & Resilience Index,C,12,poverty_rate_march,2025,7.36
-CC4 Poverty & Resilience Index,C,13,poverty_rate_march,2025,5.35
-CC4 Poverty & Resilience Index,C,14,poverty_rate_march,2025,6.16
-CC4 Poverty & Resilience Index,C,15,poverty_rate_march,2025,7.19
-CC4 Poverty & Resilience Index,C,16,poverty_rate_march,2025,10.15
-CC4 Poverty & Resilience Index,C,17,poverty_rate_march,2025,12.08
-CC4 Poverty & Resilience Index,C,18,poverty_rate_march,2025,10
-CC4 Poverty & Resilience Index,C,19,poverty_rate_march,2025,5
-CC4 Poverty & Resilience Index,C,21,poverty_rate_march,2025,4.44
-CC4 Poverty & Resilience Index,C,31,poverty_rate_march,2025,4.28
-CC4 Poverty & Resilience Index,C,32,poverty_rate_march,2025,7.02
-CC4 Poverty & Resilience Index,C,33,poverty_rate_march,2025,9.48
-CC4 Poverty & Resilience Index,C,34,poverty_rate_march,2025,10.23
-CC4 Poverty & Resilience Index,C,35,poverty_rate_march,2025,9.5
-CC4 Poverty & Resilience Index,C,36,poverty_rate_march,2025,5.63
-CC4 Poverty & Resilience Index,C,51,poverty_rate_march,2025,3.72
-CC4 Poverty & Resilience Index,C,52,poverty_rate_march,2025,11.78
-CC4 Poverty & Resilience Index,C,53,poverty_rate_march,2025,18.6
-CC4 Poverty & Resilience Index,C,61,poverty_rate_march,2025,6.16
-CC4 Poverty & Resilience Index,C,62,poverty_rate_march,2025,5.19
-CC4 Poverty & Resilience Index,C,63,poverty_rate_march,2025,3.84
-CC4 Poverty & Resilience Index,C,64,poverty_rate_march,2025,5.17
-CC4 Poverty & Resilience Index,C,65,poverty_rate_march,2025,5.54
-CC4 Poverty & Resilience Index,C,71,poverty_rate_march,2025,6.71
-CC4 Poverty & Resilience Index,C,72,poverty_rate_march,2025,10.92
-CC4 Poverty & Resilience Index,C,73,poverty_rate_march,2025,7.6
-CC4 Poverty & Resilience Index,C,74,poverty_rate_march,2025,10.54
-CC4 Poverty & Resilience Index,C,75,poverty_rate_march,2025,13.24
-CC4 Poverty & Resilience Index,C,76,poverty_rate_march,2025,10.41
-CC4 Poverty & Resilience Index,C,81,poverty_rate_march,2025,15.38
-CC4 Poverty & Resilience Index,C,82,poverty_rate_march,2025,5.81
-CC4 Poverty & Resilience Index,C,91,poverty_rate_march,2025,20.66
-CC4 Poverty & Resilience Index,C,92,poverty_rate_march,2025,17.95
-CC4 Poverty & Resilience Index,C,94,poverty_rate_march,2025,19.16
-CC4 Poverty & Resilience Index,C,95,poverty_rate_march,2025,19.71
-CC4 Poverty & Resilience Index,C,96,poverty_rate_march,2025,28.9
-CC4 Poverty & Resilience Index,C,97,poverty_rate_march,2025,30.03
-CC4 Poverty & Resilience Index,D,11,poverty_depth_march,2025,1.84
-CC4 Poverty & Resilience Index,D,12,poverty_depth_march,2025,1.13
-CC4 Poverty & Resilience Index,D,13,poverty_depth_march,2025,0.74
-CC4 Poverty & Resilience Index,D,14,poverty_depth_march,2025,0.87
-CC4 Poverty & Resilience Index,D,15,poverty_depth_march,2025,0.98
-CC4 Poverty & Resilience Index,D,16,poverty_depth_march,2025,1.64
-CC4 Poverty & Resilience Index,D,17,poverty_depth_march,2025,1.83
-CC4 Poverty & Resilience Index,D,18,poverty_depth_march,2025,1.54
-CC4 Poverty & Resilience Index,D,19,poverty_depth_march,2025,0.65
-CC4 Poverty & Resilience Index,D,21,poverty_depth_march,2025,0.69
-CC4 Poverty & Resilience Index,D,31,poverty_depth_march,2025,0.57
-CC4 Poverty & Resilience Index,D,32,poverty_depth_march,2025,1.17
-CC4 Poverty & Resilience Index,D,33,poverty_depth_march,2025,1.56
-CC4 Poverty & Resilience Index,D,34,poverty_depth_march,2025,1.59
-CC4 Poverty & Resilience Index,D,35,poverty_depth_march,2025,1.41
-CC4 Poverty & Resilience Index,D,36,poverty_depth_march,2025,0.85
-CC4 Poverty & Resilience Index,D,51,poverty_depth_march,2025,0.56
-CC4 Poverty & Resilience Index,D,52,poverty_depth_march,2025,1.76
-CC4 Poverty & Resilience Index,D,53,poverty_depth_march,2025,3.35
-CC4 Poverty & Resilience Index,D,61,poverty_depth_march,2025,0.86
-CC4 Poverty & Resilience Index,D,62,poverty_depth_march,2025,0.83
-CC4 Poverty & Resilience Index,D,63,poverty_depth_march,2025,0.47
-CC4 Poverty & Resilience Index,D,64,poverty_depth_march,2025,0.88
-CC4 Poverty & Resilience Index,D,65,poverty_depth_march,2025,0.75
-CC4 Poverty & Resilience Index,D,71,poverty_depth_march,2025,1.11
-CC4 Poverty & Resilience Index,D,72,poverty_depth_march,2025,2.21
-CC4 Poverty & Resilience Index,D,73,poverty_depth_march,2025,1.4
-CC4 Poverty & Resilience Index,D,74,poverty_depth_march,2025,1.89
-CC4 Poverty & Resilience Index,D,75,poverty_depth_march,2025,1.96
-CC4 Poverty & Resilience Index,D,76,poverty_depth_march,2025,1.71
-CC4 Poverty & Resilience Index,D,81,poverty_depth_march,2025,2.95
-CC4 Poverty & Resilience Index,D,82,poverty_depth_march,2025,0.95
-CC4 Poverty & Resilience Index,D,91,poverty_depth_march,2025,4.17
-CC4 Poverty & Resilience Index,D,92,poverty_depth_march,2025,4.53
-CC4 Poverty & Resilience Index,D,94,poverty_depth_march,2025,4.58
-CC4 Poverty & Resilience Index,D,95,poverty_depth_march,2025,4.23
-CC4 Poverty & Resilience Index,D,96,poverty_depth_march,2025,5.58
-CC4 Poverty & Resilience Index,D,97,poverty_depth_march,2025,5.62
+CC1 Labor Market Sensit. Index,C,11,mining_employment_share,Aug 2025,1.174819791
+CC1 Labor Market Sensit. Index,C,12,mining_employment_share,Aug 2025,0.4940904104
+CC1 Labor Market Sensit. Index,C,13,mining_employment_share,Aug 2025,1.653988528
+CC1 Labor Market Sensit. Index,C,14,mining_employment_share,Aug 2025,1.349453694
+CC1 Labor Market Sensit. Index,C,15,mining_employment_share,Aug 2025,3.923020265
+CC1 Labor Market Sensit. Index,C,16,mining_employment_share,Aug 2025,1.985431959
+CC1 Labor Market Sensit. Index,C,17,mining_employment_share,Aug 2025,0.8814399991
+CC1 Labor Market Sensit. Index,C,18,mining_employment_share,Aug 2025,0.4895766391
+CC1 Labor Market Sensit. Index,C,19,mining_employment_share,Aug 2025,13.30876148
+CC1 Labor Market Sensit. Index,C,21,mining_employment_share,Aug 2025,0.771216046
+CC1 Labor Market Sensit. Index,C,31,mining_employment_share,Aug 2025,0.1959456087
+CC1 Labor Market Sensit. Index,C,32,mining_employment_share,Aug 2025,0.5391186106
+CC1 Labor Market Sensit. Index,C,33,mining_employment_share,Aug 2025,0.5215630108
+CC1 Labor Market Sensit. Index,C,34,mining_employment_share,Aug 2025,0.269036772
+CC1 Labor Market Sensit. Index,C,35,mining_employment_share,Aug 2025,0.4196246264
+CC1 Labor Market Sensit. Index,C,36,mining_employment_share,Aug 2025,0.4288102384
+CC1 Labor Market Sensit. Index,C,51,mining_employment_share,Aug 2025,0.1612672788
+CC1 Labor Market Sensit. Index,C,52,mining_employment_share,Aug 2025,1.33165783
+CC1 Labor Market Sensit. Index,C,53,mining_employment_share,Aug 2025,0.4431449036
+CC1 Labor Market Sensit. Index,C,61,mining_employment_share,Aug 2025,4.362428475
+CC1 Labor Market Sensit. Index,C,62,mining_employment_share,Aug 2025,10.6887788
+CC1 Labor Market Sensit. Index,C,63,mining_employment_share,Aug 2025,4.382020854
+CC1 Labor Market Sensit. Index,C,64,mining_employment_share,Aug 2025,8.590072086
+CC1 Labor Market Sensit. Index,C,65,mining_employment_share,Aug 2025,4.05205848
+CC1 Labor Market Sensit. Index,C,71,mining_employment_share,Aug 2025,4.030887016
+CC1 Labor Market Sensit. Index,C,72,mining_employment_share,Aug 2025,2.081137626
+CC1 Labor Market Sensit. Index,C,73,mining_employment_share,Aug 2025,0.7487376229
+CC1 Labor Market Sensit. Index,C,74,mining_employment_share,Aug 2025,2.522815026
+CC1 Labor Market Sensit. Index,C,75,mining_employment_share,Aug 2025,4.374801623
+CC1 Labor Market Sensit. Index,C,76,mining_employment_share,Aug 2025,0.2633574578
+CC1 Labor Market Sensit. Index,C,81,mining_employment_share,Aug 2025,1.880678948
+CC1 Labor Market Sensit. Index,C,82,mining_employment_share,Aug 2025,2.907242641
+CC1 Labor Market Sensit. Index,C,91,mining_employment_share,Aug 2025,0.7047651419
+CC1 Labor Market Sensit. Index,C,92,mining_employment_share,Aug 2025,2.374926291
+CC1 Labor Market Sensit. Index,C,94,mining_employment_share,Aug 2025,0.5704858807
+CC1 Labor Market Sensit. Index,C,96,mining_employment_share,Aug 2025,2.288801236
+CC1 Labor Market Sensit. Index,D,11,mining_relative_wage,Aug 2025,1.509552356
+CC1 Labor Market Sensit. Index,D,12,mining_relative_wage,Aug 2025,1.083266609
+CC1 Labor Market Sensit. Index,D,13,mining_relative_wage,Aug 2025,1.201136204
+CC1 Labor Market Sensit. Index,D,14,mining_relative_wage,Aug 2025,1.607285464
+CC1 Labor Market Sensit. Index,D,15,mining_relative_wage,Aug 2025,1.624912036
+CC1 Labor Market Sensit. Index,D,16,mining_relative_wage,Aug 2025,2.251462411
+CC1 Labor Market Sensit. Index,D,17,mining_relative_wage,Aug 2025,1.406279156
+CC1 Labor Market Sensit. Index,D,18,mining_relative_wage,Aug 2025,1.06264731
+CC1 Labor Market Sensit. Index,D,19,mining_relative_wage,Aug 2025,0.9499817341
+CC1 Labor Market Sensit. Index,D,21,mining_relative_wage,Aug 2025,1.180753996
+CC1 Labor Market Sensit. Index,D,31,mining_relative_wage,Aug 2025,2.135597702
+CC1 Labor Market Sensit. Index,D,32,mining_relative_wage,Aug 2025,1.43529251
+CC1 Labor Market Sensit. Index,D,33,mining_relative_wage,Aug 2025,1.364088559
+CC1 Labor Market Sensit. Index,D,35,mining_relative_wage,Aug 2025,1.388401952
+CC1 Labor Market Sensit. Index,D,36,mining_relative_wage,Aug 2025,1.319550975
+CC1 Labor Market Sensit. Index,D,51,mining_relative_wage,Aug 2025,1.141423081
+CC1 Labor Market Sensit. Index,D,52,mining_relative_wage,Aug 2025,1.375996864
+CC1 Labor Market Sensit. Index,D,53,mining_relative_wage,Aug 2025,1.028111884
+CC1 Labor Market Sensit. Index,D,61,mining_relative_wage,Aug 2025,1.047092117
+CC1 Labor Market Sensit. Index,D,62,mining_relative_wage,Aug 2025,1.23241492
+CC1 Labor Market Sensit. Index,D,63,mining_relative_wage,Aug 2025,1.572361336
+CC1 Labor Market Sensit. Index,D,64,mining_relative_wage,Aug 2025,1.481866842
+CC1 Labor Market Sensit. Index,D,65,mining_relative_wage,Aug 2025,1.563932685
+CC1 Labor Market Sensit. Index,D,71,mining_relative_wage,Aug 2025,1.259023922
+CC1 Labor Market Sensit. Index,D,72,mining_relative_wage,Aug 2025,1.377072235
+CC1 Labor Market Sensit. Index,D,73,mining_relative_wage,Aug 2025,1.815504258
+CC1 Labor Market Sensit. Index,D,74,mining_relative_wage,Aug 2025,1.358335392
+CC1 Labor Market Sensit. Index,D,75,mining_relative_wage,Aug 2025,1.153627997
+CC1 Labor Market Sensit. Index,D,76,mining_relative_wage,Aug 2025,2.051222741
+CC1 Labor Market Sensit. Index,D,81,mining_relative_wage,Aug 2025,1.097374391
+CC1 Labor Market Sensit. Index,D,82,mining_relative_wage,Aug 2025,1.680493915
+CC1 Labor Market Sensit. Index,D,91,mining_relative_wage,Aug 2025,1.374668379
+CC1 Labor Market Sensit. Index,D,92,mining_relative_wage,Aug 2025,1.242419189
+CC1 Labor Market Sensit. Index,D,94,mining_relative_wage,Aug 2025,1.096993321
+CC1 Labor Market Sensit. Index,D,96,mining_relative_wage,Aug 2025,2.036412389
+CC1 Labor Market Sensit. Index,E,11,jkn,2025,98.18
+CC1 Labor Market Sensit. Index,E,12,jkn,2025,68.69
+CC1 Labor Market Sensit. Index,E,13,jkn,2025,78.19
+CC1 Labor Market Sensit. Index,E,14,jkn,2025,73.3
+CC1 Labor Market Sensit. Index,E,15,jkn,2025,61.04
+CC1 Labor Market Sensit. Index,E,16,jkn,2025,73.33
+CC1 Labor Market Sensit. Index,E,17,jkn,2025,76.2
+CC1 Labor Market Sensit. Index,E,18,jkn,2025,71.9
+CC1 Labor Market Sensit. Index,E,19,jkn,2025,84.11
+CC1 Labor Market Sensit. Index,E,21,jkn,2025,80
+CC1 Labor Market Sensit. Index,E,31,jkn,2025,91.69
+CC1 Labor Market Sensit. Index,E,32,jkn,2025,70.62
+CC1 Labor Market Sensit. Index,E,33,jkn,2025,72.96
+CC1 Labor Market Sensit. Index,E,34,jkn,2025,89.27
+CC1 Labor Market Sensit. Index,E,35,jkn,2025,73.86
+CC1 Labor Market Sensit. Index,E,36,jkn,2025,74.49
+CC1 Labor Market Sensit. Index,E,51,jkn,2025,89.15
+CC1 Labor Market Sensit. Index,E,52,jkn,2025,71.73
+CC1 Labor Market Sensit. Index,E,53,jkn,2025,77.45
+CC1 Labor Market Sensit. Index,E,61,jkn,2025,68.92
+CC1 Labor Market Sensit. Index,E,62,jkn,2025,67.89
+CC1 Labor Market Sensit. Index,E,63,jkn,2025,74.32
+CC1 Labor Market Sensit. Index,E,64,jkn,2025,83
+CC1 Labor Market Sensit. Index,E,65,jkn,2025,88.4
+CC1 Labor Market Sensit. Index,E,71,jkn,2025,83.46
+CC1 Labor Market Sensit. Index,E,72,jkn,2025,80.86
+CC1 Labor Market Sensit. Index,E,73,jkn,2025,86.56
+CC1 Labor Market Sensit. Index,E,74,jkn,2025,84.19
+CC1 Labor Market Sensit. Index,E,75,jkn,2025,87.21
+CC1 Labor Market Sensit. Index,E,76,jkn,2025,89.32
+CC1 Labor Market Sensit. Index,E,81,jkn,2025,65.53
+CC1 Labor Market Sensit. Index,E,82,jkn,2025,73.41
+CC1 Labor Market Sensit. Index,E,91,jkn,2025,76.74
+CC1 Labor Market Sensit. Index,E,92,jkn,2025,84.13
+CC1 Labor Market Sensit. Index,E,94,jkn,2025,79.9
+CC1 Labor Market Sensit. Index,E,95,jkn,2025,92.19
+CC1 Labor Market Sensit. Index,E,96,jkn,2025,70.83
+CC1 Labor Market Sensit. Index,E,97,jkn,2025,96.31
+CC2 Econ. Depend. & Diver Index,C,11,coal_share,2025,1.709889632
+CC2 Econ. Depend. & Diver Index,C,12,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,13,coal_share,2025,0.0848975976
+CC2 Econ. Depend. & Diver Index,C,14,coal_share,2025,0.2220772043
+CC2 Econ. Depend. & Diver Index,C,15,coal_share,2025,3.093264086
+CC2 Econ. Depend. & Diver Index,C,16,coal_share,2025,13.92631265
+CC2 Econ. Depend. & Diver Index,C,17,coal_share,2025,1.856405762
+CC2 Econ. Depend. & Diver Index,C,18,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,19,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,21,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,31,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,32,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,33,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,34,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,35,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,36,coal_share,2025,0.01527444873
+CC2 Econ. Depend. & Diver Index,C,51,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,52,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,53,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,61,coal_share,2025,0.0003043491493
+CC2 Econ. Depend. & Diver Index,C,62,coal_share,2025,7.144812824
+CC2 Econ. Depend. & Diver Index,C,63,coal_share,2025,26.33362502
+CC2 Econ. Depend. & Diver Index,C,64,coal_share,2025,25.09366497
+CC2 Econ. Depend. & Diver Index,C,65,coal_share,2025,19.23461474
+CC2 Econ. Depend. & Diver Index,C,71,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,72,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,73,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,74,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,75,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,76,coal_share,2025,0.001405244372
+CC2 Econ. Depend. & Diver Index,C,81,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,82,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,91,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,92,coal_share,2025,0.002549719531
+CC2 Econ. Depend. & Diver Index,C,94,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,95,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,96,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,C,97,coal_share,2025,0
+CC2 Econ. Depend. & Diver Index,D,11,coal_growth,2024-2025,12.60638298
+CC2 Econ. Depend. & Diver Index,D,13,coal_growth,2024-2025,-8.239700375
+CC2 Econ. Depend. & Diver Index,D,14,coal_growth,2024-2025,-14.62841016
+CC2 Econ. Depend. & Diver Index,D,15,coal_growth,2024-2025,11.75472613
+CC2 Econ. Depend. & Diver Index,D,16,coal_growth,2024-2025,7.109986194
+CC2 Econ. Depend. & Diver Index,D,17,coal_growth,2024-2025,-19.37321937
+CC2 Econ. Depend. & Diver Index,D,36,coal_growth,2024-2025,-16.09195402
+CC2 Econ. Depend. & Diver Index,D,61,coal_growth,2024-2025,-66.66666667
+CC2 Econ. Depend. & Diver Index,D,62,coal_growth,2024-2025,1.521448716
+CC2 Econ. Depend. & Diver Index,D,63,coal_growth,2024-2025,-0.09742120344
+CC2 Econ. Depend. & Diver Index,D,64,coal_growth,2024-2025,-0.6008530095
+CC2 Econ. Depend. & Diver Index,D,65,coal_growth,2024-2025,-1.109558642
+CC4 Poverty & Resilience Index,C,11,poverty_rate,2025,12.33
+CC4 Poverty & Resilience Index,C,12,poverty_rate,2025,7.36
+CC4 Poverty & Resilience Index,C,13,poverty_rate,2025,5.35
+CC4 Poverty & Resilience Index,C,14,poverty_rate,2025,6.16
+CC4 Poverty & Resilience Index,C,15,poverty_rate,2025,7.19
+CC4 Poverty & Resilience Index,C,16,poverty_rate,2025,10.15
+CC4 Poverty & Resilience Index,C,17,poverty_rate,2025,12.08
+CC4 Poverty & Resilience Index,C,18,poverty_rate,2025,10
+CC4 Poverty & Resilience Index,C,19,poverty_rate,2025,5
+CC4 Poverty & Resilience Index,C,21,poverty_rate,2025,4.44
+CC4 Poverty & Resilience Index,C,31,poverty_rate,2025,4.28
+CC4 Poverty & Resilience Index,C,32,poverty_rate,2025,7.02
+CC4 Poverty & Resilience Index,C,33,poverty_rate,2025,9.48
+CC4 Poverty & Resilience Index,C,34,poverty_rate,2025,10.23
+CC4 Poverty & Resilience Index,C,35,poverty_rate,2025,9.5
+CC4 Poverty & Resilience Index,C,36,poverty_rate,2025,5.63
+CC4 Poverty & Resilience Index,C,51,poverty_rate,2025,3.72
+CC4 Poverty & Resilience Index,C,52,poverty_rate,2025,11.78
+CC4 Poverty & Resilience Index,C,53,poverty_rate,2025,18.6
+CC4 Poverty & Resilience Index,C,61,poverty_rate,2025,6.16
+CC4 Poverty & Resilience Index,C,62,poverty_rate,2025,5.19
+CC4 Poverty & Resilience Index,C,63,poverty_rate,2025,3.84
+CC4 Poverty & Resilience Index,C,64,poverty_rate,2025,5.17
+CC4 Poverty & Resilience Index,C,65,poverty_rate,2025,5.54
+CC4 Poverty & Resilience Index,C,71,poverty_rate,2025,6.71
+CC4 Poverty & Resilience Index,C,72,poverty_rate,2025,10.92
+CC4 Poverty & Resilience Index,C,73,poverty_rate,2025,7.6
+CC4 Poverty & Resilience Index,C,74,poverty_rate,2025,10.54
+CC4 Poverty & Resilience Index,C,75,poverty_rate,2025,13.24
+CC4 Poverty & Resilience Index,C,76,poverty_rate,2025,10.41
+CC4 Poverty & Resilience Index,C,81,poverty_rate,2025,15.38
+CC4 Poverty & Resilience Index,C,82,poverty_rate,2025,5.81
+CC4 Poverty & Resilience Index,C,91,poverty_rate,2025,20.66
+CC4 Poverty & Resilience Index,C,92,poverty_rate,2025,17.95
+CC4 Poverty & Resilience Index,C,94,poverty_rate,2025,19.16
+CC4 Poverty & Resilience Index,C,95,poverty_rate,2025,19.71
+CC4 Poverty & Resilience Index,C,96,poverty_rate,2025,28.9
+CC4 Poverty & Resilience Index,C,97,poverty_rate,2025,30.03
+CC4 Poverty & Resilience Index,D,11,poverty_depth,2025,1.84
+CC4 Poverty & Resilience Index,D,12,poverty_depth,2025,1.13
+CC4 Poverty & Resilience Index,D,13,poverty_depth,2025,0.74
+CC4 Poverty & Resilience Index,D,14,poverty_depth,2025,0.87
+CC4 Poverty & Resilience Index,D,15,poverty_depth,2025,0.98
+CC4 Poverty & Resilience Index,D,16,poverty_depth,2025,1.64
+CC4 Poverty & Resilience Index,D,17,poverty_depth,2025,1.83
+CC4 Poverty & Resilience Index,D,18,poverty_depth,2025,1.54
+CC4 Poverty & Resilience Index,D,19,poverty_depth,2025,0.65
+CC4 Poverty & Resilience Index,D,21,poverty_depth,2025,0.69
+CC4 Poverty & Resilience Index,D,31,poverty_depth,2025,0.57
+CC4 Poverty & Resilience Index,D,32,poverty_depth,2025,1.17
+CC4 Poverty & Resilience Index,D,33,poverty_depth,2025,1.56
+CC4 Poverty & Resilience Index,D,34,poverty_depth,2025,1.59
+CC4 Poverty & Resilience Index,D,35,poverty_depth,2025,1.41
+CC4 Poverty & Resilience Index,D,36,poverty_depth,2025,0.85
+CC4 Poverty & Resilience Index,D,51,poverty_depth,2025,0.56
+CC4 Poverty & Resilience Index,D,52,poverty_depth,2025,1.76
+CC4 Poverty & Resilience Index,D,53,poverty_depth,2025,3.35
+CC4 Poverty & Resilience Index,D,61,poverty_depth,2025,0.86
+CC4 Poverty & Resilience Index,D,62,poverty_depth,2025,0.83
+CC4 Poverty & Resilience Index,D,63,poverty_depth,2025,0.47
+CC4 Poverty & Resilience Index,D,64,poverty_depth,2025,0.88
+CC4 Poverty & Resilience Index,D,65,poverty_depth,2025,0.75
+CC4 Poverty & Resilience Index,D,71,poverty_depth,2025,1.11
+CC4 Poverty & Resilience Index,D,72,poverty_depth,2025,2.21
+CC4 Poverty & Resilience Index,D,73,poverty_depth,2025,1.4
+CC4 Poverty & Resilience Index,D,74,poverty_depth,2025,1.89
+CC4 Poverty & Resilience Index,D,75,poverty_depth,2025,1.96
+CC4 Poverty & Resilience Index,D,76,poverty_depth,2025,1.71
+CC4 Poverty & Resilience Index,D,81,poverty_depth,2025,2.95
+CC4 Poverty & Resilience Index,D,82,poverty_depth,2025,0.95
+CC4 Poverty & Resilience Index,D,91,poverty_depth,2025,4.17
+CC4 Poverty & Resilience Index,D,92,poverty_depth,2025,4.53
+CC4 Poverty & Resilience Index,D,94,poverty_depth,2025,4.58
+CC4 Poverty & Resilience Index,D,95,poverty_depth,2025,4.23
+CC4 Poverty & Resilience Index,D,96,poverty_depth,2025,5.58
+CC4 Poverty & Resilience Index,D,97,poverty_depth,2025,5.62
 CC5 Adapt. Capacity Defisit Ind,C,11,ipm,2025,76.23
 CC5 Adapt. Capacity Defisit Ind,C,12,ipm,2025,76.47
 CC5 Adapt. Capacity Defisit Ind,C,13,ipm,2025,77.27
@@ -113,41 +272,113 @@ CC5 Adapt. Capacity Defisit Ind,C,94,ipm,2025,74.69
 CC5 Adapt. Capacity Defisit Ind,C,95,ipm,2025,69.54
 CC5 Adapt. Capacity Defisit Ind,C,96,ipm,2025,60.64
 CC5 Adapt. Capacity Defisit Ind,C,97,ipm,2025,54.91
-CC5 Adapt. Capacity Defisit Ind,D,11,low_education_share,2025,41.81177037
-CC5 Adapt. Capacity Defisit Ind,D,12,low_education_share,2025,41.02234214
-CC5 Adapt. Capacity Defisit Ind,D,13,low_education_share,2025,46.52532215
-CC5 Adapt. Capacity Defisit Ind,D,14,low_education_share,2025,45.08922496
-CC5 Adapt. Capacity Defisit Ind,D,15,low_education_share,2025,51.21240005
-CC5 Adapt. Capacity Defisit Ind,D,16,low_education_share,2025,54.22343628
-CC5 Adapt. Capacity Defisit Ind,D,17,low_education_share,2025,48.85827922
-CC5 Adapt. Capacity Defisit Ind,D,18,low_education_share,2025,58.16582969
-CC5 Adapt. Capacity Defisit Ind,D,19,low_education_share,2025,51.12297845
-CC5 Adapt. Capacity Defisit Ind,D,21,low_education_share,2025,30.99712446
-CC5 Adapt. Capacity Defisit Ind,D,31,low_education_share,2025,24.4888333
-CC5 Adapt. Capacity Defisit Ind,D,32,low_education_share,2025,53.92027095
-CC5 Adapt. Capacity Defisit Ind,D,33,low_education_share,2025,60.31083504
-CC5 Adapt. Capacity Defisit Ind,D,34,low_education_share,2025,41.66042823
-CC5 Adapt. Capacity Defisit Ind,D,35,low_education_share,2025,57.34417253
-CC5 Adapt. Capacity Defisit Ind,D,36,low_education_share,2025,47.77844607
-CC5 Adapt. Capacity Defisit Ind,D,51,low_education_share,2025,41.89336743
-CC5 Adapt. Capacity Defisit Ind,D,52,low_education_share,2025,55.00688988
-CC5 Adapt. Capacity Defisit Ind,D,53,low_education_share,2025,52.40812421
-CC5 Adapt. Capacity Defisit Ind,D,61,low_education_share,2025,57.21159884
-CC5 Adapt. Capacity Defisit Ind,D,62,low_education_share,2025,51.85672679
-CC5 Adapt. Capacity Defisit Ind,D,63,low_education_share,2025,53.21430711
-CC5 Adapt. Capacity Defisit Ind,D,64,low_education_share,2025,36.48331073
-CC5 Adapt. Capacity Defisit Ind,D,65,low_education_share,2025,45.84415038
-CC5 Adapt. Capacity Defisit Ind,D,71,low_education_share,2025,43.15700427
-CC5 Adapt. Capacity Defisit Ind,D,72,low_education_share,2025,50.82239967
-CC5 Adapt. Capacity Defisit Ind,D,73,low_education_share,2025,48.89645618
-CC5 Adapt. Capacity Defisit Ind,D,74,low_education_share,2025,43.98218172
-CC5 Adapt. Capacity Defisit Ind,D,75,low_education_share,2025,55.89162797
-CC5 Adapt. Capacity Defisit Ind,D,76,low_education_share,2025,55.62214451
-CC5 Adapt. Capacity Defisit Ind,D,81,low_education_share,2025,38.37315688
-CC5 Adapt. Capacity Defisit Ind,D,82,low_education_share,2025,45.4917619
-CC5 Adapt. Capacity Defisit Ind,D,91,low_education_share,2025,45.73239041
-CC5 Adapt. Capacity Defisit Ind,D,92,low_education_share,2025,34.30408597
-CC5 Adapt. Capacity Defisit Ind,D,94,low_education_share,2025,32.1674777
-CC5 Adapt. Capacity Defisit Ind,D,95,low_education_share,2025,56.36938286
-CC5 Adapt. Capacity Defisit Ind,D,96,low_education_share,2025,77.03707359
-CC5 Adapt. Capacity Defisit Ind,D,97,low_education_share,2025,86.3775131
+CC5 Adapt. Capacity Defisit Ind,D,11,low_education_share,Aug 2025,41.81177037
+CC5 Adapt. Capacity Defisit Ind,D,12,low_education_share,Aug 2025,41.02234214
+CC5 Adapt. Capacity Defisit Ind,D,13,low_education_share,Aug 2025,46.52532215
+CC5 Adapt. Capacity Defisit Ind,D,14,low_education_share,Aug 2025,45.08922496
+CC5 Adapt. Capacity Defisit Ind,D,15,low_education_share,Aug 2025,51.21240005
+CC5 Adapt. Capacity Defisit Ind,D,16,low_education_share,Aug 2025,54.22343628
+CC5 Adapt. Capacity Defisit Ind,D,17,low_education_share,Aug 2025,48.85827922
+CC5 Adapt. Capacity Defisit Ind,D,18,low_education_share,Aug 2025,58.16582969
+CC5 Adapt. Capacity Defisit Ind,D,19,low_education_share,Aug 2025,51.12297845
+CC5 Adapt. Capacity Defisit Ind,D,21,low_education_share,Aug 2025,30.99712446
+CC5 Adapt. Capacity Defisit Ind,D,31,low_education_share,Aug 2025,24.4888333
+CC5 Adapt. Capacity Defisit Ind,D,32,low_education_share,Aug 2025,53.92027095
+CC5 Adapt. Capacity Defisit Ind,D,33,low_education_share,Aug 2025,60.31083504
+CC5 Adapt. Capacity Defisit Ind,D,34,low_education_share,Aug 2025,41.66042823
+CC5 Adapt. Capacity Defisit Ind,D,35,low_education_share,Aug 2025,57.34417253
+CC5 Adapt. Capacity Defisit Ind,D,36,low_education_share,Aug 2025,47.77844607
+CC5 Adapt. Capacity Defisit Ind,D,51,low_education_share,Aug 2025,41.89336743
+CC5 Adapt. Capacity Defisit Ind,D,52,low_education_share,Aug 2025,55.00688988
+CC5 Adapt. Capacity Defisit Ind,D,53,low_education_share,Aug 2025,52.40812421
+CC5 Adapt. Capacity Defisit Ind,D,61,low_education_share,Aug 2025,57.21159884
+CC5 Adapt. Capacity Defisit Ind,D,62,low_education_share,Aug 2025,51.85672679
+CC5 Adapt. Capacity Defisit Ind,D,63,low_education_share,Aug 2025,53.21430711
+CC5 Adapt. Capacity Defisit Ind,D,64,low_education_share,Aug 2025,36.48331073
+CC5 Adapt. Capacity Defisit Ind,D,65,low_education_share,Aug 2025,45.84415038
+CC5 Adapt. Capacity Defisit Ind,D,71,low_education_share,Aug 2025,43.15700427
+CC5 Adapt. Capacity Defisit Ind,D,72,low_education_share,Aug 2025,50.82239967
+CC5 Adapt. Capacity Defisit Ind,D,73,low_education_share,Aug 2025,48.89645618
+CC5 Adapt. Capacity Defisit Ind,D,74,low_education_share,Aug 2025,43.98218172
+CC5 Adapt. Capacity Defisit Ind,D,75,low_education_share,Aug 2025,55.89162797
+CC5 Adapt. Capacity Defisit Ind,D,76,low_education_share,Aug 2025,55.62214451
+CC5 Adapt. Capacity Defisit Ind,D,81,low_education_share,Aug 2025,38.37315688
+CC5 Adapt. Capacity Defisit Ind,D,82,low_education_share,Aug 2025,45.4917619
+CC5 Adapt. Capacity Defisit Ind,D,91,low_education_share,Aug 2025,45.73239041
+CC5 Adapt. Capacity Defisit Ind,D,92,low_education_share,Aug 2025,34.30408597
+CC5 Adapt. Capacity Defisit Ind,D,94,low_education_share,Aug 2025,32.1674777
+CC5 Adapt. Capacity Defisit Ind,D,95,low_education_share,Aug 2025,56.36938286
+CC5 Adapt. Capacity Defisit Ind,D,96,low_education_share,Aug 2025,77.03707359
+CC5 Adapt. Capacity Defisit Ind,D,97,low_education_share,Aug 2025,86.3775131
+CC6 Inclusion & Ener. Jus.Index,C,11,saidi,2024,10.38
+CC6 Inclusion & Ener. Jus.Index,C,12,saidi,2024,6.15
+CC6 Inclusion & Ener. Jus.Index,C,13,saidi,2024,6.55
+CC6 Inclusion & Ener. Jus.Index,C,14,saidi,2024,3.79
+CC6 Inclusion & Ener. Jus.Index,C,15,saidi,2024,13.93
+CC6 Inclusion & Ener. Jus.Index,C,16,saidi,2024,13.93
+CC6 Inclusion & Ener. Jus.Index,C,17,saidi,2024,13.93
+CC6 Inclusion & Ener. Jus.Index,C,18,saidi,2024,27.75
+CC6 Inclusion & Ener. Jus.Index,C,19,saidi,2024,0.88
+CC6 Inclusion & Ener. Jus.Index,C,21,saidi,2024,3.79
+CC6 Inclusion & Ener. Jus.Index,C,31,saidi,2024,0.43
+CC6 Inclusion & Ener. Jus.Index,C,32,saidi,2024,4.28
+CC6 Inclusion & Ener. Jus.Index,C,33,saidi,2024,2.95
+CC6 Inclusion & Ener. Jus.Index,C,34,saidi,2024,2.95
+CC6 Inclusion & Ener. Jus.Index,C,35,saidi,2024,1.63
+CC6 Inclusion & Ener. Jus.Index,C,36,saidi,2024,1.67
+CC6 Inclusion & Ener. Jus.Index,C,51,saidi,2024,1.04
+CC6 Inclusion & Ener. Jus.Index,C,52,saidi,2024,3.03
+CC6 Inclusion & Ener. Jus.Index,C,53,saidi,2024,1.59
+CC6 Inclusion & Ener. Jus.Index,C,61,saidi,2024,11.86
+CC6 Inclusion & Ener. Jus.Index,C,62,saidi,2024,5.89
+CC6 Inclusion & Ener. Jus.Index,C,63,saidi,2024,5.89
+CC6 Inclusion & Ener. Jus.Index,C,64,saidi,2024,8.12
+CC6 Inclusion & Ener. Jus.Index,C,65,saidi,2024,8.12
+CC6 Inclusion & Ener. Jus.Index,C,71,saidi,2024,19.48
+CC6 Inclusion & Ener. Jus.Index,C,72,saidi,2024,19.48
+CC6 Inclusion & Ener. Jus.Index,C,73,saidi,2024,7.58
+CC6 Inclusion & Ener. Jus.Index,C,74,saidi,2024,7.58
+CC6 Inclusion & Ener. Jus.Index,C,75,saidi,2024,19.48
+CC6 Inclusion & Ener. Jus.Index,C,76,saidi,2024,7.58
+CC6 Inclusion & Ener. Jus.Index,C,81,saidi,2024,1.03
+CC6 Inclusion & Ener. Jus.Index,C,82,saidi,2024,1.03
+CC6 Inclusion & Ener. Jus.Index,C,91,saidi,2024,5.57
+CC6 Inclusion & Ener. Jus.Index,C,92,saidi,2024,5.57
+CC6 Inclusion & Ener. Jus.Index,C,94,saidi,2024,5.57
+CC6 Inclusion & Ener. Jus.Index,C,95,saidi,2024,5.57
+CC6 Inclusion & Ener. Jus.Index,C,96,saidi,2024,5.57
+CC6 Inclusion & Ener. Jus.Index,C,97,saidi,2024,5.57
+CC6 Inclusion & Ener. Jus.Index,D,11,electric_lighting_bottom40,2019,99.33
+CC6 Inclusion & Ener. Jus.Index,D,12,electric_lighting_bottom40,2019,96.55
+CC6 Inclusion & Ener. Jus.Index,D,13,electric_lighting_bottom40,2019,97.24
+CC6 Inclusion & Ener. Jus.Index,D,14,electric_lighting_bottom40,2019,95.51
+CC6 Inclusion & Ener. Jus.Index,D,15,electric_lighting_bottom40,2019,98
+CC6 Inclusion & Ener. Jus.Index,D,16,electric_lighting_bottom40,2019,98.3
+CC6 Inclusion & Ener. Jus.Index,D,17,electric_lighting_bottom40,2019,97.64
+CC6 Inclusion & Ener. Jus.Index,D,18,electric_lighting_bottom40,2019,99.47
+CC6 Inclusion & Ener. Jus.Index,D,19,electric_lighting_bottom40,2019,99.86
+CC6 Inclusion & Ener. Jus.Index,D,21,electric_lighting_bottom40,2019,99.24
+CC6 Inclusion & Ener. Jus.Index,D,31,electric_lighting_bottom40,2019,100
+CC6 Inclusion & Ener. Jus.Index,D,32,electric_lighting_bottom40,2019,99.92
+CC6 Inclusion & Ener. Jus.Index,D,33,electric_lighting_bottom40,2019,99.87
+CC6 Inclusion & Ener. Jus.Index,D,34,electric_lighting_bottom40,2019,99.57
+CC6 Inclusion & Ener. Jus.Index,D,35,electric_lighting_bottom40,2019,99.82
+CC6 Inclusion & Ener. Jus.Index,D,36,electric_lighting_bottom40,2019,99.66
+CC6 Inclusion & Ener. Jus.Index,D,51,electric_lighting_bottom40,2019,99.7
+CC6 Inclusion & Ener. Jus.Index,D,52,electric_lighting_bottom40,2019,99.52
+CC6 Inclusion & Ener. Jus.Index,D,53,electric_lighting_bottom40,2019,78.23
+CC6 Inclusion & Ener. Jus.Index,D,61,electric_lighting_bottom40,2019,91.57
+CC6 Inclusion & Ener. Jus.Index,D,62,electric_lighting_bottom40,2019,97.23
+CC6 Inclusion & Ener. Jus.Index,D,63,electric_lighting_bottom40,2019,99.29
+CC6 Inclusion & Ener. Jus.Index,D,64,electric_lighting_bottom40,2019,98.88
+CC6 Inclusion & Ener. Jus.Index,D,65,electric_lighting_bottom40,2019,99.68
+CC6 Inclusion & Ener. Jus.Index,D,71,electric_lighting_bottom40,2019,99.2
+CC6 Inclusion & Ener. Jus.Index,D,72,electric_lighting_bottom40,2019,92.09
+CC6 Inclusion & Ener. Jus.Index,D,73,electric_lighting_bottom40,2019,98.36
+CC6 Inclusion & Ener. Jus.Index,D,74,electric_lighting_bottom40,2019,97.79
+CC6 Inclusion & Ener. Jus.Index,D,75,electric_lighting_bottom40,2019,97.65
+CC6 Inclusion & Ener. Jus.Index,D,76,electric_lighting_bottom40,2019,96.56
+CC6 Inclusion & Ener. Jus.Index,D,81,electric_lighting_bottom40,2019,90.81
+CC6 Inclusion & Ener. Jus.Index,D,82,electric_lighting_bottom40,2019,92
+CC6 Inclusion & Ener. Jus.Index,D,91,electric_lighting_bottom40,2019,87.14
+CC6 Inclusion & Ener. Jus.Index,D,94,electric_lighting_bottom40,2019,56.87

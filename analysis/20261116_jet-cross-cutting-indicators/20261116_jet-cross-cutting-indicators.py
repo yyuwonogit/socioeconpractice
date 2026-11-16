@@ -5,63 +5,55 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 
 import json
+import sys
+
+# Load the shared chart module from tools/ for province display names
+sys.path.insert(0, str(ROOT / "tools"))
+import charts
 
 import pandas as pd
 
 # Parameters
 
 # Datasets read; analysis scripts read data/ only
-WELFARE = ROOT / "data/20261108_bps-province-welfare/20261108_bps-province-welfare.csv"
-DEPTH_IPM = ROOT / "data/20261116_bps-province-poverty-depth-ipm/20261116_bps-province-poverty-depth-ipm.csv"
-DEPTH_IPM_META = ROOT / "data/20261116_bps-province-poverty-depth-ipm/20261116_bps-province-poverty-depth-ipm-metadata.json"
-WORKERS = ROOT / "data/20261116_bps-province-workers-by-education/20261116_bps-province-workers-by-education.csv"
+DATA = ROOT / "data"
+WELFARE = DATA / "20261108_bps-province-welfare/20261108_bps-province-welfare.csv"
+DEPTH_IPM = DATA / "20261116_bps-province-poverty-depth-ipm/20261116_bps-province-poverty-depth-ipm.csv"
+DEPTH_IPM_META = DATA / "20261116_bps-province-poverty-depth-ipm/20261116_bps-province-poverty-depth-ipm-metadata.json"
+WORKERS_EDUCATION = DATA / "20261116_bps-province-workers-by-education/20261116_bps-province-workers-by-education.csv"
+WORKERS_INDUSTRY = DATA / "20261116_bps-province-workers-by-industry/20261116_bps-province-workers-by-industry.csv"
+WAGES = DATA / "20261116_bps-province-wages-by-industry/20261116_bps-province-wages-by-industry.csv"
+JKN_ELECTRICITY = DATA / "20261116_bps-province-jkn-electricity-bottom40/20261116_bps-province-jkn-electricity-bottom40.csv"
+GRDP_INDUSTRY = DATA / "20261116_bps-province-grdp-by-industry-2021-2025/20261116_bps-province-grdp-by-industry-2021-2025.csv"
+PLN = DATA / "20261116_pln-unit-saidi-saifi-2024/20261116_pln-unit-saidi-saifi-2024.csv"
+PLN_META = DATA / "20261116_pln-unit-saidi-saifi-2024/20261116_pln-unit-saidi-saifi-2024-metadata.json"
 
 OUT_VALUES = HERE / "20261116_cross-cutting-indicator-values.csv"
 OUT_COLUMNS = HERE / "20261116_cross-cutting-indicator-columns.csv"
-
-# Use this year where every province has a value, otherwise the latest such year
-REFERENCE_YEAR = "2025"
+OUT_PLN = HERE / "20261116_pln-units-and-provinces.csv"
 
 # Template sheets, exactly as named in reference/20261116_location-selection-matrix.xlsx
+CC1 = "CC1 Labor Market Sensit. Index"
+CC2 = "CC2 Econ. Depend. & Diver Index"
 CC3 = "CC3 Fiscal & Service Sens. Inde"
 CC4 = "CC4 Poverty & Resilience Index"
 CC5 = "CC5 Adapt. Capacity Defisit Ind"
 CC6 = "CC6 Inclusion & Ener. Jus.Index"
 
-# Each filled template column: the dataset, indicator and area it takes, and how to describe it
-FILLED = [
-    {"sheet": CC4, "column": "C", "dataset": WELFARE, "indicator": "poverty_rate_march", "area": "total",
-     "label": "Poverty headcount rate P0, March (Persentase Penduduk Miskin)",
-     "definition": "Share of the population whose monthly per capita expenditure is below the provincial poverty line, urban and rural combined.",
-     "unit": "percent of population", "source": "BPS, Susenas March, WebAPI var 192; repo dataset data/20261108_bps-province-welfare"},
-    {"sheet": CC4, "column": "D", "dataset": DEPTH_IPM, "indicator": "poverty_depth_march", "area": "total",
-     "label": "Poverty depth index P1, March (Indeks Kedalaman Kemiskinan)",
-     "definition": "Average gap between the poor's expenditure and the poverty line, as a percent of the line, with the non-poor counted as zero; urban and rural combined. Higher means deeper poverty.",
-     "unit": "index", "source": "BPS, Susenas March, WebAPI var 503; repo dataset data/20261116_bps-province-poverty-depth-ipm"},
-    {"sheet": CC5, "column": "C", "dataset": DEPTH_IPM, "indicator": "ipm", "area": "",
-     "label": "Human Development Index, IPM (Indeks Pembangunan Manusia)",
-     "definition": "Geometric mean of health (life expectancy, UHH), education (expected and mean years of schooling, HLS and RLS) and standard of living (adjusted per capita expenditure). Life expectancy from the SP2020 Long Form. Higher means more capacity, so a deficit index would invert it.",
-     "unit": "index, 0-100", "source": "BPS, WebAPI var 2207; repo dataset data/20261116_bps-province-poverty-depth-ipm"},
-    {"sheet": CC5, "column": "D", "dataset": WORKERS, "indicator": "low_education_share", "area": "",
-     "label": "Share of workers with junior secondary schooling (SMP) or less, August",
-     "definition": "Employed persons aged 15+ whose highest completed education is primary school or less (including no schooling) or junior secondary (SMP), divided by all employed persons aged 15+, times 100. Higher means a workforce with less formal education to build on when retraining.",
-     "unit": "percent of employed persons", "source": "BPS, Keadaan Angkatan Kerja di Indonesia Agustus 2025, Tabel 107 (Sakernas August); repo dataset data/20261116_bps-province-workers-by-education"},
-]
-
-# Derived indicators: formula over a dataset's education columns (derived values belong in analysis/)
+# Education levels counted as junior secondary schooling or less
 LOW_EDUCATION = ["primary_or_less", "junior_secondary"]
 
 # Template columns not filled in this version, with the reason
 NOT_FILLED = [
-    {"sheet": CC3, "column": "C", "label": "DBH Minerba / total regional revenue (Pendapatan Daerah), province government",
-     "status": "pending: DBH Minerba 2024 allocation is built (data/20261116_djpk-province-dbh-2024); 2024 APBD total revenue still needed from DJPK"},
-    {"sheet": CC3, "column": "D", "label": "DBH Minerba / own-source revenue (PAD), province government",
-     "status": "pending: DBH Minerba 2024 allocation is built; 2024 APBD PAD still needed from DJPK"},
+    {"sheet": CC1, "column": "F", "label": "Labor Market Sensitivity Index", "status": "blank on request: index method to be set by the team"},
+    {"sheet": CC2, "column": "E", "label": "Economic Dependence & Diversification Index", "status": "blank on request: index method to be set by the team"},
+    {"sheet": CC3, "column": "C", "label": "DBH Minerba / total regional revenue (Pendapatan Daerah), province government, 2024",
+     "status": "pending: DBH Minerba 2024 allocation is built (data/20261116_djpk-province-dbh-2024); 2024 APBD total revenue still needed"},
+    {"sheet": CC3, "column": "D", "label": "DBH Minerba / own-source revenue (PAD), province government, 2024",
+     "status": "pending: DBH Minerba 2024 allocation is built; 2024 APBD PAD still needed"},
     {"sheet": CC3, "column": "E", "label": "Fiscal & Service Sensitivity Index", "status": "blank on request: index method to be set by the team"},
     {"sheet": CC4, "column": "E", "label": "Poverty & Resilience Index", "status": "blank on request: index method to be set by the team"},
     {"sheet": CC5, "column": "E", "label": "Adaptive Capacity Deficit Index", "status": "blank on request: index method to be set by the team"},
-    {"sheet": CC6, "column": "C", "label": "Electricity reliability", "status": "blank on request: indicator to be set by the team"},
-    {"sheet": CC6, "column": "D", "label": "TBD", "status": "blank on request: indicator to be set by the team"},
     {"sheet": CC6, "column": "E", "label": "Inclusion & Energy Justice Index", "status": "blank on request: index method to be set by the team"},
 ]
 
@@ -69,49 +61,182 @@ NOT_FILLED = [
 
 def read(path):
     """Read a long dataset with codes and periods kept as text."""
-    return pd.read_csv(path, dtype={"province_code": str, "area": str, "period": str, "status": str}, keep_default_na=False)
+    return pd.read_csv(path, dtype={"province_code": str, "area": str, "period": str, "status": str, "sector": str,
+                                    "education": str, "unit": str}, keep_default_na=False)
 
 
-def low_education_share(path):
-    """Return the share of workers with junior secondary schooling or less, in the long layout of the other datasets."""
+def wide(path, column, **where):
+    """Return one indicator and period of a dataset as province rows by sector or education column."""
     df = read(path)
-    wide = df.pivot_table(index=["province_code", "period"], columns="education", values="value")
-    share = wide[LOW_EDUCATION].sum(axis=1) / wide["TOTAL"] * 100
-    return share.rename("value").reset_index().assign(indicator="low_education_share", area="")
+    for k, v in where.items():
+        df = df[df[k] == v]
+    return df.pivot(index="province_code", columns=column, values="value")
 
 
-def pick_year(df, provinces):
-    """Return REFERENCE_YEAR if every province has a value in it, otherwise the latest year where all do."""
-    complete = sorted(p for p, g in df.groupby("period") if set(g["province_code"]) >= provinces)
-    if not complete:
-        raise ValueError("no year covers every province")
-    return REFERENCE_YEAR if REFERENCE_YEAR in complete else complete[-1]
+def poverty_rate():
+    """CC4 C: P0, March, urban and rural combined, 2025."""
+    df = read(WELFARE)
+    s = df[(df["indicator"] == "poverty_rate_march") & (df["area"] == "total") & (df["period"] == "2025")].set_index("province_code")["value"]
+    return s, "2025", {}
+
+
+def poverty_depth():
+    """CC4 D: P1, March, urban and rural combined, 2025."""
+    df = read(DEPTH_IPM)
+    s = df[(df["indicator"] == "poverty_depth_march") & (df["area"] == "total") & (df["period"] == "2025")].set_index("province_code")["value"]
+    return s, "2025", {}
+
+
+def ipm():
+    """CC5 C: Human Development Index, 2025."""
+    df = read(DEPTH_IPM)
+    return df[(df["indicator"] == "ipm") & (df["period"] == "2025")].set_index("province_code")["value"], "2025", {}
+
+
+def low_education_share():
+    """CC5 D: workers with junior secondary schooling or less, percent of all workers, August 2025."""
+    w = wide(WORKERS_EDUCATION, "education", period="2025")
+    return w[LOW_EDUCATION].sum(axis=1) / w["TOTAL"] * 100, "Aug 2025", {}
+
+
+def mining_employment_share():
+    """CC1 C: mining and quarrying workers, percent of all workers, August 2025."""
+    w = wide(WORKERS_INDUSTRY, "sector", period="2025")
+    blank = {c: "BPS publishes no estimate (NA) for mining employment" for c in w.index[w["B"].isna()]}
+    return (w["B"] / w["TOTAL"] * 100).dropna(), "Aug 2025", blank
+
+
+def mining_relative_wage():
+    """CC1 D: mining employees' average monthly wage divided by all employees' average in the province, August 2025."""
+    w = wide(WAGES, "sector", indicator="wage_monthly_august", period="2025")
+    blank = {c: "BPS suppresses the mining wage (relative standard error 50% or more)" for c in w.index[w["B"].isna()]}
+    return (w["B"] / w["TOTAL"]).dropna(), "Aug 2025", blank
+
+
+def jkn():
+    """CC1 E: share of the population with JKN health insurance, 2025."""
+    df = read(JKN_ELECTRICITY)
+    return df[(df["indicator"] == "jkn_coverage") & (df["period"] == "2025")].set_index("province_code")["value"], "2025", {}
+
+
+def coal_share():
+    """CC2 C: coal mining (B2) share of GRDP at current prices, 2025; 0 where BPS shows no coal output."""
+    w = wide(GRDP_INDUSTRY, "sector", indicator="grdp_current", period="2025")
+    return w["B2"].fillna(0) / w["TOTAL"] * 100, "2025", {}
+
+
+def coal_growth():
+    """CC2 D: real growth of coal mining (B2) at constant 2010 prices, 2024 to 2025, percent."""
+    a = wide(GRDP_INDUSTRY, "sector", indicator="grdp_constant", period="2024")["B2"]
+    b = wide(GRDP_INDUSTRY, "sector", indicator="grdp_constant", period="2025")["B2"]
+    growth = ((b / a - 1) * 100).dropna()
+    blank = {c: "no coal mining output in 2024 or 2025 (BPS shows – or under Rp 0.5 billion)" for c in a.index if c not in growth.index}
+    return growth, "2024-2025", blank
+
+
+def saidi():
+    """CC6 C: SAIDI 2024 of the PLN unit serving each province (shared within multi-province units)."""
+    meta = json.loads(PLN_META.read_text(encoding="utf-8"))
+    df = read(PLN)
+    value = df[df["indicator"] == "saidi"].set_index("unit")["value"]
+    return pd.Series({p: value[x["unit"]] for p, x in meta["province_unit"].items()}), "2024", {}
+
+
+def electric_lighting_bottom40():
+    """CC6 D: poorest 40% of households with electric lighting, 2019 (latest BPS year)."""
+    df = read(JKN_ELECTRICITY)
+    s = df[(df["indicator"] == "electric_lighting_bottom40") & (df["period"] == "2019")].set_index("province_code")["value"]
+    blank = {c: "BPS stopped this table in 2019, before the province had separate figures" for c in ["92", "95", "96", "97"]}
+    return s, "2019", blank
+
+
+# Each filled column: how its values are made, and how the sheet and Notes describe it
+FILLED = [
+    {"sheet": CC1, "column": "C", "make": mining_employment_share,
+     "label": "Mining & quarrying (B) workers, % of all workers", "unit": "% of employed persons", "short_source": "BPS Sakernas, Tabel 112",
+     "definition": "Employed persons aged 15+ whose main job is in mining and quarrying (KBLI category B), divided by all employed persons aged 15+, times 100. BPS does not split coal from other mining at province level, so this is the closest available measure of the coal-linked workforce.",
+     "source": "BPS, Keadaan Angkatan Kerja di Indonesia Agustus 2025, Tabel 112; repo dataset data/20261116_bps-province-workers-by-industry"},
+    {"sheet": CC1, "column": "D", "make": mining_relative_wage,
+     "label": "Mining wage ÷ provincial average wage", "unit": "ratio (1 = provincial all-industry average)", "short_source": "BPS Sakernas, var 2475",
+     "definition": "Average net monthly wage of employees in mining and quarrying divided by the average net monthly wage of all employees in the same province. Above 1 means mining jobs pay more than the provincial average, so their loss costs more income.",
+     "source": "BPS WebAPI var 2475 (Sakernas August); repo dataset data/20261116_bps-province-wages-by-industry"},
+    {"sheet": CC1, "column": "E", "make": jkn,
+     "label": "Population with JKN health insurance (BPJS Kesehatan), %", "unit": "% of population", "short_source": "BPS Susenas, var 2279",
+     "definition": "Share of the population with national health insurance: BPJS PBI (state-paid), BPJS non-PBI or Jamkesda. BPJS Ketenagakerjaan (employment social security) is not included; BPS publishes no provincial table for it.",
+     "source": "BPS WebAPI var 2279 (Susenas March); repo dataset data/20261116_bps-province-jkn-electricity-bottom40"},
+    {"sheet": CC2, "column": "C", "make": coal_share,
+     "label": "Coal mining (B2) share of GRDP, %", "unit": "% of GRDP, current prices", "short_source": "BPS PDRB Provinsi 2021-2025",
+     "definition": "GRDP of coal and lignite mining (B2) divided by total GRDP, current prices, times 100. 0 where BPS shows no coal mining output. 2025 values are very preliminary (BPS **).",
+     "source": "BPS, PDRB Provinsi-Provinsi di Indonesia Menurut Lapangan Usaha 2021-2025; repo dataset data/20261116_bps-province-grdp-by-industry-2021-2025"},
+    {"sheet": CC2, "column": "D", "make": coal_growth,
+     "label": "Coal mining (B2) real growth, %", "unit": "% change, constant 2010 prices", "short_source": "BPS PDRB Provinsi 2021-2025",
+     "definition": "Change in coal and lignite mining GRDP at constant 2010 prices from 2024 to 2025, percent. Values are rounded to whole Rp billions, so provinces with very small coal output can show large swings. 2024 is preliminary and 2025 very preliminary.",
+     "source": "BPS, PDRB Provinsi-Provinsi di Indonesia Menurut Lapangan Usaha 2021-2025; repo dataset data/20261116_bps-province-grdp-by-industry-2021-2025"},
+    {"sheet": CC4, "column": "C", "make": poverty_rate,
+     "label": "Poverty rate P0, March, %", "unit": "% of population", "short_source": "BPS Susenas, var 192",
+     "definition": "Share of the population whose monthly per capita expenditure is below the provincial poverty line, urban and rural combined.",
+     "source": "BPS, Susenas March, WebAPI var 192; repo dataset data/20261108_bps-province-welfare"},
+    {"sheet": CC4, "column": "D", "make": poverty_depth,
+     "label": "Poverty depth index P1, March", "unit": "index", "short_source": "BPS Susenas, var 503",
+     "definition": "Average gap between the poor's expenditure and the poverty line, as a percent of the line, with the non-poor counted as zero; urban and rural combined. Higher means deeper poverty.",
+     "source": "BPS, Susenas March, WebAPI var 503; repo dataset data/20261116_bps-province-poverty-depth-ipm"},
+    {"sheet": CC5, "column": "C", "make": ipm,
+     "label": "Human Development Index (IPM)", "unit": "index, 0-100", "short_source": "BPS, var 2207",
+     "definition": "Geometric mean of health (life expectancy, UHH), education (expected and mean years of schooling, HLS and RLS) and standard of living (adjusted per capita expenditure). Life expectancy from the SP2020 Long Form. Higher means more capacity, so a deficit index would invert it.",
+     "source": "BPS, WebAPI var 2207; repo dataset data/20261116_bps-province-poverty-depth-ipm"},
+    {"sheet": CC5, "column": "D", "make": low_education_share,
+     "label": "Workers with junior secondary (SMP) or less, %", "unit": "% of employed persons", "short_source": "BPS Sakernas, Tabel 107",
+     "definition": "Employed persons aged 15+ whose highest completed education is primary school or less (including no schooling) or junior secondary (SMP), divided by all employed persons aged 15+, times 100.",
+     "source": "BPS, Keadaan Angkatan Kerja di Indonesia Agustus 2025, Tabel 107; repo dataset data/20261116_bps-province-workers-by-education"},
+    {"sheet": CC6, "column": "C", "make": saidi,
+     "label": "SAIDI: outage hours per customer (PLN unit value, ILLUSTRATIVE)", "unit": "hours per customer per year", "short_source": "PLN Statistik 2024, Tabel 16",
+     "definition": "System Average Interruption Duration Index of the PLN distribution unit serving the province. PLN reports by unit, not province, so provinces in one unit share its value (see sheet 'CC6 PLN units'). For illustration while the team decides how to regroup.",
+     "source": "PLN, Statistik PLN 2024, Tabel 16; repo dataset data/20261116_pln-unit-saidi-saifi-2024"},
+    {"sheet": CC6, "column": "D", "make": electric_lighting_bottom40,
+     "label": "Poorest 40% of households with electric lighting, %", "unit": "% of households in the bottom 40%", "short_source": "BPS Susenas, var 1575",
+     "definition": "Share of households in the bottom 40% of the expenditure distribution whose main lighting is electric (PLN or non-PLN). BPS stopped this table after 2019, so it is old and covers the 34 provinces of that time; Papua and Papua Barat values are for the pre-split areas.",
+     "source": "BPS WebAPI var 1575 (Susenas); repo dataset data/20261116_bps-province-jkn-electricity-bottom40"},
+]
 
 # Steps
 
-# The 38 provinces (Indonesia, code 00, is not a template row)
-provinces = set(json.loads(DEPTH_IPM_META.read_text(encoding="utf-8"))["provinces"]) - {"00"}
-assert len(provinces) == 38, len(provinces)
+# The 38 provinces and their BPS names (Indonesia, code 00, is not a template row)
+meta = json.loads(DEPTH_IPM_META.read_text(encoding="utf-8"))
+names = {c: p["name"] for c, p in meta["provinces"].items() if c != "00"}
+assert len(names) == 38
 
-# Take each filled column's values for its year, one row per province
+# Make each filled column: values for the provinces that have one, and a reason for each blank province
 values, columns = [], []
 for spec in FILLED:
-    df = low_education_share(spec["dataset"]) if spec["indicator"] == "low_education_share" else read(spec["dataset"])
-    df = df[(df["indicator"] == spec["indicator"]) & (df["area"] == spec["area"]) & df["province_code"].isin(provinces)]
-    year = pick_year(df, provinces)
-    df = df[df["period"] == year]
-    assert set(df["province_code"]) == provinces and len(df) == 38, (spec["sheet"], spec["column"])
-    values += [{"sheet": spec["sheet"], "column": spec["column"], "province_code": r.province_code, "indicator": spec["indicator"],
-                "period": year, "value": r.value} for r in df.itertuples()]
+    s, period, blank = spec["make"]()
+    s = s[s.index.isin(names)]
+    missing = set(names) - set(s.index)
+    assert missing == set(blank), (spec["sheet"], spec["column"], missing, set(blank))
+    values += [{"sheet": spec["sheet"], "column": spec["column"], "province_code": c, "indicator": spec["make"].__name__,
+                "period": period, "value": v} for c, v in s.items()]
+    reasons = {}
+    for c, why in sorted(blank.items()):
+        reasons.setdefault(why, []).append(charts.display_name(names[c]))
+    blanks = "; ".join(f"Blank for {', '.join(ps)} ({why})" for why, ps in reasons.items())
     columns.append({"sheet": spec["sheet"], "column": spec["column"], "label": spec["label"], "definition": spec["definition"],
-                    "unit": spec["unit"], "period": year, "source": spec["source"], "status": "filled"})
+                    "unit": spec["unit"], "period": period, "source": spec["source"], "status": "filled",
+                    "header_label": f"Data: {spec['label']} | {spec['unit']} | {period} | {spec['short_source']}",
+                    "blank_cells": blanks})
 
 # Describe the columns left empty
-columns += [{**c, "definition": "", "unit": "", "period": "", "source": ""} for c in NOT_FILLED]
+columns += [{**c, "definition": "", "unit": "", "period": "", "source": "", "header_label": f"Data: {c['status']}", "blank_cells": ""} for c in NOT_FILLED]
 
-# Write both tables
+# PLN units for the CC6 illustration: each unit's SAIDI, SAIFI and the provinces it serves
+pln_meta = json.loads(PLN_META.read_text(encoding="utf-8"))
+pln = read(PLN).pivot(index="unit", columns="indicator", values="value")
+units = pd.DataFrame([{"unit": u, "unit_name": x["name"], "saidi": pln.loc[u, "saidi"], "saifi": pln.loc[u, "saifi"],
+                       "province_codes": " ".join(x["provinces"]), "provinces": len(x["provinces"]), "aggregate": x["aggregate"]}
+                      for u, x in pln_meta["units"].items()])
+
+# Write the three tables
 pd.DataFrame(values).sort_values(["sheet", "column", "province_code"]).to_csv(OUT_VALUES, index=False, lineterminator="\n", float_format="%.10g")
-cols = pd.DataFrame(columns)[["sheet", "column", "label", "definition", "unit", "period", "source", "status"]]
+cols = pd.DataFrame(columns)[["sheet", "column", "label", "definition", "unit", "period", "source", "status", "header_label", "blank_cells"]]
 cols.sort_values(["sheet", "column"]).to_csv(OUT_COLUMNS, index=False, lineterminator="\n")
-print(f"{OUT_VALUES.name}: {len(values)} values; {OUT_COLUMNS.name}: {len(cols)} columns")
-print(cols[["sheet", "column", "period", "status"]].to_string(index=False))
+units.to_csv(OUT_PLN, index=False, lineterminator="\n", float_format="%.10g")
+print(f"{OUT_VALUES.name}: {len(values)} values; {OUT_COLUMNS.name}: {len(cols)} columns; {OUT_PLN.name}: {len(units)} units")
+print(cols.sort_values(["sheet", "column"])[["sheet", "column", "period", "status", "blank_cells"]].to_string(index=False, max_colwidth=70))

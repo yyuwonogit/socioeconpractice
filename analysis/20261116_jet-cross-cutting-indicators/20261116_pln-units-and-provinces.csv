@@ -1,0 +1,27 @@
+unit,unit_name,saidi,saifi,province_codes,provinces,aggregate
+ACEH,UID Aceh,10.38,5.13,11,1,False
+SUMUT,UID Sumatera Utara,6.15,3.56,12,1,False
+SUMBAR,UID Sumatera Barat,6.55,3.46,13,1,False
+RIAU_KEPRI,UID Riau dan Kepulauan Riau,3.79,1.5,14 21,2,False
+S2JB,"UID Sumatera Selatan, Jambi dan Bengkulu",13.93,5.38,16 15 17,3,False
+BABEL,UIW Bangka Belitung,0.88,1.94,19,1,False
+LAMPUNG,UID Lampung,27.75,6.33,18,1,False
+KALBAR,UID Kalimantan Barat,11.86,11.42,61,1,False
+KALSELTENG,UID Kalimantan Selatan dan Tengah,5.89,5.37,63 62,2,False
+KALTIMRA,UID Kalimantan Timur dan Utara,8.12,7.35,64 65,2,False
+SULUTTENGGO,"UID Sulawesi Utara,Tengah dan Gorontalo",19.48,8.92,71 72 75,3,False
+SULSELRABAR,"UID Sulawesi Selatan, Tenggara dan Barat",7.58,5.28,73 74 76,3,False
+MALUKU_MALUT,UIW Maluku dan Maluku Utara,1.03,2.51,81 82,2,False
+PAPUA_PABAR,UIW Papua dan Papua Barat,5.57,4.44,94 91 92 95 96 97,6,False
+BALI,UID Bali,1.04,0.91,51,1,False
+NTB,UIW Nusa Tenggara Barat,3.03,2.59,52,1,False
+NTT,UIW Nusa Tenggara Timur,1.59,2.03,53,1,False
+BATAM,PT PLN Batam,2.17,2.45,21,1,False
+OUTSIDE_JAVA,Luar Jawa,9.2,4.79,,0,True
+JATIM,UID Jawa Timur,1.63,1.78,35,1,False
+JATENG_DIY,UID Jawa Tengah dan Yogyakarta,2.95,2.28,33 34,2,False
+JABAR,UID Jawa Barat,4.28,3.11,32,1,False
+BANTEN,UID Banten,1.67,1.04,36,1,False
+JAKARTA,UID Jakarta Raya,0.43,0.65,31,1,False
+JAVA,Jawa,2.69,2.16,,0,True
+INDONESIA,Indonesia,5.34,3.23,,0,True

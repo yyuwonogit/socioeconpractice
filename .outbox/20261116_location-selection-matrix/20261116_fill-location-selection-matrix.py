@@ -12,7 +12,7 @@ import cleaning
 import hashlib
 
 import openpyxl
-from openpyxl.styles import Alignment, Font
+from openpyxl.styles import Alignment, Font, PatternFill
 import pandas as pd
 
 # Parameters
@@ -21,16 +21,26 @@ import pandas as pd
 TEMPLATE = ROOT / "reference/20261116_location-selection-matrix.xlsx"
 TEMPLATE_SHA256 = "b5bed77be7735885088a16ccbb06403e6814ab49d8b3eeeb40cb250cc6cb98d0"
 RAW_PROVINCES = ROOT / "raw/province-codes/20261102_bps-province-codes-2025-s1.json"
-VALUES = ROOT / "analysis/20261116_jet-cross-cutting-indicators/20261116_cross-cutting-indicator-values.csv"
-COLUMNS = ROOT / "analysis/20261116_jet-cross-cutting-indicators/20261116_cross-cutting-indicator-columns.csv"
+ANALYSIS = ROOT / "analysis/20261116_jet-cross-cutting-indicators"
+VALUES = ANALYSIS / "20261116_cross-cutting-indicator-values.csv"
+COLUMNS = ANALYSIS / "20261116_cross-cutting-indicator-columns.csv"
+PLN_UNITS = ANALYSIS / "20261116_pln-units-and-provinces.csv"
 
 OUT = HERE / "20261116_location-selection-matrix.xlsx"
 
 # Template rows 2-39 hold the 38 provinces in column B
 FIRST_ROW, LAST_ROW, NAME_COLUMN = 2, 39, "B"
 
-# Headers each sheet must still carry, so a changed template stops the fill
+# Headers each sheet must still carry in the template, so a changed template stops the fill
 HEADERS = {
+    "CC1 Labor Market Sensit. Index": {"B": "Province",
+                                       "C": "Employment concentration in the pathway-linked sector as a share of total local employment",
+                                       "D": "Wages relative to provincial/national average",
+                                       "E": "Social-protection coverage (BPJS Ketenagakerjaan / Kesehatan)",
+                                       "F": "Labor Market Sensitivity Index"},
+    "CC2 Econ. Depend. & Diver Index": {"B": "Province",
+                                        "C": "Sector concentration and real growth (share of GRDP and growth rate attributable to the largest pathway-linked sector)",
+                                        "D": "TBD", "E": "Economic Dependence & Diversification Index"},
     "CC3 Fiscal & Service Sens. Inde": {"B": "Province", "C": "DBH SDA / Total Pendapatan Daerah", "D": "TBD", "E": "Fiscal & Service Sensitivity Index"},
     "CC4 Poverty & Resilience Index": {"B": "Province", "C": "Poverty headcount", "D": "TBD", "E": "Poverty & Resilience Index"},
     "CC5 Adapt. Capacity Defisit Ind": {"B": "Province", "C": "IPM and components", "D": "TBD", "E": "Adaptive Capacity Defisit Index"},
@@ -39,6 +49,13 @@ HEADERS = {
 
 NUMBER_FORMAT = "0.00"
 NOTES_SHEET = "Notes"
+PLN_SHEET = "CC6 PLN units"
+
+# Header label styling: the template header stays first, the data label follows on its own lines
+LABEL_FONT = Font(italic=True, size=9, color="1F4E79")
+HEADER_ROW_HEIGHT = 120
+COLUMN_WIDTH = 30
+PENDING_FILL = PatternFill("solid", fgColor="FFF2CC")
 
 # Functions
 
@@ -46,38 +63,87 @@ def sheet_codes(ws, lookup):
     """Return template row -> BPS province code for one sheet, stopping unless all 38 provinces appear once."""
     rows = {}
     for r in range(FIRST_ROW, LAST_ROW + 1):
-        name = ws[f"{NAME_COLUMN}{r}"].value
-        rows[r] = cleaning.province_code(cleaning.english_to_bps_name(name), lookup)
+        rows[r] = cleaning.province_code(cleaning.english_to_bps_name(ws[f"{NAME_COLUMN}{r}"].value), lookup)
     if len(set(rows.values())) != 38:
         raise ValueError(f"{ws.title}: province names do not give 38 distinct codes")
     return rows
 
 
-def write_notes(wb, columns, codes, names, provinces):
-    """Add a Notes sheet: what each CC3-CC6 column holds, and how template names map to BPS codes."""
+def label_headers(ws, sheet, columns):
+    """Write each column's data label under its template header, so the sheet says what each column holds."""
+    for c in columns[columns["sheet"] == sheet].itertuples():
+        cell = ws[f"{c.column}1"]
+        cell.value = f"{HEADERS[sheet][c.column]}\n\n{c.header_label}"
+        cell.alignment = Alignment(wrap_text=True, vertical="top")
+        if c.status != "filled":
+            cell.fill = PENDING_FILL
+        ws.column_dimensions[c.column].width = max(ws.column_dimensions[c.column].width or 0, COLUMN_WIDTH)
+    ws.row_dimensions[1].height = HEADER_ROW_HEIGHT
+
+
+def write_notes(wb, columns, codes, english, provinces):
+    """Add a Notes sheet: what each CC1-CC6 column holds, which cells are blank and why, and the name matching."""
     ws = wb.create_sheet(NOTES_SHEET)
     bold, wrap = Font(bold=True), Alignment(wrap_text=True, vertical="top")
-    ws.append(["REDI4JET location selection matrix: cross-cutting indicators CC3-CC6, first version"])
+    ws.append(["REDI4JET location selection matrix: cross-cutting indicators CC1-CC6"])
     ws["A1"].font = Font(bold=True, size=12)
-    ws.append(["Values are as published by the source, unscaled. Index columns (E) are blank until the team sets the index method. Sheets FA1-FB4, CC1 and CC2 are not filled."])
+    ws.append(["Values are as published by the source, unscaled. Index columns are blank until the team sets the index method. "
+               "Each CC1-CC6 header shows the template text, then 'Data: indicator | unit | year | source'. Yellow headers are pending or blank. "
+               "Sheets FA1-FB4 are not filled."])
     ws.append([])
-    header = ["Sheet", "Column", "Template header", "Indicator used", "Definition", "Unit", "Year", "Source", "Status"]
-    ws.append(header)
+    ws.append(["Sheet", "Column", "Template header", "Indicator used", "Definition", "Unit", "Year", "Source", "Status", "Blank cells"])
     for cell in ws[ws.max_row]:
         cell.font = bold
     for c in columns.itertuples():
-        ws.append([c.sheet, c.column, HEADERS[c.sheet][c.column], c.label, c.definition, c.unit, c.period, c.source, c.status])
+        ws.append([c.sheet, c.column, HEADERS[c.sheet][c.column], c.label, c.definition, c.unit, c.period, c.source, c.status, c.blank_cells])
     ws.append([])
     ws.append(["Province rows are matched to BPS province codes by name (tools/cleaning.py, english_to_bps_name), never by row position."])
     ws.append(["Template row", "Province (template)", "BPS code", "BPS name"])
     for cell in ws[ws.max_row]:
         cell.font = bold
     for r, code in codes.items():
-        ws.append([r, names[r], code, provinces[code]["name"]])
+        ws.append([r, english[code], code, provinces[code]["name"]])
     for row in ws.iter_rows(min_row=4):
         for cell in row:
             cell.alignment = wrap
-    for col, width in zip("ABCDEFGHI", [32, 20, 34, 44, 70, 22, 8, 50, 60]):
+    for col, width in zip("ABCDEFGHIJ", [32, 9, 34, 40, 70, 22, 10, 50, 40, 70]):
+        ws.column_dimensions[col].width = width
+
+
+def write_pln_sheet(wb, units, english, codes):
+    """Add the CC6 illustration: PLN units with SAIDI and SAIFI and the provinces each serves, then each province's unit."""
+    ws = wb.create_sheet(PLN_SHEET)
+    bold, wrap = Font(bold=True), Alignment(wrap_text=True, vertical="top")
+    ws.append(["CC6 C illustration: PLN reports electricity reliability by distribution unit, not by province (PLN Statistik 2024, Tabel 16)"])
+    ws["A1"].font = Font(bold=True, size=12)
+    ws.append(["SAIDI = average outage hours per customer in 2024; SAIFI = average number of outages per customer. Provinces in one unit share its value in sheet CC6 column C. "
+               "Use this table to decide how to regroup: for example keep the shared value, use the Java / outside-Java figure, or weight by another source."])
+    ws.append([])
+    ws.append(["PLN unit", "SAIDI (hours/customer)", "SAIFI (times/customer)", "Provinces served", "Number of provinces"])
+    for cell in ws[ws.max_row]:
+        cell.font = bold
+    for u in units.itertuples():
+        served = ", ".join(english[c] for c in str(u.province_codes).split()) if isinstance(u.province_codes, str) else "(aggregate)"
+        ws.append([u.unit_name, u.saidi, u.saifi, served, u.provinces if not u.aggregate else None])
+        for cell in ws[ws.max_row][1:3]:
+            cell.number_format = NUMBER_FORMAT
+    ws.append([])
+    ws.append(["Province (template order)", "PLN unit used in CC6 C", "SAIDI used", "Also served by"])
+    for cell in ws[ws.max_row]:
+        cell.font = bold
+    serving = {}
+    for u in units[~units["aggregate"]].itertuples():
+        for c in str(u.province_codes).split():
+            serving.setdefault(c, []).append(u)
+    for code in codes.values():
+        used = [u for u in serving[code] if u.saidi == PRIMARY_SAIDI[code]]
+        others = [u.unit_name for u in serving[code] if u not in used[:1]]
+        ws.append([english[code], used[0].unit_name, used[0].saidi, ", ".join(others)])
+        ws[ws.max_row][2].number_format = NUMBER_FORMAT
+    for row in ws.iter_rows(min_row=4):
+        for cell in row:
+            cell.alignment = wrap
+    for col, width in zip("ABCDE", [42, 22, 22, 70, 20]):
         ws.column_dimensions[col].width = width
 
 # Steps
@@ -85,10 +151,12 @@ def write_notes(wb, columns, codes, names, provinces):
 # Check the template is the filed version, unchanged
 assert hashlib.sha256(TEMPLATE.read_bytes()).hexdigest() == TEMPLATE_SHA256, "template differs from the filed version"
 
-# Read the BPS province list, the values and the column descriptions
+# Read the BPS province list, the values, the column descriptions and the PLN units
 provinces, lookup = cleaning.load_bps_provinces(RAW_PROVINCES)
 values = pd.read_csv(VALUES, dtype={"province_code": str, "period": str})
 columns = pd.read_csv(COLUMNS, dtype={"period": str}, keep_default_na=False)
+units = pd.read_csv(PLN_UNITS, dtype={"province_codes": str}, keep_default_na=False)
+units["aggregate"] = units["aggregate"].astype(str) == "True"
 
 # Open the template in memory; only the copy is saved
 wb = openpyxl.load_workbook(TEMPLATE)
@@ -102,26 +170,38 @@ for sheet, headers in HEADERS.items():
         assert cell is not None and cell.strip() == text, (sheet, col, cell)
     codes_by_sheet[sheet] = sheet_codes(ws, lookup)
 
-# Write each value into its sheet, column and province row, leaving every other cell as in the template
+# Every described column is a template column, and every filled column is described
+assert {(c.sheet, c.column) for c in columns.itertuples()} == {(s, k) for s, h in HEADERS.items() for k in h if k != "B"}
+assert set(map(tuple, values[["sheet", "column"]].drop_duplicates().values)) == {(c.sheet, c.column) for c in columns.itertuples() if c.status == "filled"}
+
+# Write each value into its sheet, column and province row; provinces without a value stay blank
 written = 0
 for (sheet, col), group in values.groupby(["sheet", "column"]):
     rows = {code: r for r, code in codes_by_sheet[sheet].items()}
     by_code = dict(zip(group["province_code"], group["value"]))
-    assert set(by_code) == set(rows), (sheet, col)
-    for code, r in rows.items():
-        cell = wb[sheet][f"{col}{r}"]
+    assert set(by_code) <= set(rows), (sheet, col)
+    for code, value in by_code.items():
+        cell = wb[sheet][f"{col}{rows[code]}"]
         assert cell.value is None, (sheet, cell.coordinate, "template cell not empty")
-        cell.value = float(by_code[code])
+        cell.value = float(value)
         cell.number_format = NUMBER_FORMAT
         written += 1
 
-# Every filled column must be described, and every described column must be on a known sheet
-assert set(map(tuple, values[["sheet", "column"]].drop_duplicates().values)) == set(map(tuple, columns.loc[columns["status"] == "filled", ["sheet", "column"]].values))
+# Label every CC1-CC6 header with the data it holds
+for sheet in HEADERS:
+    label_headers(wb[sheet], sheet, columns)
 
-# Add the Notes sheet and save the filled copy
+# English names from the template, by code
 first_sheet = next(iter(HEADERS))
-names = {r: wb[first_sheet][f"{NAME_COLUMN}{r}"].value for r in codes_by_sheet[first_sheet]}
-write_notes(wb, columns, codes_by_sheet[first_sheet], names, provinces)
+english = {code: wb[first_sheet][f"{NAME_COLUMN}{r}"].value for r, code in codes_by_sheet[first_sheet].items()}
+
+# SAIDI each province takes in CC6 C, to show which unit it came from
+cc6 = values[(values["sheet"] == "CC6 Inclusion & Ener. Jus.Index") & (values["column"] == "C")]
+PRIMARY_SAIDI = dict(zip(cc6["province_code"], cc6["value"]))
+
+# Add the Notes and PLN sheets and save the filled copy
+write_notes(wb, columns, codes_by_sheet[first_sheet], english, provinces)
+write_pln_sheet(wb, units, english, codes_by_sheet[first_sheet])
 wb.save(OUT)
 
 # Confirm the template file was not touched
