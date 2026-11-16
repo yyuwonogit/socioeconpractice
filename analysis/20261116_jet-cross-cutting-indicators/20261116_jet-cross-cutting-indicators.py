@@ -14,6 +14,7 @@ import pandas as pd
 WELFARE = ROOT / "data/20261108_bps-province-welfare/20261108_bps-province-welfare.csv"
 DEPTH_IPM = ROOT / "data/20261116_bps-province-poverty-depth-ipm/20261116_bps-province-poverty-depth-ipm.csv"
 DEPTH_IPM_META = ROOT / "data/20261116_bps-province-poverty-depth-ipm/20261116_bps-province-poverty-depth-ipm-metadata.json"
+WORKERS = ROOT / "data/20261116_bps-province-workers-by-education/20261116_bps-province-workers-by-education.csv"
 
 OUT_VALUES = HERE / "20261116_cross-cutting-indicator-values.csv"
 OUT_COLUMNS = HERE / "20261116_cross-cutting-indicator-columns.csv"
@@ -41,18 +42,23 @@ FILLED = [
      "label": "Human Development Index, IPM (Indeks Pembangunan Manusia)",
      "definition": "Geometric mean of health (life expectancy, UHH), education (expected and mean years of schooling, HLS and RLS) and standard of living (adjusted per capita expenditure). Life expectancy from the SP2020 Long Form. Higher means more capacity, so a deficit index would invert it.",
      "unit": "index, 0-100", "source": "BPS, WebAPI var 2207; repo dataset data/20261116_bps-province-poverty-depth-ipm"},
+    {"sheet": CC5, "column": "D", "dataset": WORKERS, "indicator": "low_education_share", "area": "",
+     "label": "Share of workers with junior secondary schooling (SMP) or less, August",
+     "definition": "Employed persons aged 15+ whose highest completed education is primary school or less (including no schooling) or junior secondary (SMP), divided by all employed persons aged 15+, times 100. Higher means a workforce with less formal education to build on when retraining.",
+     "unit": "percent of employed persons", "source": "BPS, Keadaan Angkatan Kerja di Indonesia Agustus 2025, Tabel 107 (Sakernas August); repo dataset data/20261116_bps-province-workers-by-education"},
 ]
+
+# Derived indicators: formula over a dataset's education columns (derived values belong in analysis/)
+LOW_EDUCATION = ["primary_or_less", "junior_secondary"]
 
 # Template columns not filled in this version, with the reason
 NOT_FILLED = [
     {"sheet": CC3, "column": "C", "label": "DBH Minerba / total regional revenue (Pendapatan Daerah), province government",
-     "status": "pending: DJPK 2024 DBH allocation is filed (raw/fiscal); 2024 APBD revenue still to be fetched from DJPK"},
+     "status": "pending: DBH Minerba 2024 allocation is built (data/20261116_djpk-province-dbh-2024); 2024 APBD total revenue still needed from DJPK"},
     {"sheet": CC3, "column": "D", "label": "DBH Minerba / own-source revenue (PAD), province government",
-     "status": "pending: needs 2024 APBD PAD from DJPK"},
+     "status": "pending: DBH Minerba 2024 allocation is built; 2024 APBD PAD still needed from DJPK"},
     {"sheet": CC3, "column": "E", "label": "Fiscal & Service Sensitivity Index", "status": "blank on request: index method to be set by the team"},
     {"sheet": CC4, "column": "E", "label": "Poverty & Resilience Index", "status": "blank on request: index method to be set by the team"},
-    {"sheet": CC5, "column": "D", "label": "Share of workers with junior secondary schooling (SMP) or less",
-     "status": "pending: BPS Keadaan Angkatan Kerja Agustus 2025 publication still to be fetched"},
     {"sheet": CC5, "column": "E", "label": "Adaptive Capacity Deficit Index", "status": "blank on request: index method to be set by the team"},
     {"sheet": CC6, "column": "C", "label": "Electricity reliability", "status": "blank on request: indicator to be set by the team"},
     {"sheet": CC6, "column": "D", "label": "TBD", "status": "blank on request: indicator to be set by the team"},
@@ -64,6 +70,14 @@ NOT_FILLED = [
 def read(path):
     """Read a long dataset with codes and periods kept as text."""
     return pd.read_csv(path, dtype={"province_code": str, "area": str, "period": str, "status": str}, keep_default_na=False)
+
+
+def low_education_share(path):
+    """Return the share of workers with junior secondary schooling or less, in the long layout of the other datasets."""
+    df = read(path)
+    wide = df.pivot_table(index=["province_code", "period"], columns="education", values="value")
+    share = wide[LOW_EDUCATION].sum(axis=1) / wide["TOTAL"] * 100
+    return share.rename("value").reset_index().assign(indicator="low_education_share", area="")
 
 
 def pick_year(df, provinces):
@@ -82,7 +96,7 @@ assert len(provinces) == 38, len(provinces)
 # Take each filled column's values for its year, one row per province
 values, columns = [], []
 for spec in FILLED:
-    df = read(spec["dataset"])
+    df = low_education_share(spec["dataset"]) if spec["indicator"] == "low_education_share" else read(spec["dataset"])
     df = df[(df["indicator"] == spec["indicator"]) & (df["area"] == spec["area"]) & df["province_code"].isin(provinces)]
     year = pick_year(df, provinces)
     df = df[df["period"] == year]
