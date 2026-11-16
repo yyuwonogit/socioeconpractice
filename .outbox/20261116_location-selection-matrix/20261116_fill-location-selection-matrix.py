@@ -25,6 +25,7 @@ ANALYSIS = ROOT / "analysis/20261116_jet-cross-cutting-indicators"
 VALUES = ANALYSIS / "20261116_cross-cutting-indicator-values.csv"
 COLUMNS = ANALYSIS / "20261116_cross-cutting-indicator-columns.csv"
 PLN_UNITS = ANALYSIS / "20261116_pln-units-and-provinces.csv"
+DBH = ANALYSIS / "20261116_dbh-2024-by-province.csv"
 
 OUT = HERE / "20261116_location-selection-matrix.xlsx"
 
@@ -50,6 +51,7 @@ HEADERS = {
 NUMBER_FORMAT = "0.00"
 NOTES_SHEET = "Notes"
 PLN_SHEET = "CC6 PLN units"
+DBH_SHEET = "CC3 DBH 2024"
 
 # Header label styling: the template header stays first, the data label follows on its own lines
 LABEL_FONT = Font(italic=True, size=9, color="1F4E79")
@@ -146,6 +148,28 @@ def write_pln_sheet(wb, units, english, codes):
     for col, width in zip("ABCDE", [42, 22, 22, 70, 20]):
         ws.column_dimensions[col].width = width
 
+def write_dbh_sheet(wb, dbh, english, codes):
+    """Add the CC3 DBH amounts: DBH SDA, DBH Minerba, DBH Migas and total DBH per province government, 2024 allocation."""
+    ws = wb.create_sheet(DBH_SHEET)
+    bold = Font(bold=True)
+    ws.append(["CC3 inputs: Dana Bagi Hasil (DBH) allocated to each province government, 2024 (DJPK, Rincian Dana Transfer Umum TA 2024)"])
+    ws["A1"].font = Font(bold=True, size=12)
+    ws.append(["Thousand rupiah, as published (pagu alokasi). CC3 C and D divide DBH Minerba by total revenue and by PAD from the 2024 APBD once those are in."])
+    ws.append([])
+    ws.append(["Province", "DBH SDA total", "of which DBH Minerba", "of which DBH Migas", "Total DBH (tax + SDA + palm oil)", "DBH Minerba % of DBH SDA"])
+    for cell in ws[ws.max_row]:
+        cell.font = bold
+    by_code = dbh.set_index("province_code")
+    for code in codes.values():
+        r = by_code.loc[code]
+        share = r["dbh_minerba"] / r["dbh_sda_total"] * 100 if r["dbh_sda_total"] else None
+        ws.append([english[code], r["dbh_sda_total"], r["dbh_minerba"], r["dbh_oil_gas"], r["dbh_total"], share])
+        for cell in ws[ws.max_row][1:5]:
+            cell.number_format = "#,##0"
+        ws[ws.max_row][5].number_format = NUMBER_FORMAT
+    for col, width in zip("ABCDEF", [32, 18, 20, 18, 26, 22]):
+        ws.column_dimensions[col].width = width
+
 # Steps
 
 # Check the template is the filed version, unchanged
@@ -157,6 +181,7 @@ values = pd.read_csv(VALUES, dtype={"province_code": str, "period": str})
 columns = pd.read_csv(COLUMNS, dtype={"period": str}, keep_default_na=False)
 units = pd.read_csv(PLN_UNITS, dtype={"province_codes": str}, keep_default_na=False)
 units["aggregate"] = units["aggregate"].astype(str) == "True"
+dbh = pd.read_csv(DBH, dtype={"province_code": str})
 
 # Open the template in memory; only the copy is saved
 wb = openpyxl.load_workbook(TEMPLATE)
@@ -199,9 +224,10 @@ english = {code: wb[first_sheet][f"{NAME_COLUMN}{r}"].value for r, code in codes
 cc6 = values[(values["sheet"] == "CC6 Inclusion & Ener. Jus.Index") & (values["column"] == "C")]
 PRIMARY_SAIDI = dict(zip(cc6["province_code"], cc6["value"]))
 
-# Add the Notes and PLN sheets and save the filled copy
+# Add the Notes, PLN and DBH sheets and save the filled copy
 write_notes(wb, columns, codes_by_sheet[first_sheet], english, provinces)
 write_pln_sheet(wb, units, english, codes_by_sheet[first_sheet])
+write_dbh_sheet(wb, dbh, english, codes_by_sheet[first_sheet])
 wb.save(OUT)
 
 # Confirm the template file was not touched

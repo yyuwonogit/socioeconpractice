@@ -27,10 +27,15 @@ JKN_ELECTRICITY = DATA / "20261116_bps-province-jkn-electricity-bottom40/2026111
 GRDP_INDUSTRY = DATA / "20261116_bps-province-grdp-by-industry-2021-2025/20261116_bps-province-grdp-by-industry-2021-2025.csv"
 PLN = DATA / "20261116_pln-unit-saidi-saifi-2024/20261116_pln-unit-saidi-saifi-2024.csv"
 PLN_META = DATA / "20261116_pln-unit-saidi-saifi-2024/20261116_pln-unit-saidi-saifi-2024-metadata.json"
+DBH = DATA / "20261116_djpk-province-dbh-2024/20261116_djpk-province-dbh-2024.csv"
 
 OUT_VALUES = HERE / "20261116_cross-cutting-indicator-values.csv"
 OUT_COLUMNS = HERE / "20261116_cross-cutting-indicator-columns.csv"
 OUT_PLN = HERE / "20261116_pln-units-and-provinces.csv"
+OUT_DBH = HERE / "20261116_dbh-2024-by-province.csv"
+
+# DBH columns shown for CC3, from the DJPK 2024 allocation (thousand rupiah)
+DBH_COLUMNS = ["dbh_sda_total", "dbh_minerba", "dbh_oil_gas", "dbh_total"]
 
 # Template sheets, exactly as named in reference/20261116_location-selection-matrix.xlsx
 CC1 = "CC1 Labor Market Sensit. Index"
@@ -233,10 +238,16 @@ units = pd.DataFrame([{"unit": u, "unit_name": x["name"], "saidi": pln.loc[u, "s
                        "province_codes": " ".join(x["provinces"]), "provinces": len(x["provinces"]), "aggregate": x["aggregate"]}
                       for u, x in pln_meta["units"].items()])
 
-# Write the three tables
+# DBH allocations by province for the CC3 sheet, in thousand rupiah as published
+dbh = read(DBH)
+dbh = dbh[dbh["indicator"].isin(DBH_COLUMNS)].pivot(index="province_code", columns="indicator", values="value")[DBH_COLUMNS]
+assert len(dbh) == 38
+
+# Write the four tables
 pd.DataFrame(values).sort_values(["sheet", "column", "province_code"]).to_csv(OUT_VALUES, index=False, lineterminator="\n", float_format="%.10g")
 cols = pd.DataFrame(columns)[["sheet", "column", "label", "definition", "unit", "period", "source", "status", "header_label", "blank_cells"]]
 cols.sort_values(["sheet", "column"]).to_csv(OUT_COLUMNS, index=False, lineterminator="\n")
 units.to_csv(OUT_PLN, index=False, lineterminator="\n", float_format="%.10g")
+dbh.reset_index().to_csv(OUT_DBH, index=False, lineterminator="\n", float_format="%.10g")
 print(f"{OUT_VALUES.name}: {len(values)} values; {OUT_COLUMNS.name}: {len(cols)} columns; {OUT_PLN.name}: {len(units)} units")
 print(cols.sort_values(["sheet", "column"])[["sheet", "column", "period", "status", "blank_cells"]].to_string(index=False, max_colwidth=70))
