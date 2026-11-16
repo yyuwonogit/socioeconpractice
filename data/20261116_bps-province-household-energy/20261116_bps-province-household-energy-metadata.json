@@ -1,0 +1,319 @@
+{
+ "title": "BPS provincial household electric lighting (2020-2025) and main cooking fuel (2021-2025), Indonesia",
+ "columns": {
+  "province_code": "BPS province code (kode_bps); 00 = Indonesia. Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definitions in 'indicators'.",
+  "fuel": "Cooking fuel for cooking_fuel; empty for electric_lighting. Names in 'fuels'.",
+  "period": "YYYY.",
+  "status": "BPS revision marker; these tables carry none.",
+  "value": "Percent of households, as published by BPS."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  },
+  "00": {
+   "name": "INDONESIA",
+   "kode_dagri": null
+  }
+ },
+ "fuels": {
+  "": "not split by fuel",
+  "electricity": "Listrik",
+  "gas_lpg": "Gas/Elpiji (LPG and piped gas)",
+  "kerosene": "Minyak tanah",
+  "charcoal": "Arang/briket",
+  "firewood": "Kayu",
+  "other": "Lainnya, including households that do not cook",
+  "TOTAL": "Jumlah (100)"
+ },
+ "indicators": {
+  "electric_lighting": {
+   "name": "Persentase rumah tangga dengan sumber penerangan utama listrik (households whose main lighting is electric, PLN or non-PLN), Susenas Maret",
+   "unit": "percent of households",
+   "multiplier": 1,
+   "source": "BPS WebAPI var 772"
+  },
+  "cooking_fuel": {
+   "name": "Persentase rumah tangga menurut bahan bakar utama untuk memasak (households by main cooking fuel), Susenas",
+   "unit": "percent of households",
+   "multiplier": 1,
+   "source": "BPS WebAPI var 150"
+  }
+ },
+ "source_tables": {
+  "webapi 772 2020": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/772/th/120/key/KEY/",
+   "last_update": "2025-12-16 10:18:52"
+  },
+  "webapi 772 2021": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/772/th/121/key/KEY/",
+   "last_update": "2025-12-16 10:18:52"
+  },
+  "webapi 772 2022": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/772/th/122/key/KEY/",
+   "last_update": "2025-12-16 10:18:52"
+  },
+  "webapi 772 2023": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/772/th/123/key/KEY/",
+   "last_update": "2025-12-16 10:18:52"
+  },
+  "webapi 772 2024": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/772/th/124/key/KEY/",
+   "last_update": "2025-12-16 10:18:52"
+  },
+  "webapi 772 2025": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/772/th/125/key/KEY/",
+   "last_update": "2025-12-16 10:18:52"
+  },
+  "webapi 150 2021": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/150/th/121/key/KEY/",
+   "last_update": "2025-12-17 09:56:02"
+  },
+  "webapi 150 2022": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/150/th/122/key/KEY/",
+   "last_update": "2025-12-17 09:56:02"
+  },
+  "webapi 150 2023": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/150/th/123/key/KEY/",
+   "last_update": "2025-12-17 09:56:02"
+  },
+  "webapi 150 2024": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/150/th/124/key/KEY/",
+   "last_update": "2025-12-17 09:56:02"
+  },
+  "webapi 150 2025": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/150/th/125/key/KEY/",
+   "last_update": "2025-12-17 09:56:02"
+  }
+ },
+ "gaps": {
+  "meaning": "BPS leaves the fuel cell empty (no value published)",
+  "cells": [
+   [
+    "31",
+    "cooking_fuel",
+    "kerosene",
+    "2021"
+   ]
+  ]
+ },
+ "notes": [
+  "The four new Papua provinces have values from 2024; for earlier years Papua (94) and Papua Barat (91) cover the pre-split areas.",
+  "Cooking fuel 'other' includes households that do not cook (BPS note). Clean cooking in the SDG 7.1.2 sense (electricity, LPG/gas) is derived in analysis/.",
+  "Electric lighting counts PLN and non-PLN electricity."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "identities"
+  ],
+  "identities": [
+   {
+    "check": "cooking fuels to Jumlah (rows without empty cells)",
+    "compared": 182,
+    "largest_gap": 0.02,
+    "tolerance": 0.05
+   },
+   {
+    "rows_with_empty_cells": [
+     [
+      "31",
+      "2021"
+     ]
+    ]
+   }
+  ],
+  "plausible_ranges": {
+   "electric_lighting": [
+    60,
+    100
+   ]
+  },
+  "flags": [
+   {
+    "check": "electric_lighting",
+    "province_code": "96",
+    "indicator": "electric_lighting",
+    "fuel": "",
+    "period": "2024",
+    "value": 56.08,
+    "range": [
+     60,
+     100
+    ]
+   }
+  ]
+ },
+ "file": "20261116_bps-province-household-energy.csv",
+ "rows": 1498,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/electricity/20261116_bps-webapi-household-lighting-and-cooking-fuel-by-province.jsonl": {
+   "sha256": "e18a4f763352a384b4199ba6e8bdaf15866d05e6a98b18bb262f9da0261b8998"
+  }
+ }
+}
