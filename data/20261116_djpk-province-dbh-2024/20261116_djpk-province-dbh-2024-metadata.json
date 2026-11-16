@@ -1,0 +1,338 @@
+{
+ "title": "DJPK general transfer allocation 2024: Dana Bagi Hasil (DBH) by type, province governments, Indonesia",
+ "columns": {
+  "province_code": "BPS province code (kode_bps) of the province government (pemerintah provinsi). Names and Kemendagri codes in 'provinces'.",
+  "indicator": "DBH type; definitions in 'indicators'.",
+  "period": "YYYY, budget year (tahun anggaran).",
+  "status": "Empty; the table carries no markers.",
+  "value": "Thousand rupiah, as published."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  }
+ },
+ "indicators": {
+  "dbh_pph": {
+   "name": "DBH Pajak: Pajak Penghasilan (PPh, income tax)",
+   "unit": "thousand Rp",
+   "multiplier": 1000.0,
+   "base_unit": "Rp",
+   "source": "DJPK Kemenkeu, Rincian Dana Transfer Umum TA 2024"
+  },
+  "dbh_pbb": {
+   "name": "DBH Pajak: Pajak Bumi dan Bangunan (PBB, land and building tax)",
+   "unit": "thousand Rp",
+   "multiplier": 1000.0,
+   "base_unit": "Rp",
+   "source": "DJPK Kemenkeu, Rincian Dana Transfer Umum TA 2024"
+  },
+  "dbh_cht": {
+   "name": "DBH Pajak: Cukai Hasil Tembakau (CHT, tobacco excise)",
+   "unit": "thousand Rp",
+   "multiplier": 1000.0,
+   "base_unit": "Rp",
+   "source": "DJPK Kemenkeu, Rincian Dana Transfer Umum TA 2024"
+  },
+  "dbh_tax_total": {
+   "name": "Total DBH Pajak (tax revenue sharing) = PPh + PBB + CHT",
+   "unit": "thousand Rp",
+   "multiplier": 1000.0,
+   "base_unit": "Rp",
+   "source": "DJPK Kemenkeu, Rincian Dana Transfer Umum TA 2024"
+  },
+  "dbh_forestry_iiuph_psdh": {
+   "name": "DBH SDA Kehutanan: IIUPH/PSDH (forestry licence fees and resource provision)",
+   "unit": "thousand Rp",
+   "multiplier": 1000.0,
+   "base_unit": "Rp",
+   "source": "DJPK Kemenkeu, Rincian Dana Transfer Umum TA 2024"
+  },
+  "dbh_forestry_dr": {
+   "name": "DBH SDA Kehutanan: Dana Reboisasi (DR, reforestation fund)",
+   "unit": "thousand Rp",
+   "multiplier": 1000.0,
+   "base_unit": "Rp",
+   "source": "DJPK Kemenkeu, Rincian Dana Transfer Umum TA 2024"
+  },
+  "dbh_oil_gas": {
+   "name": "DBH SDA Minyak dan Gas Bumi (MIGAS, oil and gas)",
+   "unit": "thousand Rp",
+   "multiplier": 1000.0,
+   "base_unit": "Rp",
+   "source": "DJPK Kemenkeu, Rincian Dana Transfer Umum TA 2024"
+  },
+  "dbh_minerba": {
+   "name": "DBH SDA Mineral dan Batubara (MINERBA, minerals and coal; DJPK does not split coal from other minerals)",
+   "unit": "thousand Rp",
+   "multiplier": 1000.0,
+   "base_unit": "Rp",
+   "source": "DJPK Kemenkeu, Rincian Dana Transfer Umum TA 2024"
+  },
+  "dbh_fisheries": {
+   "name": "DBH SDA Perikanan (fisheries)",
+   "unit": "thousand Rp",
+   "multiplier": 1000.0,
+   "base_unit": "Rp",
+   "source": "DJPK Kemenkeu, Rincian Dana Transfer Umum TA 2024"
+  },
+  "dbh_geothermal": {
+   "name": "DBH SDA Panas Bumi (geothermal)",
+   "unit": "thousand Rp",
+   "multiplier": 1000.0,
+   "base_unit": "Rp",
+   "source": "DJPK Kemenkeu, Rincian Dana Transfer Umum TA 2024"
+  },
+  "dbh_sda_total": {
+   "name": "Total DBH SDA (natural resource revenue sharing) = IIUPH/PSDH + DR + MIGAS + MINERBA + PERIKANAN + PANAS BUMI",
+   "unit": "thousand Rp",
+   "multiplier": 1000.0,
+   "base_unit": "Rp",
+   "source": "DJPK Kemenkeu, Rincian Dana Transfer Umum TA 2024"
+  },
+  "dbh_palm_oil": {
+   "name": "DBH Lainnya: Sawit (palm oil)",
+   "unit": "thousand Rp",
+   "multiplier": 1000.0,
+   "base_unit": "Rp",
+   "source": "DJPK Kemenkeu, Rincian Dana Transfer Umum TA 2024"
+  },
+  "dbh_total": {
+   "name": "Total DBH = DBH Pajak + DBH SDA + DBH Sawit",
+   "unit": "thousand Rp",
+   "multiplier": 1000.0,
+   "base_unit": "Rp",
+   "source": "DJPK Kemenkeu, Rincian Dana Transfer Umum TA 2024"
+  }
+ },
+ "source_tables": {
+  "pdf": {
+   "title": "Rincian Dana Transfer Umum Tahun Anggaran 2024 Menurut Provinsi/Kabupaten/Kota (DAU dan DBH)",
+   "publisher": "Direktorat Jenderal Perimbangan Keuangan (DJPK), Kementerian Keuangan",
+   "file": "raw/fiscal/20261116_rincian-alokasi-dau-dbh-ta-2024.pdf",
+   "received": "uploaded by the user to .inbox on 2026-11-16; the user describes it as the 2024 allocation (pagu alokasi)"
+  }
+ },
+ "notes": [
+  "Values are budget allocations (pagu) for 2024, not realised transfers (realisasi).",
+  "Province-government rows only. The table's regency and city rows are read so that every column can be checked against JUMLAH, but are not written.",
+  "A dash in the table is a nil allocation and is written as 0: the table's own totals (columns 6, 13 and 15) and the JUMLAH row hold exactly only with dashes counted as zero.",
+  "DAU columns (16-23) are not read.",
+  "DBH Minerba covers coal and other minerals together; DJPK publishes no coal-only split.",
+  "The table names Kepulauan Bangka Belitung 'Bangka Belitung'; that label is matched by a declared fix."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "identities"
+  ],
+  "identities": [
+   {
+    "check": "dbh_tax_total = dbh_pph + dbh_pbb + dbh_cht",
+    "compared": 547,
+    "largest_gap": 0.0,
+    "tolerance": 0
+   },
+   {
+    "check": "dbh_sda_total = dbh_forestry_iiuph_psdh + dbh_forestry_dr + dbh_oil_gas + dbh_minerba + dbh_fisheries + dbh_geothermal",
+    "compared": 547,
+    "largest_gap": 0.0,
+    "tolerance": 0
+   },
+   {
+    "check": "dbh_total = dbh_tax_total + dbh_sda_total + dbh_palm_oil",
+    "compared": 547,
+    "largest_gap": 0.0,
+    "tolerance": 0
+   },
+   {
+    "check": "all local governments to JUMLAH",
+    "compared": 13,
+    "largest_gap": 0.0,
+    "tolerance": 0
+   }
+  ],
+  "rows_read": {
+   "local_governments": 547,
+   "province_governments": 38
+  },
+  "plausible_ranges": {
+   "dbh_minerba": [
+    0,
+    10000000000
+   ]
+  },
+  "flags": []
+ },
+ "file": "20261116_djpk-province-dbh-2024.csv",
+ "rows": 494,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/fiscal/20261116_rincian-alokasi-dau-dbh-ta-2024.pdf": {
+   "sha256": "8f6c62f373393eb9ec4592dd00ff44b66996479eb355e0871f2720a93f1e8d7c"
+  }
+ }
+}
