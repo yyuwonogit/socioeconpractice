@@ -37,6 +37,9 @@ BPS_STATUS = {
     "r": "Angka diperbaiki (revised)",
 }
 
+# BPS precision markers on survey estimates (Sakernas, Susenas), written in status like revision markers
+BPS_STATUS["rse25-50"] = "Kesalahan baku relatif 25% <= RSE <= 50% (relative standard error between 25% and 50%; use with caution)"
+
 # BPS markers that mean no value is published, so no row is written
 BPS_NO_VALUE = {"...", "NA", "–", "-", "x"}
 
@@ -195,6 +198,48 @@ def bps_resolve(text, value):
 
 
 # BPS WebAPI responses
+
+# BPS publication PDFs (read with pdfplumber)
+
+# Fill colours that make text invisible on a white page: grey, RGB and CMYK white
+WHITE_FILLS = {(1.0,), (1.0, 1.0, 1.0), (0.0, 0.0, 0.0, 0.0)}
+
+
+def pdf_visible_lines(page, line_tolerance=4):
+    """Return the text lines a reader sees on a pdfplumber page, top to bottom.
+
+    BPS publication pages carry a rotated "https://www.bps.go.id" watermark whose letters fall
+    between table digits, and some carry white text left over from an earlier edition. Both are
+    dropped. Each line is a list of words (text, x0, x1, top, size) from left to right; words in a
+    smaller font, such as footnote markers, join the line they sit on.
+    """
+    def visible(obj):
+        if obj.get("object_type") != "char":
+            return True
+        m = obj.get("matrix")
+        if m is not None and (abs(m[1]) > 1e-6 or abs(m[2]) > 1e-6):
+            return False
+        fill = obj.get("non_stroking_color")
+        return fill is None or tuple(round(float(c), 3) for c in fill) not in WHITE_FILLS
+
+    words = page.filter(visible).extract_words(extra_attrs=["size"], keep_blank_chars=False)
+    main = max({round(w["size"], 1) for w in words}, key=lambda s: sum(round(w["size"], 1) == s for w in words))
+    lines = []
+    for w in sorted((w for w in words if round(w["size"], 1) == main), key=lambda w: (w["top"], w["x0"])):
+        if lines and abs(w["top"] - lines[-1][0]["top"]) <= line_tolerance:
+            lines[-1].append(w)
+        else:
+            lines.append([w])
+    for w in (w for w in words if round(w["size"], 1) != main):
+        near = [line for line in lines if line[0]["top"] - line_tolerance <= w["top"] <= line[0]["bottom"]]
+        if near:
+            near[0].append(w)
+        else:
+            lines.append([w])
+    lines.sort(key=lambda line: min(x["top"] for x in line))
+    return [[{"text": x["text"], "x0": x["x0"], "x1": x["x1"], "top": x["top"], "size": round(x["size"], 1)}
+             for x in sorted(line, key=lambda x: x["x0"])] for line in lines]
+
 
 def read_jsonl(path):
     """Read a .jsonl file of saved responses, keeping every number as its published text."""

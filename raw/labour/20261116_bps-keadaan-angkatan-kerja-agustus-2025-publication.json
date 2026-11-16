@@ -1,0 +1,88 @@
+{
+ "request": "https://webapi.bps.go.id/v1/api/view/model/publication/lang/ind/domain/0000/id/42a75ee61332755586fdfcdd/key/KEY/",
+ "response": {
+  "status": "OK",
+  "data-availability": "available",
+  "data": {
+   "pub_id": "42a75ee61332755586fdfcdd",
+   "title": "Keadaan Angkatan Kerja di Indonesia Agustus 2025",
+   "id_subject_csa": [
+    "520"
+   ],
+   "subject_csa": [
+    "Tenaga Kerja"
+   ],
+   "kat_no": "2303004",
+   "pub_no": "04100.25018",
+   "issn": "0126-647x",
+   "abstract": "Publikasi Keadaan Angkatan Kerja Indonesia berisi tabel-tabel yang memberikan gambaran kondisi ketenagakerjaan di Indonesia pada Semester II tahun 2025. Tabel yang disajikan bersumber dari Survei Angkatan Kerja Nasional (Sakernas) yang dilaksanakan di seluruh Indonesia pada bulan Agustus 2025. Jumlah target sampel Sakernas Agustus 2025 sekitar 302.260 rumah tangga untuk menghasilkan estimasi sampai tingkat kabupaten/kota. Publikasi ini menampilkan keadaan angkatan kerja dirinci menurut jenis kelamin (laki-laki dan perempuan), daerah tempat tinggal (perkotaan dan perdesaan), yang hanya mencakup penduduk usia 15 tahun ke atas. Publikasi ini juga menyajikan tabel perkembangan ketenagakerjaan dari tahun 2022–2025 dan ringkasan eksekutif keadaan angkatan kerja di Indonesia.",
+   "sch_date": "2025-12-19",
+   "rl_date": "2025-12-19",
+   "updt_date": null,
+   "periode": "Semesteran",
+   "bahasa": "Indonesia dan Inggris",
+   "revisi": 0,
+   "cover": "https://webapi.bps.go.id/cover.php?f=AQAD9tburinzXa3WwBQlzcFDLM2ykI_BBk6mY6p45FeLmQWJlOporRLfZOe7VpBx8KLc9Nj1Rw6ZCofpSMJepTG_EfXvsDQosRPVLnZ7awzk4WlyakP3WlaAVvwO8ReSnfsrqTCUqt0tUWzHk_pzN3uROBZ996Y8yu8Vd2roZGZmgnOoW0_brgEHcIcpTmgJ9e6WUGg8l_Qirb0DDyyuMFKboPe9XvQ5QeMX-AngbmYHgAfbPkPJOJ4_6iOEozIoms8HS8dBmhmjsBpQc_neAhNEmBZfscab53AKrj0lyMAhAn99_CXChFFBOvIOSZRUtV4-O6Cr7T8KEvLMYcwLfxc",
+   "pdf": "https://webapi.bps.go.id/download.php?f=AQADQCJKQ1lTxhLRhdLq5hdYl92uDz0bYFqD50NkfdZGytl2p-pM8PZORTZgEZsxM9PUG44-O-HcBFjnoh4WIeqSmaBpJOMgm8LhwDXCBY5c7sWv2WOQ7_3qOh5cENJxGHQR_eardqre4MLCAzUTdnJDnzXA9QSL_FEdNzQsIo0UHbHjPpJcV2LWBBDATwWkwzGIJH2zPlSCNOZ1QYK-nQF515lCNiRlDpC50NgWFvMsLNBK5hcN1CmNLDLJTs47ou0SS8dacvHmQohZnUnaSnIw9xFxzGz-x-EWYfQ1apFDy4sWHPb3VnyYA_pnEuWYCcnjPrBTvaRuPsZTcg",
+   "size": "9.95 MB",
+   "related": [
+    {
+     "pub_id": "307a288d678f91b9be362021",
+     "title": "Keadaan Angkatan Kerja di Indonesia Agustus 2020",
+     "rl_date": "2020-11-30",
+     "url": "https://www.bps.go.id/id/publication/2020/11/30/307a288d678f91b9be362021/keadaan-angkatan-kerja-di-indonesia-agustus-2020.html",
+     "cover": "https://webapi.bps.go.id/cover.php?f=AQADDt0PCo6IKw8VdIoPHuZwpyrLPUtCaY3vTGy8lg2dEQcwrJTa18YGJds5Rg7WKe8_KN-b33EVIZJWjhmMiRUcLw-UqRT87ffFPKyoErdi_ZKfwI_7BgFuBqmh81cxQeLcaJ0agfWkCNtH2Xcc5jXpdYm2wkMdhapvh9Zc5KB21EPUthTzQSscHYbJQYsnC3lEfgc_K6Lffi_et6MDh2SPtSHd1kOLhsFojYLfo9-1gpeAg4r-m6xcJABWjneAaZIvU6Mk6BMIR39ea8rECmtILp6E4IMt_xY0c4gHTi-Ujt5cn_CjYYbbSSMdV-ZMEeLaWv-mkQUy2ytPg6jATw"
+    },
+    {
+     "pub_id": "96138ece33ccc220007acbdd",
+     "title": "Keadaan Angkatan Kerja di Indonesia Agustus 2019",
+     "rl_date": "2019-11-29",
+     "url": "https://www.bps.go.id/id/publication/2019/11/29/96138ece33ccc220007acbdd/keadaan-angkatan-kerja-di-indonesia-agustus-2019.html",
+     "cover": "https://webapi.bps.go.id/cover.php?f=AQADvlyCuC1Pbl-_nMelYo6FZZWN2pQrAew6IQgA7ogaSNmi84JHqj8GZW0xT2C7X20g-fab-1WwWlOD-QQC9WNm2mX64DaHieaeCE6-WG_L4Z3Wl4JZ-46UJmwZyFt0VEj3gZAt82hrWwT0U-pqNX0F85FYv8PvtpahDz_wAhvJwXB936SNNZjPzIcbrXt1MvM9723dZjmYOEG44QVtGfNPHMegdxiWkhTiGLWpU5YH2eATfMBVwOj_yj5lcKHgEarvucCcCcRRswV79HvJwx3mZtFt2lHFdhp2jIYsM1OKZh7r062SNPLml3TGInRzklIFaue5LiWkI9Onw7hRMg"
+    },
+    {
+     "pub_id": "482ccf0eab5d9b8e7830bfb4",
+     "title": "Keadaan Angkatan Kerja di Indonesia Agustus 2006",
+     "rl_date": "2006-05-15",
+     "url": "https://www.bps.go.id/id/publication/2006/05/15/482ccf0eab5d9b8e7830bfb4/keadaan-angkatan-kerja-di-indonesia-agustus-2006.html",
+     "cover": "https://webapi.bps.go.id/cover.php?f=AQADM3mmViMcdVRq243G7HEL01VM6nTD7V065QqXc235Da1bPlQA75cTT95DdoT-2LnuxCF2XJPWGrvu9t2R-9gwiXMb0hUKjFxFAnwbu80dt2jZXz8qJxY0g_4Kb4PycYhgj0Eypi3w0PnW1e0ffyeaIi5UfcCq-yCnGdtPKp7nYcaGd03jETXtcyUyzwIjLjeouPixksbljKgyyXhGai19DZw58rh9JFBHCxCMWxT9hWb4-sDRQoh5Bq-RFr4564XJerOaC9denvSycELezVrxtEpcrXYxQClVu3gxLnJUEFAZTK8etnlk5xZjKUQmc3Jq60mSI_3gm9v-9keS6g"
+    },
+    {
+     "pub_id": "4a96280306b753e66d226739",
+     "title": "Keadaan Angkatan Kerja di Indonesia Agustus 2010",
+     "rl_date": "2011-01-17",
+     "url": "https://www.bps.go.id/id/publication/2011/01/17/4a96280306b753e66d226739/keadaan-angkatan-kerja-di-indonesia-agustus-2010.html",
+     "cover": "https://webapi.bps.go.id/cover.php?f=AQADjHcaJ4jYuB7oosvPNZ4aHxP11qwuGPkfpXkzTjfN2vdMudL2hpiNNjFx0-hcrRhpxXMTEwy4EZSswwvFfjqaXs3uBXh6lHi8g8O45UEBE9gIbLUs2H1lr5GeDFzGC5FfMP79UVF-HdT5t3M1FGqtJtRxSHWHlk9k1u-E_UqIWBX5zzYsMTvXDxJoXbb_qw7W6qmVUozN5jp0sbmoEEhSpJIVzRShfAon_ctgOJFTu6EJ0kBQlsp1Xr5LYyRBjeMCIz6nU015-YZthRqMnwpSaSmQE5mpbIStW8SuEdBiqgWiJK3v-6-DgwFBXabrD_TdFLrGSCHq3aAgyEffSA"
+    },
+    {
+     "pub_id": "9d047c72bf28888630d0e093",
+     "title": "Keadaan Angkatan Kerja di Indonesia Agustus 2013",
+     "rl_date": "2013-11-29",
+     "url": "https://www.bps.go.id/id/publication/2013/11/29/9d047c72bf28888630d0e093/keadaan-angkatan-kerja-di-indonesia-agustus-2013.html",
+     "cover": "https://webapi.bps.go.id/cover.php?f=AQADj-BZ9KNMc9vjchIrtQJ7atQjcBZfC5f2tMb2BE7EbiTSHIeNQAiQj5kEBPa19oIz1bDPW_xFgH_-WiRziy_IVIgFlcP649QxZLPLvS0iJXxUAu2UIIFnjVENLQisiWnsC7vML2wt_dZzgjj6hHvoGhsJi327s56zpUjWDo2QLxmBShBVO1zHtpHcedhPMMR4v43vndkLhQCB2ddDJd_De_bEj05D6q42ulIu2XCDekrSj0gdWceUKbCPEtuZZzlNjcVplDPOOmj7mX_FjwlU0V7NkBTc1DmMXvYWZUyFXuBgYwtcpcKam53bXD7L9a29QuaXkkjPrjsTd6Bv"
+    },
+    {
+     "pub_id": "a64afccf38fbf6deb81a5dc0",
+     "title": "Keadaan Angkatan Kerja di Indonesia Agustus 2022",
+     "rl_date": "2022-12-07",
+     "url": "https://www.bps.go.id/id/publication/2022/12/07/a64afccf38fbf6deb81a5dc0/keadaan-angkatan-kerja-di-indonesia-agustus-2022.html",
+     "cover": "https://webapi.bps.go.id/cover.php?f=AQADazyMnijL--c8QO93hxEqzQCIQqHq6n6f5Q4sheRvlXaJrPsNOiW_uHpUn2Osl9q4mt2XuFEIzqO280qcJS9KoItsxtIYSzPBh6aMn3g9HzpCIjPo2og-oOpoHETsyZaPkK_kfctSviQ9mH5GiUSPwjPbWzOC-z9o8cPY4Ll2-1hJjOkTNlOvLPHRYVuRoM9r01_b0LZHa_f76DGcPOOrVmX6WcZD0DsPU3r4CBlLZbkdfJv1Ou1BujW5nX-ejiidy3j-El4Nh7eD9A4rao3ZwZUebtG_PagvtIJsY5RTl0r1fmmBa6f0moAoEyvMegZY21nqunHqKdq3hrWQGw"
+    },
+    {
+     "pub_id": "ee355feea591c3b6841d361b",
+     "title": "Keadaan Angkatan Kerja di Indonesia Agustus 2021",
+     "rl_date": "2021-12-07",
+     "url": "https://www.bps.go.id/id/publication/2021/12/07/ee355feea591c3b6841d361b/keadaan-angkatan-kerja-di-indonesia-agustus-2021.html",
+     "cover": "https://webapi.bps.go.id/cover.php?f=AQADvj_E8WGY-9dGAUW_EUsIaHWApmKxHQQD4J401HrNwifJRGSHA7SquXqZnISJIKzR7cIeHXzG695qs93WTIJuzBve63ZWvw7L41xTjrgWHzcnt-IXU_eMcNCh4kIJiVvYkOhjKQjyiq7xFjDjEIXldQ7CNC7nA-GxwOu33B4rvrKlCZKcOUtE5QBHhmiD392QK6PEhI8_uTESfl_wWgdX9PBOL-maRnwM-DF1Y85Eqjik0FwvxhPwo-wMveUh4ZyKYJbl6YBOQ2wp9B3by2PrvgpvbJMgC--SGFCPgw_OZVLEXUYTDdxAKNp6iRDb31JSo0uI19x1HY6SJtuIDQ"
+    },
+    {
+     "pub_id": "6d8a8eb26ac657f7bd170fca",
+     "title": "Keadaan Angkatan Kerja di Indonesia Agustus 2018",
+     "rl_date": "2018-11-30",
+     "url": "https://www.bps.go.id/id/publication/2018/11/30/6d8a8eb26ac657f7bd170fca/keadaan-angkatan-kerja-di-indonesia-agustus-2018.html",
+     "cover": "https://webapi.bps.go.id/cover.php?f=AQADXh9arB9nrYDuh2N0XWX5u38J-nnpvpKlpjqJKpPkZy0O_EaKlH6yoNF5e4WtwRjRa0pBZViG3V6emdr1datMRVjJJfIMw2Rrrcg1N8DkwA4ToNXpiCjKxmplP4oWu2ubcmPwo6pdKmYHmPdw1OND3M0VmA63Fwb0yXxP3IauDSTn5EmuLieEZ66HtP1xYYU6AhtDT2gXY7TYyg-CU-MpjqRdJ0wB5UBIMxVYOwxUhGj-vZeZiIS1PlWovAAtoGskUlgWhl3g15tlWqFVlJB2WKto-KXSmUxzQKdBl8leFolLeDlBjPq30XO6SgNi5W-OAoFzeqquDg8pJHKCvQ"
+    }
+   ]
+  }
+ }
+}
