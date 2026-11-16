@@ -1,0 +1,317 @@
+{
+ "title": "Coal resources and reserves by province, status December 2024 (Neraca Sumber Daya dan Cadangan Batubara, Tabel 33)",
+ "columns": {
+  "province_code": "BPS province code (kode_bps). Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Column of Tabel 33; definitions in 'indicators'.",
+  "period": "YYYY, status year (December).",
+  "status": "Empty.",
+  "value": "Million tonnes, as printed."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  }
+ },
+ "indicators": {
+  "exploration_target": {
+   "name": "Target eksplorasi (exploration target)",
+   "unit": "million tonnes",
+   "multiplier": 1000000.0,
+   "base_unit": "tonnes",
+   "source": "Badan Geologi ESDM, Neraca Sumber Daya dan Cadangan Mineral dan Batubara Indonesia, Tabel 33 (status December 2024)"
+  },
+  "inventory_total": {
+   "name": "Total inventori (total inventory)",
+   "unit": "million tonnes",
+   "multiplier": 1000000.0,
+   "base_unit": "tonnes",
+   "source": "Badan Geologi ESDM, Neraca Sumber Daya dan Cadangan Mineral dan Batubara Indonesia, Tabel 33 (status December 2024)"
+  },
+  "resource_inferred": {
+   "name": "Sumber daya tereka (inferred resources)",
+   "unit": "million tonnes",
+   "multiplier": 1000000.0,
+   "base_unit": "tonnes",
+   "source": "Badan Geologi ESDM, Neraca Sumber Daya dan Cadangan Mineral dan Batubara Indonesia, Tabel 33 (status December 2024)"
+  },
+  "resource_indicated": {
+   "name": "Sumber daya tertunjuk (indicated resources)",
+   "unit": "million tonnes",
+   "multiplier": 1000000.0,
+   "base_unit": "tonnes",
+   "source": "Badan Geologi ESDM, Neraca Sumber Daya dan Cadangan Mineral dan Batubara Indonesia, Tabel 33 (status December 2024)"
+  },
+  "resource_measured": {
+   "name": "Sumber daya terukur (measured resources)",
+   "unit": "million tonnes",
+   "multiplier": 1000000.0,
+   "base_unit": "tonnes",
+   "source": "Badan Geologi ESDM, Neraca Sumber Daya dan Cadangan Mineral dan Batubara Indonesia, Tabel 33 (status December 2024)"
+  },
+  "resource_total": {
+   "name": "Sumber daya total (total resources)",
+   "unit": "million tonnes",
+   "multiplier": 1000000.0,
+   "base_unit": "tonnes",
+   "source": "Badan Geologi ESDM, Neraca Sumber Daya dan Cadangan Mineral dan Batubara Indonesia, Tabel 33 (status December 2024)"
+  },
+  "resource_verified": {
+   "name": "Sumber daya total terverifikasi (verified total resources)",
+   "unit": "million tonnes",
+   "multiplier": 1000000.0,
+   "base_unit": "tonnes",
+   "source": "Badan Geologi ESDM, Neraca Sumber Daya dan Cadangan Mineral dan Batubara Indonesia, Tabel 33 (status December 2024)"
+  },
+  "reserve_probable": {
+   "name": "Cadangan terkira (probable reserves)",
+   "unit": "million tonnes",
+   "multiplier": 1000000.0,
+   "base_unit": "tonnes",
+   "source": "Badan Geologi ESDM, Neraca Sumber Daya dan Cadangan Mineral dan Batubara Indonesia, Tabel 33 (status December 2024)"
+  },
+  "reserve_proven": {
+   "name": "Cadangan terbukti (proven reserves)",
+   "unit": "million tonnes",
+   "multiplier": 1000000.0,
+   "base_unit": "tonnes",
+   "source": "Badan Geologi ESDM, Neraca Sumber Daya dan Cadangan Mineral dan Batubara Indonesia, Tabel 33 (status December 2024)"
+  },
+  "reserve_total": {
+   "name": "Cadangan total (total reserves)",
+   "unit": "million tonnes",
+   "multiplier": 1000000.0,
+   "base_unit": "tonnes",
+   "source": "Badan Geologi ESDM, Neraca Sumber Daya dan Cadangan Mineral dan Batubara Indonesia, Tabel 33 (status December 2024)"
+  },
+  "reserve_verified": {
+   "name": "Cadangan total terverifikasi (verified total reserves)",
+   "unit": "million tonnes",
+   "multiplier": 1000000.0,
+   "base_unit": "tonnes",
+   "source": "Badan Geologi ESDM, Neraca Sumber Daya dan Cadangan Mineral dan Batubara Indonesia, Tabel 33 (status December 2024)"
+  }
+ },
+ "source_tables": {
+  "screenshot": {
+   "file": "raw/mining/20261116_neraca-tabel-33-coal-resources-reserves-by-province-screenshot.png",
+   "note": "Screenshot of Tabel 33 sent by the user on 2026-11-16; values typed from it. The filed Neraca PDF ends at Tabel 32, so the original document should be filed when available."
+  },
+  "check": {
+   "file": "raw/mining/20261116_neraca-sumber-daya-dan-cadangan-mineral-dan-batubara-indonesia-2025.pdf",
+   "table": "Tabel 31 (national totals), PDF page 174",
+   "use": "check only"
+  }
+ },
+ "notes": [
+  "Values were typed from an image; every row is checked against its printed totals and every column against TOTAL INDONESIA, and the national row against Tabel 31 of the Neraca PDF.",
+  "Provinces not in the table (15 of 38) have no coal resource or reserve data in the Neraca; they have no row here.",
+  "Reserves are a stock in the ground, not annual production; the Neraca gives national production only (836.12 million tonnes, Tabel 31, from Pusdatin ESDM December 2023).",
+  "The image mixes separators in a few cells ('1,417,40', '12,376,75', '36,268.91', '5,155,77'); they are read as the numbers shown.",
+  "Corrected cell, Aceh resource_measured: printed 362.23, corrected to 326.23 (the row total and the column total both require it)",
+  "Corrected cell, Papua Barat resource_total: printed 19.9, corrected to 18.9 (the row total and the column total both require it)"
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness",
+   "identities",
+   "cross-source"
+  ],
+  "identities": [
+   {
+    "check": "resource_inferred + resource_indicated + resource_measured = resource_total",
+    "compared": 23,
+    "largest_gap": 0.03,
+    "tolerance": 0.035
+   },
+   {
+    "check": "reserve_probable + reserve_proven = reserve_total",
+    "compared": 23,
+    "largest_gap": 0.01,
+    "tolerance": 0.035
+   },
+   {
+    "check": "provinces = TOTAL INDONESIA",
+    "compared": 11,
+    "largest_gap": 0.05,
+    "tolerance": 0.12
+   }
+  ],
+  "row_exceptions": [],
+  "cross_source": "TOTAL INDONESIA equals Neraca PDF Tabel 31 for resources (inferred, indicated, measured, total) and reserves (probable, proven, total)",
+  "flags": []
+ },
+ "file": "20261116_neraca-coal-resources-reserves-2024.csv",
+ "rows": 253,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/mining/20261116_neraca-tabel-33-coal-resources-reserves-by-province-screenshot.png": {
+   "sha256": "55cdea1ecff412075a2f5e7cc8579fcbab6155e6fc92bdf993993c76343fffc2"
+  },
+  "raw/mining/20261116_neraca-sumber-daya-dan-cadangan-mineral-dan-batubara-indonesia-2025.pdf": {
+   "sha256": "819b4bfd638f2a2f79d509467e3324113320f7c4675ed790a8f317ad8eb742eb"
+  }
+ }
+}

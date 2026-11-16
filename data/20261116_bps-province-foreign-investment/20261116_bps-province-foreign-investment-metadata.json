@@ -1,0 +1,260 @@
+{
+ "title": "BPS realised foreign direct investment (PMA) by province, 2019-2023, Indonesia",
+ "columns": {
+  "province_code": "BPS province code (kode_bps); 00 = Indonesia. Names and Kemendagri codes in 'provinces'.",
+  "indicator": "Indicator code; definitions in 'indicators'.",
+  "period": "YYYY.",
+  "status": "BPS revision marker; this table carries none.",
+  "value": "As published by BPS."
+ },
+ "provinces": {
+  "11": {
+   "name": "ACEH",
+   "kode_dagri": "11"
+  },
+  "12": {
+   "name": "SUMATERA UTARA",
+   "kode_dagri": "12"
+  },
+  "13": {
+   "name": "SUMATERA BARAT",
+   "kode_dagri": "13"
+  },
+  "14": {
+   "name": "RIAU",
+   "kode_dagri": "14"
+  },
+  "15": {
+   "name": "JAMBI",
+   "kode_dagri": "15"
+  },
+  "16": {
+   "name": "SUMATERA SELATAN",
+   "kode_dagri": "16"
+  },
+  "17": {
+   "name": "BENGKULU",
+   "kode_dagri": "17"
+  },
+  "18": {
+   "name": "LAMPUNG",
+   "kode_dagri": "18"
+  },
+  "19": {
+   "name": "KEPULAUAN BANGKA BELITUNG",
+   "kode_dagri": "19"
+  },
+  "21": {
+   "name": "KEPULAUAN RIAU",
+   "kode_dagri": "21"
+  },
+  "31": {
+   "name": "DKI JAKARTA",
+   "kode_dagri": "31"
+  },
+  "32": {
+   "name": "JAWA BARAT",
+   "kode_dagri": "32"
+  },
+  "33": {
+   "name": "JAWA TENGAH",
+   "kode_dagri": "33"
+  },
+  "34": {
+   "name": "DI YOGYAKARTA",
+   "kode_dagri": "34"
+  },
+  "35": {
+   "name": "JAWA TIMUR",
+   "kode_dagri": "35"
+  },
+  "36": {
+   "name": "BANTEN",
+   "kode_dagri": "36"
+  },
+  "51": {
+   "name": "BALI",
+   "kode_dagri": "51"
+  },
+  "52": {
+   "name": "NUSA TENGGARA BARAT",
+   "kode_dagri": "52"
+  },
+  "53": {
+   "name": "NUSA TENGGARA TIMUR",
+   "kode_dagri": "53"
+  },
+  "61": {
+   "name": "KALIMANTAN BARAT",
+   "kode_dagri": "61"
+  },
+  "62": {
+   "name": "KALIMANTAN TENGAH",
+   "kode_dagri": "62"
+  },
+  "63": {
+   "name": "KALIMANTAN SELATAN",
+   "kode_dagri": "63"
+  },
+  "64": {
+   "name": "KALIMANTAN TIMUR",
+   "kode_dagri": "64"
+  },
+  "65": {
+   "name": "KALIMANTAN UTARA",
+   "kode_dagri": "65"
+  },
+  "71": {
+   "name": "SULAWESI UTARA",
+   "kode_dagri": "71"
+  },
+  "72": {
+   "name": "SULAWESI TENGAH",
+   "kode_dagri": "72"
+  },
+  "73": {
+   "name": "SULAWESI SELATAN",
+   "kode_dagri": "73"
+  },
+  "74": {
+   "name": "SULAWESI TENGGARA",
+   "kode_dagri": "74"
+  },
+  "75": {
+   "name": "GORONTALO",
+   "kode_dagri": "75"
+  },
+  "76": {
+   "name": "SULAWESI BARAT",
+   "kode_dagri": "76"
+  },
+  "81": {
+   "name": "MALUKU",
+   "kode_dagri": "81"
+  },
+  "82": {
+   "name": "MALUKU UTARA",
+   "kode_dagri": "82"
+  },
+  "91": {
+   "name": "PAPUA BARAT",
+   "kode_dagri": "92"
+  },
+  "92": {
+   "name": "PAPUA BARAT DAYA",
+   "kode_dagri": "96"
+  },
+  "94": {
+   "name": "PAPUA",
+   "kode_dagri": "91"
+  },
+  "95": {
+   "name": "PAPUA SELATAN",
+   "kode_dagri": "93"
+  },
+  "96": {
+   "name": "PAPUA TENGAH",
+   "kode_dagri": "94"
+  },
+  "97": {
+   "name": "PAPUA PEGUNUNGAN",
+   "kode_dagri": "95"
+  },
+  "00": {
+   "name": "INDONESIA",
+   "kode_dagri": null
+  }
+ },
+ "indicators": {
+  "fdi_projects": {
+   "name": "Realisasi PMA: jumlah proyek (realised foreign direct investment, number of projects)",
+   "unit": "projects",
+   "multiplier": 1,
+   "source": "BPS WebAPI var 1840 (from Kementerian Investasi/BKPM)"
+  },
+  "fdi_value": {
+   "name": "Realisasi PMA: nilai investasi (realised foreign direct investment, value)",
+   "unit": "million US$",
+   "multiplier": 1000000.0,
+   "base_unit": "US$",
+   "source": "BPS WebAPI var 1840 (from Kementerian Investasi/BKPM)"
+  }
+ },
+ "source_tables": {
+  "webapi 1840 2019": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/1840/th/119/key/KEY/",
+   "last_update": "2024-03-01 14:58:34"
+  },
+  "webapi 1840 2020": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/1840/th/120/key/KEY/",
+   "last_update": "2024-03-01 14:58:34"
+  },
+  "webapi 1840 2021": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/1840/th/121/key/KEY/",
+   "last_update": "2024-03-01 14:58:34"
+  },
+  "webapi 1840 2022": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/1840/th/122/key/KEY/",
+   "last_update": "2024-03-01 14:58:34"
+  },
+  "webapi 1840 2023": {
+   "request": "https://webapi.bps.go.id/v1/api/list/model/data/lang/ind/domain/0000/var/1840/th/123/key/KEY/",
+   "last_update": "2024-03-01 14:58:34"
+  }
+ },
+ "notes": [
+  "All sectors combined, excluding oil and gas, banking and other finance, insurance, leasing, investment licensed by technical ministries, portfolio investment and households (BPS note). Not specific to nickel or batteries.",
+  "Foreign investment only (PMA); BPS publishes no provincial table of domestic investment (PMDN).",
+  "The four new Papua provinces have values from 2023; earlier, Papua (94) and Papua Barat (91) cover the pre-split areas."
+ ],
+ "checks": {
+  "passed": [
+   "structure",
+   "completeness"
+  ],
+  "provinces_vs_indonesia": {
+   "fdi_projects": {
+    "provinces_minus_indonesia_by_year": {
+     "2019": 0.0,
+     "2020": 0.0,
+     "2021": 0.0,
+     "2022": 0.0,
+     "2023": 0.0
+    },
+    "within_tolerance": true
+   },
+   "fdi_value": {
+    "provinces_minus_indonesia_by_year": {
+     "2019": -0.4,
+     "2020": 0.3,
+     "2021": 0.1,
+     "2022": -0.2,
+     "2023": 0.2
+    },
+    "within_tolerance": true
+   }
+  },
+  "flags": []
+ },
+ "file": "20261116_bps-province-foreign-investment.csv",
+ "rows": 358,
+ "format": {
+  "encoding": "UTF-8, no byte-order mark",
+  "delimiter": ",",
+  "decimal": ".",
+  "thousands_separator": null,
+  "missing": "a missing row means the source has no value; no placeholder values are written",
+  "layout": "one value per row: key columns, then status, then value"
+ },
+ "status": {
+  "": "final, or no marker in the source"
+ },
+ "raw_files": {
+  "raw/province-codes/20261102_bps-province-codes-2025-s1.json": {
+   "sha256": "d64d350eed6fff3b06547fd8c3f70118df8623ac7bba2768c36eb6e77b2bd342"
+  },
+  "raw/investment/20261116_bps-webapi-foreign-investment-by-province.jsonl": {
+   "sha256": "f78dd023e8bbaa39e3337f6fb8f1b825a88656ef81f27679994b7d526cac1efa"
+  }
+ }
+}
