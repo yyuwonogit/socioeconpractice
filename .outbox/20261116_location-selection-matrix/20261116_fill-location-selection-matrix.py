@@ -296,6 +296,9 @@ for ws in wb.worksheets:
         assert all(isinstance(n, str) for n in names) and len(set(names)) == len(names), (ws.title, names)
         for column, name in zip(table.tableColumns, names):
             column.name = name
+
+# Save the filled copy. Excel for the web (SharePoint) still reported the openpyxl file as damaged, so the
+# delivered file is this output opened and re-saved in Excel desktop, after checking every cell value matches
 wb.save(OUT)
 
 # Confirm the template file was not touched
