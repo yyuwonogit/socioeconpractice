@@ -226,12 +226,13 @@ def coal_share():
 
 
 def coal_growth():
-    """CC2 D: real growth of coal mining (B2) at constant 2010 prices, 2024 to 2025, percent."""
-    a = wide(GRDP_INDUSTRY, "sector", indicator="grdp_constant", period="2024")["B2"]
+    """CC2 D: average annual real growth (CAGR) of coal mining (B2) at constant 2010 prices, 2021 to 2025, percent."""
+    a = wide(GRDP_INDUSTRY, "sector", indicator="grdp_constant", period="2021")["B2"]
     b = wide(GRDP_INDUSTRY, "sector", indicator="grdp_constant", period="2025")["B2"]
-    growth = ((b / a - 1) * 100).dropna()
-    blank = {c: "no coal mining output in 2024 or 2025 (BPS shows – or under Rp 0.5 billion)" for c in a.index if c not in growth.index}
-    return growth, "2024-2025", blank
+    growth = (((b / a) ** (1 / 4) - 1) * 100).dropna()
+    blank = {c: "no coal mining output in 2021 or 2025 (BPS shows – or under Rp 0.5 billion), or no 2021 table for the province"
+             for c in PROVINCE_NAMES if c not in growth.index}
+    return growth, "2021-2025", blank
 
 
 def saidi():
@@ -339,8 +340,8 @@ FILLED = [
      "definition": "GRDP of coal and lignite mining (B2) divided by total GRDP, current prices, times 100. 0 where BPS shows no coal mining output. 2025 values are very preliminary (BPS **).",
      "source": "BPS, PDRB Provinsi-Provinsi di Indonesia Menurut Lapangan Usaha 2021-2025; repo dataset data/20261116_bps-province-grdp-by-industry-2021-2025"},
     {"sheet": CC2, "column": "D", "make": coal_growth,
-     "label": "Coal mining (B2) real growth, %", "unit": "% change, constant 2010 prices", "short_source": "BPS PDRB Provinsi 2021-2025",
-     "definition": "Change in coal and lignite mining GRDP at constant 2010 prices from 2024 to 2025, percent. Values are rounded to whole Rp billions, so provinces with very small coal output can show large swings. 2024 is preliminary and 2025 very preliminary.",
+     "label": "Coal mining (B2) real growth, average per year 2021-2025 (CAGR), %", "unit": "% per year, constant 2010 prices", "short_source": "BPS PDRB Provinsi 2021-2025",
+     "definition": "Compound average annual growth of coal and lignite mining GRDP at constant 2010 prices from 2021 to 2025: ((2025 / 2021) ^ (1/4) - 1) x 100. Compares the coal sector with itself, not with total GRDP. Values are rounded to whole Rp billions, so provinces with very small coal output can show large swings (West Kalimantan: Rp 15 billion to Rp 1 billion). 2024 is preliminary and 2025 very preliminary. Quadrant chart with CC2 C: analysis/20261117_cc2-coal-share-growth-quadrant.",
      "source": "BPS, PDRB Provinsi-Provinsi di Indonesia Menurut Lapangan Usaha 2021-2025; repo dataset data/20261116_bps-province-grdp-by-industry-2021-2025"},
     {"sheet": CC3, "column": "C", "make": dbh_minerba_revenue,
      "label": "DBH Minerba ÷ total revenue (Pendapatan Daerah), %", "unit": "% of budgeted revenue", "short_source": "DJPK TKD 2024 & APBD 2024",

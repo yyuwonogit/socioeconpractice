@@ -62,6 +62,11 @@ HEADERS = {
 
 NUMBER_FORMAT = "0.00"
 
+# Header cells the user edited by hand in the delivered file, kept as typed: (sheet, column) -> text
+HEADER_OVERRIDES = {
+    ("FB2 Grid-Transm. Exp. Index", "C"): "Planned / Grid Transmission Corridors and Substation in the Region\n\n",
+}
+
 # Columns inserted into the filled copy on request: sheet -> (new column letter, header). The template's
 # columns from that letter on move one column right; the header checks above use the template's letters
 INSERTED = {}
@@ -101,7 +106,7 @@ def label_headers(ws, sheet, columns):
     for c in columns[columns["sheet"] == sheet].itertuples():
         cell = ws[f"{c.column}1"]
         template = INSERTED[sheet][1] if INSERTED.get(sheet, ("",))[0] == c.column else HEADERS[sheet][c.column]
-        cell.value = f"{template}\n\n{c.header_label}"
+        cell.value = HEADER_OVERRIDES.get((sheet, c.column), f"{template}\n\n{c.header_label}")
         cell.alignment = Alignment(wrap_text=True, vertical="top")
         if c.status != "filled":
             cell.fill = PENDING_FILL
