@@ -13,6 +13,7 @@ import hashlib
 
 import openpyxl
 from openpyxl.styles import Alignment, Font, PatternFill
+from openpyxl.utils import range_boundaries
 import pandas as pd
 
 # Parameters
@@ -285,6 +286,16 @@ write_notes(wb, columns, codes_by_sheet[first_sheet], english, provinces)
 write_pln_sheet(wb, units, english, codes_by_sheet[first_sheet])
 write_dbh_sheet(wb, dbh, english, codes_by_sheet[first_sheet])
 write_ruptl_sheet(wb, ruptl, english)
+
+# Excel keeps each table's column names apart from the header cells and reports the file as damaged when
+# they differ, so the table columns take the labelled header text
+for ws in wb.worksheets:
+    for table in ws.tables.values():
+        first_col, header_row, last_col, _ = range_boundaries(table.ref)
+        names = [ws.cell(header_row, c).value for c in range(first_col, last_col + 1)]
+        assert all(isinstance(n, str) for n in names) and len(set(names)) == len(names), (ws.title, names)
+        for column, name in zip(table.tableColumns, names):
+            column.name = name
 wb.save(OUT)
 
 # Confirm the template file was not touched
