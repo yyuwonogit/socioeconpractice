@@ -10,8 +10,12 @@ import sys
 sys.path.insert(0, str(ROOT / "tools"))
 import charts
 
+import textwrap
+
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
-from matplotlib.patches import Rectangle
+from matplotlib.patches import FancyBboxPatch, Rectangle
 from matplotlib.ticker import FixedLocator, NullLocator
 import pandas as pd
 
@@ -26,9 +30,13 @@ WELFARE = DATA / "20261108_bps-province-welfare/20261108_bps-province-welfare.cs
 
 OUT_PNG = HERE / "20261119_coal-dependence-poverty-quadrant.png"
 OUT_CSV = HERE / "20261119_coal-dependence-poverty-quadrant.csv"
+OUT_SLIDE = HERE / "20261119_coal-dependence-poverty-slide.png"
 
 # Economic dependence is coal's share of GRDP (CC2 C); absolute poverty is the March headcount rate P0 (CC4 C)
 YEAR = "2025"
+
+# Bottom fraction of the chart image that holds its footnote, cut when the chart sits on the slide
+CHART_NOTE_HEIGHT = 0.075
 
 # Slide-ready figure: 16:9 at 13.33 x 7.5 inches, no title in the image so the slide carries it
 WIDTH, HEIGHT = 13.33, 7.5
@@ -51,8 +59,9 @@ QUADRANTS = {(True, True): "High dependence, high poverty:\nmost vulnerable",
              (False, True): "Low dependence, high poverty:\nstructural poverty",
              (False, False): "Low dependence, low poverty"}
 
-# Light shade behind the most vulnerable quadrant, as on the CC2 chart
+# Light shade behind the most vulnerable quadrant, as on the CC2 chart, and the accent for its point on the slide
 VULNERABLE_SHADE = "#f3e3d9"
+VULNERABLE_ACCENT = charts.SERIES[1]
 
 # Functions
 
@@ -164,6 +173,64 @@ def draw(t, x_cut, y_cut, n_without):
         path=OUT_PNG, wrap=195, **MARGINS)
 
 
+def slide(t, x_cut, y_cut):
+    """Mock up one 16:9 slide: a conclusion title, the chart on the left, three so-what points on the right, the source below."""
+    fig = plt.figure(figsize=(WIDTH, HEIGHT), dpi=200)
+    fig.patch.set_facecolor(charts.SURFACE)
+
+    # The points come from the table, so the slide text follows the data
+    hh = t[(t["coal_share_pct"] >= x_cut) & (t["poverty_rate_pct"] >= y_cut)]
+    hl = t[(t["coal_share_pct"] >= x_cut) & (t["poverty_rate_pct"] < y_cut) & (t["coal_share_pct"] >= 10)]
+    edge = t[(t["coal_share_pct"] < x_cut) & (t["coal_share_pct"] >= x_cut / 2) & (t["poverty_rate_pct"] >= y_cut)]
+    lead = hh.sort_values("poor_people_thousand_est", ascending=False).iloc[0]
+    rng = lambda col: f"{hl[col].min():.0f}-{hl[col].max():.0f}%" if col == "coal_share_pct" else f"{hl[col].min():.1f}-{hl[col].max():.1f}%"
+    only = "Only " if len(hh) == 1 else ""
+    points = [
+        ("Priority", f"{lead.province}: coal is {lead.coal_share_pct:.1f}% of GRDP and {lead.poverty_rate_pct:.1f}% of people are poor "
+                     f"(about {lead.poor_people_thousand_est / 1000:.1f} million). The coal exit hits the households with the least cushion."),
+        ("Different risk", f"{', '.join(hl['province'])}: coal is {rng('coal_share_pct')} of GRDP, poverty only {rng('poverty_rate_pct')}. "
+                           "The risk is to provincial revenue and mining jobs."),
+        ("Watch", f"{' and '.join(edge['province'])}: poverty above 12%, coal just under the {x_cut:.1f}% national share."),
+    ]
+
+    # Title as the conclusion, with the analysis name as a small subtitle
+    fig.text(0.035, 0.925, f"{only}{' and '.join(hh['province'])} is both coal-dependent and poorer than average",
+             fontsize=20, fontweight="bold", color=charts.TEXT_PRIMARY)
+    fig.text(0.035, 0.88, f"Economic Dependence x Absolute Poverty, {YEAR}: coal's share of GRDP against the poverty rate, by province",
+             fontsize=12.5, color=charts.TEXT_SECONDARY)
+
+    # Chart on the left two-thirds
+    image = mpimg.imread(OUT_PNG)
+    ax = fig.add_axes([0.02, 0.07, 0.67, 0.78])
+    ax.imshow(image[: int(image.shape[0] * (1 - CHART_NOTE_HEIGHT))])
+    ax.axis("off")
+
+    # So-what panel on the right
+    panel = fig.add_axes([0.705, 0.11, 0.27, 0.72])
+    panel.axis("off")
+    panel.add_patch(FancyBboxPatch((0, 0), 1, 1, boxstyle="round,pad=0,rounding_size=0.03", transform=panel.transAxes,
+                                   facecolor="#f3f2ee", edgecolor="none"))
+    panel.text(0.07, 0.94, "SO WHAT", transform=panel.transAxes, fontsize=11, fontweight="bold", color=charts.TEXT_MUTED, va="top")
+    # Stack each point under the last, measuring the drawn text so blocks never overlap
+    fig.canvas.draw()
+    renderer = fig.canvas.get_renderer()
+    to_axes = panel.transAxes.inverted()
+    bottom_of = lambda txt: to_axes.transform(txt.get_window_extent(renderer))[0][1]
+    y = 0.85
+    for i, (head, body) in enumerate(points):
+        colour = VULNERABLE_ACCENT if i == 0 else charts.TEXT_SECONDARY
+        h = panel.text(0.07, y, head, transform=panel.transAxes, fontsize=12.5, fontweight="bold", color=colour, va="top")
+        b = panel.text(0.07, bottom_of(h) - 0.02, textwrap.fill(body, 40), transform=panel.transAxes, fontsize=10.5,
+                       color=charts.TEXT_PRIMARY, va="top", linespacing=1.35)
+        y = bottom_of(b) - 0.07
+
+    # Source line
+    fig.text(0.035, 0.03, f"Source: BPS, GRDP by industry {YEAR} (very preliminary) and Susenas March {YEAR}. Lines mark the Indonesia values; "
+                          "bubble size = poverty rate x population (estimate).", fontsize=9, color=charts.TEXT_MUTED)
+    fig.savefig(OUT_SLIDE, facecolor=charts.SURFACE)
+    plt.close(fig)
+
+
 # Steps
 
 # Build the table of coal-producing provinces and the Indonesia cuts
@@ -175,6 +242,9 @@ table["quadrant"] = [QUADRANTS[(s >= x_cut, p >= y_cut)].replace("\n", " ")
 
 # Draw the slide-ready chart
 draw(table, x_cut, y_cut, len(without))
+
+# Mock up the slide around the chart
+slide(table, x_cut, y_cut)
 
 # Write the table behind the chart, most vulnerable quadrant first, then by coal share
 order = {name.replace("\n", " "): i for i, name in enumerate(QUADRANTS.values())}
