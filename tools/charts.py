@@ -11,6 +11,7 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
+from matplotlib.text import Text  # noqa: E402
 
 # Surface, ink and chrome
 SURFACE = "#fcfcfb"
@@ -111,7 +112,9 @@ def place_labels(ax, xs, ys, labels, fontsize=7.5, sizes=None):
                 if max(abs(dx), abs(dy)) > rings[0] else None
             t = ax.annotate(labels[i], (xs[i], ys[i]), xytext=(dx, dy), textcoords="offset points",
                             ha=ha, va=va, fontsize=fontsize, color=TEXT_PRIMARY, arrowprops=leader)
-            bb = t.get_window_extent(renderer)
+            # Measure the text alone: an annotation's own extent also covers its leader line, which would block every spot in a crowd
+            t.update_positions(renderer)
+            bb = Text.get_window_extent(t, renderer)
             box = (bb.x0 - 1, bb.y0 - 1, bb.x1 + 1, bb.y1 + 1)
             clash = any(not (box[2] < o[0] or box[0] > o[2] or box[3] < o[1] or box[1] > o[3])
                         for o in placed + [ob for k, ob in enumerate(obstacles) if k != i])
