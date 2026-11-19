@@ -86,6 +86,7 @@ def place_labels(ax, xs, ys, labels, fontsize=7.5, sizes=None):
     fig.canvas.draw()
     renderer = fig.canvas.get_renderer()
     pts = ax.transData.transform(list(zip(xs, ys)))
+    frame = ax.get_window_extent(renderer)
     scale = fig.dpi / 72
     radius = [max(5, (s ** 0.5) / 2 * scale) if sizes is not None else 5 for s in (sizes if sizes is not None else [0] * len(xs))]
     placed = []
@@ -116,8 +117,10 @@ def place_labels(ax, xs, ys, labels, fontsize=7.5, sizes=None):
             t.update_positions(renderer)
             bb = Text.get_window_extent(t, renderer)
             box = (bb.x0 - 1, bb.y0 - 1, bb.x1 + 1, bb.y1 + 1)
-            clash = any(not (box[2] < o[0] or box[0] > o[2] or box[3] < o[1] or box[1] > o[3])
-                        for o in placed + [ob for k, ob in enumerate(obstacles) if k != i])
+            # A spot is free when the label stays inside the plot and touches no placed label or other point
+            outside = box[0] < frame.x0 or box[2] > frame.x1 or box[1] < frame.y0 or box[3] > frame.y1
+            clash = outside or any(not (box[2] < o[0] or box[0] > o[2] or box[3] < o[1] or box[1] > o[3])
+                                   for o in placed + [ob for k, ob in enumerate(obstacles) if k != i])
             if not clash:
                 best = (t, box)
                 break

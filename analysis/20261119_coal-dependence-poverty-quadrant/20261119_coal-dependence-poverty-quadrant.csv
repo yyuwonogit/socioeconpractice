@@ -1,0 +1,12 @@
+province_code,province,coal_share_pct,poverty_rate_pct,population_thousand,poor_people_thousand_est,quadrant
+16,Sumatera Selatan,13.9263,10.1500,8928.5000,906.2428,"High dependence, high poverty: most vulnerable"
+63,Kalimantan Selatan,26.3336,3.8400,4323.3000,166.0147,"High dependence, low poverty: fiscal and job risk"
+64,Kalimantan Timur,25.0937,5.1700,4267.6000,220.6349,"High dependence, low poverty: fiscal and job risk"
+65,Kalimantan Utara,19.2346,5.5400,749.4000,41.5168,"High dependence, low poverty: fiscal and job risk"
+62,Kalimantan Tengah,7.1448,5.1900,2845.0000,147.6555,"High dependence, low poverty: fiscal and job risk"
+15,Jambi,3.0933,7.1900,3768.5000,270.9552,"High dependence, low poverty: fiscal and job risk"
+17,Bengkulu,1.8564,12.0800,2138.0000,258.2704,"Low dependence, high poverty: structural poverty"
+11,Aceh,1.7099,12.3300,5626.0000,693.6858,"Low dependence, high poverty: structural poverty"
+14,Riau,0.2221,6.1600,6811.2000,419.5699,"Low dependence, low poverty"
+13,Sumatera Barat,0.0849,5.3500,5914.3000,316.4151,"Low dependence, low poverty"
+36,Banten,0.0153,5.6300,12537.4000,705.8556,"Low dependence, low poverty"
